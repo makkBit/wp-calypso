@@ -1,3 +1,7 @@
+# 6.3.0
+
+- Add `query-string`, `split-on-first`, and `strict-uri-encode` to the list of transpiled NPM dependencies.
+
 # 6.2.0
 
 - Set `strictExportPresence` in webpack so missing exports error the build.
