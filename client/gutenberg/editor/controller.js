@@ -36,10 +36,16 @@ import { notifyDesktopCannotOpenEditor } from 'state/desktop/actions';
 import NavigationComponent from 'my-sites/navigation';
 
 function determinePostType( context ) {
-	if ( context.path.startsWith( '/block-editor/post/' ) ) {
+	if (
+		context.path.startsWith( '/block-editor/post/' ) ||
+		context.path.startsWith( '/block-editor/without-iframe/post/' )
+	) {
 		return 'post';
 	}
-	if ( context.path.startsWith( '/block-editor/page/' ) ) {
+	if (
+		context.path.startsWith( '/block-editor/page/' ) ||
+		context.path.startsWith( '/block-editor/without-iframe/page/' )
+	) {
 		return 'page';
 	}
 
