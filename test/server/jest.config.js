@@ -10,8 +10,12 @@ module.exports = {
 		),
 	},
 	transformIgnorePatterns: [
-		'node_modules[\\/\\\\](?!redux-form|draft-js)(?!.*\\.(?:gif|jpg|jpeg|png|svg|scss|sass|css))',
+		'node_modules[\\/\\\\](?!redux-form|draft-js|wp-calypso-client)(?!.*\\.(?:gif|jpg|jpeg|png|svg|scss|sass|css))',
 	],
+	moduleNameMapper: {
+		'^wp-calypso-client/config$': 'wp-calypso-client/server/config',
+		'^wp-calypso-client/config/(.*)$': 'wp-calypso-client/server/config/$1',
+	},
 	testMatch: [ '<rootDir>/server/**/test/*.[jt]s?(x)', '!**/.eslintrc.*' ],
 	timers: 'fake',
 	setupFiles: [ 'regenerator-runtime/runtime' ], // some NPM-published packages depend on the global
