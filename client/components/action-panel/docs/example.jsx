@@ -6,12 +6,12 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ActionPanel from 'components/action-panel';
-import ActionPanelTitle from 'components/action-panel/title';
-import ActionPanelBody from 'components/action-panel/body';
-import ActionPanelFigure from 'components/action-panel/figure';
-import ActionPanelCta from 'components/action-panel/cta';
-import ActionPanelFooter from 'components/action-panel/footer';
+import ActionPanel from 'wp-calypso-client/components/action-panel';
+import ActionPanelTitle from 'wp-calypso-client/components/action-panel/title';
+import ActionPanelBody from 'wp-calypso-client/components/action-panel/body';
+import ActionPanelFigure from 'wp-calypso-client/components/action-panel/figure';
+import ActionPanelCta from 'wp-calypso-client/components/action-panel/cta';
+import ActionPanelFooter from 'wp-calypso-client/components/action-panel/footer';
 import { Button } from '@automattic/components';
 
 /* eslint-disable wpcalypso/jsx-classname-namespace */

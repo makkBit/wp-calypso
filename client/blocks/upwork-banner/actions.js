@@ -1,8 +1,8 @@
 /**
  * Internal Dependencies
  */
-import { getPreference } from 'state/preferences/selectors';
-import { savePreference } from 'state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
 
 export const dismissBanner = ( location ) => ( dispatch, getState ) => {
 	const preference = getPreference( getState(), 'upwork-dismissible-banner' ) || {};

@@ -6,7 +6,7 @@ import deepFreeze from 'deep-freeze';
 /**
  * Internal dependencies
  */
-import { getOffsetItem } from 'state/reader/streams/selectors';
+import { getOffsetItem } from 'wp-calypso-client/state/reader/streams/selectors';
 
 jest.mock( 'lib/user/utils', () => ( { getLocaleSlug: () => 'en' } ) );
 jest.mock( 'reader/stream/utils' );

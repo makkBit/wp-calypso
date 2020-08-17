@@ -13,8 +13,8 @@ import {
 	IMAGE_EDITOR_STATE_RESET,
 	IMAGE_EDITOR_STATE_RESET_ALL,
 	IMAGE_EDITOR_IMAGE_HAS_LOADED,
-} from 'state/action-types';
-import { combineReducers, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 import { AspectRatios } from './constants';
 
 export const defaultTransform = {

@@ -7,13 +7,13 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import CelebrateNotice from 'my-sites/customer-home/cards/notices/celebrate-notice';
-import { NOTICE_CELEBRATE_SITE_MIGRATION } from 'my-sites/customer-home/cards/constants';
+import CelebrateNotice from 'wp-calypso-client/my-sites/customer-home/cards/notices/celebrate-notice';
+import { NOTICE_CELEBRATE_SITE_MIGRATION } from 'wp-calypso-client/my-sites/customer-home/cards/constants';
 
 /**
  * Image dependencies
  */
-import migrationIllustration from 'assets/images/customer-home/illustration--import-complete.svg';
+import migrationIllustration from 'wp-calypso-client/assets/images/customer-home/illustration--import-complete.svg';
 
 const CelebrateSiteMigration = () => {
 	const translate = useTranslate();

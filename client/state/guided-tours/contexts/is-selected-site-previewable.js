@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSite } from 'state/ui/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Returns true if the selected site can be previewed

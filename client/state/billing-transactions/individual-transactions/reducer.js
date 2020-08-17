@@ -7,8 +7,8 @@ import {
 	BILLING_TRANSACTION_REQUEST,
 	BILLING_TRANSACTION_REQUEST_FAILURE,
 	BILLING_TRANSACTION_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { combineReducers, keyedReducer, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 /**
  * Returns the updated requests state after an action has been dispatched.

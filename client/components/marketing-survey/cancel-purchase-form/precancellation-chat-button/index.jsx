@@ -9,10 +9,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import HappychatButton from 'components/happychat/button';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { hasIncludedDomain } from 'lib/purchases';
-import { isDomainRegistration, isPlan } from 'lib/products-values';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { hasIncludedDomain } from 'wp-calypso-client/lib/purchases';
+import { isDomainRegistration, isPlan } from 'wp-calypso-client/lib/products-values';
 import './style.scss';
 
 class PrecancellationChatButton extends Component {

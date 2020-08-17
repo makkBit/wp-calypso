@@ -12,22 +12,33 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import ReaderImportButton from 'blocks/reader-import-button';
-import ReaderExportButton from 'blocks/reader-export-button';
-import InfiniteStream from 'reader/components/reader-infinite-stream';
-import { siteRowRenderer } from 'reader/components/reader-infinite-stream/row-renderers';
-import SyncReaderFollows from 'components/data/sync-reader-follows';
+import ReaderImportButton from 'wp-calypso-client/blocks/reader-import-button';
+import ReaderExportButton from 'wp-calypso-client/blocks/reader-export-button';
+import InfiniteStream from 'wp-calypso-client/reader/components/reader-infinite-stream';
+import { siteRowRenderer } from 'wp-calypso-client/reader/components/reader-infinite-stream/row-renderers';
+import SyncReaderFollows from 'wp-calypso-client/components/data/sync-reader-follows';
 import FollowingManageSearchFollowed from './search-followed';
 import FollowingManageSortControls from './sort-controls';
-import { getReaderFollows, getReaderFollowsCount } from 'state/reader/follows/selectors';
-import UrlSearch from 'lib/url-search';
-import { getSiteName, getSiteUrl, getSiteDescription, getSiteAuthorName } from 'reader/get-helpers';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import { formatUrlForDisplay, getFeedTitle } from 'reader/lib/feed-display-helper';
-import { addQueryArgs } from 'lib/url';
-import { READER_SUBSCRIPTIONS } from 'reader/follow-sources';
-import { READER_EXPORT_TYPE_SUBSCRIPTIONS } from 'blocks/reader-export-button/constants';
+import {
+	getReaderFollows,
+	getReaderFollowsCount,
+} from 'wp-calypso-client/state/reader/follows/selectors';
+import UrlSearch from 'wp-calypso-client/lib/url-search';
+import {
+	getSiteName,
+	getSiteUrl,
+	getSiteDescription,
+	getSiteAuthorName,
+} from 'wp-calypso-client/reader/get-helpers';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import {
+	formatUrlForDisplay,
+	getFeedTitle,
+} from 'wp-calypso-client/reader/lib/feed-display-helper';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { READER_SUBSCRIPTIONS } from 'wp-calypso-client/reader/follow-sources';
+import { READER_EXPORT_TYPE_SUBSCRIPTIONS } from 'wp-calypso-client/blocks/reader-export-button/constants';
 
 class FollowingManageSubscriptions extends Component {
 	static propTypes = {

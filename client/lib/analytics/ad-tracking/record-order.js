@@ -1,8 +1,12 @@
 /**
  * Internal dependencies
  */
-import { isJetpackPlan } from 'lib/products-values';
-import { costToUSD, isAdTrackingAllowed, refreshCountryCodeCookieGdpr } from 'lib/analytics/utils';
+import { isJetpackPlan } from 'wp-calypso-client/lib/products-values';
+import {
+	costToUSD,
+	isAdTrackingAllowed,
+	refreshCountryCodeCookieGdpr,
+} from 'wp-calypso-client/lib/analytics/utils';
 import {
 	debug,
 	isCriteoEnabled,

@@ -6,22 +6,22 @@ import { has, invoke } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordPageView } from 'lib/analytics/page-view';
-import { recordTracksEvent, setTracksOptOut } from 'lib/analytics/tracks';
-import { gaRecordEvent, gaRecordPageView } from 'lib/analytics/ga';
-import { bumpStat } from 'lib/analytics/mc';
-import { addHotJarScript } from 'lib/analytics/hotjar';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
+import { recordTracksEvent, setTracksOptOut } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent, gaRecordPageView } from 'wp-calypso-client/lib/analytics/ga';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { addHotJarScript } from 'wp-calypso-client/lib/analytics/hotjar';
 import {
 	trackCustomAdWordsRemarketingEvent,
 	trackCustomFacebookConversionEvent,
-} from 'lib/analytics/ad-tracking';
+} from 'wp-calypso-client/lib/analytics/ad-tracking';
 import {
 	ANALYTICS_EVENT_RECORD,
 	ANALYTICS_PAGE_VIEW_RECORD,
 	ANALYTICS_STAT_BUMP,
 	ANALYTICS_TRACKING_ON,
 	ANALYTICS_TRACKS_OPT_OUT,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const eventServices = {
 	ga: ( { category, action, label, value } ) => gaRecordEvent( category, action, label, value ),

@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { SIGNUP_OPTIONAL_DEPENDENCY_SUGGESTED_USERNAME_SET } from 'state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { SIGNUP_OPTIONAL_DEPENDENCY_SUGGESTED_USERNAME_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 export const setUsernameSuggestion = ( data ) => ( {
 	type: SIGNUP_OPTIONAL_DEPENDENCY_SUGGESTED_USERNAME_SET,

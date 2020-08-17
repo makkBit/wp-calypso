@@ -8,8 +8,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import SitePlaceholder from 'blocks/site/placeholder';
-import Gridicon from 'components/gridicon';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { Item, Site, SiteError } from './types';
 
 function isSiteError( site: Site | SiteError ): site is SiteError {

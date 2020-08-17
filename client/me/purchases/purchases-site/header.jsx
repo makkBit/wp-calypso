@@ -5,16 +5,16 @@
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import { getSite } from 'state/sites/selectors';
-import QuerySites from 'components/data/query-sites';
-import Site from 'blocks/site';
-import SitePlaceholder from 'blocks/site/placeholder';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import Site from 'wp-calypso-client/blocks/site';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
 
 /**
  * Style dependencies

@@ -10,8 +10,8 @@ import { bindActionCreators } from 'redux';
 /**
  * Internal dependencies
  */
-import { shouldSiteBeFetched } from 'state/reader/sites/selectors';
-import { requestSite } from 'state/reader/sites/actions';
+import { shouldSiteBeFetched } from 'wp-calypso-client/state/reader/sites/selectors';
+import { requestSite } from 'wp-calypso-client/state/reader/sites/actions';
 
 class QueryReaderSite extends Component {
 	UNSAFE_componentWillMount() {

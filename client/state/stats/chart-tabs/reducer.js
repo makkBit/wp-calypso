@@ -6,8 +6,11 @@ import { pick, set, isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer, withSchemaValidation } from 'state/utils';
-import { STATS_CHART_COUNTS_REQUEST, STATS_CHART_COUNTS_RECEIVE } from 'state/action-types';
+import { combineReducers, keyedReducer, withSchemaValidation } from 'wp-calypso-client/state/utils';
+import {
+	STATS_CHART_COUNTS_REQUEST,
+	STATS_CHART_COUNTS_RECEIVE,
+} from 'wp-calypso-client/state/action-types';
 import { countsSchema } from './schema';
 import { QUERY_FIELDS } from './constants';
 

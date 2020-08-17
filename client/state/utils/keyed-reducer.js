@@ -6,8 +6,8 @@ import { get, isEqual, mapValues, omit, omitBy, reduce } from 'lodash';
 /**
  * Internal dependencies
  */
-import { DESERIALIZE, SERIALIZE } from 'state/action-types';
-import { SerializationResult } from 'state/serialization-result';
+import { DESERIALIZE, SERIALIZE } from 'wp-calypso-client/state/action-types';
+import { SerializationResult } from 'wp-calypso-client/state/serialization-result';
 
 /**
  * Creates a super-reducer as a map of reducers over keyed objects

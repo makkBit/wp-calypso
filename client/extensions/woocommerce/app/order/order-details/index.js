@@ -23,7 +23,7 @@ import OrderFulfillment from '../order-fulfillment';
 import OrderPaymentCard from '../order-payment';
 import OrderStatus from 'woocommerce/components/order-status';
 import OrderStatusSelect from 'woocommerce/components/order-status/select';
-import SectionHeader from 'components/section-header';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
 class OrderDetails extends Component {
 	static propTypes = {

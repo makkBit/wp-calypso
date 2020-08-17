@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	COUNTRY_STATES_RECEIVE,
 	COUNTRY_STATES_REQUEST,
 	COUNTRY_STATES_REQUEST_FAILURE,
 	COUNTRY_STATES_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/country-states/init';
+import 'wp-calypso-client/state/country-states/init';
 
 export function receiveCountryStates( countryStates, countryCode ) {
 	countryCode = countryCode.toLowerCase();

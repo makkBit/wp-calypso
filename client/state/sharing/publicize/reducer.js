@@ -21,8 +21,12 @@ import {
 	PUBLICIZE_SHARE_SUCCESS,
 	PUBLICIZE_SHARE_FAILURE,
 	PUBLICIZE_SHARE_DISMISS,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { connectionsSchema } from './schema';
 import sharePostActions from './publicize-actions/reducer';
 

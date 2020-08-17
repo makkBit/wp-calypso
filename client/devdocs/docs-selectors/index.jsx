@@ -8,11 +8,11 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import DocsSelectorsSingle from './single';
 import DocsSelectorsSearch from './search';
-import DocumentHead from 'components/data/document-head';
-import ReadmeViewer from 'components/readme-viewer';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import ReadmeViewer from 'wp-calypso-client/components/readme-viewer';
 
 export default class DocsSelectors extends PureComponent {
 	static propTypes = {

@@ -6,19 +6,19 @@ import { delay } from 'lodash';
 /**
  * Internal dependencies
  */
-import { AUTOMATED_TRANSFER_STATUS_REQUEST } from 'state/action-types';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { requestSite } from 'state/sites/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { AUTOMATED_TRANSFER_STATUS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	fetchAutomatedTransferStatus,
 	setAutomatedTransferStatus,
 	automatedTransferStatusFetchingFailure,
-} from 'state/automated-transfer/actions';
-import { transferStates } from 'state/automated-transfer/constants';
+} from 'wp-calypso-client/state/automated-transfer/actions';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const requestStatus = ( action ) =>
 	http(

@@ -9,8 +9,11 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import { addBlogSticker, removeBlogSticker } from 'state/sites/blog-stickers/actions';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import {
+	addBlogSticker,
+	removeBlogSticker,
+} from 'wp-calypso-client/state/sites/blog-stickers/actions';
 
 class ReaderPostOptionsMenuBlogStickerMenuItem extends React.Component {
 	static propTypes = {

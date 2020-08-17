@@ -7,7 +7,7 @@ import { get, find, isEqual, isObject } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { getProduct } from 'woocommerce/state/sites/products/selectors';
 
 export function getAllProductEdits( state, siteId ) {

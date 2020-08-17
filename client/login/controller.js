@@ -8,13 +8,16 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import HandleEmailedLinkForm from './magic-login/handle-emailed-link-form';
 import MagicLogin from './magic-login';
 import WPLogin from './wp-login';
-import { getUrlParts } from 'lib/url';
-import { fetchOAuth2ClientData } from 'state/oauth2-clients/actions';
-import { getCurrentUser, getCurrentUserLocale } from 'state/current-user/selectors';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
+import { fetchOAuth2ClientData } from 'wp-calypso-client/state/oauth2-clients/actions';
+import {
+	getCurrentUser,
+	getCurrentUserLocale,
+} from 'wp-calypso-client/state/current-user/selectors';
 
 const enhanceContextWithLogin = ( context ) => {
 	const {

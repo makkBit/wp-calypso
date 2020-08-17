@@ -1,14 +1,14 @@
 /**
  * Internal dependencies
  */
-import { uploadMedia as uploadMediaThunk } from 'state/media/thunks/upload-media';
+import { uploadMedia as uploadMediaThunk } from 'wp-calypso-client/state/media/thunks/upload-media';
 import {
 	dispatchFluxReceiveMediaItemError,
 	dispatchFluxReceiveMediaItemSuccess,
-} from 'state/media/utils/flux-adapter';
-import * as syncActions from 'state/media/actions';
-import { requestMediaStorage } from 'state/sites/media-storage/actions';
-import { createTransientMediaItems } from 'state/media/thunks/create-transient-media-items';
+} from 'wp-calypso-client/state/media/utils/flux-adapter';
+import * as syncActions from 'wp-calypso-client/state/media/actions';
+import { requestMediaStorage } from 'wp-calypso-client/state/sites/media-storage/actions';
+import { createTransientMediaItems } from 'wp-calypso-client/state/media/thunks/create-transient-media-items';
 
 jest.mock( 'state/media/utils/is-file-list', () => ( {
 	isFileList: jest.fn(),

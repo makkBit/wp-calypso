@@ -6,11 +6,11 @@ import { compact, map, uniq } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSiteSlug } from 'state/sites/selectors';
-import getUpcomingBillingTransactions from 'state/selectors/get-upcoming-billing-transactions';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import getUpcomingBillingTransactions from 'wp-calypso-client/state/selectors/get-upcoming-billing-transactions';
 
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 /**
  * Returns the slugs of all sites that are included in upcoming transactions, indexed by the site IDs.

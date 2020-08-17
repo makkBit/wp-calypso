@@ -13,11 +13,11 @@ import {
 	USER_PROFILE_LINKS_RECEIVE,
 	USER_PROFILE_LINKS_REQUEST,
 	USER_PROFILE_LINKS_RESET_ERRORS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/me/settings/profile-links';
-import 'state/data-layer/wpcom/me/settings/profile-links/delete';
-import 'state/data-layer/wpcom/me/settings/profile-links/new';
+import 'wp-calypso-client/state/data-layer/wpcom/me/settings/profile-links';
+import 'wp-calypso-client/state/data-layer/wpcom/me/settings/profile-links/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/me/settings/profile-links/new';
 
 /**
  * Returns an action object to signal the request of the user's profile links.

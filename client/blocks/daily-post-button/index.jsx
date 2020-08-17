@@ -7,22 +7,22 @@ import page from 'page';
 import PropTypes from 'prop-types';
 import { stringify } from 'qs';
 import { get, defer } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
  * Internal Dependencies
  */
-import AsyncLoad from 'components/async-load';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
 import { translate } from 'i18n-calypso';
-import { preload } from 'sections-helper';
+import { preload } from 'wp-calypso-client/sections-helper';
 import { Button } from '@automattic/components';
-import { markPostSeen } from 'state/reader/posts/actions';
-import { recordGaEvent, recordAction, recordTrackForPost } from 'reader/stats';
+import { markPostSeen } from 'wp-calypso-client/state/reader/posts/actions';
+import { recordGaEvent, recordAction, recordTrackForPost } from 'wp-calypso-client/reader/stats';
 import { getDailyPostType } from './helper';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies
@@ -136,7 +136,7 @@ export class DailyPostButton extends React.Component {
 		/* eslint-disable wpcalypso/jsx-classname-namespace */
 		return (
 			<AsyncLoad
-				require="components/sites-popover"
+				require="wp-calypso-client/components/sites-popover"
 				placeholder={ null }
 				key="menu"
 				header={ <div> { translate( 'Post on' ) } </div> }

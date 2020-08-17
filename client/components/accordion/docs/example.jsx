@@ -10,8 +10,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
-import Gridicon from 'components/gridicon';
+import Accordion from 'wp-calypso-client/components/accordion';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 export default function AccordionExample( props ) {
 	return props.exampleCode;

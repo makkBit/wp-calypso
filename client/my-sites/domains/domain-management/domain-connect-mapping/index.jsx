@@ -13,16 +13,19 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card, Button } from '@automattic/components';
-import Notice from 'components/notice';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import { domainManagementEdit, domainManagementDomainConnectMapping } from 'my-sites/domains/paths';
-import { getSelectedDomain } from 'lib/domains';
-import SectionHeader from 'components/section-header';
-import wp from 'lib/wp';
-import { externalRedirect } from 'lib/route';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import Notice from 'wp-calypso-client/components/notice';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import {
+	domainManagementEdit,
+	domainManagementDomainConnectMapping,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import wp from 'wp-calypso-client/lib/wp';
+import { externalRedirect } from 'wp-calypso-client/lib/route';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 const wpcom = wp.undocumented();
 

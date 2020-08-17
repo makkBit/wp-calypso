@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { getCreditCardType } from 'lib/checkout';
-import Input from 'my-sites/domains/components/form/input';
+import { getCreditCardType } from 'wp-calypso-client/lib/checkout';
+import Input from 'wp-calypso-client/my-sites/domains/components/form/input';
 
 class CreditCardNumberInput extends React.Component {
 	render() {

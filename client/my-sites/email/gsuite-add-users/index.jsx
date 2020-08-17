@@ -11,38 +11,41 @@ import React, { Fragment } from 'react';
 /**
  * Internal dependencies
  */
-import { addItems } from 'lib/cart/actions';
+import { addItems } from 'wp-calypso-client/lib/cart/actions';
 import AddEmailAddressesCardPlaceholder from './add-users-placeholder';
 import { Button, Card } from '@automattic/components';
-import DomainManagementHeader from 'my-sites/domains/domain-management/components/header';
+import DomainManagementHeader from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
 import {
 	emailManagementAddGSuiteUsers,
 	emailManagementNewGSuiteAccount,
 	emailManagement,
-} from 'my-sites/email/paths';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import { getDomainsBySiteId, isRequestingSiteDomains } from 'state/sites/domains/selectors';
-import { getDomainsWithForwards } from 'state/selectors/get-email-forwards';
-import { getEligibleGSuiteDomain, getGSuiteSupportedDomains } from 'lib/gsuite';
+} from 'wp-calypso-client/my-sites/email/paths';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import {
+	getDomainsBySiteId,
+	isRequestingSiteDomains,
+} from 'wp-calypso-client/state/sites/domains/selectors';
+import { getDomainsWithForwards } from 'wp-calypso-client/state/selectors/get-email-forwards';
+import { getEligibleGSuiteDomain, getGSuiteSupportedDomains } from 'wp-calypso-client/lib/gsuite';
 import {
 	areAllUsersValid,
 	getItemsForCart,
 	newUsers,
 	validateAgainstExistingUsers,
-} from 'lib/gsuite/new-users';
-import { getSelectedSite } from 'state/ui/selectors';
-import { GSUITE_BASIC_SLUG, GSUITE_BUSINESS_SLUG } from 'lib/gsuite/constants';
-import GSuiteNewUserList from 'components/gsuite/gsuite-new-user-list';
-import Main from 'components/main';
-import Notice from 'components/notice';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import SectionHeader from 'components/section-header';
-import QueryEmailForwards from 'components/data/query-email-forwards';
-import QueryGSuiteUsers from 'components/data/query-gsuite-users';
-import getGSuiteUsers from 'state/selectors/get-gsuite-users';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import getCurrentRoute from 'state/selectors/get-current-route';
+} from 'wp-calypso-client/lib/gsuite/new-users';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { GSUITE_BASIC_SLUG, GSUITE_BUSINESS_SLUG } from 'wp-calypso-client/lib/gsuite/constants';
+import GSuiteNewUserList from 'wp-calypso-client/components/gsuite/gsuite-new-user-list';
+import Main from 'wp-calypso-client/components/main';
+import Notice from 'wp-calypso-client/components/notice';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QueryEmailForwards from 'wp-calypso-client/components/data/query-email-forwards';
+import QueryGSuiteUsers from 'wp-calypso-client/components/data/query-gsuite-users';
+import getGSuiteUsers from 'wp-calypso-client/state/selectors/get-gsuite-users';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

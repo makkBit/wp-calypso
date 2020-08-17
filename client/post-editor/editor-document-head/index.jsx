@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import QueryPostTypes from 'components/data/query-post-types';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId, isEditorNewPost } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPostType } from 'state/post-types/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId, isEditorNewPost } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPostType } from 'wp-calypso-client/state/post-types/selectors';
 
 function EditorDocumentHead( { translate, siteId, type, typeObject, newPost } ) {
 	let title;

@@ -7,12 +7,12 @@ const { Tray, Menu, app } = require( 'electron' ); // eslint-disable-line import
  * Internal dependencies
  */
 const windowsTrayMenu = require( './tray-menu' );
-const Settings = require( 'desktop/lib/settings' );
-const appQuit = require( 'desktop/lib/app-quit' );
-const platform = require( 'desktop/lib/platform' );
-const menuSetter = require( 'desktop/lib/menu-setter' );
-const assets = require( 'desktop/lib/assets' );
-const log = require( 'desktop/lib/logger' )( 'platform:windows' );
+const Settings = require( 'wp-calypso-client/desktop/lib/settings' );
+const appQuit = require( 'wp-calypso-client/desktop/lib/app-quit' );
+const platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const menuSetter = require( 'wp-calypso-client/desktop/lib/menu-setter' );
+const assets = require( 'wp-calypso-client/desktop/lib/assets' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'platform:windows' );
 
 /**
  * Module variables

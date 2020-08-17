@@ -4,7 +4,7 @@
 import type { DomainSuggestions, Site, VerticalsTemplates, Plans } from '@automattic/data-stores';
 import { dispatch, select } from '@wordpress/data-controls';
 import guessTimezone from '../../../../lib/i18n-utils/guess-timezone';
-import { getLanguage } from 'lib/i18n-utils';
+import { getLanguage } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Internal dependencies
@@ -16,7 +16,7 @@ import { PLANS_STORE } from '../plans';
 import type { State } from '.';
 import type { FontPair } from '../../constants';
 import type { FeatureId } from '../../onboarding-block/features/data';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 type CreateSiteParams = Site.CreateSiteParams;
 type DomainSuggestion = DomainSuggestions.DomainSuggestion;

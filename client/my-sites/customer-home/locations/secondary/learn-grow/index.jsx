@@ -9,18 +9,22 @@ import { Card } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import FreePhotoLibrary from 'my-sites/customer-home/cards/education/free-photo-library';
+import FreePhotoLibrary from 'wp-calypso-client/my-sites/customer-home/cards/education/free-photo-library';
 // eslint-disable-next-line inclusive-language/use-inclusive-words
-import MasteringGutenberg from 'my-sites/customer-home/cards/education/mastering-gutenberg';
-import EducationEarn from 'my-sites/customer-home/cards/education/earn';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getHomeLayout } from 'state/selectors/get-home-layout';
+import MasteringGutenberg from 'wp-calypso-client/my-sites/customer-home/cards/education/mastering-gutenberg';
+import EducationEarn from 'wp-calypso-client/my-sites/customer-home/cards/education/earn';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getHomeLayout } from 'wp-calypso-client/state/selectors/get-home-layout';
 import {
 	EDUCATION_FREE_PHOTO_LIBRARY,
 	EDUCATION_GUTENBERG,
 	EDUCATION_EARN,
-} from 'my-sites/customer-home/cards/constants';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

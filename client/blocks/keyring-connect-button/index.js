@@ -14,14 +14,14 @@ import { Button } from '@automattic/components';
 import {
 	deleteStoredKeyringConnection,
 	requestKeyringConnections,
-} from 'state/sharing/keyring/actions';
-import { getKeyringServiceByName } from 'state/sharing/services/selectors';
-import QueryKeyringServices from 'components/data/query-keyring-services';
+} from 'wp-calypso-client/state/sharing/keyring/actions';
+import { getKeyringServiceByName } from 'wp-calypso-client/state/sharing/services/selectors';
+import QueryKeyringServices from 'wp-calypso-client/components/data/query-keyring-services';
 import requestExternalAccess from '@automattic/request-external-access';
 import {
 	getKeyringConnectionsByName,
 	isKeyringConnectionsFetching,
-} from 'state/sharing/keyring/selectors';
+} from 'wp-calypso-client/state/sharing/keyring/selectors';
 
 class KeyringConnectButton extends Component {
 	static propTypes = {

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { createReducerStore } from 'lib/store';
+import { createReducerStore } from 'wp-calypso-client/lib/store';
 import { initialDomainState, reducer } from './reducer';
 
 const WapiDomainInfoStore = createReducerStore( reducer, {} );

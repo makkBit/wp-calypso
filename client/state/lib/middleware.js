@@ -2,13 +2,13 @@
  * External dependencies
  */
 import { once, defer } from 'lodash';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import page from 'page';
 
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	JETPACK_DISCONNECT_RECEIVE,
 	NOTIFICATIONS_PANEL_TOGGLE,
@@ -17,21 +17,21 @@ import {
 	SITE_DELETE_RECEIVE,
 	SITE_RECEIVE,
 	SITES_RECEIVE,
-} from 'state/action-types';
-import user from 'lib/user';
-import hasSitePendingAutomatedTransfer from 'state/selectors/has-site-pending-automated-transfer';
-import { isFetchingAutomatedTransferStatus } from 'state/automated-transfer/selectors';
-import isNotificationsOpen from 'state/selectors/is-notifications-open';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import keyboardShortcuts from 'lib/keyboard-shortcuts';
-import getGlobalKeyboardShortcuts from 'lib/keyboard-shortcuts/global';
-import { fetchAutomatedTransferStatus } from 'state/automated-transfer/actions';
+} from 'wp-calypso-client/state/action-types';
+import user from 'wp-calypso-client/lib/user';
+import hasSitePendingAutomatedTransfer from 'wp-calypso-client/state/selectors/has-site-pending-automated-transfer';
+import { isFetchingAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors';
+import isNotificationsOpen from 'wp-calypso-client/state/selectors/is-notifications-open';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import keyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import getGlobalKeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts/global';
+import { fetchAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/actions';
 import {
 	createImmediateLoginMessage,
 	createPathWithoutImmediateLoginInformation,
-} from 'state/immediate-login/utils';
-import { saveImmediateLoginInformation } from 'state/immediate-login/actions';
+} from 'wp-calypso-client/state/immediate-login/utils';
+import { saveImmediateLoginInformation } from 'wp-calypso-client/state/immediate-login/actions';
 
 /**
  * Module variables
@@ -43,7 +43,9 @@ if ( globalKeyBoardShortcutsEnabled ) {
 	globalKeyboardShortcuts = getGlobalKeyboardShortcuts();
 }
 
-const desktop = config.isEnabled( 'desktop' ) ? require( 'lib/desktop' ).default : null;
+const desktop = config.isEnabled( 'desktop' )
+	? require( 'wp-calypso-client/lib/desktop' ).default
+	: null;
 
 /**
  * Notifies user about the fact that they were automatically logged in

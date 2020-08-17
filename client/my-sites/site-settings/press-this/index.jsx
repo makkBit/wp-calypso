@@ -11,10 +11,10 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PressThisLink from './link';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { getSelectedSite } from 'state/ui/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

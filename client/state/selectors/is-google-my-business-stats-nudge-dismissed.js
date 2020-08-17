@@ -6,8 +6,8 @@ import { last } from 'lodash';
 /**
  * Internal dependencies
  */
-import getGoogleMyBusinessStatsNudgeDismissCount from 'state/selectors/get-google-my-business-stats-nudge-dismiss-count';
-import { getPreference } from 'state/preferences/selectors';
+import getGoogleMyBusinessStatsNudgeDismissCount from 'wp-calypso-client/state/selectors/get-google-my-business-stats-nudge-dismiss-count';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
 
 const WEEK_IN_MS = 7 * 24 * 60 * 60 * 1000;
 const MAX_DISMISS = 2;

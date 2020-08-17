@@ -8,10 +8,10 @@ import { useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import SectionNav from 'components/section-nav';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
-import { getSelectedSite } from 'state/ui/selectors';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 interface Props {
 	section: string;

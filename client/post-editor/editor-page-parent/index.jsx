@@ -10,16 +10,16 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import PostSelector from 'my-sites/post-selector';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormToggle from 'components/forms/form-toggle/compact';
-import AccordionSection from 'components/accordion/section';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
-import { getPostType } from 'state/post-types/selectors';
+import PostSelector from 'wp-calypso-client/my-sites/post-selector';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import { getPostType } from 'wp-calypso-client/state/post-types/selectors';
 
 /**
  * Style dependencies

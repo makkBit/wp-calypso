@@ -9,13 +9,13 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { addQueryArgs } from 'lib/route';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
 /**
  * Image dependencies
  */
-import appsImage from 'assets/images/illustrations/apps.svg';
+import appsImage from 'wp-calypso-client/assets/images/illustrations/apps.svg';
 
 export default localize( ( { translate, onClick = noop } ) => {
 	return (

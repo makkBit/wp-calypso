@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 const SupportArticleHeader = ( { post, isLoading } ) =>
 	isLoading || ! post ? (

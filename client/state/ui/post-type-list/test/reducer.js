@@ -15,7 +15,7 @@ import {
 	POST_TYPE_LIST_SHARE_PANEL_HIDE,
 	POST_TYPE_LIST_SHARE_PANEL_TOGGLE,
 	ROUTE_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	test( 'should export expected reducer keys', () => {

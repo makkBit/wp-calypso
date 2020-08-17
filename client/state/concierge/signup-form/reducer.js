@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withoutPersistence } from 'state/utils';
-import { CONCIERGE_SIGNUP_FORM_UPDATE, CONCIERGE_UPDATE_BOOKING_STATUS } from 'state/action-types';
-import guessTimezone from 'lib/i18n-utils/guess-timezone';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
+import {
+	CONCIERGE_SIGNUP_FORM_UPDATE,
+	CONCIERGE_UPDATE_BOOKING_STATUS,
+} from 'wp-calypso-client/state/action-types';
+import guessTimezone from 'wp-calypso-client/lib/i18n-utils/guess-timezone';
 
 export const message = withoutPersistence( ( state = '', action ) => {
 	switch ( action.type ) {

@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { THEME_REQUEST_FAILURE } from 'state/themes/action-types';
+import { THEME_REQUEST_FAILURE } from 'wp-calypso-client/state/themes/action-types';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 export function themeRequestFailure( siteId, themeId, error ) {
 	return {

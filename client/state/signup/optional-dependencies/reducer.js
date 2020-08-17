@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_OPTIONAL_DEPENDENCY_SUGGESTED_USERNAME_SET } from 'state/action-types';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { SIGNUP_OPTIONAL_DEPENDENCY_SUGGESTED_USERNAME_SET } from 'wp-calypso-client/state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { suggestedUsernameSchema } from './schema';
 
 const suggestedUsername = withSchemaValidation( suggestedUsernameSchema, ( state = '', action ) => {

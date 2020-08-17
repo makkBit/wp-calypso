@@ -2,10 +2,10 @@
  * Internal dependencies
  */
 
-import { getCurrentUserSiteCount } from 'state/current-user/selectors';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
+import { getCurrentUserSiteCount } from 'wp-calypso-client/state/current-user/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Gets currently selected site or, if that isn't available and the user has

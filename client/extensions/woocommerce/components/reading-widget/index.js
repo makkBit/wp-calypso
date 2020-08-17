@@ -12,13 +12,13 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import config from 'config';
-import ExternalLink from 'components/external-link';
-import FormTextInput from 'components/forms/form-text-input';
-import { getPostsForQueryIgnoringPage } from 'state/posts/selectors';
-import humanDate from 'lib/human-date';
-import MultiCheckbox from 'components/forms/multi-checkbox';
-import QueryPosts from 'components/data/query-posts';
+import config from 'wp-calypso-client/config';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { getPostsForQueryIgnoringPage } from 'wp-calypso-client/state/posts/selectors';
+import humanDate from 'wp-calypso-client/lib/human-date';
+import MultiCheckbox from 'wp-calypso-client/components/forms/multi-checkbox';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
 import { recordTrack } from 'woocommerce/lib/analytics';
 
 class ReadingWidget extends Component {

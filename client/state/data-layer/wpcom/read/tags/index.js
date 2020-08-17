@@ -7,14 +7,14 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { READER_TAGS_REQUEST } from 'state/reader/action-types';
-import { receiveTags } from 'state/reader/tags/items/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest, getHeaders } from 'state/data-layer/wpcom-http/utils';
-import { fromApi } from 'state/data-layer/wpcom/read/tags/utils';
-import { errorNotice } from 'state/notices/actions';
+import { READER_TAGS_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { receiveTags } from 'wp-calypso-client/state/reader/tags/items/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest, getHeaders } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { fromApi } from 'wp-calypso-client/state/data-layer/wpcom/read/tags/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestTags( action ) {
 	const path =

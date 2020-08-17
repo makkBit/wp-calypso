@@ -29,7 +29,7 @@ describe( 'MediaListStore', () => {
 
 	beforeAll( function () {
 		MediaStore = require( '../store' );
-		Dispatcher = require( 'dispatcher' );
+		Dispatcher = require( 'wp-calypso-client/dispatcher' );
 
 		sandbox = sinon.createSandbox();
 		sandbox.spy( Dispatcher, 'register' );

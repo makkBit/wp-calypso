@@ -3,17 +3,17 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { defer } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import AuthorSelector from 'blocks/author-selector';
-import User from 'components/user';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { decodeEntities } from 'lib/formatting';
+import AuthorSelector from 'wp-calypso-client/blocks/author-selector';
+import User from 'wp-calypso-client/components/user';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Style dependencies

@@ -13,28 +13,28 @@ import { localize } from 'i18n-calypso';
  */
 import ButtonsAppearance from './appearance';
 import ButtonsOptions from './options';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import QuerySharingButtons from 'components/data/query-sharing-buttons';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import { saveSharingButtons } from 'state/sites/sharing-buttons/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import QuerySharingButtons from 'wp-calypso-client/components/data/query-sharing-buttons';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { saveSharingButtons } from 'wp-calypso-client/state/sites/sharing-buttons/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getSiteSettings,
 	isSavingSiteSettings,
 	isSiteSettingsSaveSuccessful,
-} from 'state/site-settings/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getSharingButtons from 'state/selectors/get-sharing-buttons';
-import isSavingSharingButtons from 'state/selectors/is-saving-sharing-buttons';
-import isSharingButtonsSaveSuccessful from 'state/selectors/is-sharing-buttons-save-successful';
-import { isJetpackSite } from 'state/sites/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import { activateModule } from 'state/jetpack/modules/actions';
-import { protectForm } from 'lib/protect-form';
+} from 'wp-calypso-client/state/site-settings/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getSharingButtons from 'wp-calypso-client/state/selectors/get-sharing-buttons';
+import isSavingSharingButtons from 'wp-calypso-client/state/selectors/is-saving-sharing-buttons';
+import isSharingButtonsSaveSuccessful from 'wp-calypso-client/state/selectors/is-sharing-buttons-save-successful';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { activateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
 
 class SharingButtons extends Component {
 	state = {

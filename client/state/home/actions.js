@@ -7,8 +7,8 @@ import {
 	HOME_LAYOUT_SKIP_CURRENT_VIEW,
 	HOME_QUICK_LINKS_EXPAND,
 	HOME_QUICK_LINKS_COLLAPSE,
-} from 'state/action-types';
-import 'state/data-layer/wpcom/sites/home/layout';
+} from 'wp-calypso-client/state/action-types';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/home/layout';
 
 export const requestHomeLayout = ( siteId, isDev = false, forcedView = null ) => ( {
 	type: HOME_LAYOUT_REQUEST,

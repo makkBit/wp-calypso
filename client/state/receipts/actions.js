@@ -8,8 +8,12 @@ import i18n from 'i18n-calypso';
  * Internal dependencies
  */
 import { createReceiptObject } from './assembler';
-import { RECEIPT_FETCH, RECEIPT_FETCH_COMPLETED, RECEIPT_FETCH_FAILED } from 'state/action-types';
-import wpcom from 'lib/wp';
+import {
+	RECEIPT_FETCH,
+	RECEIPT_FETCH_COMPLETED,
+	RECEIPT_FETCH_FAILED,
+} from 'wp-calypso-client/state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
 
 export function fetchReceipt( receiptId ) {
 	return ( dispatch ) => {

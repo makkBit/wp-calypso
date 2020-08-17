@@ -4,7 +4,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
@@ -16,17 +16,17 @@ import {
 	isPremiumPlan,
 	isBusinessPlan,
 	isEcommercePlan,
-} from 'lib/plans';
-import Banner from 'components/banner';
-import { GROUP_JETPACK, GROUP_WPCOM, FEATURE_NO_ADS } from 'lib/plans/constants';
-import { addQueryArgs } from 'lib/url';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { isFreePlan } from 'lib/products-values';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isVipSite from 'state/selectors/is-vip-site';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getSite, isJetpackSite } from 'state/sites/selectors';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+} from 'wp-calypso-client/lib/plans';
+import Banner from 'wp-calypso-client/components/banner';
+import { GROUP_JETPACK, GROUP_WPCOM, FEATURE_NO_ADS } from 'wp-calypso-client/lib/plans/constants';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isFreePlan } from 'wp-calypso-client/lib/products-values';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getSite, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 /**
  * Style dependencies

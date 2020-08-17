@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getPlansBySiteId } from 'state/sites/plans/selectors/get-plans-by-site';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getPlansBySiteId } from 'wp-calypso-client/state/sites/plans/selectors/get-plans-by-site';
 
 /**
  * Returns a site specific plan

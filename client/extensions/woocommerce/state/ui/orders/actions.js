@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	WOOCOMMERCE_UI_ORDERS_CLEAR_EDIT,
 	WOOCOMMERCE_UI_ORDERS_EDIT,

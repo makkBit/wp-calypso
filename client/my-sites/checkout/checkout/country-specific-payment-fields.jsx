@@ -10,11 +10,15 @@ import { find, isEmpty, includes, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormPhoneMediaInput from 'components/forms/form-phone-media-input';
-import { StateSelect, Input, HiddenInput } from 'my-sites/domains/components/form';
-import { PAYMENT_PROCESSOR_COUNTRIES_FIELDS } from 'lib/checkout/constants';
-import InfoPopover from 'components/info-popover';
-import { paymentMethodName } from 'lib/cart-values';
+import FormPhoneMediaInput from 'wp-calypso-client/components/forms/form-phone-media-input';
+import {
+	StateSelect,
+	Input,
+	HiddenInput,
+} from 'wp-calypso-client/my-sites/domains/components/form';
+import { PAYMENT_PROCESSOR_COUNTRIES_FIELDS } from 'wp-calypso-client/lib/checkout/constants';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { paymentMethodName } from 'wp-calypso-client/lib/cart-values';
 
 export class CountrySpecificPaymentFields extends Component {
 	static propTypes = {

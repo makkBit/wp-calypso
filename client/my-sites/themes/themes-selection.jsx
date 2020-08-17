@@ -11,11 +11,11 @@ import { compact, includes, isEqual, property, snakeCase } from 'lodash';
  * Internal dependencies
  */
 import { trackClick } from './helpers';
-import QueryThemes from 'components/data/query-themes';
-import ThemesList from 'components/themes-list';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import QueryThemes from 'wp-calypso-client/components/data/query-themes';
+import ThemesList from 'wp-calypso-client/components/themes-list';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getPremiumThemePrice,
 	getThemesForQueryIgnoringPage,
@@ -25,9 +25,9 @@ import {
 	isThemeActive,
 	isInstallingTheme,
 	prependThemeFilterKeys,
-} from 'state/themes/selectors';
-import { setThemePreviewOptions } from 'state/themes/actions';
-import config from 'config';
+} from 'wp-calypso-client/state/themes/selectors';
+import { setThemePreviewOptions } from 'wp-calypso-client/state/themes/actions';
+import config from 'wp-calypso-client/config';
 
 /**
  * Style dependencies

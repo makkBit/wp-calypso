@@ -9,8 +9,8 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import MultipleChoiceQuestion from 'components/multiple-choice-question';
-import { recordTracksEvent } from 'state/analytics/actions';
+import MultipleChoiceQuestion from 'wp-calypso-client/components/multiple-choice-question';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class GSuiteCancellationSurvey extends Component {
 	componentDidMount() {

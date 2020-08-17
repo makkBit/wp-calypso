@@ -7,9 +7,9 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { getSite } from 'state/sites/selectors';
-import { createSitePlanObject } from 'state/sites/plans/assembler';
-import { getPlansBySiteId } from 'state/sites/plans/selectors/get-plans-by-site';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { createSitePlanObject } from 'wp-calypso-client/state/sites/plans/assembler';
+import { getPlansBySiteId } from 'wp-calypso-client/state/sites/plans/selectors/get-plans-by-site';
 
 /**
  * Module dependencies

@@ -10,30 +10,34 @@ import { overSome, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import PaymentCountrySelect from 'components/payment-country-select';
-import CartCoupon from 'my-sites/checkout/cart/cart-coupon';
-import Input from 'my-sites/domains/components/form/input';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { getTaxCountryCode, getTaxPostalCode, shouldShowTax } from 'lib/cart-values';
-import { hasRenewalItem } from 'lib/cart-values/cart-items';
-import { isWpComBusinessPlan, isWpComEcommercePlan } from 'lib/plans';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PaymentCountrySelect from 'wp-calypso-client/components/payment-country-select';
+import CartCoupon from 'wp-calypso-client/my-sites/checkout/cart/cart-coupon';
+import Input from 'wp-calypso-client/my-sites/domains/components/form/input';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import {
+	getTaxCountryCode,
+	getTaxPostalCode,
+	shouldShowTax,
+} from 'wp-calypso-client/lib/cart-values';
+import { hasRenewalItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { isWpComBusinessPlan, isWpComEcommercePlan } from 'wp-calypso-client/lib/plans';
 import {
 	detectWebPaymentMethod,
 	WEB_PAYMENT_BASIC_CARD_METHOD,
 	WEB_PAYMENT_APPLE_PAY_METHOD,
-} from 'lib/web-payment';
-import { webPayment } from 'lib/transaction/payments';
-import { setPayment, setStripeObject } from 'lib/transaction/actions';
-import { setTaxCountryCode, setTaxPostalCode } from 'lib/cart/actions';
+} from 'wp-calypso-client/lib/web-payment';
+import { webPayment } from 'wp-calypso-client/lib/transaction/payments';
+import { setPayment, setStripeObject } from 'wp-calypso-client/lib/transaction/actions';
+import { setTaxCountryCode, setTaxPostalCode } from 'wp-calypso-client/lib/cart/actions';
 import CartToggle from './cart-toggle';
 import CheckoutTerms from './checkout-terms';
 import PaymentChatButton from './payment-chat-button';
 import RecentRenewals from './recent-renewals';
 import PaymentRequestButton from './payment-request-button';
 import SubscriptionText from './subscription-text';
-import { useDebounce } from 'blocks/credit-card-form/helpers';
-import { useStripe, StripeHookProvider } from 'lib/stripe';
+import { useDebounce } from 'wp-calypso-client/blocks/credit-card-form/helpers';
+import { useStripe, StripeHookProvider } from 'wp-calypso-client/lib/stripe';
 
 const debug = debugFactory( 'calypso:checkout:payment:web-payment-box' );
 

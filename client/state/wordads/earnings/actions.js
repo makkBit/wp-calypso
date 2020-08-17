@@ -1,10 +1,13 @@
 /**
  * Internal dependencies
  */
-import { WORDADS_EARNINGS_REQUEST, WORDADS_EARNINGS_RECEIVE } from 'state/action-types';
+import {
+	WORDADS_EARNINGS_REQUEST,
+	WORDADS_EARNINGS_RECEIVE,
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/wordads/earnings';
-import 'state/wordads/init';
+import 'wp-calypso-client/state/data-layer/wpcom/wordads/earnings';
+import 'wp-calypso-client/state/wordads/init';
 
 export const requestWordadsEarnings = ( siteId ) => ( {
 	type: WORDADS_EARNINGS_REQUEST,

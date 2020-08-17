@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestTags } from 'state/reader/tags/items/actions';
+import { requestTags } from 'wp-calypso-client/state/reader/tags/items/actions';
 
 const QueryReaderTag = ( { tag, requestTags: request } ) => {
 	useEffect( () => {

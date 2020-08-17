@@ -7,12 +7,17 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import isInlineSupportArticleVisible from 'state/selectors/is-inline-support-article-visible';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import isInlineSupportArticleVisible from 'wp-calypso-client/state/selectors/is-inline-support-article-visible';
 
 function SupportArticleDialogLoader( { isVisible } ) {
 	return (
-		isVisible && <AsyncLoad require="blocks/support-article-dialog/dialog" placeholder={ null } />
+		isVisible && (
+			<AsyncLoad
+				require="wp-calypso-client/blocks/support-article-dialog/dialog"
+				placeholder={ null }
+			/>
+		)
 	);
 }
 

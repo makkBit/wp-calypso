@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import getCurrentPlanPurchaseId from 'state/selectors/get-current-plan-purchase-id';
-import { getByPurchaseId } from 'state/purchases/selectors';
+import getCurrentPlanPurchaseId from 'wp-calypso-client/state/selectors/get-current-plan-purchase-id';
+import { getByPurchaseId } from 'wp-calypso-client/state/purchases/selectors';
 
 /**
  * Return the purchase object for a site's current plan or null if not found.

@@ -10,8 +10,8 @@ import {
 	STORED_CARDS_DELETE,
 	STORED_CARDS_DELETE_COMPLETED,
 	STORED_CARDS_DELETE_FAILED,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { storedCardsSchema } from './schema';
 
 /**

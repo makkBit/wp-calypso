@@ -12,9 +12,9 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { getLocaleSlug } from 'lib/i18n-utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import TranslatableString from 'components/translatable/proptype';
+import { getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 /**
  * Style dependencies

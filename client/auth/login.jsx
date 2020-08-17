@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { Component } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 
@@ -10,21 +10,21 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import AuthCodeButton from './auth-code-button';
-import AuthStore from 'lib/oauth-store';
-import config from 'config';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormTextInput from 'components/forms/form-text-input';
+import AuthStore from 'wp-calypso-client/lib/oauth-store';
+import config from 'wp-calypso-client/config';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import LostPassword from './lost-password';
-import Main from 'components/main';
-import Notice from 'components/notice';
+import Main from 'wp-calypso-client/components/main';
+import Notice from 'wp-calypso-client/components/notice';
 import SelfHostedInstructions from './self-hosted-instructions';
-import WordPressLogo from 'components/wordpress-logo';
-import { login } from 'lib/oauth-store/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { localizeUrl } from 'lib/i18n-utils';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
+import { login } from 'wp-calypso-client/lib/oauth-store/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export class Auth extends Component {
 	state = {

@@ -10,8 +10,8 @@ import { useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getStripeConfiguration } from 'lib/store-transactions';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
+import { getStripeConfiguration } from 'wp-calypso-client/lib/store-transactions';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
 
 const debug = debugFactory( 'calypso:stripe' );
 

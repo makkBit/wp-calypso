@@ -2,8 +2,11 @@
  * Internal dependencies
  */
 import { fetchPostRevisionsDiffs, receiveSuccess } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receivePostRevisions, requestPostRevisions } from 'state/posts/revisions/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	receivePostRevisions,
+	requestPostRevisions,
+} from 'wp-calypso-client/state/posts/revisions/actions';
 
 const successfulPostRevisionsDiffsResponse = {
 	diffs: [

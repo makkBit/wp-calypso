@@ -11,12 +11,12 @@ import { isArray } from 'lodash';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
-import FormTextarea from 'components/forms/form-textarea';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
 import PaymentMethodEditFormToggle from './payment-method-edit-form-toggle';
 
 class PaymentMethodEdit extends Component {

@@ -1,7 +1,11 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { siteKeyrings as siteKeyringsSchema } from './schema';
 import {
 	SITE_KEYRINGS_REQUEST,
@@ -12,7 +16,7 @@ import {
 	SITE_KEYRINGS_SAVE_SUCCESS,
 	SITE_KEYRINGS_DELETE_SUCCESS,
 	SITE_KEYRINGS_UPDATE_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Returns the updated requests state after an action has been dispatched. The

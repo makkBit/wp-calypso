@@ -15,11 +15,11 @@ import {
 	JETPACK_USER_CONNECTION_DATA_REQUEST,
 	JETPACK_USER_CONNECTION_DATA_REQUEST_SUCCESS,
 	JETPACK_USER_CONNECTION_DATA_REQUEST_FAILURE,
-} from 'state/action-types';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wp from 'wp-calypso-client/lib/wp';
 
-import 'state/data-layer/wpcom/jetpack/connection/owner';
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/data-layer/wpcom/jetpack/connection/owner';
+import 'wp-calypso-client/state/jetpack/init';
 
 export const requestJetpackConnectionStatus = ( siteId ) => {
 	return ( dispatch ) => {

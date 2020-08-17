@@ -6,10 +6,10 @@ import { flowRight as compose } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { transferStates } from 'state/automated-transfer/constants';
-import { getAutomatedTransferStatus } from 'state/automated-transfer/selectors/get-automated-transfer-status';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
+import { getAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors/get-automated-transfer-status';
 
-import 'state/automated-transfer/init';
+import 'wp-calypso-client/state/automated-transfer/init';
 
 /**
  * Maps automated transfer status value to indication if transfer is failed

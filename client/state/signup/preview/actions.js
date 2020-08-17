@@ -1,12 +1,15 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_SITE_PREVIEW_SHOW, SIGNUP_SITE_PREVIEW_HIDE } from 'state/action-types';
+import {
+	SIGNUP_SITE_PREVIEW_SHOW,
+	SIGNUP_SITE_PREVIEW_HIDE,
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Internal dependencies
  */
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 /**
  * Action creator: Hide signup site preview

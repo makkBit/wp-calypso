@@ -11,11 +11,11 @@ import { get, isNumber } from 'lodash';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Count from 'components/count';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getSiteStatsNormalizedData } from 'state/stats/lists/selectors';
+import Count from 'wp-calypso-client/components/count';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSiteStatsNormalizedData } from 'wp-calypso-client/state/stats/lists/selectors';
 
 class FollowersCount extends Component {
 	render() {

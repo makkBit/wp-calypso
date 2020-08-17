@@ -21,8 +21,8 @@ import {
 	WP_SUPER_CACHE_SAVE_SETTINGS_SUCCESS,
 } from '../../action-types';
 import reducer, { items, restoring } from '../reducer';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'reducer', () => {
 	const primarySiteId = 123456;

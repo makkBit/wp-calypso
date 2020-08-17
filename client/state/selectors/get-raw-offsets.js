@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/timezones/init';
+import 'wp-calypso-client/state/timezones/init';
 
 /**
  * Return manual utc offsets data

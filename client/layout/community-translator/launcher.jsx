@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import i18n, { localize } from 'i18n-calypso';
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { addQueryArgs } from '@wordpress/url';
@@ -14,22 +14,22 @@ import { addQueryArgs } from '@wordpress/url';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import translator, { trackTranslatorStatus } from 'lib/translator-jumpstart';
+import config from 'wp-calypso-client/config';
+import translator, { trackTranslatorStatus } from 'wp-calypso-client/lib/translator-jumpstart';
 import localStorageHelper from 'store';
 import { Button, Dialog } from '@automattic/components';
-import { bumpStat } from 'lib/analytics/mc';
-import { TranslationScanner } from 'lib/i18n-utils/translation-scanner';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { TranslationScanner } from 'wp-calypso-client/lib/i18n-utils/translation-scanner';
 import {
 	getLanguageEmpathyModeActive,
 	toggleLanguageEmpathyMode,
-} from 'lib/i18n-utils/empathy-mode';
-import getUserSettings from 'state/selectors/get-user-settings';
-import getOriginalUserSetting from 'state/selectors/get-original-user-setting';
-import { setLocale } from 'state/ui/language/actions';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import QueryUserSettings from 'components/data/query-user-settings';
-import FormTextInput from 'components/forms/form-text-input';
+} from 'wp-calypso-client/lib/i18n-utils/empathy-mode';
+import getUserSettings from 'wp-calypso-client/state/selectors/get-user-settings';
+import getOriginalUserSetting from 'wp-calypso-client/state/selectors/get-original-user-setting';
+import { setLocale } from 'wp-calypso-client/state/ui/language/actions';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import QueryUserSettings from 'wp-calypso-client/components/data/query-user-settings';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 /**
  * Style dependencies

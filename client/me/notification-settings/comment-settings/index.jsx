@@ -8,21 +8,25 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import ReauthRequired from 'me/reauth-required';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import MeSidebarNavigation from 'me/sidebar-navigation';
+import Main from 'wp-calypso-client/components/main';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
 import Navigation from '../navigation';
 import { Card } from '@automattic/components';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import SettingsForm from 'me/notification-settings/settings-form';
-import QueryUserDevices from 'components/data/query-user-devices';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { fetchSettings, toggle, saveSettings } from 'state/notification-settings/actions';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import SettingsForm from 'wp-calypso-client/me/notification-settings/settings-form';
+import QueryUserDevices from 'wp-calypso-client/components/data/query-user-devices';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import {
+	fetchSettings,
+	toggle,
+	saveSettings,
+} from 'wp-calypso-client/state/notification-settings/actions';
 import {
 	getNotificationSettings,
 	hasUnsavedNotificationSettingsChanges,
-} from 'state/notification-settings/selectors';
+} from 'wp-calypso-client/state/notification-settings/selectors';
 
 /**
  * Style dependencies

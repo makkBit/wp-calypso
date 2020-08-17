@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { noop, intersection } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies

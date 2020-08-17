@@ -8,7 +8,7 @@ import { ALL, PERFORMANCE, SECURITY, PRODUCTS_WITH_OPTIONS } from './constants';
  */
 import type { TranslateResult } from 'i18n-calypso';
 import type { ReactNode } from 'react';
-import type { TERM_ANNUALLY, TERM_MONTHLY } from 'lib/plans/constants';
+import type { TERM_ANNUALLY, TERM_MONTHLY } from 'wp-calypso-client/lib/plans/constants';
 
 export type Duration = typeof TERM_ANNUALLY | typeof TERM_MONTHLY;
 export type DurationString = 'annual' | 'monthly';

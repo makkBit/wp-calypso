@@ -11,19 +11,19 @@ import { head } from 'lodash';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { hasCustomDomain } from 'lib/site/utils';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { hasCustomDomain } from 'wp-calypso-client/lib/site/utils';
 
 /**
  * Image dependencies
  */
-import customDomainImage from 'assets/images/illustrations/custom-domain.svg';
-import customDomainBloggerImage from 'assets/images/illustrations/custom-domain-blogger.svg';
-import { currentUserHasFlag, getCurrentUser } from 'state/current-user/selectors';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getRegisteredDomains } from 'lib/domains';
+import customDomainImage from 'wp-calypso-client/assets/images/illustrations/custom-domain.svg';
+import customDomainBloggerImage from 'wp-calypso-client/assets/images/illustrations/custom-domain-blogger.svg';
+import { currentUserHasFlag, getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { getRegisteredDomains } from 'wp-calypso-client/lib/domains';
 
 const CustomDomainPurchaseDetail = ( {
 	selectedSite,

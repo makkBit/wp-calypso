@@ -9,22 +9,22 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import ReaderAvatar from 'blocks/reader-avatar';
-import FollowButton from 'reader/follow-button';
-import { getStreamUrl } from 'reader/route';
-import ReaderSiteNotificationSettings from 'blocks/reader-site-notification-settings';
+import ReaderAvatar from 'wp-calypso-client/blocks/reader-avatar';
+import FollowButton from 'wp-calypso-client/reader/follow-button';
+import { getStreamUrl } from 'wp-calypso-client/reader/route';
+import ReaderSiteNotificationSettings from 'wp-calypso-client/blocks/reader-site-notification-settings';
 import {
 	getSiteName,
 	getSiteDescription,
 	getSiteAuthorName,
 	getFeedUrl,
 	getSiteUrl,
-} from 'reader/get-helpers';
-import { untrailingslashit } from 'lib/route';
-import ReaderSubscriptionListItemPlaceholder from 'blocks/reader-subscription-list-item/placeholder';
-import { recordTrack, recordTrackWithRailcar } from 'reader/stats';
-import ExternalLink from 'components/external-link';
-import { withLocalizedMoment } from 'components/localized-moment';
+} from 'wp-calypso-client/reader/get-helpers';
+import { untrailingslashit } from 'wp-calypso-client/lib/route';
+import ReaderSubscriptionListItemPlaceholder from 'wp-calypso-client/blocks/reader-subscription-list-item/placeholder';
+import { recordTrack, recordTrackWithRailcar } from 'wp-calypso-client/reader/stats';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

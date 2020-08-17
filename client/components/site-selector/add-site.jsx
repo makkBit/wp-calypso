@@ -4,13 +4,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class SiteSelectorAddSite extends Component {
 	getAddNewSiteUrl() {

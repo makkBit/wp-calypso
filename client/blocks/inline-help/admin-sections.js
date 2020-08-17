@@ -3,12 +3,12 @@
  */
 import { intersection, words, memoize } from 'lodash';
 import { translate } from 'i18n-calypso';
-import { getCustomizerUrl } from 'state/sites/selectors';
+import { getCustomizerUrl } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Internal Dependencies
  */
-import { getLocaleSlug } from 'lib/i18n-utils';
+import { getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
 import { SUPPORT_TYPE_ADMIN_SECTION } from './constants';
 
 /**

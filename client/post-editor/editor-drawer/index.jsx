@@ -10,30 +10,35 @@ import { flow, overSome } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
-import AccordionSection from 'components/accordion/section';
-import CategoriesTagsAccordion from 'post-editor/editor-categories-tags/accordion';
-import AsyncLoad from 'components/async-load';
-import EditorMoreOptionsSlug from 'post-editor/editor-more-options/slug';
-import { isBusiness, isEnterprise, isJetpackPremium, isEcommerce } from 'lib/products-values';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
-import QueryPostTypes from 'components/data/query-post-types';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPostType } from 'state/post-types/selectors';
-import { getPlugins, isRequesting } from 'state/plugins/installed/selectors';
-import { isJetpackModuleActive, isJetpackSite } from 'state/sites/selectors';
-import config from 'config';
-import areSitePermalinksEditable from 'state/selectors/are-site-permalinks-editable';
+import Accordion from 'wp-calypso-client/components/accordion';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import CategoriesTagsAccordion from 'wp-calypso-client/post-editor/editor-categories-tags/accordion';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import EditorMoreOptionsSlug from 'wp-calypso-client/post-editor/editor-more-options/slug';
+import {
+	isBusiness,
+	isEnterprise,
+	isJetpackPremium,
+	isEcommerce,
+} from 'wp-calypso-client/lib/products-values';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPostType } from 'wp-calypso-client/state/post-types/selectors';
+import { getPlugins, isRequesting } from 'wp-calypso-client/state/plugins/installed/selectors';
+import { isJetpackModuleActive, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import config from 'wp-calypso-client/config';
+import areSitePermalinksEditable from 'wp-calypso-client/state/selectors/are-site-permalinks-editable';
 import EditorDrawerTaxonomies from './taxonomies';
 import EditorDrawerPageOptions from './page-options';
 import EditorDrawerLabel from './label';
-import EditorMoreOptionsCopyPost from 'post-editor/editor-more-options/copy-post';
-import EditPostStatus from 'post-editor/edit-post-status';
-import EditorExcerpt from 'post-editor/editor-excerpt';
-import { getFirstConflictingPlugin } from 'lib/seo';
+import EditorMoreOptionsCopyPost from 'wp-calypso-client/post-editor/editor-more-options/copy-post';
+import EditPostStatus from 'wp-calypso-client/post-editor/edit-post-status';
+import EditorExcerpt from 'wp-calypso-client/post-editor/editor-excerpt';
+import { getFirstConflictingPlugin } from 'wp-calypso-client/lib/seo';
 
 /**
  * Style dependencies
@@ -125,11 +130,11 @@ class EditorDrawer extends Component {
 			return;
 		}
 
-		return <AsyncLoad require="post-editor/editor-post-formats/accordion" />;
+		return <AsyncLoad require="wp-calypso-client/post-editor/editor-post-formats/accordion" />;
 	}
 
 	renderSharing() {
-		return <AsyncLoad require="post-editor/editor-sharing/accordion" />;
+		return <AsyncLoad require="wp-calypso-client/post-editor/editor-sharing/accordion" />;
 	}
 
 	renderFeaturedImage() {
@@ -175,7 +180,7 @@ class EditorDrawer extends Component {
 		return (
 			<AccordionSection>
 				<EditorDrawerLabel labelText={ translate( 'Location' ) } />
-				<AsyncLoad require="post-editor/editor-location" />
+				<AsyncLoad require="wp-calypso-client/post-editor/editor-location" />
 			</AccordionSection>
 		);
 	}
@@ -187,7 +192,7 @@ class EditorDrawer extends Component {
 
 		return (
 			<AccordionSection>
-				<AsyncLoad require="post-editor/editor-discussion" />
+				<AsyncLoad require="wp-calypso-client/post-editor/editor-discussion" />
 			</AccordionSection>
 		);
 	}
@@ -220,7 +225,7 @@ class EditorDrawer extends Component {
 			return;
 		}
 
-		return <AsyncLoad require="post-editor/editor-seo-accordion" />;
+		return <AsyncLoad require="wp-calypso-client/post-editor/editor-seo-accordion" />;
 	}
 
 	renderCopyPost() {

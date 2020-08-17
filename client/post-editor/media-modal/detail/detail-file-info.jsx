@@ -9,8 +9,8 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { playtime } from 'lib/media/utils';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { playtime } from 'wp-calypso-client/lib/media/utils';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class EditorMediaModalDetailFileInfo extends React.Component {
 	static displayName = 'EditorMediaModalDetailFileInfo';

@@ -9,15 +9,15 @@ import { debounce, isEqual } from 'lodash';
 /**
  * Internal dependencies.
  */
-import { getDocumentHeadTitle } from 'state/document-head/selectors/get-document-head-title';
-import { getDocumentHeadFormattedTitle } from 'state/document-head/selectors/get-document-head-formatted-title';
+import { getDocumentHeadTitle } from 'wp-calypso-client/state/document-head/selectors/get-document-head-title';
+import { getDocumentHeadFormattedTitle } from 'wp-calypso-client/state/document-head/selectors/get-document-head-formatted-title';
 import {
 	setDocumentHeadTitle as setTitle,
 	setDocumentHeadLink as setLink,
 	setDocumentHeadMeta as setMeta,
 	setDocumentHeadUnreadCount as setUnreadCount,
-} from 'state/document-head/actions';
-import TranslatableString from 'components/translatable/proptype';
+} from 'wp-calypso-client/state/document-head/actions';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 class DocumentHead extends Component {
 	UNSAFE_componentWillMount() {

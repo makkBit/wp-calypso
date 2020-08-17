@@ -11,9 +11,9 @@
 /**
  * Internal dependencies
  */
-import { STATUS_UNINITIALIZED } from 'state/help/directly/constants';
+import { STATUS_UNINITIALIZED } from 'wp-calypso-client/state/help/directly/constants';
 
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 export default function isDirectlyUninitialized( state ) {
 	return state.help?.directly.status === STATUS_UNINITIALIZED;

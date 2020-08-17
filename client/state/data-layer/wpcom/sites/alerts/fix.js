@@ -6,12 +6,15 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { JETPACK_SITE_ALERT_THREAT_FIX, REWIND_STATE_UPDATE } from 'state/action-types';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { transformApi } from 'state/data-layer/wpcom/sites/rewind/api-transformer';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import {
+	JETPACK_SITE_ALERT_THREAT_FIX,
+	REWIND_STATE_UPDATE,
+} from 'wp-calypso-client/state/action-types';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { transformApi } from 'wp-calypso-client/state/data-layer/wpcom/sites/rewind/api-transformer';
 
 export const request = ( action ) => {
 	const notice = successNotice( i18n.translate( 'Fixing threat…' ), { duration: 30000 } );

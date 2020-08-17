@@ -6,32 +6,37 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { get, isNumber, includes } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classNames from 'classnames';
 import page from 'page';
 
 /**
  * Internal dependencies
  */
-import DomainSuggestion from 'components/domains/domain-suggestion';
+import DomainSuggestion from 'wp-calypso-client/components/domains/domain-suggestion';
 import {
 	shouldBundleDomainWithPlan,
 	getDomainPriceRule,
 	hasDomainInCart,
 	isPaidDomain,
-} from 'lib/cart-values/cart-items';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	parseMatchReasons,
 	VALID_MATCH_REASONS,
-} from 'components/domains/domain-registration-suggestion/utility';
+} from 'wp-calypso-client/components/domains/domain-registration-suggestion/utility';
 import { ProgressBar } from '@automattic/components';
-import { getDomainPrice, getDomainSalePrice, getTld, isHstsRequired } from 'lib/domains';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getProductsList } from 'state/products-list/selectors';
-import Badge from 'components/badge';
-import InfoPopover from 'components/info-popover';
-import { HTTPS_SSL } from 'lib/url/support';
+import {
+	getDomainPrice,
+	getDomainSalePrice,
+	getTld,
+	isHstsRequired,
+} from 'wp-calypso-client/lib/domains';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import Badge from 'wp-calypso-client/components/badge';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { HTTPS_SSL } from 'wp-calypso-client/lib/url/support';
 
 const NOTICE_GREEN = '#4ab866';
 

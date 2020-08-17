@@ -6,18 +6,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import { take, times } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classnames from 'classnames';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ReaderSubscriptionListItemPlaceholder from 'blocks/reader-subscription-list-item/placeholder';
-import { READER_FOLLOWING_MANAGE_SEARCH_RESULT } from 'reader/follow-sources';
-import InfiniteStream from 'reader/components/reader-infinite-stream';
-import { siteRowRenderer } from 'reader/components/reader-infinite-stream/row-renderers';
-import { requestFeedSearch } from 'state/reader/feed-searches/actions';
+import ReaderSubscriptionListItemPlaceholder from 'wp-calypso-client/blocks/reader-subscription-list-item/placeholder';
+import { READER_FOLLOWING_MANAGE_SEARCH_RESULT } from 'wp-calypso-client/reader/follow-sources';
+import InfiniteStream from 'wp-calypso-client/reader/components/reader-infinite-stream';
+import { siteRowRenderer } from 'wp-calypso-client/reader/components/reader-infinite-stream/row-renderers';
+import { requestFeedSearch } from 'wp-calypso-client/state/reader/feed-searches/actions';
 
 class FollowingManageSearchFeedsResults extends React.Component {
 	static propTypes = {

@@ -6,8 +6,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { Threat } from 'components/jetpack/threat-item/types';
-import 'state/data-layer/wpcom/sites/scan';
+import { Threat } from 'wp-calypso-client/components/jetpack/threat-item/types';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/scan';
 
 /**
  * Returns an array found threats in the current scan process of Jetpack Scan.

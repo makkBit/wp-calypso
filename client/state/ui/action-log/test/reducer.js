@@ -7,8 +7,8 @@ import { expect } from 'chai';
  * Internal dependencies
  */
 import reducer from '../reducer';
-import { ROUTE_SET, COMMENTS_LIKE } from 'state/action-types';
-import { useFakeTimers } from 'test-helpers/use-sinon';
+import { ROUTE_SET, COMMENTS_LIKE } from 'wp-calypso-client/state/action-types';
+import { useFakeTimers } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'reducer', () => {
 	useFakeTimers( 1337 );

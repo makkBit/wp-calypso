@@ -8,7 +8,7 @@ import { find, flatten, isEmpty, isNil, map, omit, some, startsWith, xor } from 
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	createShippingZone,
 	updateShippingZone,

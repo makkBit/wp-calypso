@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { registerReducer } from 'state/redux-store';
+import { registerReducer } from 'wp-calypso-client/state/redux-store';
 import loginReducer from './reducer';
 
 /**
  * Internal dependencies
  */
-import 'state/login/init';
+import 'wp-calypso-client/state/login/init';
 
 registerReducer( [ 'login' ], loginReducer );

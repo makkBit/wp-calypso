@@ -10,29 +10,29 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import StatsNavigation from 'blocks/stats-navigation';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import AllTime from 'my-sites/stats/all-time/';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import StatsNavigation from 'wp-calypso-client/blocks/stats-navigation';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import AllTime from 'wp-calypso-client/my-sites/stats/all-time/';
 import Comments from '../stats-comments';
 import Reach from '../stats-reach';
 import PostingActivity from '../post-trends';
 import StatsModule from '../stats-module';
 import statsStrings from '../stats-strings';
-import MostPopular from 'my-sites/stats/most-popular';
+import MostPopular from 'wp-calypso-client/my-sites/stats/most-popular';
 import LatestPostSummary from '../post-performance';
-import DomainTip from 'blocks/domain-tip';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import SectionHeader from 'components/section-header';
+import DomainTip from 'wp-calypso-client/blocks/domain-tip';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import StatsViews from '../stats-views';
 import Followers from '../stats-followers';
-import JetpackColophon from 'components/jetpack-colophon';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import AnnualSiteStats from 'my-sites/stats/annual-site-stats';
-import { getSuggestionsVendor } from 'lib/domains/suggestions';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import AnnualSiteStats from 'wp-calypso-client/my-sites/stats/annual-site-stats';
+import { getSuggestionsVendor } from 'wp-calypso-client/lib/domains/suggestions';
 
 const StatsInsights = ( props ) => {
 	const { followList, isJetpack, siteId, siteSlug, translate } = props;

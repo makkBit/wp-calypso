@@ -10,17 +10,17 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import QueryPageTemplates from 'components/data/query-page-templates';
-import AccordionSection from 'components/accordion/section';
-import SelectDropdown from 'components/select-dropdown';
-import EditorDrawerLabel from 'post-editor/editor-drawer/label';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPageTemplates } from 'state/page-templates/selectors';
-import { getSiteOption } from 'state/sites/selectors';
-import { editPost } from 'state/posts/actions';
-import EditorThemeHelp from 'post-editor/editor-theme-help';
+import QueryPageTemplates from 'wp-calypso-client/components/data/query-page-templates';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import EditorDrawerLabel from 'wp-calypso-client/post-editor/editor-drawer/label';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPageTemplates } from 'wp-calypso-client/state/page-templates/selectors';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import EditorThemeHelp from 'wp-calypso-client/post-editor/editor-theme-help';
 
 /**
  * Style dependencies

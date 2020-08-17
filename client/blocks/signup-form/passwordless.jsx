@@ -10,20 +10,20 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import { getSavedVariations } from 'lib/abtest';
-import wpcom from 'lib/wp';
-import { recordRegistration } from 'lib/analytics/signup';
-import { recordGoogleRecaptchaAction } from 'lib/analytics/recaptcha';
+import { getSavedVariations } from 'wp-calypso-client/lib/abtest';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { recordRegistration } from 'wp-calypso-client/lib/analytics/signup';
+import { recordGoogleRecaptchaAction } from 'wp-calypso-client/lib/analytics/recaptcha';
 import { Button } from '@automattic/components';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import LoggedOutForm from 'components/logged-out-form';
-import LoggedOutFormFooter from 'components/logged-out-form/footer';
-import ValidationFieldset from 'signup/validation-fieldset';
-import { recordTracksEvent } from 'state/analytics/actions';
-import Notice from 'components/notice';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
-import flows from 'signup/config/flows';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import LoggedOutForm from 'wp-calypso-client/components/logged-out-form';
+import LoggedOutFormFooter from 'wp-calypso-client/components/logged-out-form/footer';
+import ValidationFieldset from 'wp-calypso-client/signup/validation-fieldset';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import flows from 'wp-calypso-client/signup/config/flows';
 
 class PasswordlessSignupForm extends Component {
 	static propTypes = {

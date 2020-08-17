@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer, withStorageKey } from 'state/utils';
+import { combineReducers, keyedReducer, withStorageKey } from 'wp-calypso-client/state/utils';
 import {
 	JETPACK_REMOTE_INSTALL,
 	JETPACK_REMOTE_INSTALL_FAILURE,
 	JETPACK_REMOTE_INSTALL_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 export const isComplete = keyedReducer( 'url', ( state = false, { type } ) => {
 	switch ( type ) {

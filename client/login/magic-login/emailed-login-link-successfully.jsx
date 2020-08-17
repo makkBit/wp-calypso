@@ -11,23 +11,23 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { login } from 'lib/paths';
+import { login } from 'wp-calypso-client/lib/paths';
 import { Card } from '@automattic/components';
-import RedirectWhenLoggedIn from 'components/redirect-when-logged-in';
-import { hideMagicLoginRequestForm } from 'state/login/magic-login/actions';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
+import RedirectWhenLoggedIn from 'wp-calypso-client/components/redirect-when-logged-in';
+import { hideMagicLoginRequestForm } from 'wp-calypso-client/state/login/magic-login/actions';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
 import {
 	recordPageViewWithClientId as recordPageView,
 	enhanceWithSiteType,
-} from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
-import Gridicon from 'components/gridicon';
+} from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Image dependencies
  */
-import checkEmailImage from 'assets/images/illustrations/check-email.svg';
+import checkEmailImage from 'wp-calypso-client/assets/images/illustrations/check-email.svg';
 
 class EmailedLoginLinkSuccessfully extends React.Component {
 	static propTypes = {

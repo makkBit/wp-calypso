@@ -7,7 +7,7 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { appStates } from 'state/imports/constants';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
 
 // Left( UI ) - Right( API )
 const importerStateMap = [

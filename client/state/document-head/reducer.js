@@ -1,14 +1,14 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import {
 	DOCUMENT_HEAD_LINK_SET,
 	DOCUMENT_HEAD_META_SET,
 	DOCUMENT_HEAD_TITLE_SET,
 	DOCUMENT_HEAD_UNREAD_COUNT_SET,
 	ROUTE_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { titleSchema, unreadCountSchema, linkSchema, metaSchema } from './schema';
 
 /**

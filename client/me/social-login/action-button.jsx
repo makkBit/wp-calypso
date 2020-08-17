@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { isRequesting } from 'state/login/selectors';
-import { connectSocialUser, disconnectSocialUser } from 'state/login/actions';
-import FormButton from 'components/forms/form-button';
-import GoogleLoginButton from 'components/social-buttons/google';
-import AppleLoginButton from 'components/social-buttons/apple';
-import user from 'lib/user';
+import config from 'wp-calypso-client/config';
+import { isRequesting } from 'wp-calypso-client/state/login/selectors';
+import { connectSocialUser, disconnectSocialUser } from 'wp-calypso-client/state/login/actions';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import GoogleLoginButton from 'wp-calypso-client/components/social-buttons/google';
+import AppleLoginButton from 'wp-calypso-client/components/social-buttons/apple';
+import user from 'wp-calypso-client/lib/user';
 
 class SocialLoginActionButton extends Component {
 	static propTypes = {

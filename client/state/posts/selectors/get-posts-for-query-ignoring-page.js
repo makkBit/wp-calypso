@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getQueryManager } from 'state/posts/selectors/get-query-manager';
-import { getSerializedPostsQueryWithoutPage, normalizePostForDisplay } from 'state/posts/utils';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getQueryManager } from 'wp-calypso-client/state/posts/selectors/get-query-manager';
+import {
+	getSerializedPostsQueryWithoutPage,
+	normalizePostForDisplay,
+} from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an array of normalized posts for the posts query, including all

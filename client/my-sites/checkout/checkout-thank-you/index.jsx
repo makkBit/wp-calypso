@@ -11,28 +11,28 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { themeActivated } from 'state/themes/actions';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import WordPressLogo from 'components/wordpress-logo';
+import { themeActivated } from 'wp-calypso-client/state/themes/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
 import { Card } from '@automattic/components';
 import ChargebackDetails from './chargeback-details';
 import CheckoutThankYouFeaturesHeader from './features-header';
 import CheckoutThankYouHeader from './header';
 import DomainMappingDetails from './domain-mapping-details';
 import DomainRegistrationDetails from './domain-registration-details';
-import { fetchReceipt } from 'state/receipts/actions';
-import { fetchSitePlans, refreshSitePlans } from 'state/sites/plans/actions';
-import { getPlansBySite, getSitePlanSlug } from 'state/sites/plans/selectors';
-import { getReceiptById } from 'state/receipts/selectors';
+import { fetchReceipt } from 'wp-calypso-client/state/receipts/actions';
+import { fetchSitePlans, refreshSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
+import { getPlansBySite, getSitePlanSlug } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getReceiptById } from 'wp-calypso-client/state/receipts/selectors';
 import {
 	getCurrentUser,
 	getCurrentUserDate,
 	isCurrentUserEmailVerified,
-} from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/current-user/selectors';
 import GoogleAppsDetails from './google-apps-details';
 import GuidedTransferDetails from './guided-transfer-details';
-import HappinessSupport from 'components/happiness-support';
-import PlanThankYouCard from 'blocks/plan-thank-you-card';
+import HappinessSupport from 'wp-calypso-client/components/happiness-support';
+import PlanThankYouCard from 'wp-calypso-client/blocks/plan-thank-you-card';
 import AtomicStoreThankYouCard from './atomic-store-thank-you-card';
 import {
 	isChargeback,
@@ -53,10 +53,10 @@ import {
 	isBusiness,
 	isSiteRedirect,
 	isTheme,
-} from 'lib/products-values';
-import { isExternal } from 'lib/url';
+} from 'wp-calypso-client/lib/products-values';
+import { isExternal } from 'wp-calypso-client/lib/url';
 import JetpackPlanDetails from './jetpack-plan-details';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import BloggerPlanDetails from './blogger-plan-details';
 import PersonalPlanDetails from './personal-plan-details';
 import PremiumPlanDetails from './premium-plan-details';
@@ -64,27 +64,34 @@ import BusinessPlanDetails from './business-plan-details';
 import EcommercePlanDetails from './ecommerce-plan-details';
 import FailedPurchaseDetails from './failed-purchase-details';
 import TransferPending from './transfer-pending';
-import PurchaseDetail from 'components/purchase-detail';
-import { isJetpackBusinessPlan, isWpComBusinessPlan, shouldFetchSitePlans } from 'lib/plans';
-import { getFeatureByKey } from 'lib/plans/features-list';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import {
+	isJetpackBusinessPlan,
+	isWpComBusinessPlan,
+	shouldFetchSitePlans,
+} from 'wp-calypso-client/lib/plans';
+import { getFeatureByKey } from 'wp-calypso-client/lib/plans/features-list';
 import RebrandCitiesThankYou from './rebrand-cities-thank-you';
 import SiteRedirectDetails from './site-redirect-details';
-import Notice from 'components/notice';
-import { domainManagementList, domainManagementTransferInPrecheck } from 'my-sites/domains/paths';
-import { emailManagement } from 'my-sites/email/paths';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isRebrandCitiesSiteUrl } from 'lib/rebrand-cities';
-import { fetchAtomicTransfer } from 'state/atomic-transfer/actions';
-import { transferStates } from 'state/atomic-transfer/constants';
-import getAtomicTransfer from 'state/selectors/get-atomic-transfer';
-import isFetchingTransfer from 'state/selectors/is-fetching-atomic-transfer';
-import { getSiteHomeUrl, getSiteSlug } from 'state/sites/selectors';
-import { recordStartTransferClickInThankYou } from 'state/domains/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { getActiveTheme } from 'state/themes/selectors';
-import getCustomizeOrEditFrontPageUrl from 'state/selectors/get-customize-or-edit-front-page-url';
-import getCheckoutUpgradeIntent from 'state/selectors/get-checkout-upgrade-intent';
-import { isProductsListFetching } from 'state/products-list/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import {
+	domainManagementList,
+	domainManagementTransferInPrecheck,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isRebrandCitiesSiteUrl } from 'wp-calypso-client/lib/rebrand-cities';
+import { fetchAtomicTransfer } from 'wp-calypso-client/state/atomic-transfer/actions';
+import { transferStates } from 'wp-calypso-client/state/atomic-transfer/constants';
+import getAtomicTransfer from 'wp-calypso-client/state/selectors/get-atomic-transfer';
+import isFetchingTransfer from 'wp-calypso-client/state/selectors/is-fetching-atomic-transfer';
+import { getSiteHomeUrl, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { recordStartTransferClickInThankYou } from 'wp-calypso-client/state/domains/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { getActiveTheme } from 'wp-calypso-client/state/themes/selectors';
+import getCustomizeOrEditFrontPageUrl from 'wp-calypso-client/state/selectors/get-customize-or-edit-front-page-url';
+import getCheckoutUpgradeIntent from 'wp-calypso-client/state/selectors/get-checkout-upgrade-intent';
+import { isProductsListFetching } from 'wp-calypso-client/state/products-list/selectors';
 /**
  * Style dependencies
  */

@@ -4,36 +4,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { map } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import EmptyContent from 'components/empty-content';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import PeopleListSectionHeader from 'my-sites/people/people-list-section-header';
-import PeopleSectionNav from 'my-sites/people/people-section-nav';
-import PeopleListItem from 'my-sites/people/people-list-item';
+import Main from 'wp-calypso-client/components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import PeopleListSectionHeader from 'wp-calypso-client/my-sites/people/people-list-section-header';
+import PeopleSectionNav from 'wp-calypso-client/my-sites/people/people-section-nav';
+import PeopleListItem from 'wp-calypso-client/my-sites/people/people-list-item';
 import { Card, Button, Dialog } from '@automattic/components';
-import QuerySiteInvites from 'components/data/query-site-invites';
+import QuerySiteInvites from 'wp-calypso-client/components/data/query-site-invites';
 import InvitesListEnd from './invites-list-end';
-import { getSelectedSite } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isPrivateSite from 'state/selectors/is-private-site';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
 import {
 	isRequestingInvitesForSite,
 	getPendingInvitesForSite,
 	getAcceptedInvitesForSite,
 	getNumberOfInvitesFoundForSite,
 	isDeletingAnyInvite,
-} from 'state/invites/selectors';
-import { deleteInvites } from 'state/invites/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+} from 'wp-calypso-client/state/invites/selectors';
+import { deleteInvites } from 'wp-calypso-client/state/invites/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /**
  * Style dependencies

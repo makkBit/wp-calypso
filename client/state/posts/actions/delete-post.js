@@ -1,10 +1,14 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { POST_DELETE_FAILURE, POST_DELETE_SUCCESS, POST_DELETE } from 'state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
+import {
+	POST_DELETE_FAILURE,
+	POST_DELETE_SUCCESS,
+	POST_DELETE,
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an action thunk which, when dispatched, triggers a network request

@@ -3,17 +3,17 @@
  */
 import PropTypes from 'prop-types';
 import React, { Fragment } from 'react';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { localize } from 'i18n-calypso';
 import { noop, get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import ReaderMain from 'reader/components/reader-main';
-import DocumentHead from 'components/data/document-head';
-import BackButton from 'components/back-button';
-import ExternalLink from 'components/external-link';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import BackButton from 'wp-calypso-client/components/back-button';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 const ReaderFullPostUnavailable = ( { post, onBackClick, translate } ) => {
 	const statusCode = get( post, [ 'error', 'statusCode' ] );

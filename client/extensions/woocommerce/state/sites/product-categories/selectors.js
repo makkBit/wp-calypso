@@ -6,7 +6,7 @@ import { get, isArray, omit, some, range, values } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { getSerializedProductCategoriesQuery } from './utils';
 
 /**

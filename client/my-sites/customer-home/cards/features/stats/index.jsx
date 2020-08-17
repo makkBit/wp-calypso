@@ -11,23 +11,26 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import Chart from 'components/chart';
-import Spinner from 'components/spinner';
-import QuerySiteStats from 'components/data/query-site-stats';
-import InlineSupportLink from 'components/inline-support-link';
-import { localizeUrl } from 'lib/i18n-utils';
-import { buildChartData } from 'my-sites/stats/stats-chart-tabs/utility';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import { getSiteOption } from 'state/sites/selectors';
-import { requestChartCounts } from 'state/stats/chart-tabs/actions';
-import { getCountRecords, getLoadingTabs } from 'state/stats/chart-tabs/selectors';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Chart from 'wp-calypso-client/components/chart';
+import Spinner from 'wp-calypso-client/components/spinner';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { buildChartData } from 'wp-calypso-client/my-sites/stats/stats-chart-tabs/utility';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { requestChartCounts } from 'wp-calypso-client/state/stats/chart-tabs/actions';
+import {
+	getCountRecords,
+	getLoadingTabs,
+} from 'wp-calypso-client/state/stats/chart-tabs/selectors';
 import {
 	getMostPopularDatetime,
 	getTopPostAndPage,
 	isRequestingSiteStatsForQuery,
-} from 'state/stats/lists/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/stats/lists/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

@@ -11,11 +11,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSite } from 'state/ui/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormFieldset from 'components/forms/form-fieldset';
-import userUtils from 'lib/user/utils';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import userUtils from 'wp-calypso-client/lib/user/utils';
 
 export class DowngradeStep extends Component {
 	static propTypes = {

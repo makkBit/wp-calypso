@@ -9,9 +9,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isFetchingConnections as isRequestingConnections } from 'state/sharing/publicize/selectors';
-import { fetchConnections as requestConnections } from 'state/sharing/publicize/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { isFetchingConnections as isRequestingConnections } from 'wp-calypso-client/state/sharing/publicize/selectors';
+import { fetchConnections as requestConnections } from 'wp-calypso-client/state/sharing/publicize/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 class QueryPublicizeConnections extends Component {
 	componentDidMount() {

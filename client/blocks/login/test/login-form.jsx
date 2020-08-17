@@ -13,15 +13,15 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import FormsButton from 'components/forms/form-button';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormTextInput from 'components/forms/form-text-input';
+import FormsButton from 'wp-calypso-client/components/forms/form-button';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 describe( 'LoginForm', () => {
 	let LoginForm;
 
 	beforeAll( () => {
-		LoginForm = require( 'blocks/login/login-form' ).LoginForm;
+		LoginForm = require( 'wp-calypso-client/blocks/login/login-form' ).LoginForm;
 	} );
 
 	describe( 'component rendering', () => {

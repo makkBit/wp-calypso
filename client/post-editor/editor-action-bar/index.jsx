@@ -9,18 +9,18 @@ import { some } from 'lodash';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import EditorSticky from 'post-editor/editor-sticky';
-import * as utils from 'state/posts/utils';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import EditorSticky from 'wp-calypso-client/post-editor/editor-sticky';
+import * as utils from 'wp-calypso-client/state/posts/utils';
 import EditorViewLink from './view-link';
-import EditorStatusLabel from 'post-editor/editor-status-label';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost, getEditedPostValue } from 'state/posts/selectors';
-import PodcastIndicator from 'components/podcast-indicator';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import getPodcastingCategoryId from 'state/selectors/get-podcasting-category-id';
-import { isSingleUserSite } from 'state/sites/selectors';
+import EditorStatusLabel from 'wp-calypso-client/post-editor/editor-status-label';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost, getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import PodcastIndicator from 'wp-calypso-client/components/podcast-indicator';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import getPodcastingCategoryId from 'wp-calypso-client/state/selectors/get-podcasting-category-id';
+import { isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Style dependencies
@@ -55,7 +55,7 @@ class EditorActionBar extends Component {
 					<EditorStatusLabel />
 				</div>
 				<div className="editor-action-bar__cell is-center">
-					{ multiUserSite && <AsyncLoad require="post-editor/editor-author" /> }
+					{ multiUserSite && <AsyncLoad require="wp-calypso-client/post-editor/editor-author" /> }
 				</div>
 				<div className="editor-action-bar__cell is-right">
 					{ showSticky && <EditorSticky /> }

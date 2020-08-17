@@ -13,8 +13,8 @@ import { trim, uniqueId } from 'lodash';
  */
 import { Button, Dialog } from '@automattic/components';
 import { editOrder } from 'woocommerce/state/ui/orders/actions';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import { getCurrencyFormatDecimal } from 'woocommerce/lib/currency';
 import { getOrderWithEdits } from 'woocommerce/state/ui/orders/selectors';
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';

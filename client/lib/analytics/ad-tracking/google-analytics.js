@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { isPiiUrl, mayWeTrackCurrentUserGdpr } from 'lib/analytics/utils';
+import config from 'wp-calypso-client/config';
+import { isPiiUrl, mayWeTrackCurrentUserGdpr } from 'wp-calypso-client/lib/analytics/utils';
 
 import { getCurrentUser, getDoNotTrack } from '@automattic/calypso-analytics';
 import { isGoogleAnalyticsEnabled, TRACKING_IDS } from './constants';

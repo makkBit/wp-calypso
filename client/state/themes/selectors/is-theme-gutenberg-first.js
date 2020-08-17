@@ -6,10 +6,10 @@ import { intersection } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getTheme } from 'state/themes/selectors/get-theme';
-import { getThemeTaxonomySlugs } from 'state/themes/utils';
+import { getTheme } from 'wp-calypso-client/state/themes/selectors/get-theme';
+import { getThemeTaxonomySlugs } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Checks if a theme should be customized primarily with Gutenberg.

@@ -3,7 +3,7 @@
  */
 import { find } from 'lodash';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /*
  * Find the first follow for a given blog ID

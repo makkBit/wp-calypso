@@ -10,16 +10,20 @@ import { isDesktop } from '@automattic/viewport';
 /**
  * Internal dependencies
  */
-import InlineSupportLink from 'components/inline-support-link';
-import { localizeUrl } from 'lib/i18n-utils';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
-import { FEATURE_QUICK_START_VIDEO } from 'my-sites/customer-home/cards/constants';
-import MaterialIcon from 'components/material-icon';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { FEATURE_QUICK_START_VIDEO } from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
 
 /**
  * Style dependencies
  */
-import quickStartVideoImage from 'assets/images/customer-home/quick-start-video-ss.png';
+import quickStartVideoImage from 'wp-calypso-client/assets/images/customer-home/quick-start-video-ss.png';
 
 export const QuickStartVideo = ( { trackQuickStartImpression } ) => {
 	const translate = useTranslate();

@@ -7,9 +7,9 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import SectionMigrate from 'my-sites/migrate/section-migrate';
-import getSiteId from 'state/selectors/get-site-id';
-import { isEnabled } from 'config';
+import SectionMigrate from 'wp-calypso-client/my-sites/migrate/section-migrate';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import { isEnabled } from 'wp-calypso-client/config';
 
 export function ensureFeatureFlag( context, next ) {
 	if ( isEnabled( 'tools/migrate' ) ) {

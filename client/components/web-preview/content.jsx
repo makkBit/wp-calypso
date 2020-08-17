@@ -10,23 +10,23 @@ import debugModule from 'debug';
 import { noop, isFunction } from 'lodash';
 import page from 'page';
 import { v4 as uuid } from 'uuid';
-import { addQueryArgs } from 'lib/route';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
 /**
  * Internal dependencies
  */
 import Toolbar from './toolbar';
-import { hasTouch } from 'lib/touch-detect';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
 import { localize } from 'i18n-calypso';
-import SpinnerLine from 'components/spinner-line';
-import SeoPreviewPane from 'components/seo-preview-pane';
-import { recordTracksEvent } from 'state/analytics/actions';
-import isInlineHelpPopoverVisible from 'state/inline-help/selectors/is-inline-help-popover-visible';
+import SpinnerLine from 'wp-calypso-client/components/spinner-line';
+import SeoPreviewPane from 'wp-calypso-client/components/seo-preview-pane';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import isInlineHelpPopoverVisible from 'wp-calypso-client/state/inline-help/selectors/is-inline-help-popover-visible';
 import { parse as parseUrl } from 'url';
-import { getSelectedSite } from 'state/ui/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isPrivateSite from 'state/selectors/is-private-site';
-import getSelectedSiteId from 'state/ui/selectors/get-selected-site-id';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import getSelectedSiteId from 'wp-calypso-client/state/ui/selectors/get-selected-site-id';
 
 const debug = debugModule( 'calypso:web-preview' );
 

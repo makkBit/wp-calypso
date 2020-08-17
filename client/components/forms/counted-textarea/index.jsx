@@ -11,7 +11,7 @@ import { omit, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormTextarea from 'components/forms/form-textarea';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
 
 /**
  * Style dependencies

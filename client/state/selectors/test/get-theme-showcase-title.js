@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { getThemeShowcaseTitle } from 'state/themes/selectors';
+import { getThemeShowcaseTitle } from 'wp-calypso-client/state/themes/selectors';
 import { state } from './fixtures/theme-filters';
 
 describe( 'getThemeShowcaseTitle()', () => {

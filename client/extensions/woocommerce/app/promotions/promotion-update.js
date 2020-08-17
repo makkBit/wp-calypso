@@ -13,9 +13,9 @@ import { difference, debounce } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import accept from 'lib/accept';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import Main from 'wp-calypso-client/components/main';
+import accept from 'wp-calypso-client/lib/accept';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { getLink } from 'woocommerce/lib/nav-utils';
 import {
 	fetchPromotions,
@@ -35,7 +35,7 @@ import {
 import { getSaveErrorMessage } from './save-error-message';
 import PromotionHeader from './promotion-header';
 import PromotionForm from './promotion-form';
-import { ProtectFormGuard } from 'lib/protect-form';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
 import { recordTrack } from 'woocommerce/lib/analytics';
 import { validateAll } from './promotion-models';
 

@@ -10,10 +10,10 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormButton from 'components/forms/form-button';
-import Notice from 'components/notice';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import Notice from 'wp-calypso-client/components/notice';
 import AddressSummary from './summary';
 
 const RadioButton = ( props ) => {

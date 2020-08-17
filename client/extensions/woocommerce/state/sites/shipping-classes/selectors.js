@@ -6,7 +6,7 @@ import { get, isArray } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { LOADING } from 'woocommerce/state/constants';
 
 const getShippingClassesFromState = ( state, siteId = getSelectedSiteId( state ) ) => {

@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { SITE_LAUNCH } from 'state/action-types';
-import { launchSite } from 'state/sites/launch/actions';
+import { SITE_LAUNCH } from 'wp-calypso-client/state/action-types';
+import { launchSite } from 'wp-calypso-client/state/sites/launch/actions';
 
 describe( 'actions', () => {
 	describe( '#launchSite', () => {

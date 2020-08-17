@@ -12,8 +12,11 @@ import signupForm, {
 	status,
 	isRebrandCitiesSite,
 } from '../reducer';
-import { CONCIERGE_SIGNUP_FORM_UPDATE, CONCIERGE_UPDATE_BOOKING_STATUS } from 'state/action-types';
-import guessTimezone from 'lib/i18n-utils/guess-timezone';
+import {
+	CONCIERGE_SIGNUP_FORM_UPDATE,
+	CONCIERGE_UPDATE_BOOKING_STATUS,
+} from 'wp-calypso-client/state/action-types';
+import guessTimezone from 'wp-calypso-client/lib/i18n-utils/guess-timezone';
 
 describe( 'concierge/signupForm/reducer', () => {
 	const mockSignupForm = {

@@ -8,16 +8,16 @@ import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { debounce, filter, first, flow, get, has, last, map, throttle } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { getPostRevision } from 'state/posts/selectors/get-post-revision';
-import { getPostRevisionsDiffView } from 'state/posts/selectors/get-post-revisions-diff-view';
-import TextDiff from 'components/text-diff';
-import scrollTo from 'lib/scroll-to';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getPostRevision } from 'wp-calypso-client/state/posts/selectors/get-post-revision';
+import { getPostRevisionsDiffView } from 'wp-calypso-client/state/posts/selectors/get-post-revisions-diff-view';
+import TextDiff from 'wp-calypso-client/components/text-diff';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

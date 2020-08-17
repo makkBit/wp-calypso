@@ -1,14 +1,14 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	THEME_SETUP_TOGGLE_DIALOG,
 	THEME_SETUP_REQUEST,
 	THEME_SETUP_RESULT,
-} from 'state/themes/action-types';
+} from 'wp-calypso-client/state/themes/action-types';
 
-import 'state/theme-setup/init';
+import 'wp-calypso-client/state/theme-setup/init';
 
 export function toggleDialog() {
 	return {

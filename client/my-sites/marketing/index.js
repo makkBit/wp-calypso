@@ -6,7 +6,12 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { jetpackModuleActive, navigation, siteSelection, sites } from 'my-sites/controller';
+import {
+	jetpackModuleActive,
+	navigation,
+	siteSelection,
+	sites,
+} from 'wp-calypso-client/my-sites/controller';
 import {
 	connections,
 	layout,
@@ -18,7 +23,7 @@ import {
 	sharingButtons,
 	traffic,
 } from './controller';
-import { makeLayout, render as clientRender } from 'controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default function () {
 	const paths = [

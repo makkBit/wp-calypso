@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/stats/init';
+import 'wp-calypso-client/state/stats/init';
 
 /**
  * Returns true if current requesting post stat for the specified site ID,

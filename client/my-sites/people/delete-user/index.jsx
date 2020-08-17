@@ -12,26 +12,26 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card, Button, CompactCard } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import User from 'components/user';
-import AuthorSelector from 'blocks/author-selector';
-import { deleteUser } from 'lib/users/actions';
-import accept from 'lib/accept';
-import Gravatar from 'components/gravatar';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import User from 'wp-calypso-client/components/user';
+import AuthorSelector from 'wp-calypso-client/blocks/author-selector';
+import { deleteUser } from 'wp-calypso-client/lib/users/actions';
+import accept from 'wp-calypso-client/lib/accept';
+import Gravatar from 'wp-calypso-client/components/gravatar';
 import { localize } from 'i18n-calypso';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	requestExternalContributors,
 	requestExternalContributorsRemoval,
-} from 'state/data-getters';
-import { httpData } from 'state/data-layer/http-data';
+} from 'wp-calypso-client/state/data-getters';
+import { httpData } from 'wp-calypso-client/state/data-layer/http-data';
 
 /**
  * Style dependencies

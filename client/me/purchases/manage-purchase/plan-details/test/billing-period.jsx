@@ -11,8 +11,8 @@ import { translate } from 'i18n-calypso';
  */
 import { PlanBillingPeriod } from '../billing-period';
 import page from 'page';
-import { planItem } from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
+import { planItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
 
 const props = {
 	purchase: {

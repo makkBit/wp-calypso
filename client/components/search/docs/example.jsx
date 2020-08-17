@@ -7,8 +7,8 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Search from 'components/search';
-import SearchCard from 'components/search-card';
+import Search from 'wp-calypso-client/components/search';
+import SearchCard from 'wp-calypso-client/components/search-card';
 
 /**
  * Globals

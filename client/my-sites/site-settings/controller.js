@@ -7,21 +7,25 @@ import React from 'react';
 /**
  * Internal Dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import DeleteSite from './delete-site';
 import ConfirmDisconnection from './disconnect-site/confirm';
 import DisconnectSite from './disconnect-site';
-import { billingHistory } from 'me/purchases/paths';
-import SiteSettingsMain from 'my-sites/site-settings/main';
+import { billingHistory } from 'wp-calypso-client/me/purchases/paths';
+import SiteSettingsMain from 'wp-calypso-client/my-sites/site-settings/main';
 import StartOver from './start-over';
 import ThemeSetup from './theme-setup';
 import ManageConnection from './manage-connection';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isVipSite from 'state/selectors/is-vip-site';
-import { hideSidebar } from 'state/ui/actions';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { hideSidebar } from 'wp-calypso-client/state/ui/actions';
 
 function canDeleteSite( state, siteId ) {
 	const canManageOptions = canCurrentUser( state, siteId, 'manage_options' );

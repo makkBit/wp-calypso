@@ -11,24 +11,31 @@ import { flowRight } from 'lodash';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
-import Main from 'components/main';
-import { preventWidows } from 'lib/formatting';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { canCurrentUserUseCustomerHome, getSiteOption } from 'state/sites/selectors';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import DocumentHead from 'components/data/document-head';
-import QuerySiteChecklist from 'components/data/query-site-checklist';
-import withTrackingTool from 'lib/analytics/with-tracking-tool';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import QueryHomeLayout from 'components/data/query-home-layout';
-import { getHomeLayout } from 'state/selectors/get-home-layout';
-import Primary from 'my-sites/customer-home/locations/primary';
-import Secondary from 'my-sites/customer-home/locations/secondary';
-import Tertiary from 'my-sites/customer-home/locations/tertiary';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Main from 'wp-calypso-client/components/main';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	canCurrentUserUseCustomerHome,
+	getSiteOption,
+} from 'wp-calypso-client/state/sites/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QuerySiteChecklist from 'wp-calypso-client/components/data/query-site-checklist';
+import withTrackingTool from 'wp-calypso-client/lib/analytics/with-tracking-tool';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import QueryHomeLayout from 'wp-calypso-client/components/data/query-home-layout';
+import { getHomeLayout } from 'wp-calypso-client/state/selectors/get-home-layout';
+import Primary from 'wp-calypso-client/my-sites/customer-home/locations/primary';
+import Secondary from 'wp-calypso-client/my-sites/customer-home/locations/secondary';
+import Tertiary from 'wp-calypso-client/my-sites/customer-home/locations/tertiary';
 
 /**
  * Style dependencies

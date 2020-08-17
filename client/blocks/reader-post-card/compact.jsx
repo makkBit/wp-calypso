@@ -7,10 +7,10 @@ import React from 'react';
 /**
  * Internal Dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import Emojify from 'components/emojify';
-import ReaderExcerpt from 'blocks/reader-excerpt';
-import ReaderPostOptionsMenu from 'blocks/reader-post-options-menu';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Emojify from 'wp-calypso-client/components/emojify';
+import ReaderExcerpt from 'wp-calypso-client/blocks/reader-excerpt';
+import ReaderPostOptionsMenu from 'wp-calypso-client/blocks/reader-post-options-menu';
 import FeaturedAsset from './featured-asset';
 
 const CompactPost = ( { post, postByline, children, isDiscover, onClick } ) => {

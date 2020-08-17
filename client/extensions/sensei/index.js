@@ -8,11 +8,11 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { navigation, siteSelection } from 'my-sites/controller';
-import Main from 'components/main';
+import { navigation, siteSelection } from 'wp-calypso-client/my-sites/controller';
+import Main from 'wp-calypso-client/components/main';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import { makeLayout, render as clientRender } from 'controller';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 const render = ( context, next ) => {
 	context.primary = (

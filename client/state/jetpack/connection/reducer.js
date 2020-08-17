@@ -19,8 +19,8 @@ import {
 	JETPACK_USER_CONNECTION_DATA_REQUEST,
 	JETPACK_USER_CONNECTION_DATA_REQUEST_SUCCESS,
 	JETPACK_USER_CONNECTION_DATA_REQUEST_FAILURE,
-} from 'state/action-types';
-import { combineReducers, keyedReducer, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 /**
  * `Reducer` function which handles request/response actions

@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import FormButtonsBar from 'components/forms/form-buttons-bar';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
 
 /**
  * Style dependencies

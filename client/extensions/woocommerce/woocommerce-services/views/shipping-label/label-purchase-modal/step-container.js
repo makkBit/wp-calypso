@@ -3,15 +3,15 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
 
 /**
  * Internal dependencies
  */
-import Spinner from 'components/spinner';
-import FoldableCard from 'components/foldable-card';
+import Spinner from 'wp-calypso-client/components/spinner';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 
 const StepContainer = ( {
 	isSuccess,

@@ -9,9 +9,9 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { parse, stringify } from 'lib/shortcode';
-import * as MediaUtils from 'lib/media/utils';
-import { deserialize } from 'lib/media-serialization';
+import { parse, stringify } from 'wp-calypso-client/lib/shortcode';
+import * as MediaUtils from 'wp-calypso-client/lib/media/utils';
+import { deserialize } from 'wp-calypso-client/lib/media-serialization';
 
 /**
  * Module variables

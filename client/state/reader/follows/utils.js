@@ -1,7 +1,7 @@
 /**
  * Internal Dependencies
  */
-import { untrailingslashit } from 'lib/route';
+import { untrailingslashit } from 'wp-calypso-client/lib/route';
 
 export function prepareComparableUrl( url ) {
 	const preparedUrl = url && untrailingslashit( url );

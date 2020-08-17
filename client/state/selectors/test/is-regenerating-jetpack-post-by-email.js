@@ -6,9 +6,9 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { getRequestKey } from 'state/data-layer/wpcom-http/utils';
-import isRegeneratingJetpackPostByEmail from 'state/selectors/is-regenerating-jetpack-post-by-email';
-import { regeneratePostByEmail } from 'state/jetpack/settings/actions';
+import { getRequestKey } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import isRegeneratingJetpackPostByEmail from 'wp-calypso-client/state/selectors/is-regenerating-jetpack-post-by-email';
+import { regeneratePostByEmail } from 'wp-calypso-client/state/jetpack/settings/actions';
 
 describe( 'isRegeneratingJetpackPostByEmail()', () => {
 	test( 'should return true if post by email is currently being regenerated', () => {

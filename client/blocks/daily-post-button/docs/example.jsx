@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import DailyPostButton from 'blocks/daily-post-button';
+import DailyPostButton from 'wp-calypso-client/blocks/daily-post-button';
 const DailyPostButtonExample = () => {
 	return (
 		<div className="design-assets__group">

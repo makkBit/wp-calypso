@@ -8,9 +8,9 @@ import striptags from 'striptags';
 /**
  * Internal dependencies
  */
-import { formatExcerpt } from 'lib/post-normalizer/rule-create-better-excerpt';
-import PostMetadata from 'lib/post-metadata';
-import { parseHtml } from 'lib/formatting';
+import { formatExcerpt } from 'wp-calypso-client/lib/post-normalizer/rule-create-better-excerpt';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
+import { parseHtml } from 'wp-calypso-client/lib/formatting';
 
 const PREVIEW_IMAGE_WIDTH = 512;
 

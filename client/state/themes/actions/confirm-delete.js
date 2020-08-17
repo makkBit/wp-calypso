@@ -6,12 +6,12 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import accept from 'lib/accept';
-import { getSiteTitle } from 'state/sites/selectors';
-import { deleteTheme } from 'state/themes/actions/delete-theme';
-import { getTheme } from 'state/themes/selectors';
+import accept from 'wp-calypso-client/lib/accept';
+import { getSiteTitle } from 'wp-calypso-client/state/sites/selectors';
+import { deleteTheme } from 'wp-calypso-client/state/themes/actions/delete-theme';
+import { getTheme } from 'wp-calypso-client/state/themes/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Shows dialog asking user to confirm delete of theme

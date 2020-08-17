@@ -8,11 +8,11 @@ import { each, isNaN, startsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import { addQueryArgs, getSiteFragment } from 'lib/route';
+import { addQueryArgs, getSiteFragment } from 'wp-calypso-client/lib/route';
 import CommentsManagement from './main';
-import CommentView from 'my-sites/comment/main';
-import { removeNotice } from 'state/notices/actions';
-import { getNotices } from 'state/notices/selectors';
+import CommentView from 'wp-calypso-client/my-sites/comment/main';
+import { removeNotice } from 'wp-calypso-client/state/notices/actions';
+import { getNotices } from 'wp-calypso-client/state/notices/selectors';
 
 const mapPendingStatusToUnapproved = ( status ) => ( 'pending' === status ? 'unapproved' : status );
 

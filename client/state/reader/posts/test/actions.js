@@ -2,11 +2,14 @@
  * Internal dependencies
  */
 import * as actions from '../actions';
-import * as tracks from 'lib/analytics/tracks';
-import { bumpStat } from 'lib/analytics/mc';
+import * as tracks from 'wp-calypso-client/lib/analytics/tracks';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
 
-import { READER_POSTS_RECEIVE, READER_POST_SEEN } from 'state/reader/action-types';
-import wp from 'lib/wp';
+import {
+	READER_POSTS_RECEIVE,
+	READER_POST_SEEN,
+} from 'wp-calypso-client/state/reader/action-types';
+import wp from 'wp-calypso-client/lib/wp';
 
 jest.mock( 'reader/stats', () => ( { pageViewForPost: jest.fn() } ) );
 
@@ -31,7 +34,7 @@ jest.mock( 'lib/wp', () => {
 } );
 
 const undocumented = wp.undocumented;
-const { pageViewForPost } = require( 'reader/stats' );
+const { pageViewForPost } = require( 'wp-calypso-client/reader/stats' );
 
 describe( 'actions', () => {
 	const dispatchSpy = jest.fn();

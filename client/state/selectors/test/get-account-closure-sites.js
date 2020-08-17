@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getAccountClosureSites from 'state/selectors/get-account-closure-sites';
+import getAccountClosureSites from 'wp-calypso-client/state/selectors/get-account-closure-sites';
 import { userState } from './fixtures/user-state';
 
 describe( 'getAccountClosureSites()', () => {

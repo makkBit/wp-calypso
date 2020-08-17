@@ -17,19 +17,23 @@ import {
 	getActiveReplyCommentId,
 	getCommentById,
 	getPostCommentsTree,
-} from 'state/comments/selectors';
-import { requestPostComments, requestComment, setActiveReply } from 'state/comments/actions';
-import { NUMBER_OF_COMMENTS_PER_FETCH } from 'state/comments/constants';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+} from 'wp-calypso-client/state/comments/selectors';
+import {
+	requestPostComments,
+	requestComment,
+	setActiveReply,
+} from 'wp-calypso-client/state/comments/actions';
+import { NUMBER_OF_COMMENTS_PER_FETCH } from 'wp-calypso-client/state/comments/constants';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 import PostComment from './post-comment';
 import PostCommentFormRoot from './form-root';
 import CommentCount from './comment-count';
-import SegmentedControl from 'components/segmented-control';
-import Gridicon from 'components/gridicon';
-import ConversationFollowButton from 'blocks/conversation-follow-button';
-import { shouldShowConversationFollowButton } from 'blocks/conversation-follow-button/helper';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import ConversationFollowButton from 'wp-calypso-client/blocks/conversation-follow-button';
+import { shouldShowConversationFollowButton } from 'wp-calypso-client/blocks/conversation-follow-button/helper';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 
 /**
  * Style dependencies

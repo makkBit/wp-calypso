@@ -11,9 +11,9 @@ import { localize, LocalizeProps } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import MediaStore from 'lib/media/store';
-import EditorMediaModal from 'post-editor/editor-media-modal';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import MediaStore from 'wp-calypso-client/lib/media/store';
+import EditorMediaModal from 'wp-calypso-client/post-editor/editor-media-modal';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getCustomizerUrl,
 	getSiteOption,
@@ -22,41 +22,47 @@ import {
 	isRequestingSite,
 	isJetpackSite,
 	getSite,
-} from 'state/sites/selectors';
-import { addQueryArgs } from 'lib/route';
+} from 'wp-calypso-client/state/sites/selectors';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 import { getEnabledFilters, getDisabledDataSources, mediaCalypsoToGutenberg } from './media-utils';
-import { replaceHistory, navigate } from 'state/ui/actions';
-import { setRoute } from 'state/route/actions';
-import { updateSiteFrontPage } from 'state/sites/actions';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import getPostTypeTrashUrl from 'state/selectors/get-post-type-trash-url';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import getEditorCloseConfig from 'state/selectors/get-editor-close-config';
-import wpcom from 'lib/wp';
-import EditorRevisionsDialog from 'post-editor/editor-revisions/dialog';
-import { openPostRevisionsDialog } from 'state/posts/revisions/actions';
-import { setEditorIframeLoaded, startEditingPost } from 'state/editor/actions';
-import { notifyDesktopViewPostClicked, notifyDesktopCannotOpenEditor } from 'state/desktop/actions';
+import { replaceHistory, navigate } from 'wp-calypso-client/state/ui/actions';
+import { setRoute } from 'wp-calypso-client/state/route/actions';
+import { updateSiteFrontPage } from 'wp-calypso-client/state/sites/actions';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import getPostTypeTrashUrl from 'wp-calypso-client/state/selectors/get-post-type-trash-url';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import getEditorCloseConfig from 'wp-calypso-client/state/selectors/get-editor-close-config';
+import wpcom from 'wp-calypso-client/lib/wp';
+import EditorRevisionsDialog from 'wp-calypso-client/post-editor/editor-revisions/dialog';
+import { openPostRevisionsDialog } from 'wp-calypso-client/state/posts/revisions/actions';
+import { setEditorIframeLoaded, startEditingPost } from 'wp-calypso-client/state/editor/actions';
+import {
+	notifyDesktopViewPostClicked,
+	notifyDesktopCannotOpenEditor,
+} from 'wp-calypso-client/state/desktop/actions';
 import { Placeholder } from './placeholder';
-import WebPreview from 'components/web-preview';
-import { editPost, trashPost } from 'state/posts/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { protectForm, ProtectedFormProps } from 'lib/protect-form';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import config from 'config';
-import EditorDocumentHead from 'post-editor/editor-document-head';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import { withStopPerformanceTrackingProp, PerformanceTrackProps } from 'lib/performance-tracking';
-import { REASON_BLOCK_EDITOR_UNKOWN_IFRAME_LOAD_FAILURE } from 'state/desktop/window-events';
-import inEditorDeprecationGroup from 'state/editor-deprecation-group/selectors/in-editor-deprecation-group';
-import { setMediaLibrarySelectedItems } from 'state/media/actions';
-import { fetchMediaItem, getMediaItem } from 'state/media/thunks';
+import WebPreview from 'wp-calypso-client/components/web-preview';
+import { editPost, trashPost } from 'wp-calypso-client/state/posts/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { protectForm, ProtectedFormProps } from 'wp-calypso-client/lib/protect-form';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import config from 'wp-calypso-client/config';
+import EditorDocumentHead from 'wp-calypso-client/post-editor/editor-document-head';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import {
+	withStopPerformanceTrackingProp,
+	PerformanceTrackProps,
+} from 'wp-calypso-client/lib/performance-tracking';
+import { REASON_BLOCK_EDITOR_UNKOWN_IFRAME_LOAD_FAILURE } from 'wp-calypso-client/state/desktop/window-events';
+import inEditorDeprecationGroup from 'wp-calypso-client/state/editor-deprecation-group/selectors/in-editor-deprecation-group';
+import { setMediaLibrarySelectedItems } from 'wp-calypso-client/state/media/actions';
+import { fetchMediaItem, getMediaItem } from 'wp-calypso-client/state/media/thunks';
 
 /**
  * Types
  */
-import * as T from 'types';
+import * as T from 'wp-calypso-client/types';
 
 /**
  * Style dependencies

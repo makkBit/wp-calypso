@@ -11,23 +11,23 @@ import { without } from 'lodash';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import Timezone from 'components/timezone';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import QueryConciergeAppointmentDetails from 'components/data/query-concierge-appointment-details';
-import getConciergeAppointmentDetails from 'state/selectors/get-concierge-appointment-details';
-import getConciergeSignupForm from 'state/selectors/get-concierge-signup-form';
-import getConciergeScheduleId from 'state/selectors/get-concierge-schedule-id';
-import getConciergeAppointmentTimespan from 'state/selectors/get-concierge-appointment-timespan';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
+import Timezone from 'wp-calypso-client/components/timezone';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import QueryConciergeAppointmentDetails from 'wp-calypso-client/components/data/query-concierge-appointment-details';
+import getConciergeAppointmentDetails from 'wp-calypso-client/state/selectors/get-concierge-appointment-details';
+import getConciergeSignupForm from 'wp-calypso-client/state/selectors/get-concierge-signup-form';
+import getConciergeScheduleId from 'wp-calypso-client/state/selectors/get-concierge-schedule-id';
+import getConciergeAppointmentTimespan from 'wp-calypso-client/state/selectors/get-concierge-appointment-timespan';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	rescheduleConciergeAppointment,
 	updateConciergeAppointmentDetails,
-} from 'state/concierge/actions';
+} from 'wp-calypso-client/state/concierge/actions';
 import AvailableTimePicker from '../shared/available-time-picker';
 import { CONCIERGE_STATUS_BOOKING, CONCIERGE_STATUS_BOOKED } from '../constants';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class CalendarStep extends Component {
 	static propTypes = {

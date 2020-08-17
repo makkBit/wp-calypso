@@ -4,23 +4,23 @@
 import React from 'react';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { addQueryArgs } from '@wordpress/url';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import {
 	getDomainTypeText,
 	isSubdomain,
 	isDomainUpdateable,
 	isDomainInGracePeriod,
-} from 'lib/domains';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import MaterialIcon from 'components/material-icon';
+} from 'wp-calypso-client/lib/domains';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
 import {
 	domainAddNew,
 	domainManagementNameServers,
@@ -33,18 +33,22 @@ import {
 	domainTransferIn,
 	domainManagementSecurity,
 	isUnderDomainManagementAll,
-} from 'my-sites/domains/paths';
-import { emailManagement } from 'my-sites/email/paths';
-import { type as domainTypes, transferStatus, sslStatuses } from 'lib/domains/constants';
-import { recordTracksEvent, recordGoogleEvent } from 'state/analytics/actions';
-import { isCancelable } from 'lib/purchases';
-import { cancelPurchase } from 'me/purchases/paths';
-import { getUnmappedUrl } from 'lib/site/utils';
-import { withoutHttp } from 'lib/url';
-import RemovePurchase from 'me/purchases/remove-purchase';
-import { hasGSuiteWithUs, getGSuiteMailboxCount } from 'lib/gsuite';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { isRecentlyRegistered } from 'lib/domains/utils';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
+import {
+	type as domainTypes,
+	transferStatus,
+	sslStatuses,
+} from 'wp-calypso-client/lib/domains/constants';
+import { recordTracksEvent, recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { isCancelable } from 'wp-calypso-client/lib/purchases';
+import { cancelPurchase } from 'wp-calypso-client/me/purchases/paths';
+import { getUnmappedUrl } from 'wp-calypso-client/lib/site/utils';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import RemovePurchase from 'wp-calypso-client/me/purchases/remove-purchase';
+import { hasGSuiteWithUs, getGSuiteMailboxCount } from 'wp-calypso-client/lib/gsuite';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { isRecentlyRegistered } from 'wp-calypso-client/lib/domains/utils';
 
 import './style.scss';
 

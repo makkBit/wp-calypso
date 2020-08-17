@@ -6,7 +6,7 @@ import { DefaultRootState } from 'react-redux';
 /**
  * Internal dependencies
  */
-import getRawSite from 'state/selectors/get-raw-site';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 
 export interface SiteProduct {
 	productId: number;

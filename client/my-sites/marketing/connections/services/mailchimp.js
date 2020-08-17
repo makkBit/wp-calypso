@@ -8,8 +8,11 @@ import { last, isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import { deleteStoredKeyringConnection } from 'state/sharing/keyring/actions';
-import { SharingService, connectFor } from 'my-sites/marketing/connections/service';
+import { deleteStoredKeyringConnection } from 'wp-calypso-client/state/sharing/keyring/actions';
+import {
+	SharingService,
+	connectFor,
+} from 'wp-calypso-client/my-sites/marketing/connections/service';
 
 export class Mailchimp extends SharingService {
 	static propTypes = {

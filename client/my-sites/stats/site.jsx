@@ -11,37 +11,45 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import StatsPeriodNavigation from './stats-period-navigation';
-import Main from 'components/main';
-import StatsNavigation from 'blocks/stats-navigation';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
+import Main from 'wp-calypso-client/components/main';
+import StatsNavigation from 'wp-calypso-client/blocks/stats-navigation';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import DatePicker from './stats-date-picker';
 import Countries from './stats-countries';
 import ChartTabs from './stats-chart-tabs';
 import StatsModule from './stats-module';
 import statsStrings from './stats-strings';
 import titlecase from 'to-title-case';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import StickyPanel from 'components/sticky-panel';
-import JetpackBackupCredsBanner from 'blocks/jetpack-backup-creds-banner';
-import JetpackColophon from 'components/jetpack-colophon';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite, getSitePlanSlug, getSiteOption } from 'state/sites/selectors';
-import { recordGoogleEvent, recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import PrivacyPolicyBanner from 'blocks/privacy-policy-banner';
-import QuerySiteKeyrings from 'components/data/query-site-keyrings';
-import QueryKeyringConnections from 'components/data/query-keyring-connections';
-import memoizeLast from 'lib/memoize-last';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import EmptyContent from 'components/empty-content';
-import { activateModule } from 'state/jetpack/modules/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import Banner from 'components/banner';
-import isVipSite from 'state/selectors/is-vip-site';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
+import JetpackBackupCredsBanner from 'wp-calypso-client/blocks/jetpack-backup-creds-banner';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import {
+	isJetpackSite,
+	getSitePlanSlug,
+	getSiteOption,
+} from 'wp-calypso-client/state/sites/selectors';
+import {
+	recordGoogleEvent,
+	recordTracksEvent,
+	withAnalytics,
+} from 'wp-calypso-client/state/analytics/actions';
+import PrivacyPolicyBanner from 'wp-calypso-client/blocks/privacy-policy-banner';
+import QuerySiteKeyrings from 'wp-calypso-client/components/data/query-site-keyrings';
+import QueryKeyringConnections from 'wp-calypso-client/components/data/query-keyring-connections';
+import memoizeLast from 'wp-calypso-client/lib/memoize-last';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { activateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import Banner from 'wp-calypso-client/components/banner';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
 
 function updateQueryString( query = {} ) {
 	return {

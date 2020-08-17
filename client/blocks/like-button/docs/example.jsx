@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import LikeButton from 'blocks/like-button/button';
+import LikeButton from 'wp-calypso-client/blocks/like-button/button';
 import { CompactCard as Card } from '@automattic/components';
 
 class SimpleLikeButtonContainer extends React.PureComponent {

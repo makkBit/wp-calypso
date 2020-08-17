@@ -7,8 +7,8 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { recordTiming } from 'lib/analytics/timing';
-import { isEnabled } from 'config';
+import { recordTiming } from 'wp-calypso-client/lib/analytics/timing';
+import { isEnabled } from 'wp-calypso-client/config';
 import debugFactory from 'debug';
 
 const debug = debugFactory( 'calypso:perfmon' );

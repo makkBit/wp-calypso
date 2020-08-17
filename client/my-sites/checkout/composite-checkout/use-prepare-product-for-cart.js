@@ -8,17 +8,21 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { getRenewalItemFromCartItem } from 'lib/cart-values/cart-items';
-import { requestPlans } from 'state/plans/actions';
-import { getPlanBySlug, getPlans, isRequestingPlans } from 'state/plans/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getRenewalItemFromCartItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { requestPlans } from 'wp-calypso-client/state/plans/actions';
+import {
+	getPlanBySlug,
+	getPlans,
+	isRequestingPlans,
+} from 'wp-calypso-client/state/plans/selectors';
 import {
 	getProductBySlug,
 	getProductsList,
 	isProductsListFetching,
-} from 'state/products-list/selectors';
-import { requestProductsList } from 'state/products-list/actions';
-import getUpgradePlanSlugFromPath from 'state/selectors/get-upgrade-plan-slug-from-path';
+} from 'wp-calypso-client/state/products-list/selectors';
+import { requestProductsList } from 'wp-calypso-client/state/products-list/actions';
+import getUpgradePlanSlugFromPath from 'wp-calypso-client/state/selectors/get-upgrade-plan-slug-from-path';
 import { createItemToAddToCart } from './add-items';
 
 const debug = debugFactory( 'calypso:composite-checkout:use-prepare-product-for-cart' );

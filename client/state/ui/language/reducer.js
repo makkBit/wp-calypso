@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { LOCALE_SET } from 'state/action-types';
+import config from 'wp-calypso-client/config';
+import { LOCALE_SET } from 'wp-calypso-client/state/action-types';
 
 const initialState = {
 	localeSlug: config( 'i18n_default_locale_slug' ),

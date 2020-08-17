@@ -11,24 +11,28 @@ import { includes, noop, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getDomainPriceRule } from 'lib/cart-values/cart-items';
-import { getFixedDomainSearch, getTld, checkDomainAvailability } from 'lib/domains';
-import { domainAvailability } from 'lib/domains/constants';
-import { getAvailabilityNotice } from 'lib/domains/registration/availability-messages';
-import DomainRegistrationSuggestion from 'components/domains/domain-registration-suggestion';
-import DomainProductPrice from 'components/domains/domain-product-price';
-import { getCurrentUser, currentUserHasFlag } from 'state/current-user/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import { MAP_EXISTING_DOMAIN, INCOMING_DOMAIN_TRANSFER } from 'lib/url/support';
-import FormTextInput from 'components/forms/form-text-input';
+import { getDomainPriceRule } from 'wp-calypso-client/lib/cart-values/cart-items';
+import {
+	getFixedDomainSearch,
+	getTld,
+	checkDomainAvailability,
+} from 'wp-calypso-client/lib/domains';
+import { domainAvailability } from 'wp-calypso-client/lib/domains/constants';
+import { getAvailabilityNotice } from 'wp-calypso-client/lib/domains/registration/availability-messages';
+import DomainRegistrationSuggestion from 'wp-calypso-client/components/domains/domain-registration-suggestion';
+import DomainProductPrice from 'wp-calypso-client/components/domains/domain-product-price';
+import { getCurrentUser, currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { MAP_EXISTING_DOMAIN, INCOMING_DOMAIN_TRANSFER } from 'wp-calypso-client/lib/url/support';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import {
 	recordAddDomainButtonClickInMapDomain,
 	recordFormSubmitInMapDomain,
 	recordInputFocusInMapDomain,
 	recordGoButtonClickInMapDomain,
-} from 'state/domains/actions';
-import Notice from 'components/notice';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
+} from 'wp-calypso-client/state/domains/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
 
 /**
  * Style dependencies

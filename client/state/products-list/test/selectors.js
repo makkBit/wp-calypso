@@ -15,10 +15,10 @@ import {
 	computeProductsWithPrices,
 } from '../selectors';
 
-import { getPlanDiscountedRawPrice } from 'state/sites/plans/selectors';
-import { getPlanRawPrice } from 'state/plans/selectors';
-import { TERM_MONTHLY, TERM_ANNUALLY } from 'lib/plans/constants';
-const plans = require( 'lib/plans' );
+import { getPlanDiscountedRawPrice } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getPlanRawPrice } from 'wp-calypso-client/state/plans/selectors';
+import { TERM_MONTHLY, TERM_ANNUALLY } from 'wp-calypso-client/lib/plans/constants';
+const plans = require( 'wp-calypso-client/lib/plans' );
 
 jest.mock( 'lib/abtest', () => ( {
 	abtest: () => '',

@@ -1,13 +1,16 @@
 /**
  * Internal dependencies
  */
-import { READER_EXPAND_CARD, READER_RESET_CARD_EXPANSIONS } from 'state/reader/action-types';
-import { markPostSeen } from 'state/reader/posts/actions';
-import { reduxDispatch } from 'lib/redux-bridge';
-import DISPLAY_TYPES from 'state/reader/posts/display-types';
-import * as stats from 'reader/stats';
+import {
+	READER_EXPAND_CARD,
+	READER_RESET_CARD_EXPANSIONS,
+} from 'wp-calypso-client/state/reader/action-types';
+import { markPostSeen } from 'wp-calypso-client/state/reader/posts/actions';
+import { reduxDispatch } from 'wp-calypso-client/lib/redux-bridge';
+import DISPLAY_TYPES from 'wp-calypso-client/state/reader/posts/display-types';
+import * as stats from 'wp-calypso-client/reader/stats';
 
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 export const expandCard = ( { postKey, post, site } ) => {
 	if ( post.display_type & DISPLAY_TYPES.PHOTO_ONLY ) {

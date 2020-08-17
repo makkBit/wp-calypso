@@ -15,14 +15,14 @@ import {
 	Next,
 	Quit,
 	Continue,
-} from 'layout/guided-tours/config-elements';
-import { doesSelectedSiteHaveMediaFiles } from 'state/guided-tours/contexts';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
+import { doesSelectedSiteHaveMediaFiles } from 'wp-calypso-client/state/guided-tours/contexts';
 import {
 	AddNewButton,
 	EditButton,
 	EditImageButton,
 	DoneButton,
-} from 'layout/guided-tours/button-labels';
+} from 'wp-calypso-client/layout/guided-tours/button-labels';
 
 export const MediaBasicsTour = makeTour(
 	<Tour { ...meta }>

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 
@@ -10,10 +10,10 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { deleteApplicationPassword } from 'state/application-passwords/actions';
-import { errorNotice } from 'state/notices/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { deleteApplicationPassword } from 'wp-calypso-client/state/application-passwords/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

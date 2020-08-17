@@ -9,16 +9,20 @@ import { Provider as ReduxProvider } from 'react-redux';
  * Internal dependencies
  */
 import LoggedOutShowcase from '../logged-out';
-import { createReduxStore } from 'state';
-import { setStore } from 'state/redux-store';
-import { THEMES_REQUEST_FAILURE } from 'state/themes/action-types';
-import { receiveThemes } from 'state/themes/actions';
-import { DEFAULT_THEME_QUERY } from 'state/themes/constants';
+import { createReduxStore } from 'wp-calypso-client/state';
+import { setStore } from 'wp-calypso-client/state/redux-store';
+import { THEMES_REQUEST_FAILURE } from 'wp-calypso-client/state/themes/action-types';
+import { receiveThemes } from 'wp-calypso-client/state/themes/actions';
+import { DEFAULT_THEME_QUERY } from 'wp-calypso-client/state/themes/constants';
 
 jest.mock( 'lib/abtest', () => ( { abtest: () => {} } ) );
 jest.mock( 'lib/analytics/tracks', () => ( {} ) );
-jest.mock( 'lib/analytics/page-view-tracker', () => require( 'components/empty-component' ) );
-jest.mock( 'my-sites/themes/theme-preview', () => require( 'components/empty-component' ) );
+jest.mock( 'lib/analytics/page-view-tracker', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
+jest.mock( 'my-sites/themes/theme-preview', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 
 describe( 'logged-out', () => {
 	describe( 'when calling renderToString()', () => {

@@ -1,12 +1,12 @@
 /**
  * External dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 /**
  * Internal dependencies
  */
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns a theme object by site ID, theme ID pair.

@@ -6,18 +6,18 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { noop } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import page from 'page';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import SiteIcon from 'blocks/site-icon';
-import SiteIndicator from 'my-sites/site-indicator';
-import { getSite, getSiteSlug, isSitePreviewable } from 'state/sites/selectors';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
+import SiteIndicator from 'wp-calypso-client/my-sites/site-indicator';
+import { getSite, getSiteSlug, isSitePreviewable } from 'wp-calypso-client/state/sites/selectors';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

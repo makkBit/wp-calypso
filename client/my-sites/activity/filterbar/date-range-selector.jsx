@@ -5,7 +5,7 @@ import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { isEmpty, flowRight as compose } from 'lodash';
 import { DateUtils } from 'react-day-picker';
 
@@ -13,10 +13,10 @@ import { DateUtils } from 'react-day-picker';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { updateFilter } from 'state/activity-log/actions';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import DateRangePicker from 'components/date-range';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { updateFilter } from 'wp-calypso-client/state/activity-log/actions';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import DateRangePicker from 'wp-calypso-client/components/date-range';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 const DATE_FORMAT = 'YYYY-MM-DD HH:mm:ss';
 

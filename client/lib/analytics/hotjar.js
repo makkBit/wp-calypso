@@ -6,10 +6,10 @@ import debug from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { mayWeTrackCurrentUserGdpr, isPiiUrl } from './utils';
 import { getDoNotTrack } from '@automattic/calypso-analytics';
-import { isE2ETest } from 'lib/e2e';
+import { isE2ETest } from 'wp-calypso-client/lib/e2e';
 
 const hotjarDebug = debug( 'calypso:analytics:hotjar' );
 

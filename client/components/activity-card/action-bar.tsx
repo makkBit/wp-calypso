@@ -7,10 +7,10 @@ import React, { FunctionComponent, useRef, useState } from 'react';
 /**
  * Internal dependencies
  */
-import { backupDownloadPath, backupRestorePath } from 'my-sites/backup/paths';
+import { backupDownloadPath, backupRestorePath } from 'wp-calypso-client/my-sites/backup/paths';
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import PopoverMenu from 'components/popover/menu';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PopoverMenu from 'wp-calypso-client/components/popover/menu';
 
 interface Props {
 	rewindId: string;

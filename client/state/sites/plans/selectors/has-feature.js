@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { planHasFeature } from 'lib/plans';
-import { getSitePlanSlug } from 'state/sites/plans/selectors/get-site-plan-slug';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
+import { getSitePlanSlug } from 'wp-calypso-client/state/sites/plans/selectors/get-site-plan-slug';
 
 /**
  * Whether a site's current plan includes a given feature

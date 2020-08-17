@@ -8,28 +8,28 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getSiteFrontPage,
 	getCustomizerUrl,
 	getSiteOption,
 	isNewSite,
-} from 'state/sites/selectors';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import isSiteUsingFullSiteEditing from 'state/selectors/is-site-using-full-site-editing';
-import { getGSuiteSupportedDomains } from 'lib/gsuite';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { navigate } from 'state/ui/actions';
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import isSiteUsingFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-using-full-site-editing';
+import { getGSuiteSupportedDomains } from 'wp-calypso-client/lib/gsuite';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
+} from 'wp-calypso-client/state/analytics/actions';
 import ActionBox from '../quick-links/action-box';
-import isHomeQuickLinksExpanded from 'state/selectors/is-home-quick-links-expanded';
-import { expandHomeQuickLinks, collapseHomeQuickLinks } from 'state/home/actions';
+import isHomeQuickLinksExpanded from 'wp-calypso-client/state/selectors/is-home-quick-links-expanded';
+import { expandHomeQuickLinks, collapseHomeQuickLinks } from 'wp-calypso-client/state/home/actions';
 
 /**
  * Style dependencies

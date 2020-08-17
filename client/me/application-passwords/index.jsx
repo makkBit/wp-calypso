@@ -3,30 +3,30 @@
  */
 import React, { Component, Fragment } from 'react';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import AppPasswordItem from 'me/application-password-item';
+import AppPasswordItem from 'wp-calypso-client/me/application-password-item';
 import { Button, Card } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormTextInput from 'components/forms/form-text-input';
-import QueryApplicationPasswords from 'components/data/query-application-passwords';
-import SectionHeader from 'components/section-header';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import QueryApplicationPasswords from 'wp-calypso-client/components/data/query-application-passwords';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import {
 	clearNewApplicationPassword,
 	createApplicationPassword,
-} from 'state/application-passwords/actions';
-import getApplicationPasswords from 'state/selectors/get-application-passwords';
-import getNewApplicationPassword from 'state/selectors/get-new-application-password';
-import { recordGoogleEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/application-passwords/actions';
+import getApplicationPasswords from 'wp-calypso-client/state/selectors/get-application-passwords';
+import getNewApplicationPassword from 'wp-calypso-client/state/selectors/get-new-application-password';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

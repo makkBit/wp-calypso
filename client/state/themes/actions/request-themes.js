@@ -6,19 +6,22 @@ import { map, property } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { fetchThemesList as fetchWporgThemesList } from 'lib/wporg';
-import { THEMES_REQUEST, THEMES_REQUEST_FAILURE } from 'state/themes/action-types';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { receiveThemes } from 'state/themes/actions/receive-themes';
-import { prependThemeFilterKeys } from 'state/themes/selectors';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { fetchThemesList as fetchWporgThemesList } from 'wp-calypso-client/lib/wporg';
+import {
+	THEMES_REQUEST,
+	THEMES_REQUEST_FAILURE,
+} from 'wp-calypso-client/state/themes/action-types';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { receiveThemes } from 'wp-calypso-client/state/themes/actions/receive-themes';
+import { prependThemeFilterKeys } from 'wp-calypso-client/state/themes/selectors';
 import {
 	normalizeJetpackTheme,
 	normalizeWpcomTheme,
 	normalizeWporgTheme,
-} from 'state/themes/utils';
+} from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Triggers a network request to fetch themes for the specified site and query.

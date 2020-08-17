@@ -8,9 +8,9 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormTextarea from 'components/forms/form-textarea';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const TextareaRenderer = ( { input, meta, ...props } ) => (
 	<FormTextarea { ...input } { ...props } />

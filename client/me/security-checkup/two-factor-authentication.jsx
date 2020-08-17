@@ -10,11 +10,11 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { getOKIcon, getWarningIcon } from './icons.js';
-import getUserSetting from 'state/selectors/get-user-setting';
-import hasUserSettings from 'state/selectors/has-user-settings';
-import isTwoStepEnabled from 'state/selectors/is-two-step-enabled';
-import isTwoStepSmsEnabled from 'state/selectors/is-two-step-sms-enabled';
-import QueryUserSettings from 'components/data/query-user-settings';
+import getUserSetting from 'wp-calypso-client/state/selectors/get-user-setting';
+import hasUserSettings from 'wp-calypso-client/state/selectors/has-user-settings';
+import isTwoStepEnabled from 'wp-calypso-client/state/selectors/is-two-step-enabled';
+import isTwoStepSmsEnabled from 'wp-calypso-client/state/selectors/is-two-step-sms-enabled';
+import QueryUserSettings from 'wp-calypso-client/components/data/query-user-settings';
 import SecurityCheckupNavigationItem from './navigation-item';
 
 class SecurityCheckupTwoFactorAuthentication extends React.Component {

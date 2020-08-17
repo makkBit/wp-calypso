@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PropTypes from 'prop-types';
 import React from 'react';
 

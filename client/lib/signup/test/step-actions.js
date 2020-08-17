@@ -8,10 +8,10 @@ import {
 	isSiteTopicFulfilled,
 	isSiteTypeFulfilled,
 } from '../step-actions';
-import { useNock } from 'test-helpers/use-nock';
-import flows from 'signup/config/flows';
-import { isDomainStepSkippable } from 'signup/config/steps';
-import { getUserStub } from 'lib/user';
+import { useNock } from 'wp-calypso-client/test-helpers/use-nock';
+import flows from 'wp-calypso-client/signup/config/flows';
+import { isDomainStepSkippable } from 'wp-calypso-client/signup/config/steps';
+import { getUserStub } from 'wp-calypso-client/lib/user';
 
 jest.mock( 'lib/abtest', () => ( { abtest: () => '' } ) );
 

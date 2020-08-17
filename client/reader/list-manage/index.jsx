@@ -14,28 +14,28 @@ import {
 	getListItems,
 	isCreatingList as isCreatingListSelector,
 	isUpdatingList as isUpdatingListSelector,
-} from 'state/reader/lists/selectors';
-import FormattedHeader from 'components/formatted-header';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormButton from 'components/forms/form-button';
-import QueryReaderList from 'components/data/query-reader-list';
-import QueryReaderListItems from 'components/data/query-reader-list-items';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import Main from 'components/main';
+} from 'wp-calypso-client/state/reader/lists/selectors';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import QueryReaderList from 'wp-calypso-client/components/data/query-reader-list';
+import QueryReaderListItems from 'wp-calypso-client/components/data/query-reader-list-items';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import Main from 'wp-calypso-client/components/main';
 import {
 	addReaderListFeedByUrl,
 	createReaderList,
 	updateReaderList,
-} from 'state/reader/lists/actions';
-import ReaderExportButton from 'blocks/reader-export-button';
-import { READER_EXPORT_TYPE_LIST } from 'blocks/reader-export-button/constants';
+} from 'wp-calypso-client/state/reader/lists/actions';
+import ReaderExportButton from 'wp-calypso-client/blocks/reader-export-button';
+import { READER_EXPORT_TYPE_LIST } from 'wp-calypso-client/blocks/reader-export-button/constants';
 import ListItem from './list-item';
 import ListForm from './list-form';
 

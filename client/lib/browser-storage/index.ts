@@ -7,7 +7,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { once } from 'lib/memoize-last';
+import { once } from 'wp-calypso-client/lib/memoize-last';
 import {
 	getStoredItem as bypassGet,
 	getAllStoredItems as bypassGetAll,
@@ -16,8 +16,8 @@ import {
 	activate as activateBypass,
 } from './bypass';
 import { StoredItems } from './types';
-import { bumpStat } from 'lib/analytics/mc';
-import config from 'config';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import config from 'wp-calypso-client/config';
 
 const debug = debugFactory( 'calypso:browser-storage' );
 

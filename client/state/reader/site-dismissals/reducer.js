@@ -1,8 +1,11 @@
 /**
  * Internal dependencies
  */
-import { READER_DISMISS_SITE, READER_DISMISS_POST } from 'state/reader/action-types';
-import { combineReducers, withoutPersistence } from 'state/utils';
+import {
+	READER_DISMISS_SITE,
+	READER_DISMISS_POST,
+} from 'wp-calypso-client/state/reader/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 export const items = withoutPersistence( ( state = {}, action ) => {
 	switch ( action.type ) {

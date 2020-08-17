@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { THEME_ACTIVATE, THEME_ACTIVATE_FAILURE } from 'state/themes/action-types';
-import { themeActivated } from 'state/themes/actions/theme-activated';
+import wpcom from 'wp-calypso-client/lib/wp';
+import {
+	THEME_ACTIVATE,
+	THEME_ACTIVATE_FAILURE,
+} from 'wp-calypso-client/state/themes/action-types';
+import { themeActivated } from 'wp-calypso-client/state/themes/actions/theme-activated';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Triggers a network request to activate a specific theme on a given site.

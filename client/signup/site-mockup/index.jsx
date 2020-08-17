@@ -3,7 +3,7 @@
  */
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { debounce, isEmpty } from 'lodash';
@@ -12,23 +12,26 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SignupSitePreview from 'components/signup-site-preview';
-import { getPreviewParamClass } from 'components/signup-site-preview/utils';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
+import SignupSitePreview from 'wp-calypso-client/components/signup-site-preview';
+import { getPreviewParamClass } from 'wp-calypso-client/components/signup-site-preview/utils';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
 import {
 	getSiteVerticalName,
 	getSiteVerticalPreview,
 	getSiteVerticalPreviewScreenshot,
 	getSiteVerticalPreviewStyles,
 	getSiteVerticalSlug,
-} from 'state/signup/steps/site-vertical/selectors';
-import { getSiteStyle } from 'state/signup/steps/site-style/selectors';
-import { getThemeCssUri, DEFAULT_FONT_URI as defaultFontUri } from 'lib/signup/site-theme';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getLocaleSlug, getLanguage } from 'lib/i18n-utils';
-import { getSiteTitle } from 'state/signup/steps/site-title/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import QueryVerticals from 'components/data/query-verticals';
+} from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { getSiteStyle } from 'wp-calypso-client/state/signup/steps/site-style/selectors';
+import {
+	getThemeCssUri,
+	DEFAULT_FONT_URI as defaultFontUri,
+} from 'wp-calypso-client/lib/signup/site-theme';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getLocaleSlug, getLanguage } from 'wp-calypso-client/lib/i18n-utils';
+import { getSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import QueryVerticals from 'wp-calypso-client/components/data/query-verticals';
 
 /**
  * Style dependencies

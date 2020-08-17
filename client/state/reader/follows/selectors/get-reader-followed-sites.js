@@ -6,9 +6,9 @@ import { values, sortBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import 'state/reader/init';
-import { NO_ORG_ID } from 'state/reader/organizations/constants';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import 'wp-calypso-client/state/reader/init';
+import { NO_ORG_ID } from 'wp-calypso-client/state/reader/organizations/constants';
 
 export const sorter = ( blog ) => blog.name.toLowerCase();
 

@@ -7,13 +7,16 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { REWIND_DEACTIVATE_REQUEST } from 'state/action-types';
-import { rewindDeactivateFailure, rewindDeactivateSuccess } from 'state/activity-log/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
+import { REWIND_DEACTIVATE_REQUEST } from 'wp-calypso-client/state/action-types';
+import {
+	rewindDeactivateFailure,
+	rewindDeactivateSuccess,
+} from 'wp-calypso-client/state/activity-log/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const deactivateRewind = ( action ) =>
 	http(

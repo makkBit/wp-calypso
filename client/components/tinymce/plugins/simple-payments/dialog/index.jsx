@@ -13,12 +13,12 @@ import { find, isNumber, pick, noop, get, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getSimplePayments from 'state/selectors/get-simple-payments';
-import QuerySimplePayments from 'components/data/query-simple-payments';
-import QuerySitePlans from 'components/data/query-site-plans';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getSimplePayments from 'wp-calypso-client/state/selectors/get-simple-payments';
+import QuerySimplePayments from 'wp-calypso-client/components/data/query-simple-payments';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
 import { Dialog, Button } from '@automattic/components';
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 import Navigation from './navigation';
 import ProductForm, {
 	getProductFormValues,
@@ -27,33 +27,36 @@ import ProductForm, {
 	REDUX_FORM_NAME,
 } from './form';
 import ProductList from './list';
-import { getCurrentUserCurrencyCode, getCurrentUserEmail } from 'state/current-user/selectors';
-import wpcom from 'lib/wp';
-import accept from 'lib/accept';
+import {
+	getCurrentUserCurrencyCode,
+	getCurrentUserEmail,
+} from 'wp-calypso-client/state/current-user/selectors';
+import wpcom from 'wp-calypso-client/lib/wp';
+import accept from 'wp-calypso-client/lib/accept';
 import {
 	customPostToProduct,
 	productToCustomPost,
-} from 'state/data-layer/wpcom/sites/simple-payments/index.js';
+} from 'wp-calypso-client/state/data-layer/wpcom/sites/simple-payments/index.js';
 import {
 	receiveUpdateProduct,
 	receiveDeleteProduct,
-} from 'state/simple-payments/product-list/actions';
-import { FEATURE_SIMPLE_PAYMENTS } from 'lib/plans/constants';
-import { hasFeature, getSitePlanSlug } from 'state/sites/plans/selectors';
-import UpsellNudge from 'blocks/upsell-nudge';
-import TrackComponentView from 'lib/analytics/track-component-view';
+} from 'wp-calypso-client/state/simple-payments/product-list/actions';
+import { FEATURE_SIMPLE_PAYMENTS } from 'wp-calypso-client/lib/plans/constants';
+import { hasFeature, getSitePlanSlug } from 'wp-calypso-client/state/sites/plans/selectors';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import EmptyContent from 'components/empty-content';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { DEFAULT_CURRENCY } from 'lib/simple-payments/constants';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/state/analytics/actions';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { DEFAULT_CURRENCY } from 'wp-calypso-client/lib/simple-payments/constants';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 // Utility function for checking the state of the Payment Buttons list
 const isEmptyArray = ( a ) => Array.isArray( a ) && a.length === 0;

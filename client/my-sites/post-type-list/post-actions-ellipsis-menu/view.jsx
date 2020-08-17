@@ -10,13 +10,16 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import { bumpStat as bumpAnalyticsStat } from 'state/analytics/actions';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { bumpStat as bumpAnalyticsStat } from 'wp-calypso-client/state/analytics/actions';
 import { bumpStatGenerator } from './utils';
-import { getPost, getPostPreviewUrl } from 'state/posts/selectors';
-import { isSitePreviewable } from 'state/sites/selectors';
-import { setAllSitesPreviewSiteId, setPreviewUrl } from 'state/ui/preview/actions';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+import { getPost, getPostPreviewUrl } from 'wp-calypso-client/state/posts/selectors';
+import { isSitePreviewable } from 'wp-calypso-client/state/sites/selectors';
+import {
+	setAllSitesPreviewSiteId,
+	setPreviewUrl,
+} from 'wp-calypso-client/state/ui/preview/actions';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 
 class PostActionsEllipsisMenuView extends Component {
 	static propTypes = {

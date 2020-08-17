@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_STEPS_SITE_TITLE_SET } from 'state/action-types';
+import { SIGNUP_STEPS_SITE_TITLE_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 export function setSiteTitle( siteTitle ) {
 	return {

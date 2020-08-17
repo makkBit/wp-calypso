@@ -8,8 +8,8 @@ import { camelCase, kebabCase, upperFirst } from 'lodash';
 /**
  * Internal dependencies
  */
-import SyncInitialize from 'lib/form-state/examples/sync-initialize';
-import AsyncInitialize from 'lib/form-state/examples/async-initialize';
+import SyncInitialize from 'wp-calypso-client/lib/form-state/examples/sync-initialize';
+import AsyncInitialize from 'wp-calypso-client/lib/form-state/examples/async-initialize';
 
 const COMPONENTS = {
 	SyncInitialize,

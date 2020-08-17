@@ -5,14 +5,14 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import classnames from 'classnames';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import { isExternal } from 'lib/url';
-import FollowButton from 'blocks/follow-button/button';
+import { isExternal } from 'wp-calypso-client/lib/url';
+import FollowButton from 'wp-calypso-client/blocks/follow-button/button';
 
 const ListStreamHeader = ( {
 	isPlaceholder,

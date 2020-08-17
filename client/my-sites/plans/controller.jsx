@@ -9,11 +9,11 @@ import { get } from 'lodash';
  * Internal Dependencies
  */
 import Plans from './plans';
-import { isValidFeatureKey } from 'lib/plans/features-list';
-import { shouldShowOfferResetFlow } from 'lib/abtest/getters';
-import isSiteWpcom from 'state/selectors/is-site-wpcom';
-import getSelectedSiteId from 'state/ui/selectors/get-selected-site-id';
-import { productSelect } from 'my-sites/plans-v2/controller';
+import { isValidFeatureKey } from 'wp-calypso-client/lib/plans/features-list';
+import { shouldShowOfferResetFlow } from 'wp-calypso-client/lib/abtest/getters';
+import isSiteWpcom from 'wp-calypso-client/state/selectors/is-site-wpcom';
+import getSelectedSiteId from 'wp-calypso-client/state/ui/selectors/get-selected-site-id';
+import { productSelect } from 'wp-calypso-client/my-sites/plans-v2/controller';
 
 function showJetpackPlans( context ) {
 	const getState = context.store.getState();

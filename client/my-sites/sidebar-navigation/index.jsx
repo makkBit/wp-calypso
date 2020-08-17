@@ -9,9 +9,9 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import SidebarNavigation from 'components/sidebar-navigation';
-import SiteIcon from 'blocks/site-icon';
-import { getSelectedSite } from 'state/ui/selectors';
+import SidebarNavigation from 'wp-calypso-client/components/sidebar-navigation';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

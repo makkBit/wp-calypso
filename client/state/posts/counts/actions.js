@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	POST_COUNTS_RECEIVE,
 	POST_COUNTS_REQUEST,
 	POST_COUNTS_REQUEST_SUCCESS,
 	POST_COUNTS_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an action object signalling that post counts have been received for

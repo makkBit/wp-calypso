@@ -28,9 +28,9 @@ import {
 	MEDIA_ITEM_DELETE,
 	MEDIA_SET_QUERY,
 	MEDIA_CLEAR_SITE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/media';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/media';
 
 /**
  * Returns an action object used in signalling that media item(s) for the site

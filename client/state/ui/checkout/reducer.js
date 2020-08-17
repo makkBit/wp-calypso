@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation } from 'state/utils';
-import { CHECKOUT_TOGGLE_CART_ON_MOBILE, SECTION_SET } from 'state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
+import { CHECKOUT_TOGGLE_CART_ON_MOBILE, SECTION_SET } from 'wp-calypso-client/state/action-types';
 
 export function isShowingCartOnMobile( state = false, action ) {
 	switch ( action.type ) {

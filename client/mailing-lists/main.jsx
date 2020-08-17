@@ -4,16 +4,16 @@
 
 import page from 'page';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import utils from './utils';
-import { preventWidows } from 'lib/formatting';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Constants

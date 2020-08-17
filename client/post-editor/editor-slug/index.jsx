@@ -11,13 +11,13 @@ import classNames from 'classnames';
 /**
  * Internal Dependencies
  */
-import TrackInputChanges from 'components/track-input-changes';
-import FormTextInput from 'components/forms/form-text-input';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostSlug } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
+import TrackInputChanges from 'wp-calypso-client/components/track-input-changes';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostSlug } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
 
 /**
  * Style dependencies

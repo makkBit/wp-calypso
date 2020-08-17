@@ -7,12 +7,12 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormInputValidation from 'components/forms/form-input-validation';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import scrollIntoViewport from 'lib/scroll-into-viewport';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import scrollIntoViewport from 'wp-calypso-client/lib/scroll-into-viewport';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 
 export default class Input extends React.Component {
 	static defaultProps = { autoFocus: false, autoComplete: 'on' };

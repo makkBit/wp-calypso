@@ -12,22 +12,26 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { getCountryStates } from 'state/country-states/selectors';
-import { CountrySelect, Input, HiddenInput } from 'my-sites/domains/components/form';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormPhoneMediaInput from 'components/forms/form-phone-media-input';
-import { countries } from 'components/phone-input/data';
-import { toIcannFormat } from 'components/phone-input/phone-number';
+import { getCountryStates } from 'wp-calypso-client/state/country-states/selectors';
+import {
+	CountrySelect,
+	Input,
+	HiddenInput,
+} from 'wp-calypso-client/my-sites/domains/components/form';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormPhoneMediaInput from 'wp-calypso-client/components/forms/form-phone-media-input';
+import { countries } from 'wp-calypso-client/components/phone-input/data';
+import { toIcannFormat } from 'wp-calypso-client/components/phone-input/phone-number';
 import RegionAddressFieldsets from './custom-form-fieldsets/region-address-fieldsets';
-import getCountries from 'state/selectors/get-countries';
-import QueryDomainCountries from 'components/data/query-countries/domains';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import QueryDomainCountries from 'wp-calypso-client/components/data/query-countries/domains';
 import {
 	CONTACT_DETAILS_FORM_FIELDS,
 	CHECKOUT_EU_ADDRESS_FORMAT_COUNTRY_CODES,
 	CHECKOUT_UK_ADDRESS_FORMAT_COUNTRY_CODES,
 } from './custom-form-fieldsets/constants';
 import { getPostCodeLabelText } from './custom-form-fieldsets/utils';
-import { tryToGuessPostalCodeFormat } from 'lib/postal-code';
+import { tryToGuessPostalCodeFormat } from 'wp-calypso-client/lib/postal-code';
 
 /**
  * Style dependencies

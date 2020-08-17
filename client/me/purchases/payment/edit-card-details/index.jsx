@@ -9,25 +9,31 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import CreditCardForm from 'blocks/credit-card-form';
-import CreditCardFormLoadingPlaceholder from 'blocks/credit-card-form/loading-placeholder';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryStoredCards from 'components/data/query-stored-cards';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import titles from 'me/purchases/titles';
-import TrackPurchasePageView from 'me/purchases/track-purchase-page-view';
-import { clearPurchases } from 'state/purchases/actions';
-import { createCardToken } from 'lib/store-transactions';
-import { getByPurchaseId, hasLoadedUserPurchasesFromServer } from 'state/purchases/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getStoredCardById, hasLoadedStoredCardsFromServer } from 'state/stored-cards/selectors';
-import { isRequestingSites } from 'state/sites/selectors';
-import { managePurchase, purchasesRoot } from 'me/purchases/paths';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { StripeHookProvider } from 'lib/stripe';
+import CreditCardForm from 'wp-calypso-client/blocks/credit-card-form';
+import CreditCardFormLoadingPlaceholder from 'wp-calypso-client/blocks/credit-card-form/loading-placeholder';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryStoredCards from 'wp-calypso-client/components/data/query-stored-cards';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import titles from 'wp-calypso-client/me/purchases/titles';
+import TrackPurchasePageView from 'wp-calypso-client/me/purchases/track-purchase-page-view';
+import { clearPurchases } from 'wp-calypso-client/state/purchases/actions';
+import { createCardToken } from 'wp-calypso-client/lib/store-transactions';
+import {
+	getByPurchaseId,
+	hasLoadedUserPurchasesFromServer,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getStoredCardById,
+	hasLoadedStoredCardsFromServer,
+} from 'wp-calypso-client/state/stored-cards/selectors';
+import { isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import { managePurchase, purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { StripeHookProvider } from 'wp-calypso-client/lib/stripe';
 
 function EditCardDetails( props ) {
 	const isDataLoading = ! props.hasLoadedSites || ! props.hasLoadedUserPurchasesFromServer;

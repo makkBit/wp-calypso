@@ -8,7 +8,7 @@ import { pushEventToTracksQueue } from '@automattic/calypso-analytics';
 /**
  * Internal dependencies.
  */
-import { urlParseAmpCompatible } from 'lib/analytics/utils';
+import { urlParseAmpCompatible } from 'wp-calypso-client/lib/analytics/utils';
 
 /**
  * Const variables.

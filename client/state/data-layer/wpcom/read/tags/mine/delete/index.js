@@ -5,14 +5,14 @@
 /**
  * Internal dependencies
  */
-import { READER_UNFOLLOW_TAG_REQUEST } from 'state/reader/action-types';
-import { receiveUnfollowTag as receiveUnfollowTagAction } from 'state/reader/tags/items/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
+import { READER_UNFOLLOW_TAG_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { receiveUnfollowTag as receiveUnfollowTagAction } from 'wp-calypso-client/state/reader/tags/items/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { translate } from 'i18n-calypso';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestUnfollow( action ) {
 	return http( {

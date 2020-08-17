@@ -1,7 +1,10 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_VERTICALS_REQUEST, SIGNUP_VERTICALS_SET } from 'state/action-types';
+import {
+	SIGNUP_VERTICALS_REQUEST,
+	SIGNUP_VERTICALS_SET,
+} from 'wp-calypso-client/state/action-types';
 import { requestVerticals, setVerticals } from '../actions';
 
 describe( 'state/signup/verticals/actions', () => {

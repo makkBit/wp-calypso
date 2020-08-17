@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getAuthorizationData } from 'state/jetpack-connect/selectors/get-authorization-data';
+import { getAuthorizationData } from 'wp-calypso-client/state/jetpack-connect/selectors/get-authorization-data';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Returns true if the authorization error indicates that site has been blocked.

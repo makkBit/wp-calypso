@@ -11,24 +11,24 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FoldableCard from 'components/foldable-card';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLegend from 'components/forms/form-legend';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import SupportInfo from 'components/support-info';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import QuerySiteRoles from 'components/data/query-site-roles';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getSiteRoles } from 'state/site-roles/selectors';
-import { getStatsPathForTab } from 'lib/route';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isJetpackModuleUnavailableInDevelopmentMode from 'state/selectors/is-jetpack-module-unavailable-in-development-mode';
-import isJetpackSiteInDevelopmentMode from 'state/selectors/is-jetpack-site-in-development-mode';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import QuerySiteRoles from 'wp-calypso-client/components/data/query-site-roles';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteRoles } from 'wp-calypso-client/state/site-roles/selectors';
+import { getStatsPathForTab } from 'wp-calypso-client/lib/route';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isJetpackModuleUnavailableInDevelopmentMode from 'wp-calypso-client/state/selectors/is-jetpack-module-unavailable-in-development-mode';
+import isJetpackSiteInDevelopmentMode from 'wp-calypso-client/state/selectors/is-jetpack-site-in-development-mode';
 
 class JetpackSiteStats extends Component {
 	static defaultProps = {

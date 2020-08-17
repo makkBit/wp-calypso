@@ -6,10 +6,10 @@ import { groupBy, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import getBillingTransactionsByType from 'state/selectors/get-billing-transactions-by-type';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getBillingTransactionsByType from 'wp-calypso-client/state/selectors/get-billing-transactions-by-type';
 
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 /**
  * Based on the transactions list, returns metadata for rendering the app filters with counts

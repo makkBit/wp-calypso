@@ -11,15 +11,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { bumpStat } from 'lib/analytics/mc';
-import { getMimePrefix, url } from 'lib/media/utils';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInput from 'components/forms/form-text-input';
-import TrackInputChanges from 'components/track-input-changes';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { getMimePrefix, url } from 'wp-calypso-client/lib/media/utils';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import TrackInputChanges from 'wp-calypso-client/components/track-input-changes';
 import EditorMediaModalFieldset from '../fieldset';
-import { updateMedia } from 'state/media/thunks';
+import { updateMedia } from 'wp-calypso-client/state/media/thunks';
 
 class EditorMediaModalDetailFields extends Component {
 	static propTypes = {

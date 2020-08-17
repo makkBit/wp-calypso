@@ -9,36 +9,40 @@ import { get, includes, map, noop } from 'lodash';
 /**
  * Internal Dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import { sectionify } from 'lib/route';
-import Main from 'components/main';
-import getSites from 'state/selectors/get-sites';
-import { getSelectedSiteId, getSelectedSite, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import CartData from 'components/data/cart';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { sectionify } from 'wp-calypso-client/lib/route';
+import Main from 'wp-calypso-client/components/main';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import {
+	getSelectedSiteId,
+	getSelectedSite,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import CartData from 'wp-calypso-client/components/data/cart';
 import DomainSearch from './domain-search';
 import SiteRedirect from './domain-search/site-redirect';
-import MapDomain from 'my-sites/domains/map-domain';
-import TransferDomain from 'my-sites/domains/transfer-domain';
-import TransferDomainStep from 'components/domains/transfer-domain-step';
-import UseYourDomainStep from 'components/domains/use-your-domain-step';
-import GSuiteUpgrade from 'components/upgrades/gsuite';
+import MapDomain from 'wp-calypso-client/my-sites/domains/map-domain';
+import TransferDomain from 'wp-calypso-client/my-sites/domains/transfer-domain';
+import TransferDomainStep from 'wp-calypso-client/components/domains/transfer-domain-step';
+import UseYourDomainStep from 'wp-calypso-client/components/domains/use-your-domain-step';
+import GSuiteUpgrade from 'wp-calypso-client/components/upgrades/gsuite';
 import {
 	domainManagementTransferIn,
 	domainManagementTransferInPrecheck,
 	domainMapping,
 	domainTransferIn,
 	domainUseYourDomain,
-} from 'my-sites/domains/paths';
-import { isATEnabled } from 'lib/automated-transfer';
-import JetpackManageErrorPage from 'my-sites/jetpack-manage-error-page';
-import { makeLayout, render as clientRender } from 'controller';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { canUserPurchaseGSuite } from 'lib/gsuite';
-import { addItem } from 'lib/cart/actions';
-import { planItem } from 'lib/cart-values/cart-items';
-import { PLAN_PERSONAL } from 'lib/plans/constants';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { isATEnabled } from 'wp-calypso-client/lib/automated-transfer';
+import JetpackManageErrorPage from 'wp-calypso-client/my-sites/jetpack-manage-error-page';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { canUserPurchaseGSuite } from 'wp-calypso-client/lib/gsuite';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import { planItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { PLAN_PERSONAL } from 'wp-calypso-client/lib/plans/constants';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 const domainsAddHeader = ( context, next ) => {
 	context.getSiteSelectionHeaderText = () => {

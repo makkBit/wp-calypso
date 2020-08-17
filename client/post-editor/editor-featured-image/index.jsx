@@ -4,30 +4,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { noop } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import MediaModal from 'post-editor/media-modal';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
+import MediaModal from 'wp-calypso-client/post-editor/media-modal';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
 import EditorFeaturedImagePreviewContainer from './preview-container';
 import FeaturedImageDropZone from './dropzone';
-import isDropZoneVisible from 'state/selectors/is-drop-zone-visible';
+import isDropZoneVisible from 'wp-calypso-client/state/selectors/is-drop-zone-visible';
 import { Button } from '@automattic/components';
-import RemoveButton from 'components/remove-button';
-import getMediaItem from 'state/selectors/get-media-item';
-import { getFeaturedImageId } from 'state/posts/utils';
-import QueryMedia from 'components/data/query-media';
+import RemoveButton from 'wp-calypso-client/components/remove-button';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
+import { getFeaturedImageId } from 'wp-calypso-client/state/posts/utils';
+import QueryMedia from 'wp-calypso-client/components/data/query-media';
 import { localize } from 'i18n-calypso';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
-import { setMediaLibrarySelectedItems } from 'state/media/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import { setMediaLibrarySelectedItems } from 'wp-calypso-client/state/media/actions';
 
 /**
  * Style dependencies

@@ -7,8 +7,8 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import { CALYPSO_CONTACT } from 'lib/url/support';
+import notices from 'wp-calypso-client/notices';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
 
 export const displayResponseError = ( responseError ) => {
 	const errorMessages = {

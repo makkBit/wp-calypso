@@ -1,7 +1,7 @@
 /**
  * Internal Dependencies
  */
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 export {
 	isFetchingUserPurchases,

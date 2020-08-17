@@ -1,16 +1,16 @@
 /**
  * Internal dependencies
  */
-import { convertToCamelCase } from 'state/data-layer/utils';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { GOOGLE_MY_BUSINESS_STATS_REQUEST } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { convertToCamelCase } from 'wp-calypso-client/state/data-layer/utils';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { GOOGLE_MY_BUSINESS_STATS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	receiveGoogleMyBusinessStats,
 	failedRequestGoogleMyBusinessStats,
-} from 'state/google-my-business/actions';
+} from 'wp-calypso-client/state/google-my-business/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const fetchStats = ( action ) => {
 	const { siteId, statType, interval = 'week', aggregation = 'total' } = action;

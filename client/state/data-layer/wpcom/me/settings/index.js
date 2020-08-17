@@ -7,14 +7,17 @@ import { isEmpty, keys, mapValues, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { decodeEntities } from 'lib/formatting';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import getUnsavedUserSettings from 'state/selectors/get-unsaved-user-settings';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { updateUserSettings, clearUnsavedUserSettings } from 'state/user-settings/actions';
-import { USER_SETTINGS_REQUEST, USER_SETTINGS_SAVE } from 'state/action-types';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import getUnsavedUserSettings from 'wp-calypso-client/state/selectors/get-unsaved-user-settings';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	updateUserSettings,
+	clearUnsavedUserSettings,
+} from 'wp-calypso-client/state/user-settings/actions';
+import { USER_SETTINGS_REQUEST, USER_SETTINGS_SAVE } from 'wp-calypso-client/state/action-types';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /*
  * Decodes entities in those specific user settings properties
@@ -76,7 +79,7 @@ export const finishUserSettingsSave = ( { settingsOverride }, data ) => ( dispat
 	// Refetch the user data after saving user settings
 	// The require() trick is used to avoid excessive mocking in unit tests.
 	// TODO: Replace it with standard 'import' when the `lib/user` module is Reduxized
-	const userLibModule = require( 'lib/user' );
+	const userLibModule = require( 'wp-calypso-client/lib/user' );
 	const userLib = userLibModule.default ? userLibModule.default : userLibModule; // TODO: delete line after removing add-module-exports.
 	userLib().fetch();
 };

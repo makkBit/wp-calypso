@@ -6,15 +6,15 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { ALL_DOMAINS_REQUEST } from 'state/action-types';
-import { errorNotice } from 'state/notices/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { ALL_DOMAINS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	getAllDomainsRequestFailure,
 	getAllDomainsRequestSuccess,
-} from 'state/all-domains/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+} from 'wp-calypso-client/state/all-domains/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const getAllDomains = ( action ) => {
 	return http(

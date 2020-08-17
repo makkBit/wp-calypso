@@ -8,8 +8,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import { recordTracksEvent } from 'state/analytics/actions';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 import WooCommerceLogo from '../woocommerce-logo';
 

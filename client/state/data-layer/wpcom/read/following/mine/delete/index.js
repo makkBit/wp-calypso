@@ -6,18 +6,18 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { READER_UNFOLLOW } from 'state/reader/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import { follow } from 'state/reader/follows/actions';
-import { getFeedByFeedUrl } from 'state/reader/feeds/selectors';
-import { getSiteByFeedUrl } from 'state/reader/sites/selectors';
-import { getSiteName } from 'reader/get-helpers';
-import { bypassDataLayer } from 'state/data-layer/utils';
+import config from 'wp-calypso-client/config';
+import { READER_UNFOLLOW } from 'wp-calypso-client/state/reader/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { follow } from 'wp-calypso-client/state/reader/follows/actions';
+import { getFeedByFeedUrl } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { getSiteByFeedUrl } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getSiteName } from 'wp-calypso-client/reader/get-helpers';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const requestUnfollow = ( action ) =>
 	http( {

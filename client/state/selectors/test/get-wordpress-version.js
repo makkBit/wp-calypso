@@ -7,7 +7,7 @@ import deepFreeze from 'deep-freeze';
  * Internal dependencies
  */
 import getWordPressVersion from '../get-wordpress-version';
-import { userState } from 'state/selectors/test/fixtures/user-state';
+import { userState } from 'wp-calypso-client/state/selectors/test/fixtures/user-state';
 
 describe( 'getSelectedSiteWordPressVersion()', () => {
 	test( 'should return correct version value.', () => {

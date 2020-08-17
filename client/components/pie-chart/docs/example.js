@@ -7,8 +7,8 @@ import React, { Component } from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import PieChart from 'components/pie-chart';
-import PieChartLegend from 'components/pie-chart/legend';
+import PieChart from 'wp-calypso-client/components/pie-chart';
+import PieChartLegend from 'wp-calypso-client/components/pie-chart/legend';
 
 class PieChartExample extends Component {
 	static displayName = 'PieChart';

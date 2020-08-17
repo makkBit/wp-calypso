@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 const ACTIVE_STATUSES = [ 'New', 'Open', 'Hold' ];
 

@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import reducer, { items } from '../reducer';
-import { DOMAIN_TRANSFER_UPDATE } from 'state/action-types';
+import { DOMAIN_TRANSFER_UPDATE } from 'wp-calypso-client/state/action-types';
 
 const selectedRegistrar = {
 	tag: 'UNIT-TEST-TAG',

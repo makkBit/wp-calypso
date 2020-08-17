@@ -12,7 +12,7 @@ import {
 	getLanguageManifestFileUrl,
 	getLanguagesInternalBasePath,
 	getTranslationChunkFileUrl,
-} from 'lib/i18n-utils/switch-locale';
+} from 'wp-calypso-client/lib/i18n-utils/switch-locale';
 
 describe( 'getLanguageFileUrl()', () => {
 	test( 'should return a JS url.', () => {

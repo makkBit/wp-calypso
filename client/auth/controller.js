@@ -10,13 +10,13 @@ import { stringify } from 'qs';
  */
 import OAuthLogin from './login';
 import ConnectComponent from './connect';
-import { getToken } from 'lib/oauth-token';
-import wpcom from 'lib/wp';
-import config from 'config';
+import { getToken } from 'wp-calypso-client/lib/oauth-token';
+import wpcom from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
 import store from 'store';
-import userFactory from 'lib/user';
-import Main from 'components/main';
-import PulsingDot from 'components/pulsing-dot';
+import userFactory from 'wp-calypso-client/lib/user';
+import Main from 'wp-calypso-client/components/main';
+import PulsingDot from 'wp-calypso-client/components/pulsing-dot';
 
 /**
  * Style dependencies

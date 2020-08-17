@@ -13,48 +13,52 @@ import store from 'store';
  * Internal dependencies
  */
 import { setupLocale } from './locale';
-import config from 'config';
-import { ProviderWrappedLayout } from 'controller';
-import notices from 'notices';
-import { getToken } from 'lib/oauth-token';
-import emailVerification from 'components/email-verification';
-import { getSavedVariations } from 'lib/abtest'; // used by error logger
-import accessibleFocus from 'lib/accessible-focus';
-import Logger from 'lib/catch-js-errors';
-import { bindState as bindWpLocaleState } from 'lib/wp/localization';
-import { hasTouch } from 'lib/touch-detect';
-import { installPerfmonPageHandlers } from 'lib/perfmon';
-import { setupRoutes } from 'sections-middleware';
-import { checkFormHandler } from 'lib/protect-form';
-import { setReduxStore as setReduxBridgeReduxStore } from 'lib/redux-bridge';
-import { init as pushNotificationsInit } from 'state/push-notifications/actions';
-import { setSupportSessionReduxStore } from 'lib/user/support-user-interop';
-import { tracksEvents } from 'lib/analytics/tracks';
-import { initializeAnalytics } from 'lib/analytics/init';
-import { bumpStat } from 'lib/analytics/mc';
-import getSuperProps from 'lib/analytics/super-props';
-import { getSiteFragment, normalize } from 'lib/route';
-import { isLegacyRoute } from 'lib/route/legacy-routes';
-import { setCurrentUser } from 'state/current-user/actions';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { initConnection as initHappychatConnection } from 'state/happychat/connection/actions';
-import { requestHappychatEligibility } from 'state/happychat/user/actions';
-import { getHappychatAuth } from 'state/happychat/utils';
-import wasHappychatRecentlyActive from 'state/happychat/selectors/was-happychat-recently-active';
-import { setRoute as setRouteAction } from 'state/route/actions';
-import { getSelectedSiteId, getSectionName } from 'state/ui/selectors';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import setupGlobalKeyboardShortcuts from 'lib/keyboard-shortcuts/global';
-import { createReduxStore } from 'state';
-import initialReducer from 'state/reducer';
-import { getInitialState, persistOnChange, loadAllState } from 'state/initial-state';
-import detectHistoryNavigation from 'lib/detect-history-navigation';
-import userFactory from 'lib/user';
-import { getUrlParts, isOutsideCalypso } from 'lib/url';
-import { setStore } from 'state/redux-store';
-import { requestUnseenStatus } from 'state/reader-ui/seen-posts/actions';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import { inJetpackCloudOAuthOverride } from 'lib/jetpack/oauth-override';
+import config from 'wp-calypso-client/config';
+import { ProviderWrappedLayout } from 'wp-calypso-client/controller';
+import notices from 'wp-calypso-client/notices';
+import { getToken } from 'wp-calypso-client/lib/oauth-token';
+import emailVerification from 'wp-calypso-client/components/email-verification';
+import { getSavedVariations } from 'wp-calypso-client/lib/abtest'; // used by error logger
+import accessibleFocus from 'wp-calypso-client/lib/accessible-focus';
+import Logger from 'wp-calypso-client/lib/catch-js-errors';
+import { bindState as bindWpLocaleState } from 'wp-calypso-client/lib/wp/localization';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import { installPerfmonPageHandlers } from 'wp-calypso-client/lib/perfmon';
+import { setupRoutes } from 'wp-calypso-client/sections-middleware';
+import { checkFormHandler } from 'wp-calypso-client/lib/protect-form';
+import { setReduxStore as setReduxBridgeReduxStore } from 'wp-calypso-client/lib/redux-bridge';
+import { init as pushNotificationsInit } from 'wp-calypso-client/state/push-notifications/actions';
+import { setSupportSessionReduxStore } from 'wp-calypso-client/lib/user/support-user-interop';
+import { tracksEvents } from 'wp-calypso-client/lib/analytics/tracks';
+import { initializeAnalytics } from 'wp-calypso-client/lib/analytics/init';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import getSuperProps from 'wp-calypso-client/lib/analytics/super-props';
+import { getSiteFragment, normalize } from 'wp-calypso-client/lib/route';
+import { isLegacyRoute } from 'wp-calypso-client/lib/route/legacy-routes';
+import { setCurrentUser } from 'wp-calypso-client/state/current-user/actions';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { initConnection as initHappychatConnection } from 'wp-calypso-client/state/happychat/connection/actions';
+import { requestHappychatEligibility } from 'wp-calypso-client/state/happychat/user/actions';
+import { getHappychatAuth } from 'wp-calypso-client/state/happychat/utils';
+import wasHappychatRecentlyActive from 'wp-calypso-client/state/happychat/selectors/was-happychat-recently-active';
+import { setRoute as setRouteAction } from 'wp-calypso-client/state/route/actions';
+import { getSelectedSiteId, getSectionName } from 'wp-calypso-client/state/ui/selectors';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import setupGlobalKeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts/global';
+import { createReduxStore } from 'wp-calypso-client/state';
+import initialReducer from 'wp-calypso-client/state/reducer';
+import {
+	getInitialState,
+	persistOnChange,
+	loadAllState,
+} from 'wp-calypso-client/state/initial-state';
+import detectHistoryNavigation from 'wp-calypso-client/lib/detect-history-navigation';
+import userFactory from 'wp-calypso-client/lib/user';
+import { getUrlParts, isOutsideCalypso } from 'wp-calypso-client/lib/url';
+import { setStore } from 'wp-calypso-client/state/redux-store';
+import { requestUnseenStatus } from 'wp-calypso-client/state/reader-ui/seen-posts/actions';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import { inJetpackCloudOAuthOverride } from 'wp-calypso-client/lib/jetpack/oauth-override';
 
 const debug = debugFactory( 'calypso' );
 
@@ -239,7 +243,7 @@ function setupErrorLogger( reduxStore ) {
 	const errorLogger = new Logger();
 
 	// Save errorLogger to a singleton for use in arbitrary logging.
-	require( 'lib/catch-js-errors/log' ).registerLogger( errorLogger );
+	require( 'wp-calypso-client/lib/catch-js-errors/log' ).registerLogger( errorLogger );
 
 	// Save data to JS error logger
 	errorLogger.saveDiagnosticData( {
@@ -375,7 +379,7 @@ const setupMiddlewares = ( currentUser, reduxStore ) => {
 	}
 
 	if ( config.isEnabled( 'desktop' ) ) {
-		require( 'lib/desktop' ).default.init();
+		require( 'wp-calypso-client/lib/desktop' ).default.init();
 	}
 
 	if ( config.isEnabled( 'rubberband-scroll-disable' ) ) {

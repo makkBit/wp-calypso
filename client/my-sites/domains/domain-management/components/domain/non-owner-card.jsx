@@ -7,8 +7,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { localize } from 'i18n-calypso';
-import { getSelectedDomain } from 'lib/domains';
-import Notice from 'components/notice';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import Notice from 'wp-calypso-client/components/notice';
 
 const NonOwnerCard = ( { domains, selectedDomainName, translate } ) => {
 	const domain = getSelectedDomain( { domains, selectedDomainName } );

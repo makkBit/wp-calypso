@@ -8,13 +8,16 @@ import formatCurrency from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
-import { TYPE_PREMIUM, TERM_ANNUALLY } from 'lib/plans/constants';
-import { findFirstSimilarPlanKey } from 'lib/plans';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSitePlan } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSitePlanRawPrice, getPlanDiscountedRawPrice } from 'state/sites/plans/selectors';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { TYPE_PREMIUM, TERM_ANNUALLY } from 'wp-calypso-client/lib/plans/constants';
+import { findFirstSimilarPlanKey } from 'wp-calypso-client/lib/plans';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSitePlan } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getSitePlanRawPrice,
+	getPlanDiscountedRawPrice,
+} from 'wp-calypso-client/state/sites/plans/selectors';
 
 export const UpgradeToPremiumNudgePure = ( props ) => {
 	const { price, planSlug, translate, userCurrency, canUserUpgrade, isJetpack } = props;

@@ -9,8 +9,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import ThankYouCard from 'components/thank-you-card';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import ThankYouCard from 'wp-calypso-client/components/thank-you-card';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 class RebrandCitiesThankYou extends Component {
 	renderLogo() {

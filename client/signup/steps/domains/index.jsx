@@ -11,46 +11,50 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import MapDomainStep from 'components/domains/map-domain-step';
-import TransferDomainStep from 'components/domains/transfer-domain-step';
-import UseYourDomainStep from 'components/domains/use-your-domain-step';
-import RegisterDomainStep from 'components/domains/register-domain-step';
-import CartData from 'components/data/cart';
-import { getStepUrl } from 'signup/utils';
-import StepWrapper from 'signup/step-wrapper';
+import MapDomainStep from 'wp-calypso-client/components/domains/map-domain-step';
+import TransferDomainStep from 'wp-calypso-client/components/domains/transfer-domain-step';
+import UseYourDomainStep from 'wp-calypso-client/components/domains/use-your-domain-step';
+import RegisterDomainStep from 'wp-calypso-client/components/domains/register-domain-step';
+import CartData from 'wp-calypso-client/components/data/cart';
+import { getStepUrl } from 'wp-calypso-client/signup/utils';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import {
 	domainRegistration,
 	themeItem,
 	domainMapping,
 	domainTransfer,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 import {
 	recordAddDomainButtonClick,
 	recordAddDomainButtonClickInMapDomain,
 	recordAddDomainButtonClickInTransferDomain,
 	recordAddDomainButtonClickInUseYourDomain,
-} from 'state/domains/actions';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { domainManagementRoot } from 'my-sites/domains/paths';
-import Notice from 'components/notice';
-import { getDesignType } from 'state/signup/steps/design-type/selectors';
-import { setDesignType } from 'state/signup/steps/design-type/actions';
-import { getSiteGoals } from 'state/signup/steps/site-goals/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getDomainProductSlug } from 'lib/domains';
-import QueryProductsList from 'components/data/query-products-list';
-import { getAvailableProductsList } from 'state/products-list/selectors';
-import { getSuggestionsVendor } from 'lib/domains/suggestions';
-import { getSite } from 'state/sites/selectors';
-import { getVerticalForDomainSuggestions } from 'state/signup/steps/site-vertical/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
-import { isDomainStepSkippable } from 'signup/config/steps';
-import { fetchUsernameSuggestion } from 'state/signup/optional-dependencies/actions';
-import { isSitePreviewVisible } from 'state/signup/preview/selectors';
-import { hideSitePreview, showSitePreview } from 'state/signup/preview/actions';
-import { abtest, getABTestVariation } from 'lib/abtest';
-import getSitesItems from 'state/selectors/get-sites-items';
+} from 'wp-calypso-client/state/domains/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { domainManagementRoot } from 'wp-calypso-client/my-sites/domains/paths';
+import Notice from 'wp-calypso-client/components/notice';
+import { getDesignType } from 'wp-calypso-client/state/signup/steps/design-type/selectors';
+import { setDesignType } from 'wp-calypso-client/state/signup/steps/design-type/actions';
+import { getSiteGoals } from 'wp-calypso-client/state/signup/steps/site-goals/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getDomainProductSlug } from 'wp-calypso-client/lib/domains';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import { getAvailableProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import { getSuggestionsVendor } from 'wp-calypso-client/lib/domains/suggestions';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getVerticalForDomainSuggestions } from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { isDomainStepSkippable } from 'wp-calypso-client/signup/config/steps';
+import { fetchUsernameSuggestion } from 'wp-calypso-client/state/signup/optional-dependencies/actions';
+import { isSitePreviewVisible } from 'wp-calypso-client/state/signup/preview/selectors';
+import { hideSitePreview, showSitePreview } from 'wp-calypso-client/state/signup/preview/actions';
+import { abtest, getABTestVariation } from 'wp-calypso-client/lib/abtest';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
 
 /**
  * Style dependencies

@@ -12,12 +12,12 @@ import { once } from 'lodash';
  * Internal dependencies
  */
 import CartAd from './cart-ad';
-import { hasPlan, getAllCartItems } from 'lib/cart-values/cart-items';
-import { fetchSitePlans } from 'state/sites/plans/actions';
-import { getPlansBySite } from 'state/sites/plans/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { isPlan } from 'lib/products-values';
-import { shouldFetchSitePlans } from 'lib/plans';
+import { hasPlan, getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { fetchSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
+import { getPlansBySite } from 'wp-calypso-client/state/sites/plans/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { isPlan } from 'wp-calypso-client/lib/products-values';
+import { shouldFetchSitePlans } from 'wp-calypso-client/lib/plans';
 
 export class CartPlanDiscountAd extends Component {
 	static propTypes = {

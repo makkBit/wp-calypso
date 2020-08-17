@@ -11,17 +11,17 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FormattedHeader from 'components/formatted-header';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import HelpButton from './help-button';
 import JetpackInstallStep from './install-step';
-import LocaleSuggestions from 'components/locale-suggestions';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
 import MainWrapper from './main-wrapper';
 import { addCalypsoEnvQueryArg } from './utils';
-import { confirmJetpackInstallStatus } from 'state/jetpack-connect/actions';
-import { externalRedirect } from 'lib/route';
-import { getConnectingSite } from 'state/jetpack-connect/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { confirmJetpackInstallStatus } from 'wp-calypso-client/state/jetpack-connect/actions';
+import { externalRedirect } from 'wp-calypso-client/lib/route';
+import { getConnectingSite } from 'wp-calypso-client/state/jetpack-connect/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { REMOTE_PATH_ACTIVATE, REMOTE_PATH_INSTALL } from './constants';
 
 class InstallInstructions extends Component {

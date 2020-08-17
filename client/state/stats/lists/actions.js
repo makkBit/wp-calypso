@@ -1,19 +1,19 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	SITE_STATS_RECEIVE,
 	SITE_STATS_REQUEST,
 	SITE_STATS_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * External dependencies
  */
 import { includes } from 'lodash';
 
-import 'state/stats/init';
+import 'wp-calypso-client/state/stats/init';
 
 /**
  * Returns an action object to be used in signalling that stats for a given type of stats and query

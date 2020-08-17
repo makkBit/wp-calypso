@@ -11,9 +11,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { omitUrlParams } from 'lib/url';
-import { isEnabled } from 'config';
-import WebPreview from 'components/web-preview';
+import { omitUrlParams } from 'wp-calypso-client/lib/url';
+import { isEnabled } from 'wp-calypso-client/config';
+import WebPreview from 'wp-calypso-client/components/web-preview';
 
 /**
  * Style dependencies

@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getRestoreProgress from 'state/selectors/get-restore-progress';
+import getRestoreProgress from 'wp-calypso-client/state/selectors/get-restore-progress';
 
 const SITE_ID = 1234;
 

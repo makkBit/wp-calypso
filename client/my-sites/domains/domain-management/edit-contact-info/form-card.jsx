@@ -12,26 +12,29 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card, Dialog } from '@automattic/components';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormLabel from 'components/forms/form-label';
-import notices from 'notices';
-import { domainManagementContactsPrivacy, domainManagementEdit } from 'my-sites/domains/paths';
-import wp from 'lib/wp';
-import { successNotice } from 'state/notices/actions';
-import { UPDATE_CONTACT_INFORMATION_EMAIL_OR_NAME_CHANGES } from 'lib/url/support';
-import { registrar as registrarNames } from 'lib/domains/constants';
-import DesignatedAgentNotice from 'my-sites/domains/domain-management/components/designated-agent-notice';
-import { getCurrentUser } from 'state/current-user/selectors';
-import ContactDetailsFormFields from 'components/domains/contact-details-form-fields';
-import { requestWhois, saveWhois } from 'state/domains/management/actions';
-import { fetchSiteDomains } from 'state/sites/domains/actions';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import notices from 'wp-calypso-client/notices';
+import {
+	domainManagementContactsPrivacy,
+	domainManagementEdit,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import wp from 'wp-calypso-client/lib/wp';
+import { successNotice } from 'wp-calypso-client/state/notices/actions';
+import { UPDATE_CONTACT_INFORMATION_EMAIL_OR_NAME_CHANGES } from 'wp-calypso-client/lib/url/support';
+import { registrar as registrarNames } from 'wp-calypso-client/lib/domains/constants';
+import DesignatedAgentNotice from 'wp-calypso-client/my-sites/domains/domain-management/components/designated-agent-notice';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import ContactDetailsFormFields from 'wp-calypso-client/components/domains/contact-details-form-fields';
+import { requestWhois, saveWhois } from 'wp-calypso-client/state/domains/management/actions';
+import { fetchSiteDomains } from 'wp-calypso-client/state/sites/domains/actions';
 import {
 	isUpdatingWhois,
 	getWhoisData,
 	getWhoisSaveError,
 	getWhoisSaveSuccess,
-} from 'state/domains/management/selectors';
-import { findRegistrantWhois } from 'lib/domains/whois/utils';
+} from 'wp-calypso-client/state/domains/management/selectors';
+import { findRegistrantWhois } from 'wp-calypso-client/lib/domains/whois/utils';
 import getPreviousPath from '../../../../state/selectors/get-previous-path';
 
 const wpcom = wp.undocumented();

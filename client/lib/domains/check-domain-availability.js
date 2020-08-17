@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import { domainAvailability } from './constants';
 
 export function checkDomainAvailability( params, onComplete ) {

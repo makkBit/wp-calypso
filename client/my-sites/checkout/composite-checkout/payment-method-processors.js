@@ -22,7 +22,7 @@ import {
 	submitExistingCardPayment,
 	submitPayPalExpressRequest,
 } from './payment-method-helpers';
-import { createEbanxToken } from 'lib/store-transactions';
+import { createEbanxToken } from 'wp-calypso-client/lib/store-transactions';
 
 const { select, dispatch } = defaultRegistry;
 

@@ -8,8 +8,8 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import config from 'config';
+import wpcom from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
 import {
 	SITE_DELETE,
 	SITE_DELETE_FAILURE,
@@ -26,8 +26,8 @@ import {
 	SITE_PLUGIN_UPDATED,
 	SITE_FRONT_PAGE_UPDATE,
 	SITE_MIGRATION_STATUS_UPDATE,
-} from 'state/action-types';
-import { SITE_REQUEST_FIELDS, SITE_REQUEST_OPTIONS } from 'state/sites/constants';
+} from 'wp-calypso-client/state/action-types';
+import { SITE_REQUEST_FIELDS, SITE_REQUEST_OPTIONS } from 'wp-calypso-client/state/sites/constants';
 
 /**
  * Returns an action object to be used in signalling that a site has been

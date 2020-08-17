@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	WOOCOMMERCE_CURRENCY_UPDATE_SUCCESS,
 	WOOCOMMERCE_CURRENCY_CHANGE,

@@ -6,8 +6,8 @@ import { startsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getLanguage, getLocaleFromPath } from 'lib/i18n-utils';
+import config from 'wp-calypso-client/config';
+import { getLanguage, getLocaleFromPath } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Module variables

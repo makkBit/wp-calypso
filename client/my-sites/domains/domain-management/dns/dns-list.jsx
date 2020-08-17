@@ -13,10 +13,10 @@ import { localize } from 'i18n-calypso';
 import DnsRecordsList from '../dns-records/list';
 import DeleteEmailForwardsDialog from './delete-email-forwards-dialog';
 import DnsRecord from './dns-record';
-import { errorNotice, removeNotice, successNotice } from 'state/notices/actions';
-import { addDns, deleteDns } from 'state/domains/dns/actions';
-import { isDeletingLastMXRecord } from 'state/domains/dns/utils';
-import { domainConnect } from 'lib/domains/constants';
+import { errorNotice, removeNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { addDns, deleteDns } from 'wp-calypso-client/state/domains/dns/actions';
+import { isDeletingLastMXRecord } from 'wp-calypso-client/state/domains/dns/utils';
+import { domainConnect } from 'wp-calypso-client/lib/domains/constants';
 
 class DnsList extends React.Component {
 	static propTypes = {

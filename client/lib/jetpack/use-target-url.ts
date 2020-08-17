@@ -6,10 +6,10 @@ import { useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import isJetpackCloudEligible from 'state/selectors/is-jetpack-cloud-eligible';
-import isJetpackSectionEnabledForSite from 'state/selectors/is-jetpack-section-enabled-for-site';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import isJetpackCloudEligible from 'wp-calypso-client/state/selectors/is-jetpack-cloud-eligible';
+import isJetpackSectionEnabledForSite from 'wp-calypso-client/state/selectors/is-jetpack-section-enabled-for-site';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Constants

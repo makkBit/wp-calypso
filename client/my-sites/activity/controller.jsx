@@ -8,14 +8,14 @@ import { isEqual } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { queryToFilterState } from 'state/activity-log/utils';
-import { recordTrack } from 'reader/stats';
-import { setFilter } from 'state/activity-log/actions';
-import ActivityLog from 'my-sites/activity/activity-log';
-import ActivityLogV2 from 'my-sites/activity/activity-log-v2';
-import config from 'config';
-import getActivityLogFilter from 'state/selectors/get-activity-log-filter';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { queryToFilterState } from 'wp-calypso-client/state/activity-log/utils';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import { setFilter } from 'wp-calypso-client/state/activity-log/actions';
+import ActivityLog from 'wp-calypso-client/my-sites/activity/activity-log';
+import ActivityLogV2 from 'wp-calypso-client/my-sites/activity/activity-log-v2';
+import config from 'wp-calypso-client/config';
+import getActivityLogFilter from 'wp-calypso-client/state/selectors/get-activity-log-filter';
 
 function queryFilterToStats( filter ) {
 	// These values are hardcoded so that the attributes that we collect via stats are not unbound

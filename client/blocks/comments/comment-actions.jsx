@@ -4,19 +4,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classnames from 'classnames';
 import { noop } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import { changeCommentStatus } from 'state/comments/actions';
+import { changeCommentStatus } from 'wp-calypso-client/state/comments/actions';
 import CommentLikeButtonContainer from './comment-likes';
 import CommentApproveAction from './comment-approve-action';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import PopoverMenuSeparator from 'components/popover/menu-separator';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import PopoverMenuSeparator from 'wp-calypso-client/components/popover/menu-separator';
 
 /**
  * Style dependencies

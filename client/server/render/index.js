@@ -13,26 +13,30 @@ import fs from 'fs';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { isDefaultLocale, isLocaleRtl, isTranslatedIncompletely } from 'lib/i18n-utils';
+import config from 'wp-calypso-client/config';
+import {
+	isDefaultLocale,
+	isLocaleRtl,
+	isTranslatedIncompletely,
+} from 'wp-calypso-client/lib/i18n-utils';
 import {
 	getLanguageFileUrl,
 	getLanguageManifestFileUrl,
 	getTranslationChunkFileUrl,
-} from 'lib/i18n-utils/switch-locale';
-import { isSectionIsomorphic } from 'state/ui/selectors';
+} from 'wp-calypso-client/lib/i18n-utils/switch-locale';
+import { isSectionIsomorphic } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getDocumentHeadFormattedTitle,
 	getDocumentHeadMeta,
 	getDocumentHeadLink,
-} from 'state/document-head/selectors';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import getCurrentLocaleVariant from 'state/selectors/get-current-locale-variant';
-import initialReducer from 'state/reducer';
-import { SERIALIZE } from 'state/action-types';
-import { logToLogstash } from 'state/logstash/actions';
-import stateCache from 'server/state-cache';
-import { getNormalizedPath } from 'server/isomorphic-routing';
+} from 'wp-calypso-client/state/document-head/selectors';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import getCurrentLocaleVariant from 'wp-calypso-client/state/selectors/get-current-locale-variant';
+import initialReducer from 'wp-calypso-client/state/reducer';
+import { SERIALIZE } from 'wp-calypso-client/state/action-types';
+import { logToLogstash } from 'wp-calypso-client/state/logstash/actions';
+import stateCache from 'wp-calypso-client/server/state-cache';
+import { getNormalizedPath } from 'wp-calypso-client/server/isomorphic-routing';
 
 const debug = debugFactory( 'calypso:server-render' );
 const HOUR_IN_MS = 3600000;

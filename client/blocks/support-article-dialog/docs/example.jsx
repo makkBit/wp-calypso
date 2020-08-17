@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { openSupportArticleDialog } from 'state/inline-support-article/actions';
-import { localizeUrl } from 'lib/i18n-utils';
+import { openSupportArticleDialog } from 'wp-calypso-client/state/inline-support-article/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 const postId = 143180;
 const postUrl = localizeUrl(

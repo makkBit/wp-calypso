@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Gravatar from 'components/gravatar';
-import { getCurrentUser } from 'state/current-user/selectors';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 function GravatarExample( { currentUser } ) {
 	return <Gravatar user={ currentUser } size={ 96 } />;

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import versionCompare from 'lib/version-compare';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
 import getSiteOption from './get-site-option';
 import isJetpackSite from './is-jetpack-site';
 /**

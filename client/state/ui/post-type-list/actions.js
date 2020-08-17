@@ -9,7 +9,7 @@ import {
 	POST_TYPE_LIST_SELECTION_TOGGLE,
 	POST_TYPE_LIST_SHARE_PANEL_HIDE,
 	POST_TYPE_LIST_SHARE_PANEL_TOGGLE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 export function hideActiveLikesPopover() {
 	return {

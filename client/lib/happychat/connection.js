@@ -21,7 +21,7 @@ import {
 	receiveToken,
 	receiveUnauthorized,
 	requestTranscript,
-} from 'state/happychat/connection/actions';
+} from 'wp-calypso-client/state/happychat/connection/actions';
 
 const debug = debugFactory( 'calypso:happychat:connection' );
 

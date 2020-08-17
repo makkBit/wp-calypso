@@ -6,8 +6,8 @@ import { set } from 'lodash';
 /**
  * Internal dependencies
  */
-import { ANALYTICS_EVENT_RECORD } from 'state/action-types';
-import { getSelectedSite } from 'state/ui/selectors';
+import { ANALYTICS_EVENT_RECORD } from 'wp-calypso-client/state/action-types';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Enhances any Redux action that denotes the recording of an analytics event with an additional property which

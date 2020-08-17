@@ -7,15 +7,15 @@ import { trim } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordTrack } from 'reader/stats';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
 import {
 	trackPageLoad,
 	trackUpdatesLoaded,
 	trackScrollPage,
 	getStartDate,
-} from 'reader/controller-helper';
-import AsyncLoad from 'components/async-load';
-import { TAG_PAGE } from 'reader/follow-sources';
+} from 'wp-calypso-client/reader/controller-helper';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { TAG_PAGE } from 'wp-calypso-client/reader/follow-sources';
 
 const analyticsPageTitle = 'Reader';
 
@@ -38,7 +38,7 @@ export const tagListing = ( context, next ) => {
 
 	context.primary = (
 		<AsyncLoad
-			require="reader/tag-stream/main"
+			require="wp-calypso-client/reader/tag-stream/main"
 			key={ 'tag-' + encodedTag }
 			streamKey={ streamKey }
 			encodedTagSlug={ encodedTag }

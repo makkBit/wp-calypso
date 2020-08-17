@@ -16,25 +16,33 @@ import {
 	isCrowdsignalOAuth2Client,
 	isWooOAuth2Client,
 	isJetpackCloudOAuth2Client,
-} from 'lib/oauth2-clients';
-import StepWrapper from 'signup/step-wrapper';
-import flows from 'signup/config/flows';
-import SignupForm from 'blocks/signup-form';
-import { getFlowSteps, getNextStepName, getPreviousStepName, getStepUrl } from 'signup/utils';
-import { fetchOAuth2ClientData } from 'state/oauth2-clients/actions';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import { getSuggestedUsername } from 'state/signup/optional-dependencies/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
-import { WPCC } from 'lib/url/support';
-import { initGoogleRecaptcha, recordGoogleRecaptchaAction } from 'lib/analytics/recaptcha';
-import config from 'config';
-import AsyncLoad from 'components/async-load';
-import WooCommerceConnectCartHeader from 'extensions/woocommerce/components/woocommerce-connect-cart-header';
-import { getSocialServiceFromClientId } from 'lib/login';
-import { abtest, getABTestVariation } from 'lib/abtest';
-import JetpackLogo from 'components/jetpack-logo';
+} from 'wp-calypso-client/lib/oauth2-clients';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import flows from 'wp-calypso-client/signup/config/flows';
+import SignupForm from 'wp-calypso-client/blocks/signup-form';
+import {
+	getFlowSteps,
+	getNextStepName,
+	getPreviousStepName,
+	getStepUrl,
+} from 'wp-calypso-client/signup/utils';
+import { fetchOAuth2ClientData } from 'wp-calypso-client/state/oauth2-clients/actions';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import { getSuggestedUsername } from 'wp-calypso-client/state/signup/optional-dependencies/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { WPCC } from 'wp-calypso-client/lib/url/support';
+import {
+	initGoogleRecaptcha,
+	recordGoogleRecaptchaAction,
+} from 'wp-calypso-client/lib/analytics/recaptcha';
+import config from 'wp-calypso-client/config';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import WooCommerceConnectCartHeader from 'wp-calypso-client/extensions/woocommerce/components/woocommerce-connect-cart-header';
+import { getSocialServiceFromClientId } from 'wp-calypso-client/lib/login';
+import { abtest, getABTestVariation } from 'wp-calypso-client/lib/abtest';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
 
 /**
  * Style dependencies
@@ -320,7 +328,7 @@ export class UserStep extends Component {
 							<div className={ classNames( 'signup-form__woocommerce-logo' ) }>
 								<svg width={ 200 } viewBox={ '0 0 1270 170' }>
 									<AsyncLoad
-										require="components/jetpack-header/woocommerce"
+										require="wp-calypso-client/components/jetpack-header/woocommerce"
 										darkColorScheme={ false }
 										placeholder={ null }
 									/>

@@ -7,9 +7,9 @@ import { compact, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { WPCOM_HTTP_REQUEST } from 'state/action-types';
-import { extendAction } from 'state/utils';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { WPCOM_HTTP_REQUEST } from 'wp-calypso-client/state/action-types';
+import { extendAction } from 'wp-calypso-client/state/utils';
 import {
 	processInbound as inboundProcessor,
 	processOutbound as outboundProcessor,

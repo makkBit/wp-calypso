@@ -7,15 +7,15 @@ import { pick } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	JETPACK_CONNECT_CHECK_URL,
 	JETPACK_CONNECT_CHECK_URL_RECEIVE,
-} from 'state/jetpack-connect/action-types';
+} from 'wp-calypso-client/state/jetpack-connect/action-types';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Module constants

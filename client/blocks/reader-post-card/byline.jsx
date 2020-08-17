@@ -4,25 +4,25 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { get, map, take, values } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import ReaderAvatar from 'blocks/reader-avatar';
-import TimeSince from 'components/time-since';
-import { getSiteName } from 'reader/get-helpers';
+import ReaderAvatar from 'wp-calypso-client/blocks/reader-avatar';
+import TimeSince from 'wp-calypso-client/components/time-since';
+import { getSiteName } from 'wp-calypso-client/reader/get-helpers';
 import {
 	recordAction,
 	recordGaEvent,
 	recordTrackForPost,
 	recordPermalinkClick,
-} from 'reader/stats';
-import ReaderSiteStreamLink from 'blocks/reader-site-stream-link';
-import { getStreamUrl } from 'reader/route';
-import { isAuthorNameBlocked } from 'reader/lib/author-name-blocklist';
-import ReaderAuthorLink from 'blocks/reader-author-link';
-import { areEqualIgnoringWhitespaceAndCase } from 'lib/string';
+} from 'wp-calypso-client/reader/stats';
+import ReaderSiteStreamLink from 'wp-calypso-client/blocks/reader-site-stream-link';
+import { getStreamUrl } from 'wp-calypso-client/reader/route';
+import { isAuthorNameBlocked } from 'wp-calypso-client/reader/lib/author-name-blocklist';
+import ReaderAuthorLink from 'wp-calypso-client/blocks/reader-author-link';
+import { areEqualIgnoringWhitespaceAndCase } from 'wp-calypso-client/lib/string';
 
 const TAGS_TO_SHOW = 3;
 

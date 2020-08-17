@@ -8,13 +8,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { localizeUrl } from 'lib/i18n-utils';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Image dependencies
  */
-import paymentsImage from 'assets/images/illustrations/payments.svg';
+import paymentsImage from 'wp-calypso-client/assets/images/illustrations/payments.svg';
 
 export default localize( ( { isJetpack, translate } ) => {
 	const supportDocLink = localizeUrl(

@@ -9,9 +9,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { geocode } from 'lib/geocoding';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import SearchCard from 'components/search-card';
+import { geocode } from 'wp-calypso-client/lib/geocoding';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import SearchCard from 'wp-calypso-client/components/search-card';
 import EditorLocationSearchResult from './search-result';
 
 class EditorLocationSearch extends React.Component {

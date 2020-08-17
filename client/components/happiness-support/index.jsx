@@ -12,18 +12,18 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
 import {
 	CALYPSO_CONTACT,
 	JETPACK_CONTACT_SUPPORT,
 	JETPACK_SUPPORT,
 	SUPPORT_ROOT,
-} from 'lib/url/support';
-import HappychatButton from 'components/happychat/button';
-import HappychatConnection from 'components/happychat/connection-connected';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { preventWidows } from 'lib/formatting';
+} from 'wp-calypso-client/lib/url/support';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import HappychatConnection from 'wp-calypso-client/components/happychat/connection-connected';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Style dependencies
@@ -33,7 +33,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import supportImage from 'assets/images/illustrations/dotcom-support.svg';
+import supportImage from 'wp-calypso-client/assets/images/illustrations/dotcom-support.svg';
 
 export class HappinessSupport extends Component {
 	static propTypes = {

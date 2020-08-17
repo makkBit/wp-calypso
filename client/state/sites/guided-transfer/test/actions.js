@@ -20,8 +20,8 @@ import {
 	GUIDED_TRANSFER_STATUS_REQUEST,
 	GUIDED_TRANSFER_STATUS_REQUEST_FAILURE,
 	GUIDED_TRANSFER_STATUS_REQUEST_SUCCESS,
-} from 'state/action-types';
-import useNock from 'test-helpers/use-nock';
+} from 'wp-calypso-client/state/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
 
 describe( 'actions', () => {
 	const spy = sinon.spy();

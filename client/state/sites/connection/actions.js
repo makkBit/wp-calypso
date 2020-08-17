@@ -7,8 +7,8 @@ import {
 	SITE_CONNECTION_STATUS_REQUEST,
 	SITE_CONNECTION_STATUS_REQUEST_FAILURE,
 	SITE_CONNECTION_STATUS_REQUEST_SUCCESS,
-} from 'state/action-types';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wp from 'wp-calypso-client/lib/wp';
 
 /**
  * Request the Jetpack connection status for a certain site.

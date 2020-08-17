@@ -12,7 +12,7 @@ import { partial } from 'lodash';
  */
 import { Button } from '@automattic/components';
 import DismissibleCard from '../';
-import { savePreference } from 'state/preferences/actions';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
 
 function DismissibleCardExample( { clearPreference } ) {
 	return (

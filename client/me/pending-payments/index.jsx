@@ -10,23 +10,23 @@ import { localize } from 'i18n-calypso';
  * Internal Dependencies
  */
 import { CompactCard } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import PendingListItem from './pending-list-item';
 import PurchasesHeader from '../purchases/purchases-list/header';
 import PurchasesSite from '../purchases/purchases-site';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getHttpData, requestHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import Banner from 'components/banner';
-import { convertToCamelCase } from 'state/data-layer/utils';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getStatsPathForTab } from 'lib/route';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getHttpData, requestHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import Banner from 'wp-calypso-client/components/banner';
+import { convertToCamelCase } from 'wp-calypso-client/state/data-layer/utils';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getStatsPathForTab } from 'wp-calypso-client/lib/route';
 
 /**
  * Style dependencies

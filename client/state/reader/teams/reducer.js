@@ -6,8 +6,15 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { READER_TEAMS_REQUEST, READER_TEAMS_RECEIVE } from 'state/reader/action-types';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+import {
+	READER_TEAMS_REQUEST,
+	READER_TEAMS_RECEIVE,
+} from 'wp-calypso-client/state/reader/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 
 export const items = withSchemaValidation( itemsSchema, ( state = [], action ) => {

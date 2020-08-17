@@ -26,7 +26,7 @@ import {
 	PLUGIN_SETUP_FINISH,
 	PLUGIN_SETUP_ERROR,
 	SERIALIZE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'premium reducer', () => {
 	describe( 'isRequesting', () => {

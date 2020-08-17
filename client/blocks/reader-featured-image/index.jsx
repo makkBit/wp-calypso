@@ -9,8 +9,8 @@ import classnames from 'classnames';
 /**
  * Internal Dependencies
  */
-import cssSafeUrl from 'lib/css-safe-url';
-import resizeImageUrl from 'lib/resize-image-url';
+import cssSafeUrl from 'wp-calypso-client/lib/css-safe-url';
+import resizeImageUrl from 'wp-calypso-client/lib/resize-image-url';
 
 /**
  * Style dependencies

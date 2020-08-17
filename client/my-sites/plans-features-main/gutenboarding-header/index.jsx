@@ -8,7 +8,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormattedHeader from 'components/formatted-header';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 
 /**
  * Style dependencies

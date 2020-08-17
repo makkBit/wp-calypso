@@ -50,15 +50,15 @@ import {
 	PLAN_JETPACK_PREMIUM,
 	PLAN_JETPACK_PREMIUM_MONTHLY,
 	PLAN_JETPACK_BUSINESS,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Internal dependencies
  */
 import { calculatePlanCredits, isPrimaryUpgradeByPlanDelta, PlanFeatures } from '../index';
 
-import { getPlanDiscountedRawPrice } from 'state/sites/plans/selectors';
-import { getPlanRawPrice } from 'state/plans/selectors';
+import { getPlanDiscountedRawPrice } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getPlanRawPrice } from 'wp-calypso-client/state/plans/selectors';
 
 const identity = ( x ) => x;
 

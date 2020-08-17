@@ -11,20 +11,20 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { resetEditorLastDraft } from 'state/editor/last-draft/actions';
+import { resetEditorLastDraft } from 'wp-calypso-client/state/editor/last-draft/actions';
 import {
 	getEditorLastDraftPost,
 	getEditorLastDraftSiteId,
 	getEditorLastDraftPostId,
-} from 'state/editor/last-draft/selectors';
-import { isRequestingSitePost } from 'state/posts/selectors';
-import { getEditorPath } from 'state/editor/selectors';
-import { getSectionName } from 'state/ui/selectors';
-import { decodeEntities } from 'lib/formatting';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { bumpStat } from 'lib/analytics/mc';
-import QueryPosts from 'components/data/query-posts';
-import SiteIcon from 'blocks/site-icon';
+} from 'wp-calypso-client/state/editor/last-draft/selectors';
+import { isRequestingSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { getEditorPath } from 'wp-calypso-client/state/editor/selectors';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
 
 /**
  * Style dependencies

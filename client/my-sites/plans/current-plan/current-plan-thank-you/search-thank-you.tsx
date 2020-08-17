@@ -10,8 +10,8 @@ import { useTranslate } from 'i18n-calypso';
  */
 import { Button } from '@automattic/components';
 import ThankYou, { ThankYouCtaType } from './thank-you';
-import versionCompare from 'lib/version-compare';
-import { getSelectedSite } from 'state/ui/selectors';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 const ThankYouCta: ThankYouCtaType = ( { jetpackVersion, recordThankYouClick, siteAdminUrl } ) => {
 	const translate = useTranslate();

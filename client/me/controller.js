@@ -8,10 +8,10 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import userSettings from 'lib/user-settings';
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
-import SidebarComponent from 'me/sidebar';
-import AppsComponent from 'me/get-apps';
+import userSettings from 'wp-calypso-client/lib/user-settings';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
+import SidebarComponent from 'wp-calypso-client/me/sidebar';
+import AppsComponent from 'wp-calypso-client/me/get-apps';
 
 export function sidebar( context, next ) {
 	context.secondary = React.createElement( SidebarComponent, {
@@ -25,7 +25,7 @@ export function profile( context, next ) {
 	// FIXME: Auto-converted from the Flux setTitle action. Please use <DocumentHead> instead.
 	context.store.dispatch( setTitle( i18n.translate( 'My Profile', { textOnly: true } ) ) );
 
-	const ProfileComponent = require( 'me/profile' ).default;
+	const ProfileComponent = require( 'wp-calypso-client/me/profile' ).default;
 
 	context.primary = React.createElement( ProfileComponent, {
 		userSettings: userSettings,

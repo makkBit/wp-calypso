@@ -16,10 +16,10 @@ import {
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { changeCommentStatus } from 'state/comments/actions';
-import { getSiteComment } from 'state/comments/selectors';
-import { removeNotice, successNotice } from 'state/notices/actions';
+} from 'wp-calypso-client/state/analytics/actions';
+import { changeCommentStatus } from 'wp-calypso-client/state/comments/actions';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { removeNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 
 class ModerateComment extends Component {
 	static propTypes = {

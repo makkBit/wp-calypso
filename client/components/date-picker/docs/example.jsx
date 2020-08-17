@@ -9,8 +9,8 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import DatePicker from 'components/date-picker';
-import EventsTooltip from 'components/date-picker/events-tooltip';
+import DatePicker from 'wp-calypso-client/components/date-picker';
+import EventsTooltip from 'wp-calypso-client/components/date-picker/events-tooltip';
 
 const events = [
 	{

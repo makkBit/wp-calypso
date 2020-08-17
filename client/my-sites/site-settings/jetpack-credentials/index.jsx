@@ -12,13 +12,13 @@ import classNames from 'classnames';
  */
 import { CompactCard } from '@automattic/components';
 import CredentialsConfigured from './credentials-configured';
-import Notice from 'components/notice';
-import QueryRewindState from 'components/data/query-rewind-state';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getRewindState from 'state/selectors/get-rewind-state';
-import { getSiteSlug } from 'state/sites/selectors';
-import RewindCredentialsForm from 'components/rewind-credentials-form';
+import Notice from 'wp-calypso-client/components/notice';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import RewindCredentialsForm from 'wp-calypso-client/components/rewind-credentials-form';
 
 /**
  * Style dependencies

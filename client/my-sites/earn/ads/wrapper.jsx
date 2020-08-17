@@ -15,40 +15,51 @@ import {
 	isWordadsInstantActivationEligibleButNotOwner,
 	canUpgradeToUseWordAds,
 	canAccessAds,
-} from 'lib/ads/utils';
-import { isPremium, isBusiness, isEcommerce } from 'lib/products-values';
-import FeatureExample from 'components/feature-example';
-import FormButton from 'components/forms/form-button';
+} from 'wp-calypso-client/lib/ads/utils';
+import { isPremium, isBusiness, isEcommerce } from 'wp-calypso-client/lib/products-values';
+import FeatureExample from 'wp-calypso-client/components/feature-example';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 import { Card } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
-import { requestWordAdsApproval, dismissWordAdsError } from 'state/wordads/approve/actions';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import {
+	requestWordAdsApproval,
+	dismissWordAdsError,
+} from 'wp-calypso-client/state/wordads/approve/actions';
 import {
 	isRequestingWordAdsApprovalForSite,
 	getWordAdsErrorForSite,
 	getWordAdsSuccessForSite,
-} from 'state/wordads/approve/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import QueryWordadsStatus from 'components/data/query-wordads-status';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { PLAN_PREMIUM, PLAN_JETPACK_PREMIUM, FEATURE_WORDADS_INSTANT } from 'lib/plans/constants';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { isSiteWordadsUnsafe } from 'state/wordads/status/selectors';
-import { wordadsUnsafeValues } from 'state/wordads/status/schema';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import ActionCard from 'components/action-card';
+} from 'wp-calypso-client/state/wordads/approve/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import QueryWordadsStatus from 'wp-calypso-client/components/data/query-wordads-status';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import {
+	PLAN_PREMIUM,
+	PLAN_JETPACK_PREMIUM,
+	FEATURE_WORDADS_INSTANT,
+} from 'wp-calypso-client/lib/plans/constants';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { isSiteWordadsUnsafe } from 'wp-calypso-client/state/wordads/status/selectors';
+import { wordadsUnsafeValues } from 'wp-calypso-client/state/wordads/status/schema';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import ActionCard from 'wp-calypso-client/components/action-card';
 
 /**
  * Image dependencies
  */
-import wordAdsImage from 'assets/images/illustrations/dotcom-wordads.svg';
+import wordAdsImage from 'wp-calypso-client/assets/images/illustrations/dotcom-wordads.svg';
 
 /**
  * Style dependencies
  */
 import './style.scss';
-import 'my-sites/stats/stats-module/style.scss';
+import 'wp-calypso-client/my-sites/stats/stats-module/style.scss';
 
 class AdsWrapper extends Component {
 	static propTypes = {

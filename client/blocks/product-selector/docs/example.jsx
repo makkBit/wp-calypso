@@ -6,8 +6,8 @@ import React, { Component, Fragment } from 'react';
 /**
  * Internal dependencies
  */
-import SegmentedControl from 'components/segmented-control';
-import SitesDropdown from 'components/sites-dropdown';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import SitesDropdown from 'wp-calypso-client/components/sites-dropdown';
 import ProductSelector from '../';
 
 const products = [

@@ -10,24 +10,24 @@ import { Button } from '@automattic/components';
  * Internal dependencies
  */
 import { addQueryArgs } from '@wordpress/url';
-import { getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import Main from 'components/main';
-import Notice from 'components/notice';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import PromoCard from 'components/promo-section/promo-card';
-import PromoCardCTA from 'components/promo-section/promo-card/cta';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
-import { preventWidows } from 'lib/formatting';
-import SecurityIcon from 'components/jetpack/security-icon';
+import { getSelectedSiteSlug, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Main from 'wp-calypso-client/components/main';
+import Notice from 'wp-calypso-client/components/notice';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import PromoCard from 'wp-calypso-client/components/promo-section/promo-card';
+import PromoCardCTA from 'wp-calypso-client/components/promo-section/promo-card/cta';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import SecurityIcon from 'wp-calypso-client/components/jetpack/security-icon';
 
 /**
  * Asset dependencies
  */
-import JetpackScanSVG from 'assets/images/illustrations/jetpack-scan.svg';
+import JetpackScanSVG from 'wp-calypso-client/assets/images/illustrations/jetpack-scan.svg';
 import './style.scss';
 
 const ScanMultisiteBody: FunctionComponent = () => (

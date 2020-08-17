@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 
-import { userCan } from 'lib/site/utils';
-import { isBusiness, isPremium, isEcommerce } from 'lib/products-values';
+import { userCan } from 'wp-calypso-client/lib/site/utils';
+import { isBusiness, isPremium, isEcommerce } from 'wp-calypso-client/lib/products-values';
 
 /**
  * Returns true if the site has WordAds access

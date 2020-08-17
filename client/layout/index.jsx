@@ -11,17 +11,17 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import MasterbarLoggedIn from 'layout/masterbar/logged-in';
-import JetpackCloudMasterbar from 'components/jetpack/masterbar';
-import HtmlIsIframeClassname from 'layout/html-is-iframe-classname';
-import notices from 'notices';
-import config from 'config';
-import OfflineStatus from 'layout/offline-status';
-import QueryPreferences from 'components/data/query-preferences';
-import QuerySites from 'components/data/query-sites';
-import QuerySiteSelectedEditor from 'components/data/query-site-selected-editor';
-import { isOffline } from 'state/application/selectors';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import MasterbarLoggedIn from 'wp-calypso-client/layout/masterbar/logged-in';
+import JetpackCloudMasterbar from 'wp-calypso-client/components/jetpack/masterbar';
+import HtmlIsIframeClassname from 'wp-calypso-client/layout/html-is-iframe-classname';
+import notices from 'wp-calypso-client/notices';
+import config from 'wp-calypso-client/config';
+import OfflineStatus from 'wp-calypso-client/layout/offline-status';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySiteSelectedEditor from 'wp-calypso-client/components/data/query-site-selected-editor';
+import { isOffline } from 'wp-calypso-client/state/application/selectors';
 import {
 	getSelectedSiteId,
 	hasSidebar,
@@ -29,36 +29,36 @@ import {
 	getSectionGroup,
 	getSectionName,
 	getSelectedSite,
-} from 'state/ui/selectors';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import isHappychatOpen from 'state/happychat/selectors/is-happychat-open';
-import { isJetpackSite } from 'state/sites/selectors';
-import { isSupportSession } from 'state/support/selectors';
-import SitePreview from 'blocks/site-preview';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import DocumentHead from 'components/data/document-head';
-import { getPreference } from 'state/preferences/selectors';
-import KeyboardShortcutsMenu from 'lib/keyboard-shortcuts/menu';
-import SupportUser from 'support/support-user';
-import { isCommunityTranslatorEnabled } from 'components/community-translator/utils';
-import { isE2ETest } from 'lib/e2e';
-import { getMessagePathForJITM } from 'lib/route';
+} from 'wp-calypso-client/state/ui/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isHappychatOpen from 'wp-calypso-client/state/happychat/selectors/is-happychat-open';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { isSupportSession } from 'wp-calypso-client/state/support/selectors';
+import SitePreview from 'wp-calypso-client/blocks/site-preview';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import KeyboardShortcutsMenu from 'wp-calypso-client/lib/keyboard-shortcuts/menu';
+import SupportUser from 'wp-calypso-client/support/support-user';
+import { isCommunityTranslatorEnabled } from 'wp-calypso-client/components/community-translator/utils';
+import { isE2ETest } from 'wp-calypso-client/lib/e2e';
+import { getMessagePathForJITM } from 'wp-calypso-client/lib/route';
 import BodySectionCssClass from './body-section-css-class';
-import { retrieveMobileRedirect } from 'jetpack-connect/persistence-utils';
-import { isWooOAuth2Client } from 'lib/oauth2-clients';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
+import { retrieveMobileRedirect } from 'wp-calypso-client/jetpack-connect/persistence-utils';
+import { isWooOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
 import LayoutLoader from './loader';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
-import { getABTestVariation } from 'lib/abtest';
-import { getCurrentFlowName } from 'state/signup/flow/selectors';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
+import { getABTestVariation } from 'wp-calypso-client/lib/abtest';
+import { getCurrentFlowName } from 'wp-calypso-client/state/signup/flow/selectors';
 
 /**
  * Style dependencies
  */
 // goofy import for environment badge, which is SSR'd
-import 'components/environment-badge/style.scss';
+import 'wp-calypso-client/components/environment-badge/style.scss';
 import './style.scss';
 import { getShouldShowAppBanner } from './utils';
 
@@ -194,10 +194,10 @@ class Layout extends Component {
 					<QuerySiteSelectedEditor siteId={ this.props.siteId } />
 				) }
 				{ config.isEnabled( 'layout/guided-tours' ) && (
-					<AsyncLoad require="layout/guided-tours" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/layout/guided-tours" placeholder={ null } />
 				) }
 				{ config.isEnabled( 'layout/nps-survey-notice' ) && ! isE2ETest() && (
-					<AsyncLoad require="layout/nps-survey-notice" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/layout/nps-survey-notice" placeholder={ null } />
 				) }
 				{ config.isEnabled( 'keyboard-shortcuts' ) ? <KeyboardShortcutsMenu /> : null }
 				{ this.renderMasterbar() }
@@ -207,13 +207,13 @@ class Layout extends Component {
 				<div id="content" className="layout__content">
 					{ config.isEnabled( 'jitms' ) && this.props.isEligibleForJITM && (
 						<AsyncLoad
-							require="blocks/jitm"
+							require="wp-calypso-client/blocks/jitm"
 							messagePath={ `calypso:${ this.props.sectionJitmPath }:admin_notices` }
 							sectionName={ this.props.sectionName }
 						/>
 					) }
 					<AsyncLoad
-						require="components/global-notices"
+						require="wp-calypso-client/components/global-notices"
 						placeholder={ null }
 						id="notices"
 						notices={ notices.list }
@@ -227,32 +227,41 @@ class Layout extends Component {
 				</div>
 				{ config.isEnabled( 'i18n/community-translator' )
 					? isCommunityTranslatorEnabled() && (
-							<AsyncLoad require="components/community-translator" />
+							<AsyncLoad require="wp-calypso-client/components/community-translator" />
 					  )
 					: config( 'restricted_me_access' ) && (
-							<AsyncLoad require="layout/community-translator/launcher" placeholder={ null } />
+							<AsyncLoad
+								require="wp-calypso-client/layout/community-translator/launcher"
+								placeholder={ null }
+							/>
 					  ) }
 				{ this.props.sectionGroup === 'sites' && <SitePreview /> }
 				{ config.isEnabled( 'happychat' ) && this.props.chatIsOpen && (
-					<AsyncLoad require="components/happychat" />
+					<AsyncLoad require="wp-calypso-client/components/happychat" />
 				) }
 				{ 'development' === process.env.NODE_ENV && (
-					<AsyncLoad require="components/webpack-build-monitor" placeholder={ null } />
+					<AsyncLoad
+						require="wp-calypso-client/components/webpack-build-monitor"
+						placeholder={ null }
+					/>
 				) }
 				{ this.shouldLoadInlineHelp() && (
-					<AsyncLoad require="blocks/inline-help" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/blocks/inline-help" placeholder={ null } />
 				) }
 				{ config.isEnabled( 'layout/support-article-dialog' ) && (
-					<AsyncLoad require="blocks/support-article-dialog" placeholder={ null } />
+					<AsyncLoad
+						require="wp-calypso-client/blocks/support-article-dialog"
+						placeholder={ null }
+					/>
 				) }
 				{ shouldShowAppBanner && config.isEnabled( 'layout/app-banner' ) && (
-					<AsyncLoad require="blocks/app-banner" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/blocks/app-banner" placeholder={ null } />
 				) }
 				{ config.isEnabled( 'gdpr-banner' ) && (
-					<AsyncLoad require="blocks/gdpr-banner" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/blocks/gdpr-banner" placeholder={ null } />
 				) }
 				{ config.isEnabled( 'legal-updates-banner' ) && (
-					<AsyncLoad require="blocks/legal-updates-banner" placeholder={ null } />
+					<AsyncLoad require="wp-calypso-client/blocks/legal-updates-banner" placeholder={ null } />
 				) }
 			</div>
 		);

@@ -6,12 +6,12 @@ import { get, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { SITE_FRONT_PAGE_UPDATE } from 'state/action-types';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { updateSiteFrontPage } from 'state/sites/actions';
+import { SITE_FRONT_PAGE_UPDATE } from 'wp-calypso-client/state/action-types';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { updateSiteFrontPage } from 'wp-calypso-client/state/sites/actions';
 
 const updateSiteFrontPageRequest = ( action ) =>
 	http(

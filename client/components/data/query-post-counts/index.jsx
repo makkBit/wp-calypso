@@ -8,8 +8,8 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestPostCounts } from 'state/posts/counts/actions';
-import { isRequestingPostCounts } from 'state/posts/counts/selectors';
+import { requestPostCounts } from 'wp-calypso-client/state/posts/counts/actions';
+import { isRequestingPostCounts } from 'wp-calypso-client/state/posts/counts/selectors';
 
 const request = ( siteId, type ) => ( dispatch, getState ) => {
 	if ( ! isRequestingPostCounts( getState(), siteId, type ) ) {

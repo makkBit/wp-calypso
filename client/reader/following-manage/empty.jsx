@@ -7,8 +7,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 
 class FollowingManageEmptyContent extends React.Component {
 	componentDidMount() {

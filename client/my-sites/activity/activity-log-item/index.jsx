@@ -12,21 +12,21 @@ import { flowRight as compose } from 'lodash';
 /**
  * Internal dependencies
  */
-import scrollTo from 'lib/scroll-to';
-import { settingsPath } from 'lib/jetpack/paths';
-import { applySiteOffset } from 'lib/site/timezone';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import { settingsPath } from 'wp-calypso-client/lib/jetpack/paths';
+import { applySiteOffset } from 'wp-calypso-client/lib/site/timezone';
 import ActivityActor from './activity-actor';
 import ActivityDescription from './activity-description';
 import ActivityMedia from './activity-media';
 import ActivityIcon from './activity-icon';
 import ActivityLogConfirmDialog from '../activity-log-confirm-dialog';
-import EllipsisMenu from 'components/ellipsis-menu';
-import Gridicon from 'components/gridicon';
-import HappychatButton from 'components/happychat/button';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
 import { Button } from '@automattic/components';
-import FoldableCard from 'components/foldable-card';
-import PopoverMenuItem from 'components/popover/menu-item';
-import PopoverMenuSeparator from 'components/popover/menu-separator';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import PopoverMenuSeparator from 'wp-calypso-client/components/popover/menu-separator';
 import {
 	rewindBackup,
 	rewindBackupDismiss,
@@ -34,15 +34,15 @@ import {
 	rewindRequestDismiss,
 	rewindRequestRestore,
 	rewindRestore,
-} from 'state/activity-log/actions';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import getRequestedBackup from 'state/selectors/get-requested-backup';
-import getRequestedRewind from 'state/selectors/get-requested-rewind';
-import getRewindState from 'state/selectors/get-rewind-state';
-import getSiteGmtOffset from 'state/selectors/get-site-gmt-offset';
-import getSiteTimezoneValue from 'state/selectors/get-site-timezone-value';
-import { getSite } from 'state/sites/selectors';
-import { withLocalizedMoment } from 'components/localized-moment';
+} from 'wp-calypso-client/state/activity-log/actions';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import getRequestedBackup from 'wp-calypso-client/state/selectors/get-requested-backup';
+import getRequestedRewind from 'wp-calypso-client/state/selectors/get-requested-rewind';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import getSiteGmtOffset from 'wp-calypso-client/state/selectors/get-site-gmt-offset';
+import getSiteTimezoneValue from 'wp-calypso-client/state/selectors/get-site-timezone-value';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

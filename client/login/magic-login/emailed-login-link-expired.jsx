@@ -10,16 +10,16 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { login } from 'lib/paths';
-import { addQueryArgs } from 'lib/route';
-import EmptyContent from 'components/empty-content';
-import RedirectWhenLoggedIn from 'components/redirect-when-logged-in';
-import { hideMagicLoginRequestForm } from 'state/login/magic-login/actions';
+import { login } from 'wp-calypso-client/lib/paths';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import RedirectWhenLoggedIn from 'wp-calypso-client/components/redirect-when-logged-in';
+import { hideMagicLoginRequestForm } from 'wp-calypso-client/state/login/magic-login/actions';
 import {
 	recordPageViewWithClientId as recordPageView,
 	enhanceWithSiteType,
-} from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
+} from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 
 const nativeLoginUrl = login( { isNative: true, twoFactorAuthType: 'link' } );
 

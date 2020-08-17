@@ -11,8 +11,8 @@ import debugFactory from 'debug';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import { errorNotice, warningNotice, successNotice } from 'state/notices/actions';
-import { registerSecurityKey } from 'lib/webauthn';
+import { errorNotice, warningNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { registerSecurityKey } from 'wp-calypso-client/lib/webauthn';
 import Security2faKeyAddName from './name';
 import WaitForKey from './wait-for-key';
 

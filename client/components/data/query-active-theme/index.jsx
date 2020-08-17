@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestActiveTheme } from 'state/themes/actions';
-import { isRequestingActiveTheme } from 'state/themes/selectors';
+import { requestActiveTheme } from 'wp-calypso-client/state/themes/actions';
+import { isRequestingActiveTheme } from 'wp-calypso-client/state/themes/selectors';
 
 class QueryActiveTheme extends Component {
 	static propTypes = {

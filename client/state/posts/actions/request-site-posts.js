@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { requestPosts } from 'state/posts/actions/request-posts';
+import { requestPosts } from 'wp-calypso-client/state/posts/actions/request-posts';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Triggers a network request to fetch posts for the specified site and query.

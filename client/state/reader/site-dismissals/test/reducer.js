@@ -7,7 +7,10 @@ import deepFreeze from 'deep-freeze';
  * Internal dependencies
  */
 import { items } from '../reducer';
-import { READER_DISMISS_SITE, READER_DISMISS_POST } from 'state/reader/action-types';
+import {
+	READER_DISMISS_SITE,
+	READER_DISMISS_POST,
+} from 'wp-calypso-client/state/reader/action-types';
 
 describe( 'reducer', () => {
 	describe( '#items()', () => {

@@ -11,7 +11,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
 
 const debug = debugFactory( 'calypso:localized-moment' );
 

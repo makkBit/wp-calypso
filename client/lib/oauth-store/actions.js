@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 import { actions, errors as errorTypes } from './constants';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { bumpStat } from 'lib/analytics/mc';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
 
 async function makeRequest( username, password, authCode = '' ) {
 	try {

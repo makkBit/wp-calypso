@@ -14,19 +14,19 @@ import formatCurrency from '@automattic/format-currency';
  **/
 import { ProductIcon } from '@automattic/components';
 import { localize } from 'i18n-calypso';
-import InfoPopover from 'components/info-popover';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import PlanPrice from 'my-sites/plan-price';
-import PlanIntervalDiscount from 'my-sites/plan-interval-discount';
-import PlanPill from 'components/plans/plan-pill';
-import { TYPE_FREE } from 'lib/plans/constants';
-import { PLANS_LIST } from 'lib/plans/plans-list';
-import { getYearlyPlanByMonthly, planMatches, getPlanClass } from 'lib/plans';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getPlanBySlug } from 'state/plans/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { planLevelsMatch } from 'lib/plans/index';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
+import PlanIntervalDiscount from 'wp-calypso-client/my-sites/plan-interval-discount';
+import PlanPill from 'wp-calypso-client/components/plans/plan-pill';
+import { TYPE_FREE } from 'wp-calypso-client/lib/plans/constants';
+import { PLANS_LIST } from 'wp-calypso-client/lib/plans/plans-list';
+import { getYearlyPlanByMonthly, planMatches, getPlanClass } from 'wp-calypso-client/lib/plans';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getPlanBySlug } from 'wp-calypso-client/state/plans/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { planLevelsMatch } from 'wp-calypso-client/lib/plans/index';
 
 export class PlanFeaturesHeader extends Component {
 	render() {

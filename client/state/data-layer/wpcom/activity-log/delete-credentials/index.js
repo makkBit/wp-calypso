@@ -7,16 +7,16 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 import {
 	JETPACK_CREDENTIALS_DELETE,
 	JETPACK_CREDENTIALS_STORE,
 	REWIND_STATE_UPDATE,
-} from 'state/action-types';
-import { transformApi } from 'state/data-layer/wpcom/sites/rewind/api-transformer';
+} from 'wp-calypso-client/state/action-types';
+import { transformApi } from 'wp-calypso-client/state/data-layer/wpcom/sites/rewind/api-transformer';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const request = ( action ) =>
 	http(

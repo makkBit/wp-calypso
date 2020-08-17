@@ -1,16 +1,16 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { ACTIVE_PROMOTIONS_REQUEST } from 'state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { ACTIVE_PROMOTIONS_REQUEST } from 'wp-calypso-client/state/action-types';
 import {
 	activePromotionsReceiveAction,
 	activePromotionsRequestFailureAction,
 	activePromotionsRequestSuccessAction,
-} from 'state/active-promotions/actions';
+} from 'wp-calypso-client/state/active-promotions/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * @module state/data-layer/wpcom/active-promotions

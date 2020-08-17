@@ -7,10 +7,10 @@ import { initialize, startSubmit, stopSubmit } from 'redux-form';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, removeNotice, successNotice } from 'state/notices/actions';
-import { navigate } from 'state/ui/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, removeNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 import { resetLock } from '../../locks/actions';
 import { requestZones, requestError, updateZone, updateZones } from '../../zones/actions';
 import { zoneFromApi, zonesListFromApi } from './utils';
@@ -21,7 +21,7 @@ import {
 	ZONINATOR_SAVE_ZONE,
 } from 'zoninator/state/action-types';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const settingsPath = '/extensions/zoninator';
 

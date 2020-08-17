@@ -14,14 +14,14 @@ import { localize } from 'i18n-calypso';
 import { Card } from '@automattic/components';
 import StatsTabs from '../stats-tabs';
 import StatsTab from '../stats-tabs/tab';
-import SectionHeader from 'components/section-header';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	isRequestingSiteStatsForQuery,
 	getSiteStatsNormalizedData,
-} from 'state/stats/lists/selectors';
+} from 'wp-calypso-client/state/stats/lists/selectors';
 
 /**
  * Style dependencies

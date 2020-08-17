@@ -8,8 +8,8 @@ import renderer from 'react-test-renderer';
 /**
  * Internal dependencies
  */
-import { createReduxStore } from 'state';
-import { setStore } from 'state/redux-store';
+import { createReduxStore } from 'wp-calypso-client/state';
+import { setStore } from 'wp-calypso-client/state/redux-store';
 import UpworkBanner from '../';
 
 describe( 'UpworkBanner', () => {

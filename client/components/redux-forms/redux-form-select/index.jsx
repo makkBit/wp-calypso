@@ -8,9 +8,9 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormSelect from 'components/forms/form-select';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const SelectRenderer = ( { input, meta, ...props } ) => <FormSelect { ...input } { ...props } />;
 

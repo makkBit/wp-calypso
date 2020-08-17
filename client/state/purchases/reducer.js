@@ -6,7 +6,7 @@ import { find, matches } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { withoutPersistence, withStorageKey } from 'state/utils';
+import { withoutPersistence, withStorageKey } from 'wp-calypso-client/state/utils';
 import {
 	PURCHASES_REMOVE,
 	PURCHASES_SITE_FETCH,
@@ -17,7 +17,7 @@ import {
 	PURCHASE_REMOVE_FAILED,
 	PURCHASES_SITE_FETCH_FAILED,
 	PURCHASES_USER_FETCH_FAILED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Constants

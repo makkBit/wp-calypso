@@ -10,21 +10,25 @@ import { get, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import TransferDomainStep from 'components/domains/transfer-domain-step';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
+import TransferDomainStep from 'wp-calypso-client/components/domains/transfer-domain-step';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
 import {
 	domainRegistration,
 	domainTransfer,
 	updatePrivacyForDomain,
-} from 'lib/cart-values/cart-items';
-import { addItem, addItems } from 'lib/cart/actions';
-import Notice from 'components/notice';
-import { currentUserHasFlag } from 'state/current-user/selectors';
-import isSiteUpgradeable from 'state/selectors/is-site-upgradeable';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryProductsList from 'components/data/query-products-list';
-import { getProductsList } from 'state/products-list/selectors';
-import TrademarkClaimsNotice from 'components/domains/trademark-claims-notice';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem, addItems } from 'wp-calypso-client/lib/cart/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import { currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import isSiteUpgradeable from 'wp-calypso-client/state/selectors/is-site-upgradeable';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import TrademarkClaimsNotice from 'wp-calypso-client/components/domains/trademark-claims-notice';
 
 export class TransferDomain extends Component {
 	static propTypes = {

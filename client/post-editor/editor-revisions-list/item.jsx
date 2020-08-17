@@ -11,10 +11,10 @@ import { flow, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { selectPostRevision } from 'state/posts/revisions/actions';
-import { getPostRevisionAuthor } from 'state/posts/revisions/authors/selectors';
-import { isSingleUserSite } from 'state/sites/selectors';
-import TimeSince from 'components/time-since';
+import { selectPostRevision } from 'wp-calypso-client/state/posts/revisions/actions';
+import { getPostRevisionAuthor } from 'wp-calypso-client/state/posts/revisions/authors/selectors';
+import { isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
+import TimeSince from 'wp-calypso-client/components/time-since';
 
 class EditorRevisionsListItem extends PureComponent {
 	selectRevision = () => {

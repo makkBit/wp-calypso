@@ -11,9 +11,9 @@ import { localize } from 'i18n-calypso';
  */
 import Masterbar from './masterbar';
 import Item from './item';
-import WordPressLogo from 'components/wordpress-logo';
-import WordPressWordmark from 'components/wordpress-wordmark';
-import { recordTracksEvent } from 'state/analytics/actions';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
+import WordPressWordmark from 'wp-calypso-client/components/wordpress-wordmark';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class CheckoutMasterbar extends React.Component {
 	clickClose = () => {

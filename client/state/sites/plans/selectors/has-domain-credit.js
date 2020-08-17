@@ -6,8 +6,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { initialSiteState } from 'state/sites/plans/reducer';
-import { getCurrentPlan } from 'state/sites/plans/selectors/get-current-plan';
+import { initialSiteState } from 'wp-calypso-client/state/sites/plans/reducer';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors/get-current-plan';
 
 export function hasDomainCredit( state, siteId ) {
 	if ( ! siteId ) {

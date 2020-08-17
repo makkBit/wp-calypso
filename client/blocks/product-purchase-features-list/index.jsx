@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getPlan } from 'lib/plans';
+import { getPlan } from 'wp-calypso-client/lib/plans';
 import {
 	GROUP_WPCOM,
 	GROUP_JETPACK,
@@ -18,8 +18,8 @@ import {
 	TYPE_PERSONAL,
 	TYPE_BLOGGER,
 	TYPE_FREE,
-} from 'lib/plans/constants';
-import { PLANS_LIST } from 'lib/plans/plans-list';
+} from 'wp-calypso-client/lib/plans/constants';
+import { PLANS_LIST } from 'wp-calypso-client/lib/plans/plans-list';
 import FindNewTheme from './find-new-theme';
 import UploadPlugins from './upload-plugins';
 import AdvertisingRemoved from './advertising-removed';
@@ -36,13 +36,13 @@ import JetpackPublicize from './jetpack-publicize';
 import MobileApps from './mobile-apps';
 import SellOnlinePaypal from './sell-online-paypal';
 import SiteActivity from './site-activity';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { isEnabled } from 'config';
-import { isWordadsInstantActivationEligible } from 'lib/ads/utils';
-import { hasDomainCredit } from 'state/sites/plans/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import isSiteUsingFullSiteEditing from 'state/selectors/is-site-using-full-site-editing';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isEnabled } from 'wp-calypso-client/config';
+import { isWordadsInstantActivationEligible } from 'wp-calypso-client/lib/ads/utils';
+import { hasDomainCredit } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import isSiteUsingFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-using-full-site-editing';
 
 /**
  * Style dependencies

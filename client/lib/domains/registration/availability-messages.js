@@ -10,19 +10,19 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import { getTld } from 'lib/domains';
+import { getTld } from 'wp-calypso-client/lib/domains';
 import {
 	CALYPSO_CONTACT,
 	INCOMING_DOMAIN_TRANSFER_STATUSES_IN_PROGRESS,
 	MAP_EXISTING_DOMAIN,
-} from 'lib/url/support';
-import { domainAvailability } from 'lib/domains/constants';
+} from 'wp-calypso-client/lib/url/support';
+import { domainAvailability } from 'wp-calypso-client/lib/domains/constants';
 import {
 	domainManagementTransferToOtherSite,
 	domainManagementTransferIn,
 	domainMapping,
 	domainTransferIn,
-} from 'my-sites/domains/paths';
+} from 'wp-calypso-client/my-sites/domains/paths';
 
 function getAvailabilityNotice( domain, error, errorData ) {
 	const tld = domain ? getTld( domain ) : null;

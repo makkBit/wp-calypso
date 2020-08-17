@@ -8,8 +8,8 @@ import {
 	BILLING_TRANSACTION_REQUEST,
 	BILLING_TRANSACTION_REQUEST_FAILURE,
 	BILLING_TRANSACTION_REQUEST_SUCCESS,
-} from 'state/action-types';
-import useNock from 'test-helpers/use-nock';
+} from 'wp-calypso-client/state/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
 
 describe( 'actions', () => {
 	describe( '#requestBillingTransaction', () => {

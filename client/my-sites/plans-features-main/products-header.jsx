@@ -9,9 +9,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormattedHeader from 'components/formatted-header';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import QuerySitePurchases from 'components/data/query-site-purchases';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
 
 class PlansFeaturesMainProductsHeader extends Component {
 	static propTypes = {

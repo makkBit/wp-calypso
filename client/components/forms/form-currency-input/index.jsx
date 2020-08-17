@@ -4,13 +4,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { find, get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import FormTextInputWithAffixes from 'components/forms/form-text-input-with-affixes';
+import FormTextInputWithAffixes from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
 
 /**
  * Style dependencies

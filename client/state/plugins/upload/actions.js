@@ -8,9 +8,9 @@ import {
 	PLUGIN_UPLOAD_COMPLETE,
 	PLUGIN_UPLOAD_ERROR,
 	PLUGIN_UPLOAD_PROGRESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/plugins/new';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/plugins/new';
 
 /**
  * Upload a plugin to a site.

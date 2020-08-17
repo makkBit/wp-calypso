@@ -9,7 +9,7 @@ const debug = debugFactory( 'calypso:mailing-lists' );
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 
 export default {
 	deleteSubscriber( category, emailAddress, hmac, context ) {

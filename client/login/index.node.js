@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import webRouter from './index.web';
-import { makeLayout, redirectLoggedIn, setUpLocale } from 'controller';
-import { getLanguageRouteParam } from 'lib/i18n-utils';
+import { makeLayout, redirectLoggedIn, setUpLocale } from 'wp-calypso-client/controller';
+import { getLanguageRouteParam } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Re-exports

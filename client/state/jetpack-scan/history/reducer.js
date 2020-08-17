@@ -6,8 +6,8 @@ import {
 	JETPACK_SCAN_HISTORY_REQUEST,
 	JETPACK_SCAN_HISTORY_REQUEST_SUCCESS,
 	JETPACK_SCAN_HISTORY_REQUEST_FAILURE,
-} from 'state/action-types';
-import { combineReducers, keyedReducer } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 
 export const requestStatus = keyedReducer( 'siteId', ( state, { type } ) => {
 	switch ( type ) {

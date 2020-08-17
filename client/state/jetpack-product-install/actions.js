@@ -5,11 +5,11 @@ import {
 	JETPACK_PRODUCT_INSTALL_REQUEST,
 	JETPACK_PRODUCT_INSTALL_STATUS_RECEIVE,
 	JETPACK_PRODUCT_INSTALL_STATUS_REQUEST,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/jetpack-blogs/product-install';
-import 'state/data-layer/wpcom/jetpack-blogs/product-install-status';
-import 'state/jetpack-product-install/init';
+import 'wp-calypso-client/state/data-layer/wpcom/jetpack-blogs/product-install';
+import 'wp-calypso-client/state/data-layer/wpcom/jetpack-blogs/product-install-status';
+import 'wp-calypso-client/state/jetpack-product-install/init';
 
 /**
  * Start the Jetpack product install process for that site.

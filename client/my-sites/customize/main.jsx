@@ -13,24 +13,24 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import page from 'page';
-import CustomizerLoadingPanel from 'my-sites/customize/loading-panel';
-import EmptyContent from 'components/empty-content';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { requestSite } from 'state/sites/actions';
-import { themeActivated } from 'state/themes/actions';
+import CustomizerLoadingPanel from 'wp-calypso-client/my-sites/customize/loading-panel';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import { themeActivated } from 'wp-calypso-client/state/themes/actions';
 import { getCustomizerFocus } from './panels';
-import getMenusUrl from 'state/selectors/get-menus-url';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getCustomizerUrl, isJetpackSite } from 'state/sites/selectors';
-import canCurrentUserUseCustomerHome from 'state/sites/selectors/can-current-user-use-customer-home';
-import wpcom from 'lib/wp';
-import { addItem } from 'lib/cart/actions';
-import { trackClick } from 'my-sites/themes/helpers';
-import { themeItem } from 'lib/cart-values/cart-items';
-import { getUrlParts } from 'lib/url';
+import getMenusUrl from 'wp-calypso-client/state/selectors/get-menus-url';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getCustomizerUrl, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUserUseCustomerHome from 'wp-calypso-client/state/sites/selectors/can-current-user-use-customer-home';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import { trackClick } from 'wp-calypso-client/my-sites/themes/helpers';
+import { themeItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
 
 /**
  * Style dependencies

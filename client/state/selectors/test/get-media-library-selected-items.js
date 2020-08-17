@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import MediaQueryManager from 'lib/query-manager/media';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import MediaQueryManager from 'wp-calypso-client/lib/query-manager/media';
 
 describe( 'getMediaItem()', () => {
 	const siteId = 2916284;

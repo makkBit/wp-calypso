@@ -18,8 +18,8 @@ import {
 	GUIDED_TRANSFER_STATUS_REQUEST_FAILURE,
 	GUIDED_TRANSFER_STATUS_REQUEST_SUCCESS,
 	SERIALIZE,
-} from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'reducer', () => {
 	const testSiteId = 100658273;

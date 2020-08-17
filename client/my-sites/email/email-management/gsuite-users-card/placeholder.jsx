@@ -8,8 +8,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import GSuiteUserItem from 'my-sites/email/email-management/gsuite-user-item';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import GSuiteUserItem from 'wp-calypso-client/my-sites/email/email-management/gsuite-user-item';
 
 /**
  * Style dependencies

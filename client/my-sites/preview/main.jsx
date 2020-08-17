@@ -11,20 +11,20 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteOption, isSitePreviewable } from 'state/sites/selectors';
-import { addQueryArgs } from 'lib/route';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getEditorUrl from 'state/selectors/get-editor-url';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteOption, isSitePreviewable } from 'wp-calypso-client/state/sites/selectors';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
 import { Button } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import EmptyContent from 'components/empty-content';
-import Gridicon from 'components/gridicon';
-import Main from 'components/main';
-import { showInlineHelpPopover } from 'state/inline-help/actions';
-import WebPreview from 'components/web-preview';
-import { recordTracksEvent } from 'state/analytics/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Main from 'wp-calypso-client/components/main';
+import { showInlineHelpPopover } from 'wp-calypso-client/state/inline-help/actions';
+import WebPreview from 'wp-calypso-client/components/web-preview';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Internal dependencies

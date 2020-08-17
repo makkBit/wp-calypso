@@ -7,10 +7,10 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import PollerPool from 'lib/data-poller';
-import Emitter from 'lib/mixins/emitter';
-import { connectionLost, connectionRestored } from 'state/application/actions';
+import config from 'wp-calypso-client/config';
+import PollerPool from 'wp-calypso-client/lib/data-poller';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
+import { connectionLost, connectionRestored } from 'wp-calypso-client/state/application/actions';
 
 const debug = debugFactory( 'calypso:network-connection' );
 

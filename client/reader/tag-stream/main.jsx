@@ -10,17 +10,23 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import Stream from 'reader/stream';
-import DocumentHead from 'components/data/document-head';
+import Stream from 'wp-calypso-client/reader/stream';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import EmptyContent from './empty';
 import TagStreamHeader from './header';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import HeaderBack from 'reader/header-back';
-import { getReaderTags, getReaderFollowedTags } from 'state/reader/tags/selectors';
-import { requestFollowTag, requestUnfollowTag } from 'state/reader/tags/items/actions';
-import QueryReaderFollowedTags from 'components/data/query-reader-followed-tags';
-import QueryReaderTag from 'components/data/query-reader-tag';
-import ReaderMain from 'reader/components/reader-main';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import HeaderBack from 'wp-calypso-client/reader/header-back';
+import {
+	getReaderTags,
+	getReaderFollowedTags,
+} from 'wp-calypso-client/state/reader/tags/selectors';
+import {
+	requestFollowTag,
+	requestUnfollowTag,
+} from 'wp-calypso-client/state/reader/tags/items/actions';
+import QueryReaderFollowedTags from 'wp-calypso-client/components/data/query-reader-followed-tags';
+import QueryReaderTag from 'wp-calypso-client/components/data/query-reader-tag';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
 
 /**
  * Style dependencies

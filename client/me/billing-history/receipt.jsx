@@ -10,24 +10,24 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import TextareaAutosize from 'components/textarea-autosize';
-import DocumentHead from 'components/data/document-head';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import { withLocalizedMoment } from 'components/localized-moment';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { billingHistory } from 'me/purchases/paths';
-import QueryBillingTransaction from 'components/data/query-billing-transaction';
+import TextareaAutosize from 'wp-calypso-client/components/textarea-autosize';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { billingHistory } from 'wp-calypso-client/me/purchases/paths';
+import QueryBillingTransaction from 'wp-calypso-client/components/data/query-billing-transaction';
 import { groupDomainProducts, renderTransactionAmount } from './utils';
-import getPastBillingTransaction from 'state/selectors/get-past-billing-transaction';
-import isPastBillingTransactionError from 'state/selectors/is-past-billing-transaction-error';
+import getPastBillingTransaction from 'wp-calypso-client/state/selectors/get-past-billing-transaction';
+import isPastBillingTransactionError from 'wp-calypso-client/state/selectors/is-past-billing-transaction-error';
 import {
 	clearBillingTransactionError,
 	requestBillingTransaction,
-} from 'state/billing-transactions/individual-transactions/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { getPlanTermLabel } from 'lib/plans';
-import { PARTNER_PAYPAL_EXPRESS } from 'lib/checkout/payment-methods';
+} from 'wp-calypso-client/state/billing-transactions/individual-transactions/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getPlanTermLabel } from 'wp-calypso-client/lib/plans';
+import { PARTNER_PAYPAL_EXPRESS } from 'wp-calypso-client/lib/checkout/payment-methods';
 
 class BillingReceipt extends React.Component {
 	componentDidMount() {

@@ -7,9 +7,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import StoreConnection from 'components/data/store-connection';
-import CartStore from 'lib/cart/store';
-import TransactionStore from 'lib/transaction/store';
+import StoreConnection from 'wp-calypso-client/components/data/store-connection';
+import CartStore from 'wp-calypso-client/lib/cart/store';
+import TransactionStore from 'wp-calypso-client/lib/transaction/store';
 
 const stores = [ TransactionStore, CartStore ];
 

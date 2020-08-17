@@ -8,15 +8,15 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import userSettings from 'lib/user-settings';
-import PasswordComponent from 'me/security/main';
-import accountPasswordData from 'lib/account-password-data';
-import SocialLoginComponent from 'me/social-login';
-import ConnectedAppsComponent from 'me/connected-applications';
-import AccountRecoveryComponent from 'me/security-account-recovery';
-import SecurityCheckupComponent from 'me/security-checkup';
-import { getSocialServiceFromClientId } from 'lib/login';
+import notices from 'wp-calypso-client/notices';
+import userSettings from 'wp-calypso-client/lib/user-settings';
+import PasswordComponent from 'wp-calypso-client/me/security/main';
+import accountPasswordData from 'wp-calypso-client/lib/account-password-data';
+import SocialLoginComponent from 'wp-calypso-client/me/social-login';
+import ConnectedAppsComponent from 'wp-calypso-client/me/connected-applications';
+import AccountRecoveryComponent from 'wp-calypso-client/me/security-account-recovery';
+import SecurityCheckupComponent from 'wp-calypso-client/me/security-checkup';
+import { getSocialServiceFromClientId } from 'wp-calypso-client/lib/login';
 
 export function password( context, next ) {
 	if ( context.query && context.query.updated === 'password' ) {
@@ -36,7 +36,7 @@ export function password( context, next ) {
 }
 
 export function twoStep( context, next ) {
-	const TwoStepComponent = require( 'me/two-step' ).default;
+	const TwoStepComponent = require( 'wp-calypso-client/me/two-step' ).default;
 
 	context.primary = React.createElement( TwoStepComponent, {
 		userSettings: userSettings,

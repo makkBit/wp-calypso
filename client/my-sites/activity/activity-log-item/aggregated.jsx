@@ -11,22 +11,22 @@ import React, { Component, Fragment } from 'react';
 /**
  * Internal dependencies
  */
-import { applySiteOffset } from 'lib/site/timezone';
+import { applySiteOffset } from 'wp-calypso-client/lib/site/timezone';
 import ActivityDescription from './activity-description';
 import ActivityIcon from './activity-icon';
 import ActivityLogItem from '../activity-log-item';
-import FoldableCard from 'components/foldable-card';
-import { getSiteSlug } from 'state/sites/selectors';
-import getSiteGmtOffset from 'state/selectors/get-site-gmt-offset';
-import getSiteTimezoneValue from 'state/selectors/get-site-timezone-value';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import getSiteGmtOffset from 'wp-calypso-client/state/selectors/get-site-gmt-offset';
+import getSiteTimezoneValue from 'wp-calypso-client/state/selectors/get-site-timezone-value';
 import { Button } from '@automattic/components';
-import { getActivityLogFilter } from 'state/selectors/get-activity-log-filter';
-import { filterStateToQuery } from 'state/activity-log/utils';
-import { addQueryArgs } from 'lib/url';
+import { getActivityLogFilter } from 'wp-calypso-client/state/selectors/get-activity-log-filter';
+import { filterStateToQuery } from 'wp-calypso-client/state/activity-log/utils';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 import ActivityActor from './activity-actor';
 import ActivityMedia from './activity-media';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 const MAX_STREAM_ITEMS_IN_AGGREGATE = 10;
 

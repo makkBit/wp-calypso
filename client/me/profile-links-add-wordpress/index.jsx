@@ -10,14 +10,14 @@ import { find, map, pickBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import FormButton from 'components/forms/form-button';
+import config from 'wp-calypso-client/config';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 import ProfileLinksAddWordPressSite from './site';
-import { addUserProfileLinks } from 'state/profile-links/actions';
-import getPublicSites from 'state/selectors/get-public-sites';
-import getSites from 'state/selectors/get-sites';
-import isSiteInProfileLinks from 'state/selectors/is-site-in-profile-links';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import { addUserProfileLinks } from 'wp-calypso-client/state/profile-links/actions';
+import getPublicSites from 'wp-calypso-client/state/selectors/get-public-sites';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import isSiteInProfileLinks from 'wp-calypso-client/state/selectors/is-site-in-profile-links';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

@@ -7,20 +7,20 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { backupPath, scanPath } from 'lib/jetpack/paths';
-import { itemLinkMatches } from 'my-sites/sidebar/utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
+import { backupPath, scanPath } from 'wp-calypso-client/lib/jetpack/paths';
+import { itemLinkMatches } from 'wp-calypso-client/my-sites/sidebar/utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 import { useTranslate } from 'i18n-calypso';
-import getSelectedSiteId from 'state/ui/selectors/get-selected-site-id';
-import getSelectedSiteSlug from 'state/ui/selectors/get-selected-site-slug';
-import getSiteScanProgress from 'state/selectors/get-site-scan-progress';
-import getSiteScanThreats from 'state/selectors/get-site-scan-threats';
-import getIsSiteWPCOM from 'state/selectors/is-site-wpcom';
-import QueryScanState from 'components/data/query-jetpack-scan';
-import ScanBadge from 'components/jetpack/scan-badge';
-import SidebarItem from 'layout/sidebar/item';
-import { isEnabled } from 'config';
+import getSelectedSiteId from 'wp-calypso-client/state/ui/selectors/get-selected-site-id';
+import getSelectedSiteSlug from 'wp-calypso-client/state/ui/selectors/get-selected-site-slug';
+import getSiteScanProgress from 'wp-calypso-client/state/selectors/get-site-scan-progress';
+import getSiteScanThreats from 'wp-calypso-client/state/selectors/get-site-scan-threats';
+import getIsSiteWPCOM from 'wp-calypso-client/state/selectors/is-site-wpcom';
+import QueryScanState from 'wp-calypso-client/components/data/query-jetpack-scan';
+import ScanBadge from 'wp-calypso-client/components/jetpack/scan-badge';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import { isEnabled } from 'wp-calypso-client/config';
 
 export default ( { path, showIcons, tracksEventNames, expandSection } ) => {
 	const translate = useTranslate();

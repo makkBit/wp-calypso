@@ -8,10 +8,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import EmptyContent from 'components/empty-content';
-import FeatureExample from 'components/feature-example';
-import { getSiteSlug } from 'state/sites/selectors';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import FeatureExample from 'wp-calypso-client/components/feature-example';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 class JetpackManageErrorPage extends PureComponent {
 	static actionCallbacks = {

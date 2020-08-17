@@ -10,17 +10,17 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import EmptyContent from './empty';
-import DocumentHead from 'components/data/document-head';
-import Stream from 'reader/stream';
-import FeedError from 'reader/feed-error';
-import ReaderFeedHeader from 'blocks/reader-feed-header';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
-import { getSiteName } from 'reader/get-helpers';
-import { isSiteBlocked } from 'state/reader/site-blocks/selectors';
-import SiteBlocked from 'reader/site-blocked';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Stream from 'wp-calypso-client/reader/stream';
+import FeedError from 'wp-calypso-client/reader/feed-error';
+import ReaderFeedHeader from 'wp-calypso-client/blocks/reader-feed-header';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { getSiteName } from 'wp-calypso-client/reader/get-helpers';
+import { isSiteBlocked } from 'wp-calypso-client/state/reader/site-blocks/selectors';
+import SiteBlocked from 'wp-calypso-client/reader/site-blocked';
 
 // If the blog_ID of a reader feed is 0, that means no site exists for it.
 const getReaderSiteId = ( feed ) => ( feed && feed.blog_ID === 0 ? null : feed && feed.blog_ID );

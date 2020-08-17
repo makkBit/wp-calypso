@@ -14,8 +14,12 @@ import {
 	KEYRING_CONNECTIONS_REQUEST_SUCCESS,
 	PUBLICIZE_CONNECTION_CREATE,
 	PUBLICIZE_CONNECTION_DELETE,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { itemSchema } from './schema';
 
 // Tracks fetching state for keyring connections

@@ -8,7 +8,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import constants from 'me/constants';
+import constants from 'wp-calypso-client/me/constants';
 
 /**
  * Style dependencies

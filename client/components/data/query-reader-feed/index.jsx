@@ -10,8 +10,8 @@ import { bindActionCreators } from 'redux';
 /**
  * Internal dependencies
  */
-import { shouldFeedBeFetched } from 'state/reader/feeds/selectors';
-import { requestFeed } from 'state/reader/feeds/actions';
+import { shouldFeedBeFetched } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { requestFeed } from 'wp-calypso-client/state/reader/feeds/actions';
 
 class QueryReaderFeed extends Component {
 	UNSAFE_componentWillMount() {

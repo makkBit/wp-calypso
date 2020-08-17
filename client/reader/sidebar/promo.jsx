@@ -10,11 +10,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import AppPromo from 'blocks/app-promo';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import QueryUserSettings from 'components/data/query-user-settings';
-import config from 'config';
-import getUserSetting from 'state/selectors/get-user-setting';
+import AppPromo from 'wp-calypso-client/blocks/app-promo';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import QueryUserSettings from 'wp-calypso-client/components/data/query-user-settings';
+import config from 'wp-calypso-client/config';
+import getUserSetting from 'wp-calypso-client/state/selectors/get-user-setting';
 
 export const ReaderSidebarPromo = ( { currentUserLocale, shouldRenderAppPromo } ) => {
 	return (

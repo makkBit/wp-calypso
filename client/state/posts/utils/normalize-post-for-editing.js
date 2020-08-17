@@ -6,7 +6,7 @@ import { flow } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getTermIdsFromEdits } from 'state/posts/utils/get-term-ids-from-edits';
+import { getTermIdsFromEdits } from 'wp-calypso-client/state/posts/utils/get-term-ids-from-edits';
 
 const normalizeEditedFlow = flow( [ getTermIdsFromEdits ] );
 

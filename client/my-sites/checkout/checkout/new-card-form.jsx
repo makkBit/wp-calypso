@@ -9,9 +9,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import CreditCardFormFields from 'components/credit-card-form-fields';
-import { setNewCreditCardDetails } from 'lib/transaction/actions';
-import { INPUT_VALIDATION } from 'lib/store-transactions/step-types';
+import CreditCardFormFields from 'wp-calypso-client/components/credit-card-form-fields';
+import { setNewCreditCardDetails } from 'wp-calypso-client/lib/transaction/actions';
+import { INPUT_VALIDATION } from 'wp-calypso-client/lib/store-transactions/step-types';
 
 class NewCardForm extends Component {
 	static displayName = 'NewCardForm';

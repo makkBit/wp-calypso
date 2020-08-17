@@ -3,13 +3,13 @@
  */
 
 import page from 'page';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
 import controller from './controller';
-import { makeLayout, render as clientRender } from 'controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default function () {
 	if ( config.isEnabled( 'devdocs' ) ) {

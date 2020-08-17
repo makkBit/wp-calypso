@@ -10,7 +10,7 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import formatNumberCompact from 'lib/format-number-compact';
+import formatNumberCompact from 'wp-calypso-client/lib/format-number-compact';
 
 /**
  * Style dependencies

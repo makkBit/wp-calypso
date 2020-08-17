@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { assertValidProduct } from 'lib/products-values/utils/assert-valid-product';
-import { formatProduct } from 'lib/products-values/format-product';
-import { getJetpackProductsShortNames } from 'lib/products-values/translations';
+import { assertValidProduct } from 'wp-calypso-client/lib/products-values/utils/assert-valid-product';
+import { formatProduct } from 'wp-calypso-client/lib/products-values/format-product';
+import { getJetpackProductsShortNames } from 'wp-calypso-client/lib/products-values/translations';
 
 /**
  * Get Jetpack product short name based on the product purchase object.

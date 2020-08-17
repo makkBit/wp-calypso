@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { withoutHttp } from 'lib/url';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getRawSite from 'state/selectors/get-raw-site';
-import getSiteOptions from 'state/selectors/get-site-options';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
+import getSiteOptions from 'wp-calypso-client/state/selectors/get-site-options';
 import getSiteDomain from './get-site-domain';
 import getSiteOption from './get-site-option';
 import getSiteSlug from './get-site-slug';

@@ -10,13 +10,13 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import getHelpLinks from 'state/selectors/get-help-links';
-import HelpResults from 'me/help/help-results';
-import NoResults from 'my-sites/no-results';
-import QueryHelpLinks from 'components/data/query-help-links';
-import SearchCard from 'components/search-card';
-import { localizeUrl } from 'lib/i18n-utils';
-import { recordTracksEvent } from 'state/analytics/actions';
+import getHelpLinks from 'wp-calypso-client/state/selectors/get-help-links';
+import HelpResults from 'wp-calypso-client/me/help/help-results';
+import NoResults from 'wp-calypso-client/my-sites/no-results';
+import QueryHelpLinks from 'wp-calypso-client/components/data/query-help-links';
+import SearchCard from 'wp-calypso-client/components/search-card';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

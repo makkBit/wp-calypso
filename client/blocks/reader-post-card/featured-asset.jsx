@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal Dependencies
  */
-import ReaderFeaturedVideo from 'blocks/reader-featured-video';
-import ReaderFeaturedImage from 'blocks/reader-featured-image';
+import ReaderFeaturedVideo from 'wp-calypso-client/blocks/reader-featured-video';
+import ReaderFeaturedImage from 'wp-calypso-client/blocks/reader-featured-image';
 
 const FeaturedAsset = ( {
 	canonicalMedia,

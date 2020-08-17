@@ -12,13 +12,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import config from 'config';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import config from 'wp-calypso-client/config';
 import StatsModulePlaceholder from '../stats-module/placeholder';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteStatsNormalizedData } from 'state/stats/lists/selectors';
-import { getCurrentUserCountryCode } from 'state/current-user/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteStatsNormalizedData } from 'wp-calypso-client/state/stats/lists/selectors';
+import { getCurrentUserCountryCode } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

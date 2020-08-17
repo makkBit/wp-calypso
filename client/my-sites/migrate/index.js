@@ -11,9 +11,14 @@ import {
 	migrateSite,
 	setSiteSelectionHeader,
 	setStep,
-} from 'my-sites/migrate/controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { navigation, redirectWithoutSite, sites, siteSelection } from 'my-sites/controller';
+} from 'wp-calypso-client/my-sites/migrate/controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import {
+	navigation,
+	redirectWithoutSite,
+	sites,
+	siteSelection,
+} from 'wp-calypso-client/my-sites/controller';
 
 export default function () {
 	page(

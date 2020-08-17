@@ -14,21 +14,21 @@ import {
 	FEATURE_GOOGLE_MY_BUSINESS,
 	PLAN_BUSINESS,
 	PLAN_JETPACK_BUSINESS,
-} from 'lib/plans/constants';
-import getGoogleMyBusinessConnectedLocation from 'state/selectors/get-google-my-business-connected-location';
-import { getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite as getIsJetpackSite } from 'state/sites/selectors';
+} from 'wp-calypso-client/lib/plans/constants';
+import getGoogleMyBusinessConnectedLocation from 'wp-calypso-client/state/selectors/get-google-my-business-connected-location';
+import { getSelectedSiteSlug, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite as getIsJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 import MarketingToolsFeature from './feature';
 import MarketingToolsFeatureButtonWithPlanGate from './feature-button-with-plan-gate';
-import QueryKeyringConnections from 'components/data/query-keyring-connections';
-import QueryKeyringServices from 'components/data/query-keyring-services';
-import QuerySiteKeyrings from 'components/data/query-site-keyrings';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
+import QueryKeyringConnections from 'wp-calypso-client/components/data/query-keyring-connections';
+import QueryKeyringServices from 'wp-calypso-client/components/data/query-keyring-services';
+import QuerySiteKeyrings from 'wp-calypso-client/components/data/query-site-keyrings';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Types
  */
-import * as T from 'types';
+import * as T from 'wp-calypso-client/types';
 
 interface Props {
 	connectedGoogleMyBusinessLocation?: null | any[];

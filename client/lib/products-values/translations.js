@@ -7,7 +7,7 @@ import { numberFormat, translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import * as CONSTANTS from './constants.js';
 
 // Translatable strings

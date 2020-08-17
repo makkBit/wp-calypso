@@ -11,16 +11,20 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
 import SiteRedirectStep from './site-redirect-step';
-import isSiteUpgradeable from 'state/selectors/is-site-upgradeable';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
-import { getSiteAdminUrl } from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryProductsList from 'components/data/query-products-list';
-import { getProductsList } from 'state/products-list/selectors';
+import isSiteUpgradeable from 'wp-calypso-client/state/selectors/is-site-upgradeable';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
+import { getSiteAdminUrl } from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
 
 class SiteRedirect extends Component {
 	static propTypes = {

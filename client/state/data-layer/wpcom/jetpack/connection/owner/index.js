@@ -6,13 +6,13 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { JETPACK_USER_CONNECTION_CHANGE_OWNER } from 'state/action-types';
-import { requestJetpackUserConnectionData } from 'state/jetpack/connection/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { JETPACK_USER_CONNECTION_CHANGE_OWNER } from 'wp-calypso-client/state/action-types';
+import { requestJetpackUserConnectionData } from 'wp-calypso-client/state/jetpack/connection/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const changeConnectionOwner = ( action ) =>
 	http(

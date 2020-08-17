@@ -10,8 +10,8 @@ import { get, noop } from 'lodash';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import SimplePaymentsDialog from 'components/tinymce/plugins/simple-payments/dialog';
-import { getCurrentUser } from 'state/current-user/selectors';
+import SimplePaymentsDialog from 'wp-calypso-client/components/tinymce/plugins/simple-payments/dialog';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 class SimplePaymentsDialogExample extends PureComponent {
 	state = { showDialog: false };

@@ -8,14 +8,14 @@ import React, { Component } from 'react';
  * Internal dependencies
  */
 import ReaderSidebarHelper from '../helper';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import Count from 'components/count';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import Count from 'wp-calypso-client/components/count';
 
 /**
  * Styles
  */
 import '../style.scss';
-import Favicon from 'reader/components/favicon';
+import Favicon from 'wp-calypso-client/reader/components/favicon';
 
 export class ReaderSidebarOrganizationsListItem extends Component {
 	static propTypes = {

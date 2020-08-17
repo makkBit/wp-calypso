@@ -17,11 +17,11 @@ import {
 	HAPPYCHAT_IO_SEND_MESSAGE_USERINFO,
 	HAPPYCHAT_IO_SEND_PREFERENCES,
 	HAPPYCHAT_IO_SEND_TYPING,
-} from 'state/action-types';
-import { sendEvent } from 'state/happychat/connection/actions';
-import buildConnection from 'lib/happychat/connection-async';
-import isHappychatClientConnected from 'state/happychat/selectors/is-happychat-client-connected';
-import isHappychatChatAssigned from 'state/happychat/selectors/is-happychat-chat-assigned';
+} from 'wp-calypso-client/state/action-types';
+import { sendEvent } from 'wp-calypso-client/state/happychat/connection/actions';
+import buildConnection from 'wp-calypso-client/lib/happychat/connection-async';
+import isHappychatClientConnected from 'wp-calypso-client/state/happychat/selectors/is-happychat-client-connected';
+import isHappychatChatAssigned from 'wp-calypso-client/state/happychat/selectors/is-happychat-chat-assigned';
 
 const eventMessage = {
 	HAPPYCHAT_BLUR: 'Stopped looking at Happychat',

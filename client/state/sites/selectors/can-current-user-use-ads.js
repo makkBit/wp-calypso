@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { canAccessWordads } from 'lib/ads/utils';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { canAccessWordads } from 'wp-calypso-client/lib/ads/utils';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import getSite from './get-site';
 
 /**

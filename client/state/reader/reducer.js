@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withStorageKey } from 'state/utils';
+import { combineReducers, withStorageKey } from 'wp-calypso-client/state/utils';
 
 import conversations from './conversations/reducer';
 import feeds from './feeds/reducer';

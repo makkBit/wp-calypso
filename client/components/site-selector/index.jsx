@@ -15,21 +15,21 @@ import { format as formatUrl, parse as parseUrl } from 'url'; // eslint-disable-
 /**
  * Internal dependencies
  */
-import { getPreference } from 'state/preferences/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getSite, hasAllSitesList } from 'state/sites/selectors';
-import areAllSitesSingleUser from 'state/selectors/are-all-sites-single-user';
-import getSites from 'state/selectors/get-sites';
-import getVisibleSites from 'state/selectors/get-visible-sites';
-import hasLoadedSites from 'state/selectors/has-loaded-sites';
-import AllSites from 'blocks/all-sites';
-import Site from 'blocks/site';
-import SitePlaceholder from 'blocks/site/placeholder';
-import Search from 'components/search';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSite, hasAllSitesList } from 'wp-calypso-client/state/sites/selectors';
+import areAllSitesSingleUser from 'wp-calypso-client/state/selectors/are-all-sites-single-user';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import getVisibleSites from 'wp-calypso-client/state/selectors/get-visible-sites';
+import hasLoadedSites from 'wp-calypso-client/state/selectors/has-loaded-sites';
+import AllSites from 'wp-calypso-client/blocks/all-sites';
+import Site from 'wp-calypso-client/blocks/site';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
+import Search from 'wp-calypso-client/components/search';
 import SiteSelectorAddSite from './add-site';
-import searchSites from 'components/search-sites';
-import scrollIntoViewport from 'lib/scroll-into-viewport';
+import searchSites from 'wp-calypso-client/components/search-sites';
+import scrollIntoViewport from 'wp-calypso-client/lib/scroll-into-viewport';
 
 /**
  * Style dependencies

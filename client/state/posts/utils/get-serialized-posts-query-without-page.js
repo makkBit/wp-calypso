@@ -6,7 +6,7 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSerializedPostsQuery } from 'state/posts/utils/get-serialized-posts-query';
+import { getSerializedPostsQuery } from 'wp-calypso-client/state/posts/utils/get-serialized-posts-query';
 
 /**
  * Returns a serialized posts query, excluding any page parameter

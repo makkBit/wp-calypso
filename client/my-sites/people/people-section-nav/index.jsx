@@ -9,10 +9,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import PeopleSearch from 'my-sites/people/people-section-nav/people-search';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import PeopleSearch from 'wp-calypso-client/my-sites/people/people-section-nav/people-search';
 
 class PeopleNavTabs extends React.Component {
 	static displayName = 'PeopleNavTabs';

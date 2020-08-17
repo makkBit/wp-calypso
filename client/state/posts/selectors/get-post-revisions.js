@@ -6,9 +6,9 @@ import { get, orderBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 export const getPostRevisions = createSelector(
 	( state, siteId, postId ) => {

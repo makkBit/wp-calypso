@@ -14,23 +14,28 @@ import formatCurrency from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
-import Notice from 'components/notice';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import Notice from 'wp-calypso-client/components/notice';
 import PlanFeaturesActions from './actions';
 import PlanFeaturesHeader from './header';
 import PlanFeaturesItem from './item';
-import SpinnerLine from 'components/spinner-line';
-import QueryActivePromotions from 'components/data/query-active-promotions';
-import { abtest } from 'lib/abtest';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getPlan, getPlanBySlug, getPlanRawPrice, getPlanSlug } from 'state/plans/selectors';
-import { getSignupDependencyStore } from 'state/signup/dependency-store/selectors';
-import { planItem as getCartItemForPlan } from 'lib/cart-values/cart-items';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { retargetViewPlans } from 'lib/analytics/ad-tracking';
-import canUpgradeToPlan from 'state/selectors/can-upgrade-to-plan';
-import { getDiscountByName } from 'lib/discounts';
-import { addQueryArgs } from 'lib/url';
+import SpinnerLine from 'wp-calypso-client/components/spinner-line';
+import QueryActivePromotions from 'wp-calypso-client/components/data/query-active-promotions';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getPlan,
+	getPlanBySlug,
+	getPlanRawPrice,
+	getPlanSlug,
+} from 'wp-calypso-client/state/plans/selectors';
+import { getSignupDependencyStore } from 'wp-calypso-client/state/signup/dependency-store/selectors';
+import { planItem as getCartItemForPlan } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { retargetViewPlans } from 'wp-calypso-client/lib/analytics/ad-tracking';
+import canUpgradeToPlan from 'wp-calypso-client/state/selectors/can-upgrade-to-plan';
+import { getDiscountByName } from 'wp-calypso-client/lib/discounts';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 import {
 	planMatches,
 	applyTestFiltersToPlansList,
@@ -40,21 +45,21 @@ import {
 	isWpComEcommercePlan,
 	isWpComBusinessPlan,
 	getPlanClass,
-} from 'lib/plans';
+} from 'wp-calypso-client/lib/plans';
 import {
 	getPlanDiscountedRawPrice,
 	getPlansBySiteId,
 	isCurrentUserCurrentPlanOwner,
-} from 'state/sites/plans/selectors';
+} from 'wp-calypso-client/state/sites/plans/selectors';
 import {
 	getSitePlan,
 	getSiteSlug,
 	isCurrentPlanPaid,
 	isCurrentSitePlan,
 	isJetpackSite,
-} from 'state/sites/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isPrivateSite from 'state/selectors/is-private-site';
+} from 'wp-calypso-client/state/sites/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
 import {
 	isBestValue,
 	isMonthly,
@@ -66,8 +71,8 @@ import {
 	TYPE_BUSINESS,
 	GROUP_WPCOM,
 	FEATURE_BUSINESS_ONBOARDING,
-} from 'lib/plans/constants';
-import { getPlanFeaturesObject } from 'lib/plans/features-list';
+} from 'wp-calypso-client/lib/plans/constants';
+import { getPlanFeaturesObject } from 'wp-calypso-client/lib/plans/features-list';
 import PlanFeaturesScroller from './scroller';
 
 /**

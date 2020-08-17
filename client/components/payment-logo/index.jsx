@@ -16,13 +16,13 @@ import './style.scss';
 /**
  * Image assets
  */
-import creditCardAmexImage from 'assets/images/upgrades/cc-amex.svg';
-import creditCardDinersImage from 'assets/images/upgrades/cc-diners.svg';
-import creditCardDiscoverImage from 'assets/images/upgrades/cc-discover.svg';
-import creditCardJCBImage from 'assets/images/upgrades/cc-jcb.svg';
-import creditCardMasterCardImage from 'assets/images/upgrades/cc-mastercard.svg';
-import creditCardUnionPayImage from 'assets/images/upgrades/cc-unionpay.svg';
-import creditCardVisaImage from 'assets/images/upgrades/cc-visa.svg';
+import creditCardAmexImage from 'wp-calypso-client/assets/images/upgrades/cc-amex.svg';
+import creditCardDinersImage from 'wp-calypso-client/assets/images/upgrades/cc-diners.svg';
+import creditCardDiscoverImage from 'wp-calypso-client/assets/images/upgrades/cc-discover.svg';
+import creditCardJCBImage from 'wp-calypso-client/assets/images/upgrades/cc-jcb.svg';
+import creditCardMasterCardImage from 'wp-calypso-client/assets/images/upgrades/cc-mastercard.svg';
+import creditCardUnionPayImage from 'wp-calypso-client/assets/images/upgrades/cc-unionpay.svg';
+import creditCardVisaImage from 'wp-calypso-client/assets/images/upgrades/cc-visa.svg';
 
 const LOGO_PATHS = {
 	amex: creditCardAmexImage,

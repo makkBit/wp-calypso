@@ -6,10 +6,10 @@ import { get, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import { findThemeFilterTerm } from 'state/themes/selectors/find-theme-filter-term';
-import { getThemeFilterTerm } from 'state/themes/selectors/get-theme-filter-term';
+import { findThemeFilterTerm } from 'wp-calypso-client/state/themes/selectors/find-theme-filter-term';
+import { getThemeFilterTerm } from 'wp-calypso-client/state/themes/selectors/get-theme-filter-term';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 export function getThemeShowcaseDescription( state, { filter, tier, vertical } = {} ) {
 	if ( vertical ) {

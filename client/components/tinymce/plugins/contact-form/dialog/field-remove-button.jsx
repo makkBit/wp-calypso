@@ -5,13 +5,13 @@
 import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Popover from 'components/popover';
+import Popover from 'wp-calypso-client/components/popover';
 
 class ContactFormDialogFieldRemoveButton extends React.PureComponent {
 	static displayName = 'ContactFormDialogFieldRemoveButton';

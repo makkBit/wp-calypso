@@ -18,27 +18,30 @@ import {
 	failCreateConnection,
 	fetchConnection,
 	updateSiteConnection,
-} from 'state/sharing/publicize/actions';
-import { successNotice, errorNotice, warningNotice } from 'state/notices/actions';
+} from 'wp-calypso-client/state/sharing/publicize/actions';
+import { successNotice, errorNotice, warningNotice } from 'wp-calypso-client/state/notices/actions';
 import Connection from './connection';
-import FoldableCard from 'components/foldable-card';
-import Notice from 'components/notice';
-import { getAvailableExternalAccounts, isServiceExpanded } from 'state/sharing/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import Notice from 'wp-calypso-client/components/notice';
+import {
+	getAvailableExternalAccounts,
+	isServiceExpanded,
+} from 'wp-calypso-client/state/sharing/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getKeyringConnectionsByName,
 	getBrokenKeyringConnectionsByName,
-} from 'state/sharing/keyring/selectors';
+} from 'wp-calypso-client/state/sharing/keyring/selectors';
 import {
 	getBrokenSiteUserConnectionsForService,
 	getSiteUserConnectionsForService,
 	isFetchingConnections,
-} from 'state/sharing/publicize/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getRemovableConnections from 'state/selectors/get-removable-connections';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { requestKeyringConnections } from 'state/sharing/keyring/actions';
+} from 'wp-calypso-client/state/sharing/publicize/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getRemovableConnections from 'wp-calypso-client/state/selectors/get-removable-connections';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { requestKeyringConnections } from 'wp-calypso-client/state/sharing/keyring/actions';
 import ServiceAction from './service-action';
 import ServiceConnectedAccounts from './service-connected-accounts';
 import ServiceDescription from './service-description';
@@ -46,9 +49,9 @@ import ServiceExamples from './service-examples';
 import ServiceTip from './service-tip';
 import requestExternalAccess from '@automattic/request-external-access';
 import MailchimpSettings, { renderMailchimpLogo } from './mailchimp-settings';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import PicasaMigration from './picasa-migration';
-import SocialLogo from 'components/social-logo';
+import SocialLogo from 'wp-calypso-client/components/social-logo';
 
 /**
  * Check if the connection is broken or requires reauth.

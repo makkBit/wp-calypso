@@ -8,18 +8,18 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import CommentButton from 'blocks/comment-button';
-import LikeButton from 'reader/like-button';
-import ShareButton from 'blocks/reader-share';
-import PostEditButton from 'blocks/post-edit-button';
-import ReaderPostOptionsMenu from 'blocks/reader-post-options-menu';
-import { shouldShowComments } from 'blocks/comments/helper';
-import { shouldShowLikes } from 'reader/like-helper';
-import { shouldShowShare } from 'blocks/reader-share/helper';
-import { userCan } from 'state/posts/utils';
-import * as stats from 'reader/stats';
+import CommentButton from 'wp-calypso-client/blocks/comment-button';
+import LikeButton from 'wp-calypso-client/reader/like-button';
+import ShareButton from 'wp-calypso-client/blocks/reader-share';
+import PostEditButton from 'wp-calypso-client/blocks/post-edit-button';
+import ReaderPostOptionsMenu from 'wp-calypso-client/blocks/reader-post-options-menu';
+import { shouldShowComments } from 'wp-calypso-client/blocks/comments/helper';
+import { shouldShowLikes } from 'wp-calypso-client/reader/like-helper';
+import { shouldShowShare } from 'wp-calypso-client/blocks/reader-share/helper';
+import { userCan } from 'wp-calypso-client/state/posts/utils';
+import * as stats from 'wp-calypso-client/reader/stats';
 import { localize } from 'i18n-calypso';
-import ReaderVisitLink from 'blocks/reader-visit-link';
+import ReaderVisitLink from 'wp-calypso-client/blocks/reader-visit-link';
 
 /**
  * Style dependencies

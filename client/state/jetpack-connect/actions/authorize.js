@@ -7,19 +7,19 @@ import { pick } from 'lodash';
 /**
  * Internal dependencies
  */
-import userFactory from 'lib/user';
-import wpcom from 'lib/wp';
-import { receiveSite } from 'state/sites/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { SITE_REQUEST_FIELDS, SITE_REQUEST_OPTIONS } from 'state/sites/constants';
+import userFactory from 'wp-calypso-client/lib/user';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { receiveSite } from 'wp-calypso-client/state/sites/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { SITE_REQUEST_FIELDS, SITE_REQUEST_OPTIONS } from 'wp-calypso-client/state/sites/constants';
 import {
 	JETPACK_CONNECT_AUTHORIZE,
 	JETPACK_CONNECT_AUTHORIZE_LOGIN_COMPLETE,
 	JETPACK_CONNECT_AUTHORIZE_RECEIVE,
 	JETPACK_CONNECT_AUTHORIZE_RECEIVE_SITE_LIST,
-} from 'state/jetpack-connect/action-types';
+} from 'wp-calypso-client/state/jetpack-connect/action-types';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Module constants

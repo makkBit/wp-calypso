@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	MAX_WOOCOMMERCE_INSTALL_RETRIES,
 	requestJetpackSettings,
@@ -12,9 +12,15 @@ import {
 	retryOrAnnounceSaveFailure,
 	fromApi,
 } from '../';
-import { JETPACK_SETTINGS_SAVE, JETPACK_SETTINGS_UPDATE } from 'state/action-types';
-import { normalizeSettings } from 'state/jetpack/settings/utils';
-import { saveJetpackSettingsSuccess, updateJetpackSettings } from 'state/jetpack/settings/actions';
+import {
+	JETPACK_SETTINGS_SAVE,
+	JETPACK_SETTINGS_UPDATE,
+} from 'wp-calypso-client/state/action-types';
+import { normalizeSettings } from 'wp-calypso-client/state/jetpack/settings/utils';
+import {
+	saveJetpackSettingsSuccess,
+	updateJetpackSettings,
+} from 'wp-calypso-client/state/jetpack/settings/actions';
 
 describe( 'requestJetpackSettings()', () => {
 	const token = 'abcd1234';

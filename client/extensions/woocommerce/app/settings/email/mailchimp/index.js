@@ -12,8 +12,11 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { getPlugins, isRequestingForSites } from 'state/plugins/installed/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import {
+	getPlugins,
+	isRequestingForSites,
+} from 'wp-calypso-client/state/plugins/installed/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	mailChimpSettings,
 	isRequestingSettings,

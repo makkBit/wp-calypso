@@ -5,10 +5,10 @@ import {
 	SITE_CHECKLIST_RECEIVE,
 	SITE_CHECKLIST_REQUEST,
 	SITE_CHECKLIST_TASK_UPDATE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/checklist';
-import 'state/checklist/init';
+import 'wp-calypso-client/state/data-layer/wpcom/checklist';
+import 'wp-calypso-client/state/checklist/init';
 
 /**
  * Action creator function: SITE_CHECKLIST_RECEIVE

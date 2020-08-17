@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { LEGAL_REQUEST, LEGAL_SET, TOS_ACCEPT } from 'state/action-types';
+import { LEGAL_REQUEST, LEGAL_SET, TOS_ACCEPT } from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/legal';
-import 'state/legal/init';
+import 'wp-calypso-client/state/data-layer/wpcom/legal';
+import 'wp-calypso-client/state/legal/init';
 
 export const requestLegalData = () => ( {
 	type: LEGAL_REQUEST,

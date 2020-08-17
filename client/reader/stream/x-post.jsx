@@ -14,14 +14,14 @@ import { connect } from 'react-redux';
  * Internal Dependencies
  */
 import { Card } from '@automattic/components';
-import ReaderAvatar from 'blocks/reader-avatar';
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import Emojify from 'components/emojify';
-import { getUrlParts } from 'lib/url';
-import config from 'config';
+import ReaderAvatar from 'wp-calypso-client/blocks/reader-avatar';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import Emojify from 'wp-calypso-client/components/emojify';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
+import config from 'wp-calypso-client/config';
 
 /* eslint-disable wpcalypso/jsx-classname-namespace */
 class CrossPost extends PureComponent {

@@ -10,7 +10,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { isBlogger, isGoogleApps } from 'lib/products-values';
+import { isBlogger, isGoogleApps } from 'wp-calypso-client/lib/products-values';
 import CustomDomainPurchaseDetail from './custom-domain-purchase-detail';
 import GoogleAppsDetails from './google-apps-details';
 

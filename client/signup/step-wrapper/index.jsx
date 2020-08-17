@@ -9,8 +9,8 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import FormattedHeader from 'components/formatted-header';
-import NavigationLink from 'signup/navigation-link';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import NavigationLink from 'wp-calypso-client/signup/navigation-link';
 
 /**
  * Style dependencies

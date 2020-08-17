@@ -1,16 +1,20 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { receivePost } from 'state/posts/actions/receive-post';
-import { getEditedPost } from 'state/posts/selectors';
-import { normalizePostForActions } from 'state/posts/utils';
-import isPreviousRouteGutenberg from 'state/selectors/is-previous-route-gutenberg';
-import { editorReset, editorSetLoadingError, startEditingPost } from 'state/editor/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { receivePost } from 'wp-calypso-client/state/posts/actions/receive-post';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { normalizePostForActions } from 'wp-calypso-client/state/posts/utils';
+import isPreviousRouteGutenberg from 'wp-calypso-client/state/selectors/is-previous-route-gutenberg';
+import {
+	editorReset,
+	editorSetLoadingError,
+	startEditingPost,
+} from 'wp-calypso-client/state/editor/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Load an existing post and keep track of edits to it

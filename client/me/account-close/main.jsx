@@ -3,7 +3,7 @@
  */
 import React, { Component, Fragment } from 'react';
 import page from 'page';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
 import classnames from 'classnames';
@@ -12,28 +12,28 @@ import { map } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import ActionPanel from 'components/action-panel';
-import ActionPanelTitle from 'components/action-panel/title';
-import ActionPanelBody from 'components/action-panel/body';
-import ActionPanelFigure from 'components/action-panel/figure';
-import ActionPanelFigureHeader from 'components/action-panel/figure-header';
-import ActionPanelFigureList from 'components/action-panel/figure-list';
-import ActionPanelFigureListItem from 'components/action-panel/figure-list-item';
-import ActionPanelLink from 'components/action-panel/link';
-import ActionPanelFooter from 'components/action-panel/footer';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import ActionPanel from 'wp-calypso-client/components/action-panel';
+import ActionPanelTitle from 'wp-calypso-client/components/action-panel/title';
+import ActionPanelBody from 'wp-calypso-client/components/action-panel/body';
+import ActionPanelFigure from 'wp-calypso-client/components/action-panel/figure';
+import ActionPanelFigureHeader from 'wp-calypso-client/components/action-panel/figure-header';
+import ActionPanelFigureList from 'wp-calypso-client/components/action-panel/figure-list';
+import ActionPanelFigureListItem from 'wp-calypso-client/components/action-panel/figure-list-item';
+import ActionPanelLink from 'wp-calypso-client/components/action-panel/link';
+import ActionPanelFooter from 'wp-calypso-client/components/action-panel/footer';
 import { Button } from '@automattic/components';
 import AccountCloseConfirmDialog from './confirm-dialog';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { getCurrentUser } from 'state/current-user/selectors';
-import hasLoadedSites from 'state/selectors/has-loaded-sites';
-import getAccountClosureSites from 'state/selectors/get-account-closure-sites';
-import userHasAnyAtomicSites from 'state/selectors/user-has-any-atomic-sites';
-import isAccountClosed from 'state/selectors/is-account-closed';
-import { hasLoadedUserPurchasesFromServer } from 'state/purchases/selectors';
-import hasCancelableUserPurchases from 'state/selectors/has-cancelable-user-purchases';
-import getUserPurchasedPremiumThemes from 'state/selectors/get-user-purchased-premium-themes';
-import userUtils from 'lib/user/utils';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import hasLoadedSites from 'wp-calypso-client/state/selectors/has-loaded-sites';
+import getAccountClosureSites from 'wp-calypso-client/state/selectors/get-account-closure-sites';
+import userHasAnyAtomicSites from 'wp-calypso-client/state/selectors/user-has-any-atomic-sites';
+import isAccountClosed from 'wp-calypso-client/state/selectors/is-account-closed';
+import { hasLoadedUserPurchasesFromServer } from 'wp-calypso-client/state/purchases/selectors';
+import hasCancelableUserPurchases from 'wp-calypso-client/state/selectors/has-cancelable-user-purchases';
+import getUserPurchasedPremiumThemes from 'wp-calypso-client/state/selectors/get-user-purchased-premium-themes';
+import userUtils from 'wp-calypso-client/lib/user/utils';
 
 /**
  * Style dependencies

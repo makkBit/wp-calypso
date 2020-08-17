@@ -11,11 +11,11 @@ import { localize } from 'i18n-calypso';
  */
 import DataSynchronization from './data-synchronization';
 import DisconnectSiteLink from './disconnect-site-link';
-import DocumentHead from 'components/data/document-head';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
 import SiteOwnership from './site-ownership';
-import redirectNonJetpack from 'my-sites/site-settings/redirect-non-jetpack';
+import redirectNonJetpack from 'wp-calypso-client/my-sites/site-settings/redirect-non-jetpack';
 
 /**
  * Style dependencies

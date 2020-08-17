@@ -9,9 +9,9 @@ import { useRtl } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { stripHTML } from 'lib/formatting';
+import { stripHTML } from 'wp-calypso-client/lib/formatting';
 import { isRTLCharacter, isLTRCharacter } from './direction';
-import Emojify from 'components/emojify';
+import Emojify from 'wp-calypso-client/components/emojify';
 
 const MAX_LENGTH_OF_TEXT_TO_EXAMINE = 100;
 

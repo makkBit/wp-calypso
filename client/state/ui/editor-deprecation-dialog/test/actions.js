@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import { hideEditorDeprecationDialog } from '../actions';
-import { EDITOR_DEPRECATION_DIALOG_IS_SHOWING } from 'state/action-types';
+import { EDITOR_DEPRECATION_DIALOG_IS_SHOWING } from 'wp-calypso-client/state/action-types';
 
 describe( 'actions', () => {
 	describe( 'hideEditorDeprecationDialog()', () => {

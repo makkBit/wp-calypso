@@ -11,10 +11,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { withoutHttp } from 'lib/url';
-import ClipboardButton from 'components/forms/clipboard-button';
-import FormTextInput from 'components/forms/form-text-input';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

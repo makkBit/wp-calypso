@@ -8,19 +8,19 @@ import page from 'page';
 import { identity, noop } from 'lodash';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classnames from 'classnames';
 
 /**
  * Internal dependencies
  */
-import { getHappychatAuth } from 'state/happychat/utils';
-import hasUnreadMessages from 'state/happychat/selectors/has-unread-messages';
-import hasActiveHappychatSession from 'state/happychat/selectors/has-active-happychat-session';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import isHappychatConnectionUninitialized from 'state/happychat/selectors/is-happychat-connection-uninitialized';
-import { initConnection } from 'state/happychat/connection/actions';
-import { openChat } from 'state/happychat/ui/actions';
+import { getHappychatAuth } from 'wp-calypso-client/state/happychat/utils';
+import hasUnreadMessages from 'wp-calypso-client/state/happychat/selectors/has-unread-messages';
+import hasActiveHappychatSession from 'wp-calypso-client/state/happychat/selectors/has-active-happychat-session';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import isHappychatConnectionUninitialized from 'wp-calypso-client/state/happychat/selectors/is-happychat-connection-uninitialized';
+import { initConnection } from 'wp-calypso-client/state/happychat/connection/actions';
+import { openChat } from 'wp-calypso-client/state/happychat/ui/actions';
 import { Button } from '@automattic/components';
 
 export class HappychatButton extends Component {

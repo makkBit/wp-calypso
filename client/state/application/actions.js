@@ -1,10 +1,14 @@
 /**
  * Internal dependencies
  */
-import { CONNECTION_LOST, CONNECTION_RESTORED } from 'state/action-types';
-import { warningNotice, successNotice, removeNotice } from 'state/notices/actions';
+import { CONNECTION_LOST, CONNECTION_RESTORED } from 'wp-calypso-client/state/action-types';
+import {
+	warningNotice,
+	successNotice,
+	removeNotice,
+} from 'wp-calypso-client/state/notices/actions';
 
-import 'state/application/init';
+import 'wp-calypso-client/state/application/init';
 
 export function connectionLost( noticeText ) {
 	return ( dispatch ) => {

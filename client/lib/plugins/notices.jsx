@@ -8,11 +8,11 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import PluginsLog from 'lib/plugins/log-store';
-import PluginsActions from 'lib/plugins/actions';
-import { filterNotices } from 'lib/plugins/utils';
-import versionCompare from 'lib/version-compare';
+import notices from 'wp-calypso-client/notices';
+import PluginsLog from 'wp-calypso-client/lib/plugins/log-store';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
+import { filterNotices } from 'wp-calypso-client/lib/plugins/utils';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
 
 function getCombination( translateArg ) {
 	return (

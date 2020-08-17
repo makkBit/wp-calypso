@@ -19,8 +19,8 @@ describe( 'Users Store', () => {
 	let Dispatcher, UsersStore, siteId, options;
 
 	beforeEach( () => {
-		Dispatcher = require( 'dispatcher' );
-		UsersStore = require( 'lib/users/store' );
+		Dispatcher = require( 'wp-calypso-client/dispatcher' );
+		UsersStore = require( 'wp-calypso-client/lib/users/store' );
 		siteId = site.ID;
 		options = { siteId };
 	} );

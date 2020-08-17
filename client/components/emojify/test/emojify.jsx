@@ -12,7 +12,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import Emojify from '..';
 
 describe( 'Emojify', () => {

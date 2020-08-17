@@ -11,7 +11,7 @@ import { pick } from 'lodash';
  * Internal dependencies
  */
 import FeaturedDomainSuggestionsPlaceholder from './placeholder';
-import DomainRegistrationSuggestion from 'components/domains/domain-registration-suggestion';
+import DomainRegistrationSuggestion from 'wp-calypso-client/components/domains/domain-registration-suggestion';
 
 /**
  * Style dependencies

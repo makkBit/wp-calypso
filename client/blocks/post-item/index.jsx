@@ -11,31 +11,34 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import getEditorUrl from 'state/selectors/get-editor-url';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getNormalizedPost } from 'state/posts/selectors';
-import { isSingleUserSite } from 'state/sites/selectors';
-import areAllSitesSingleUser from 'state/selectors/are-all-sites-single-user';
-import { canCurrentUserEditPost } from 'state/posts/selectors/can-current-user-edit-post';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getNormalizedPost } from 'wp-calypso-client/state/posts/selectors';
+import { isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
+import areAllSitesSingleUser from 'wp-calypso-client/state/selectors/are-all-sites-single-user';
+import { canCurrentUserEditPost } from 'wp-calypso-client/state/posts/selectors/can-current-user-edit-post';
 import {
 	isSharePanelOpen,
 	isMultiSelectEnabled,
 	isPostSelected,
-} from 'state/ui/post-type-list/selectors';
-import { hideActiveSharePanel, togglePostSelection } from 'state/ui/post-type-list/actions';
-import { bumpStat } from 'state/analytics/actions';
-import ExternalLink from 'components/external-link';
-import FormInputCheckbox from 'components/forms/form-checkbox';
-import PostShare from 'blocks/post-share';
-import PostTypeListPostThumbnail from 'my-sites/post-type-list/post-thumbnail';
-import PostActionCounts from 'my-sites/post-type-list/post-action-counts';
-import PostActionsEllipsisMenu from 'my-sites/post-type-list/post-actions-ellipsis-menu';
-import PostActionsEllipsisMenuEdit from 'my-sites/post-type-list/post-actions-ellipsis-menu/edit';
-import PostActionsEllipsisMenuTrash from 'my-sites/post-type-list/post-actions-ellipsis-menu/trash';
-import PostTypeSiteInfo from 'my-sites/post-type-list/post-type-site-info';
-import PostTypePostAuthor from 'my-sites/post-type-list/post-type-post-author';
-import { preload } from 'sections-helper';
-import PostRelativeTimeStatus from 'my-sites/post-relative-time-status';
+} from 'wp-calypso-client/state/ui/post-type-list/selectors';
+import {
+	hideActiveSharePanel,
+	togglePostSelection,
+} from 'wp-calypso-client/state/ui/post-type-list/actions';
+import { bumpStat } from 'wp-calypso-client/state/analytics/actions';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormInputCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import PostShare from 'wp-calypso-client/blocks/post-share';
+import PostTypeListPostThumbnail from 'wp-calypso-client/my-sites/post-type-list/post-thumbnail';
+import PostActionCounts from 'wp-calypso-client/my-sites/post-type-list/post-action-counts';
+import PostActionsEllipsisMenu from 'wp-calypso-client/my-sites/post-type-list/post-actions-ellipsis-menu';
+import PostActionsEllipsisMenuEdit from 'wp-calypso-client/my-sites/post-type-list/post-actions-ellipsis-menu/edit';
+import PostActionsEllipsisMenuTrash from 'wp-calypso-client/my-sites/post-type-list/post-actions-ellipsis-menu/trash';
+import PostTypeSiteInfo from 'wp-calypso-client/my-sites/post-type-list/post-type-site-info';
+import PostTypePostAuthor from 'wp-calypso-client/my-sites/post-type-list/post-type-post-author';
+import { preload } from 'wp-calypso-client/sections-helper';
+import PostRelativeTimeStatus from 'wp-calypso-client/my-sites/post-relative-time-status';
 
 /**
  * Style dependencies

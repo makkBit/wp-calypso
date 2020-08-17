@@ -9,9 +9,9 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import { isAuthorNameBlocked } from 'reader/lib/author-name-blocklist';
-import * as stats from 'reader/stats';
-import Emojify from 'components/emojify';
+import { isAuthorNameBlocked } from 'wp-calypso-client/reader/lib/author-name-blocklist';
+import * as stats from 'wp-calypso-client/reader/stats';
+import Emojify from 'wp-calypso-client/components/emojify';
 
 /**
  * Style dependencies

@@ -6,8 +6,11 @@ import { keyBy, merge, mapValues } from 'lodash';
 /**
  * Internal dependencies
  */
-import { READER_TAGS_RECEIVE, READER_UNFOLLOW_TAG_RECEIVE } from 'state/reader/action-types';
-import { withoutPersistence } from 'state/utils';
+import {
+	READER_TAGS_RECEIVE,
+	READER_UNFOLLOW_TAG_RECEIVE,
+} from 'wp-calypso-client/state/reader/action-types';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 
 /*
  * since the api always returns the whole list of followed tags unpaginated, both read/tags*,

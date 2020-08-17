@@ -9,8 +9,8 @@ import isShallowEqual from '@wordpress/is-shallow-equal';
 /**
  * Internal dependencies
  */
-import { requestSiteTerms } from 'state/terms/actions';
-import { isRequestingTermsForQuery } from 'state/terms/selectors';
+import { requestSiteTerms } from 'wp-calypso-client/state/terms/actions';
+import { isRequestingTermsForQuery } from 'wp-calypso-client/state/terms/selectors';
 
 class QueryTerms extends Component {
 	UNSAFE_componentWillMount() {

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
@@ -12,11 +12,11 @@ import React, { PureComponent } from 'react';
  */
 import { Button } from '@automattic/components';
 import { dismissBanner } from './actions';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isUpworkBannerDismissed from 'state/selectors/is-upwork-banner-dismissed';
-import QueryPreferences from 'components/data/query-preferences';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isUpworkBannerDismissed from 'wp-calypso-client/state/selectors/is-upwork-banner-dismissed';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies
@@ -26,7 +26,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import builderIllustration from 'assets/images/illustrations/builder-referral.svg';
+import builderIllustration from 'wp-calypso-client/assets/images/illustrations/builder-referral.svg';
 
 class UpworkBanner extends PureComponent {
 	static propTypes = {

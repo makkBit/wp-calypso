@@ -10,15 +10,15 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { isPersonal, isGoogleApps } from 'lib/products-values';
+import { isPersonal, isGoogleApps } from 'wp-calypso-client/lib/products-values';
 import CustomDomainPurchaseDetail from './custom-domain-purchase-detail';
 import GoogleAppsDetails from './google-apps-details';
-import PurchaseDetail from 'components/purchase-detail';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 
 /**
  * Image dependencies
  */
-import adsRemovedImage from 'assets/images/illustrations/removed-ads.svg';
+import adsRemovedImage from 'wp-calypso-client/assets/images/illustrations/removed-ads.svg';
 
 const PersonalPlanDetails = ( { translate, selectedSite, sitePlans, purchases } ) => {
 	const plan = find( sitePlans.data, isPersonal );

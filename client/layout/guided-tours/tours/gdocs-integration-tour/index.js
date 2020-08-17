@@ -15,8 +15,8 @@ import {
 	ButtonRow,
 	LinkQuit,
 	Quit,
-} from 'layout/guided-tours/config-elements';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 
 const trackUserInterest = () => {
 	recordTracksEvent( 'calypso_editor_gdocs_tour_success' );

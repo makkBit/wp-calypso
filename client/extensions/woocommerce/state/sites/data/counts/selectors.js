@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { statusWaitingPayment, statusWaitingFulfillment } from 'woocommerce/lib/order-status';
 
 function getItems( state, siteId ) {

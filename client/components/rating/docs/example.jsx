@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Rating from 'components/rating';
+import Rating from 'wp-calypso-client/components/rating';
 
 export default class RatingExample extends React.PureComponent {
 	static displayName = 'Rating';

@@ -12,17 +12,17 @@ import { flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormPhoneInput from 'components/forms/form-phone-input';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import Notice from 'components/notice';
-import formBase from 'me/form-base';
-import Security2faProgress from 'me/security-2fa-progress';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import observe from 'lib/mixins/data-observe';
-import { protectForm } from 'lib/protect-form';
-import getCountries from 'state/selectors/get-countries';
-import QuerySmsCountries from 'components/data/query-countries/sms';
+import FormPhoneInput from 'wp-calypso-client/components/forms/form-phone-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import Notice from 'wp-calypso-client/components/notice';
+import formBase from 'wp-calypso-client/me/form-base';
+import Security2faProgress from 'wp-calypso-client/me/security-2fa-progress';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import observe from 'wp-calypso-client/lib/mixins/data-observe';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import QuerySmsCountries from 'wp-calypso-client/components/data/query-countries/sms';
 
 /**
  * Style dependencies

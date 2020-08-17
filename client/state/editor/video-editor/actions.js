@@ -6,10 +6,10 @@ import {
 	VIDEO_EDITOR_SHOW_ERROR,
 	VIDEO_EDITOR_SHOW_UPLOAD_PROGRESS,
 	VIDEO_EDITOR_UPDATE_POSTER,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/videos/poster';
-import 'state/editor/init';
+import 'wp-calypso-client/state/data-layer/wpcom/videos/poster';
+import 'wp-calypso-client/state/editor/init';
 
 /**
  * Returns an action object to indicate that a request has been made to update the video poster.

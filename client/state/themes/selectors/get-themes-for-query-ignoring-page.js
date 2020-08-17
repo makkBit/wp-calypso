@@ -2,14 +2,14 @@
  * External dependencies
  */
 import { uniq, flatMap } from 'lodash';
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 /**
  * Internal dependencies
  */
-import { getSerializedThemesQueryWithoutPage } from 'state/themes/utils';
+import { getSerializedThemesQueryWithoutPage } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns an array of normalized themes for the themes query, including all

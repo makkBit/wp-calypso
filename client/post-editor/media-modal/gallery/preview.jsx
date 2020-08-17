@@ -10,8 +10,8 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import SegmentedControl from 'components/segmented-control';
+import Notice from 'wp-calypso-client/components/notice';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
 import EditorMediaModalGalleryEdit from './edit';
 import EditorMediaModalGalleryPreviewShortcode from './preview-shortcode';
 import EditorMediaModalGalleryPreviewIndividual from './preview-individual';

@@ -14,12 +14,16 @@ import {
 	READER_SEEN_MARK_AS_SEEN_RECEIVE,
 	READER_SEEN_MARK_AS_UNSEEN_RECEIVE,
 	READER_SEEN_MARK_ALL_AS_SEEN_RECEIVE,
-} from 'state/reader/action-types';
-import { SERIALIZE } from 'state/action-types';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
-import { decodeEntities, stripHTML } from 'lib/formatting';
+} from 'wp-calypso-client/state/reader/action-types';
+import { SERIALIZE } from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
+import { decodeEntities, stripHTML } from 'wp-calypso-client/lib/formatting';
 import { itemsSchema } from './schema';
-import { safeLink } from 'lib/post-normalizer/utils';
+import { safeLink } from 'wp-calypso-client/lib/post-normalizer/utils';
 
 function handleSerialize( state ) {
 	// remove errors from the serialized state

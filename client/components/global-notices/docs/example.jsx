@@ -10,10 +10,10 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ButtonGroup from 'components/button-group';
-import FormCheckbox from 'components/forms/form-checkbox';
-import notices from 'notices';
-import { createNotice } from 'state/notices/actions';
+import ButtonGroup from 'wp-calypso-client/components/button-group';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import notices from 'wp-calypso-client/notices';
+import { createNotice } from 'wp-calypso-client/state/notices/actions';
 
 class GlobalNotices extends Component {
 	constructor() {

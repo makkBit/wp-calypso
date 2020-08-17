@@ -12,20 +12,23 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormTextArea from 'components/forms/form-textarea';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import Gridicon from 'components/gridicon';
-import QueryRewindState from 'components/data/query-rewind-state';
-import { deleteCredentials, updateCredentials } from 'state/jetpack/credentials/actions';
-import { getSiteSlug } from 'state/sites/selectors';
-import getJetpackCredentialsUpdateStatus from 'state/selectors/get-jetpack-credentials-update-status';
-import getRewindState from 'state/selectors/get-rewind-state';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextArea from 'wp-calypso-client/components/forms/form-textarea';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import {
+	deleteCredentials,
+	updateCredentials,
+} from 'wp-calypso-client/state/jetpack/credentials/actions';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import getJetpackCredentialsUpdateStatus from 'wp-calypso-client/state/selectors/get-jetpack-credentials-update-status';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
 
 /**
  * Style dependencies

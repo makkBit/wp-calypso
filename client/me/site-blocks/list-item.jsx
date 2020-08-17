@@ -8,11 +8,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getSite } from 'state/reader/sites/selectors';
-import ExternalLink from 'components/external-link';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 import { Button } from '@automattic/components';
-import { unblockSite } from 'state/reader/site-blocks/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { unblockSite } from 'wp-calypso-client/state/reader/site-blocks/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class SiteBlockListItem extends Component {
 	unblockSite = () => {

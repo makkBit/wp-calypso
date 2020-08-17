@@ -7,9 +7,9 @@ import {
 	THEMES_BANNER_HIDE,
 	THEMES_SHOWCASE_OPEN,
 	THEMES_BOOKMARK_SET,
-} from 'state/themes/action-types';
+} from 'wp-calypso-client/state/themes/action-types';
 import { themesBannerVisibleSchema } from '../schema';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 
 // Destination for 'back' button on theme sheet
 export function backPath( state = '/themes', action ) {

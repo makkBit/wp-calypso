@@ -14,7 +14,7 @@ import {
 	JETPACK_CONNECT_SSO_VALIDATION_ERROR,
 	JETPACK_CONNECT_SSO_VALIDATION_REQUEST,
 	JETPACK_CONNECT_SSO_VALIDATION_SUCCESS,
-} from 'state/jetpack-connect/action-types';
+} from 'wp-calypso-client/state/jetpack-connect/action-types';
 
 const successfulSSOValidation = {
 	type: JETPACK_CONNECT_SSO_VALIDATION_SUCCESS,

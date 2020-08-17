@@ -7,16 +7,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { debounce, partial } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import FormRange from 'components/forms/range';
-import SegmentedControl from 'components/segmented-control';
-import { setPreference, savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
-import { SCALE_CHOICES } from 'lib/media/constants';
+import FormRange from 'wp-calypso-client/components/forms/range';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import { setPreference, savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { SCALE_CHOICES } from 'wp-calypso-client/lib/media/constants';
 
 /**
  * Constants

@@ -8,12 +8,12 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { Button } from '@automattic/components';
-import SitePlaceholder from 'blocks/site/placeholder';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
 import { Item, Feed, FeedError } from './types';
-import { getFeed } from 'state/reader/feeds/selectors';
-import QueryReaderFeed from 'components/data/query-reader-feed';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
 
 function isFeedError( feed: Feed | FeedError ): feed is FeedError {
 	return 'errors' in feed;

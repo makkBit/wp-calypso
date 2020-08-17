@@ -9,10 +9,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 class SharingButtonsStyle extends React.Component {
 	static displayName = 'SharingButtonsStyle';

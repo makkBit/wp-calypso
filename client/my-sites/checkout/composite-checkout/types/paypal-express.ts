@@ -1,11 +1,11 @@
 /**
  * External dependencies
  */
-import { getNonProductWPCOMCartItemTypes } from 'my-sites/checkout/composite-checkout/wpcom';
+import { getNonProductWPCOMCartItemTypes } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom';
 import type {
 	WPCOMCartItem,
 	DomainContactDetails,
-} from 'my-sites/checkout/composite-checkout/wpcom/types';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/types';
 
 /**
  * Internal dependencies

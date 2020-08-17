@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 
-import { combineReducers, withoutPersistence } from 'state/utils';
-import { MEDIA_MODAL_VIEW_SET } from 'state/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
+import { MEDIA_MODAL_VIEW_SET } from 'wp-calypso-client/state/action-types';
 
 export const view = withoutPersistence( ( state = null, action ) => {
 	switch ( action.type ) {

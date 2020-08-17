@@ -14,7 +14,7 @@ import {
 	getEditorPath,
 	getEditorPublishButtonStatus,
 } from '../selectors';
-import PostQueryManager from 'lib/query-manager/post';
+import PostQueryManager from 'wp-calypso-client/lib/query-manager/post';
 
 describe( 'selectors', () => {
 	describe( '#getEditorPostId()', () => {

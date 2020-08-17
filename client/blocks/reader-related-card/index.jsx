@@ -10,17 +10,17 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { getPostById } from 'state/reader/posts/selectors';
-import { getSite } from 'state/reader/sites/selectors';
-import QueryReaderSite from 'components/data/query-reader-site';
+import { getPostById } from 'wp-calypso-client/state/reader/posts/selectors';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
 import { CompactCard as Card } from '@automattic/components';
-import Gravatar from 'components/gravatar';
-import FollowButton from 'reader/follow-button';
-import { getPostUrl, getStreamUrl } from 'reader/route';
-import { areEqualIgnoringWhitespaceAndCase } from 'lib/string';
-import ReaderFeaturedVideo from 'blocks/reader-featured-video';
-import ReaderFeaturedImage from 'blocks/reader-featured-image';
-import ReaderAuthorLink from 'blocks/reader-author-link';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import FollowButton from 'wp-calypso-client/reader/follow-button';
+import { getPostUrl, getStreamUrl } from 'wp-calypso-client/reader/route';
+import { areEqualIgnoringWhitespaceAndCase } from 'wp-calypso-client/lib/string';
+import ReaderFeaturedVideo from 'wp-calypso-client/blocks/reader-featured-video';
+import ReaderFeaturedImage from 'wp-calypso-client/blocks/reader-featured-image';
+import ReaderAuthorLink from 'wp-calypso-client/blocks/reader-author-link';
 
 /**
  * Style dependencies

@@ -7,7 +7,7 @@ import deepFreeze from 'deep-freeze';
  * Internal dependencies
  */
 import { isClosed } from '../reducer';
-import { ACCOUNT_CLOSE_SUCCESS } from 'state/action-types';
+import { ACCOUNT_CLOSE_SUCCESS } from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	describe( '#isClosed()', () => {

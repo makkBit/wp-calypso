@@ -9,7 +9,7 @@ import chrono from 'chrono-node';
 /**
  * Internal dependencies
  */
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

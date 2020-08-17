@@ -10,17 +10,17 @@ import i18n from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { domainManagementEdit } from 'my-sites/domains/paths';
-import { emailManagement } from 'my-sites/email/paths';
-import { getThemeDetailsUrl } from 'state/themes/selectors';
+import config from 'wp-calypso-client/config';
+import { domainManagementEdit } from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
+import { getThemeDetailsUrl } from 'wp-calypso-client/state/themes/selectors';
 import {
 	isDomainProduct,
 	isGoogleApps,
 	isPlan,
 	isSiteRedirect,
 	isTheme,
-} from 'lib/products-values';
+} from 'wp-calypso-client/lib/products-values';
 
 const ProductLink = ( { productUrl, purchase, selectedSite } ) => {
 	let props = {},

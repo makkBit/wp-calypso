@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { planHasFeature, planHasSuperiorFeature } from 'lib/plans';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { planHasFeature, planHasSuperiorFeature } from 'wp-calypso-client/lib/plans';
 import {
 	FEATURE_SPAM_AKISMET_PLUS,
 	FEATURE_JETPACK_BACKUP_REALTIME,
@@ -15,8 +15,8 @@ import {
 	PLAN_JETPACK_PERSONAL_MONTHLY,
 	PLAN_JETPACK_PREMIUM,
 	PLAN_JETPACK_PREMIUM_MONTHLY,
-} from 'lib/plans/constants';
-import { isJetpackBackup, isJetpackScan } from 'lib/products-values';
+} from 'wp-calypso-client/lib/plans/constants';
+import { isJetpackBackup, isJetpackScan } from 'wp-calypso-client/lib/products-values';
 import {
 	PRODUCT_JETPACK_ANTI_SPAM,
 	PRODUCT_JETPACK_ANTI_SPAM_MONTHLY,
@@ -25,16 +25,20 @@ import {
 	PRODUCT_JETPACK_BACKUP_REALTIME,
 	PRODUCT_JETPACK_BACKUP_DAILY_MONTHLY,
 	PRODUCT_JETPACK_BACKUP_REALTIME_MONTHLY,
-} from 'lib/products-values/constants';
-import { hasFeature } from 'state/sites/plans/selectors';
-import isSiteWPCOM from 'state/selectors/is-site-wpcom';
-import { isJetpackSiteMultiSite, hasSiteProduct, getSitePlanSlug } from 'state/sites/selectors';
+} from 'wp-calypso-client/lib/products-values/constants';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import isSiteWPCOM from 'wp-calypso-client/state/selectors/is-site-wpcom';
+import {
+	isJetpackSiteMultiSite,
+	hasSiteProduct,
+	getSitePlanSlug,
+} from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Type dependencies
  */
-import type { AppState } from 'types';
-import type { CartItemValue } from 'lib/cart-values/types';
+import type { AppState } from 'wp-calypso-client/types';
+import type { CartItemValue } from 'wp-calypso-client/lib/cart-values/types';
 
 /**
  * Checks if Jetpack Anti-Spam is conflicting with a site's current products.

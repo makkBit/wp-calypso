@@ -3,12 +3,12 @@
  */
 import { useMobileBreakpoint } from '@automattic/viewport-react';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import InfoPopover from 'components/info-popover';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
 
 export default function PlanFeaturesItem( {
 	children,

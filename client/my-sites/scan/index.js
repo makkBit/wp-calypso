@@ -6,21 +6,21 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { navigation, siteSelection, sites } from 'my-sites/controller';
-import { notFound, makeLayout, render as clientRender } from 'controller';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import wrapInSiteOffsetProvider from 'lib/wrap-in-site-offset';
-import wpcomUpsellController from 'lib/jetpack/wpcom-upsell-controller';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isJetpackSectionEnabledForSite from 'state/selectors/is-jetpack-section-enabled-for-site';
+import { navigation, siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
+import { notFound, makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import wrapInSiteOffsetProvider from 'wp-calypso-client/lib/wrap-in-site-offset';
+import wpcomUpsellController from 'wp-calypso-client/lib/jetpack/wpcom-upsell-controller';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackSectionEnabledForSite from 'wp-calypso-client/state/selectors/is-jetpack-section-enabled-for-site';
 import {
 	showUpsellIfNoScan,
 	showUpsellIfNoScanHistory,
 	scan,
 	scanHistory,
-} from 'my-sites/scan/controller';
-import WPCOMScanUpsellPage from 'my-sites/scan/wpcom-upsell';
-import getIsSiteWPCOM from 'state/selectors/is-site-wpcom';
+} from 'wp-calypso-client/my-sites/scan/controller';
+import WPCOMScanUpsellPage from 'wp-calypso-client/my-sites/scan/wpcom-upsell';
+import getIsSiteWPCOM from 'wp-calypso-client/state/selectors/is-site-wpcom';
 
 const notFoundIfNotEnabled = ( context, next ) => {
 	const state = context.store.getState();

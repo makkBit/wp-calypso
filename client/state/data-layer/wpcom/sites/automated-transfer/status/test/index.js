@@ -8,13 +8,13 @@ import sinon from 'sinon';
  * Internal dependencies
  */
 import { requestStatus, receiveStatus } from '../';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	fetchAutomatedTransferStatus,
 	setAutomatedTransferStatus,
-} from 'state/automated-transfer/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { useFakeTimers } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/automated-transfer/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { useFakeTimers } from 'wp-calypso-client/test-helpers/use-sinon';
 
 const siteId = 1916284;
 

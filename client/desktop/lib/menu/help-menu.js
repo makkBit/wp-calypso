@@ -2,16 +2,16 @@
  * External dependencies
  */
 const { shell } = require( 'electron' ); // eslint-disable-line import/no-extraneous-dependencies
-const ipc = require( 'desktop/lib/calypso-commands' );
+const ipc = require( 'wp-calypso-client/desktop/lib/calypso-commands' );
 const zipLogs = require( '../../window-handlers/get-logs' );
 
 /**
  * Internal dependencies
  */
-const state = require( 'desktop/lib/state' );
-const platform = require( 'desktop/lib/platform' );
-const WindowManager = require( 'desktop/lib/window-manager' );
-const log = require( 'desktop/lib/logger' )( 'desktop:menu:help' );
+const state = require( 'wp-calypso-client/desktop/lib/state' );
+const platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const WindowManager = require( 'wp-calypso-client/desktop/lib/window-manager' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:menu:help' );
 
 const menuItems = [];
 

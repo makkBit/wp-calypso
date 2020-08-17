@@ -6,10 +6,10 @@ import { findLast } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getActionLog } from 'state/ui/action-log/selectors';
-import { GUIDED_TOUR_UPDATE } from 'state/action-types';
+import { getActionLog } from 'wp-calypso-client/state/ui/action-log/selectors';
+import { GUIDED_TOUR_UPDATE } from 'wp-calypso-client/state/action-types';
 
-import 'state/guided-tours/init';
+import 'wp-calypso-client/state/guided-tours/init';
 
 /*
  * When applicable, returns the name of the tour that has been started and not

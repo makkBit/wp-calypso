@@ -4,8 +4,8 @@
 /**
  * Internal dependencies
  */
-import { isDiscoverPost } from 'reader/discover/helper';
-import { shouldShowComments } from 'blocks/comments/helper';
+import { isDiscoverPost } from 'wp-calypso-client/reader/discover/helper';
+import { shouldShowComments } from 'wp-calypso-client/blocks/comments/helper';
 
 export function shouldShowConversationFollowButton( post ) {
 	return (

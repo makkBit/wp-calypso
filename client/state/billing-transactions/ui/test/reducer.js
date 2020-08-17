@@ -10,7 +10,7 @@ import {
 	BILLING_TRANSACTIONS_FILTER_SET_MONTH,
 	BILLING_TRANSACTIONS_FILTER_SET_PAGE,
 	BILLING_TRANSACTIONS_FILTER_SET_QUERY,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { app, date, page, query } from '../reducer';
 
 describe( 'transaction filter reducer', () => {

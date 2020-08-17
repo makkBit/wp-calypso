@@ -8,9 +8,9 @@ import React, { useState, useCallback, FunctionComponent } from 'react';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import FoldableCard from 'components/foldable-card';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
 import FeaturesItem from './features-item';
 import type { Features } from './types';
 

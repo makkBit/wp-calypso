@@ -1,11 +1,11 @@
 /**
  * Internal Dependencies
  */
-import createSelector from 'lib/create-selector';
-import { needsToRenewSoon } from 'lib/purchases';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { needsToRenewSoon } from 'wp-calypso-client/lib/purchases';
 import { getSitePurchases } from './get-site-purchases';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Returns a list of Purchases associated with a Site that may be expiring soon

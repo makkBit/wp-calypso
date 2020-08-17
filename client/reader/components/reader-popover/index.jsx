@@ -8,7 +8,7 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
+import Popover from 'wp-calypso-client/components/popover';
 
 /**
  * Style dependencies

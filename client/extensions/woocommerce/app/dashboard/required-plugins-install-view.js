@@ -11,12 +11,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { activatePlugin, installPlugin, fetchPlugins } from 'state/plugins/installed/actions';
+import {
+	activatePlugin,
+	installPlugin,
+	fetchPlugins,
+} from 'wp-calypso-client/state/plugins/installed/actions';
 import { Button, ProgressBar } from '@automattic/components';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import { fetchPluginData } from 'state/plugins/wporg/actions';
-import { getPlugin } from 'state/plugins/wporg/selectors';
-import { getPlugins, getStatusForSite } from 'state/plugins/installed/selectors';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import { fetchPluginData } from 'wp-calypso-client/state/plugins/wporg/actions';
+import { getPlugin } from 'wp-calypso-client/state/plugins/wporg/selectors';
+import { getPlugins, getStatusForSite } from 'wp-calypso-client/state/plugins/installed/selectors';
 import {
 	getRequiredPluginsForCalypso,
 	getPluginsForStoreSetup,
@@ -25,9 +29,9 @@ import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
 import SetupHeader from './setup/header';
 import SetupNotices from './setup/notices';
 import { setFinishedInstallOfRequiredPlugins } from 'woocommerce/state/sites/setup-choices/actions';
-import hasSitePendingAutomatedTransfer from 'state/selectors/has-site-pending-automated-transfer';
-import { getAutomatedTransferStatus } from 'state/automated-transfer/selectors';
-import { transferStates } from 'state/automated-transfer/constants';
+import hasSitePendingAutomatedTransfer from 'wp-calypso-client/state/selectors/has-site-pending-automated-transfer';
+import { getAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
 import { recordTrack } from 'woocommerce/lib/analytics';
 
 // Time in seconds to complete various steps.

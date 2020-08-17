@@ -11,11 +11,11 @@ import { Dialog } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import Gridicon from 'components/gridicon';
-import ServerCredentialsForm from 'components/jetpack/server-credentials-form';
-import getJetpackCredentials from 'state/selectors/get-jetpack-credentials';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import ServerCredentialsForm from 'wp-calypso-client/components/jetpack/server-credentials-form';
+import getJetpackCredentials from 'wp-calypso-client/state/selectors/get-jetpack-credentials';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

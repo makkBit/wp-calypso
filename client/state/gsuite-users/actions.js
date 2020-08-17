@@ -5,9 +5,9 @@ import {
 	GSUITE_USERS_REQUEST,
 	GSUITE_USERS_REQUEST_SUCCESS,
 	GSUITE_USERS_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/gsuite-users';
+import 'wp-calypso-client/state/data-layer/wpcom/gsuite-users';
 
 export const getGSuiteUsers = ( siteId ) => {
 	return {

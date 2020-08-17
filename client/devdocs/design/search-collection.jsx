@@ -8,12 +8,12 @@ import { map, chunk } from 'lodash';
 /**
  * Internal dependencies
  */
-import ComponentPlayground from 'devdocs/design/component-playground';
+import ComponentPlayground from 'wp-calypso-client/devdocs/design/component-playground';
 import LazyRender from 'react-lazily-render';
-import DocsExampleWrapper from 'devdocs/docs-example/wrapper';
-import { camelCaseToSlug, getComponentName } from 'devdocs/docs-example/util';
-import ReadmeViewer from 'components/readme-viewer';
-import Placeholder from 'devdocs/devdocs-async-load/placeholder';
+import DocsExampleWrapper from 'wp-calypso-client/devdocs/docs-example/wrapper';
+import { camelCaseToSlug, getComponentName } from 'wp-calypso-client/devdocs/docs-example/util';
+import ReadmeViewer from 'wp-calypso-client/components/readme-viewer';
+import Placeholder from 'wp-calypso-client/devdocs/devdocs-async-load/placeholder';
 import { getExampleCodeFromComponent } from './playground-utils';
 
 const shouldShowInstance = ( example, filter, component ) => {

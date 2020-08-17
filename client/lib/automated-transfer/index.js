@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import config, { isEnabled } from 'config';
-import { isWpComBusinessPlan, isWpComEcommercePlan } from 'lib/plans';
-import { userCan } from 'lib/site/utils';
+import config, { isEnabled } from 'wp-calypso-client/config';
+import { isWpComBusinessPlan, isWpComEcommercePlan } from 'wp-calypso-client/lib/plans';
+import { userCan } from 'wp-calypso-client/lib/site/utils';
 
 /**
  * Returns true if Automated Transfer is enabled for the given site

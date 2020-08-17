@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Returns the server error for site or user purchases (if there is one)

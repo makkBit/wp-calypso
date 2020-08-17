@@ -10,10 +10,10 @@ import { isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import FormLabel from 'components/forms/form-label';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormSelect from 'components/forms/form-select';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
 
 class CountrySelect extends React.PureComponent {
 	recordCountrySelectClick = () => {

@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getEditedPost } from 'state/posts/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getPostType } from 'state/post-types/selectors';
-import QueryPostTypes from 'components/data/query-post-types';
-import { decodeEntities } from 'lib/formatting';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getPostType } from 'wp-calypso-client/state/post-types/selectors';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Style dependencies

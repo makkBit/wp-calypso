@@ -11,21 +11,21 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { deserialize } from 'lib/media-serialization';
-import { url as mediaUrl } from 'lib/media/utils';
+import { deserialize } from 'wp-calypso-client/lib/media-serialization';
+import { url as mediaUrl } from 'wp-calypso-client/lib/media/utils';
 import { Dialog } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import PostSelector from 'my-sites/post-selector';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getSitePosts } from 'state/posts/selectors';
-import { decodeEntities } from 'lib/formatting';
-import { recordEditorEvent, recordEditorStat } from 'state/posts/stats';
-import Gridicon from 'components/gridicon';
-import { getMediaItem } from 'state/media/thunks';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import PostSelector from 'wp-calypso-client/my-sites/post-selector';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSitePosts } from 'wp-calypso-client/state/posts/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { recordEditorEvent, recordEditorStat } from 'wp-calypso-client/state/posts/stats';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { getMediaItem } from 'wp-calypso-client/state/media/thunks';
 
 /**
  * Module variables

@@ -6,11 +6,11 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { errorNotice } from 'state/notices/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { REWIND_RESTORE_DISMISS_PROGRESS } from 'state/action-types';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { REWIND_RESTORE_DISMISS_PROGRESS } from 'wp-calypso-client/state/action-types';
 
 /**
  * Mark a specific restore record as dismissed.

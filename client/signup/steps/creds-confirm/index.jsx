@@ -11,12 +11,12 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card, Button } from '@automattic/components';
-import { autoConfigCredentials } from 'state/jetpack/credentials/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import { autoConfigCredentials } from 'wp-calypso-client/state/jetpack/credentials/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

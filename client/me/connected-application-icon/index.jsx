@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import PluginIcon from 'my-sites/plugins/plugin-icon/plugin-icon';
+import PluginIcon from 'wp-calypso-client/my-sites/plugins/plugin-icon/plugin-icon';
 
 /**
  * Style dependencies

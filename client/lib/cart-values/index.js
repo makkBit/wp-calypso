@@ -5,7 +5,7 @@ import url from 'url';
 import { extend, get, isArray, invert } from 'lodash';
 import update, { extend as extendImmutabilityHelper } from 'immutability-helper';
 import { translate } from 'i18n-calypso';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
@@ -17,8 +17,12 @@ import {
 	hasDomainRegistration,
 	hasPlan,
 } from './cart-items';
-import { isCredits, isDomainRedemption, allowedProductAttributes } from 'lib/products-values';
-import { detectWebPaymentMethod } from 'lib/web-payment';
+import {
+	isCredits,
+	isDomainRedemption,
+	allowedProductAttributes,
+} from 'wp-calypso-client/lib/products-values';
+import { detectWebPaymentMethod } from 'wp-calypso-client/lib/web-payment';
 
 // Auto-vivification from https://github.com/kolodny/immutability-helper#autovivification
 extendImmutabilityHelper( '$auto', function ( value, object ) {

@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { withoutHttp, urlToSlug } from 'lib/url';
-import getSitesItems from 'state/selectors/get-sites-items';
-import getRawSite from 'state/selectors/get-raw-site';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { withoutHttp, urlToSlug } from 'wp-calypso-client/lib/url';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 import getSiteOption from './get-site-option';
 import isSiteConflicting from './is-site-conflicting';
 

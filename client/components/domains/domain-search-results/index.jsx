@@ -12,19 +12,22 @@ import { isMobile } from '@automattic/viewport';
 /**
  * Internal dependencies
  */
-import DomainRegistrationSuggestion from 'components/domains/domain-registration-suggestion';
-import DomainTransferSuggestion from 'components/domains/domain-transfer-suggestion';
-import DomainSuggestion from 'components/domains/domain-suggestion';
-import FeaturedDomainSuggestions from 'components/domains/featured-domain-suggestions';
-import { isDomainMappingFree, isNextDomainFree } from 'lib/cart-values/cart-items';
-import Notice from 'components/notice';
+import DomainRegistrationSuggestion from 'wp-calypso-client/components/domains/domain-registration-suggestion';
+import DomainTransferSuggestion from 'wp-calypso-client/components/domains/domain-transfer-suggestion';
+import DomainSuggestion from 'wp-calypso-client/components/domains/domain-suggestion';
+import FeaturedDomainSuggestions from 'wp-calypso-client/components/domains/featured-domain-suggestions';
+import {
+	isDomainMappingFree,
+	isNextDomainFree,
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import Notice from 'wp-calypso-client/components/notice';
 import { Card, ScreenReaderText } from '@automattic/components';
-import { getTld } from 'lib/domains';
-import { domainAvailability } from 'lib/domains/constants';
-import { getDesignType } from 'state/signup/steps/design-type/selectors';
-import { DESIGN_TYPE_STORE } from 'signup/constants';
-import { hideSitePreview } from 'state/signup/preview/actions';
-import { isSitePreviewVisible } from 'state/signup/preview/selectors';
+import { getTld } from 'wp-calypso-client/lib/domains';
+import { domainAvailability } from 'wp-calypso-client/lib/domains/constants';
+import { getDesignType } from 'wp-calypso-client/state/signup/steps/design-type/selectors';
+import { DESIGN_TYPE_STORE } from 'wp-calypso-client/signup/constants';
+import { hideSitePreview } from 'wp-calypso-client/state/signup/preview/actions';
+import { isSitePreviewVisible } from 'wp-calypso-client/state/signup/preview/selectors';
 
 /**
  * Style dependencies

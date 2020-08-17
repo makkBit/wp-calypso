@@ -8,7 +8,7 @@ import { map } from 'lodash';
 /**
  * Internal dependencies
  */
-import WordPressLogo from 'components/wordpress-logo';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
 
 /**
  * Style dependencies

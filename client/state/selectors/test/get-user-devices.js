@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getUserDevices from 'state/selectors/get-user-devices';
+import getUserDevices from 'wp-calypso-client/state/selectors/get-user-devices';
 
 describe( '#getUserDevices()', () => {
 	test( 'should return an empty array if there are no devices', () => {

@@ -22,7 +22,7 @@ describe( 'cart-synchronizer', () => {
 	let applyCoupon, emptyCart;
 
 	beforeAll( () => {
-		const cartValues = require( 'lib/cart-values' );
+		const cartValues = require( 'wp-calypso-client/lib/cart-values' );
 
 		applyCoupon = cartValues.applyCoupon;
 		emptyCart = cartValues.emptyCart;

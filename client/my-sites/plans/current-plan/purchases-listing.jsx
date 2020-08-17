@@ -15,24 +15,28 @@ import {
 	getSitePlanSlug,
 	isCurrentPlanExpiring,
 	isRequestingSitePlans,
-} from 'state/sites/plans/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getSitePurchases } from 'state/purchases/selectors';
-import isJetpackCloudEligible from 'state/selectors/is-jetpack-cloud-eligible';
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
+import isJetpackCloudEligible from 'wp-calypso-client/state/selectors/is-jetpack-cloud-eligible';
 import { Button, Card } from '@automattic/components';
 import MyPlanCard from './my-plan-card';
-import QuerySites from 'components/data/query-sites';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import ProductExpiration from 'components/product-expiration';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { managePurchase } from 'me/purchases/paths';
-import { getPlan, planHasFeature } from 'lib/plans';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import ProductExpiration from 'wp-calypso-client/components/product-expiration';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
+import { getPlan, planHasFeature } from 'wp-calypso-client/lib/plans';
 import {
 	isExpiring,
 	isPartnerPurchase,
 	shouldAddPaymentSourceInsteadOfRenewingNow,
-} from 'lib/purchases';
+} from 'wp-calypso-client/lib/purchases';
 import {
 	isFreeJetpackPlan,
 	isFreePlan,
@@ -41,15 +45,15 @@ import {
 	getJetpackProductTagline,
 	isJetpackBackup,
 	isJetpackScan,
-} from 'lib/products-values';
+} from 'wp-calypso-client/lib/products-values';
 import {
 	isJetpackSearch,
 	PRODUCT_JETPACK_BACKUP_DAILY,
 	PRODUCT_JETPACK_SCAN,
 	PRODUCT_JETPACK_BACKUP_REALTIME,
-} from 'lib/products-values/constants';
-import Gridicon from 'components/gridicon';
-import QueryRewindState from 'components/data/query-rewind-state';
+} from 'wp-calypso-client/lib/products-values/constants';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
 
 class PurchasesListing extends Component {
 	static propTypes = {

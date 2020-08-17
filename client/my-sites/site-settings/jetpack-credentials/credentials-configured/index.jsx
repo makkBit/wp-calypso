@@ -9,14 +9,14 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
-import getRewindState from 'state/selectors/get-rewind-state';
-import Gridicon from 'components/gridicon';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import RewindCredentialsForm from 'components/rewind-credentials-form';
-import siteSupportsRealtimeBackup from 'state/selectors/site-supports-realtime-backup';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import RewindCredentialsForm from 'wp-calypso-client/components/rewind-credentials-form';
+import siteSupportsRealtimeBackup from 'wp-calypso-client/state/selectors/site-supports-realtime-backup';
 import { CompactCard, Button } from '@automattic/components';
-import { deleteCredentials } from 'state/jetpack/credentials/actions';
+import { deleteCredentials } from 'wp-calypso-client/state/jetpack/credentials/actions';
 
 /**
  * Style dependencies

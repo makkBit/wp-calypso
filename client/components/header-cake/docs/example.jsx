@@ -8,7 +8,7 @@ import React from 'react';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import HeaderCake from 'components/header-cake';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 
 /**
  * Module vars

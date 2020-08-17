@@ -9,9 +9,9 @@ import { useSelector } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import { getJetpackProductDisplayName } from 'lib/products-values/get-jetpack-product-display-name';
-import { getSitePurchases } from 'state/purchases/selectors';
-import type { SiteProduct } from 'state/sites/selectors/get-site-products';
+import { getJetpackProductDisplayName } from 'wp-calypso-client/lib/products-values/get-jetpack-product-display-name';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
+import type { SiteProduct } from 'wp-calypso-client/state/sites/selectors/get-site-products';
 
 type Site = {
 	ID: number;

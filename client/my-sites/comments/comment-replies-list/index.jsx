@@ -10,10 +10,13 @@ import { map, take } from 'lodash';
 /**
  * Internal dependencies
  */
-import Comment from 'my-sites/comments/comment';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { getSiteCommentParentDepth, getSiteCommentRepliesTree } from 'state/comments/selectors';
+import Comment from 'wp-calypso-client/my-sites/comments/comment';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import {
+	getSiteCommentParentDepth,
+	getSiteCommentRepliesTree,
+} from 'wp-calypso-client/state/comments/selectors';
 
 /**
  * Style dependencies

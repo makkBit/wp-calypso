@@ -11,12 +11,12 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import CountedTextarea from 'components/forms/counted-textarea';
-import EditorDrawerLabel from 'post-editor/editor-drawer/label';
-import FormTextarea from 'components/forms/form-textarea';
-import InfoPopover from 'components/info-popover';
-import TrackInputChanges from 'components/track-input-changes';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
+import CountedTextarea from 'wp-calypso-client/components/forms/counted-textarea';
+import EditorDrawerLabel from 'wp-calypso-client/post-editor/editor-drawer/label';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import TrackInputChanges from 'wp-calypso-client/components/track-input-changes';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
 
 /**
  * Style dependencies

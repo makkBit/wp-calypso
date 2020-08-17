@@ -38,9 +38,14 @@ import {
 	COMMENTS_TREE_SITE_ADD,
 	COMMENTS_WRITE_ERROR,
 	COMMENTS_SET_ACTIVE_REPLY,
-} from 'state/action-types';
-import { READER_EXPAND_COMMENTS } from 'state/reader/action-types';
-import { combineReducers, keyedReducer, withoutPersistence, withStorageKey } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { READER_EXPAND_COMMENTS } from 'wp-calypso-client/state/reader/action-types';
+import {
+	combineReducers,
+	keyedReducer,
+	withoutPersistence,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
 import {
 	PLACEHOLDER_STATE,
 	NUMBER_OF_COMMENTS_PER_FETCH,

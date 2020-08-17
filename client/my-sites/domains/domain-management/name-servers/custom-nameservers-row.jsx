@@ -4,14 +4,18 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 class CustomNameserversRow extends React.PureComponent {
 	static propTypes = {

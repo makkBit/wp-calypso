@@ -6,14 +6,14 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { addQueryArgs, externalRedirect } from 'lib/route';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { REMOTE_PATH_AUTH } from 'jetpack-connect/constants';
-import { urlToSlug } from 'lib/url';
-import { JETPACK_CONNECT_RETRY_AUTH } from 'state/jetpack-connect/action-types';
+import config from 'wp-calypso-client/config';
+import { addQueryArgs, externalRedirect } from 'wp-calypso-client/lib/route';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { REMOTE_PATH_AUTH } from 'wp-calypso-client/jetpack-connect/constants';
+import { urlToSlug } from 'wp-calypso-client/lib/url';
+import { JETPACK_CONNECT_RETRY_AUTH } from 'wp-calypso-client/state/jetpack-connect/action-types';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Module constants

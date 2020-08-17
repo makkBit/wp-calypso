@@ -6,8 +6,8 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { isActive } from 'state/automated-transfer/selectors/is-automated-transfer-active';
-import { transferStates } from 'state/automated-transfer/constants';
+import { isActive } from 'wp-calypso-client/state/automated-transfer/selectors/is-automated-transfer-active';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
 
 describe( 'Automated Transfer', () => {
 	describe( 'isActive()', () => {

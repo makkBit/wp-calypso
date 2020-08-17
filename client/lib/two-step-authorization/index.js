@@ -10,15 +10,15 @@ const debug = debugFactory( 'calypso:two-step-authorization' );
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { bumpStat } from 'lib/analytics/mc';
-import config from 'config';
-import emitter from 'lib/mixins/emitter';
-import userSettings from 'lib/user-settings';
-import { reduxDispatch } from 'lib/redux-bridge';
-import { requestConnectedApplications } from 'state/connected-applications/actions';
-import { requestUserProfileLinks } from 'state/profile-links/actions';
-import wp from 'lib/wp';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import config from 'wp-calypso-client/config';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
+import userSettings from 'wp-calypso-client/lib/user-settings';
+import { reduxDispatch } from 'wp-calypso-client/lib/redux-bridge';
+import { requestConnectedApplications } from 'wp-calypso-client/state/connected-applications/actions';
+import { requestUserProfileLinks } from 'wp-calypso-client/state/profile-links/actions';
+import wp from 'wp-calypso-client/lib/wp';
 
 const wpcom = wp.undocumented();
 

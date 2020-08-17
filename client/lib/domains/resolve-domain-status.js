@@ -8,10 +8,10 @@ import moment from 'moment';
  * Internal dependencies
  */
 import { transferStatus, type as domainTypes } from './constants';
-import { isExpiringSoon } from 'lib/domains/utils/is-expiring-soon';
-import { isRecentlyRegistered } from 'lib/domains/utils/is-recently-registered';
-import { hasPendingGSuiteUsers } from 'lib/gsuite';
-import { shouldRenderExpiringCreditCard } from 'lib/purchases';
+import { isExpiringSoon } from 'wp-calypso-client/lib/domains/utils/is-expiring-soon';
+import { isRecentlyRegistered } from 'wp-calypso-client/lib/domains/utils/is-recently-registered';
+import { hasPendingGSuiteUsers } from 'wp-calypso-client/lib/gsuite';
+import { shouldRenderExpiringCreditCard } from 'wp-calypso-client/lib/purchases';
 
 export function resolveDomainStatus(
 	domain,

@@ -27,7 +27,7 @@ import {
 	PLAN_JETPACK_PERSONAL,
 	PLAN_JETPACK_PERSONAL_MONTHLY,
 	PLAN_JETPACK_PREMIUM,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Internal dependencies

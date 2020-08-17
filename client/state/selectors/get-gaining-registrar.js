@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/domains/init';
+import 'wp-calypso-client/state/domains/init';
 
 /**
  * Returns gaining registrar data for a given domain, if we've successfully

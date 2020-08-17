@@ -9,8 +9,8 @@ import { range } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import SitePlaceholder from 'blocks/site/placeholder';
+import Main from 'wp-calypso-client/components/main';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
 
 export default class DevdocsAsyncLoadPlaceholder extends React.PureComponent {
 	static propTypes = {

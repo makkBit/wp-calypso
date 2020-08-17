@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getMediaQueryManager from 'state/selectors/get-media-query-manager';
+import getMediaQueryManager from 'wp-calypso-client/state/selectors/get-media-query-manager';
 
 describe( 'getMediaQueryManager', () => {
 	const siteId = 23478323;

@@ -8,10 +8,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestPostLikes } from 'state/posts/likes/actions';
-import { getPostLikeLastUpdated } from 'state/posts/selectors/get-post-like-last-updated';
-import { getPostLikes } from 'state/posts/selectors/get-post-likes';
-import { Interval } from 'lib/interval';
+import { requestPostLikes } from 'wp-calypso-client/state/posts/likes/actions';
+import { getPostLikeLastUpdated } from 'wp-calypso-client/state/posts/selectors/get-post-like-last-updated';
+import { getPostLikes } from 'wp-calypso-client/state/posts/selectors/get-post-likes';
+import { Interval } from 'wp-calypso-client/lib/interval';
 
 class QueryPostLikes extends Component {
 	static propTypes = {

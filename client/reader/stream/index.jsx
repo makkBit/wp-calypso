@@ -12,7 +12,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ReaderMain from 'reader/components/reader-main';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
 import EmptyContent from './empty';
 import {
 	requestPage,
@@ -20,35 +20,38 @@ import {
 	selectNextItem,
 	selectPrevItem,
 	showUpdates,
-} from 'state/reader/streams/actions';
+} from 'wp-calypso-client/state/reader/streams/actions';
 import {
 	getStream,
 	getTransformedStreamItems,
 	shouldRequestRecs,
-} from 'state/reader/streams/selectors';
+} from 'wp-calypso-client/state/reader/streams/selectors';
 
-import { shouldShowLikes } from 'reader/like-helper';
-import { like as likePost, unlike as unlikePost } from 'state/posts/likes/actions';
-import { isLikedPost } from 'state/posts/selectors/is-liked-post';
-import ListEnd from 'components/list-end';
-import InfiniteList from 'components/infinite-list';
-import MobileBackToSidebar from 'components/mobile-back-to-sidebar';
+import { shouldShowLikes } from 'wp-calypso-client/reader/like-helper';
+import {
+	like as likePost,
+	unlike as unlikePost,
+} from 'wp-calypso-client/state/posts/likes/actions';
+import { isLikedPost } from 'wp-calypso-client/state/posts/selectors/is-liked-post';
+import ListEnd from 'wp-calypso-client/components/list-end';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
+import MobileBackToSidebar from 'wp-calypso-client/components/mobile-back-to-sidebar';
 import PostPlaceholder from './post-placeholder';
-import UpdateNotice from 'reader/update-notice';
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
-import scrollTo from 'lib/scroll-to';
-import XPostHelper from 'reader/xpost-helper';
+import UpdateNotice from 'wp-calypso-client/reader/update-notice';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import XPostHelper from 'wp-calypso-client/reader/xpost-helper';
 import PostLifecycle from './post-lifecycle';
-import { showSelectedPost, getStreamType } from 'reader/utils';
-import { getBlockedSites } from 'state/reader/site-blocks/selectors';
-import { keysAreEqual, keyToString, keyForPost } from 'reader/post-key';
-import { resetCardExpansions } from 'state/reader-ui/card-expansions/actions';
-import { reduxGetState } from 'lib/redux-bridge';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import { viewStream } from 'state/reader/watermarks/actions';
-import { Interval, EVERY_MINUTE } from 'lib/interval';
-import { PER_FETCH, INITIAL_FETCH } from 'state/data-layer/wpcom/read/streams';
-import { PerformanceTrackerStop } from 'lib/performance-tracking';
+import { showSelectedPost, getStreamType } from 'wp-calypso-client/reader/utils';
+import { getBlockedSites } from 'wp-calypso-client/state/reader/site-blocks/selectors';
+import { keysAreEqual, keyToString, keyForPost } from 'wp-calypso-client/reader/post-key';
+import { resetCardExpansions } from 'wp-calypso-client/state/reader-ui/card-expansions/actions';
+import { reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import { viewStream } from 'wp-calypso-client/state/reader/watermarks/actions';
+import { Interval, EVERY_MINUTE } from 'wp-calypso-client/lib/interval';
+import { PER_FETCH, INITIAL_FETCH } from 'wp-calypso-client/state/data-layer/wpcom/read/streams';
+import { PerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
 
 /**
  * Style dependencies

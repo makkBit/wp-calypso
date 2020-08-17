@@ -12,15 +12,15 @@ import {
 	hasDomainRegistration,
 	hasDomainMapping,
 	hasProduct,
-} from 'lib/cart-values/cart-items';
-import { managePurchase } from 'me/purchases/paths';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
 import {
 	UPGRADE_INTENT_PLUGINS,
 	UPGRADE_INTENT_INSTALL_PLUGIN,
 	UPGRADE_INTENT_THEMES,
 	UPGRADE_INTENT_INSTALL_THEME,
-} from 'lib/checkout/constants';
-import { decodeURIComponentIfValid, isExternal } from 'lib/url';
+} from 'wp-calypso-client/lib/checkout/constants';
+import { decodeURIComponentIfValid, isExternal } from 'wp-calypso-client/lib/url';
 import { domainManagementEdit } from '../../my-sites/domains/paths';
 import { isDomainRegistration } from '../products-values';
 

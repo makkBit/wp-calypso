@@ -11,16 +11,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { sectionify } from 'lib/route';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import PopoverCart from 'my-sites/checkout/cart/popover-cart';
-import { isATEnabled } from 'lib/automated-transfer';
-import isSiteOnFreePlan from 'state/selectors/is-site-on-free-plan';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite, isJetpackSite } from 'state/sites/selectors';
+import config from 'wp-calypso-client/config';
+import { sectionify } from 'wp-calypso-client/lib/route';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import PopoverCart from 'wp-calypso-client/my-sites/checkout/cart/popover-cart';
+import { isATEnabled } from 'wp-calypso-client/lib/automated-transfer';
+import isSiteOnFreePlan from 'wp-calypso-client/state/selectors/is-site-on-free-plan';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 class PlansNavigation extends React.Component {
 	static propTypes = {

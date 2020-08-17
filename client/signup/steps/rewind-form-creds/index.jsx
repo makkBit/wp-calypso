@@ -10,12 +10,12 @@ import { get, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card } from '@automattic/components';
-import FormattedHeader from 'components/formatted-header';
-import RewindCredentialsForm from 'components/rewind-credentials-form';
-import getRewindState from 'state/selectors/get-rewind-state';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import RewindCredentialsForm from 'wp-calypso-client/components/rewind-credentials-form';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

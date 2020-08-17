@@ -7,8 +7,8 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import { addQueryArgs } from 'lib/route';
+import { isEnabled } from 'wp-calypso-client/config';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
 export function generateFlows( {
 	getSiteDestination = noop,

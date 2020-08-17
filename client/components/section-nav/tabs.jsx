@@ -11,9 +11,9 @@ import { debounce } from 'lodash';
 /**
  * Internal Dependencies
  */
-import SelectDropdown from 'components/select-dropdown';
-import afterLayoutFlush from 'lib/after-layout-flush';
-import TranslatableString from 'components/translatable/proptype';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import afterLayoutFlush from 'wp-calypso-client/lib/after-layout-flush';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 /**
  * Style dependencies

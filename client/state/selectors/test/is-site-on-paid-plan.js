@@ -14,8 +14,8 @@ import {
 	PLAN_FREE,
 	PLAN_JETPACK_BUSINESS,
 	PLAN_JETPACK_FREE,
-} from 'lib/plans/constants';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
+} from 'wp-calypso-client/lib/plans/constants';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
 jest.mock( 'state/sites/plans/selectors', () => ( { getCurrentPlan: require( 'sinon' ).stub() } ) );
 
 describe( 'isSiteOnPaidPlan', () => {

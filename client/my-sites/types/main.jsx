@@ -10,18 +10,18 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import DocumentHead from 'components/data/document-head';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import PostTypeFilter from 'my-sites/post-type-filter';
-import PostTypeList from 'my-sites/post-type-list';
+import Main from 'wp-calypso-client/components/main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import PostTypeFilter from 'wp-calypso-client/my-sites/post-type-filter';
+import PostTypeList from 'wp-calypso-client/my-sites/post-type-list';
 import PostTypeUnsupported from './post-type-unsupported';
 import PostTypeForbidden from './post-type-forbidden';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getPostType, isPostTypeSupported } from 'state/post-types/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getPostType, isPostTypeSupported } from 'wp-calypso-client/state/post-types/selectors';
 
 function Types( {
 	siteId,

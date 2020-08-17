@@ -8,7 +8,7 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import JetpackLogo from 'components/jetpack-logo';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
 
 /**
  * Style dependencies

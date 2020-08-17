@@ -10,14 +10,14 @@ import i18n from 'i18n-calypso';
  */
 import PeopleList from './main';
 import EditTeamMember from './edit-team-member-form';
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
 import InvitePeople from './invite-people';
 import PeopleInvites from './people-invites';
 import PeopleInviteDetails from './people-invite-details';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getSiteFragment } from 'lib/route';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 
 export default {
 	redirectToTeam,

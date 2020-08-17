@@ -1,13 +1,13 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getAutomatedTransferStatus } from 'state/automated-transfer/selectors';
-import { transferStates } from 'state/automated-transfer/constants';
-import hasSitePendingAutomatedTransfer from 'state/selectors/has-site-pending-automated-transfer';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import config from 'wp-calypso-client/config';
+import { getAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
+import hasSitePendingAutomatedTransfer from 'wp-calypso-client/state/selectors/has-site-pending-automated-transfer';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Returns true if current user can see and use Store option in menu

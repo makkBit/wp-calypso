@@ -10,13 +10,13 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard, Button } from '@automattic/components';
-import { recordTracksEvent } from 'state/analytics/actions';
-import Main from 'components/main';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import Main from 'wp-calypso-client/components/main';
 
 /**
  * Image dependencies
  */
-import premiumThemesImage from 'assets/images/illustrations/themes.svg';
+import premiumThemesImage from 'wp-calypso-client/assets/images/illustrations/themes.svg';
 
 /**
  * Style dependencies

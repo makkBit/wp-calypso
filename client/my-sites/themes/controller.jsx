@@ -9,17 +9,21 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import SingleSiteComponent from 'my-sites/themes/single-site';
-import MultiSiteComponent from 'my-sites/themes/multi-site';
+import SingleSiteComponent from 'wp-calypso-client/my-sites/themes/single-site';
+import MultiSiteComponent from 'wp-calypso-client/my-sites/themes/multi-site';
 import LoggedOutComponent from './logged-out';
-import Upload from 'my-sites/themes/theme-upload';
-import trackScrollPage from 'lib/track-scroll-page';
-import { DEFAULT_THEME_QUERY } from 'state/themes/constants';
-import { requestThemes, requestThemeFilters, setBackPath } from 'state/themes/actions';
-import { getThemeFilters, getThemesForQuery } from 'state/themes/selectors';
+import Upload from 'wp-calypso-client/my-sites/themes/theme-upload';
+import trackScrollPage from 'wp-calypso-client/lib/track-scroll-page';
+import { DEFAULT_THEME_QUERY } from 'wp-calypso-client/state/themes/constants';
+import {
+	requestThemes,
+	requestThemeFilters,
+	setBackPath,
+} from 'wp-calypso-client/state/themes/actions';
+import { getThemeFilters, getThemesForQuery } from 'wp-calypso-client/state/themes/selectors';
 import { getAnalyticsData } from './helpers';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 const debug = debugFactory( 'calypso:themes' );
 

@@ -6,25 +6,25 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal Dependencies
  */
 import { Card } from '@automattic/components';
-import ReaderFollowButton from 'reader/follow-button';
-import { isAuthorNameBlocked } from 'reader/lib/author-name-blocklist';
-import HeaderBack from 'reader/header-back';
-import { getSiteDescription, getSiteName, getSiteUrl } from 'reader/get-helpers';
-import SiteIcon from 'blocks/site-icon';
-import BlogStickers from 'blocks/blog-stickers';
+import ReaderFollowButton from 'wp-calypso-client/reader/follow-button';
+import { isAuthorNameBlocked } from 'wp-calypso-client/reader/lib/author-name-blocklist';
+import HeaderBack from 'wp-calypso-client/reader/header-back';
+import { getSiteDescription, getSiteName, getSiteUrl } from 'wp-calypso-client/reader/get-helpers';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
+import BlogStickers from 'wp-calypso-client/blocks/blog-stickers';
 import ReaderFeedHeaderSiteBadge from './badge';
-import ReaderSiteNotificationSettings from 'blocks/reader-site-notification-settings';
-import getUserSetting from 'state/selectors/get-user-setting';
-import { isFollowing } from 'state/reader/follows/selectors';
-import QueryUserSettings from 'components/data/query-user-settings';
-import Gridicon from 'components/gridicon';
-import { requestMarkAllAsSeen } from 'state/reader/seen-posts/actions';
+import ReaderSiteNotificationSettings from 'wp-calypso-client/blocks/reader-site-notification-settings';
+import getUserSetting from 'wp-calypso-client/state/selectors/get-user-setting';
+import { isFollowing } from 'wp-calypso-client/state/reader/follows/selectors';
+import QueryUserSettings from 'wp-calypso-client/components/data/query-user-settings';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { requestMarkAllAsSeen } from 'wp-calypso-client/state/reader/seen-posts/actions';
 
 /**
  * Style dependencies

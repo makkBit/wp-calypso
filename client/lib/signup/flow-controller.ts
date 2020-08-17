@@ -22,17 +22,21 @@ import { Store, Unsubscribe as ReduxUnsubscribe } from 'redux';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import flows from 'signup/config/flows';
-import untypedSteps from 'signup/config/steps';
-import wpcom from 'lib/wp';
-import { getStepUrl } from 'signup/utils';
-import { isUserLoggedIn } from 'state/current-user/selectors';
-import { ProgressState } from 'state/signup/progress/schema';
-import { getSignupProgress } from 'state/signup/progress/selectors';
-import { getSignupDependencyStore } from 'state/signup/dependency-store/selectors';
-import { resetSignup, updateDependencies } from 'state/signup/actions';
-import { completeSignupStep, invalidateStep, processStep } from 'state/signup/progress/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import flows from 'wp-calypso-client/signup/config/flows';
+import untypedSteps from 'wp-calypso-client/signup/config/steps';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { getStepUrl } from 'wp-calypso-client/signup/utils';
+import { isUserLoggedIn } from 'wp-calypso-client/state/current-user/selectors';
+import { ProgressState } from 'wp-calypso-client/state/signup/progress/schema';
+import { getSignupProgress } from 'wp-calypso-client/state/signup/progress/selectors';
+import { getSignupDependencyStore } from 'wp-calypso-client/state/signup/dependency-store/selectors';
+import { resetSignup, updateDependencies } from 'wp-calypso-client/state/signup/actions';
+import {
+	completeSignupStep,
+	invalidateStep,
+	processStep,
+} from 'wp-calypso-client/state/signup/progress/actions';
 
 interface Dependencies {
 	[ other: string ]: string[];

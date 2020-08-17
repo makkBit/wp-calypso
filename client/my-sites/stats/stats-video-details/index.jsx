@@ -15,12 +15,12 @@ import StatsListLegend from '../stats-list/legend';
 import StatsModulePlaceholder from '../stats-module/placeholder';
 import StatsModuleHeader from '../stats-module/header';
 import { Card } from '@automattic/components';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	isRequestingSiteStatsForQuery,
 	getSiteStatsNormalizedData,
-} from 'state/stats/lists/selectors';
+} from 'wp-calypso-client/state/stats/lists/selectors';
 
 const StatModuleVideoDetails = ( props ) => {
 	const { data, query, requesting, siteId, translate } = props;

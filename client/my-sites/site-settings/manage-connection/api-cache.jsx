@@ -11,11 +11,11 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import config from 'config';
-import wrapSettingsForm from 'my-sites/site-settings/wrap-settings-form';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import config from 'wp-calypso-client/config';
+import wrapSettingsForm from 'wp-calypso-client/my-sites/site-settings/wrap-settings-form';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 const ApiCache = ( {
 	fields,

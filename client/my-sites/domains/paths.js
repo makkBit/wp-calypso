@@ -3,7 +3,7 @@
  */
 import { filter } from 'lodash';
 import { stringify } from 'qs';
-import { isUnderEmailManagementAll } from 'my-sites/email/paths';
+import { isUnderEmailManagementAll } from 'wp-calypso-client/my-sites/email/paths';
 
 function resolveRootPath( relativeTo = null ) {
 	if ( relativeTo ) {

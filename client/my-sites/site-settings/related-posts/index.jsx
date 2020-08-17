@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import SupportInfo from 'components/support-info';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import SupportInfo from 'wp-calypso-client/components/support-info';
 import RelatedContentPreview from './related-content-preview';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
 
 /**
  * Style dependencies

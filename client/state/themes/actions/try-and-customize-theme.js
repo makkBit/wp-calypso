@@ -6,10 +6,10 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { isExternal } from 'lib/url';
-import { getThemeCustomizeUrl } from 'state/themes/selectors';
+import { isExternal } from 'wp-calypso-client/lib/url';
+import { getThemeCustomizeUrl } from 'wp-calypso-client/state/themes/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Triggers a switch to the try&customize page of theme.

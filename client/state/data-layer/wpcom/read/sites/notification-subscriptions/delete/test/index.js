@@ -6,13 +6,13 @@ import {
 	receiveNotificationUnsubscriptionError,
 	fromApi,
 } from '../';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	subscribeToNewPostNotifications,
 	unsubscribeToNewPostNotifications,
-} from 'state/reader/follows/actions';
-import { NOTICE_CREATE } from 'state/action-types';
+} from 'wp-calypso-client/state/reader/follows/actions';
+import { NOTICE_CREATE } from 'wp-calypso-client/state/action-types';
 
 describe( 'notification-subscriptions-delete', () => {
 	describe( 'requestNotificationUnsubscription', () => {

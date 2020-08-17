@@ -12,7 +12,7 @@ import {
 	DIRECTLY_INITIALIZATION_START,
 	DIRECTLY_INITIALIZATION_SUCCESS,
 	DIRECTLY_INITIALIZATION_ERROR,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'actions', () => {
 	describe( '#askQuestion()', () => {

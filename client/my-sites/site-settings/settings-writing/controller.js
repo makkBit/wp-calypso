@@ -7,9 +7,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import WritingMain from 'my-sites/site-settings/settings-writing/main';
-import Taxonomies from 'my-sites/site-settings/taxonomies';
-import PodcastingDetails from 'my-sites/site-settings/podcasting-details';
+import WritingMain from 'wp-calypso-client/my-sites/site-settings/settings-writing/main';
+import Taxonomies from 'wp-calypso-client/my-sites/site-settings/taxonomies';
+import PodcastingDetails from 'wp-calypso-client/my-sites/site-settings/podcasting-details';
 
 export function writing( context, next ) {
 	context.primary = React.createElement( WritingMain );

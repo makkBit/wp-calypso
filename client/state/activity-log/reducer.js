@@ -1,8 +1,11 @@
 /**
  * Internal dependencies
  */
-import { ACTIVITY_LOG_FILTER_SET, ACTIVITY_LOG_FILTER_UPDATE } from 'state/action-types';
-import { combineReducers, keyedReducer } from 'state/utils';
+import {
+	ACTIVITY_LOG_FILTER_SET,
+	ACTIVITY_LOG_FILTER_UPDATE,
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 import { activationRequesting } from './activation/reducer';
 import { restoreProgress, restoreRequest } from './restore/reducer';
 import { backupRequest, backupProgress } from './backup/reducer';

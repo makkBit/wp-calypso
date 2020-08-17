@@ -9,7 +9,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { StateSelect, Input } from 'my-sites/domains/components/form';
+import { StateSelect, Input } from 'wp-calypso-client/my-sites/domains/components/form';
 import { getStateLabelText, getPostCodeLabelText, STATE_SELECT_TEXT } from './utils.js';
 
 const UsAddressFieldset = ( props ) => {

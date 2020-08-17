@@ -6,8 +6,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import FormFieldAnnotation from 'my-sites/checkout/composite-checkout/wpcom/components/form-field-annotation';
-import FormCountrySelect from 'components/forms/form-country-select';
+import FormFieldAnnotation from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/form-field-annotation';
+import FormCountrySelect from 'wp-calypso-client/components/forms/form-country-select';
 
 export default function CountrySelectMenu( {
 	translate,

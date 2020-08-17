@@ -9,13 +9,13 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { READER_CONVERSATION_MUTE } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, plainNotice } from 'state/notices/actions';
-import { updateConversationFollowStatus } from 'state/reader/conversations/actions';
+import { READER_CONVERSATION_MUTE } from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, plainNotice } from 'wp-calypso-client/state/notices/actions';
+import { updateConversationFollowStatus } from 'wp-calypso-client/state/reader/conversations/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestConversationMute( action ) {
 	return http(

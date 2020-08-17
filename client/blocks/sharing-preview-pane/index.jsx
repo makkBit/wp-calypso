@@ -12,19 +12,19 @@ import { get, find, map } from 'lodash';
  * Internal dependencies
  */
 import { getPostImage, getExcerptForPost, getSummaryForPost } from './utils';
-import FacebookSharePreview from 'components/share/facebook-share-preview';
-import LinkedinSharePreview from 'components/share/linkedin-share-preview';
-import TwitterSharePreview from 'components/share/twitter-share-preview';
-import TumblrSharePreview from 'components/share/tumblr-share-preview';
-import VerticalMenu from 'components/vertical-menu';
-import { SocialItem } from 'components/vertical-menu/items';
-import { getSitePost } from 'state/posts/selectors';
-import { getSeoTitle, getSite, getSiteSlug } from 'state/sites/selectors';
-import { getSiteUserConnections } from 'state/sharing/publicize/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import getSiteIconUrl from 'state/selectors/get-site-icon-url';
+import FacebookSharePreview from 'wp-calypso-client/components/share/facebook-share-preview';
+import LinkedinSharePreview from 'wp-calypso-client/components/share/linkedin-share-preview';
+import TwitterSharePreview from 'wp-calypso-client/components/share/twitter-share-preview';
+import TumblrSharePreview from 'wp-calypso-client/components/share/tumblr-share-preview';
+import VerticalMenu from 'wp-calypso-client/components/vertical-menu';
+import { SocialItem } from 'wp-calypso-client/components/vertical-menu/items';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { getSeoTitle, getSite, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSiteUserConnections } from 'wp-calypso-client/state/sharing/publicize/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import getSiteIconUrl from 'wp-calypso-client/state/selectors/get-site-icon-url';
 
 /**
  * Style dependencies

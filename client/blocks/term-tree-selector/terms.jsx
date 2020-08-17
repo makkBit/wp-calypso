@@ -22,20 +22,20 @@ import {
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 import NoResults from './no-results';
 import Search from './search';
-import { decodeEntities } from 'lib/formatting';
-import QueryTerms from 'components/data/query-terms';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import QueryTerms from 'wp-calypso-client/components/data/query-terms';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	isRequestingTermsForQueryIgnoringPage,
 	getTermsLastPageForQuery,
 	getTermsForQueryIgnoringPage,
-} from 'state/terms/selectors';
-import PodcastIndicator from 'components/podcast-indicator';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import getPodcastingCategoryId from 'state/selectors/get-podcasting-category-id';
+} from 'wp-calypso-client/state/terms/selectors';
+import PodcastIndicator from 'wp-calypso-client/components/podcast-indicator';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import getPodcastingCategoryId from 'wp-calypso-client/state/selectors/get-podcasting-category-id';
 
 /**
  * Style dependencies

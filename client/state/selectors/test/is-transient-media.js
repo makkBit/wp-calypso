@@ -6,8 +6,8 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isTransientMedia from 'state/selectors/is-transient-media';
-import MediaQueryManager from 'lib/query-manager/media';
+import isTransientMedia from 'wp-calypso-client/state/selectors/is-transient-media';
+import MediaQueryManager from 'wp-calypso-client/lib/query-manager/media';
 
 describe( 'isTransientMedia()', () => {
 	test( 'should return false if the media is not known', () => {

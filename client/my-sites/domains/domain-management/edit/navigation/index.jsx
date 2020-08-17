@@ -8,11 +8,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getDomainTypeText } from 'lib/domains';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import MaterialIcon from 'components/material-icon';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getDomainTypeText } from 'wp-calypso-client/lib/domains';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
 import {
 	domainAddNew,
 	domainManagementNameServers,
@@ -21,13 +21,13 @@ import {
 	domainManagementDns,
 	domainManagementDomainConnectMapping,
 	domainManagementChangeSiteAddress,
-} from 'my-sites/domains/paths';
-import { emailManagement } from 'my-sites/email/paths';
-import { type as domainTypes, transferStatus } from 'lib/domains/constants';
-import { recordTracksEvent, recordGoogleEvent } from 'state/analytics/actions';
-import { isCancelable } from 'lib/purchases';
-import { cancelPurchase } from 'me/purchases/paths';
-import RemovePurchase from 'me/purchases/remove-purchase';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
+import { type as domainTypes, transferStatus } from 'wp-calypso-client/lib/domains/constants';
+import { recordTracksEvent, recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { isCancelable } from 'wp-calypso-client/lib/purchases';
+import { cancelPurchase } from 'wp-calypso-client/me/purchases/paths';
+import RemovePurchase from 'wp-calypso-client/me/purchases/remove-purchase';
 
 import './style.scss';
 

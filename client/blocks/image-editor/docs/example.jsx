@@ -9,8 +9,8 @@ import { get } from 'lodash';
  * Internal dependencies
  */
 import ImageEditor from '../';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { AspectRatios } from 'state/editor/image-editor/constants';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
 
 class ImageEditorExample extends Component {
 	constructor() {

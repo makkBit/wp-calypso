@@ -6,8 +6,8 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import hasNavigated from 'state/selectors/has-navigated';
-import { ROUTE_SET } from 'state/action-types';
+import hasNavigated from 'wp-calypso-client/state/selectors/has-navigated';
+import { ROUTE_SET } from 'wp-calypso-client/state/action-types';
 
 describe( 'hasNavigated()', () => {
 	test( 'should return false if only one ROUTE_SET has occurred', () => {

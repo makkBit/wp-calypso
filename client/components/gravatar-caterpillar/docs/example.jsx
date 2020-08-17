@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import GravatarCaterpillar from 'components/gravatar-caterpillar';
+import GravatarCaterpillar from 'wp-calypso-client/components/gravatar-caterpillar';
 import { users } from './fixtures';
 
 function GravatarCaterpillarExample() {

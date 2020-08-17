@@ -6,7 +6,7 @@ import { get, toNumber, isInteger } from 'lodash';
 /**
  * Internal dependencies
  */
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
 
 /**
  * Returns the partner_id query param if present or null.

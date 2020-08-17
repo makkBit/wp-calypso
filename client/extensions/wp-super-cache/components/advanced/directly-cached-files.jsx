@@ -9,10 +9,10 @@ import { pick } from 'lodash';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import SectionHeader from 'components/section-header';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import WrapSettingsForm from '../wrap-settings-form';
 
 class DirectlyCachedFiles extends Component {

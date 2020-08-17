@@ -9,11 +9,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import { useLocalizedMoment } from 'components/localized-moment';
-import getLastGoodRewindBackup from 'state/selectors/get-last-good-rewind-backup';
-import { requestRewindBackups } from 'state/rewind/backups/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import getLastGoodRewindBackup from 'wp-calypso-client/state/selectors/get-last-good-rewind-backup';
+import { requestRewindBackups } from 'wp-calypso-client/state/rewind/backups/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

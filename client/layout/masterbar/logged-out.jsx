@@ -10,18 +10,18 @@ import { get, includes, startsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import Masterbar from './masterbar';
 import Item from './item';
-import WordPressLogo from 'components/wordpress-logo';
-import WordPressWordmark from 'components/wordpress-wordmark';
-import { addQueryArgs } from 'lib/route';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { login } from 'lib/paths';
-import { isDomainConnectAuthorizePath } from 'lib/domains/utils';
-import { isDefaultLocale, addLocaleToPath } from 'lib/i18n-utils';
-import AsyncLoad from 'components/async-load';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
+import WordPressWordmark from 'wp-calypso-client/components/wordpress-wordmark';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { login } from 'wp-calypso-client/lib/paths';
+import { isDomainConnectAuthorizePath } from 'wp-calypso-client/lib/domains/utils';
+import { isDefaultLocale, addLocaleToPath } from 'wp-calypso-client/lib/i18n-utils';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
 
 class MasterbarLoggedOut extends React.Component {
 	static propTypes = {
@@ -155,7 +155,13 @@ class MasterbarLoggedOut extends React.Component {
 		const { title, isCheckout } = this.props;
 
 		if ( isCheckout ) {
-			return <AsyncLoad require="layout/masterbar/checkout" placeholder={ null } title={ title } />;
+			return (
+				<AsyncLoad
+					require="wp-calypso-client/layout/masterbar/checkout"
+					placeholder={ null }
+					title={ title }
+				/>
+			);
 		}
 
 		return (

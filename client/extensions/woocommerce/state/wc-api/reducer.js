@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer } from 'state/utils';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 import status from './status/reducer';
 
 const reducers = {

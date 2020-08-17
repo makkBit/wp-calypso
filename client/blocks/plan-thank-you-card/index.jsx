@@ -12,12 +12,12 @@ import formatCurrency from '@automattic/format-currency';
  * Internal dependencies
  */
 import { ProductIcon } from '@automattic/components';
-import getRawSite from 'state/selectors/get-raw-site';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import QuerySites from 'components/data/query-sites';
-import QuerySitePlans from 'components/data/query-site-plans';
-import { getPlan, getPlanClass } from 'lib/plans';
-import ThankYouCard from 'components/thank-you-card';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import { getPlan, getPlanClass } from 'wp-calypso-client/lib/plans';
+import ThankYouCard from 'wp-calypso-client/components/thank-you-card';
 
 /**
  * Style dependencies

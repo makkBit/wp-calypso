@@ -6,8 +6,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
 
 const EmailForwardingPlaceholder = () => {
 	return (

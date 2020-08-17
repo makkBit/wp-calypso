@@ -6,7 +6,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import Emitter from 'lib/mixins/emitter';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 const debug = debugFactory( 'calypso:notices' );
 

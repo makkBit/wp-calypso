@@ -8,10 +8,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Task from 'my-sites/customer-home/cards/tasks/task';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { TASK_EARN_FEATURES } from 'my-sites/customer-home/cards/constants';
-import earnIllustration from 'assets/images/customer-home/illustration--task-earn.svg';
+import Task from 'wp-calypso-client/my-sites/customer-home/cards/tasks/task';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { TASK_EARN_FEATURES } from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import earnIllustration from 'wp-calypso-client/assets/images/customer-home/illustration--task-earn.svg';
 
 const EarnFeatures = ( { siteSlug } ) => {
 	const translate = useTranslate();

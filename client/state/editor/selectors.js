@@ -6,16 +6,21 @@ import { get, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite, getSiteSlug } from 'state/sites/selectors';
-import { getEditedPost, getSitePost } from 'state/posts/selectors';
-import { getPreference } from 'state/preferences/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { isPublished, isBackDatedPublished, isFutureDated, getPreviewURL } from 'state/posts/utils';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import { addQueryArgs } from 'lib/route';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getEditedPost, getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import {
+	isPublished,
+	isBackDatedPublished,
+	isFutureDated,
+	getPreviewURL,
+} from 'wp-calypso-client/state/posts/utils';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 /**
  * Returns the current editor post ID, or `null` if a new post.

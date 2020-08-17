@@ -12,20 +12,20 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import LoggedIn from 'my-sites/invites/invite-accept-logged-in';
-import LoggedOut from 'my-sites/invites/invite-accept-logged-out';
-import { login } from 'lib/paths';
-import { fetchInvite } from 'lib/invites/actions';
-import InvitesStore from 'lib/invites/stores/invites-accept-validation';
-import EmptyContent from 'components/empty-content';
-import { successNotice, infoNotice } from 'state/notices/actions';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { getRedirectAfterAccept } from 'my-sites/invites/utils';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import userUtils from 'lib/user/utils';
-import LocaleSuggestions from 'components/locale-suggestions';
-import { getCurrentUser } from 'state/current-user/selectors';
+import LoggedIn from 'wp-calypso-client/my-sites/invites/invite-accept-logged-in';
+import LoggedOut from 'wp-calypso-client/my-sites/invites/invite-accept-logged-out';
+import { login } from 'wp-calypso-client/lib/paths';
+import { fetchInvite } from 'wp-calypso-client/lib/invites/actions';
+import InvitesStore from 'wp-calypso-client/lib/invites/stores/invites-accept-validation';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { successNotice, infoNotice } from 'wp-calypso-client/state/notices/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { getRedirectAfterAccept } from 'wp-calypso-client/my-sites/invites/utils';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import userUtils from 'wp-calypso-client/lib/user/utils';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies
@@ -35,7 +35,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import whoopsImage from 'assets/images/illustrations/whoops.svg';
+import whoopsImage from 'wp-calypso-client/assets/images/illustrations/whoops.svg';
 
 /**
  * Module variables

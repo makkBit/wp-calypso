@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
@@ -13,10 +13,10 @@ import { localize } from 'i18n-calypso';
  */
 import PropTypes from 'prop-types';
 import { Card } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getWordAdsEarnings } from 'state/wordads/earnings/selectors';
-import QueryWordadsEarnings from 'components/data/query-wordads-earnings';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getWordAdsEarnings } from 'wp-calypso-client/state/wordads/earnings/selectors';
+import QueryWordadsEarnings from 'wp-calypso-client/components/data/query-wordads-earnings';
 
 class WordAdsEarnings extends Component {
 	static propTypes = {

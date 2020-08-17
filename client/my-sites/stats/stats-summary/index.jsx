@@ -12,12 +12,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ElementChart from 'components/chart';
+import ElementChart from 'wp-calypso-client/components/chart';
 import StatsTabs from '../stats-tabs';
 import StatsTab from '../stats-tabs/tab';
 import StatsModulePlaceholder from '../stats-module/placeholder';
 import { Card } from '@automattic/components';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class StatsSummaryChart extends Component {
 	static propTypes = {

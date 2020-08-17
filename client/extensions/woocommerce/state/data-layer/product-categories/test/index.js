@@ -30,7 +30,7 @@ import {
 	updateProductCategory,
 	deleteProductCategory,
 } from 'woocommerce/state/sites/product-categories/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'handlers', () => {
 	describe( '#fetch()', () => {

@@ -10,11 +10,11 @@ import {
 	SOCIAL_DISCONNECT_ACCOUNT_REQUEST,
 	SOCIAL_DISCONNECT_ACCOUNT_REQUEST_FAILURE,
 	SOCIAL_DISCONNECT_ACCOUNT_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { getErrorFromWPCOMError } from 'state/login/utils';
-import wpcom from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import { getErrorFromWPCOMError } from 'wp-calypso-client/state/login/utils';
+import wpcom from 'wp-calypso-client/lib/wp';
 
-import 'state/login/init';
+import 'wp-calypso-client/state/login/init';
 
 /**
  * Disconnects the current WordPress.com account from a third-party social account (Google ...).

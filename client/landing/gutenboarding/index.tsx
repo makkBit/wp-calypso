@@ -16,18 +16,18 @@ import type { Site as SiteStore } from '@automattic/data-stores';
 import Gutenboard from './gutenboard';
 import { LocaleContext } from './components/locale-context';
 import { setupWpDataDebug } from './devtools';
-import accessibleFocus from 'lib/accessible-focus';
+import accessibleFocus from 'wp-calypso-client/lib/accessible-focus';
 import { Step, path } from './path';
 import { SITE_STORE } from './stores/site';
 import { STORE_KEY as ONBOARD_STORE } from './stores/onboard';
-import { addHotJarScript } from 'lib/analytics/hotjar';
+import { addHotJarScript } from 'wp-calypso-client/lib/analytics/hotjar';
 import { WindowLocaleEffectManager } from './components/window-locale-effect-manager';
 
 /**
  * Style dependencies
  */
-import 'assets/stylesheets/gutenboarding.scss';
-import 'components/environment-badge/style.scss';
+import 'wp-calypso-client/assets/stylesheets/gutenboarding.scss';
+import 'wp-calypso-client/components/environment-badge/style.scss';
 
 // TODO: remove when all needed core types are available
 /*#__PURE__*/ import './gutenberg-types-patch';

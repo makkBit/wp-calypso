@@ -7,8 +7,8 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import { languages } from 'languages';
-import LanguagePicker from 'components/language-picker';
+import { languages } from 'wp-calypso-client/languages';
+import LanguagePicker from 'wp-calypso-client/components/language-picker';
 import { Card, Button } from '@automattic/components';
 
 class LanguagePickerExample extends PureComponent {

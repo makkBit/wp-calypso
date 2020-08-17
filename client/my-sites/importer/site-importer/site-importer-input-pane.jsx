@@ -12,35 +12,35 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import wpcom from 'lib/wp';
-import { validateImportUrl } from 'lib/importer/url-validation';
-import TextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { setSelectedEditor } from 'state/selected-editor/actions';
+import config from 'wp-calypso-client/config';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { validateImportUrl } from 'wp-calypso-client/lib/importer/url-validation';
+import TextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setSelectedEditor } from 'wp-calypso-client/state/selected-editor/actions';
 import {
 	importSite,
 	validateSiteIsImportable,
 	resetSiteImporterImport,
 	setValidationError,
 	clearSiteImporterImport,
-} from 'state/imports/site-importer/actions';
-import ImporterActionButton from 'my-sites/importer/importer-action-buttons/action-button';
-import ImporterCloseButton from 'my-sites/importer/importer-action-buttons/close-button';
-import ImporterActionButtonContainer from 'my-sites/importer/importer-action-buttons/container';
+} from 'wp-calypso-client/state/imports/site-importer/actions';
+import ImporterActionButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/action-button';
+import ImporterCloseButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/close-button';
+import ImporterActionButtonContainer from 'wp-calypso-client/my-sites/importer/importer-action-buttons/container';
 import ErrorPane from '../error-pane';
 import SiteImporterSitePreview from './site-importer-site-preview';
-import { appStates } from 'state/imports/constants';
-import { cancelImport, setUploadStartState } from 'lib/importer/actions';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
+import { cancelImport, setUploadStartState } from 'wp-calypso-client/lib/importer/actions';
 import {
 	getError,
 	getImportData,
 	getImportStage,
 	getValidatedSiteUrl,
 	isLoading as isLoadingSelector,
-} from 'state/imports/site-importer/selectors';
+} from 'wp-calypso-client/state/imports/site-importer/selectors';
 
 /**
  * Style dependencies

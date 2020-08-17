@@ -10,9 +10,9 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import InfoPopover from 'components/info-popover';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
 import ProductCardPriceGroup from './price-group';
 
 const ProductCardOptions = ( {

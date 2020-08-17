@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getSiteSlug } from 'state/sites/selectors';
-import { isThemePremium } from 'state/themes/selectors/is-theme-premium';
-import { oldShowcaseUrl } from 'state/themes/utils';
+import config from 'wp-calypso-client/config';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { isThemePremium } from 'wp-calypso-client/state/themes/selectors/is-theme-premium';
+import { oldShowcaseUrl } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns the URL for a given theme's setup instructions

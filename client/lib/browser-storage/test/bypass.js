@@ -11,7 +11,7 @@ import {
 	getStoredItem,
 	getAllStoredItems,
 	bypassPersistentStorage,
-} from 'lib/browser-storage';
+} from 'wp-calypso-client/lib/browser-storage';
 
 describe( 'lib/browser-storage', () => {
 	describe( 'bypass', () => {

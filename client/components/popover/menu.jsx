@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
+import Popover from 'wp-calypso-client/components/popover';
 
 const isInvalidTarget = ( target ) => {
 	return target.tagName === 'HR';

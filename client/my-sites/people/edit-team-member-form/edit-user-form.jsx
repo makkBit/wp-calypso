@@ -10,23 +10,23 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import ContractorSelect from 'my-sites/people/contractor-select';
-import FormLabel from 'components/forms/form-label';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormTextInput from 'components/forms/form-text-input';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import isVipSite from 'state/selectors/is-vip-site';
-import { updateUser } from 'lib/users/actions';
-import RoleSelect from 'my-sites/people/role-select';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import ContractorSelect from 'wp-calypso-client/my-sites/people/contractor-select';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { updateUser } from 'wp-calypso-client/lib/users/actions';
+import RoleSelect from 'wp-calypso-client/my-sites/people/role-select';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	requestExternalContributors,
 	requestExternalContributorsAddition,
 	requestExternalContributorsRemoval,
-} from 'state/data-getters';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+} from 'wp-calypso-client/state/data-getters';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 /**
  * Style dependencies

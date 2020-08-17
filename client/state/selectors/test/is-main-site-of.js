@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isMainSiteOf from 'state/selectors/is-main-site-of';
+import isMainSiteOf from 'wp-calypso-client/state/selectors/is-main-site-of';
 
 describe( 'isMainSiteOf()', () => {
 	test( 'should return null if no sites exist in state', () => {

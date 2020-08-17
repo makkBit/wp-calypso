@@ -9,11 +9,15 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import EnvironmentBadge, { Branch, DevDocsLink, TestHelper } from 'components/environment-badge';
-import Head from 'components/head';
+import EnvironmentBadge, {
+	Branch,
+	DevDocsLink,
+	TestHelper,
+} from 'wp-calypso-client/components/environment-badge';
+import Head from 'wp-calypso-client/components/head';
 import { chunkCssLinks } from './utils';
-import WordPressLogo from 'components/wordpress-logo';
-import { jsonStringifyForHtml } from 'server/sanitize';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
+import { jsonStringifyForHtml } from 'wp-calypso-client/server/sanitize';
 
 class Desktop extends React.Component {
 	render() {

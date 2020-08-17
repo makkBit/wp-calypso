@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/happiness-engineers/init';
+import 'wp-calypso-client/state/happiness-engineers/init';
 
 /**
  * Returns happiness engineers

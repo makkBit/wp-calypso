@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import page from 'page';
@@ -12,17 +12,17 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import HeaderCake from 'components/header-cake';
-import KeyringConnectButton from 'blocks/keyring-connect-button';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { dismissNudge } from 'blocks/google-my-business-stats-nudge/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { enhanceWithLocationCounts } from 'my-sites/google-my-business/utils';
-import { enhanceWithSiteType, recordTracksEvent } from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
-import { connectGoogleMyBusinessAccount } from 'state/google-my-business/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import KeyringConnectButton from 'wp-calypso-client/blocks/keyring-connect-button';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { dismissNudge } from 'wp-calypso-client/blocks/google-my-business-stats-nudge/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { enhanceWithLocationCounts } from 'wp-calypso-client/my-sites/google-my-business/utils';
+import { enhanceWithSiteType, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
+import { connectGoogleMyBusinessAccount } from 'wp-calypso-client/state/google-my-business/actions';
 
 /**
  * Style dependencies

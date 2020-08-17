@@ -7,17 +7,17 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import { EMAIL_FORWARDING_REQUEST } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import { EMAIL_FORWARDING_REQUEST } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 import {
 	receiveGetEmailForwardsSuccess,
 	receiveGetEmailForwardsFailure,
-} from 'state/email-forwarding/actions';
+} from 'wp-calypso-client/state/email-forwarding/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const getEmailForwards = ( action ) => {
 	return http(

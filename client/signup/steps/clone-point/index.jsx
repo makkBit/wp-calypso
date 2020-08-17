@@ -10,19 +10,19 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { applySiteOffset } from 'lib/site/timezone';
+import { applySiteOffset } from 'wp-calypso-client/lib/site/timezone';
 import { Card } from '@automattic/components';
-import ActivityLogItem from 'my-sites/activity/activity-log-item';
-import Pagination from 'components/pagination';
-import QuerySites from 'components/data/query-sites';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import StepWrapper from 'signup/step-wrapper';
-import Tile from 'components/tile-grid/tile';
-import TileGrid from 'components/tile-grid';
-import { requestActivityLogs } from 'state/data-getters';
-import { getSiteOption } from 'state/sites/selectors';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import ActivityLogItem from 'wp-calypso-client/my-sites/activity/activity-log-item';
+import Pagination from 'wp-calypso-client/components/pagination';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import Tile from 'wp-calypso-client/components/tile-grid/tile';
+import TileGrid from 'wp-calypso-client/components/tile-grid';
+import { requestActivityLogs } from 'wp-calypso-client/state/data-getters';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

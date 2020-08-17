@@ -14,8 +14,8 @@ const debug = debugFactory( 'calypso:composite-checkout:use-get-thank-you-url' )
 /**
  * Internal dependencies
  */
-import { isExternal } from 'lib/url';
-import config from 'config';
+import { isExternal } from 'wp-calypso-client/lib/url';
+import config from 'wp-calypso-client/config';
 import {
 	hasRenewalItem,
 	getAllCartItems,
@@ -26,14 +26,17 @@ import {
 	hasPersonalPlan,
 	hasPremiumPlan,
 	hasEcommercePlan,
-} from 'lib/cart-values/cart-items';
-import { managePurchase } from 'me/purchases/paths';
-import { isValidFeatureKey } from 'lib/plans/features-list';
-import { JETPACK_BACKUP_PRODUCTS } from 'lib/products-values/constants';
-import { persistSignupDestination, retrieveSignupDestination } from 'signup/utils';
-import { getSelectedSite } from 'state/ui/selectors';
-import isEligibleForSignupDestination from 'state/selectors/is-eligible-for-signup-destination';
-import { abtest } from 'lib/abtest';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
+import { isValidFeatureKey } from 'wp-calypso-client/lib/plans/features-list';
+import { JETPACK_BACKUP_PRODUCTS } from 'wp-calypso-client/lib/products-values/constants';
+import {
+	persistSignupDestination,
+	retrieveSignupDestination,
+} from 'wp-calypso-client/signup/utils';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import isEligibleForSignupDestination from 'wp-calypso-client/state/selectors/is-eligible-for-signup-destination';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 export function getThankYouPageUrl( {
 	siteSlug,

@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import page from 'page';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
 
@@ -13,28 +13,32 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button, CompactCard } from '@automattic/components';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormRadio from 'components/forms/form-radio';
-import DomainNotice from 'my-sites/domains/domain-management/components/domain-notice';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import { hasGSuiteWithUs, getGSuiteMailboxCount } from 'lib/gsuite';
-import { withoutHttp } from 'lib/url';
-import { type as domainTypes } from 'lib/domains/constants';
-import { handleRenewNowClick } from 'lib/purchases';
-import { resolveDomainStatus, isDomainInGracePeriod, isDomainUpdateable } from 'lib/domains';
-import InfoPopover from 'components/info-popover';
-import { emailManagement } from 'my-sites/email/paths';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import DomainNotice from 'wp-calypso-client/my-sites/domains/domain-management/components/domain-notice';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { hasGSuiteWithUs, getGSuiteMailboxCount } from 'wp-calypso-client/lib/gsuite';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import { type as domainTypes } from 'wp-calypso-client/lib/domains/constants';
+import { handleRenewNowClick } from 'wp-calypso-client/lib/purchases';
+import {
+	resolveDomainStatus,
+	isDomainInGracePeriod,
+	isDomainUpdateable,
+} from 'wp-calypso-client/lib/domains';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
 import {
 	domainManagementContactsPrivacy,
 	domainManagementNameServers,
 	domainManagementTransfer,
 	domainManagementDns,
 	domainManagementSecurity,
-} from 'my-sites/domains/paths';
-import Spinner from 'components/spinner';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import Spinner from 'wp-calypso-client/components/spinner';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class DomainItem extends PureComponent {
 	static propTypes = {

@@ -9,17 +9,20 @@ import { times } from 'lodash';
 /**
  * Internal dependencies
  */
-import ProfileLink from 'me/profile-link';
-import QueryProfileLinks from 'components/data/query-profile-links';
-import AddProfileLinksButtons from 'me/profile-links/add-buttons';
-import SectionHeader from 'components/section-header';
+import ProfileLink from 'wp-calypso-client/me/profile-link';
+import QueryProfileLinks from 'wp-calypso-client/components/data/query-profile-links';
+import AddProfileLinksButtons from 'wp-calypso-client/me/profile-links/add-buttons';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { Card } from '@automattic/components';
-import Notice from 'components/notice';
-import ProfileLinksAddWordPress from 'me/profile-links-add-wordpress';
-import ProfileLinksAddOther from 'me/profile-links-add-other';
-import { deleteUserProfileLink, resetUserProfileLinkErrors } from 'state/profile-links/actions';
-import getProfileLinks from 'state/selectors/get-profile-links';
-import getProfileLinksErrorType from 'state/selectors/get-profile-links-error-type';
+import Notice from 'wp-calypso-client/components/notice';
+import ProfileLinksAddWordPress from 'wp-calypso-client/me/profile-links-add-wordpress';
+import ProfileLinksAddOther from 'wp-calypso-client/me/profile-links-add-other';
+import {
+	deleteUserProfileLink,
+	resetUserProfileLinkErrors,
+} from 'wp-calypso-client/state/profile-links/actions';
+import getProfileLinks from 'wp-calypso-client/state/selectors/get-profile-links';
+import getProfileLinksErrorType from 'wp-calypso-client/state/selectors/get-profile-links-error-type';
 
 /**
  * Style dependencies

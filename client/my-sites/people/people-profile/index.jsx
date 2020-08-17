@@ -6,17 +6,17 @@ import React, { Component, Fragment } from 'react';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
 import { get } from 'lodash';
-import { recordTrack } from 'reader/stats';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
 import page from 'page';
-import { decodeEntities } from 'lib/formatting';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Internal dependencies
  */
-import Gravatar from 'components/gravatar';
-import InfoPopover from 'components/info-popover';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { requestExternalContributors } from 'state/data-getters';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { requestExternalContributors } from 'wp-calypso-client/state/data-getters';
 /**
  * Style dependencies
  */

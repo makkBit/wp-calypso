@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 export const isTicketSupportEligible = ( state ) => {
 	return state.help?.ticket?.isUserEligible;

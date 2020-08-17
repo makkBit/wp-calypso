@@ -8,15 +8,19 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import ExporterContainer from 'my-sites/exporter/container';
-import Main from 'components/main';
-import DocumentHead from 'components/data/document-head';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { isJetpackSite } from 'state/sites/selectors';
-import FormattedHeader from 'components/formatted-header';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import ExporterContainer from 'wp-calypso-client/my-sites/exporter/container';
+import Main from 'wp-calypso-client/components/main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 
 /**
  * Style dependencies

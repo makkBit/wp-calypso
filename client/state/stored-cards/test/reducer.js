@@ -19,8 +19,8 @@ import {
 	STORED_CARDS_DELETE_FAILED,
 	SERIALIZE,
 	DESERIALIZE,
-} from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'items', () => {
 	useSandbox( ( sandbox ) => {

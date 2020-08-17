@@ -13,11 +13,11 @@ import PlansColumn from './plans-column';
 import ProductsColumn from './products-column';
 import { SECURITY } from './constants';
 import { durationToString } from './utils';
-import { TERM_ANNUALLY } from 'lib/plans/constants';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import Main from 'components/main';
-import QueryProductsList from 'components/data/query-products-list';
-import QuerySites from 'components/data/query-sites';
+import { TERM_ANNUALLY } from 'wp-calypso-client/lib/plans/constants';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import Main from 'wp-calypso-client/components/main';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
 
 /**
  * Type dependencies

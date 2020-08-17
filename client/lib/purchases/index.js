@@ -10,11 +10,11 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { getRenewalItemFromProduct } from 'lib/cart-values/cart-items';
-import { getPlan } from 'lib/plans';
-import { isMonthly as isMonthlyPlan } from 'lib/plans/constants';
+import notices from 'wp-calypso-client/notices';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { getRenewalItemFromProduct } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { isMonthly as isMonthlyPlan } from 'wp-calypso-client/lib/plans/constants';
 import {
 	getProductFromSlug,
 	isDomainMapping,
@@ -25,8 +25,8 @@ import {
 	isPlan,
 	isTheme,
 	isConciergeSession,
-} from 'lib/products-values';
-import { getJetpackProductsDisplayNames } from 'lib/products-values/translations';
+} from 'wp-calypso-client/lib/products-values';
+import { getJetpackProductsDisplayNames } from 'wp-calypso-client/lib/products-values/translations';
 
 const debug = debugFactory( 'calypso:purchases' );
 

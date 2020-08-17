@@ -6,9 +6,9 @@ import deepFreeze from 'deep-freeze';
 /**
  * Internal dependencies
  */
-import hasPendingCommentRequests from 'state/selectors/has-pending-comment-requests';
-import { COMMENTS_CHANGE_STATUS } from 'state/action-types';
-import { getRequestKey } from 'state/data-layer/wpcom-http/utils';
+import hasPendingCommentRequests from 'wp-calypso-client/state/selectors/has-pending-comment-requests';
+import { COMMENTS_CHANGE_STATUS } from 'wp-calypso-client/state/action-types';
+import { getRequestKey } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 
 const actionKey = getRequestKey( {
 	type: COMMENTS_CHANGE_STATUS,

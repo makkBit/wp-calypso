@@ -7,11 +7,11 @@ import {
 	MEMBERSHIPS_SUBSCRIPTION_STOP,
 	MEMBERSHIPS_SUBSCRIPTION_STOP_SUCCESS,
 	MEMBERSHIPS_SUBSCRIPTION_STOP_FAILURE,
-} from 'state/action-types';
-import wpcom from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
 
-import 'state/data-layer/wpcom/sites/memberships/subscriptions';
-import 'state/memberships/init';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/memberships/subscriptions';
+import 'wp-calypso-client/state/memberships/init';
 
 export const requestSubscriptionsList = () => ( {
 	type: MEMBERSHIPS_SUBSCRIPTIONS_LIST_REQUEST,

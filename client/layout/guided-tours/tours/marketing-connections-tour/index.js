@@ -7,8 +7,15 @@ import React from 'react';
  * Internal dependencies
  */
 import meta from './meta';
-import { ButtonRow, makeTour, Quit, Link, Step, Tour } from 'layout/guided-tours/config-elements';
-import { localizeUrl } from 'lib/i18n-utils';
+import {
+	ButtonRow,
+	makeTour,
+	Quit,
+	Link,
+	Step,
+	Tour,
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 const CONNECT_BUTTON_SELECTOR = '.sharing-service.not-connected .button.is-compact';
 

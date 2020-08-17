@@ -10,10 +10,10 @@ import { Button } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getCurrentQueryArguments } from 'state/selectors/get-current-query-arguments';
-import Gravatar from 'components/gravatar';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getCurrentQueryArguments } from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import Gravatar from 'wp-calypso-client/components/gravatar';
 
 /**
  * Style dependencies

@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { OAUTH2_CLIENT_DATA_RECEIVE } from 'state/action-types';
-import { combineReducers, withStorageKey } from 'state/utils';
+import { OAUTH2_CLIENT_DATA_RECEIVE } from 'wp-calypso-client/state/action-types';
+import { combineReducers, withStorageKey } from 'wp-calypso-client/state/utils';
 import ui from './ui/reducer';
 
 export const initialClientsData = {

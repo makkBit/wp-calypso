@@ -10,23 +10,23 @@ import { times } from 'lodash';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
-import SectionHeader from 'components/section-header';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QuerySiteBlocks from 'components/data/query-site-blocks';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QuerySiteBlocks from 'wp-calypso-client/components/data/query-site-blocks';
 import {
 	getBlockedSites,
 	isFetchingSiteBlocks,
 	getSiteBlocksCurrentPage,
 	getSiteBlocksLastPage,
-} from 'state/reader/site-blocks/selectors';
+} from 'wp-calypso-client/state/reader/site-blocks/selectors';
 import SiteBlockListItem from './list-item';
-import InfiniteList from 'components/infinite-list';
-import { requestSiteBlocks } from 'state/reader/site-blocks/actions';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
+import { requestSiteBlocks } from 'wp-calypso-client/state/reader/site-blocks/actions';
 import SiteBlockListItemPlaceholder from './list-item-placeholder';
-import { localizeUrl } from 'lib/i18n-utils';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

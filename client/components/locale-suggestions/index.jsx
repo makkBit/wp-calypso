@@ -10,12 +10,12 @@ import startsWith from 'lodash/startsWith';
 /**
  * Internal dependencies
  */
-import { addLocaleToPath, getLanguage } from 'lib/i18n-utils';
+import { addLocaleToPath, getLanguage } from 'wp-calypso-client/lib/i18n-utils';
 import LocaleSuggestionsListItem from './list-item';
-import QueryLocaleSuggestions from 'components/data/query-locale-suggestions';
-import Notice from 'components/notice';
-import getLocaleSuggestions from 'state/selectors/get-locale-suggestions';
-import { setLocale } from 'state/ui/language/actions';
+import QueryLocaleSuggestions from 'wp-calypso-client/components/data/query-locale-suggestions';
+import Notice from 'wp-calypso-client/components/notice';
+import getLocaleSuggestions from 'wp-calypso-client/state/selectors/get-locale-suggestions';
+import { setLocale } from 'wp-calypso-client/state/ui/language/actions';
 
 /**
  * Style dependencies

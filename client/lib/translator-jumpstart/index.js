@@ -10,11 +10,11 @@ import { find, isUndefined } from 'lodash';
 /**
  * Internal dependencies
  */
-import { languages } from 'languages';
-import { loadjQueryDependentScriptDesktopWrapper } from 'lib/load-jquery-dependent-script-desktop-wrapper';
-import user from 'lib/user';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { canBeTranslated } from 'lib/i18n-utils';
+import { languages } from 'wp-calypso-client/languages';
+import { loadjQueryDependentScriptDesktopWrapper } from 'wp-calypso-client/lib/load-jquery-dependent-script-desktop-wrapper';
+import user from 'wp-calypso-client/lib/user';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { canBeTranslated } from 'wp-calypso-client/lib/i18n-utils';
 
 const debug = debugModule( 'calypso:community-translator' );
 

@@ -5,10 +5,10 @@ import {
 	JETPACK_REMOTE_INSTALL,
 	JETPACK_REMOTE_INSTALL_FAILURE,
 	JETPACK_REMOTE_INSTALL_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/jetpack-install';
-import 'state/jetpack-remote-install/init';
+import 'wp-calypso-client/state/data-layer/wpcom/jetpack-install';
+import 'wp-calypso-client/state/jetpack-remote-install/init';
 
 /**
  * Install the jetpack plugin on a remote .org site.

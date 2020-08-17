@@ -8,8 +8,8 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getGSuiteUsers } from 'state/gsuite-users/actions';
-import isRequestingGSuiteUsers from 'state/selectors/is-requesting-gsuite-users';
+import { getGSuiteUsers } from 'wp-calypso-client/state/gsuite-users/actions';
+import isRequestingGSuiteUsers from 'wp-calypso-client/state/selectors/is-requesting-gsuite-users';
 
 const request = ( siteId ) => ( dispatch, getState ) => {
 	if ( ! isRequestingGSuiteUsers( getState(), siteId ) ) {

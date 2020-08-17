@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getThemeFilterStringFromTerm } from 'state/themes/selectors/get-theme-filter-string-from-term';
+import { getThemeFilterStringFromTerm } from 'wp-calypso-client/state/themes/selectors/get-theme-filter-string-from-term';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * For a string of terms, recreate full search string in

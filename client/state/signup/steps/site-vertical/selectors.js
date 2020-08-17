@@ -6,11 +6,11 @@ import { get, find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getVerticals } from 'state/signup/verticals/selectors';
-import { getSurveyVertical } from 'state/signup/steps/survey/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getVerticals } from 'wp-calypso-client/state/signup/verticals/selectors';
+import { getSurveyVertical } from 'wp-calypso-client/state/signup/steps/survey/selectors';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 export function getSiteVerticalName( state ) {
 	return get( state, 'signup.steps.siteVertical.name', '' );

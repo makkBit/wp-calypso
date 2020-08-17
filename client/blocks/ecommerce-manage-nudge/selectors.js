@@ -6,7 +6,7 @@ import { last } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getPreference } from 'state/preferences/selectors';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
 
 /**
  * Returns true if the eCommerce manage nudge has been dismissed by the current user.

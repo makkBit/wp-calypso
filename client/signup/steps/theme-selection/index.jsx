@@ -10,17 +10,17 @@ import { find, identity } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import SignupThemesList from './signup-themes-list';
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Button } from '@automattic/components';
-import { themes } from 'lib/signup/themes-data';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getSurveyVertical } from 'state/signup/steps/survey/selectors';
-import { getDesignType } from 'state/signup/steps/design-type/selectors';
-import { isEnabled } from 'config';
-import { getSignupDependencyStore } from 'state/signup/dependency-store/selectors';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import { themes } from 'wp-calypso-client/lib/signup/themes-data';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getSurveyVertical } from 'wp-calypso-client/state/signup/steps/survey/selectors';
+import { getDesignType } from 'wp-calypso-client/state/signup/steps/design-type/selectors';
+import { isEnabled } from 'wp-calypso-client/config';
+import { getSignupDependencyStore } from 'wp-calypso-client/state/signup/dependency-store/selectors';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

@@ -6,8 +6,12 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import { GUIDED_TOUR_UPDATE, GUIDED_TOUR_PAUSE, GUIDED_TOUR_RESUME } from 'state/action-types';
-import { withStorageKey } from 'state/utils';
+import {
+	GUIDED_TOUR_UPDATE,
+	GUIDED_TOUR_PAUSE,
+	GUIDED_TOUR_RESUME,
+} from 'wp-calypso-client/state/action-types';
+import { withStorageKey } from 'wp-calypso-client/state/utils';
 
 export function guidedTours( state = {}, action ) {
 	switch ( action.type ) {

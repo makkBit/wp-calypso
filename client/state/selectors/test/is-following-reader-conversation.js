@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { isFollowingReaderConversation } from 'state/reader/conversations/selectors';
+import { isFollowingReaderConversation } from 'wp-calypso-client/state/reader/conversations/selectors';
 
 describe( 'isFollowingReaderConversation()', () => {
 	test( 'should return true for a known followed post', () => {

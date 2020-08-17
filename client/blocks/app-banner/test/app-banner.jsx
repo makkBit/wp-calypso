@@ -5,8 +5,14 @@
 /**
  * Internal dependencies
  */
-import { getiOSDeepLink, buildDeepLinkFragment } from 'blocks/app-banner';
-import { EDITOR, NOTES, READER, STATS, getCurrentSection } from 'blocks/app-banner/utils';
+import { getiOSDeepLink, buildDeepLinkFragment } from 'wp-calypso-client/blocks/app-banner';
+import {
+	EDITOR,
+	NOTES,
+	READER,
+	STATS,
+	getCurrentSection,
+} from 'wp-calypso-client/blocks/app-banner/utils';
 
 describe( 'iOS deep link fragments', () => {
 	test( 'properly encodes tricky fragments', () => {

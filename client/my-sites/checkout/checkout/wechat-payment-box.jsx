@@ -7,25 +7,29 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import CartCoupon from 'my-sites/checkout/cart/cart-coupon';
+import CartCoupon from 'wp-calypso-client/my-sites/checkout/cart/cart-coupon';
 import CartToggle from './cart-toggle';
 import PaymentChatButton from './payment-chat-button';
 import SubscriptionText from './subscription-text';
 import WeChatPaymentQRcode from './wechat-payment-qrcode';
-import { paymentMethodClassName, getLocationOrigin } from 'lib/cart-values';
-import userAgent from 'lib/user-agent';
-import { Input } from 'my-sites/domains/components/form';
-import { convertToSnakeCase } from 'state/data-layer/utils';
-import { getHttpData, requestHttpData, httpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { infoNotice, errorNotice } from 'state/notices/actions';
-import { isWpComBusinessPlan, isWpComEcommercePlan } from 'lib/plans';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import { paymentMethodClassName, getLocationOrigin } from 'wp-calypso-client/lib/cart-values';
+import userAgent from 'wp-calypso-client/lib/user-agent';
+import { Input } from 'wp-calypso-client/my-sites/domains/components/form';
+import { convertToSnakeCase } from 'wp-calypso-client/state/data-layer/utils';
+import {
+	getHttpData,
+	requestHttpData,
+	httpData,
+} from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { infoNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { isWpComBusinessPlan, isWpComEcommercePlan } from 'wp-calypso-client/lib/plans';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { Button } from '@automattic/components';
 import RecentRenewals from './recent-renewals';
 import DomainRefundPolicy from './domain-refund-policy';

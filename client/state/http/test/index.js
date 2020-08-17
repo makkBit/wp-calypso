@@ -11,8 +11,8 @@ const fetch = require( 'jest-fetch-mock' );
  * Internal dependencies
  */
 import { httpHandler } from '../';
-import { failureMeta, successMeta } from 'state/data-layer/wpcom-http';
-import { extendAction } from 'state/utils';
+import { failureMeta, successMeta } from 'wp-calypso-client/state/data-layer/wpcom-http';
+import { extendAction } from 'wp-calypso-client/state/utils';
 
 const succeeder = { type: 'SUCCESS' };
 const failer = { type: 'FAIL' };

@@ -10,20 +10,23 @@ import { includes, get, startsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import config from 'config';
-import MasterbarLoggedOut from 'layout/masterbar/logged-out';
-import notices from 'notices';
-import OauthClientMasterbar from 'layout/masterbar/oauth-client';
-import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'lib/oauth2-clients';
-import { getCurrentOAuth2Client, showOAuth2Layout } from 'state/oauth2-clients/ui/selectors';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
-import { getSection, masterbarIsVisible } from 'state/ui/selectors';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import config from 'wp-calypso-client/config';
+import MasterbarLoggedOut from 'wp-calypso-client/layout/masterbar/logged-out';
+import notices from 'wp-calypso-client/notices';
+import OauthClientMasterbar from 'wp-calypso-client/layout/masterbar/oauth-client';
+import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
+import {
+	getCurrentOAuth2Client,
+	showOAuth2Layout,
+} from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
+import { getSection, masterbarIsVisible } from 'wp-calypso-client/state/ui/selectors';
 import BodySectionCssClass from './body-section-css-class';
-import GdprBanner from 'blocks/gdpr-banner';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
+import GdprBanner from 'wp-calypso-client/blocks/gdpr-banner';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
 
 /**
  * Style dependencies
@@ -119,12 +122,14 @@ const LayoutLoggedOut = ( {
 			{ masterbar }
 			<div id="content" className="layout__content">
 				<AsyncLoad
-					require="components/global-notices"
+					require="wp-calypso-client/components/global-notices"
 					placeholder={ null }
 					id="notices"
 					notices={ notices.list }
 				/>
-				{ isCheckout && <AsyncLoad require="blocks/inline-help" placeholder={ null } /> }
+				{ isCheckout && (
+					<AsyncLoad require="wp-calypso-client/blocks/inline-help" placeholder={ null } />
+				) }
 				<div id="primary" className="layout__primary">
 					{ primary }
 				</div>

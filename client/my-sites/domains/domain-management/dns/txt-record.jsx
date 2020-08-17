@@ -10,11 +10,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInputWithAffixes from 'components/forms/form-text-input-with-affixes';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInputWithAffixes from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
 
 class TxtRecord extends React.Component {
 	static propTypes = {

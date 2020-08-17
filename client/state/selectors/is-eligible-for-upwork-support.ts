@@ -6,9 +6,9 @@ import { get, includes, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import getSitesItems from 'state/selectors/get-sites-items';
-import { isBusinessPlan, isEcommercePlan } from 'lib/plans';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import { isBusinessPlan, isEcommercePlan } from 'wp-calypso-client/lib/plans';
 
 export const UPWORK_LOCALES = [
 	'de',

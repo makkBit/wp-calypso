@@ -9,12 +9,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { emailManagement } from 'my-sites/email/paths';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
 import PendingGSuiteTosNoticeAction from './pending-gsuite-tos-notice-action';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

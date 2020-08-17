@@ -6,10 +6,10 @@ import {
 	READER_SIDEBAR_TAGS_TOGGLE,
 	READER_SIDEBAR_ORGANIZATIONS_TOGGLE,
 	READER_SIDEBAR_FOLLOWING_TOGGLE,
-} from 'state/reader/action-types';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+} from 'wp-calypso-client/state/reader/action-types';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 export function toggleReaderSidebarLists() {
 	recordAction( 'sidebar_toggle_lists_menu' );

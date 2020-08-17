@@ -12,19 +12,22 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Dialog } from '@automattic/components';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import PurchaseButton from 'components/purchase-detail/purchase-button';
-import TipInfo from 'components/purchase-detail/tip-info';
-import { gaRecordEvent } from 'lib/analytics/ga';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import PurchaseButton from 'wp-calypso-client/components/purchase-detail/purchase-button';
+import TipInfo from 'wp-calypso-client/components/purchase-detail/tip-info';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 import TermsAndConditions from './terms-and-conditions';
-import QuerySiteVouchers from 'components/data/query-site-vouchers';
-import { assignSiteVoucher as assignVoucher } from 'state/sites/vouchers/actions';
-import { GOOGLE_CREDITS } from 'state/sites/vouchers/service-types';
-import { getVouchersBySite, getGoogleAdCredits } from 'state/sites/vouchers/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import { localizeUrl } from 'lib/i18n-utils';
+import QuerySiteVouchers from 'wp-calypso-client/components/data/query-site-vouchers';
+import { assignSiteVoucher as assignVoucher } from 'wp-calypso-client/state/sites/vouchers/actions';
+import { GOOGLE_CREDITS } from 'wp-calypso-client/state/sites/vouchers/service-types';
+import {
+	getVouchersBySite,
+	getGoogleAdCredits,
+} from 'wp-calypso-client/state/sites/vouchers/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

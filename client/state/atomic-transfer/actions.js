@@ -7,9 +7,9 @@ import {
 	ATOMIC_TRANSFER_REQUEST_FAILURE,
 	ATOMIC_TRANSFER_COMPLETE,
 	ATOMIC_TRANSFER_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/transfers/latest';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/transfers/latest';
 
 /**
  * Query the atomic transfer for a given site.

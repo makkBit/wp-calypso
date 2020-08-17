@@ -6,14 +6,14 @@
  * External dependencies
  */
 import { shallow } from 'enzyme';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React from 'react';
 
 /**
  * Internal dependencies
  */
 import AccordionStatus from '../status';
-import Tooltip from 'components/tooltip';
+import Tooltip from 'wp-calypso-client/components/tooltip';
 
 describe( 'AccordionStatus', () => {
 	test( 'should render with explicit props', () => {

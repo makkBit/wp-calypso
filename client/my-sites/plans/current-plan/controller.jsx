@@ -8,8 +8,8 @@ import page from 'page';
  * Internal Dependencies
  */
 import CurrentPlan from './';
-import { getSelectedSite } from 'state/ui/selectors';
-import { isFreePlan } from 'lib/products-values';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { isFreePlan } from 'wp-calypso-client/lib/products-values';
 
 export function currentPlan( context, next ) {
 	const state = context.store.getState();

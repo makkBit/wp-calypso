@@ -13,9 +13,9 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import accept from 'lib/accept';
-import Main from 'components/main';
-import { ProtectFormGuard } from 'lib/protect-form';
+import accept from 'wp-calypso-client/lib/accept';
+import Main from 'wp-calypso-client/components/main';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
 import {
 	fetchProductCategories,
 	updateProductCategory,
@@ -34,9 +34,9 @@ import { getLink } from 'woocommerce/lib/nav-utils';
 import ProductCategoryForm from './form';
 import ProductCategoryHeader from './header';
 import { recordTrack } from 'woocommerce/lib/analytics';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { getSaveErrorMessage } from './utils';
-import { withAnalytics } from 'state/analytics/actions';
+import { withAnalytics } from 'wp-calypso-client/state/analytics/actions';
 
 class ProductCategoryUpdate extends React.Component {
 	static propTypes = {

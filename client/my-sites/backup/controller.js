@@ -8,16 +8,16 @@ import React from 'react';
  */
 import BackupRewindFlow, { RewindFlowPurpose } from './rewind-flow';
 import BackupsPage from './main';
-import UpsellSwitch from 'components/jetpack/upsell-switch';
+import UpsellSwitch from 'wp-calypso-client/components/jetpack/upsell-switch';
 import BackupUpsell from './backup-upsell';
 import WPCOMBackupUpsell from './wpcom-backup-upsell';
-import BackupPlaceholder from 'components/jetpack/backup-placeholder';
-import FormattedHeader from 'components/formatted-header';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import getRewindState from 'state/selectors/get-rewind-state';
-import QueryRewindState from 'components/data/query-rewind-state';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import { isJetpackBackupSlug } from 'lib/products-values';
+import BackupPlaceholder from 'wp-calypso-client/components/jetpack/backup-placeholder';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import { isJetpackBackupSlug } from 'wp-calypso-client/lib/products-values';
 
 export function showUpsellIfNoBackup( context, next ) {
 	const UpsellComponent = isJetpackCloud() ? BackupUpsell : WPCOMBackupUpsell;

@@ -22,16 +22,16 @@ import { camelCase } from 'lodash';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import { validatePaymentDetails } from 'lib/checkout/validation';
-import useCountryList from 'my-sites/checkout/composite-checkout/wpcom/hooks/use-country-list';
-import Field from 'my-sites/checkout/composite-checkout/wpcom/components/field';
+import notices from 'wp-calypso-client/notices';
+import { validatePaymentDetails } from 'wp-calypso-client/lib/checkout/validation';
+import useCountryList from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/hooks/use-country-list';
+import Field from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/field';
 import {
 	SummaryLine,
 	SummaryDetails,
-} from 'my-sites/checkout/composite-checkout/wpcom/components/summary-details';
-import { PaymentMethodLogos } from 'my-sites/checkout/composite-checkout/wpcom/components/payment-method-logos';
-import { maskField } from 'lib/checkout';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/summary-details';
+import { PaymentMethodLogos } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/payment-method-logos';
+import { maskField } from 'wp-calypso-client/lib/checkout';
 import CountrySpecificPaymentFieldsUI from '../wpcom/components/country-specific-payment-fields-ui';
 
 const debug = debugFactory( 'composite-checkout:ebanx-tef-payment-method' );

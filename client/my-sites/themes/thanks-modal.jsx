@@ -6,14 +6,14 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import page from 'page';
 import { translate } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import InlineSupportLink from 'components/inline-support-link';
-import PulsingDot from 'components/pulsing-dot';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import PulsingDot from 'wp-calypso-client/components/pulsing-dot';
 import { trackClick } from './helpers';
 import {
 	getActiveTheme,
@@ -24,14 +24,14 @@ import {
 	hasActivatedTheme,
 	isThemeGutenbergFirst,
 	isWpcomTheme,
-} from 'state/themes/selectors';
-import { clearActivated } from 'state/themes/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import { requestSite } from 'state/sites/actions';
-import getCustomizeOrEditFrontPageUrl from 'state/selectors/get-customize-or-edit-front-page-url';
-import shouldCustomizeHomepageWithGutenberg from 'state/selectors/should-customize-homepage-with-gutenberg';
-import getSiteUrl from 'state/selectors/get-site-url';
+} from 'wp-calypso-client/state/themes/selectors';
+import { clearActivated } from 'wp-calypso-client/state/themes/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import getCustomizeOrEditFrontPageUrl from 'wp-calypso-client/state/selectors/get-customize-or-edit-front-page-url';
+import shouldCustomizeHomepageWithGutenberg from 'wp-calypso-client/state/selectors/should-customize-homepage-with-gutenberg';
+import getSiteUrl from 'wp-calypso-client/state/selectors/get-site-url';
 
 /**
  * Style dependencies

@@ -2,8 +2,12 @@
  * Internal dependencies
  */
 
-import { PREVIEW_SITE_SET, PREVIEW_URL_CLEAR, PREVIEW_URL_SET } from 'state/action-types';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+import {
+	PREVIEW_SITE_SET,
+	PREVIEW_URL_CLEAR,
+	PREVIEW_URL_SET,
+} from 'wp-calypso-client/state/action-types';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 
 export function setPreviewUrl( url ) {
 	return {

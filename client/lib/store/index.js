@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 /**
  * Create a traditional Flux store from a Redux-style (`(state, action)`)

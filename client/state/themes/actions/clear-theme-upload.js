@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { THEME_UPLOAD_CLEAR } from 'state/themes/action-types';
+import { THEME_UPLOAD_CLEAR } from 'wp-calypso-client/state/themes/action-types';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Clears any state remaining from a previous

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	EXPORT_ADVANCED_SETTINGS_FETCH,
 	EXPORT_ADVANCED_SETTINGS_FETCH_FAIL,
@@ -16,12 +16,12 @@ import {
 	EXPORT_POST_TYPE_FIELD_SET,
 	EXPORT_MEDIA_REQUEST,
 	SET_MEDIA_EXPORT_DATA,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 import { prepareExportRequest } from './selectors';
 
-import 'state/data-layer/wpcom/sites/exports/media';
-import 'state/exporter/init';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/exports/media';
+import 'wp-calypso-client/state/exporter/init';
 
 /**
  * Sets the post type to export.

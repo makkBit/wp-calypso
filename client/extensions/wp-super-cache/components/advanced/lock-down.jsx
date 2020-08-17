@@ -4,19 +4,19 @@
 
 import React from 'react';
 import { pick } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import FormToggle from 'components/forms/form-toggle/compact';
-import ClipboardButton from 'components/forms/clipboard-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 import WrapSettingsForm from '../wrap-settings-form';
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 
 const LockDown = ( {
 	fields: { cache_lock_down },

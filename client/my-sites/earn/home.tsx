@@ -9,40 +9,46 @@ import { compact } from 'lodash';
 /**
  * Internal dependencies
  */
-import wp from 'lib/wp';
+import wp from 'wp-calypso-client/lib/wp';
 import { useTranslate } from 'i18n-calypso';
-import { SiteSlug } from 'types';
-import { getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import getSiteBySlug from 'state/sites/selectors/get-site-by-slug';
-import { hasFeature, getSitePlanSlug } from 'state/sites/plans/selectors';
-import { isCurrentPlanPaid, isJetpackSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { isRequestingWordAdsApprovalForSite } from 'state/wordads/approve/selectors';
-import EmptyContent from 'components/empty-content';
-import PromoSection, { Props as PromoSectionProps } from 'components/promo-section';
-import QueryMembershipsSettings from 'components/data/query-memberships-settings';
-import QueryWordadsStatus from 'components/data/query-wordads-status';
+import { SiteSlug } from 'wp-calypso-client/types';
+import { getSelectedSiteSlug, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getSiteBySlug from 'wp-calypso-client/state/sites/selectors/get-site-by-slug';
+import { hasFeature, getSitePlanSlug } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isCurrentPlanPaid, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isRequestingWordAdsApprovalForSite } from 'wp-calypso-client/state/wordads/approve/selectors';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PromoSection, {
+	Props as PromoSectionProps,
+} from 'wp-calypso-client/components/promo-section';
+import QueryMembershipsSettings from 'wp-calypso-client/components/data/query-memberships-settings';
+import QueryWordadsStatus from 'wp-calypso-client/components/data/query-wordads-status';
 import {
 	FEATURE_WORDADS_INSTANT,
 	FEATURE_SIMPLE_PAYMENTS,
 	PLAN_PREMIUM,
-} from 'lib/plans/constants';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import { CtaButton } from 'components/promo-section/promo-card/cta';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/lib/plans/constants';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import { CtaButton } from 'wp-calypso-client/components/promo-section/promo-card/cta';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Image dependencies
  */
-import earnSectionImage from 'assets/images/earn/earn-section.svg';
-import adsImage from 'assets/images/earn/ads.svg';
-import recurringImage from 'assets/images/earn/recurring.svg';
-import referralImage from 'assets/images/earn/referral.svg';
-import simplePaymentsImage from 'assets/images/earn/simple-payments.svg';
-import premiumContentImage from 'assets/images/earn/premium-content.svg';
-import paidNewsletterImage from 'assets/images/earn/newsletters.svg';
+import earnSectionImage from 'wp-calypso-client/assets/images/earn/earn-section.svg';
+import adsImage from 'wp-calypso-client/assets/images/earn/ads.svg';
+import recurringImage from 'wp-calypso-client/assets/images/earn/recurring.svg';
+import referralImage from 'wp-calypso-client/assets/images/earn/referral.svg';
+import simplePaymentsImage from 'wp-calypso-client/assets/images/earn/simple-payments.svg';
+import premiumContentImage from 'wp-calypso-client/assets/images/earn/premium-content.svg';
+import paidNewsletterImage from 'wp-calypso-client/assets/images/earn/newsletters.svg';
 
 /**
  * Style dependencies

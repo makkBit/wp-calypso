@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import getBlogStickers from 'state/selectors/get-blog-stickers';
-import { listBlogStickers } from 'state/sites/blog-stickers/actions';
+import getBlogStickers from 'wp-calypso-client/state/selectors/get-blog-stickers';
+import { listBlogStickers } from 'wp-calypso-client/state/sites/blog-stickers/actions';
 
 class QueryBlogStickers extends Component {
 	static propTypes = {

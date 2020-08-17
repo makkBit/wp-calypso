@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	HAPPINESS_ENGINEERS_FETCH,
 	HAPPINESS_ENGINEERS_RECEIVE,
 	HAPPINESS_ENGINEERS_FETCH_FAILURE,
 	HAPPINESS_ENGINEERS_FETCH_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/happiness-engineers/init';
+import 'wp-calypso-client/state/happiness-engineers/init';
 
 /**
  * Returns an action object used in signalling that a list of HEs

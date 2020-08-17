@@ -8,7 +8,7 @@ import { spy } from 'sinon';
  * Internal dependencies
  */
 import { writeReplyComment } from '../';
-import * as Utils from 'state/data-layer/wpcom/sites/utils';
+import * as Utils from 'wp-calypso-client/state/data-layer/wpcom/sites/utils';
 
 describe( '#writeReplyComment()', () => {
 	const action = {

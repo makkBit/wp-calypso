@@ -7,17 +7,17 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import { EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice, successNotice } from 'state/notices/actions';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import { EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 import {
 	receiveResendVerificationEmailSuccess,
 	receiveResendVerificationEmailFailure,
-} from 'state/email-forwarding/actions';
+} from 'wp-calypso-client/state/email-forwarding/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const requestResendEmailVerification = ( action ) => {
 	const { domainName, mailbox } = action;

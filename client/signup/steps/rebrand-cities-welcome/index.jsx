@@ -9,11 +9,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
-import { generateUniqueRebrandCitiesSiteUrl } from 'lib/rebrand-cities';
-import FormTextInputWithAction from 'components/forms/form-text-input-with-action';
-import { setSiteTitle } from 'state/signup/steps/site-title/actions';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import { generateUniqueRebrandCitiesSiteUrl } from 'wp-calypso-client/lib/rebrand-cities';
+import FormTextInputWithAction from 'wp-calypso-client/components/forms/form-text-input-with-action';
+import { setSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/actions';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

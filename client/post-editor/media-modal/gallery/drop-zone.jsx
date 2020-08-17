@@ -10,10 +10,10 @@ import { isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import MediaLibraryDropZone from 'my-sites/media-library/drop-zone';
-import { filterItemsByMimePrefix } from 'lib/media/utils';
-import { setMediaLibrarySelectedItems } from 'state/media/actions';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import MediaLibraryDropZone from 'wp-calypso-client/my-sites/media-library/drop-zone';
+import { filterItemsByMimePrefix } from 'wp-calypso-client/lib/media/utils';
+import { setMediaLibrarySelectedItems } from 'wp-calypso-client/state/media/actions';
 
 class EditorMediaModalGalleryDropZone extends React.Component {
 	static propTypes = {

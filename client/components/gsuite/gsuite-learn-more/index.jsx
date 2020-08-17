@@ -9,7 +9,7 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { ADDING_GOOGLE_APPS_TO_YOUR_SITE } from 'lib/url/support';
+import { ADDING_GOOGLE_APPS_TO_YOUR_SITE } from 'wp-calypso-client/lib/url/support';
 
 /**
  * Style dependencies

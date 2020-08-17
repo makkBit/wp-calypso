@@ -11,7 +11,7 @@ import {
 	withSchemaValidation,
 	withoutPersistence,
 	withStorageKey,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 import {
 	INVITES_DELETE_REQUEST,
 	INVITES_DELETE_REQUEST_FAILURE,
@@ -22,7 +22,7 @@ import {
 	INVITE_RESEND_REQUEST,
 	INVITE_RESEND_REQUEST_FAILURE,
 	INVITE_RESEND_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { inviteItemsSchema, inviteLinksSchema } from './schema';
 
 /**

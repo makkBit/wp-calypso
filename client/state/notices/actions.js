@@ -2,14 +2,14 @@
  * External dependencies
  */
 
-import impureLodash from 'lib/impure-lodash';
+import impureLodash from 'wp-calypso-client/lib/impure-lodash';
 const { uniqueId } = impureLodash;
 
 /**
  * Internal dependencies
  */
-import { NOTICE_CREATE, NOTICE_REMOVE } from 'state/action-types';
-import { extendAction } from 'state/utils';
+import { NOTICE_CREATE, NOTICE_REMOVE } from 'wp-calypso-client/state/action-types';
+import { extendAction } from 'wp-calypso-client/state/utils';
 
 export function removeNotice( noticeId ) {
 	return {

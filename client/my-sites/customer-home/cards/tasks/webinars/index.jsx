@@ -7,9 +7,9 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Task from 'my-sites/customer-home/cards/tasks/task';
-import { TASK_WEBINARS } from 'my-sites/customer-home/cards/constants';
-import webinarsIllustration from 'assets/images/customer-home/illustration-webinars.svg';
+import Task from 'wp-calypso-client/my-sites/customer-home/cards/tasks/task';
+import { TASK_WEBINARS } from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import webinarsIllustration from 'wp-calypso-client/assets/images/customer-home/illustration-webinars.svg';
 
 const Webinars = () => {
 	const translate = useTranslate();

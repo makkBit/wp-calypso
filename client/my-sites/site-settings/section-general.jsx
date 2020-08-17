@@ -7,9 +7,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import GeneralForm from 'my-sites/site-settings/form-general';
+import GeneralForm from 'wp-calypso-client/my-sites/site-settings/form-general';
 import SiteTools from './site-tools';
-import { getSelectedSite } from 'state/ui/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 const SiteSettingsGeneral = ( { site } ) => (
 	<div className="site-settings__main general-settings">

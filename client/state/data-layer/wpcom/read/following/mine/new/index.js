@@ -7,16 +7,20 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { READER_FOLLOW } from 'state/reader/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import { follow, unfollow, recordFollowError } from 'state/reader/follows/actions';
-import { subscriptionFromApi } from 'state/data-layer/wpcom/read/following/mine/utils';
-import { bypassDataLayer } from 'state/data-layer/utils';
+import config from 'wp-calypso-client/config';
+import { READER_FOLLOW } from 'wp-calypso-client/state/reader/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import {
+	follow,
+	unfollow,
+	recordFollowError,
+} from 'wp-calypso-client/state/reader/follows/actions';
+import { subscriptionFromApi } from 'wp-calypso-client/state/data-layer/wpcom/read/following/mine/utils';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestFollow( action ) {
 	const feedUrl = get( action, 'payload.feedUrl' );

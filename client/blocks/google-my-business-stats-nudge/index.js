@@ -5,19 +5,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
 import { Button, Card } from '@automattic/components';
-import isGoogleMyBusinessStatsNudgeDismissed from 'state/selectors/is-google-my-business-stats-nudge-dismissed';
-import QueryPreferences from 'components/data/query-preferences';
-import SectionHeader from 'components/section-header';
+import isGoogleMyBusinessStatsNudgeDismissed from 'wp-calypso-client/state/selectors/is-google-my-business-stats-nudge-dismissed';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { dismissNudge } from './actions';
-import { enhanceWithDismissCount } from 'my-sites/google-my-business/utils';
-import { enhanceWithSiteType, recordTracksEvent } from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
+import { enhanceWithDismissCount } from 'wp-calypso-client/my-sites/google-my-business/utils';
+import { enhanceWithSiteType, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 
 /**
  * Style dependencies

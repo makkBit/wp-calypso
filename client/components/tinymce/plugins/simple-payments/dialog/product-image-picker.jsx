@@ -4,7 +4,7 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 
@@ -12,11 +12,14 @@ import PropTypes from 'prop-types';
  * Internal dependencies
  */
 
-import AsyncLoad from 'components/async-load';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import EditorFeaturedImagePreviewContainer from 'post-editor/editor-featured-image/preview-container';
-import RemoveButton from 'components/remove-button';
-import { requestMediaItem, setMediaLibrarySelectedItems } from 'state/media/actions';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import EditorFeaturedImagePreviewContainer from 'wp-calypso-client/post-editor/editor-featured-image/preview-container';
+import RemoveButton from 'wp-calypso-client/components/remove-button';
+import {
+	requestMediaItem,
+	setMediaLibrarySelectedItems,
+} from 'wp-calypso-client/state/media/actions';
 
 class ProductImagePicker extends Component {
 	static propTypes = {
@@ -112,7 +115,7 @@ class ProductImagePicker extends Component {
 		return (
 			<div className="dialog__product-image-picker">
 				<AsyncLoad
-					require="post-editor/media-modal"
+					require="wp-calypso-client/post-editor/media-modal"
 					siteId={ siteId }
 					onClose={ this.setImage }
 					enabledFilters={ [ 'images' ] }

@@ -2,12 +2,12 @@
  * External dependencies
  */
 
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 
 /**
  * Internal Dependencies
  */
-import { action as InvitesActionTypes } from 'lib/invites/constants';
+import { action as InvitesActionTypes } from 'wp-calypso-client/lib/invites/constants';
 import User from './user';
 let _user = false;
 

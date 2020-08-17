@@ -7,21 +7,24 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import DeleteSiteWarningDialog from 'my-sites/site-settings/delete-site-warning-dialog';
-import config from 'config';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import DeleteSiteWarningDialog from 'wp-calypso-client/my-sites/site-settings/delete-site-warning-dialog';
+import config from 'wp-calypso-client/config';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import { localize } from 'i18n-calypso';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
 import SiteToolsLink from './link';
-import QueryRewindState from 'components/data/query-rewind-state';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isVipSite from 'state/selectors/is-vip-site';
-import getRewindState from 'state/selectors/get-rewind-state';
-import { hasLoadedSitePurchasesFromServer, getPurchasesError } from 'state/purchases/selectors';
-import notices from 'notices';
-import hasCancelableSitePurchases from 'state/selectors/has-cancelable-site-purchases';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import {
+	hasLoadedSitePurchasesFromServer,
+	getPurchasesError,
+} from 'wp-calypso-client/state/purchases/selectors';
+import notices from 'wp-calypso-client/notices';
+import hasCancelableSitePurchases from 'wp-calypso-client/state/selectors/has-cancelable-site-purchases';
 
 /**
  * Style dependencies

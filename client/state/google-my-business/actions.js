@@ -5,16 +5,19 @@ import {
 	GOOGLE_MY_BUSINESS_STATS_FAILURE,
 	GOOGLE_MY_BUSINESS_STATS_RECEIVE,
 	GOOGLE_MY_BUSINESS_STATS_REQUEST,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import {
 	createSiteKeyring,
 	updateSiteKeyring,
 	deleteSiteKeyring,
-} from 'state/site-keyrings/actions';
-import { getSiteKeyringsForService, getSiteKeyringConnection } from 'state/site-keyrings/selectors';
+} from 'wp-calypso-client/state/site-keyrings/actions';
+import {
+	getSiteKeyringsForService,
+	getSiteKeyringConnection,
+} from 'wp-calypso-client/state/site-keyrings/selectors';
 
-import 'state/data-layer/wpcom/sites/stats/google-my-business';
-import 'state/google-my-business/init';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/stats/google-my-business';
+import 'wp-calypso-client/state/google-my-business/init';
 
 export const disconnectGoogleMyBusinessAccount = ( siteId, keyringId ) => ( dispatch ) =>
 	dispatch( deleteSiteKeyring( siteId, keyringId ) );

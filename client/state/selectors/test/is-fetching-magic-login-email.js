@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isFetchingMagicLoginEmail from 'state/selectors/is-fetching-magic-login-email';
+import isFetchingMagicLoginEmail from 'wp-calypso-client/state/selectors/is-fetching-magic-login-email';
 
 describe( 'isFetchingMagicLoginEmail()', () => {
 	test( 'should return false if there is no fetching information yet', () => {

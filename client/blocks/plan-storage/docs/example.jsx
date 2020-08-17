@@ -17,9 +17,9 @@ import {
 	PLAN_PREMIUM,
 	PLAN_PERSONAL,
 	PLAN_FREE,
-} from 'lib/plans/constants';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+} from 'wp-calypso-client/lib/plans/constants';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 const PlanStorageExample = ( { siteId, siteSlug } ) => {
 	const mediaStorage = {

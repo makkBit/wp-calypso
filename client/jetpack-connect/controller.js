@@ -9,9 +9,9 @@ import { get, some, dropRight } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { recordPageView } from 'lib/analytics/page-view';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import config from 'config';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import config from 'wp-calypso-client/config';
 import InstallInstructions from './install-instructions';
 import JetpackAuthorize from './authorize';
 import JetpackConnect from './main';
@@ -23,16 +23,20 @@ import OrgCredentialsForm from './remote-credentials';
 import Plans from './plans';
 import PlansLanding from './plans-landing';
 import SearchPurchase from './search';
-import { addQueryArgs, sectionify } from 'lib/route';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getLocaleFromPath, removeLocaleFromPath, getPathParts } from 'lib/i18n-utils';
-import switchLocale from 'lib/i18n-utils/switch-locale';
-import { hideMasterbar, showMasterbar, hideSidebar } from 'state/ui/actions';
+import { addQueryArgs, sectionify } from 'wp-calypso-client/lib/route';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getLocaleFromPath,
+	removeLocaleFromPath,
+	getPathParts,
+} from 'wp-calypso-client/lib/i18n-utils';
+import switchLocale from 'wp-calypso-client/lib/i18n-utils/switch-locale';
+import { hideMasterbar, showMasterbar, hideSidebar } from 'wp-calypso-client/state/ui/actions';
 import { JPC_PATH_PLANS, ALLOWED_MOBILE_APP_REDIRECT_URL_LIST } from './constants';
-import { login } from 'lib/paths';
+import { login } from 'wp-calypso-client/lib/paths';
 import { parseAuthorizationQuery } from './utils';
 import { persistMobileRedirect, retrieveMobileRedirect, storePlan } from './persistence-utils';
-import { startAuthorizeStep } from 'state/jetpack-connect/actions';
+import { startAuthorizeStep } from 'wp-calypso-client/state/jetpack-connect/actions';
 import {
 	PLAN_JETPACK_BUSINESS,
 	PLAN_JETPACK_BUSINESS_MONTHLY,
@@ -40,7 +44,7 @@ import {
 	PLAN_JETPACK_PERSONAL_MONTHLY,
 	PLAN_JETPACK_PREMIUM,
 	PLAN_JETPACK_PREMIUM_MONTHLY,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 import {
 	PRODUCT_JETPACK_BACKUP_DAILY,
@@ -53,7 +57,7 @@ import {
 	PRODUCT_JETPACK_SCAN_MONTHLY,
 	PRODUCT_JETPACK_ANTI_SPAM,
 	PRODUCT_JETPACK_ANTI_SPAM_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 
 /**
  * Module variables

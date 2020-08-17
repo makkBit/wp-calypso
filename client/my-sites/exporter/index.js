@@ -7,10 +7,15 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { makeLayout, render as clientRender } from 'controller';
-import { navigation, redirectWithoutSite, siteSelection, sites } from 'my-sites/controller';
-import { exportSite, guidedTransfer } from 'my-sites/exporter/controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import {
+	navigation,
+	redirectWithoutSite,
+	siteSelection,
+	sites,
+} from 'wp-calypso-client/my-sites/controller';
+import { exportSite, guidedTransfer } from 'wp-calypso-client/my-sites/exporter/controller';
 
 export default function () {
 	page( '/export', siteSelection, navigation, sites, makeLayout, clientRender );

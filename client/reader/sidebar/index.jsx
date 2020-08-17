@@ -16,28 +16,31 @@ import ReaderSidebarLists from './reader-sidebar-lists';
 import ReaderSidebarTags from './reader-sidebar-tags';
 import ReaderSidebarOrganizations from './reader-sidebar-organizations';
 import ReaderSidebarNudges from './reader-sidebar-nudges';
-import QueryReaderLists from 'components/data/query-reader-lists';
-import QueryReaderTeams from 'components/data/query-reader-teams';
-import Sidebar from 'layout/sidebar';
-import SidebarFooter from 'layout/sidebar/footer';
-import SidebarHeading from 'layout/sidebar/heading';
-import SidebarItem from 'layout/sidebar/item';
-import SidebarMenu from 'layout/sidebar/menu';
-import SidebarRegion from 'layout/sidebar/region';
-import { isDiscoverEnabled } from 'reader/discover/helper';
-import { isAutomatticTeamMember } from 'reader/lib/teams';
-import { getTagStreamUrl } from 'reader/route';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import { getSubscribedLists } from 'state/reader/lists/selectors';
-import { getReaderTeams } from 'state/reader/teams/selectors';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { toggleReaderSidebarLists, toggleReaderSidebarTags } from 'state/reader-ui/sidebar/actions';
-import { isListsOpen, isTagsOpen } from 'state/reader-ui/sidebar/selectors';
+import QueryReaderLists from 'wp-calypso-client/components/data/query-reader-lists';
+import QueryReaderTeams from 'wp-calypso-client/components/data/query-reader-teams';
+import Sidebar from 'wp-calypso-client/layout/sidebar';
+import SidebarFooter from 'wp-calypso-client/layout/sidebar/footer';
+import SidebarHeading from 'wp-calypso-client/layout/sidebar/heading';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import SidebarMenu from 'wp-calypso-client/layout/sidebar/menu';
+import SidebarRegion from 'wp-calypso-client/layout/sidebar/region';
+import { isDiscoverEnabled } from 'wp-calypso-client/reader/discover/helper';
+import { isAutomatticTeamMember } from 'wp-calypso-client/reader/lib/teams';
+import { getTagStreamUrl } from 'wp-calypso-client/reader/route';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import { getSubscribedLists } from 'wp-calypso-client/state/reader/lists/selectors';
+import { getReaderTeams } from 'wp-calypso-client/state/reader/teams/selectors';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import {
+	toggleReaderSidebarLists,
+	toggleReaderSidebarTags,
+} from 'wp-calypso-client/state/reader-ui/sidebar/actions';
+import { isListsOpen, isTagsOpen } from 'wp-calypso-client/state/reader-ui/sidebar/selectors';
 import ReaderSidebarPromo from './promo';
-import QueryReaderOrganizations from 'components/data/query-reader-organizations';
-import { getReaderOrganizations } from 'state/reader/organizations/selectors';
-import ReaderSidebarFollowedSites from 'reader/sidebar/reader-sidebar-followed-sites';
-import SidebarSeparator from 'layout/sidebar/separator';
+import QueryReaderOrganizations from 'wp-calypso-client/components/data/query-reader-organizations';
+import { getReaderOrganizations } from 'wp-calypso-client/state/reader/organizations/selectors';
+import ReaderSidebarFollowedSites from 'wp-calypso-client/reader/sidebar/reader-sidebar-followed-sites';
+import SidebarSeparator from 'wp-calypso-client/layout/sidebar/separator';
 
 /**
  * Style dependencies

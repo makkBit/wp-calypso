@@ -12,55 +12,55 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import Main from 'components/main';
+import config from 'wp-calypso-client/config';
+import Main from 'wp-calypso-client/components/main';
 import { Card } from '@automattic/components';
-import Notice from 'components/notice';
-import HelpContactForm from 'me/help/help-contact-form';
-import ActiveTicketsNotice from 'me/help/active-tickets-notice';
-import HelpContactConfirmation from 'me/help/help-contact-confirmation';
-import HeaderCake from 'components/header-cake';
-import wpcomLib from 'lib/wp';
-import notices from 'notices';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import getHappychatUserInfo from 'state/happychat/selectors/get-happychat-userinfo';
-import isHappychatUserEligible from 'state/happychat/selectors/is-happychat-user-eligible';
-import hasHappychatLocalizedSupport from 'state/happychat/selectors/has-happychat-localized-support';
+import Notice from 'wp-calypso-client/components/notice';
+import HelpContactForm from 'wp-calypso-client/me/help/help-contact-form';
+import ActiveTicketsNotice from 'wp-calypso-client/me/help/active-tickets-notice';
+import HelpContactConfirmation from 'wp-calypso-client/me/help/help-contact-confirmation';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import wpcomLib from 'wp-calypso-client/lib/wp';
+import notices from 'wp-calypso-client/notices';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import getHappychatUserInfo from 'wp-calypso-client/state/happychat/selectors/get-happychat-userinfo';
+import isHappychatUserEligible from 'wp-calypso-client/state/happychat/selectors/is-happychat-user-eligible';
+import hasHappychatLocalizedSupport from 'wp-calypso-client/state/happychat/selectors/has-happychat-localized-support';
 import {
 	isTicketSupportConfigurationReady,
 	getTicketSupportRequestError,
-} from 'state/help/ticket/selectors';
-import HappychatConnection from 'components/happychat/connection-connected';
-import QueryTicketSupportConfiguration from 'components/data/query-ticket-support-configuration';
-import QuerySupportHistory from 'components/data/query-support-history';
+} from 'wp-calypso-client/state/help/ticket/selectors';
+import HappychatConnection from 'wp-calypso-client/components/happychat/connection-connected';
+import QueryTicketSupportConfiguration from 'wp-calypso-client/components/data/query-ticket-support-configuration';
+import QuerySupportHistory from 'wp-calypso-client/components/data/query-support-history';
 import HelpUnverifiedWarning from '../help-unverified-warning';
 import {
 	sendMessage as sendHappychatMessage,
 	sendUserInfo,
-} from 'state/happychat/connection/actions';
-import { openChat as openHappychat } from 'state/happychat/ui/actions';
+} from 'wp-calypso-client/state/happychat/connection/actions';
+import { openChat as openHappychat } from 'wp-calypso-client/state/happychat/ui/actions';
 import {
 	getCurrentUser,
 	getCurrentUserLocale,
 	getCurrentUserSiteCount,
 	isCurrentUserEmailVerified,
-} from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/current-user/selectors';
 import {
 	askQuestion as askDirectlyQuestion,
 	initialize as initializeDirectly,
-} from 'state/help/directly/actions';
-import { isRequestingSites } from 'state/sites/selectors';
-import getLocalizedLanguageNames from 'state/selectors/get-localized-language-names';
-import hasUserAskedADirectlyQuestion from 'state/selectors/has-user-asked-a-directly-question';
-import isDirectlyReady from 'state/selectors/is-directly-ready';
-import isDirectlyUninitialized from 'state/selectors/is-directly-uninitialized';
-import getActiveSupportTickets from 'state/selectors/get-active-support-tickets';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { getHelpSelectedSiteId } from 'state/help/selectors';
-import { isDefaultLocale, localizeUrl } from 'lib/i18n-utils';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryLanguageNames from 'components/data/query-language-names';
+} from 'wp-calypso-client/state/help/directly/actions';
+import { isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import getLocalizedLanguageNames from 'wp-calypso-client/state/selectors/get-localized-language-names';
+import hasUserAskedADirectlyQuestion from 'wp-calypso-client/state/selectors/has-user-asked-a-directly-question';
+import isDirectlyReady from 'wp-calypso-client/state/selectors/is-directly-ready';
+import isDirectlyUninitialized from 'wp-calypso-client/state/selectors/is-directly-uninitialized';
+import getActiveSupportTickets from 'wp-calypso-client/state/selectors/get-active-support-tickets';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { getHelpSelectedSiteId } from 'wp-calypso-client/state/help/selectors';
+import { isDefaultLocale, localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryLanguageNames from 'wp-calypso-client/components/data/query-language-names';
 import getInlineHelpSupportVariation, {
 	SUPPORT_CHAT_OVERFLOW,
 	SUPPORT_DIRECTLY,
@@ -68,7 +68,7 @@ import getInlineHelpSupportVariation, {
 	SUPPORT_HAPPYCHAT,
 	SUPPORT_TICKET,
 	SUPPORT_UPWORK_TICKET,
-} from 'state/selectors/get-inline-help-support-variation';
+} from 'wp-calypso-client/state/selectors/get-inline-help-support-variation';
 
 /**
  * Style dependencies

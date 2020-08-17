@@ -14,9 +14,9 @@ import React from 'react';
  * Internal dependencies
  */
 import { EditorMediaModal } from '../';
-import accept from 'lib/accept';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { useSandbox } from 'test-helpers/use-sinon';
+import accept from 'wp-calypso-client/lib/accept';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 jest.mock( 'component-closest', () => {} );
 jest.mock(
@@ -28,17 +28,21 @@ jest.mock(
 	{ virtual: true }
 );
 jest.mock( 'post-editor/media-modal/detail', () => ( {
-	default: require( 'components/empty-component' ),
+	default: require( 'wp-calypso-client/components/empty-component' ),
 } ) );
-jest.mock( 'post-editor/media-modal/gallery', () => require( 'components/empty-component' ) );
+jest.mock( 'post-editor/media-modal/gallery', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 jest.mock( 'post-editor/media-modal/markup', () => ( {
 	get: ( x ) => x,
 } ) );
 jest.mock( 'post-editor/media-modal/secondary-actions', () =>
-	require( 'components/empty-component' )
+	require( 'wp-calypso-client/components/empty-component' )
 );
 jest.mock( 'lib/accept', () => require( 'sinon' ).stub().callsArgWithAsync( 1, true ) );
-jest.mock( 'my-sites/media-library', () => require( 'components/empty-component' ) );
+jest.mock( 'my-sites/media-library', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 
 /**
  * Module variables

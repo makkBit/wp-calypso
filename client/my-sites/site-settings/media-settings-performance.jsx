@@ -10,27 +10,27 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 import { Card } from '@automattic/components';
 import filesize from 'filesize';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import FormFieldset from 'components/forms/form-fieldset';
-import SupportInfo from 'components/support-info';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import SupportInfo from 'wp-calypso-client/components/support-info';
 import {
 	PLAN_JETPACK_PREMIUM,
 	FEATURE_VIDEO_UPLOADS,
 	FEATURE_VIDEO_UPLOADS_JETPACK_PREMIUM,
 	FEATURE_VIDEO_UPLOADS_JETPACK_PRO,
-} from 'lib/plans/constants';
-import { hasFeature } from 'state/sites/plans/selectors';
-import getMediaStorageLimit from 'state/selectors/get-media-storage-limit';
-import getMediaStorageUsed from 'state/selectors/get-media-storage-used';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSitePlanSlug, getSiteSlug } from 'state/sites/selectors';
-import QueryMediaStorage from 'components/data/query-media-storage';
-import PlanStorageBar from 'blocks/plan-storage/bar';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+} from 'wp-calypso-client/lib/plans/constants';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import getMediaStorageLimit from 'wp-calypso-client/state/selectors/get-media-storage-limit';
+import getMediaStorageUsed from 'wp-calypso-client/state/selectors/get-media-storage-used';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSitePlanSlug, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import QueryMediaStorage from 'wp-calypso-client/components/data/query-media-storage';
+import PlanStorageBar from 'wp-calypso-client/blocks/plan-storage/bar';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 
 class MediaSettingsPerformance extends Component {
 	static propTypes = {

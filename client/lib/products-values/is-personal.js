@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { isPersonalPlan } from 'lib/plans';
-import { assertValidProduct } from 'lib/products-values/utils/assert-valid-product';
-import { formatProduct } from 'lib/products-values/format-product';
+import { isPersonalPlan } from 'wp-calypso-client/lib/plans';
+import { assertValidProduct } from 'wp-calypso-client/lib/products-values/utils/assert-valid-product';
+import { formatProduct } from 'wp-calypso-client/lib/products-values/format-product';
 
 export function isPersonal( product ) {
 	product = formatProduct( product );

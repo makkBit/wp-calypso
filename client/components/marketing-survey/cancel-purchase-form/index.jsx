@@ -11,29 +11,29 @@ import { getCurrencyDefaults } from '@automattic/format-currency';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { submitSurvey } from 'lib/purchases/actions';
+import config from 'wp-calypso-client/config';
+import { submitSurvey } from 'wp-calypso-client/lib/purchases/actions';
 import { Dialog, Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLegend from 'components/forms/form-legend';
-import FormLabel from 'components/forms/form-label';
-import FormTextarea from 'components/forms/form-textarea';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getSiteImportEngine from 'state/selectors/get-site-import-engine';
-import hasActiveHappychatSession from 'state/happychat/selectors/has-active-happychat-session';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import isPrecancellationChatAvailable from 'state/happychat/selectors/is-precancellation-chat-available';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import HappychatButton from 'components/happychat/button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getSiteImportEngine from 'wp-calypso-client/state/selectors/get-site-import-engine';
+import hasActiveHappychatSession from 'wp-calypso-client/state/happychat/selectors/has-active-happychat-session';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import isPrecancellationChatAvailable from 'wp-calypso-client/state/happychat/selectors/is-precancellation-chat-available';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
 import * as steps from './steps';
 import initialSurveyState from './initial-survey-state';
 import BusinessATStep from './step-components/business-at-step';
 import UpgradeATStep from './step-components/upgrade-at-step';
 import PrecancellationChatButton from './precancellation-chat-button';
 import DowngradeStep from './step-components/downgrade-step';
-import { getName, isRefundable } from 'lib/purchases';
-import { isGoogleApps } from 'lib/products-values';
+import { getName, isRefundable } from 'wp-calypso-client/lib/purchases';
+import { isGoogleApps } from 'wp-calypso-client/lib/products-values';
 import { radioOption } from './radio-option';
 import {
 	cancellationOptionsForPurchase,
@@ -45,9 +45,9 @@ import isSurveyFilledIn from './is-survey-filled-in';
 import stepsForProductAndSurvey from './steps-for-product-and-survey';
 import enrichedSurveyData from './enriched-survey-data';
 import { CANCEL_FLOW_TYPE } from './constants';
-import { getDowngradePlanRawPrice } from 'state/purchases/selectors';
-import QueryPlans from 'components/data/query-plans';
-import QuerySitePlans from 'components/data/query-site-plans';
+import { getDowngradePlanRawPrice } from 'wp-calypso-client/state/purchases/selectors';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
 
 /**
  * Style dependencies

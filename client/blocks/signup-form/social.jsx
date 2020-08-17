@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import AppleLoginButton from 'components/social-buttons/apple';
-import config from 'config';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import GoogleLoginButton from 'components/social-buttons/google';
-import { localizeUrl } from 'lib/i18n-utils';
-import { preventWidows } from 'lib/formatting';
-import { recordTracksEvent } from 'state/analytics/actions';
+import AppleLoginButton from 'wp-calypso-client/components/social-buttons/apple';
+import config from 'wp-calypso-client/config';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import GoogleLoginButton from 'wp-calypso-client/components/social-buttons/google';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class SocialSignupForm extends Component {
 	static propTypes = {

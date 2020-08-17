@@ -6,13 +6,13 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import userFactory from 'lib/user';
+import config from 'wp-calypso-client/config';
+import userFactory from 'wp-calypso-client/lib/user';
 import * as controller from './controller';
-import { login } from 'lib/paths';
-import { siteSelection } from 'my-sites/controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { getLanguageRouteParam } from 'lib/i18n-utils';
+import { login } from 'wp-calypso-client/lib/paths';
+import { siteSelection } from 'wp-calypso-client/my-sites/controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { getLanguageRouteParam } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

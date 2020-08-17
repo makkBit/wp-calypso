@@ -7,10 +7,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { getCurrentUser } from 'state/current-user/selectors';
-import { makeLayout, render as clientRender } from 'controller';
-import { siteSelection, sites } from 'my-sites/controller';
-import { startJetpackCloudOAuthOverride } from 'lib/jetpack/oauth-override';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
+import { startJetpackCloudOAuthOverride } from 'wp-calypso-client/lib/jetpack/oauth-override';
 import { translate } from 'i18n-calypso';
 import Landing from './sections/landing';
 

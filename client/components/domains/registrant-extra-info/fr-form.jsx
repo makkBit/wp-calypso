@@ -12,14 +12,14 @@ import { defaults, get, identity, isEmpty, isString, map, noop, set, toUpper, un
 /**
  * Internal dependencies
  */
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
-import { updateContactDetailsCache } from 'state/domains/management/actions';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormRadio from 'components/forms/form-radio';
-import FormTextInput from 'components/forms/form-text-input';
-import FormInputValidation from 'components/forms/form-input-validation';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
+import { updateContactDetailsCache } from 'wp-calypso-client/state/domains/management/actions';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 import validateContactDetails from './fr-validate-contact-details';
 import { disableSubmitButton } from './with-contact-details-validation';
 

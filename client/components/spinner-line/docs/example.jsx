@@ -7,7 +7,7 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import SpinnerLine from 'components/spinner-line';
+import SpinnerLine from 'wp-calypso-client/components/spinner-line';
 
 export default class SpinnerLineExample extends PureComponent {
 	render() {

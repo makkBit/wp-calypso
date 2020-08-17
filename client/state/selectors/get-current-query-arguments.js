@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/route/init';
+import 'wp-calypso-client/state/route/init';
 
 /**
  * Gets the last query parameters set by a ROUTE_SET action

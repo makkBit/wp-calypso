@@ -12,10 +12,10 @@ import { flowRight, get, map } from 'lodash';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FoldableCard from 'components/foldable-card';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 import { deleteFile } from '../../state/stats/actions';
 import { isDeletingFile } from '../../state/stats/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 function getAge( lower, upper ) {
 	if ( lower && upper ) {

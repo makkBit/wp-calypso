@@ -7,7 +7,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getCurrentUser } from 'state/current-user/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Returns whether the current user's primary site's is Jetpack or not.

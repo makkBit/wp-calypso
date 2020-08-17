@@ -12,25 +12,25 @@ import { find } from 'lodash';
  */
 import formatCurrency from '@automattic/format-currency';
 import { Button } from '@automattic/components';
-import { getSelectedSite } from 'state/ui/selectors';
-import { siteHasPaidPlan } from 'signup/steps/site-picker/site-picker-submit';
-import { currentUserHasFlag, getCurrentUser } from 'state/current-user/selectors';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { siteHasPaidPlan } from 'wp-calypso-client/signup/steps/site-picker/site-picker-submit';
+import { currentUserHasFlag, getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
 import {
 	hasDomainRegistration,
 	hasTransferProduct,
 	hasPlan,
 	planItem,
-} from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
-import SectionHeader from 'components/section-header';
-import { PLAN_PERSONAL } from 'lib/plans/constants';
-import { isRequestingSitePlans } from 'state/sites/plans/selectors';
-import { isRequestingPlans } from 'state/plans/selectors';
-import { getPlan } from 'lib/plans';
-import { getPlanPrice } from 'state/products-list/selectors';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { PLAN_PERSONAL } from 'wp-calypso-client/lib/plans/constants';
+import { isRequestingSitePlans } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isRequestingPlans } from 'wp-calypso-client/state/plans/selectors';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { getPlanPrice } from 'wp-calypso-client/state/products-list/selectors';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { getAllCartItems } from '../../../lib/cart-values/cart-items';
 import { isDomainRegistration, isDomainTransfer } from '../../../lib/products-values';
 

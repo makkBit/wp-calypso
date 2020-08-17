@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { isNaN } from 'lodash';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
@@ -16,15 +16,15 @@ import {
 	getProductsSettingValue,
 } from 'woocommerce/state/sites/settings/products/selectors';
 import { Button } from '@automattic/components';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextInput from 'components/forms/form-text-input';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
-import Range from 'components/forms/range';
+import Range from 'wp-calypso-client/components/forms/range';
 import { updateSettingsProducts } from 'woocommerce/state/sites/settings/products/actions';
 
 class InventoryControls extends Component {

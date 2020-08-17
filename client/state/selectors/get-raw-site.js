@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getSitesItems from 'state/selectors/get-sites-items';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
 
 /**
  * Returns a raw site object by its ID.

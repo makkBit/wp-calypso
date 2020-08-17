@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { getSiteStatsViewSummary } from 'state/stats/lists/selectors';
+import { getSiteStatsViewSummary } from 'wp-calypso-client/state/stats/lists/selectors';
 
 describe( 'getSiteStatsViewSummary()', () => {
 	test( 'should return null if no data exists', () => {

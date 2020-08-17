@@ -1,19 +1,19 @@
 /**
  * Internal dependencies
  */
-import siteSupportsRealtimeBackup from 'state/selectors/site-supports-realtime-backup';
+import siteSupportsRealtimeBackup from 'wp-calypso-client/state/selectors/site-supports-realtime-backup';
 import {
 	PLAN_JETPACK_BUSINESS,
 	PLAN_JETPACK_BUSINESS_MONTHLY,
 	PLAN_JETPACK_PREMIUM,
 	PLAN_JETPACK_PREMIUM_MONTHLY,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 import {
 	PRODUCT_JETPACK_BACKUP_DAILY,
 	PRODUCT_JETPACK_BACKUP_DAILY_MONTHLY,
 	PRODUCT_JETPACK_BACKUP_REALTIME,
 	PRODUCT_JETPACK_BACKUP_REALTIME_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 
 describe( 'siteSupportsRealtimeBackup()', () => {
 	test( 'should return false when no data is available', () => {

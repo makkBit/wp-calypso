@@ -12,8 +12,8 @@ import {
 	READER_CONVERSATION_MUTE,
 	READER_CONVERSATION_UPDATE_FOLLOW_STATUS,
 	READER_POSTS_RECEIVE,
-} from 'state/reader/action-types';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	describe( '#items()', () => {

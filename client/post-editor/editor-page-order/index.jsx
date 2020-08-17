@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import AccordionSection from 'components/accordion/section';
-import TextInput from 'components/forms/form-text-input';
-import { recordEditorEvent, recordEditorStat } from 'state/posts/stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import TextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { recordEditorEvent, recordEditorStat } from 'wp-calypso-client/state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
 
 /**
  * Style dependencies

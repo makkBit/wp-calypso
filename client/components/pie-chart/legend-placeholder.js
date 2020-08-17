@@ -8,7 +8,7 @@ import { get, maxBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { LegendItemPlaceholder } from 'components/legend-item';
+import { LegendItemPlaceholder } from 'wp-calypso-client/components/legend-item';
 
 function getLongestName( dataSeriesInfo ) {
 	return get( maxBy( dataSeriesInfo, 'name.length' ), 'name', '' );

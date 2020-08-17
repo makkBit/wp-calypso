@@ -9,11 +9,11 @@ import { getCurrencyObject } from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { canRemoveFromCart } from 'lib/cart-values';
-import { getIncludedDomain } from 'lib/cart-values/cart-items';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { canRemoveFromCart } from 'wp-calypso-client/lib/cart-values';
+import { getIncludedDomain } from 'wp-calypso-client/lib/cart-values/cart-items';
 import {
 	isCredits,
 	isGoogleApps,
@@ -24,14 +24,14 @@ import {
 	isPlan,
 	isBundled,
 	isDomainProduct,
-} from 'lib/products-values';
-import { isGSuiteProductSlug } from 'lib/gsuite';
-import { currentUserHasFlag } from 'state/current-user/selectors';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
-import { GSUITE_BASIC_SLUG, GSUITE_BUSINESS_SLUG } from 'lib/gsuite/constants';
-import { removeItem } from 'lib/cart/actions';
+} from 'wp-calypso-client/lib/products-values';
+import { isGSuiteProductSlug } from 'wp-calypso-client/lib/gsuite';
+import { currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
+import { GSUITE_BASIC_SLUG, GSUITE_BUSINESS_SLUG } from 'wp-calypso-client/lib/gsuite/constants';
+import { removeItem } from 'wp-calypso-client/lib/cart/actions';
 import { localize } from 'i18n-calypso';
-import { calculateMonthlyPriceForPlan, getBillingMonthsForPlan } from 'lib/plans';
+import { calculateMonthlyPriceForPlan, getBillingMonthsForPlan } from 'wp-calypso-client/lib/plans';
 
 export class CartItem extends React.Component {
 	removeFromCart = ( event ) => {

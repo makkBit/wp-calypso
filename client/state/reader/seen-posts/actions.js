@@ -8,15 +8,15 @@ import {
 	READER_SEEN_MARK_AS_UNSEEN_RECEIVE,
 	READER_SEEN_MARK_ALL_AS_SEEN_REQUEST,
 	READER_SEEN_MARK_ALL_AS_SEEN_RECEIVE,
-} from 'state/reader/action-types';
-import { SOURCE_READER_WEB } from 'state/reader/seen-posts/constants';
+} from 'wp-calypso-client/state/reader/action-types';
+import { SOURCE_READER_WEB } from 'wp-calypso-client/state/reader/seen-posts/constants';
 
 /**
  * Load data layer dependencies
  */
-import 'state/data-layer/wpcom/seen-posts/seen/new/index';
-import 'state/data-layer/wpcom/seen-posts/seen/delete/index';
-import 'state/data-layer/wpcom/seen-posts/seen/all/new/index';
+import 'wp-calypso-client/state/data-layer/wpcom/seen-posts/seen/new/index';
+import 'wp-calypso-client/state/data-layer/wpcom/seen-posts/seen/delete/index';
+import 'wp-calypso-client/state/data-layer/wpcom/seen-posts/seen/all/new/index';
 
 /**
  * Request mark as seen for given seenIds

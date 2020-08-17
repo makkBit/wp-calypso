@@ -8,26 +8,26 @@ import { localize, useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import ServerCredentialsForm from 'components/jetpack/server-credentials-form';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import ServerCredentialsForm from 'wp-calypso-client/components/jetpack/server-credentials-form';
 import { Card } from '@automattic/components';
-import FoldableCard from 'components/foldable-card';
-import getRewindState from 'state/selectors/get-rewind-state';
-import getSiteScanState from 'state/selectors/get-site-scan-state';
-import QueryJetpackScan from 'components/data/query-jetpack-scan';
-import QueryRewindState from 'components/data/query-rewind-state';
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import ExternalLink from 'components/external-link';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import getSiteScanState from 'wp-calypso-client/state/selectors/get-site-scan-state';
+import QueryJetpackScan from 'wp-calypso-client/components/data/query-jetpack-scan';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 /**
  * Style dependencies
  */
 import './style.scss';
-import connectedIcon from 'assets/images/jetpack/connected.svg';
-import disconnectedIcon from 'assets/images/jetpack/disconnected.svg';
+import connectedIcon from 'wp-calypso-client/assets/images/jetpack/connected.svg';
+import disconnectedIcon from 'wp-calypso-client/assets/images/jetpack/disconnected.svg';
 
 const connectedProps = ( translate, connectedMessage ) => ( {
 	iconPath: connectedIcon,

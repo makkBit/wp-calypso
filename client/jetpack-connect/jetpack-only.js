@@ -15,8 +15,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 const jetpackOnly = ( WrappedComponent ) => {
 	class JetpackOnlyWrapper extends Component {

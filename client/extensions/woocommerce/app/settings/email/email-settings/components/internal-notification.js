@@ -10,11 +10,11 @@ import { localize } from 'i18n-calypso';
  */
 import ListItem from 'woocommerce/components/list/list-item';
 import ListItemField from 'woocommerce/components/list/list-item-field';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextValidation from 'components/forms/form-input-validation';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextValidation from 'wp-calypso-client/components/forms/form-input-validation';
 import { checkEmails } from './helpers';
 
 const InternalNotification = ( { item, recipient, checked, onChange, loaded, translate } ) => {

@@ -8,9 +8,9 @@ import React, { useState } from 'react';
  * Internal dependencies
  */
 import { Button, CompactCard as Card } from '@automattic/components';
-import CardHeading from 'components/card-heading';
+import CardHeading from 'wp-calypso-client/components/card-heading';
 import MultipleChoiceQuestion from '../';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 
 function MultipleChoiceQuestionExamples() {
 	const [ selectedAnswer, setSelectedAnswer ] = useState( null );

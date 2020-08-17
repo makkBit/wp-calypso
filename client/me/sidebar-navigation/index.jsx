@@ -8,9 +8,9 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import SidebarNavigation from 'components/sidebar-navigation';
-import Gravatar from 'components/gravatar';
-import { getCurrentUser } from 'state/current-user/selectors';
+import SidebarNavigation from 'wp-calypso-client/components/sidebar-navigation';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

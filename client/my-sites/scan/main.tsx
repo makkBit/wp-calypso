@@ -6,37 +6,37 @@ import { connect } from 'react-redux';
 import { Button, Card, ProgressBar } from '@automattic/components';
 import { translate } from 'i18n-calypso';
 import { flowRight as compose } from 'lodash';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import classNames from 'classnames';
 
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import QueryJetpackScan from 'components/data/query-jetpack-scan';
-import FormattedHeader from 'components/formatted-header';
-import SecurityIcon from 'components/jetpack/security-icon';
-import ScanPlaceholder from 'components/jetpack/scan-placeholder';
-import ScanThreats from 'components/jetpack/scan-threats';
-import { Scan, Site } from 'my-sites/scan/types';
-import EmptyContent from 'components/empty-content';
-import Gridicon from 'components/gridicon';
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getSiteUrl from 'state/sites/selectors/get-site-url';
-import getSiteScanProgress from 'state/selectors/get-site-scan-progress';
-import getSiteScanIsInitial from 'state/selectors/get-site-scan-is-initial';
-import getSiteScanState from 'state/selectors/get-site-scan-state';
-import isRequestingJetpackScan from 'state/selectors/is-requesting-jetpack-scan';
-import { withLocalizedMoment } from 'components/localized-moment';
-import contactSupportUrl from 'lib/jetpack/contact-support-url';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { triggerScanRun } from 'lib/jetpack/trigger-scan-run';
-import { withApplySiteOffset, applySiteOffsetType } from 'components/site-offset';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QueryJetpackScan from 'wp-calypso-client/components/data/query-jetpack-scan';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import SecurityIcon from 'wp-calypso-client/components/jetpack/security-icon';
+import ScanPlaceholder from 'wp-calypso-client/components/jetpack/scan-placeholder';
+import ScanThreats from 'wp-calypso-client/components/jetpack/scan-threats';
+import { Scan, Site } from 'wp-calypso-client/my-sites/scan/types';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getSiteUrl from 'wp-calypso-client/state/sites/selectors/get-site-url';
+import getSiteScanProgress from 'wp-calypso-client/state/selectors/get-site-scan-progress';
+import getSiteScanIsInitial from 'wp-calypso-client/state/selectors/get-site-scan-is-initial';
+import getSiteScanState from 'wp-calypso-client/state/selectors/get-site-scan-state';
+import isRequestingJetpackScan from 'wp-calypso-client/state/selectors/is-requesting-jetpack-scan';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import contactSupportUrl from 'wp-calypso-client/lib/jetpack/contact-support-url';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { triggerScanRun } from 'wp-calypso-client/lib/jetpack/trigger-scan-run';
+import { withApplySiteOffset, applySiteOffsetType } from 'wp-calypso-client/components/site-offset';
 import ScanNavigation from './navigation';
 
 /**

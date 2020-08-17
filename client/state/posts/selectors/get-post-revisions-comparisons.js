@@ -6,11 +6,11 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getPostRevisions } from 'state/posts/selectors/get-post-revisions';
-import { getPostRevisionsDiff } from 'state/posts/selectors/get-post-revisions-diff';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getPostRevisions } from 'wp-calypso-client/state/posts/selectors/get-post-revisions';
+import { getPostRevisionsDiff } from 'wp-calypso-client/state/posts/selectors/get-post-revisions-diff';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 export const getPostRevisionsComparisons = createSelector(
 	( state, siteId, postId ) => {

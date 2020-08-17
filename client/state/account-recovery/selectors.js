@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/account-recovery/init';
+import 'wp-calypso-client/state/account-recovery/init';
 
 export const isFetchingAccountRecoverySettings = ( state ) =>
 	state.accountRecovery.isFetchingSettings;

@@ -13,7 +13,7 @@ import {
 	EXPORT_ADVANCED_SETTINGS_FETCH,
 	EXPORT_ADVANCED_SETTINGS_RECEIVE,
 	EXPORT_POST_TYPE_FIELD_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	describe( 'selectedAdvancedSettings', () => {

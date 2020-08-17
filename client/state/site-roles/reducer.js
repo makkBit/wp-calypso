@@ -2,13 +2,17 @@
  * Internal dependencies
  */
 import { siteRolesSchema } from './schema';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import {
 	SITE_ROLES_RECEIVE,
 	SITE_ROLES_REQUEST,
 	SITE_ROLES_REQUEST_FAILURE,
 	SITE_ROLES_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Returns the updated requests state after an action has been dispatched. The

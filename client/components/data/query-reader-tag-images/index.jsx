@@ -10,8 +10,8 @@ import { bindActionCreators } from 'redux';
 /**
  * Internal dependencies
  */
-import { shouldRequestTagImages } from 'state/reader/tags/images/selectors';
-import { requestTagImages } from 'state/reader/tags/images/actions';
+import { shouldRequestTagImages } from 'wp-calypso-client/state/reader/tags/images/selectors';
+import { requestTagImages } from 'wp-calypso-client/state/reader/tags/images/actions';
 
 class QueryReaderTagImages extends Component {
 	UNSAFE_componentWillMount() {

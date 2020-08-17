@@ -7,12 +7,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormLabel from 'components/forms/form-label';
-import FormVerificationCodeInput from 'components/forms/form-verification-code-input';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormVerificationCodeInput from 'wp-calypso-client/components/forms/form-verification-code-input';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
 
 class RecoveryPhoneValidationNotice extends Component {
 	constructor() {

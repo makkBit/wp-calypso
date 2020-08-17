@@ -2,8 +2,11 @@
  * Internal dependencies
  */
 
-import { combineReducers, withoutPersistence } from 'state/utils';
-import { MAILCHIMP_SETTINGS_RECEIVE, MAILCHIMP_SETTINGS_UPDATE_SUCCESS } from 'state/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
+import {
+	MAILCHIMP_SETTINGS_RECEIVE,
+	MAILCHIMP_SETTINGS_UPDATE_SUCCESS,
+} from 'wp-calypso-client/state/action-types';
 
 export const items = withoutPersistence( ( state = {}, action ) => {
 	switch ( action.type ) {

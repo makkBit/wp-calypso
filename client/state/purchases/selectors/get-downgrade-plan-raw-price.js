@@ -1,10 +1,10 @@
 /**
  * Internal Dependencies
  */
-import { getPlanRawPrice } from 'state/plans/selectors';
+import { getPlanRawPrice } from 'wp-calypso-client/state/plans/selectors';
 import { getDowngradePlanFromPurchase } from './get-downgrade-plan-from-purchase';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 export const getDowngradePlanRawPrice = ( state, purchase ) => {
 	const plan = getDowngradePlanFromPurchase( purchase );

@@ -10,16 +10,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import QuerySites from 'components/data/query-sites';
-import QuerySiteRoles from 'components/data/query-site-roles';
-import { getSite } from 'state/sites/selectors';
-import { getSiteRoles } from 'state/site-roles/selectors';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySiteRoles from 'wp-calypso-client/components/data/query-site-roles';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSiteRoles } from 'wp-calypso-client/state/site-roles/selectors';
 import { ROLES_LIST } from './constants';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 import './style.scss';
 

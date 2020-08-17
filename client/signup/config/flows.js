@@ -6,11 +6,11 @@ import { assign, get, includes, indexOf, reject } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import stepConfig from './steps';
-import user from 'lib/user';
-import { generateFlows } from 'signup/config/flows-pure';
-import { addQueryArgs } from 'lib/url';
+import user from 'wp-calypso-client/lib/user';
+import { generateFlows } from 'wp-calypso-client/signup/config/flows-pure';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 
 function getCheckoutUrl( dependencies, localeSlug ) {
 	let checkoutURL = `/checkout/${ dependencies.siteSlug }`;

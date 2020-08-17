@@ -11,23 +11,23 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import CardHeading from 'components/card-heading';
-import getGoogleMyBusinessStats from 'state/selectors/get-google-my-business-stats';
-import getGoogleMyBusinessStatsError from 'state/selectors/get-google-my-business-stats-error';
-import LineChart from 'components/line-chart';
-import LineChartPlaceholder from 'components/line-chart/placeholder';
-import Notice from 'components/notice';
-import PieChart from 'components/pie-chart';
-import PieChartLegend from 'components/pie-chart/legend';
-import PieChartLegendPlaceholder from 'components/pie-chart/legend-placeholder';
-import PieChartPlaceholder from 'components/pie-chart/placeholder';
-import SectionHeader from 'components/section-header';
-import { changeGoogleMyBusinessStatsInterval } from 'state/google-my-business/ui/actions';
-import { enhanceWithSiteType, recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getStatsInterval } from 'state/google-my-business/ui/selectors';
-import { requestGoogleMyBusinessStats } from 'state/google-my-business/actions';
-import { withEnhancers } from 'state/utils';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import getGoogleMyBusinessStats from 'wp-calypso-client/state/selectors/get-google-my-business-stats';
+import getGoogleMyBusinessStatsError from 'wp-calypso-client/state/selectors/get-google-my-business-stats-error';
+import LineChart from 'wp-calypso-client/components/line-chart';
+import LineChartPlaceholder from 'wp-calypso-client/components/line-chart/placeholder';
+import Notice from 'wp-calypso-client/components/notice';
+import PieChart from 'wp-calypso-client/components/pie-chart';
+import PieChartLegend from 'wp-calypso-client/components/pie-chart/legend';
+import PieChartLegendPlaceholder from 'wp-calypso-client/components/pie-chart/legend-placeholder';
+import PieChartPlaceholder from 'wp-calypso-client/components/pie-chart/placeholder';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { changeGoogleMyBusinessStatsInterval } from 'wp-calypso-client/state/google-my-business/ui/actions';
+import { enhanceWithSiteType, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getStatsInterval } from 'wp-calypso-client/state/google-my-business/ui/selectors';
+import { requestGoogleMyBusinessStats } from 'wp-calypso-client/state/google-my-business/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 
 const withToolTip = ( WrappedComponent ) => ( props ) => {
 	// inject interval props to renderTooltipForDatanum

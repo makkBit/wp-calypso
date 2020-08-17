@@ -6,10 +6,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { sectionify } from 'lib/route';
-import { recordTrack } from 'reader/stats';
-import AsyncLoad from 'components/async-load';
-import { trackPageLoad, trackScrollPage } from 'reader/controller-helper';
+import { sectionify } from 'wp-calypso-client/lib/route';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { trackPageLoad, trackScrollPage } from 'wp-calypso-client/reader/controller-helper';
 
 export function conversations( context, next ) {
 	const basePath = sectionify( context.path );
@@ -24,7 +24,7 @@ export function conversations( context, next ) {
 
 	context.primary = (
 		<AsyncLoad
-			require="reader/conversations/stream"
+			require="wp-calypso-client/reader/conversations/stream"
 			key={ 'conversations' }
 			title="Conversations"
 			streamKey={ streamKey }
@@ -54,7 +54,7 @@ export function conversationsA8c( context, next ) {
 
 	context.primary = (
 		<AsyncLoad
-			require="reader/conversations/stream"
+			require="wp-calypso-client/reader/conversations/stream"
 			key={ 'conversations' }
 			title="Conversations @ Automattic"
 			streamKey={ streamKey }

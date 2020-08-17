@@ -11,18 +11,18 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import ImageEditorCrop from './image-editor-crop';
-import { canvasToBlob } from 'lib/media/utils';
+import { canvasToBlob } from 'wp-calypso-client/lib/media/utils';
 import {
 	getImageEditorTransform,
 	getImageEditorFileInfo,
 	getImageEditorCrop,
 	isImageEditorImageLoaded,
-} from 'state/editor/image-editor/selectors';
+} from 'wp-calypso-client/state/editor/image-editor/selectors';
 import {
 	setImageEditorCropBounds,
 	setImageEditorImageHasLoaded,
-} from 'state/editor/image-editor/actions';
-import getImageEditorIsGreaterThanMinimumDimensions from 'state/selectors/get-image-editor-is-greater-than-minimum-dimensions';
+} from 'wp-calypso-client/state/editor/image-editor/actions';
+import getImageEditorIsGreaterThanMinimumDimensions from 'wp-calypso-client/state/selectors/get-image-editor-is-greater-than-minimum-dimensions';
 
 export class ImageEditorCanvas extends Component {
 	static propTypes = {

@@ -1,1 +1,1 @@
-export { getHttpData as default } from 'state/data-layer/http-data';
+export { getHttpData as default } from 'wp-calypso-client/state/data-layer/http-data';

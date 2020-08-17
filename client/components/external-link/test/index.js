@@ -3,7 +3,7 @@
  */
 import { assert } from 'chai';
 import { shallow } from 'enzyme';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React from 'react';
 
 /**

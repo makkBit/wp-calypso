@@ -10,9 +10,9 @@ import { invokeMap } from 'lodash';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import FormButton from 'components/forms/form-button';
-import Notice from 'components/notice';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import Notice from 'wp-calypso-client/components/notice';
 import AddressSummary from './summary';
 import { ACCEPTED_USPS_ORIGIN_COUNTRIES } from 'woocommerce/woocommerce-services/state/shipping-label/constants';
 

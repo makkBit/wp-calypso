@@ -6,9 +6,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import AccountSettingsCloseComponent from 'me/account-close/main';
-import AccountSettingsClosedComponent from 'me/account-close/closed';
-import { hideSidebar } from 'state/ui/actions';
+import AccountSettingsCloseComponent from 'wp-calypso-client/me/account-close/main';
+import AccountSettingsClosedComponent from 'wp-calypso-client/me/account-close/closed';
+import { hideSidebar } from 'wp-calypso-client/state/ui/actions';
 
 const removeSidebar = ( context ) => context.store.dispatch( hideSidebar() );
 

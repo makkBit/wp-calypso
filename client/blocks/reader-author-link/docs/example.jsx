@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ReaderAuthorLink from 'blocks/reader-author-link';
+import ReaderAuthorLink from 'wp-calypso-client/blocks/reader-author-link';
 import { Card } from '@automattic/components';
 
 const ReaderAuthorLinkExample = () => {

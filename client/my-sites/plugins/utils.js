@@ -7,8 +7,8 @@ import { find, get, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getSections } from 'sections-helper';
+import config from 'wp-calypso-client/config';
+import { getSections } from 'wp-calypso-client/sections-helper';
 
 export function getExtensionSettingsPath( plugin ) {
 	const pluginSlug = get( plugin, 'slug', '' );

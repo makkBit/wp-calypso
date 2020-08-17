@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import { WORDADS_STATUS_REQUEST, WORDADS_STATUS_RECEIVE } from 'state/action-types';
+import {
+	WORDADS_STATUS_REQUEST,
+	WORDADS_STATUS_RECEIVE,
+} from 'wp-calypso-client/state/action-types';
 import { pick } from 'lodash';
 
-import 'state/data-layer/wpcom/wordads/status';
-import 'state/wordads/init';
+import 'wp-calypso-client/state/data-layer/wpcom/wordads/status';
+import 'wp-calypso-client/state/wordads/init';
 
 export const requestWordadsStatus = ( siteId ) => ( {
 	type: WORDADS_STATUS_REQUEST,

@@ -26,8 +26,8 @@ import {
 	READER_FOLLOWS_RECEIVE,
 	READER_FOLLOW_ERROR,
 	READER_SITE_REQUEST_SUCCESS,
-} from 'state/reader/action-types';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
 
 const exampleFollow = {
 	is_following: true,

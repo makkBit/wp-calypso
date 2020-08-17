@@ -5,30 +5,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import page from 'page';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import ActionPanel from 'components/action-panel';
-import ActionPanelTitle from 'components/action-panel/title';
-import ActionPanelBody from 'components/action-panel/body';
-import ActionPanelFigure from 'components/action-panel/figure';
-import ActionPanelFooter from 'components/action-panel/footer';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import ActionPanel from 'wp-calypso-client/components/action-panel';
+import ActionPanelTitle from 'wp-calypso-client/components/action-panel/title';
+import ActionPanelBody from 'wp-calypso-client/components/action-panel/body';
+import ActionPanelFigure from 'wp-calypso-client/components/action-panel/figure';
+import ActionPanelFooter from 'wp-calypso-client/components/action-panel/footer';
 import { Button, Dialog } from '@automattic/components';
-import DeleteSiteWarningDialog from 'my-sites/site-settings/delete-site-warning-dialog';
-import { hasLoadedSitePurchasesFromServer } from 'state/purchases/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getSite, getSiteDomain } from 'state/sites/selectors';
-import Notice from 'components/notice';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { deleteSite } from 'state/sites/actions';
-import { setSelectedSiteId } from 'state/ui/actions';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import FormLabel from 'components/forms/form-label';
-import hasCancelableSitePurchases from 'state/selectors/has-cancelable-site-purchases';
+import DeleteSiteWarningDialog from 'wp-calypso-client/my-sites/site-settings/delete-site-warning-dialog';
+import { hasLoadedSitePurchasesFromServer } from 'wp-calypso-client/state/purchases/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getSite, getSiteDomain } from 'wp-calypso-client/state/sites/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { deleteSite } from 'wp-calypso-client/state/sites/actions';
+import { setSelectedSiteId } from 'wp-calypso-client/state/ui/actions';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import hasCancelableSitePurchases from 'wp-calypso-client/state/selectors/has-cancelable-site-purchases';
 
 /**
  * Style dependencies

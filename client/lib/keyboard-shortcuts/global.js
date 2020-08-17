@@ -6,12 +6,12 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getStatsDefaultSitePage } from 'lib/route';
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
-import { reduxDispatch, reduxGetState } from 'lib/redux-bridge';
-import { getSectionGroup } from 'state/ui/selectors';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+import config from 'wp-calypso-client/config';
+import { getStatsDefaultSitePage } from 'wp-calypso-client/lib/route';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import { reduxDispatch, reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import { getSectionGroup } from 'wp-calypso-client/state/ui/selectors';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 
 let singleton;
 

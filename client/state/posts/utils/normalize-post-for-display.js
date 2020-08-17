@@ -6,12 +6,12 @@ import { cloneDeep, flow } from 'lodash';
 /**
  * Internal dependencies
  */
-import pickCanonicalImage from 'lib/post-normalizer/rule-pick-canonical-image';
-import decodeEntities from 'lib/post-normalizer/rule-decode-entities';
-import detectMedia from 'lib/post-normalizer/rule-content-detect-media';
-import withContentDom from 'lib/post-normalizer/rule-with-content-dom';
-import stripHtml from 'lib/post-normalizer/rule-strip-html';
-import config from 'config';
+import pickCanonicalImage from 'wp-calypso-client/lib/post-normalizer/rule-pick-canonical-image';
+import decodeEntities from 'wp-calypso-client/lib/post-normalizer/rule-decode-entities';
+import detectMedia from 'wp-calypso-client/lib/post-normalizer/rule-content-detect-media';
+import withContentDom from 'wp-calypso-client/lib/post-normalizer/rule-with-content-dom';
+import stripHtml from 'wp-calypso-client/lib/post-normalizer/rule-strip-html';
+import config from 'wp-calypso-client/config';
 
 const normalizeDisplayFlow = flow( [
 	decodeEntities,

@@ -9,13 +9,17 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import QueryMediaStorage from 'components/data/query-media-storage';
-import { getMediaStorage } from 'state/sites/media-storage/selectors';
-import { getSitePlanSlug, getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { planHasFeature, isBusinessPlan, isEcommercePlan } from 'lib/plans';
-import { FEATURE_UNLIMITED_STORAGE } from 'lib/plans/constants';
+import QueryMediaStorage from 'wp-calypso-client/components/data/query-media-storage';
+import { getMediaStorage } from 'wp-calypso-client/state/sites/media-storage/selectors';
+import {
+	getSitePlanSlug,
+	getSiteSlug,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { planHasFeature, isBusinessPlan, isEcommercePlan } from 'wp-calypso-client/lib/plans';
+import { FEATURE_UNLIMITED_STORAGE } from 'wp-calypso-client/lib/plans/constants';
 import PlanStorageBar from './bar';
 
 /**

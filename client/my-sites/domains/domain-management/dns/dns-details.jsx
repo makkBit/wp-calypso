@@ -8,7 +8,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { CUSTOM_DNS } from 'lib/url/support';
+import { CUSTOM_DNS } from 'wp-calypso-client/lib/url/support';
 
 class DnsDetails extends React.PureComponent {
 	render() {

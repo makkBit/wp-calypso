@@ -4,13 +4,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import Count from 'components/count';
+import Count from 'wp-calypso-client/components/count';
 
 /**
  * Style dependencies

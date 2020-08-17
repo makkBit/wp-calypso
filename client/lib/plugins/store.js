@@ -7,16 +7,16 @@ import { assign, clone, isArray, sortBy, values, find } from 'lodash';
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 /* eslint-enable no-restricted-imports */
-import PluginsActions from 'lib/plugins/actions';
-import versionCompare from 'lib/version-compare';
-import { normalizePluginData } from 'lib/plugins/utils';
-import { reduxDispatch, reduxGetState } from 'lib/redux-bridge';
-import getNetworkSites from 'state/selectors/get-network-sites';
-import { getSite } from 'state/sites/selectors';
-import { sitePluginUpdated } from 'state/sites/actions';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { normalizePluginData } from 'wp-calypso-client/lib/plugins/utils';
+import { reduxDispatch, reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import getNetworkSites from 'wp-calypso-client/state/selectors/get-network-sites';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { sitePluginUpdated } from 'wp-calypso-client/state/sites/actions';
 
 const debug = debugFactory( 'calypso:sites-plugins:sites-plugins-store' );
 

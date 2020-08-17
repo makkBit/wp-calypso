@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getSiteSlugsForUpcomingTransactions from 'state/selectors/get-site-slugs-for-upcoming-transactions';
+import getSiteSlugsForUpcomingTransactions from 'wp-calypso-client/state/selectors/get-site-slugs-for-upcoming-transactions';
 
 describe( 'getSiteSlugsForUpcomingTransactions()', () => {
 	beforeEach( () => {

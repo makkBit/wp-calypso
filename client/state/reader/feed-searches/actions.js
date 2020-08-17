@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import { READER_FEED_SEARCH_REQUEST, READER_FEED_SEARCH_RECEIVE } from 'state/reader/action-types';
+import {
+	READER_FEED_SEARCH_REQUEST,
+	READER_FEED_SEARCH_RECEIVE,
+} from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/data-layer/wpcom/read/feed';
+import 'wp-calypso-client/state/data-layer/wpcom/read/feed';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 export const SORT_BY_LAST_UPDATED = 'last_updated';
 export const SORT_BY_RELEVANCE = 'relevance';

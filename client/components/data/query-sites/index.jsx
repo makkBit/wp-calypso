@@ -8,10 +8,14 @@ import { useSelector, useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingSites, isRequestingSite, hasAllSitesList } from 'state/sites/selectors';
-import { requestSites, requestSite } from 'state/sites/actions';
-import { getPreference } from 'state/preferences/selectors';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
+import {
+	isRequestingSites,
+	isRequestingSite,
+	hasAllSitesList,
+} from 'wp-calypso-client/state/sites/selectors';
+import { requestSites, requestSite } from 'wp-calypso-client/state/sites/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
 
 const getRecentSites = ( state ) => getPreference( state, 'recentSites' );
 

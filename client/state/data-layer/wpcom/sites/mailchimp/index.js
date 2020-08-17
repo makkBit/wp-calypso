@@ -12,12 +12,12 @@ import {
 	MAILCHIMP_LISTS_RECEIVE,
 	MAILCHIMP_SETTINGS_LIST,
 	MAILCHIMP_SETTINGS_RECEIVE,
-} from 'state/action-types';
-import { mergeHandlers } from 'state/action-watchers/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+} from 'wp-calypso-client/state/action-types';
+import { mergeHandlers } from 'wp-calypso-client/state/action-watchers/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const handleMailchimpListsList = dispatchRequest( {
 	fetch: ( action ) =>

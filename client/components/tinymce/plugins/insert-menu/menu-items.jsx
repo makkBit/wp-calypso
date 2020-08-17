@@ -8,10 +8,10 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import Gridicon from 'components/gridicon';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import config from 'wp-calypso-client/config';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 
 const canUserUploadFiles = ( editor ) => {
 	const store = editor.getParam( 'redux_store' );

@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isCountryStatesFetching } from 'state/country-states/selectors';
-import { requestCountryStates } from 'state/country-states/actions';
+import { isCountryStatesFetching } from 'wp-calypso-client/state/country-states/selectors';
+import { requestCountryStates } from 'wp-calypso-client/state/country-states/actions';
 
 class QueryCountryStates extends Component {
 	UNSAFE_componentWillMount() {

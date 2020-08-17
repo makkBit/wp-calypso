@@ -17,35 +17,35 @@ import superagent from 'superagent'; // Don't have Node.js fetch lib yet.
 /**
  * Internal dependencies
  */
-import config from 'config';
-import sanitize from 'server/sanitize';
-import utils from 'server/bundler/utils';
-import { pathToRegExp } from 'utils';
-import sections from 'sections';
-import isSectionEnabled from 'sections-filter';
-import loginRouter, { LOGIN_SECTION_DEFINITION } from 'login';
-import { serverRouter, getNormalizedPath } from 'server/isomorphic-routing';
+import config from 'wp-calypso-client/config';
+import sanitize from 'wp-calypso-client/server/sanitize';
+import utils from 'wp-calypso-client/server/bundler/utils';
+import { pathToRegExp } from 'wp-calypso-client/utils';
+import sections from 'wp-calypso-client/sections';
+import isSectionEnabled from 'wp-calypso-client/sections-filter';
+import loginRouter, { LOGIN_SECTION_DEFINITION } from 'wp-calypso-client/login';
+import { serverRouter, getNormalizedPath } from 'wp-calypso-client/server/isomorphic-routing';
 import {
 	serverRender,
 	renderJsx,
 	attachBuildTimestamp,
 	attachHead,
 	attachI18n,
-} from 'server/render';
-import stateCache from 'server/state-cache';
-import getBootstrappedUser from 'server/user-bootstrap';
-import { createReduxStore } from 'state';
-import { setStore } from 'state/redux-store';
-import initialReducer from 'state/reducer';
-import { DESERIALIZE, LOCALE_SET } from 'state/action-types';
-import { setCurrentUser } from 'state/current-user/actions';
-import { login } from 'lib/paths';
+} from 'wp-calypso-client/server/render';
+import stateCache from 'wp-calypso-client/server/state-cache';
+import getBootstrappedUser from 'wp-calypso-client/server/user-bootstrap';
+import { createReduxStore } from 'wp-calypso-client/state';
+import { setStore } from 'wp-calypso-client/state/redux-store';
+import initialReducer from 'wp-calypso-client/state/reducer';
+import { DESERIALIZE, LOCALE_SET } from 'wp-calypso-client/state/action-types';
+import { setCurrentUser } from 'wp-calypso-client/state/current-user/actions';
+import { login } from 'wp-calypso-client/lib/paths';
 import { logSectionResponse } from './analytics';
-import analytics from 'server/lib/analytics';
-import { getLanguage, filterLanguageRevisions } from 'lib/i18n-utils';
-import { isWooOAuth2Client } from 'lib/oauth2-clients';
-import { GUTENBOARDING_SECTION_DEFINITION } from 'landing/gutenboarding/section';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
+import analytics from 'wp-calypso-client/server/lib/analytics';
+import { getLanguage, filterLanguageRevisions } from 'wp-calypso-client/lib/i18n-utils';
+import { isWooOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
+import { GUTENBOARDING_SECTION_DEFINITION } from 'wp-calypso-client/landing/gutenboarding/section';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
 
 import middlewareBuildTarget from '../middleware/build-target.js';
 import middlewareAssets from '../middleware/assets.js';

@@ -5,13 +5,13 @@
 
 import React from 'react';
 import classNames from 'classnames';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import Head from 'components/head';
-import EmptyContent from 'components/empty-content';
+import Head from 'wp-calypso-client/components/head';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 import { chunkCssLinks } from './utils';
 
 function ServerError( { entrypoint } ) {

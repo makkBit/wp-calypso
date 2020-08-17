@@ -12,29 +12,29 @@ import { localize, getLocaleSlug } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import afterLayoutFlush from 'lib/after-layout-flush';
-import QueryPosts from 'components/data/query-posts';
-import QueryRecentPostViews from 'components/data/query-stats-recent-post-views';
-import { DEFAULT_POST_QUERY } from 'lib/query-manager/post/constants';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isVipSite from 'state/selectors/is-vip-site';
-import isJetpackSite from 'state/sites/selectors/is-jetpack-site';
+import afterLayoutFlush from 'wp-calypso-client/lib/after-layout-flush';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import QueryRecentPostViews from 'wp-calypso-client/components/data/query-stats-recent-post-views';
+import { DEFAULT_POST_QUERY } from 'wp-calypso-client/lib/query-manager/post/constants';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import isJetpackSite from 'wp-calypso-client/state/sites/selectors/is-jetpack-site';
 import {
 	isRequestingPostsForQueryIgnoringPage,
 	getPostsForQueryIgnoringPage,
 	getPostsFoundForQuery,
 	getPostsLastPageForQuery,
-} from 'state/posts/selectors';
-import { getPostType, getPostTypeLabel } from 'state/post-types/selectors';
-import { getEditorUrl } from 'state/selectors/get-editor-url';
-import ListEnd from 'components/list-end';
-import PostItem from 'blocks/post-item';
+} from 'wp-calypso-client/state/posts/selectors';
+import { getPostType, getPostTypeLabel } from 'wp-calypso-client/state/post-types/selectors';
+import { getEditorUrl } from 'wp-calypso-client/state/selectors/get-editor-url';
+import ListEnd from 'wp-calypso-client/components/list-end';
+import PostItem from 'wp-calypso-client/blocks/post-item';
 import PostTypeListEmptyContent from './empty-content';
 import PostTypeListMaxPagesNotice from './max-pages-notice';
-import SectionHeader from 'components/section-header';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { Button } from '@automattic/components';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_NO_ADS } from 'lib/plans/constants';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { FEATURE_NO_ADS } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style dependencies

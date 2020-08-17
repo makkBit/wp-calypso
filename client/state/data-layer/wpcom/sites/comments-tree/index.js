@@ -8,13 +8,16 @@ import { flatMap, flatten, isArray, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import { COMMENTS_TREE_SITE_ADD, COMMENTS_TREE_SITE_REQUEST } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
-import getRawSite from 'state/selectors/get-raw-site';
+import {
+	COMMENTS_TREE_SITE_ADD,
+	COMMENTS_TREE_SITE_REQUEST,
+} from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const fetchCommentsTreeForSite = ( action ) => {
 	const { siteId, status = 'unapproved' } = action.query;

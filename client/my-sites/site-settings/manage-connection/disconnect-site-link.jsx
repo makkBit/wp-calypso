@@ -9,11 +9,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SiteToolsLink from 'my-sites/site-settings/site-tools/link';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { recordTracksEvent } from 'state/analytics/actions';
+import SiteToolsLink from 'wp-calypso-client/my-sites/site-settings/site-tools/link';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class DisconnectSiteLink extends PureComponent {
 	handleClick = () => {

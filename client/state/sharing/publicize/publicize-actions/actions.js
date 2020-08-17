@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	PUBLICIZE_SHARE_ACTIONS_SCHEDULED_REQUEST,
 	PUBLICIZE_SHARE_ACTIONS_SCHEDULED_REQUEST_SUCCESS,
@@ -18,9 +18,9 @@ import {
 	PUBLICIZE_SHARE_ACTION_SCHEDULE,
 	PUBLICIZE_SHARE_ACTION_SCHEDULE_SUCCESS,
 	PUBLICIZE_SHARE_ACTION_SCHEDULE_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 export function fetchPostShareActionsScheduled( siteId, postId ) {
 	return ( dispatch ) => {

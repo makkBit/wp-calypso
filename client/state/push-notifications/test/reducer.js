@@ -12,7 +12,7 @@ import {
 	SERIALIZE,
 	DESERIALIZE,
 	PUSH_NOTIFICATIONS_RECEIVE_REGISTER_DEVICE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const wpcomSubscription = {
 	ID: '42',

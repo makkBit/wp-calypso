@@ -7,67 +7,79 @@ import { connect } from 'react-redux';
 import { translate } from 'i18n-calypso';
 import classNames from 'classnames';
 import { get, startsWith, pickBy } from 'lodash';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import ReaderMain from 'reader/components/reader-main';
-import EmbedContainer from 'components/embed-container';
-import PostExcerpt from 'components/post-excerpt';
-import { markPostSeen } from 'state/reader/posts/actions';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
+import EmbedContainer from 'wp-calypso-client/components/embed-container';
+import PostExcerpt from 'wp-calypso-client/components/post-excerpt';
+import { markPostSeen } from 'wp-calypso-client/state/reader/posts/actions';
 import ReaderFullPostHeader from './header';
-import AuthorCompactProfile from 'blocks/author-compact-profile';
-import LikeButton from 'reader/like-button';
-import { isDiscoverPost, isDiscoverSitePick } from 'reader/discover/helper';
-import DiscoverSiteAttribution from 'reader/discover/site-attribution';
-import DailyPostButton from 'blocks/daily-post-button';
-import { isDailyPostChallengeOrPrompt } from 'blocks/daily-post-button/helper';
-import { shouldShowLikes } from 'reader/like-helper';
-import { shouldShowComments } from 'blocks/comments/helper';
-import CommentButton from 'blocks/comment-button';
+import AuthorCompactProfile from 'wp-calypso-client/blocks/author-compact-profile';
+import LikeButton from 'wp-calypso-client/reader/like-button';
+import { isDiscoverPost, isDiscoverSitePick } from 'wp-calypso-client/reader/discover/helper';
+import DiscoverSiteAttribution from 'wp-calypso-client/reader/discover/site-attribution';
+import DailyPostButton from 'wp-calypso-client/blocks/daily-post-button';
+import { isDailyPostChallengeOrPrompt } from 'wp-calypso-client/blocks/daily-post-button/helper';
+import { shouldShowLikes } from 'wp-calypso-client/reader/like-helper';
+import { shouldShowComments } from 'wp-calypso-client/blocks/comments/helper';
+import CommentButton from 'wp-calypso-client/blocks/comment-button';
 import {
 	recordAction,
 	recordGaEvent,
 	recordTrackForPost,
 	recordPermalinkClick,
-} from 'reader/stats';
-import Comments from 'blocks/comments';
-import scrollTo from 'lib/scroll-to';
-import PostExcerptLink from 'reader/post-excerpt-link';
-import { getSiteName } from 'reader/get-helpers';
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
-import ReaderPostActions from 'blocks/reader-post-actions';
-import { RelatedPostsFromSameSite, RelatedPostsFromOtherSites } from 'components/related-posts';
-import { getStreamUrlFromPost } from 'reader/route';
-import { like as likePost, unlike as unlikePost } from 'state/posts/likes/actions';
-import FeaturedImage from 'blocks/reader-full-post/featured-image';
-import { getFeed } from 'state/reader/feeds/selectors';
-import { getSite } from 'state/reader/sites/selectors';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import QueryReaderPost from 'components/data/query-reader-post';
-import ExternalLink from 'components/external-link';
-import DocumentHead from 'components/data/document-head';
+} from 'wp-calypso-client/reader/stats';
+import Comments from 'wp-calypso-client/blocks/comments';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import PostExcerptLink from 'wp-calypso-client/reader/post-excerpt-link';
+import { getSiteName } from 'wp-calypso-client/reader/get-helpers';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import ReaderPostActions from 'wp-calypso-client/blocks/reader-post-actions';
+import {
+	RelatedPostsFromSameSite,
+	RelatedPostsFromOtherSites,
+} from 'wp-calypso-client/components/related-posts';
+import { getStreamUrlFromPost } from 'wp-calypso-client/reader/route';
+import {
+	like as likePost,
+	unlike as unlikePost,
+} from 'wp-calypso-client/state/posts/likes/actions';
+import FeaturedImage from 'wp-calypso-client/blocks/reader-full-post/featured-image';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import ReaderFullPostUnavailable from './unavailable';
-import BackButton from 'components/back-button';
-import { isFeaturedImageInContent } from 'lib/post-normalizer/utils';
+import BackButton from 'wp-calypso-client/components/back-button';
+import { isFeaturedImageInContent } from 'wp-calypso-client/lib/post-normalizer/utils';
 import ReaderFullPostContentPlaceholder from './placeholders/content';
-import { keyForPost } from 'reader/post-key';
-import { showSelectedPost } from 'reader/utils';
-import Emojify from 'components/emojify';
-import { COMMENTS_FILTER_ALL } from 'blocks/comments/comments-filters';
-import { READER_FULL_POST } from 'reader/follow-sources';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import { isLikedPost } from 'state/posts/selectors/is-liked-post';
-import QueryPostLikes from 'components/data/query-post-likes';
-import getCurrentStream from 'state/selectors/get-reader-current-stream';
-import { setViewingFullPostKey, unsetViewingFullPostKey } from 'state/reader/viewing/actions';
-import { getNextItem, getPreviousItem } from 'state/reader/streams/selectors';
-import { requestMarkAsSeen, requestMarkAsUnseen } from 'state/reader/seen-posts/actions';
-import Gridicon from 'components/gridicon';
-import { PerformanceTrackerStop } from 'lib/performance-tracking';
+import { keyForPost } from 'wp-calypso-client/reader/post-key';
+import { showSelectedPost } from 'wp-calypso-client/reader/utils';
+import Emojify from 'wp-calypso-client/components/emojify';
+import { COMMENTS_FILTER_ALL } from 'wp-calypso-client/blocks/comments/comments-filters';
+import { READER_FULL_POST } from 'wp-calypso-client/reader/follow-sources';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import { isLikedPost } from 'wp-calypso-client/state/posts/selectors/is-liked-post';
+import QueryPostLikes from 'wp-calypso-client/components/data/query-post-likes';
+import getCurrentStream from 'wp-calypso-client/state/selectors/get-reader-current-stream';
+import {
+	setViewingFullPostKey,
+	unsetViewingFullPostKey,
+} from 'wp-calypso-client/state/reader/viewing/actions';
+import { getNextItem, getPreviousItem } from 'wp-calypso-client/state/reader/streams/selectors';
+import {
+	requestMarkAsSeen,
+	requestMarkAsUnseen,
+} from 'wp-calypso-client/state/reader/seen-posts/actions';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { PerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
 
 /**
  * Style dependencies

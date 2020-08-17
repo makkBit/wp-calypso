@@ -8,7 +8,7 @@
  * Internal dependencies
  */
 import { getThankYouPageUrl } from '../use-get-thank-you-url';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 let mockGSuiteCountryIsValid = true;
 jest.mock( 'lib/user', () =>

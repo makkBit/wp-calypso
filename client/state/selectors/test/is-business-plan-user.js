@@ -6,8 +6,8 @@ import deepFreeze from 'deep-freeze';
 /**
  * Internal dependencies
  */
-import isBusinessPlanUser from 'state/selectors/is-business-plan-user';
-import { PLAN_BUSINESS, PLAN_BUSINESS_2_YEARS } from 'lib/plans/constants';
+import isBusinessPlanUser from 'wp-calypso-client/state/selectors/is-business-plan-user';
+import { PLAN_BUSINESS, PLAN_BUSINESS_2_YEARS } from 'wp-calypso-client/lib/plans/constants';
 
 // Gets rid of warnings such as 'UnhandledPromiseRejectionWarning: Error: No available storage method found.'
 jest.mock( 'lib/user', () => () => {} );

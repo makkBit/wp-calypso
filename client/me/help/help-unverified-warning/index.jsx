@@ -3,14 +3,14 @@
  */
 import React, { Component } from 'react';
 import { localize } from 'i18n-calypso';
-import user from 'lib/user';
+import user from 'wp-calypso-client/lib/user';
 
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import notices from 'notices';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import notices from 'wp-calypso-client/notices';
 
 /**
  * Style dependencies

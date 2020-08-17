@@ -4,7 +4,7 @@
 import React, { useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import debugFactory from 'debug';
-import wp from 'lib/wp';
+import wp from 'wp-calypso-client/lib/wp';
 import { CheckoutErrorBoundary } from '@automattic/composite-checkout';
 import { useTranslate } from 'i18n-calypso';
 import cookie from 'cookie';
@@ -19,27 +19,31 @@ import OwnedProductNoticeContent from './checkout/owned-product-notice-content';
 import JetpackMinimumPluginVersionNoticeContent from './checkout/jetpack-minimum-plugin-version-notice-content';
 import CompositeCheckout from './composite-checkout/composite-checkout';
 import { fetchStripeConfiguration } from './composite-checkout/payment-method-helpers';
-import { getPlanByPathSlug } from 'lib/plans';
-import { GROUP_JETPACK, JETPACK_PLANS } from 'lib/plans/constants';
-import { JETPACK_PRODUCTS_LIST } from 'lib/products-values/constants';
-import { isJetpackBackup, isJetpackBackupSlug, getProductFromSlug } from 'lib/products-values';
-import { StripeHookProvider } from 'lib/stripe';
-import config from 'config';
-import { getCurrentUserCountryCode } from 'state/current-user/selectors';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
+import { getPlanByPathSlug } from 'wp-calypso-client/lib/plans';
+import { GROUP_JETPACK, JETPACK_PLANS } from 'wp-calypso-client/lib/plans/constants';
+import { JETPACK_PRODUCTS_LIST } from 'wp-calypso-client/lib/products-values/constants';
+import {
+	isJetpackBackup,
+	isJetpackBackupSlug,
+	getProductFromSlug,
+} from 'wp-calypso-client/lib/products-values';
+import { StripeHookProvider } from 'wp-calypso-client/lib/stripe';
+import config from 'wp-calypso-client/config';
+import { getCurrentUserCountryCode } from 'wp-calypso-client/state/current-user/selectors';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
 import {
 	isJetpackSite,
 	isJetpackMinimumVersion,
 	getSiteProducts,
 	getSitePlan,
-} from 'state/sites/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { logToLogstash } from 'state/logstash/actions';
+} from 'wp-calypso-client/state/sites/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { logToLogstash } from 'wp-calypso-client/state/logstash/actions';
 import {
 	isPlanIncludingSiteBackup,
 	isBackupProductIncludedInSitePlan,
-} from 'state/sites/products/conflicts';
-import Recaptcha from 'signup/recaptcha';
+} from 'wp-calypso-client/state/sites/products/conflicts';
+import Recaptcha from 'wp-calypso-client/signup/recaptcha';
 
 const debug = debugFactory( 'calypso:checkout-system-decider' );
 const wpcom = wp.undocumented();

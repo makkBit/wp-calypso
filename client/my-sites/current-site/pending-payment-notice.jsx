@@ -7,9 +7,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { hasPendingPayment } from 'lib/cart-values';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { hasPendingPayment } from 'wp-calypso-client/lib/cart-values';
 
 export const PendingPaymentNotice = ( { translate, cart = {} } ) => {
 	if ( ! hasPendingPayment( cart ) ) {

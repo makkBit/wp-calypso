@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { DEFAULT_POST_QUERY } from 'state/posts/constants';
-import { getPostsLastPageForQuery } from 'state/posts/selectors/get-posts-last-page-for-query';
+import { DEFAULT_POST_QUERY } from 'wp-calypso-client/state/posts/constants';
+import { getPostsLastPageForQuery } from 'wp-calypso-client/state/posts/selectors/get-posts-last-page-for-query';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if the query has reached the last page of queryable pages, or

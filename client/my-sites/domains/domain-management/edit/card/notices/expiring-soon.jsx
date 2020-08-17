@@ -3,14 +3,14 @@
  */
 import React from 'react';
 import { useTranslate } from 'i18n-calypso';
-import { useLocalizedMoment } from 'components/localized-moment';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Internal dependencies
  */
-import { isExpiringSoon } from 'lib/domains/utils';
-import RenewButton from 'my-sites/domains/domain-management/edit/card/renew-button';
-import { type as domainTypes } from 'lib/domains/constants';
+import { isExpiringSoon } from 'wp-calypso-client/lib/domains/utils';
+import RenewButton from 'wp-calypso-client/my-sites/domains/domain-management/edit/card/renew-button';
+import { type as domainTypes } from 'wp-calypso-client/lib/domains/constants';
 
 function ExpiringSoon( props ) {
 	const translate = useTranslate();

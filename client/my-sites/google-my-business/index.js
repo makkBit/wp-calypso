@@ -6,20 +6,20 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { makeLayout } from 'controller';
-import { navigation, sites, siteSelection } from 'my-sites/controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout } from 'wp-calypso-client/controller';
+import { navigation, sites, siteSelection } from 'wp-calypso-client/my-sites/controller';
 import { newAccount, selectBusinessType, selectLocation, stats } from './controller';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getGoogleMyBusinessLocations from 'state/selectors/get-google-my-business-locations';
-import isGoogleMyBusinessLocationConnected from 'state/selectors/is-google-my-business-location-connected';
-import isSiteGoogleMyBusinessEligible from 'state/selectors/is-site-google-my-business-eligible';
-import { getSiteHomeUrl } from 'state/sites/selectors';
-import { requestKeyringServices } from 'state/sharing/services/actions';
-import { requestSiteKeyrings } from 'state/site-keyrings/actions';
-import { getSiteKeyringsForService } from 'state/site-keyrings/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { requestKeyringConnections } from 'state/sharing/keyring/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getGoogleMyBusinessLocations from 'wp-calypso-client/state/selectors/get-google-my-business-locations';
+import isGoogleMyBusinessLocationConnected from 'wp-calypso-client/state/selectors/is-google-my-business-location-connected';
+import isSiteGoogleMyBusinessEligible from 'wp-calypso-client/state/selectors/is-site-google-my-business-eligible';
+import { getSiteHomeUrl } from 'wp-calypso-client/state/sites/selectors';
+import { requestKeyringServices } from 'wp-calypso-client/state/sharing/services/actions';
+import { requestSiteKeyrings } from 'wp-calypso-client/state/site-keyrings/actions';
+import { getSiteKeyringsForService } from 'wp-calypso-client/state/site-keyrings/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { requestKeyringConnections } from 'wp-calypso-client/state/sharing/keyring/actions';
 
 /**
  * Style dependencies

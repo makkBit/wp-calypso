@@ -3,7 +3,7 @@
  */
 import { getSerializedDomainsSuggestionsQuery } from './utils';
 
-import 'state/domains/init';
+import 'wp-calypso-client/state/domains/init';
 
 /**
  * Returns domains suggestions information for a query.

@@ -10,12 +10,12 @@ import formatCurrency, { CURRENCIES } from '@automattic/format-currency';
  * Internal Dependencies
  */
 import { localize } from 'i18n-calypso';
-import { computeProductsWithPrices } from 'state/products-list/selectors';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { PLANS_LIST } from 'lib/plans/plans-list';
-import QueryPlans from 'components/data/query-plans';
-import QueryProductsList from 'components/data/query-products-list';
+import { computeProductsWithPrices } from 'wp-calypso-client/state/products-list/selectors';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { PLANS_LIST } from 'wp-calypso-client/lib/plans/plans-list';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
 import SubscriptionLengthOption from './option';
 
 /**

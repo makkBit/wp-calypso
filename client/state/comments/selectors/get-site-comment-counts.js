@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Return comment counts for the given site and post ID, if applicable.

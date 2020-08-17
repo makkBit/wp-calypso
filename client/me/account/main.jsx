@@ -15,49 +15,53 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import LanguagePicker from 'components/language-picker';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import { protectForm } from 'lib/protect-form';
-import formBase from 'me/form-base';
-import config from 'config';
-import { languages } from 'languages';
-import { supportsCssCustomProperties } from 'lib/feature-detection';
+import LanguagePicker from 'wp-calypso-client/components/language-picker';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import formBase from 'wp-calypso-client/me/form-base';
+import config from 'wp-calypso-client/config';
+import { languages } from 'wp-calypso-client/languages';
+import { supportsCssCustomProperties } from 'wp-calypso-client/lib/feature-detection';
 import { Card, Button } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import FormTextValidation from 'components/forms/form-input-validation';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormRadio from 'components/forms/form-radio';
-import { recordGoogleEvent, recordTracksEvent, bumpStat } from 'state/analytics/actions';
-import ReauthRequired from 'me/reauth-required';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import observe from 'lib/mixins/data-observe'; // eslint-disable-line no-restricted-imports
-import Main from 'components/main';
-import SitesDropdown from 'components/sites-dropdown';
-import ColorSchemePicker from 'blocks/color-scheme-picker';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import { getLanguage, isLocaleVariant, canBeTranslated } from 'lib/i18n-utils';
-import isRequestingMissingSites from 'state/selectors/is-requesting-missing-sites';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { canDisplayCommunityTranslator } from 'components/community-translator/utils';
-import { ENABLE_TRANSLATOR_KEY } from 'lib/i18n-utils/constants';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormTextValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import {
+	recordGoogleEvent,
+	recordTracksEvent,
+	bumpStat,
+} from 'wp-calypso-client/state/analytics/actions';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import observe from 'wp-calypso-client/lib/mixins/data-observe'; // eslint-disable-line no-restricted-imports
+import Main from 'wp-calypso-client/components/main';
+import SitesDropdown from 'wp-calypso-client/components/sites-dropdown';
+import ColorSchemePicker from 'wp-calypso-client/blocks/color-scheme-picker';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { getLanguage, isLocaleVariant, canBeTranslated } from 'wp-calypso-client/lib/i18n-utils';
+import isRequestingMissingSites from 'wp-calypso-client/state/selectors/is-requesting-missing-sites';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { canDisplayCommunityTranslator } from 'wp-calypso-client/components/community-translator/utils';
+import { ENABLE_TRANSLATOR_KEY } from 'wp-calypso-client/lib/i18n-utils/constants';
 import AccountSettingsCloseLink from './close-link';
-import { requestGeoLocation } from 'state/data-getters';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { requestGeoLocation } from 'wp-calypso-client/state/data-getters';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import {
 	getCurrentUserDate,
 	getCurrentUserDisplayName,
 	getCurrentUserName,
 	getCurrentUserVisibleSiteCount,
-} from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

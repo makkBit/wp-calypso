@@ -9,9 +9,9 @@ const debug = debugFactory( 'calypso:follow-list:site' );
 /**
  * Internal dependencies
  */
-import config from 'config';
-import wpcom from 'lib/wp';
-import Emitter from 'lib/mixins/emitter';
+import config from 'wp-calypso-client/config';
+import wpcom from 'wp-calypso-client/lib/wp';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 /**
  * FollowList component

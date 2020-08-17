@@ -11,18 +11,22 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import SupportInfo from 'components/support-info';
-import ExternalLink from 'components/external-link';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import getJetpackModule from 'state/selectors/get-jetpack-module';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { isJetpackSite } from 'state/sites/selectors';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import getJetpackModule from 'wp-calypso-client/state/selectors/get-jetpack-module';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 class Sitemaps extends Component {
 	static defaultProps = {

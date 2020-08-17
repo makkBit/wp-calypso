@@ -16,16 +16,16 @@ import noticesMiddleware, {
 	onPostRestoreFailure,
 	onPostSaveSuccess,
 } from '../middleware';
-import PostQueryManager from 'lib/query-manager/post';
+import PostQueryManager from 'wp-calypso-client/lib/query-manager/post';
 import {
 	BILLING_TRANSACTION_REQUEST_FAILURE,
 	NOTICE_CREATE,
 	POST_DELETE_FAILURE,
 	POST_RESTORE_FAILURE,
 	POST_SAVE_SUCCESS,
-} from 'state/action-types';
-import { successNotice, withoutNotice } from 'state/notices/actions';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { successNotice, withoutNotice } from 'wp-calypso-client/state/notices/actions';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'middleware', () => {
 	describe( 'noticesMiddleware()', () => {

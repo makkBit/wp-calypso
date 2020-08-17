@@ -6,16 +6,16 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	ACTIVE_THEME_REQUEST_FAILURE,
 	ACTIVE_THEME_REQUEST_SUCCESS,
 	ACTIVE_THEME_REQUEST,
-} from 'state/themes/action-types';
-import { isJetpackSite } from 'state/sites/selectors';
-import { receiveTheme } from 'state/themes/actions/receive-theme';
+} from 'wp-calypso-client/state/themes/action-types';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { receiveTheme } from 'wp-calypso-client/state/themes/actions/receive-theme';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 const debug = debugFactory( 'calypso:themes:actions' );
 

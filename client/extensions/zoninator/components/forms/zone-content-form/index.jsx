@@ -11,11 +11,11 @@ import { flowRight } from 'lodash';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import SectionHeader from 'components/section-header';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import PostsList from './posts-list';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const form = 'extensions.zoninator.zoneContent';
 

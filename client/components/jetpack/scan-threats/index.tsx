@@ -9,16 +9,20 @@ import { Button } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import FixAllThreatsDialog from 'components/jetpack/fix-all-threats-dialog';
-import SecurityIcon from 'components/jetpack/security-icon';
-import ThreatDialog from 'components/jetpack/threat-dialog';
-import ThreatItem from 'components/jetpack/threat-item';
-import { FixableThreat, Threat, ThreatAction } from 'components/jetpack/threat-item/types';
-import { recordTracksEvent } from 'state/analytics/actions';
-import contactSupportUrl from 'lib/jetpack/contact-support-url';
-import { useThreats } from 'lib/jetpack/use-threats';
-import { triggerScanRun } from 'lib/jetpack/trigger-scan-run';
+import { isEnabled } from 'wp-calypso-client/config';
+import FixAllThreatsDialog from 'wp-calypso-client/components/jetpack/fix-all-threats-dialog';
+import SecurityIcon from 'wp-calypso-client/components/jetpack/security-icon';
+import ThreatDialog from 'wp-calypso-client/components/jetpack/threat-dialog';
+import ThreatItem from 'wp-calypso-client/components/jetpack/threat-item';
+import {
+	FixableThreat,
+	Threat,
+	ThreatAction,
+} from 'wp-calypso-client/components/jetpack/threat-item/types';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import contactSupportUrl from 'wp-calypso-client/lib/jetpack/contact-support-url';
+import { useThreats } from 'wp-calypso-client/lib/jetpack/use-threats';
+import { triggerScanRun } from 'wp-calypso-client/lib/jetpack/trigger-scan-run';
 
 /**
  * Style dependencies

@@ -11,15 +11,19 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import PendingGSuiteTosNotice from './pending-gsuite-tos-notice';
-import { purchasesRoot } from 'me/purchases/paths';
-import { type as domainTypes, transferStatus, gdprConsentStatus } from 'lib/domains/constants';
-import { hasPendingGSuiteUsers } from 'lib/gsuite';
-import { isSubdomain } from 'lib/domains';
+import { purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import {
+	type as domainTypes,
+	transferStatus,
+	gdprConsentStatus,
+} from 'wp-calypso-client/lib/domains/constants';
+import { hasPendingGSuiteUsers } from 'wp-calypso-client/lib/gsuite';
+import { isSubdomain } from 'wp-calypso-client/lib/domains';
 import {
 	CHANGE_NAME_SERVERS,
 	DOMAINS,
@@ -28,15 +32,15 @@ import {
 	MAP_SUBDOMAIN,
 	SETTING_PRIMARY_DOMAIN,
 	MAP_DOMAIN_CHANGE_NAME_SERVERS,
-} from 'lib/url/support';
+} from 'wp-calypso-client/lib/url/support';
 import {
 	domainManagementEdit,
 	domainManagementList,
 	domainManagementNameServers,
 	domainManagementTransferIn,
 	domainManagementManageConsent,
-} from 'my-sites/domains/paths';
-import TrackComponentView from 'lib/analytics/track-component-view';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
 
 /**
  * Style dependencies

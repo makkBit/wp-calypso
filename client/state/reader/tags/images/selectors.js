@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Returns the all images available for a given tag.

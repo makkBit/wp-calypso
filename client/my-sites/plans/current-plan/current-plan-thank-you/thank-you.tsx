@@ -10,17 +10,17 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { preventWidows } from 'lib/formatting';
-import { requestGuidedTour } from 'state/guided-tours/actions';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { requestGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
 import { Button } from '@automattic/components';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { addQueryArgs } from 'lib/url';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteAdminUrl } from 'state/sites/selectors';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteAdminUrl } from 'wp-calypso-client/state/sites/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 import './style.scss';
 

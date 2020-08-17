@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { debounce } from 'lodash';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
@@ -13,10 +13,10 @@ import PropTypes from 'prop-types';
  */
 import MediaLibraryScale from './scale';
 import { Card, Button } from '@automattic/components';
-import StickyPanel from 'components/sticky-panel';
-import { addExternalMedia, fetchNextMediaPage } from 'state/media/thunks';
-import { changeMediaSource } from 'state/media/actions';
-import isFetchingNextPage from 'state/selectors/is-fetching-next-page';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
+import { addExternalMedia, fetchNextMediaPage } from 'wp-calypso-client/state/media/thunks';
+import { changeMediaSource } from 'wp-calypso-client/state/media/actions';
+import isFetchingNextPage from 'wp-calypso-client/state/selectors/is-fetching-next-page';
 
 const DEBOUNCE_TIME = 250;
 
@@ -156,6 +156,8 @@ const mapStateToProps = ( state, { site } ) => ( {
 	isFetchingNextPage: isFetchingNextPage( state, site?.ID ),
 } );
 
-export default connect( mapStateToProps, { addExternalMedia, changeMediaSource, fetchNextMediaPage } )(
-	localize( MediaLibraryExternalHeader )
-);
+export default connect( mapStateToProps, {
+	addExternalMedia,
+	changeMediaSource,
+	fetchNextMediaPage,
+} )( localize( MediaLibraryExternalHeader ) );

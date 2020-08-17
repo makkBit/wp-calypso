@@ -16,12 +16,12 @@ import { getLink } from 'woocommerce/lib/nav-utils';
 import { getProduct } from 'woocommerce/state/sites/products/selectors';
 import { getReviewsCurrentSearch } from 'woocommerce/state/ui/reviews/selectors';
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import Search from 'components/search';
-import SectionNav from 'components/section-nav';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import Search from 'wp-calypso-client/components/search';
+import SectionNav from 'wp-calypso-client/components/section-nav';
 import { updateCurrentReviewsQuery } from 'woocommerce/state/ui/reviews/actions';
 
 class ReviewsFilterNav extends Component {

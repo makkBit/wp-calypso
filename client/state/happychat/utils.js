@@ -1,12 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import config from 'config';
-import getGroups from 'state/happychat/selectors/get-groups';
-import { getCurrentUser, getCurrentUserLocale } from 'state/current-user/selectors';
-import { getHelpSelectedSite } from 'state/help/selectors';
-import getSkills from 'state/happychat/selectors/get-skills';
+import wpcom from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
+import getGroups from 'wp-calypso-client/state/happychat/selectors/get-groups';
+import {
+	getCurrentUser,
+	getCurrentUserLocale,
+} from 'wp-calypso-client/state/current-user/selectors';
+import { getHelpSelectedSite } from 'wp-calypso-client/state/help/selectors';
+import getSkills from 'wp-calypso-client/state/happychat/selectors/get-skills';
 
 // Promise based interface for wpcom.request
 const request = ( ...args ) =>

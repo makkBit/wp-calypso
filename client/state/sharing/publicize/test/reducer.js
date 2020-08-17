@@ -21,8 +21,8 @@ import {
 	PUBLICIZE_CONNECTIONS_REQUEST_FAILURE,
 	DESERIALIZE,
 	SERIALIZE,
-} from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'reducer', () => {
 	describe( 'fetchConnection()', () => {

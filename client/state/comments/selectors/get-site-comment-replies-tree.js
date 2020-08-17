@@ -6,10 +6,10 @@ import { filter } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSiteCommentsTree } from 'state/comments/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSiteCommentsTree } from 'wp-calypso-client/state/comments/selectors';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 export const getSiteCommentRepliesTree = createSelector(
 	( state, siteId, status, commentParentId ) =>

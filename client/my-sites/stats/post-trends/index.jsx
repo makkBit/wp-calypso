@@ -12,15 +12,15 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import compareProps from 'lib/compare-props';
+import compareProps from 'wp-calypso-client/lib/compare-props';
 import Month from './month';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getSiteOption } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteStatsPostStreakData } from 'state/stats/lists/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteStatsPostStreakData } from 'wp-calypso-client/state/stats/lists/selectors';
 
 /**
  * Style dependencies

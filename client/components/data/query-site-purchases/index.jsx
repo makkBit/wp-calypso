@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isFetchingSitePurchases } from 'state/purchases/selectors';
-import { fetchSitePurchases } from 'state/purchases/actions';
+import { isFetchingSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
+import { fetchSitePurchases } from 'wp-calypso-client/state/purchases/actions';
 
 class QuerySitePurchases extends Component {
 	requestSitePurchases( props = this.props ) {

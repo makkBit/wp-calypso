@@ -1,10 +1,10 @@
 /**
  * Internal Dependencies
  */
-import createSelector from 'lib/create-selector';
-import { createPurchasesArray } from 'lib/purchases/assembler';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { createPurchasesArray } from 'wp-calypso-client/lib/purchases/assembler';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Return the list of purchases from state object

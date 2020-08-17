@@ -1,13 +1,13 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withoutPersistence, withStorageKey } from 'state/utils';
+import { combineReducers, withoutPersistence, withStorageKey } from 'wp-calypso-client/state/utils';
 import settings from './settings/reducer';
 import {
 	ACCOUNT_RECOVERY_SETTINGS_FETCH,
 	ACCOUNT_RECOVERY_SETTINGS_FETCH_SUCCESS,
 	ACCOUNT_RECOVERY_SETTINGS_FETCH_FAILED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const isFetchingSettings = withoutPersistence( ( state = false, action ) => {
 	switch ( action.type ) {

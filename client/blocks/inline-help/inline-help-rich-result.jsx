@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 import { localize, getLocaleSlug } from 'i18n-calypso';
 import classNames from 'classnames';
 import { get, isUndefined, omitBy } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
@@ -22,11 +22,11 @@ import {
 	RESULT_VIDEO,
 } from './constants';
 import { Button } from '@automattic/components';
-import { decodeEntities, preventWidows } from 'lib/formatting';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getSearchQuery from 'state/inline-help/selectors/get-search-query';
-import { requestGuidedTour } from 'state/guided-tours/actions';
-import { openSupportArticleDialog } from 'state/inline-support-article/actions';
+import { decodeEntities, preventWidows } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getSearchQuery from 'wp-calypso-client/state/inline-help/selectors/get-search-query';
+import { requestGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
+import { openSupportArticleDialog } from 'wp-calypso-client/state/inline-support-article/actions';
 
 const amendYouTubeLink = ( link = '' ) =>
 	link.replace( 'youtube.com/embed/', 'youtube.com/watch?v=' );

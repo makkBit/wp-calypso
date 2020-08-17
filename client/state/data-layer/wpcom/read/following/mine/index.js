@@ -11,14 +11,14 @@ import {
 	READER_FOLLOW,
 	READER_FOLLOWS_SYNC_START,
 	READER_FOLLOWS_SYNC_PAGE,
-} from 'state/reader/action-types';
-import { receiveFollows, syncComplete } from 'state/reader/follows/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
+} from 'wp-calypso-client/state/reader/action-types';
+import { receiveFollows, syncComplete } from 'wp-calypso-client/state/reader/follows/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { isValidApiResponse, subscriptionsFromApi } from './utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const ITEMS_PER_PAGE = 200;
 const MAX_ITEMS = 2000;

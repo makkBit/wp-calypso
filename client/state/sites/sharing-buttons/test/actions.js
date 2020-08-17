@@ -22,9 +22,9 @@ import {
 	SHARING_BUTTONS_SAVE_FAILURE,
 	SHARING_BUTTONS_SAVE_SUCCESS,
 	SHARING_BUTTONS_UPDATE,
-} from 'state/action-types';
-import useNock from 'test-helpers/use-nock';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'actions', () => {
 	let spy;

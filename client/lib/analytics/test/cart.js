@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { recordAddToCart } from 'lib/analytics/record-add-to-cart';
-import { getAllCartItems } from 'lib/cart-values/cart-items';
-import { recordEvents } from 'lib/analytics/cart';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { recordAddToCart } from 'wp-calypso-client/lib/analytics/record-add-to-cart';
+import { getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { recordEvents } from 'wp-calypso-client/lib/analytics/cart';
 
 jest.mock( 'lib/analytics/tracks', () => ( {
 	__esModule: true,

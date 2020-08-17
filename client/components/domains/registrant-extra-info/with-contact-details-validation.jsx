@@ -14,9 +14,9 @@ const debug = debugFactory( 'calypso:domains:with-contact-details-validation' );
 /**
  * Internal dependencies
  */
-import getValidationSchemas from 'state/selectors/get-validation-schemas';
-import { bumpStat, recordTracksEvent } from 'state/analytics/actions';
-import warn from 'lib/warn';
+import getValidationSchemas from 'wp-calypso-client/state/selectors/get-validation-schemas';
+import { bumpStat, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import warn from 'wp-calypso-client/lib/warn';
 
 export function disableSubmitButton( children ) {
 	if ( isEmpty( children ) ) {

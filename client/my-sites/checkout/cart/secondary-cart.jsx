@@ -11,18 +11,18 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import CartBody from './cart-body';
-import CartFreeUserPlanUpsell from 'my-sites/checkout/cart/cart-free-user-plan-upsell';
+import CartFreeUserPlanUpsell from 'wp-calypso-client/my-sites/checkout/cart/cart-free-user-plan-upsell';
 import CartMessages from './cart-messages';
 import CartSummaryBar from './cart-summary-bar';
 import CartPlanAdTheme from './cart-plan-ad-theme';
 import CartPlanDiscountAd from './cart-plan-discount-ad';
 import CartBodyLoadingPlaceholder from './cart-body/loading-placeholder';
-import scrollIntoViewport from 'lib/scroll-into-viewport';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import { isShowingCartOnMobile } from 'state/ui/checkout/selectors';
-import JetpackLogo from 'components/jetpack-logo';
+import scrollIntoViewport from 'wp-calypso-client/lib/scroll-into-viewport';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isShowingCartOnMobile } from 'wp-calypso-client/state/ui/checkout/selectors';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
 
 /**
  * Style dependencies

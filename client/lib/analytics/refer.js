@@ -3,7 +3,7 @@
 /**
  * Internal dependencies
  */
-import { urlParseAmpCompatible } from 'lib/analytics/utils';
+import { urlParseAmpCompatible } from 'wp-calypso-client/lib/analytics/utils';
 import { trackAffiliateReferral } from './track-affiliate-referral';
 import { recordTracksEvent } from './tracks';
 

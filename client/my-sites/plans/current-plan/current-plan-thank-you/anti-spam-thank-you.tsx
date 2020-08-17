@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
  */
 import { Button, ProgressBar } from '@automattic/components';
 import ThankYou, { ThankYouCtaType } from './thank-you';
-import getJetpackProductInstallProgress from 'state/selectors/get-jetpack-product-install-progress';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import getJetpackProductInstallProgress from 'wp-calypso-client/state/selectors/get-jetpack-product-install-progress';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const ThankYouCta: ThankYouCtaType = ( { siteAdminUrl, recordThankYouClick } ) => {
 	const translate = useTranslate();

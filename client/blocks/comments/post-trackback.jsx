@@ -4,13 +4,13 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import TimeSince from 'components/time-since';
+import TimeSince from 'wp-calypso-client/components/time-since';
 
 /**
  * Style dependencies

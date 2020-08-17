@@ -9,8 +9,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { isExternal } from 'lib/url';
-import { preload } from 'sections-helper';
+import { isExternal } from 'wp-calypso-client/lib/url';
+import { preload } from 'wp-calypso-client/sections-helper';
 
 class SidebarButton extends React.Component {
 	static propTypes = {

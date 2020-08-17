@@ -6,18 +6,21 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { READER_LIST_CREATE, READER_LIST_UPDATE } from 'state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import {
+	READER_LIST_CREATE,
+	READER_LIST_UPDATE,
+} from 'wp-calypso-client/state/reader/action-types';
 import {
 	handleReaderListRequestFailure,
 	handleUpdateListDetailsError,
 	receiveReaderList,
 	receiveUpdatedListDetails,
-} from 'state/reader/lists/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { navigate } from 'state/ui/actions';
+} from 'wp-calypso-client/state/reader/lists/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 
 registerHandlers( 'state/data-layer/wpcom/read/lists/index.js', {
 	[ READER_LIST_CREATE ]: [

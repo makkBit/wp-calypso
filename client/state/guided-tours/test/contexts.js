@@ -20,11 +20,11 @@ import {
 import {
 	SOURCE_GOOGLE_DOCS,
 	SOURCE_UNKNOWN,
-} from 'components/tinymce/plugins/wpcom-track-paste/sources';
-import { EDITOR_PASTE_EVENT } from 'state/action-types';
+} from 'wp-calypso-client/components/tinymce/plugins/wpcom-track-paste/sources';
+import { EDITOR_PASTE_EVENT } from 'wp-calypso-client/state/action-types';
 
 jest.mock( 'layout/guided-tours/config', () => {
-	return require( 'state/guided-tours/test/fixtures/config' );
+	return require( 'wp-calypso-client/state/guided-tours/test/fixtures/config' );
 } );
 jest.mock( 'lib/user', () => () => {} );
 

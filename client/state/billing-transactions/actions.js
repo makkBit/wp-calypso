@@ -9,10 +9,10 @@ import {
 	BILLING_TRANSACTIONS_REQUEST,
 	BILLING_TRANSACTIONS_REQUEST_FAILURE,
 	BILLING_TRANSACTIONS_REQUEST_SUCCESS,
-} from 'state/action-types';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wp from 'wp-calypso-client/lib/wp';
 
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 export const requestBillingTransactions = () => {
 	return ( dispatch ) => {

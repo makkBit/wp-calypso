@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import isJetpackSiteInDevelopmentMode from 'state/selectors/is-jetpack-site-in-development-mode';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
+import isJetpackSiteInDevelopmentMode from 'wp-calypso-client/state/selectors/is-jetpack-site-in-development-mode';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 const JetpackDevModeNotice = ( { isJetpackSiteInDevMode, siteId, siteIsJetpack, translate } ) => {
 	if ( ! siteIsJetpack ) {

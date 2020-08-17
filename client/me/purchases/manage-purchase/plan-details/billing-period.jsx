@@ -12,17 +12,22 @@ import page from 'page';
  * Internal Dependencies
  */
 import { Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { isMonthly } from 'lib/plans/constants';
-import { getYearlyPlanByMonthly } from 'lib/plans';
-import { planItem } from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
-import { isExpired, isExpiring, isRenewing, showCreditCardExpiringWarning } from 'lib/purchases';
-import { JETPACK_SUPPORT } from 'lib/url/support';
-import { recordTracksEvent } from 'state/analytics/actions';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { isMonthly } from 'wp-calypso-client/lib/plans/constants';
+import { getYearlyPlanByMonthly } from 'wp-calypso-client/lib/plans';
+import { planItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import {
+	isExpired,
+	isExpiring,
+	isRenewing,
+	showCreditCardExpiringWarning,
+} from 'wp-calypso-client/lib/purchases';
+import { JETPACK_SUPPORT } from 'wp-calypso-client/lib/url/support';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 export class PlanBillingPeriod extends Component {
 	static propTypes = {

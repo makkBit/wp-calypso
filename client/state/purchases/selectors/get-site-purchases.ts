@@ -6,10 +6,10 @@ import { getPurchases } from './get-purchases';
 /**
  * Type dependencies
  */
-import type { Purchase } from 'lib/purchases/types';
-import type { AppState } from 'types';
+import type { Purchase } from 'wp-calypso-client/lib/purchases/types';
+import type { AppState } from 'wp-calypso-client/types';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Returns a list of Purchases associated with a Site from the state using its siteId

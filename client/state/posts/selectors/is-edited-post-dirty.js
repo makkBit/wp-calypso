@@ -6,19 +6,19 @@ import { get, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { DEFAULT_NEW_POST_VALUES } from 'state/posts/constants';
-import { getPostEdits } from 'state/posts/selectors/get-post-edits';
-import { getSitePost } from 'state/posts/selectors/get-site-post';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { DEFAULT_NEW_POST_VALUES } from 'wp-calypso-client/state/posts/constants';
+import { getPostEdits } from 'wp-calypso-client/state/posts/selectors/get-post-edits';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors/get-site-post';
 import {
 	getFeaturedImageId,
 	isAuthorEqual,
 	isDateEqual,
 	isDiscussionEqual,
 	areAllMetadataEditsApplied,
-} from 'state/posts/utils';
+} from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if there are "dirty" edited fields to be saved for the post

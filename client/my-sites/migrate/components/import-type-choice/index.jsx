@@ -8,7 +8,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Badge from 'components/badge';
+import Badge from 'wp-calypso-client/components/badge';
 
 import './style.scss';
 import PropTypes from 'prop-types';

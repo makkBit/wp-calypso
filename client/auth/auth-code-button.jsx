@@ -8,7 +8,7 @@ import { identity } from 'lodash';
 /**
  * Internal Dependencies
  */
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 
 const initialState = { status: 'ready', errorLevel: false, errorMessage: false };
 

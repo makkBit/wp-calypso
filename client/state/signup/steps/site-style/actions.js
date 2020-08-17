@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_STEPS_SITE_STYLE_SET } from 'state/action-types';
+import { SIGNUP_STEPS_SITE_STYLE_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 export function setSiteStyle( siteStyle ) {
 	return {

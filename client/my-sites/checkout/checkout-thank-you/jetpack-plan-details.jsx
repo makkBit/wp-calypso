@@ -8,12 +8,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { getSiteFileModDisableReason } from 'lib/site/utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import config from 'config';
-import { localizeUrl } from 'lib/i18n-utils';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { getSiteFileModDisableReason } from 'wp-calypso-client/lib/site/utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import config from 'wp-calypso-client/config';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
 
 const BasicDetails = ( { translate } ) => {
 	const email = useSelector( getCurrentUserEmail );

@@ -7,15 +7,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { reduxGetState } from 'lib/redux-bridge';
-import LikeButtonContainer from 'blocks/like-button';
-import PostLikesPopover from 'blocks/post-likes/popover';
-import { markPostSeen } from 'state/reader/posts/actions';
-import { recordAction, recordGaEvent, recordTrackForPost } from 'reader/stats';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import QueryPostLikes from 'components/data/query-post-likes';
-import { getPostLikeCount } from 'state/posts/selectors/get-post-like-count';
-import { isLikedPost } from 'state/posts/selectors/is-liked-post';
+import { reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import LikeButtonContainer from 'wp-calypso-client/blocks/like-button';
+import PostLikesPopover from 'wp-calypso-client/blocks/post-likes/popover';
+import { markPostSeen } from 'wp-calypso-client/state/reader/posts/actions';
+import { recordAction, recordGaEvent, recordTrackForPost } from 'wp-calypso-client/reader/stats';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import QueryPostLikes from 'wp-calypso-client/components/data/query-post-likes';
+import { getPostLikeCount } from 'wp-calypso-client/state/posts/selectors/get-post-like-count';
+import { isLikedPost } from 'wp-calypso-client/state/posts/selectors/is-liked-post';
 
 /**
  * Style dependencies

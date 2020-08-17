@@ -5,17 +5,17 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { keys, trim } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import ExternalLink from 'components/external-link';
-import { recordPermalinkClick } from 'reader/stats';
-import TimeSince from 'components/time-since';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { recordPermalinkClick } from 'wp-calypso-client/reader/stats';
+import TimeSince from 'wp-calypso-client/components/time-since';
 import ReaderFullPostHeaderTags from './header-tags';
-import { isDiscoverPost } from 'reader/discover/helper';
+import { isDiscoverPost } from 'wp-calypso-client/reader/discover/helper';
 import ReaderFullPostHeaderPlaceholder from './placeholders/header';
 
 const ReaderFullPostHeader = ( { post, referralPost } ) => {

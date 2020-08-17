@@ -7,10 +7,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { REFUNDS } from 'lib/url/support';
-import Gridicon from 'components/gridicon';
-import { hasConciergeSession } from 'lib/cart-values/cart-items';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { REFUNDS } from 'wp-calypso-client/lib/url/support';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { hasConciergeSession } from 'wp-calypso-client/lib/cart-values/cart-items';
 
 class ConciergeRefundPolicy extends React.Component {
 	static displayName = 'RegistrationRefundPolicy';

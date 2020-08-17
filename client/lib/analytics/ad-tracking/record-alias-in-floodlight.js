@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { isAdTrackingAllowed } from 'lib/analytics/utils';
+import { isAdTrackingAllowed } from 'wp-calypso-client/lib/analytics/utils';
 import { debug, isFloodlightEnabled } from './constants';
 import { recordParamsInFloodlightGtag } from './floodlight';
 

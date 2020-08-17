@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux';
  * Internal dependencies
  */
 import { useTranslate } from 'i18n-calypso';
-import { preventWidows } from 'lib/formatting';
-import { getJetpackProductDisplayName } from 'lib/products-values/get-jetpack-product-display-name';
-import getSelectedSiteId from 'state/ui/selectors/get-selected-site-id';
-import getSiteOption from 'state/sites/selectors/get-site-option';
-import getSiteAdminUrl from 'state/sites/selectors/get-site-admin-url';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { getJetpackProductDisplayName } from 'wp-calypso-client/lib/products-values/get-jetpack-product-display-name';
+import getSelectedSiteId from 'wp-calypso-client/state/ui/selectors/get-selected-site-id';
+import getSiteOption from 'wp-calypso-client/state/sites/selectors/get-site-option';
+import getSiteAdminUrl from 'wp-calypso-client/state/sites/selectors/get-site-admin-url';
 
 const getMessage = ( translate, product, siteVersion, minVersion ) => {
 	const displayName = getJetpackProductDisplayName( product );

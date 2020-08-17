@@ -11,16 +11,16 @@ import { get, toArray, unescape as unescapeString } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
-import AccordionSection from 'components/accordion/section';
-import EditorDrawerLabel from 'post-editor/editor-drawer/label';
-import TermSelector from 'post-editor/editor-term-selector';
-import TermTokenField from 'post-editor/term-token-field';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getSiteOption } from 'state/sites/selectors';
-import { getTerm } from 'state/terms/selectors';
+import Accordion from 'wp-calypso-client/components/accordion';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import EditorDrawerLabel from 'wp-calypso-client/post-editor/editor-drawer/label';
+import TermSelector from 'wp-calypso-client/post-editor/editor-term-selector';
+import TermTokenField from 'wp-calypso-client/post-editor/term-token-field';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { getTerm } from 'wp-calypso-client/state/terms/selectors';
 
 /**
  * Style dependencies

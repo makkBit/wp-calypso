@@ -6,16 +6,16 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 
 /**
  * Internal dependencies
  */
-import accept from 'lib/accept';
+import accept from 'wp-calypso-client/lib/accept';
 import { Button } from '@automattic/components';
-import { decodeEntities, removep } from 'lib/formatting';
+import { decodeEntities, removep } from 'wp-calypso-client/lib/formatting';
 import {
 	deleteReviewReply,
 	updateReviewReply,
@@ -30,7 +30,7 @@ import {
 } from 'woocommerce/state/ui/review-replies/selectors';
 import { getReviewReply } from 'woocommerce/state/sites/review-replies/selectors';
 import Gravatar from './gravatar';
-import humanDate from 'lib/human-date';
+import humanDate from 'wp-calypso-client/lib/human-date';
 
 class ReviewReply extends Component {
 	static propTypes = {

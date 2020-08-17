@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 export function getEditorContactForm( state ) {
 	return state.editor.contactForm;

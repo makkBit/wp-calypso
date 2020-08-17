@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import CountedTextarea from 'components/forms/counted-textarea';
+import CountedTextarea from 'wp-calypso-client/components/forms/counted-textarea';
 
 export default class extends React.PureComponent {
 	static displayName = 'CountedTextareas';

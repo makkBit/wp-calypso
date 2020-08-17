@@ -10,21 +10,21 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import canCurrentUser from 'state/selectors/can-current-user';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isVipSite from 'state/selectors/is-vip-site';
-import DocumentHead from 'components/data/document-head';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Main from 'components/main';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import SectionNav from 'components/section-nav';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_NO_ADS } from 'lib/plans/constants';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Main from 'wp-calypso-client/components/main';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { FEATURE_NO_ADS } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style Dependencies

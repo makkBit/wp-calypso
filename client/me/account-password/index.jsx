@@ -14,18 +14,18 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { ProtectFormGuard } from 'lib/protect-form';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormInputValidation from 'components/forms/form-input-validation';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 /* eslint-disable no-restricted-imports */
-import observe from 'lib/mixins/data-observe';
-import { errorNotice } from 'state/notices/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import observe from 'wp-calypso-client/lib/mixins/data-observe';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

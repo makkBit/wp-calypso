@@ -10,22 +10,22 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { PLAN_PERSONAL, FEATURE_AUDIO_UPLOADS } from 'lib/plans/constants';
-import wrapSettingsForm from 'my-sites/site-settings/wrap-settings-form';
-import { decodeEntities } from 'lib/formatting';
-import scrollTo from 'lib/scroll-to';
-import { isRequestingSitePlans } from 'state/sites/plans/selectors';
+import { PLAN_PERSONAL, FEATURE_AUDIO_UPLOADS } from 'wp-calypso-client/lib/plans/constants';
+import wrapSettingsForm from 'wp-calypso-client/my-sites/site-settings/wrap-settings-form';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import { isRequestingSitePlans } from 'wp-calypso-client/state/sites/plans/selectors';
 import { Button, Card } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormSelect from 'components/forms/form-select';
-import FormTextarea from 'components/forms/form-textarea';
-import HeaderCake from 'components/header-cake';
-import Notice from 'components/notice';
-import PodcastCoverImageSetting from 'my-sites/site-settings/podcast-cover-image-setting';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Notice from 'wp-calypso-client/components/notice';
+import PodcastCoverImageSetting from 'wp-calypso-client/my-sites/site-settings/podcast-cover-image-setting';
 import PodcastFeedUrl from './feed-url';
 import PodcastingPrivateSiteMessage from './private-site';
 import PodcastingNoPermissionsMessage from './no-permissions';
@@ -33,21 +33,21 @@ import PodcastingNotSupportedMessage from './not-supported';
 import PodcastingPublishNotice from './publish-notice';
 import PodcastingSupportLink from './support-link';
 import podcastingTopics from './topics';
-import TermTreeSelector from 'blocks/term-tree-selector';
-import UpsellNudge from 'blocks/upsell-nudge';
+import TermTreeSelector from 'wp-calypso-client/blocks/term-tree-selector';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 
 /**
  * Selectors, actions, and query components
  */
-import QueryTerms from 'components/data/query-terms';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import isPrivateSite from 'state/selectors/is-private-site';
-import isSiteComingSoon from 'state/selectors/is-site-coming-soon';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { isJetpackSite } from 'state/sites/selectors';
-import { isRequestingTermsForQueryIgnoringPage } from 'state/terms/selectors';
-import { isSavingSiteSettings } from 'state/site-settings/selectors';
+import QueryTerms from 'wp-calypso-client/components/data/query-terms';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import isSiteComingSoon from 'wp-calypso-client/state/selectors/is-site-coming-soon';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { isRequestingTermsForQueryIgnoringPage } from 'wp-calypso-client/state/terms/selectors';
+import { isSavingSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
 
 /**
  * Style dependencies

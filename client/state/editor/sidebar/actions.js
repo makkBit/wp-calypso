@@ -7,11 +7,11 @@ import {
 	recordGoogleEvent,
 	withAnalytics,
 	recordTracksEvent,
-} from 'state/analytics/actions';
-import { savePreference } from 'state/preferences/actions';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+} from 'wp-calypso-client/state/analytics/actions';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 export const openEditorSidebar = () => ( dispatch ) => {
 	dispatch( savePreference( 'editor-sidebar', 'open' ) );

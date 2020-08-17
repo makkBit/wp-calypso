@@ -9,9 +9,9 @@ import { bind } from 'lodash';
 /**
  * Internal dependencies
  */
-import PopoverMenu from 'components/popover/menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import UserMentionsSuggestion from 'blocks/user-mentions/suggestion';
+import PopoverMenu from 'wp-calypso-client/components/popover/menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import UserMentionsSuggestion from 'wp-calypso-client/blocks/user-mentions/suggestion';
 
 /**
  * Style dependencies

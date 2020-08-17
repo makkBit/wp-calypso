@@ -12,14 +12,14 @@ import page from 'page';
  * Internal dependencies
  */
 import ImporterActionButton from './action-button';
-import { resetImport } from 'lib/importer/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { resetImport } from 'wp-calypso-client/lib/importer/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	clearImportingFromSignupFlow,
 	setImportOriginSiteDetails,
-} from 'state/importer-nux/actions';
-import { isImportingFromSignupFlow } from 'state/importer-nux/temp-selectors';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/importer-nux/actions';
+import { isImportingFromSignupFlow } from 'wp-calypso-client/state/importer-nux/temp-selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 export class DoneButton extends React.PureComponent {
 	static displayName = 'DoneButton';

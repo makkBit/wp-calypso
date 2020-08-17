@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getMagicLoginRequestedAuthSuccessfully from 'state/selectors/get-magic-login-requested-auth-successfully';
+import getMagicLoginRequestedAuthSuccessfully from 'wp-calypso-client/state/selectors/get-magic-login-requested-auth-successfully';
 
 describe( 'getMagicLoginRequestedAuthSuccessfully()', () => {
 	test( 'should return false if there is no information yet', () => {

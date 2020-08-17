@@ -7,7 +7,7 @@ import { shallow } from 'enzyme';
 /**
  * Internal dependencies
  */
-import ReadmeViewer from 'components/readme-viewer';
+import ReadmeViewer from 'wp-calypso-client/components/readme-viewer';
 
 ReadmeViewer.prototype.componentDidMount = jest.fn( function () {
 	this.setState( {

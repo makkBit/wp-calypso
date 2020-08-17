@@ -3,17 +3,17 @@
  */
 import React from 'react';
 import { connect } from 'react-redux';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { guidedTransferItem } from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { guidedTransferItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
 import page from 'page';
 
 const redirectToCart = ( siteSlug ) => () => {

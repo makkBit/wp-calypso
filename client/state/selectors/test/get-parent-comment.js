@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { getParentComment } from 'state/comments/selectors';
+import { getParentComment } from 'wp-calypso-client/state/comments/selectors';
 
 const state = {
 	comments: {

@@ -8,8 +8,8 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import PulsingDot from 'components/pulsing-dot';
-import { isSectionLoading } from 'state/ui/selectors';
+import PulsingDot from 'wp-calypso-client/components/pulsing-dot';
+import { isSectionLoading } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

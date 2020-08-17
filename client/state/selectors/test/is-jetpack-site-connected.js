@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isJetpackSiteConnected from 'state/selectors/is-jetpack-site-connected';
+import isJetpackSiteConnected from 'wp-calypso-client/state/selectors/is-jetpack-site-connected';
 import { items as ITEMS_FIXTURE } from './fixtures/jetpack-connection';
 
 describe( 'isJetpackSiteConnected()', () => {

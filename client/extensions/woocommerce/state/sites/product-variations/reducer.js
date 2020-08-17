@@ -7,7 +7,7 @@ import { compact, isEqual, isNumber } from 'lodash';
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import { WOOCOMMERCE_PRODUCT_VARIATION_UPDATED } from 'woocommerce/state/action-types';
 
 export default withoutPersistence( ( state = {}, action ) => {

@@ -8,8 +8,8 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import { next } from 'lib/shortcode';
-import GalleryShortcode from 'components/gallery-shortcode';
+import { next } from 'wp-calypso-client/lib/shortcode';
+import GalleryShortcode from 'wp-calypso-client/components/gallery-shortcode';
 
 class GalleryView extends Component {
 	static match( content ) {

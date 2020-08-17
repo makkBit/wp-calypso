@@ -9,16 +9,16 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import QuerySitePlans from 'components/data/query-site-plans';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import { getCurrentUserCountryCode } from 'state/current-user/selectors';
-import isEligibleForFreeToPaidUpsell from 'state/selectors/is-eligible-for-free-to-paid-upsell';
-import { isJetpackSite } from 'state/sites/selectors';
-import getSites from 'state/selectors/get-sites';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import getPrimarySiteSlug from 'state/selectors/get-primary-site-slug';
-import { clickUpgradeNudge } from 'state/marketing/actions';
-import UpsellNudge from 'blocks/upsell-nudge';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import { getCurrentUserCountryCode } from 'wp-calypso-client/state/current-user/selectors';
+import isEligibleForFreeToPaidUpsell from 'wp-calypso-client/state/selectors/is-eligible-for-free-to-paid-upsell';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import getPrimarySiteSlug from 'wp-calypso-client/state/selectors/get-primary-site-slug';
+import { clickUpgradeNudge } from 'wp-calypso-client/state/marketing/actions';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 
 const debug = debugFactory( 'calypso:reader:sidebar-nudges' );
 

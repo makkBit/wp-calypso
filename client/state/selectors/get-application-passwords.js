@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/application-passwords/init';
+import 'wp-calypso-client/state/application-passwords/init';
 
 /**
  * Returns the application passwords of the current user.

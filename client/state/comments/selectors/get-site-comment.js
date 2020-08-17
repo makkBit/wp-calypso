@@ -6,9 +6,9 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSiteComments } from 'state/comments/selectors';
+import { getSiteComments } from 'wp-calypso-client/state/comments/selectors';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Returns a comment for the specified site and comment ID.

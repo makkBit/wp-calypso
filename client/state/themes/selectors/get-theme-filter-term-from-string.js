@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { isAmbiguousThemeFilterTerm } from 'state/themes/selectors/is-ambiguous-theme-filter-term';
+import { isAmbiguousThemeFilterTerm } from 'wp-calypso-client/state/themes/selectors/is-ambiguous-theme-filter-term';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * return term from a taxonomy:term string

@@ -10,14 +10,14 @@ import { has, identity, mapValues, pickBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	activate as activateAction,
 	tryAndCustomize as tryAndCustomizeAction,
 	confirmDelete,
 	showThemePreview as themePreview,
 	showAutoLoadingHomepageWarning as showAutoLoadingHomepageWarningAction,
-} from 'state/themes/actions';
+} from 'wp-calypso-client/state/themes/actions';
 import {
 	getThemeSignupUrl,
 	getThemePurchaseUrl,
@@ -30,11 +30,11 @@ import {
 	isPremiumThemeAvailable,
 	isThemeAvailableOnJetpackSite,
 	isThemeGutenbergFirst,
-} from 'state/themes/selectors';
-import { isJetpackSite, isJetpackSiteMultiSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getCurrentUser } from 'state/current-user/selectors';
-import getCustomizeOrEditFrontPageUrl from 'state/selectors/get-customize-or-edit-front-page-url';
+} from 'wp-calypso-client/state/themes/selectors';
+import { isJetpackSite, isJetpackSiteMultiSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import getCustomizeOrEditFrontPageUrl from 'wp-calypso-client/state/selectors/get-customize-or-edit-front-page-url';
 
 function getAllThemeOptions() {
 	const purchase = config.isEnabled( 'upgrades/checkout' )

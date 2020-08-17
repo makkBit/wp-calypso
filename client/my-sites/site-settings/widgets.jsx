@@ -11,13 +11,13 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import FormFieldset from 'components/forms/form-fieldset';
-import { getCustomizerUrl, isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import SupportInfo from 'components/support-info';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import { getCustomizerUrl, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import SupportInfo from 'wp-calypso-client/components/support-info';
 
 class Widgets extends Component {
 	static defaultProps = {

@@ -7,7 +7,7 @@ import { expect } from 'chai';
  * Internal dependencies
  */
 import reducer, { postId } from '../reducer';
-import { EDITOR_START, POST_SAVE_SUCCESS } from 'state/action-types';
+import { EDITOR_START, POST_SAVE_SUCCESS } from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	test( 'should export expected reducer keys', () => {

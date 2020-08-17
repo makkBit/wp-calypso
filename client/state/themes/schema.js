@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { withItemsSchema } from 'lib/query-manager/schema';
+import { withItemsSchema } from 'wp-calypso-client/lib/query-manager/schema';
 
 const themesSchema = {
 	title: 'Theme',

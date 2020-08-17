@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Spinner from 'components/spinner';
+import Spinner from 'wp-calypso-client/components/spinner';
 
 export default class extends React.PureComponent {
 	static displayName = 'Spinner';

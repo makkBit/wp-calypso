@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/payment/init';
+import 'wp-calypso-client/state/payment/init';
 
 /**
  * Returns the current user's tax rate.

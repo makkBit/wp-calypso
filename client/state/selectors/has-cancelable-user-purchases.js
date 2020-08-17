@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getUserPurchases } from 'state/purchases/selectors';
+import { getUserPurchases } from 'wp-calypso-client/state/purchases/selectors';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Does the user have any current purchases that can be canceled (i.e. purchases other than premium themes)?

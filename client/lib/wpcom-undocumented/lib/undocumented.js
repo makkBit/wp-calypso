@@ -11,9 +11,9 @@ import { stringify } from 'qs';
 import Site from './site';
 import Me from './me';
 import MailingList from './mailing-list';
-import config from 'config';
-import { getLanguage, getLocaleSlug } from 'lib/i18n-utils';
-import readerContentWidth from 'reader/lib/content-width';
+import config from 'wp-calypso-client/config';
+import { getLanguage, getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
+import readerContentWidth from 'wp-calypso-client/reader/lib/content-width';
 
 const debug = debugFactory( 'calypso:wpcom-undocumented:undocumented' );
 const { Blob } = globalThis; // The linter complains if I don't do this...?

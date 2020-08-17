@@ -7,22 +7,22 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import HappychatConnection from 'components/happychat/connection-connected';
-import QueryTicketSupportConfiguration from 'components/data/query-ticket-support-configuration';
-import QueryLanguageNames from 'components/data/query-language-names';
-import QuerySupportHistory from 'components/data/query-support-history';
-import { openChat as openHappychat } from 'state/happychat/ui/actions';
-import { initialize as initializeDirectly } from 'state/help/directly/actions';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import { isRequestingSites } from 'state/sites/selectors';
-import { getHelpSelectedSiteId } from 'state/help/selectors';
+import config from 'wp-calypso-client/config';
+import HappychatConnection from 'wp-calypso-client/components/happychat/connection-connected';
+import QueryTicketSupportConfiguration from 'wp-calypso-client/components/data/query-ticket-support-configuration';
+import QueryLanguageNames from 'wp-calypso-client/components/data/query-language-names';
+import QuerySupportHistory from 'wp-calypso-client/components/data/query-support-history';
+import { openChat as openHappychat } from 'wp-calypso-client/state/happychat/ui/actions';
+import { initialize as initializeDirectly } from 'wp-calypso-client/state/help/directly/actions';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import { isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import { getHelpSelectedSiteId } from 'wp-calypso-client/state/help/selectors';
 import {
 	isTicketSupportConfigurationReady,
 	getTicketSupportRequestError,
-} from 'state/help/ticket/selectors';
-import isHappychatUserEligible from 'state/happychat/selectors/is-happychat-user-eligible';
-import isDirectlyUninitialized from 'state/selectors/is-directly-uninitialized';
+} from 'wp-calypso-client/state/help/ticket/selectors';
+import isHappychatUserEligible from 'wp-calypso-client/state/happychat/selectors/is-happychat-user-eligible';
+import isDirectlyUninitialized from 'wp-calypso-client/state/selectors/is-directly-uninitialized';
 
 class QueryInlineHelpSupportTypes extends Component {
 	componentDidMount() {

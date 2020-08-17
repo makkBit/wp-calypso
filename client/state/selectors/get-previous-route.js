@@ -6,8 +6,8 @@ import { stringify } from 'qs';
 /**
  * Internal dependencies
  */
-import getPreviousPath from 'state/selectors/get-previous-path';
-import getPreviousQuery from 'state/selectors/get-previous-query';
+import getPreviousPath from 'wp-calypso-client/state/selectors/get-previous-path';
+import getPreviousQuery from 'wp-calypso-client/state/selectors/get-previous-query';
 /**
  * Gets the previous route set by a ROUTE_SET action
  *

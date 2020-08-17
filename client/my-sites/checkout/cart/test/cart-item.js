@@ -12,7 +12,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import { CartItem } from '../cart-item';
 import {
 	isPlan,
@@ -21,16 +21,16 @@ import {
 	isBiennially,
 	isBundled,
 	isDomainProduct,
-} from 'lib/products-values';
+} from 'wp-calypso-client/lib/products-values';
 import {
 	PLAN_BUSINESS_2_YEARS,
 	PLAN_JETPACK_PERSONAL,
 	PLAN_PERSONAL,
 	PLAN_BLOGGER,
 	PLAN_PREMIUM,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
-const plansModule = require( 'lib/plans' );
+const plansModule = require( 'wp-calypso-client/lib/plans' );
 const originalPlansModuleFunctions = pick( plansModule, [
 	'calculateMonthlyPriceForPlan',
 	'getBillingMonthsForPlan',

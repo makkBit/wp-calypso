@@ -6,9 +6,9 @@ import React, { FunctionComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import InfoPopover from 'components/info-popover';
-import { preventWidows } from 'lib/formatting';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 import type { FeaturesItem } from './types';
 
 export type Props = {

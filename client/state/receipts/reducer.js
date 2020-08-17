@@ -2,8 +2,12 @@
  * Internal dependencies
  */
 
-import { RECEIPT_FETCH, RECEIPT_FETCH_COMPLETED, RECEIPT_FETCH_FAILED } from 'state/action-types';
-import { combineReducers } from 'state/utils';
+import {
+	RECEIPT_FETCH,
+	RECEIPT_FETCH_COMPLETED,
+	RECEIPT_FETCH_FAILED,
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 
 export const initialReceiptState = {
 	data: null,

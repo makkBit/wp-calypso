@@ -8,12 +8,12 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Banner from 'components/banner';
-import { savePreference } from 'state/preferences/actions';
+import Banner from 'wp-calypso-client/components/banner';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
 import {
 	getJetpackCredentialsBannerPreference as getPreference,
 	JETPACK_CREDENTIALS_BANNER_PREFERENCE,
-} from 'state/site-settings/jetpack-credentials-banner/selectors';
+} from 'wp-calypso-client/state/site-settings/jetpack-credentials-banner/selectors';
 import { Preference, PreferenceType } from './types';
 
 interface Props {

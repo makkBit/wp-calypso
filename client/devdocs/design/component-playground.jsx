@@ -5,14 +5,14 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ClipboardButton from 'components/forms/clipboard-button';
-import DocsExampleWrapper from 'devdocs/docs-example/wrapper';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import DocsExampleWrapper from 'wp-calypso-client/devdocs/docs-example/wrapper';
 
 class ComponentPlayground extends Component {
 	static propTypes = {
@@ -39,7 +39,7 @@ class ComponentPlayground extends Component {
 			'design__component-playground-code': true,
 			'show-code': toggleCode ? this.state.showCode : true,
 		} );
-		const scope = require( 'devdocs/design/playground-scope' );
+		const scope = require( 'wp-calypso-client/devdocs/design/playground-scope' );
 
 		return (
 			<LiveProvider

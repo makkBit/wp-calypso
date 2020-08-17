@@ -6,12 +6,12 @@
 /**
  * External dependencies
  */
-import { URL as URLString } from 'types';
+import { URL as URLString } from 'wp-calypso-client/types';
 
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 interface LegacyRoute {
 	match: RegExp;

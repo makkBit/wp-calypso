@@ -6,9 +6,9 @@ import {
 	SIGNUP_PROGRESS_SUBMIT_STEP,
 	SIGNUP_PROGRESS_COMPLETE_STEP,
 	SIGNUP_COMPLETE_RESET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { dependencyStoreSchema } from './schema';
-import { withSchemaValidation } from 'state/utils';
+import { withSchemaValidation } from 'wp-calypso-client/state/utils';
 
 const EMPTY = {};
 

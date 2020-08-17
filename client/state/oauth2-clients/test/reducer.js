@@ -7,7 +7,7 @@ import { pick } from 'lodash';
  * Internal dependencies
  */
 import { clients, initialClientsData } from '../reducer';
-import { OAUTH2_CLIENT_DATA_RECEIVE } from 'state/action-types';
+import { OAUTH2_CLIENT_DATA_RECEIVE } from 'wp-calypso-client/state/action-types';
 
 describe( 'clients reducer', () => {
 	// Uses default data but reduces the size of this data set for tests

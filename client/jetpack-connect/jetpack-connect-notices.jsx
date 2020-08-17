@@ -32,8 +32,8 @@ import {
 	WORDPRESS_DOT_COM,
 	XMLRPC_ERROR,
 } from './connection-notice-types';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
 
 export class JetpackConnectNotices extends Component {
 	static propTypes = {

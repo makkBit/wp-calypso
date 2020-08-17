@@ -8,13 +8,13 @@ import {
 	AUTOMATED_TRANSFER_STATUS_REQUEST,
 	AUTOMATED_TRANSFER_STATUS_SET,
 	AUTOMATED_TRANSFER_STATUS_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/automated-transfer/eligibility';
-import 'state/data-layer/wpcom/sites/automated-transfer/initiate';
-import 'state/data-layer/wpcom/sites/automated-transfer/status';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/automated-transfer/eligibility';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/automated-transfer/initiate';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/automated-transfer/status';
 
-import 'state/automated-transfer/init';
+import 'wp-calypso-client/state/automated-transfer/init';
 
 /**
  * Initiate a transfer to an Atomic site.

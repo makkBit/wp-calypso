@@ -10,14 +10,14 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import { getPost } from 'state/posts/selectors';
-import { canCurrentUserEditPost } from 'state/posts/selectors/can-current-user-edit-post';
-import { getEditorDuplicatePostPath } from 'state/editor/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { bumpStat, recordTracksEvent } from 'state/analytics/actions';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { getPost } from 'wp-calypso-client/state/posts/selectors';
+import { canCurrentUserEditPost } from 'wp-calypso-client/state/posts/selectors/can-current-user-edit-post';
+import { getEditorDuplicatePostPath } from 'wp-calypso-client/state/editor/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { bumpStat, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { bumpStatGenerator } from './utils';
 
 function PostActionsEllipsisMenuDuplicate( {

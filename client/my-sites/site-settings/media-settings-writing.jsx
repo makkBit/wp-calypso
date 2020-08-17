@@ -10,16 +10,16 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import SupportInfo from 'components/support-info';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 class MediaSettingsWriting extends Component {
 	static propTypes = {

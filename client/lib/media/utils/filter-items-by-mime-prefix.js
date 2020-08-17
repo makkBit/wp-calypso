@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getMimePrefix } from 'lib/media/utils/get-mime-prefix';
+import { getMimePrefix } from 'wp-calypso-client/lib/media/utils/get-mime-prefix';
 
 /**
  * Given an array of media objects, returns a filtered array composed of

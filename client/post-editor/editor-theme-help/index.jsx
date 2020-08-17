@@ -10,9 +10,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteThemeShowcasePath } from 'state/sites/selectors';
-import { recordEditorStat } from 'state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteThemeShowcasePath } from 'wp-calypso-client/state/sites/selectors';
+import { recordEditorStat } from 'wp-calypso-client/state/posts/stats';
 
 class EditorThemeHelp extends PureComponent {
 	static propTypes = {

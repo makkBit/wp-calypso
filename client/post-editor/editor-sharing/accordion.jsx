@@ -12,23 +12,23 @@ import { includes, reduce } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
-import FormTextInput from 'components/forms/form-text-input';
-import PostMetadata from 'lib/post-metadata';
+import Accordion from 'wp-calypso-client/components/accordion';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
 import Sharing from './';
-import AccordionSection from 'components/accordion/section';
-import * as postUtils from 'state/posts/utils';
-import QueryPublicizeConnections from 'components/data/query-publicize-connections';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost, getEditedPostValue } from 'state/posts/selectors';
-import { getSiteSlug, isJetpackModuleActive } from 'state/sites/selectors';
-import { getSiteUserConnections } from 'state/sharing/publicize/selectors';
-import hasBrokenSiteUserConnection from 'state/selectors/has-broken-site-user-connection';
-import hasInvalidSiteUserConnection from 'state/selectors/has-invalid-site-user-connection';
-import isPublicizeEnabled from 'state/selectors/is-publicize-enabled';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import * as postUtils from 'wp-calypso-client/state/posts/utils';
+import QueryPublicizeConnections from 'wp-calypso-client/components/data/query-publicize-connections';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost, getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getSiteSlug, isJetpackModuleActive } from 'wp-calypso-client/state/sites/selectors';
+import { getSiteUserConnections } from 'wp-calypso-client/state/sharing/publicize/selectors';
+import hasBrokenSiteUserConnection from 'wp-calypso-client/state/selectors/has-broken-site-user-connection';
+import hasInvalidSiteUserConnection from 'wp-calypso-client/state/selectors/has-invalid-site-user-connection';
+import isPublicizeEnabled from 'wp-calypso-client/state/selectors/is-publicize-enabled';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class EditorSharingAccordion extends React.Component {
 	static propTypes = {

@@ -15,16 +15,16 @@ import {
 	PLAN_JETPACK_PREMIUM_MONTHLY,
 	PLAN_JETPACK_BUSINESS_MONTHLY,
 	PLAN_JETPACK_PERSONAL_MONTHLY,
-} from 'lib/plans/constants';
-import { GSUITE_BASIC_SLUG } from 'lib/gsuite/constants';
-import { PRODUCT_JETPACK_BACKUP_DAILY } from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/plans/constants';
+import { GSUITE_BASIC_SLUG } from 'wp-calypso-client/lib/gsuite/constants';
+import { PRODUCT_JETPACK_BACKUP_DAILY } from 'wp-calypso-client/lib/products-values/constants';
 
 // Gets rid of warnings such as 'UnhandledPromiseRejectionWarning: Error: No available storage method found.'
 jest.mock( 'lib/user', () => () => {} );
 
 const cartItems = require( '../cart-items' );
-const { getPlan } = require( 'lib/plans' );
-const { getTermDuration } = require( 'lib/plans/constants' );
+const { getPlan } = require( 'wp-calypso-client/lib/plans' );
+const { getTermDuration } = require( 'wp-calypso-client/lib/plans/constants' );
 const {
 	planItem,
 	replaceItem,

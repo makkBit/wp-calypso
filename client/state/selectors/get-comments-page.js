@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getFiltersKey } from 'state/comments/ui/utils';
+import { getFiltersKey } from 'wp-calypso-client/state/comments/ui/utils';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Returns a list of comment IDs for the requested page and filters.

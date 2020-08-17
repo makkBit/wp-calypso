@@ -14,12 +14,12 @@ import {
 	SIGNUP_PROGRESS_INVALIDATE_STEP,
 	SIGNUP_PROGRESS_REMOVE_STEP,
 	SIGNUP_PROGRESS_ADD_STEP,
-} from 'state/action-types';
-import { assertValidDependencies } from 'lib/signup/asserts';
-import { getCurrentFlowName } from 'state/signup/flow/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/action-types';
+import { assertValidDependencies } from 'wp-calypso-client/lib/signup/asserts';
+import { getCurrentFlowName } from 'wp-calypso-client/state/signup/flow/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 function addProvidedDependencies( step, providedDependencies ) {
 	if ( isEmpty( providedDependencies ) ) {

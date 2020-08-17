@@ -7,9 +7,9 @@ import page from 'page';
  * Internal dependencies
  */
 import { accountClose, accountClosed } from './controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { sidebar } from 'me/controller';
-import { isEnabled } from 'config';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { sidebar } from 'wp-calypso-client/me/controller';
+import { isEnabled } from 'wp-calypso-client/config';
 
 export default function () {
 	if ( isEnabled( 'me/account-close' ) ) {

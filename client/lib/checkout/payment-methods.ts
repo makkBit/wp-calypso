@@ -6,23 +6,23 @@ import { TranslateResult, useTranslate } from 'i18n-calypso';
 /**
  * Image assets
  */
-import creditCardAmexImage from 'assets/images/upgrades/cc-amex.svg';
-import creditCardAmexDisabledImage from 'assets/images/upgrades/cc-amex-disabled.svg';
-import creditCardDinersImage from 'assets/images/upgrades/cc-diners.svg';
-import creditCardDinersDisabledImage from 'assets/images/upgrades/cc-diners-disabled.svg';
-import creditCardDiscoverImage from 'assets/images/upgrades/cc-discover.svg';
-import creditCardDiscoverDisabledImage from 'assets/images/upgrades/cc-discover-disabled.svg';
-import creditCardJCBImage from 'assets/images/upgrades/cc-jcb.svg';
-import creditCardJCBDisabledImage from 'assets/images/upgrades/cc-jcb-disabled.svg';
-import creditCardMasterCardImage from 'assets/images/upgrades/cc-mastercard.svg';
-import creditCardMasterCardDisabledImage from 'assets/images/upgrades/cc-mastercard-disabled.svg';
-import creditCardPlaceholderImage from 'assets/images/upgrades/cc-placeholder.svg';
-import creditCardUnionPayImage from 'assets/images/upgrades/cc-unionpay.svg';
-import creditCardUnionPayDisabledImage from 'assets/images/upgrades/cc-unionpay-disabled.svg';
-import creditCardVisaImage from 'assets/images/upgrades/cc-visa.svg';
-import creditCardVisaDisabledImage from 'assets/images/upgrades/cc-visa-disabled.svg';
-import payPalDisabledImage from 'assets/images/upgrades/paypal-disabled.svg';
-import payPalImage from 'assets/images/upgrades/paypal.svg';
+import creditCardAmexImage from 'wp-calypso-client/assets/images/upgrades/cc-amex.svg';
+import creditCardAmexDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-amex-disabled.svg';
+import creditCardDinersImage from 'wp-calypso-client/assets/images/upgrades/cc-diners.svg';
+import creditCardDinersDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-diners-disabled.svg';
+import creditCardDiscoverImage from 'wp-calypso-client/assets/images/upgrades/cc-discover.svg';
+import creditCardDiscoverDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-discover-disabled.svg';
+import creditCardJCBImage from 'wp-calypso-client/assets/images/upgrades/cc-jcb.svg';
+import creditCardJCBDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-jcb-disabled.svg';
+import creditCardMasterCardImage from 'wp-calypso-client/assets/images/upgrades/cc-mastercard.svg';
+import creditCardMasterCardDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-mastercard-disabled.svg';
+import creditCardPlaceholderImage from 'wp-calypso-client/assets/images/upgrades/cc-placeholder.svg';
+import creditCardUnionPayImage from 'wp-calypso-client/assets/images/upgrades/cc-unionpay.svg';
+import creditCardUnionPayDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-unionpay-disabled.svg';
+import creditCardVisaImage from 'wp-calypso-client/assets/images/upgrades/cc-visa.svg';
+import creditCardVisaDisabledImage from 'wp-calypso-client/assets/images/upgrades/cc-visa-disabled.svg';
+import payPalDisabledImage from 'wp-calypso-client/assets/images/upgrades/paypal-disabled.svg';
+import payPalImage from 'wp-calypso-client/assets/images/upgrades/paypal.svg';
 
 export const PARTNER_PAYPAL_EXPRESS = 'paypal_express';
 export const PAYMENT_AGREEMENTS_PARTNERS = [ PARTNER_PAYPAL_EXPRESS ];

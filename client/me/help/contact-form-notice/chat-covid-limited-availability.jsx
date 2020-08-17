@@ -16,7 +16,7 @@ import 'moment-timezone'; // monkey patches the existing moment.js
 /**
  * Internal dependencies
  */
-import ContactFormNotice from 'me/help/contact-form-notice/index';
+import ContactFormNotice from 'wp-calypso-client/me/help/contact-form-notice/index';
 
 const ChatCovidLimitedAvailabilityNotice = ( { showAt, hideAt, compact } ) => {
 	const translate = useTranslate();

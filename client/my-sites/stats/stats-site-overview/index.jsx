@@ -12,10 +12,10 @@ import { connect } from 'react-redux';
 import { Card } from '@automattic/components';
 import StatsTabs from '../stats-tabs';
 import StatsTab from '../stats-tabs/tab';
-import SectionHeader from 'components/section-header';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSiteStatsForQuery } from 'state/stats/lists/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSiteStatsForQuery } from 'wp-calypso-client/state/stats/lists/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Style dependencies

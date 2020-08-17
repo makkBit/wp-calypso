@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import page from 'page';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
 
@@ -13,12 +13,17 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Dialog, Button, CompactCard } from '@automattic/components';
-import config from 'config';
-import CancelPurchaseForm from 'components/marketing-survey/cancel-purchase-form';
-import PrecancellationChatButton from 'components/marketing-survey/cancel-purchase-form/precancellation-chat-button';
-import { CANCEL_FLOW_TYPE } from 'components/marketing-survey/cancel-purchase-form/constants';
-import GSuiteCancellationPurchaseDialog from 'components/marketing-survey/gsuite-cancel-purchase-dialog';
-import { getIncludedDomain, getName, hasIncludedDomain, isRemovable } from 'lib/purchases';
+import config from 'wp-calypso-client/config';
+import CancelPurchaseForm from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form';
+import PrecancellationChatButton from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form/precancellation-chat-button';
+import { CANCEL_FLOW_TYPE } from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form/constants';
+import GSuiteCancellationPurchaseDialog from 'wp-calypso-client/components/marketing-survey/gsuite-cancel-purchase-dialog';
+import {
+	getIncludedDomain,
+	getName,
+	hasIncludedDomain,
+	isRemovable,
+} from 'wp-calypso-client/lib/purchases';
 import { isDataLoading } from '../utils';
 import {
 	isDomainMapping,
@@ -28,23 +33,23 @@ import {
 	isJetpackPlan,
 	isJetpackProduct,
 	isPlan,
-} from 'lib/products-values';
-import { isJetpackSearch } from 'lib/products-values/constants';
-import notices from 'notices';
+} from 'wp-calypso-client/lib/products-values';
+import { isJetpackSearch } from 'wp-calypso-client/lib/products-values/constants';
+import notices from 'wp-calypso-client/notices';
 import { purchasesRoot } from '../paths';
-import { getPurchasesError } from 'state/purchases/selectors';
-import { removePurchase } from 'state/purchases/actions';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import isDomainOnly from 'state/selectors/is-domain-only-site';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { receiveDeletedSite } from 'state/sites/actions';
-import { setAllSitesSelected } from 'state/ui/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { getPurchasesError } from 'wp-calypso-client/state/purchases/selectors';
+import { removePurchase } from 'wp-calypso-client/state/purchases/actions';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import isDomainOnly from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { receiveDeletedSite } from 'wp-calypso-client/state/sites/actions';
+import { setAllSitesSelected } from 'wp-calypso-client/state/ui/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import RemoveDomainDialog from './remove-domain-dialog';
-import NonPrimaryDomainDialog from 'me/purchases/non-primary-domain-dialog';
-import VerticalNavItem from 'components/vertical-nav/item';
+import NonPrimaryDomainDialog from 'wp-calypso-client/me/purchases/non-primary-domain-dialog';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
 
 /**
  * Style dependencies

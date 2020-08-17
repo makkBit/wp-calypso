@@ -11,15 +11,15 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import accept from 'lib/accept';
-import PluginsLog from 'lib/plugins/log-store';
-import PluginAction from 'my-sites/plugins/plugin-action/plugin-action';
-import PluginsActions from 'lib/plugins/actions';
-import ExternalLink from 'components/external-link';
-import { getSiteFileModDisableReason, isMainNetworkSite } from 'lib/site/utils';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import accept from 'wp-calypso-client/lib/accept';
+import PluginsLog from 'wp-calypso-client/lib/plugins/log-store';
+import PluginAction from 'wp-calypso-client/my-sites/plugins/plugin-action/plugin-action';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { getSiteFileModDisableReason, isMainNetworkSite } from 'wp-calypso-client/lib/site/utils';
 
 /**
  * Style dependencies

@@ -6,9 +6,9 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import SitesDropdown from 'components/sites-dropdown';
-import { JETPACK_PRODUCTS_LIST } from 'lib/products-values/constants';
-import { JETPACK_PLANS } from 'lib/plans/constants';
+import SitesDropdown from 'wp-calypso-client/components/sites-dropdown';
+import { JETPACK_PRODUCTS_LIST } from 'wp-calypso-client/lib/products-values/constants';
+import { JETPACK_PLANS } from 'wp-calypso-client/lib/plans/constants';
 import ProductPlanOverlapNotices from '../';
 
 class ProductPlanOverlapNoticesExample extends Component {

@@ -8,32 +8,32 @@ import React, { Component, Fragment } from 'react';
 import ReactDom from 'react-dom';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import config from 'config';
-import FormsButton from 'components/forms/form-button';
-import FormInputValidation from 'components/forms/form-input-validation';
+import config from 'wp-calypso-client/config';
+import FormsButton from 'wp-calypso-client/components/forms/form-button';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 import Divider from './divider';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormTextInput from 'components/forms/form-text-input';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
 import {
 	formUpdate,
 	getAuthAccountType,
 	loginUser,
 	resetAuthAccountType,
-} from 'state/login/actions';
-import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'lib/oauth2-clients';
-import { preventWidows } from 'lib/formatting';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/login/actions';
+import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	getAuthAccountType as getAuthAccountTypeSelector,
 	getRedirectToOriginal,
@@ -42,14 +42,14 @@ import {
 	getSocialAccountLinkEmail,
 	getSocialAccountLinkService,
 	isFormDisabled as isFormDisabledSelector,
-} from 'state/login/selectors';
-import { isRegularAccount } from 'state/login/utils';
-import Notice from 'components/notice';
+} from 'wp-calypso-client/state/login/selectors';
+import { isRegularAccount } from 'wp-calypso-client/state/login/utils';
+import Notice from 'wp-calypso-client/components/notice';
 import SocialLoginForm from './social';
-import { localizeUrl } from 'lib/i18n-utils';
-import TextControl from 'extensions/woocommerce/components/text-control';
-import { sendEmailLogin } from 'state/auth/actions';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import TextControl from 'wp-calypso-client/extensions/woocommerce/components/text-control';
+import { sendEmailLogin } from 'wp-calypso-client/state/auth/actions';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
 
 export class LoginForm extends Component {
 	static propTypes = {

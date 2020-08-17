@@ -9,10 +9,10 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
+import Popover from 'wp-calypso-client/components/popover';
 import PostLikes from './index';
-import { getPostLikes } from 'state/posts/selectors/get-post-likes';
-import { countPostLikes } from 'state/posts/selectors/count-post-likes';
+import { getPostLikes } from 'wp-calypso-client/state/posts/selectors/get-post-likes';
+import { countPostLikes } from 'wp-calypso-client/state/posts/selectors/count-post-likes';
 
 /**
  * Style dependencies

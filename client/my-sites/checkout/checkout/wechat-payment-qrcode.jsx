@@ -11,12 +11,12 @@ import QRCode from 'qrcode.react';
  * Internal dependencies
  */
 import { localize, translate } from 'i18n-calypso';
-import { errorNotice } from 'state/notices/actions';
-import getOrderTransaction from 'state/selectors/get-order-transaction';
-import getOrderTransactionError from 'state/selectors/get-order-transaction-error';
-import { ORDER_TRANSACTION_STATUS } from 'state/order-transactions/constants';
-import QueryOrderTransaction from 'components/data/query-order-transaction';
-import Spinner from 'components/spinner';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import getOrderTransaction from 'wp-calypso-client/state/selectors/get-order-transaction';
+import getOrderTransactionError from 'wp-calypso-client/state/selectors/get-order-transaction-error';
+import { ORDER_TRANSACTION_STATUS } from 'wp-calypso-client/state/order-transactions/constants';
+import QueryOrderTransaction from 'wp-calypso-client/components/data/query-order-transaction';
+import Spinner from 'wp-calypso-client/components/spinner';
 
 export class WechatPaymentQRCode extends Component {
 	static propTypes = {

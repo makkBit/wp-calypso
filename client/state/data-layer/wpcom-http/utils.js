@@ -7,8 +7,8 @@ import { get, identity, merge, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { keyedReducer } from 'state/utils';
-import warn from 'lib/warn';
+import { keyedReducer } from 'wp-calypso-client/state/utils';
+import warn from 'wp-calypso-client/lib/warn';
 
 /**
  * Returns response data from an HTTP request success action if available

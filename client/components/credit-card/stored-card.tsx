@@ -7,8 +7,11 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { useLocalizedMoment } from 'components/localized-moment';
-import { getPaymentMethodImageURL, getPaymentMethodSummary } from 'lib/checkout/payment-methods';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import {
+	getPaymentMethodImageURL,
+	getPaymentMethodSummary,
+} from 'wp-calypso-client/lib/checkout/payment-methods';
 
 /**
  * Style dependencies

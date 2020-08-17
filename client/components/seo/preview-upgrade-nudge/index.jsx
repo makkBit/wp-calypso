@@ -6,21 +6,25 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import QueryPlans from 'components/data/query-plans';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { preventWidows } from 'lib/formatting';
-import { isJetpackSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import FeatureExample from 'components/feature-example';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { findFirstSimilarPlanKey } from 'lib/plans';
-import { TERM_ANNUALLY, TYPE_BUSINESS, FEATURE_SEO_PREVIEW_TOOLS } from 'lib/plans/constants';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import FeatureExample from 'wp-calypso-client/components/feature-example';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { findFirstSimilarPlanKey } from 'wp-calypso-client/lib/plans';
+import {
+	TERM_ANNUALLY,
+	TYPE_BUSINESS,
+	FEATURE_SEO_PREVIEW_TOOLS,
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style dependencies

@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import BackButton from 'components/back-button';
+import BackButton from 'wp-calypso-client/components/back-button';
 
 const BackButtonExample = ( props ) => props.exampleCode;
 

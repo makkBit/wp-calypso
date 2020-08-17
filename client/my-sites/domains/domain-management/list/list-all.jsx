@@ -12,34 +12,38 @@ import LazyRender from 'react-lazily-render';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Button } from '@automattic/components';
-import canCurrentUserForSites from 'state/selectors/can-current-user-for-sites';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import DocumentHead from 'components/data/document-head';
+import canCurrentUserForSites from 'wp-calypso-client/state/selectors/can-current-user-for-sites';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import DomainItem from './domain-item';
 import ListHeader from './list-header';
-import FormattedHeader from 'components/formatted-header';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import {
 	getAllDomains,
 	getFlatDomainsList,
 	getAllRequestingSiteDomains,
-} from 'state/sites/domains/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
+} from 'wp-calypso-client/state/sites/domains/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
 import { getDomainManagementPath } from './utils';
-import getSites from 'state/selectors/get-sites';
-import isRequestingAllDomains from 'state/selectors/is-requesting-all-domains';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import isRequestingAllDomains from 'wp-calypso-client/state/selectors/is-requesting-all-domains';
 import ListItemPlaceholder from './item-placeholder';
-import Main from 'components/main';
-import { type as domainTypes } from 'lib/domains/constants';
-import QueryAllDomains from 'components/data/query-all-domains';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import { getUserPurchases } from 'state/purchases/selectors';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { hasAllSitesList } from 'state/sites/selectors';
-import EmptyContent from 'components/empty-content';
+import Main from 'wp-calypso-client/components/main';
+import { type as domainTypes } from 'wp-calypso-client/lib/domains/constants';
+import QueryAllDomains from 'wp-calypso-client/components/data/query-all-domains';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import { getUserPurchases } from 'wp-calypso-client/state/purchases/selectors';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { hasAllSitesList } from 'wp-calypso-client/state/sites/selectors';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 
 /**
  * Style dependencies

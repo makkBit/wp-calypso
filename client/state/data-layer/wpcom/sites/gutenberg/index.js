@@ -12,14 +12,14 @@ import {
 	EDITOR_TYPE_UPDATE,
 	GUTENBERG_OPT_IN_OUT_SET,
 	EDITOR_DEPRECATION_GROUP_SET,
-} from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { replaceHistory } from 'state/ui/actions';
+} from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { replaceHistory } from 'wp-calypso-client/state/ui/actions';
 
-import 'state/editor-deprecation-group/init';
-import 'state/gutenberg-opt-in-out/init';
+import 'wp-calypso-client/state/editor-deprecation-group/init';
+import 'wp-calypso-client/state/gutenberg-opt-in-out/init';
 
 const fetchGutenbergOptInData = ( action ) =>
 	http(

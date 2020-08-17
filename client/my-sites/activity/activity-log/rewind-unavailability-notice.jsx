@@ -8,10 +8,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Banner from 'components/banner';
-import { getSiteAdminUrl } from 'state/sites/selectors';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import getRewindState from 'state/selectors/get-rewind-state';
+import Banner from 'wp-calypso-client/components/banner';
+import { getSiteAdminUrl } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
 
 export const RewindUnavailabilityNotice = ( {
 	adminUrl,

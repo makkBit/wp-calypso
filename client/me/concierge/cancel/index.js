@@ -9,22 +9,22 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import QuerySites from 'components/data/query-sites';
-import QueryConciergeInitial from 'components/data/query-concierge-initial';
-import QueryConciergeAppointmentDetails from 'components/data/query-concierge-appointment-details';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QueryConciergeInitial from 'wp-calypso-client/components/data/query-concierge-initial';
+import QueryConciergeAppointmentDetails from 'wp-calypso-client/components/data/query-concierge-appointment-details';
 import { Button } from '@automattic/components';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import { localize } from 'i18n-calypso';
 import Confirmation from '../shared/confirmation';
-import { cancelConciergeAppointment } from 'state/concierge/actions';
+import { cancelConciergeAppointment } from 'wp-calypso-client/state/concierge/actions';
 import { CONCIERGE_STATUS_CANCELLED, CONCIERGE_STATUS_CANCELLING } from '../constants';
-import { getSite } from 'state/sites/selectors';
-import getConciergeAppointmentDetails from 'state/selectors/get-concierge-appointment-details';
-import getConciergeScheduleId from 'state/selectors/get-concierge-schedule-id';
-import getConciergeSignupForm from 'state/selectors/get-concierge-signup-form';
-import { recordTracksEvent } from 'state/analytics/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import getConciergeAppointmentDetails from 'wp-calypso-client/state/selectors/get-concierge-appointment-details';
+import getConciergeScheduleId from 'wp-calypso-client/state/selectors/get-concierge-schedule-id';
+import getConciergeSignupForm from 'wp-calypso-client/state/selectors/get-concierge-signup-form';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 class ConciergeCancel extends Component {
 	static propTypes = {

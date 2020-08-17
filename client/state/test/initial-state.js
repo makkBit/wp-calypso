@@ -11,13 +11,13 @@ import { useFakeTimers } from 'sinon';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import * as browserStorage from 'lib/browser-storage';
-import userFactory from 'lib/user';
-import { isSupportSession } from 'lib/user/support-user-interop';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
-import { createReduxStore } from 'state';
-import signupReducer from 'state/signup/reducer';
+import { isEnabled } from 'wp-calypso-client/config';
+import * as browserStorage from 'wp-calypso-client/lib/browser-storage';
+import userFactory from 'wp-calypso-client/lib/user';
+import { isSupportSession } from 'wp-calypso-client/lib/user/support-user-interop';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
+import { createReduxStore } from 'wp-calypso-client/state';
+import signupReducer from 'wp-calypso-client/state/signup/reducer';
 import {
 	getInitialState,
 	getStateFromCache,
@@ -25,13 +25,13 @@ import {
 	loadAllState,
 	MAX_AGE,
 	SERIALIZE_THROTTLE,
-} from 'state/initial-state';
-import { combineReducers, withStorageKey } from 'state/utils';
-import { addReducerToStore } from 'state/add-reducer';
+} from 'wp-calypso-client/state/initial-state';
+import { combineReducers, withStorageKey } from 'wp-calypso-client/state/utils';
+import { addReducerToStore } from 'wp-calypso-client/state/add-reducer';
 
-import currentUser from 'state/current-user/reducer';
-import postTypes from 'state/post-types/reducer';
-import reader from 'state/reader/reducer';
+import currentUser from 'wp-calypso-client/state/current-user/reducer';
+import postTypes from 'wp-calypso-client/state/post-types/reducer';
+import reader from 'wp-calypso-client/state/reader/reducer';
 
 // Create a legacy initial reducer, with no modularization.
 const initialReducer = combineReducers( {

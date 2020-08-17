@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getHasAvailableConciergeSessions from 'state/selectors/get-concierge-has-available-sessions';
+import getHasAvailableConciergeSessions from 'wp-calypso-client/state/selectors/get-concierge-has-available-sessions';
 
 describe( 'getHasAvailableConciergeSessions()', () => {
 	test( 'should be defaulted to null.', () => {

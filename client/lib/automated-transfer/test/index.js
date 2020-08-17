@@ -35,15 +35,15 @@ import {
 	PLAN_JETPACK_PREMIUM_MONTHLY,
 	PLAN_JETPACK_BUSINESS,
 	PLAN_JETPACK_BUSINESS_MONTHLY,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Internal dependencies
  */
 import { isATEnabled } from '../index';
 
-const config = require( 'config' );
-const utils = require( 'lib/site/utils' );
+const config = require( 'wp-calypso-client/config' );
+const utils = require( 'wp-calypso-client/lib/site/utils' );
 
 const site = {
 	options: {

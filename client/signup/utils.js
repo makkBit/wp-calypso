@@ -8,10 +8,10 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import steps from 'signup/config/steps-pure';
-import flows from 'signup/config/flows';
-import user from 'lib/user';
-import { abtest } from 'lib/abtest';
+import steps from 'wp-calypso-client/signup/config/steps-pure';
+import flows from 'wp-calypso-client/signup/config/flows';
+import user from 'wp-calypso-client/lib/user';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 const { defaultFlowName } = flows;
 

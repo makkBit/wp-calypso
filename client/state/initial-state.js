@@ -7,11 +7,15 @@ import { map, pick, throttle } from 'lodash';
 /**
  * Internal dependencies
  */
-import { APPLY_STORED_STATE, SERIALIZE, DESERIALIZE } from 'state/action-types';
-import { getAllStoredItems, setStoredItem, clearStorage } from 'lib/browser-storage';
-import { isSupportSession } from 'lib/user/support-user-interop';
-import config from 'config';
-import user from 'lib/user';
+import { APPLY_STORED_STATE, SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
+import {
+	getAllStoredItems,
+	setStoredItem,
+	clearStorage,
+} from 'wp-calypso-client/lib/browser-storage';
+import { isSupportSession } from 'wp-calypso-client/lib/user/support-user-interop';
+import config from 'wp-calypso-client/config';
+import user from 'wp-calypso-client/lib/user';
 
 /**
  * Module variables

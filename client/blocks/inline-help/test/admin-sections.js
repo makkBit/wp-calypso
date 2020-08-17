@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { filterListBySearchTerm } from 'blocks/inline-help/admin-sections';
+import { filterListBySearchTerm } from 'wp-calypso-client/blocks/inline-help/admin-sections';
 
 describe( 'filterListBySearchTerm()', () => {
 	const mockCollection = [

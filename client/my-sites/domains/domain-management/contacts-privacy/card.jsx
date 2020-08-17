@@ -11,16 +11,16 @@ import { connect } from 'react-redux';
  */
 import { Card } from '@automattic/components';
 import ContactDisplay from './contact-display';
-import { PUBLIC_VS_PRIVATE } from 'lib/url/support';
-import FormToggle from 'components/forms/form-toggle';
-import Gridicon from 'components/gridicon';
+import { PUBLIC_VS_PRIVATE } from 'wp-calypso-client/lib/url/support';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import {
 	enableDomainPrivacy,
 	disableDomainPrivacy,
 	discloseDomainContactInfo,
 	redactDomainContactInfo,
-} from 'state/sites/domains/actions';
-import { isUpdatingDomainPrivacy } from 'state/sites/domains/selectors';
+} from 'wp-calypso-client/state/sites/domains/actions';
+import { isUpdatingDomainPrivacy } from 'wp-calypso-client/state/sites/domains/selectors';
 
 class ContactsPrivacyCard extends React.Component {
 	static propTypes = {

@@ -11,10 +11,14 @@ import { defer, get, isEmpty } from 'lodash';
  * Internal dependencies
  */
 import { Button, CompactCard } from '@automattic/components';
-import HeaderCake from 'components/header-cake';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { checkDomainAvailability } from 'lib/domains';
-import { getSelectedSite } from 'state/ui/selectors';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { checkDomainAvailability } from 'wp-calypso-client/lib/domains';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 import TrademarkNotice from './trademark-notice';
 
 /**

@@ -5,8 +5,8 @@ import {
 	HAPPYCHAT_IO_RECEIVE_INIT,
 	HAPPYCHAT_ELIGIBILITY_SET,
 	PRESALE_PRECANCELLATION_CHAT_AVAILABILITY_SET,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import {
 	geoLocationSchema,
 	isEligibleSchema,

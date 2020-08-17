@@ -11,18 +11,18 @@ import { omit, includes } from 'lodash';
  */
 import PostPlaceholder from './post-placeholder';
 import PostUnavailable from './post-unavailable';
-import ListGap from 'reader/list-gap';
+import ListGap from 'wp-calypso-client/reader/list-gap';
 import CrossPost from './x-post';
 import RecommendedPosts from './recommended-posts';
-import XPostHelper, { isXPost } from 'reader/xpost-helper';
-import PostBlocked from 'blocks/reader-post-card/blocked';
+import XPostHelper, { isXPost } from 'wp-calypso-client/reader/xpost-helper';
+import PostBlocked from 'wp-calypso-client/blocks/reader-post-card/blocked';
 import Post from './post';
-import { IN_STREAM_RECOMMENDATION } from 'reader/follow-sources';
-import CombinedCard from 'blocks/reader-combined-card';
+import { IN_STREAM_RECOMMENDATION } from 'wp-calypso-client/reader/follow-sources';
+import CombinedCard from 'wp-calypso-client/blocks/reader-combined-card';
 import EmptySearchRecommendedPost from './empty-search-recommended-post';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import QueryReaderPost from 'components/data/query-reader-post';
-import compareProps from 'lib/compare-props';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
+import compareProps from 'wp-calypso-client/lib/compare-props';
 
 class PostLifecycle extends React.Component {
 	static propTypes = {

@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns a post object by site ID, post ID pair.

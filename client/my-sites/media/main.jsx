@@ -11,26 +11,30 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import MediaLibrary from 'my-sites/media-library';
-import QueryMedia from 'components/data/query-media';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import EditorMediaModalDialog from 'post-editor/media-modal/dialog';
-import { EditorMediaModalDetail } from 'post-editor/media-modal/detail';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import getMediaItem from 'state/selectors/get-media-item';
-import getPreviousRoute from 'state/selectors/get-previous-route';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import ImageEditor from 'blocks/image-editor';
-import VideoEditor from 'blocks/video-editor';
-import { getMimeType } from 'lib/media/utils';
-import accept from 'lib/accept';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import searchUrl from 'lib/search-url';
-import { editMedia, deleteMedia } from 'state/media/thunks';
-import { setMediaLibrarySelectedItems, changeMediaSource, clearSite } from 'state/media/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import MediaLibrary from 'wp-calypso-client/my-sites/media-library';
+import QueryMedia from 'wp-calypso-client/components/data/query-media';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import EditorMediaModalDialog from 'wp-calypso-client/post-editor/media-modal/dialog';
+import { EditorMediaModalDetail } from 'wp-calypso-client/post-editor/media-modal/detail';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
+import getPreviousRoute from 'wp-calypso-client/state/selectors/get-previous-route';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import ImageEditor from 'wp-calypso-client/blocks/image-editor';
+import VideoEditor from 'wp-calypso-client/blocks/video-editor';
+import { getMimeType } from 'wp-calypso-client/lib/media/utils';
+import accept from 'wp-calypso-client/lib/accept';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import searchUrl from 'wp-calypso-client/lib/search-url';
+import { editMedia, deleteMedia } from 'wp-calypso-client/state/media/thunks';
+import {
+	setMediaLibrarySelectedItems,
+	changeMediaSource,
+	clearSite,
+} from 'wp-calypso-client/state/media/actions';
 
 /**
  * Style dependencies

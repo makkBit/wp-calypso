@@ -13,20 +13,20 @@ import { parse as parseQs } from 'qs';
 /**
  * Internal dependencies
  */
-import { getTld, isSubdomain } from 'lib/domains';
-import { getSiteBySlug } from 'state/sites/selectors';
-import StepWrapper from 'signup/step-wrapper';
-import PlansFeaturesMain from 'my-sites/plans-features-main';
-import GutenboardingHeader from 'my-sites/plans-features-main/gutenboarding-header';
-import QueryPlans from 'components/data/query-plans';
+import { getTld, isSubdomain } from 'wp-calypso-client/lib/domains';
+import { getSiteBySlug } from 'wp-calypso-client/state/sites/selectors';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import PlansFeaturesMain from 'wp-calypso-client/my-sites/plans-features-main';
+import GutenboardingHeader from 'wp-calypso-client/my-sites/plans-features-main/gutenboarding-header';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
 import { FEATURE_UPLOAD_THEMES_PLUGINS } from '../../../lib/plans/constants';
 import { planHasFeature } from '../../../lib/plans';
-import { getSiteGoals } from 'state/signup/steps/site-goals/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
+import { getSiteGoals } from 'wp-calypso-client/state/signup/steps/site-goals/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
 
 /**
  * Style dependencies

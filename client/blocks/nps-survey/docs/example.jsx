@@ -19,13 +19,13 @@ import {
 	getNpsSurveyName,
 	getNpsSurveyScore,
 	getNpsSurveyFeedback,
-} from 'state/nps-survey/selectors';
+} from 'wp-calypso-client/state/nps-survey/selectors';
 import {
 	submitNpsSurvey,
 	submitNpsSurveyWithNoScore,
 	sendNpsSurveyFeedback,
-} from 'state/nps-survey/actions';
-import { successNotice } from 'state/notices/actions';
+} from 'wp-calypso-client/state/nps-survey/actions';
+import { successNotice } from 'wp-calypso-client/state/notices/actions';
 
 class NpsSurveyExample extends PureComponent {
 	state = {

@@ -13,17 +13,19 @@ import { getCurrencyDefaults } from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import { decimalPlaces } from 'lib/simple-payments/utils';
-import ExternalLink from 'components/external-link';
-import FormTextInput from 'components/forms/form-text-input';
-import FormTextarea from 'components/forms/form-textarea';
-import FormCurrencyInput from 'components/forms/form-currency-input';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import ReduxFormFieldset, { FieldsetRenderer } from 'components/redux-forms/redux-form-fieldset';
+import { decimalPlaces } from 'wp-calypso-client/lib/simple-payments/utils';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormCurrencyInput from 'wp-calypso-client/components/forms/form-currency-input';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import ReduxFormFieldset, {
+	FieldsetRenderer,
+} from 'wp-calypso-client/components/redux-forms/redux-form-fieldset';
 import ProductImagePicker from './product-image-picker';
-import { SUPPORTED_CURRENCY_LIST } from 'lib/simple-payments/constants';
+import { SUPPORTED_CURRENCY_LIST } from 'wp-calypso-client/lib/simple-payments/constants';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 export const REDUX_FORM_NAME = 'simplePaymentsForm';
 

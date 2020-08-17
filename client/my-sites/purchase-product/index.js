@@ -6,10 +6,10 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import userFactory from 'lib/user';
+import userFactory from 'wp-calypso-client/lib/user';
 import * as controller from './controller';
-import { login } from 'lib/paths';
-import { makeLayout, render as clientRender } from 'controller';
+import { login } from 'wp-calypso-client/lib/paths';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 /**
  * Style dependencies

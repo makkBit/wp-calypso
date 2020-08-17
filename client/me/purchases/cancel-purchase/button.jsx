@@ -12,23 +12,23 @@ import { getCurrencyDefaults } from '@automattic/format-currency';
  * Internal Dependencies
  */
 import { Button } from '@automattic/components';
-import { cancelAndRefundPurchase, cancelPurchase } from 'lib/purchases/actions';
-import { clearPurchases } from 'state/purchases/actions';
-import CancelPurchaseForm from 'components/marketing-survey/cancel-purchase-form';
-import { CANCEL_FLOW_TYPE } from 'components/marketing-survey/cancel-purchase-form/constants';
+import { cancelAndRefundPurchase, cancelPurchase } from 'wp-calypso-client/lib/purchases/actions';
+import { clearPurchases } from 'wp-calypso-client/state/purchases/actions';
+import CancelPurchaseForm from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form';
+import { CANCEL_FLOW_TYPE } from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form/constants';
 import {
 	getName,
 	getSubscriptionEndDate,
 	hasAmountAvailableToRefund,
 	isOneTimePurchase,
 	isSubscription,
-} from 'lib/purchases';
-import { isDomainRegistration } from 'lib/products-values';
-import notices from 'notices';
-import { confirmCancelDomain, purchasesRoot } from 'me/purchases/paths';
-import { refreshSitePlans } from 'state/sites/plans/actions';
+} from 'wp-calypso-client/lib/purchases';
+import { isDomainRegistration } from 'wp-calypso-client/lib/products-values';
+import notices from 'wp-calypso-client/notices';
+import { confirmCancelDomain, purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import { refreshSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
 import { cancellationEffectDetail, cancellationEffectHeadline } from './cancellation-effect';
-import { getDowngradePlanFromPurchase } from 'state/purchases/selectors';
+import { getDowngradePlanFromPurchase } from 'wp-calypso-client/state/purchases/selectors';
 
 class CancelPurchaseButton extends Component {
 	static propTypes = {

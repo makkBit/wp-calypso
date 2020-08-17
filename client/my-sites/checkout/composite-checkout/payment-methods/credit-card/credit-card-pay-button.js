@@ -18,10 +18,10 @@ import {
 /**
  * Internal dependencies
  */
-import { showStripeModalAuth } from 'lib/stripe';
-import { validatePaymentDetails } from 'lib/checkout/validation';
-import { useCart } from 'my-sites/checkout/composite-checkout/cart-provider';
-import { paymentMethodClassName } from 'lib/cart-values';
+import { showStripeModalAuth } from 'wp-calypso-client/lib/stripe';
+import { validatePaymentDetails } from 'wp-calypso-client/lib/checkout/validation';
+import { useCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/cart-provider';
+import { paymentMethodClassName } from 'wp-calypso-client/lib/cart-values';
 
 const debug = debugFactory( 'calypso:composite-checkout:credit-card' );
 

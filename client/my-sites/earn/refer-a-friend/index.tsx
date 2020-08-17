@@ -8,23 +8,29 @@ import { compact } from 'lodash';
 /**
  * Internal dependencies
  */
-import wp from 'lib/wp';
-import { SiteSlug } from 'types';
+import wp from 'wp-calypso-client/lib/wp';
+import { SiteSlug } from 'wp-calypso-client/types';
 import { useTranslate } from 'i18n-calypso';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import getSiteBySlug from 'state/sites/selectors/get-site-by-slug';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import PromoSection, { Props as PromoSectionProps } from 'components/promo-section';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import { CtaButton } from 'components/promo-section/promo-card/cta';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import getSiteBySlug from 'wp-calypso-client/state/sites/selectors/get-site-by-slug';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import PromoSection, {
+	Props as PromoSectionProps,
+} from 'wp-calypso-client/components/promo-section';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import { CtaButton } from 'wp-calypso-client/components/promo-section/promo-card/cta';
 
 /**
  * Image dependencies
  */
-import earnSectionImage from 'assets/images/earn/earn-section.svg';
-import referralImage from 'assets/images/earn/referral.svg';
+import earnSectionImage from 'wp-calypso-client/assets/images/earn/earn-section.svg';
+import referralImage from 'wp-calypso-client/assets/images/earn/referral.svg';
 
 /**
  * Style dependencies

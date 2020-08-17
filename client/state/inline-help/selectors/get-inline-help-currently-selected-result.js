@@ -6,11 +6,11 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import getInlineHelpSearchResultsForQuery from 'state/inline-help/selectors/get-inline-help-search-results-for-query';
-import getSelectedResultIndex from 'state/inline-help/selectors/get-selected-result-index';
-import getContextualHelpResults from 'state/inline-help/selectors/get-contextual-help-results';
+import getInlineHelpSearchResultsForQuery from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-search-results-for-query';
+import getSelectedResultIndex from 'wp-calypso-client/state/inline-help/selectors/get-selected-result-index';
+import getContextualHelpResults from 'wp-calypso-client/state/inline-help/selectors/get-contextual-help-results';
 
-import 'state/inline-help/init';
+import 'wp-calypso-client/state/inline-help/init';
 
 /**
  * Returns the selected search result item

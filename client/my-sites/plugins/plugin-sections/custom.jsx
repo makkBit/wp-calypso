@@ -9,10 +9,10 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
-import SectionNav from 'components/section-nav';
-import { sanitizeSectionContent } from 'lib/plugins/sanitize-section-content';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import { sanitizeSectionContent } from 'wp-calypso-client/lib/plugins/sanitize-section-content';
 
 /**
  * Style dependencies

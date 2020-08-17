@@ -6,13 +6,13 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { refreshSitePlans } from 'state/sites/plans/actions';
-import { SITE_PLAN_OWNERSHIP_TRANSFER } from 'state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { refreshSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
+import { SITE_PLAN_OWNERSHIP_TRANSFER } from 'wp-calypso-client/state/action-types';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const noticeOptions = ( siteId ) => ( {
 	duration: 8000,

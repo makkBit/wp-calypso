@@ -6,7 +6,7 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getTld } from 'lib/domains';
+import { getTld } from 'wp-calypso-client/lib/domains';
 
 // NOTE: This is actually a sorted list.
 export const VALID_MATCH_REASONS = [

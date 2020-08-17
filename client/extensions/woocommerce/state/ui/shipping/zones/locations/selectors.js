@@ -7,8 +7,8 @@ import { every, forIn, isEmpty, isObject, orderBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	areShippingZonesLoaded,
 	getAPIShippingZones,

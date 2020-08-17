@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { noop, size } from 'lodash';
-import Gridicon from 'components/gridicon';
-import JetpackLogo from 'components/jetpack-logo';
-import config from 'config';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
@@ -21,18 +21,18 @@ import {
 	isPremiumPlan,
 	isBusinessPlan,
 	isEcommercePlan,
-} from 'lib/plans';
-import { GROUP_JETPACK, GROUP_WPCOM } from 'lib/plans/constants';
-import { addQueryArgs } from 'lib/url';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+} from 'wp-calypso-client/lib/plans';
+import { GROUP_JETPACK, GROUP_WPCOM } from 'wp-calypso-client/lib/plans/constants';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import { Button, Card } from '@automattic/components';
-import DismissibleCard from 'blocks/dismissible-card';
-import PlanPrice from 'my-sites/plan-price';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
-import { preventWidows } from 'lib/formatting';
+import DismissibleCard from 'wp-calypso-client/blocks/dismissible-card';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Style dependencies

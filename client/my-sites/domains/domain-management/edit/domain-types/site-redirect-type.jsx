@@ -7,9 +7,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import DomainStatus from '../card/domain-status';
 import SubscriptionSettings from '../card/subscription-settings';
 import { recordPaymentSettingsClick } from '../payment-settings-analytics';
@@ -17,15 +17,15 @@ import {
 	getByPurchaseId,
 	hasLoadedSitePurchasesFromServer,
 	isFetchingSitePurchases,
-} from 'state/purchases/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import RenewButton from 'my-sites/domains/domain-management/edit/card/renew-button';
-import AutoRenewToggle from 'me/purchases/manage-purchase/auto-renew-toggle';
-import QuerySitePurchases from 'components/data/query-site-purchases';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import RenewButton from 'wp-calypso-client/my-sites/domains/domain-management/edit/card/renew-button';
+import AutoRenewToggle from 'wp-calypso-client/me/purchases/manage-purchase/auto-renew-toggle';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
 import ExpiringCreditCard from '../card/notices/expiring-credit-card';
 import DomainManagementNavigationEnhanced from '../navigation/enhanced';
 import { DomainExpiryOrRenewal, WrapDomainStatusButtons } from './helpers';
-import { resolveDomainStatus } from 'lib/domains';
+import { resolveDomainStatus } from 'wp-calypso-client/lib/domains';
 
 class SiteRedirectType extends React.Component {
 	renderDefaultRenewButton() {

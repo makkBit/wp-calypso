@@ -8,9 +8,9 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormRadio from 'components/forms/form-radio';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const RadioRenderer = ( { input, meta, type, ...props } ) => (
 	<FormRadio { ...input } { ...props } />

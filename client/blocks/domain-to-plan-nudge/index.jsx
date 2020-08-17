@@ -10,20 +10,20 @@ import formatCurrency from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
-import { PLAN_PERSONAL, FEATURE_NO_ADS } from 'lib/plans/constants';
-import { getPlan } from 'lib/plans';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { PLAN_PERSONAL, FEATURE_NO_ADS } from 'wp-calypso-client/lib/plans/constants';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getSitePlanRawPrice,
 	getPlanDiscountedRawPrice,
 	getPlanRawDiscount,
 	getPlansBySiteId,
-} from 'state/sites/plans/selectors';
-import QuerySitePlans from 'components/data/query-site-plans';
-import isEligibleForDomainToPaidPlanUpsell from 'state/selectors/is-eligible-for-domain-to-paid-plan-upsell';
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import isEligibleForDomainToPaidPlanUpsell from 'wp-calypso-client/state/selectors/is-eligible-for-domain-to-paid-plan-upsell';
 
 /**
  * Style dependencies

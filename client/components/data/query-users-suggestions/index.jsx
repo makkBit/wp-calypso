@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingUserSuggestions as isRequesting } from 'state/users/suggestions/selectors';
-import { requestUserSuggestions } from 'state/users/suggestions/actions';
+import { isRequestingUserSuggestions as isRequesting } from 'wp-calypso-client/state/users/suggestions/selectors';
+import { requestUserSuggestions } from 'wp-calypso-client/state/users/suggestions/actions';
 
 class QueryUsersSuggestions extends Component {
 	static propTypes = {

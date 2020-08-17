@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { withoutHttp } from 'lib/url';
-import getRawSite from 'state/selectors/get-raw-site';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 import getSiteOption from './get-site-option';
 import getSiteSlug from './get-site-slug';
 import isSiteConflicting from './is-site-conflicting';

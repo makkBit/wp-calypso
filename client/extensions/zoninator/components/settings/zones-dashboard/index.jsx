@@ -12,14 +12,14 @@ import { flowRight, times } from 'lodash';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import HeaderCake from 'components/header-cake';
-import SectionHeader from 'components/section-header';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import ZoneItem from './zone-item';
 import ZonePlaceholder from './zone-placeholder';
 import { getZones, isRequestingZones } from '../../../state/zones/selectors';
 import { settingsPath } from '../../../app/util';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 const placeholderCount = 5;
 

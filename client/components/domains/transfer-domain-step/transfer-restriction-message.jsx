@@ -10,9 +10,9 @@ import page from 'page';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormattedHeader from 'components/formatted-header';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { MAP_EXISTING_DOMAIN } from 'lib/url/support';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { MAP_EXISTING_DOMAIN } from 'wp-calypso-client/lib/url/support';
 
 class TransferRestrictionMessage extends React.PureComponent {
 	static propTypes = {

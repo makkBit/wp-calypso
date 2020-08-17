@@ -11,8 +11,8 @@ import {
 	SITE_VOUCHERS_REQUEST,
 	SITE_VOUCHERS_REQUEST_SUCCESS,
 	SITE_VOUCHERS_REQUEST_FAILURE,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 
 /**

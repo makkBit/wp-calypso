@@ -13,18 +13,18 @@ import { speak } from '@wordpress/a11y';
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import QueryInlineHelpSearch from 'components/data/query-inline-help-search';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import QueryInlineHelpSearch from 'wp-calypso-client/components/data/query-inline-help-search';
 import PlaceholderLines from './placeholder-lines';
-import { decodeEntities, preventWidows } from 'lib/formatting';
-import getSearchResultsByQuery from 'state/inline-help/selectors/get-inline-help-search-results-for-query';
-import getSelectedResultIndex from 'state/inline-help/selectors/get-selected-result-index';
-import getInlineHelpCurrentlySelectedResult from 'state/inline-help/selectors/get-inline-help-currently-selected-result';
-import isRequestingInlineHelpSearchResultsForQuery from 'state/inline-help/selectors/is-requesting-inline-help-search-results-for-query';
-import hasInlineHelpAPIResults from 'state/selectors/has-inline-help-api-results';
-import { selectResult } from 'state/inline-help/actions';
-import { localizeUrl } from 'lib/i18n-utils';
-import Gridicon from 'components/gridicon';
+import { decodeEntities, preventWidows } from 'wp-calypso-client/lib/formatting';
+import getSearchResultsByQuery from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-search-results-for-query';
+import getSelectedResultIndex from 'wp-calypso-client/state/inline-help/selectors/get-selected-result-index';
+import getInlineHelpCurrentlySelectedResult from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-currently-selected-result';
+import isRequestingInlineHelpSearchResultsForQuery from 'wp-calypso-client/state/inline-help/selectors/is-requesting-inline-help-search-results-for-query';
+import hasInlineHelpAPIResults from 'wp-calypso-client/state/selectors/has-inline-help-api-results';
+import { selectResult } from 'wp-calypso-client/state/inline-help/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import {
 	SUPPORT_TYPE_ADMIN_SECTION,
 	SUPPORT_TYPE_API_HELP,

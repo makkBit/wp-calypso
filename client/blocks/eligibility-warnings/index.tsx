@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { localize, LocalizeProps } from 'i18n-calypso';
 import { union, includes, noop } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import page from 'page';
 
 /**
@@ -18,19 +18,22 @@ import {
 	FEATURE_PERFORMANCE,
 	FEATURE_UPLOAD_THEMES,
 	FEATURE_SFTP,
-} from 'lib/plans/constants';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getEligibility, isEligibleForAutomatedTransfer } from 'state/automated-transfer/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+} from 'wp-calypso-client/lib/plans/constants';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import {
+	getEligibility,
+	isEligibleForAutomatedTransfer,
+} from 'wp-calypso-client/state/automated-transfer/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import { Button, CompactCard } from '@automattic/components';
-import QueryEligibility from 'components/data/query-atat-eligibility';
+import QueryEligibility from 'wp-calypso-client/components/data/query-atat-eligibility';
 import HoldList, { hasBlockingHold } from './hold-list';
 import WarningList from './warning-list';
-import { launchSite } from 'state/sites/launch/actions';
-import { isSavingSiteSettings } from 'state/site-settings/selectors';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import getRequest from 'state/selectors/get-request';
+import { launchSite } from 'wp-calypso-client/state/sites/launch/actions';
+import { isSavingSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import getRequest from 'wp-calypso-client/state/selectors/get-request';
 
 /**
  * Style dependencies

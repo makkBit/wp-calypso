@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getSiteSlug } from 'state/sites/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns the current user's primary site's slug.

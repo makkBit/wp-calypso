@@ -9,8 +9,8 @@ const debug = debugFactory( 'calypso:users:store' );
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 const _fetchingUsersByNamespace = {}; // store fetching state (boolean)
 const _fetchingUpdatedUsersByNamespace = {}; // store fetching state (boolean)

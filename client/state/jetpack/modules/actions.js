@@ -17,10 +17,10 @@ import {
 	JETPACK_MODULES_REQUEST,
 	JETPACK_MODULES_REQUEST_FAILURE,
 	JETPACK_MODULES_REQUEST_SUCCESS,
-} from 'state/action-types';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wp from 'wp-calypso-client/lib/wp';
 
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/jetpack/init';
 
 export const activateModule = ( siteId, moduleSlug, silent = false ) => {
 	return ( dispatch ) => {

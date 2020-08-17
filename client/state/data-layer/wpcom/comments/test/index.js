@@ -13,9 +13,9 @@ import {
 	COMMENTS_UPDATES_RECEIVE,
 	COMMENTS_COUNT_RECEIVE,
 	NOTICE_CREATE,
-} from 'state/action-types';
-import { NUMBER_OF_COMMENTS_PER_FETCH } from 'state/comments/constants';
-import { http } from 'state/data-layer/wpcom-http/actions';
+} from 'wp-calypso-client/state/action-types';
+import { NUMBER_OF_COMMENTS_PER_FETCH } from 'wp-calypso-client/state/comments/constants';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'wpcom-api', () => {
 	describe( 'post comments request', () => {

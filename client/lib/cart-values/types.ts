@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import type { GSuiteProductUser } from 'lib/gsuite/new-users';
-import type { WPCOMTransactionEndpointDomainDetails } from 'my-sites/checkout/composite-checkout/types/transaction-endpoint';
+import type { GSuiteProductUser } from 'wp-calypso-client/lib/gsuite/new-users';
+import type { WPCOMTransactionEndpointDomainDetails } from 'wp-calypso-client/my-sites/checkout/composite-checkout/types/transaction-endpoint';
 
 export type CartItemValue = {
 	product_id?: number;

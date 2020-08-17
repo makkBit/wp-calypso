@@ -11,13 +11,13 @@ import {
 	HOSTING_PHP_VERSION_REQUEST,
 	HOSTING_PHP_VERSION_SET_REQUEST,
 	HOSTING_CLEAR_CACHE_REQUEST,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/hosting/restore-database-password';
-import 'state/data-layer/wpcom/sites/hosting/sftp-user';
-import 'state/data-layer/wpcom/sites/hosting/php-version';
-import 'state/data-layer/wpcom/sites/hosting/clear-cache';
-import 'state/hosting/init';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/hosting/restore-database-password';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/hosting/sftp-user';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/hosting/php-version';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/hosting/clear-cache';
+import 'wp-calypso-client/state/hosting/init';
 
 export const restoreDatabasePassword = ( siteId ) => ( {
 	type: HOSTING_RESTORE_DATABASE_PASSWORD,

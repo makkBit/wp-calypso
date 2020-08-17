@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal Dependencies
  */
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
-import CustomizeComponent from 'my-sites/customize/main';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
+import CustomizeComponent from 'wp-calypso-client/my-sites/customize/main';
 
 export function customize( context, next ) {
 	// FIXME: Auto-converted from the Flux setTitle action. Please use <DocumentHead> instead.

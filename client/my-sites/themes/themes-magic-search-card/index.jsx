@@ -8,19 +8,22 @@ import wrapWithClickOutside from 'react-click-outside';
 import { connect } from 'react-redux';
 import { intersection, difference, includes, flowRight as compose } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Search from 'components/search';
-import SimplifiedSegmentedControl from 'components/segmented-control/simplified';
-import KeyedSuggestions from 'components/keyed-suggestions';
-import StickyPanel from 'components/sticky-panel';
-import config from 'config';
+import Search from 'wp-calypso-client/components/search';
+import SimplifiedSegmentedControl from 'wp-calypso-client/components/segmented-control/simplified';
+import KeyedSuggestions from 'wp-calypso-client/components/keyed-suggestions';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
+import config from 'wp-calypso-client/config';
 import { localize } from 'i18n-calypso';
 import MagicSearchWelcome from './welcome';
-import { getThemeFilters, getThemeFilterToTermTable } from 'state/themes/selectors';
+import {
+	getThemeFilters,
+	getThemeFilterToTermTable,
+} from 'wp-calypso-client/state/themes/selectors';
 
 /**
  * Style dependencies

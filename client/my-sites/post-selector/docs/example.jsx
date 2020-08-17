@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import PostSelector from '../';
-import FormLabel from 'components/forms/form-label';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
 
 class PostSelectorExample extends Component {
 	state = {

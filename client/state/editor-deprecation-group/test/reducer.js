@@ -7,7 +7,7 @@ import { expect } from 'chai';
  * Internal dependencies
  */
 import { editorDeprecationGroupReducer } from '../reducer';
-import { EDITOR_DEPRECATION_GROUP_SET } from 'state/action-types';
+import { EDITOR_DEPRECATION_GROUP_SET } from 'wp-calypso-client/state/action-types';
 
 describe( "editorDeprecationGroupReducer's", () => {
 	test( 'should default to null', () => {

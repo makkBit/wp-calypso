@@ -10,24 +10,27 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 import { Card, CompactCard } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import ExternalLink from 'components/external-link';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import SupportInfo from 'components/support-info';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { hasFeature } from 'state/sites/plans/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { FEATURE_WORDADS_INSTANT, PLAN_JETPACK_PREMIUM } from 'lib/plans/constants';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { getCustomizerUrl } from 'state/sites/selectors';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import {
+	FEATURE_WORDADS_INSTANT,
+	PLAN_JETPACK_PREMIUM,
+} from 'wp-calypso-client/lib/plans/constants';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { getCustomizerUrl } from 'wp-calypso-client/state/sites/selectors';
 
 class JetpackAds extends Component {
 	static defaultProps = {

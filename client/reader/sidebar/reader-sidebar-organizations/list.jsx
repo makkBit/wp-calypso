@@ -10,23 +10,23 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import ExpandableSidebarMenu from 'layout/sidebar/expandable';
+import ExpandableSidebarMenu from 'wp-calypso-client/layout/sidebar/expandable';
 import ReaderSidebarOrganizationsListItem from './list-item';
-import getOrganizationSites from 'state/reader/follows/selectors/get-reader-follows-organization';
-import { toggleReaderSidebarOrganization } from 'state/reader-ui/sidebar/actions';
-import { isOrganizationOpen } from 'state/reader-ui/sidebar/selectors';
-import { AUTOMATTIC_ORG_ID } from 'state/reader/organizations/constants';
-import ReaderSidebarHelper from 'reader/sidebar/helper';
-import SidebarItem from 'layout/sidebar/item';
-import Count from 'components/count';
+import getOrganizationSites from 'wp-calypso-client/state/reader/follows/selectors/get-reader-follows-organization';
+import { toggleReaderSidebarOrganization } from 'wp-calypso-client/state/reader-ui/sidebar/actions';
+import { isOrganizationOpen } from 'wp-calypso-client/state/reader-ui/sidebar/selectors';
+import { AUTOMATTIC_ORG_ID } from 'wp-calypso-client/state/reader/organizations/constants';
+import ReaderSidebarHelper from 'wp-calypso-client/reader/sidebar/helper';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import Count from 'wp-calypso-client/components/count';
 
 /**
  * Styles
  */
 import '../style.scss';
-import SVGIcon from 'components/svg-icon';
-import AutomatticLogo from 'assets/images/icons/a8c-logo.svg';
-import P2Logo from 'assets/images/icons/p2-logo.svg';
+import SVGIcon from 'wp-calypso-client/components/svg-icon';
+import AutomatticLogo from 'wp-calypso-client/assets/images/icons/a8c-logo.svg';
+import P2Logo from 'wp-calypso-client/assets/images/icons/p2-logo.svg';
 
 export class ReaderSidebarOrganizationsList extends Component {
 	static propTypes = {

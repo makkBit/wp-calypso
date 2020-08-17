@@ -12,8 +12,8 @@ import {
 	SITE_STATS_RECEIVE,
 	SITE_STATS_REQUEST,
 	SITE_STATS_REQUEST_FAILURE,
-} from 'state/action-types';
-import useNock from 'test-helpers/use-nock';
+} from 'wp-calypso-client/state/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
 
 const SITE_ID = 2916284;
 const STAT_TYPE = 'statsStreak';

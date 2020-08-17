@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { THEME_PREVIEW_STATE } from 'state/themes/action-types';
+import { THEME_PREVIEW_STATE } from 'wp-calypso-client/state/themes/action-types';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 export function hideThemePreview() {
 	return {

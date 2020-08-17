@@ -6,7 +6,7 @@ import photon from 'photon';
 /**
  * Internal dependencies
  */
-import { getUrlParts } from 'lib/url/url-parts';
+import { getUrlParts } from 'wp-calypso-client/lib/url/url-parts';
 
 /**
  * Pattern matching URLs to be left unmodified.

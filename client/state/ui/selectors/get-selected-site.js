@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getSite from 'state/sites/selectors/get-site';
+import getSite from 'wp-calypso-client/state/sites/selectors/get-site';
 import getSelectedSiteId from './get-selected-site-id';
 
 /**

@@ -18,7 +18,7 @@ import {
 	INLINE_HELP_SEARCH_REQUEST_FAILURE,
 	INLINE_HELP_SEARCH_REQUEST_API_RESULTS,
 	INLINE_HELP_SELECT_RESULT,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const API_RESULT_FIXTURE = [
 	{

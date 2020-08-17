@@ -9,10 +9,10 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { localizeUrl } from 'lib/i18n-utils';
-import { acceptTos, requestLegalData } from 'state/legal/actions';
-import { shouldDisplayTosUpdateBanner } from 'state/selectors/should-display-tos-update-banner';
-import ExternalLink from 'components/external-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { acceptTos, requestLegalData } from 'wp-calypso-client/state/legal/actions';
+import { shouldDisplayTosUpdateBanner } from 'wp-calypso-client/state/selectors/should-display-tos-update-banner';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 /**
  * Style dependencies

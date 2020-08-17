@@ -2,10 +2,10 @@
  * Internal dependencies
  */
 
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getUserPurchases } from 'state/purchases/selectors';
-import { planMatches } from 'lib/plans';
-import { GROUP_WPCOM, TYPE_BUSINESS } from 'lib/plans/constants';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getUserPurchases } from 'wp-calypso-client/state/purchases/selectors';
+import { planMatches } from 'wp-calypso-client/lib/plans';
+import { GROUP_WPCOM, TYPE_BUSINESS } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Returns a boolean flag indicating if the current user is a business plan user.

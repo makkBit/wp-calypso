@@ -6,9 +6,9 @@ import { map } from 'lodash';
 /**
  * Internal dependencies
  */
-import { POST_EDIT } from 'state/action-types';
+import { POST_EDIT } from 'wp-calypso-client/state/action-types';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 export function deletePostMetadata( siteId, postId = null, metaKeys ) {
 	if ( ! Array.isArray( metaKeys ) ) {

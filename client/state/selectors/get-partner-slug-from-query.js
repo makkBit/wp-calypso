@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getPartnerIdFromQuery from 'state/selectors/get-partner-id-from-query';
+import getPartnerIdFromQuery from 'wp-calypso-client/state/selectors/get-partner-id-from-query';
 
 /**
  * Returns the partner slug when partner_id is present is the query and the

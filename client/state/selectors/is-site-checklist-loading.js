@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import getRequest from 'state/selectors/get-request';
-import { requestSiteChecklist } from 'state/checklist/actions';
+import getRequest from 'wp-calypso-client/state/selectors/get-request';
+import { requestSiteChecklist } from 'wp-calypso-client/state/checklist/actions';
 
 /**
  * Returns the loading state for the checklist API call

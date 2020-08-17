@@ -8,28 +8,30 @@ import { useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { isFreePlan } from 'lib/plans';
-import FormattedHeader from 'components/formatted-header';
-import Notice from 'components/notice';
-import PromoSection, { Props as PromoSectionProps } from 'components/promo-section';
-import PromoCard from 'components/promo-section/promo-card';
-import PromoCardCTA from 'components/promo-section/promo-card/cta';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
-import Gridicon from 'components/gridicon';
-import { getSitePlan } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import WhatIsJetpack from 'components/jetpack/what-is-jetpack';
-import { preventWidows } from 'lib/formatting';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { isFreePlan } from 'wp-calypso-client/lib/plans';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Notice from 'wp-calypso-client/components/notice';
+import PromoSection, {
+	Props as PromoSectionProps,
+} from 'wp-calypso-client/components/promo-section';
+import PromoCard from 'wp-calypso-client/components/promo-section/promo-card';
+import PromoCardCTA from 'wp-calypso-client/components/promo-section/promo-card/cta';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { getSitePlan } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import WhatIsJetpack from 'wp-calypso-client/components/jetpack/what-is-jetpack';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Asset dependencies
  */
-import JetpackBackupSVG from 'assets/images/illustrations/jetpack-backup.svg';
+import JetpackBackupSVG from 'wp-calypso-client/assets/images/illustrations/jetpack-backup.svg';
 import './style.scss';
 
 const trackEventName = 'calypso_jetpack_backup_business_upsell';

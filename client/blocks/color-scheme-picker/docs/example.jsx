@@ -7,7 +7,7 @@ import React, { PureComponent } from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import ColorSchemePicker from 'blocks/color-scheme-picker';
+import ColorSchemePicker from 'wp-calypso-client/blocks/color-scheme-picker';
 
 class ColorSchemePickerExample extends PureComponent {
 	static displayName = 'ColorSchemePicker';

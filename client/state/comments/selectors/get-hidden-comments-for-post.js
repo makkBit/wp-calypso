@@ -7,10 +7,10 @@ import { keyBy, pickBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getExpansionsForPost } from 'state/comments/selectors/get-expansions-for-post';
-import { getPostCommentItems } from 'state/comments/selectors/get-post-comment-items';
+import { getExpansionsForPost } from 'wp-calypso-client/state/comments/selectors/get-expansions-for-post';
+import { getPostCommentItems } from 'wp-calypso-client/state/comments/selectors/get-post-comment-items';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 export const getHiddenCommentsForPost = treeSelect(
 	( state, siteId, postId ) => [

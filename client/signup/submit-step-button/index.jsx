@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 export class SubmitStepButton extends Component {
 	handleSubmit = () => {

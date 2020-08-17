@@ -13,18 +13,21 @@ import { get, identity, includes, noop } from 'lodash';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import { getSectionName, getSelectedSiteId } from 'state/ui/selectors';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { getPreference, isFetchingPreferences } from 'state/preferences/selectors';
-import isNotificationsOpen from 'state/selectors/is-notifications-open';
+import { getSectionName, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import {
+	getPreference,
+	isFetchingPreferences,
+} from 'wp-calypso-client/state/preferences/selectors';
+import isNotificationsOpen from 'wp-calypso-client/state/selectors/is-notifications-open';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { savePreference } from 'state/preferences/actions';
-import TrackComponentView from 'lib/analytics/track-component-view';
+} from 'wp-calypso-client/state/analytics/actions';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
 import {
 	ALLOWED_SECTIONS,
 	EDITOR,
@@ -38,9 +41,9 @@ import {
 	isDismissed,
 	APP_BANNER_DISMISS_TIMES_PREFERENCE,
 } from './utils';
-import versionCompare from 'lib/version-compare';
-import { isWpMobileApp } from 'lib/mobile-app';
-import { shouldDisplayTosUpdateBanner } from 'state/selectors/should-display-tos-update-banner';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { isWpMobileApp } from 'wp-calypso-client/lib/mobile-app';
+import { shouldDisplayTosUpdateBanner } from 'wp-calypso-client/state/selectors/should-display-tos-update-banner';
 
 /**
  * Style dependencies
@@ -50,10 +53,10 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import editorBannerImage from 'assets/images/illustrations/app-banner-editor.svg';
-import notificationsBannerImage from 'assets/images/illustrations/app-banner-notifications.svg';
-import readerBannerImage from 'assets/images/illustrations/app-banner-reader.svg';
-import statsBannerImage from 'assets/images/illustrations/app-banner-stats.svg';
+import editorBannerImage from 'wp-calypso-client/assets/images/illustrations/app-banner-editor.svg';
+import notificationsBannerImage from 'wp-calypso-client/assets/images/illustrations/app-banner-notifications.svg';
+import readerBannerImage from 'wp-calypso-client/assets/images/illustrations/app-banner-reader.svg';
+import statsBannerImage from 'wp-calypso-client/assets/images/illustrations/app-banner-stats.svg';
 
 const IOS_REGEX = /iPad|iPod|iPhone/i;
 const ANDROID_REGEX = /Android (\d+(\.\d+)?(\.\d+)?)/i;

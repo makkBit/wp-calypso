@@ -9,24 +9,27 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import CartStore from 'lib/cart/store';
-import { fetchUsers } from 'lib/users/actions';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getPlansBySite } from 'state/sites/plans/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getDomainsBySiteId, isRequestingSiteDomains } from 'state/sites/domains/selectors';
-import { getProductsList } from 'state/products-list/selectors';
-import NameserversStore from 'lib/domains/nameservers/store';
-import { fetchNameservers } from 'lib/domains/nameservers/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryContactDetailsCache from 'components/data/query-contact-details-cache';
-import QueryProductsList from 'components/data/query-products-list';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import StoreConnection from 'components/data/store-connection';
-import UsersStore from 'lib/users/store';
-import WapiDomainInfoStore from 'lib/domains/wapi-domain-info/store';
-import { fetchWapiDomainInfo } from 'lib/domains/wapi-domain-info/actions';
+import CartStore from 'wp-calypso-client/lib/cart/store';
+import { fetchUsers } from 'wp-calypso-client/lib/users/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getPlansBySite } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getDomainsBySiteId,
+	isRequestingSiteDomains,
+} from 'wp-calypso-client/state/sites/domains/selectors';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import NameserversStore from 'wp-calypso-client/lib/domains/nameservers/store';
+import { fetchNameservers } from 'wp-calypso-client/lib/domains/nameservers/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryContactDetailsCache from 'wp-calypso-client/components/data/query-contact-details-cache';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import StoreConnection from 'wp-calypso-client/components/data/store-connection';
+import UsersStore from 'wp-calypso-client/lib/users/store';
+import WapiDomainInfoStore from 'wp-calypso-client/lib/domains/wapi-domain-info/store';
+import { fetchWapiDomainInfo } from 'wp-calypso-client/lib/domains/wapi-domain-info/actions';
 
 function getStateFromStores( props ) {
 	return {

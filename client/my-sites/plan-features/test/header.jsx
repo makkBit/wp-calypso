@@ -33,9 +33,9 @@ import { identity } from 'lodash';
 /**
  * Internal dependencies
  */
-import PlanIntervalDiscount from 'my-sites/plan-interval-discount';
+import PlanIntervalDiscount from 'wp-calypso-client/my-sites/plan-interval-discount';
 import { PlanFeaturesHeader } from '../header';
-import PlanPill from 'components/plans/plan-pill';
+import PlanPill from 'wp-calypso-client/components/plans/plan-pill';
 import {
 	PLAN_BUSINESS,
 	PLAN_BUSINESS_2_YEARS,
@@ -53,8 +53,8 @@ import {
 	PLAN_PERSONAL_2_YEARS,
 	PLAN_PREMIUM,
 	PLAN_PREMIUM_2_YEARS,
-} from 'lib/plans/constants';
-import PlanPrice from 'my-sites/plan-price/';
+} from 'wp-calypso-client/lib/plans/constants';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price/';
 
 const props = {
 	translate: ( x ) => x,

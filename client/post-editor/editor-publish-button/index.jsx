@@ -9,18 +9,21 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordEditorEvent } from 'state/posts/stats';
-import * as postUtils from 'state/posts/utils';
+import { recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import * as postUtils from 'wp-calypso-client/state/posts/utils';
 import { Button } from '@automattic/components';
 import { localize } from 'i18n-calypso';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId, getEditorPublishButtonStatus } from 'state/editor/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getEditorPostId,
+	getEditorPublishButtonStatus,
+} from 'wp-calypso-client/state/editor/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import {
 	getSitePost,
 	isEditedPostPasswordProtected,
 	isEditedPostPasswordProtectedWithValidPassword,
-} from 'state/posts/selectors';
+} from 'wp-calypso-client/state/posts/selectors';
 
 const POST_EVENTS = {
 	update: 'Clicked Update Post Button',

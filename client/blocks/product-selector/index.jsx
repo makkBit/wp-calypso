@@ -7,36 +7,45 @@ import page from 'page';
 import { connect } from 'react-redux';
 import { find, findKey, filter, flowRight as compose, includes, isEmpty, map } from 'lodash';
 import { localize } from 'i18n-calypso';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Internal dependencies
  */
-import { addQueryArgs } from 'lib/route';
-import ExternalLinkWithTracking from 'components/external-link/with-tracking';
-import PlanIntervalDiscount from 'my-sites/plan-interval-discount';
-import ProductCard from 'components/product-card';
-import ProductCardAction from 'components/product-card/action';
-import ProductCardOptions from 'components/product-card/options';
-import ProductCardPromoNudge from 'components/product-card/promo-nudge';
-import QuerySiteProducts from 'components/data/query-site-products';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import QueryProductsList from 'components/data/query-products-list';
-import ProductExpiration from 'components/product-expiration';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import ExternalLinkWithTracking from 'wp-calypso-client/components/external-link/with-tracking';
+import PlanIntervalDiscount from 'wp-calypso-client/my-sites/plan-interval-discount';
+import ProductCard from 'wp-calypso-client/components/product-card';
+import ProductCardAction from 'wp-calypso-client/components/product-card/action';
+import ProductCardOptions from 'wp-calypso-client/components/product-card/options';
+import ProductCardPromoNudge from 'wp-calypso-client/components/product-card/promo-nudge';
+import QuerySiteProducts from 'wp-calypso-client/components/data/query-site-products';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import ProductExpiration from 'wp-calypso-client/components/product-expiration';
 import { extractProductSlugs, filterByProductSlugs } from './utils';
-import { getAvailableProductsBySiteId } from 'state/sites/products/selectors';
-import { getAvailableProductsList, isProductsListFetching } from 'state/products-list/selectors';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSitePlanSlug, isRequestingSitePlans } from 'state/sites/plans/selectors';
-import { getSitePurchases, isFetchingSitePurchases } from 'state/purchases/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getPlan, planHasFeature } from 'lib/plans';
-import { isExpiring } from 'lib/purchases';
-import { isRequestingPlans } from 'state/plans/selectors';
-import { TERM_ANNUALLY, TERM_MONTHLY } from 'lib/plans/constants';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { managePurchase } from 'me/purchases/paths';
+import { getAvailableProductsBySiteId } from 'wp-calypso-client/state/sites/products/selectors';
+import {
+	getAvailableProductsList,
+	isProductsListFetching,
+} from 'wp-calypso-client/state/products-list/selectors';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getSitePlanSlug,
+	isRequestingSitePlans,
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import {
+	getSitePurchases,
+	isFetchingSitePurchases,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getPlan, planHasFeature } from 'wp-calypso-client/lib/plans';
+import { isExpiring } from 'wp-calypso-client/lib/purchases';
+import { isRequestingPlans } from 'wp-calypso-client/state/plans/selectors';
+import { TERM_ANNUALLY, TERM_MONTHLY } from 'wp-calypso-client/lib/plans/constants';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
 
 export class ProductSelector extends Component {
 	static propTypes = {

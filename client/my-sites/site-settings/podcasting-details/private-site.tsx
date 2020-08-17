@@ -8,7 +8,7 @@ import { localize, LocalizeProps } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 interface Props extends LocalizeProps {
 	siteSlug: string;

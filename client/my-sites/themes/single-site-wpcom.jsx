@@ -8,21 +8,24 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import CurrentTheme from 'my-sites/themes/current-theme';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import ThanksModal from 'my-sites/themes/thanks-modal';
-import AutoLoadingHomepageModal from 'my-sites/themes/auto-loading-homepage-modal';
+import Main from 'wp-calypso-client/components/main';
+import CurrentTheme from 'wp-calypso-client/my-sites/themes/current-theme';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import ThanksModal from 'wp-calypso-client/my-sites/themes/thanks-modal';
+import AutoLoadingHomepageModal from 'wp-calypso-client/my-sites/themes/auto-loading-homepage-modal';
 import { connectOptions } from './theme-options';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_UNLIMITED_PREMIUM_THEMES, PLAN_PREMIUM } from 'lib/plans/constants';
-import { hasFeature, isRequestingSitePlans } from 'state/sites/plans/selectors';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QuerySitePurchases from 'components/data/query-site-purchases';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import {
+	FEATURE_UNLIMITED_PREMIUM_THEMES,
+	PLAN_PREMIUM,
+} from 'wp-calypso-client/lib/plans/constants';
+import { hasFeature, isRequestingSitePlans } from 'wp-calypso-client/state/sites/plans/selectors';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
 import ThemeShowcase from './theme-showcase';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import isVipSite from 'state/selectors/is-vip-site';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
 
 const ConnectedSingleSiteWpcom = connectOptions( ( props ) => {
 	const {

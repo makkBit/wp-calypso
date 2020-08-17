@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { isEqual, uniq } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
 
@@ -14,10 +14,10 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ImagePreloader from 'components/image-preloader';
-import Spinner from 'components/spinner';
-import { url } from 'lib/media/utils';
-import { fetchMediaItem, getMediaItem } from 'state/media/thunks';
+import ImagePreloader from 'wp-calypso-client/components/image-preloader';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { url } from 'wp-calypso-client/lib/media/utils';
+import { fetchMediaItem, getMediaItem } from 'wp-calypso-client/state/media/thunks';
 
 export class ImageSelectorPreview extends Component {
 	static propTypes = {

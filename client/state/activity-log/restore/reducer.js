@@ -8,8 +8,12 @@ import {
 	REWIND_RESTORE_DISMISS_PROGRESS,
 	REWIND_RESTORE_REQUEST,
 	REWIND_RESTORE_UPDATE_PROGRESS,
-} from 'state/action-types';
-import { keyedReducer, withSchemaValidation, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import {
+	keyedReducer,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 
 const stubNull = () => null;
 

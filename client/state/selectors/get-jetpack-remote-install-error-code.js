@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/jetpack-remote-install/init';
+import 'wp-calypso-client/state/jetpack-remote-install/init';
 
 /**
  * Returns any error code that has resulted from requesting

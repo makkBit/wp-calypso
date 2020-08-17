@@ -15,22 +15,32 @@ import { some } from 'lodash';
 import DnsAddNew from './dns-add-new';
 import DnsDetails from './dns-details';
 import DnsList from './dns-list';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import { domainManagementEdit, domainManagementNameServers } from 'my-sites/domains/paths';
-import { getSelectedDomain, isMappedDomain, isRegisteredDomain } from 'lib/domains';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import {
+	domainManagementEdit,
+	domainManagementNameServers,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import {
+	getSelectedDomain,
+	isMappedDomain,
+	isRegisteredDomain,
+} from 'wp-calypso-client/lib/domains';
 import { CompactCard as Card } from '@automattic/components';
 import DnsTemplates from '../name-servers/dns-templates';
-import VerticalNav from 'components/vertical-nav';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
 import DomainConnectRecord from './domain-connect-record';
-import { domainConnect } from 'lib/domains/constants';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getDomainDns } from 'state/domains/dns/selectors';
-import { getDomainsBySiteId, isRequestingSiteDomains } from 'state/sites/domains/selectors';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import QueryDomainDns from 'components/data/query-domain-dns';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import { domainConnect } from 'wp-calypso-client/lib/domains/constants';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getDomainDns } from 'wp-calypso-client/state/domains/dns/selectors';
+import {
+	getDomainsBySiteId,
+	isRequestingSiteDomains,
+} from 'wp-calypso-client/state/sites/domains/selectors';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import QueryDomainDns from 'wp-calypso-client/components/data/query-domain-dns';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

@@ -14,13 +14,13 @@ import {
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST,
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST_SUCCESS,
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/email-forwarding/add';
-import 'state/data-layer/wpcom/email-forwarding/get';
-import 'state/data-layer/wpcom/email-forwarding/remove';
-import 'state/data-layer/wpcom/email-forwarding/resend-email-verification';
-import 'state/email-forwarding/init';
+import 'wp-calypso-client/state/data-layer/wpcom/email-forwarding/add';
+import 'wp-calypso-client/state/data-layer/wpcom/email-forwarding/get';
+import 'wp-calypso-client/state/data-layer/wpcom/email-forwarding/remove';
+import 'wp-calypso-client/state/data-layer/wpcom/email-forwarding/resend-email-verification';
+import 'wp-calypso-client/state/email-forwarding/init';
 
 export const getEmailForwards = ( domainName ) => {
 	return {

@@ -8,9 +8,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
-import { rebootNormally } from 'lib/user/support-user-interop';
-import { isSupportSession } from 'state/support/selectors';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import { rebootNormally } from 'wp-calypso-client/lib/user/support-user-interop';
+import { isSupportSession } from 'wp-calypso-client/state/support/selectors';
 
 class SupportUser extends Component {
 	componentDidMount() {

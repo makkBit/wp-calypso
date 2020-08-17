@@ -8,11 +8,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import config from 'config';
-import { bypassPersistentStorage } from 'lib/browser-storage';
-import { supportSessionActivate } from 'state/support/actions';
-import localStorageBypass from 'lib/local-storage-bypass';
+import wpcom from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
+import { bypassPersistentStorage } from 'wp-calypso-client/lib/browser-storage';
+import { supportSessionActivate } from 'wp-calypso-client/state/support/actions';
+import localStorageBypass from 'wp-calypso-client/lib/local-storage-bypass';
 
 /**
  * Connects the Redux store and the low-level support user functions

@@ -9,16 +9,16 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { localize } from 'i18n-calypso';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { activateModule, deactivateModule } from 'state/jetpack/modules/actions';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getJetpackModule from 'state/selectors/get-jetpack-module';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isDeactivatingJetpackModule from 'state/selectors/is-deactivating-jetpack-module';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { isJetpackSite } from 'state/sites/selectors';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { activateModule, deactivateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getJetpackModule from 'wp-calypso-client/state/selectors/get-jetpack-module';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isDeactivatingJetpackModule from 'wp-calypso-client/state/selectors/is-deactivating-jetpack-module';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 class JetpackModuleToggle extends Component {
 	static defaultProps = {

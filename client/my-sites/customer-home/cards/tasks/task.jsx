@@ -11,19 +11,19 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import Badge from 'components/badge';
-import Gridicon from 'components/gridicon';
-import PopoverMenu from 'components/popover/menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import Spinner from 'components/spinner';
+import Badge from 'wp-calypso-client/components/badge';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PopoverMenu from 'wp-calypso-client/components/popover/menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import Spinner from 'wp-calypso-client/components/spinner';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { skipCurrentViewHomeLayout } from 'state/home/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/analytics/actions';
+import { skipCurrentViewHomeLayout } from 'wp-calypso-client/state/home/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

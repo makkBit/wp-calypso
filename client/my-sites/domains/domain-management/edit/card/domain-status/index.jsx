@@ -4,12 +4,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import MaterialIcon from 'components/material-icon';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
 import { Card } from '@automattic/components';
 
 class DomainStatus extends React.Component {

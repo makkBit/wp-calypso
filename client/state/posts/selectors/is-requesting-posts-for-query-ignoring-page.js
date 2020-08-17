@@ -6,14 +6,14 @@ import { isEqual, omit, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 import {
 	getDeserializedPostsQueryDetails,
 	getNormalizedPostsQuery,
 	getSerializedPostsQuery,
-} from 'state/posts/utils';
+} from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if currently requesting posts for the posts query, regardless

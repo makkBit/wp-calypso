@@ -13,9 +13,9 @@ import { trim, isNumber } from 'lodash';
 import { Card } from '@automattic/components';
 import CompactTinyMCE from 'woocommerce/components/compact-tinymce';
 import FormClickToEditInput from 'woocommerce/components/form-click-to-edit-input';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import ProductFormImages from './product-form-images';
 import ProductReviewsWidget from 'woocommerce/components/product-reviews-widget';
 

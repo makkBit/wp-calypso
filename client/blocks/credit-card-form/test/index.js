@@ -14,7 +14,7 @@ import React from 'react';
  */
 import { CreditCardForm } from '../';
 import { getParamsForApi } from '../helpers';
-import CreditCardFormFields from 'components/credit-card-form-fields';
+import CreditCardFormFields from 'wp-calypso-client/components/credit-card-form-fields';
 
 describe( 'Credit Card Form', () => {
 	const defaultProps = {

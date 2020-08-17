@@ -6,8 +6,8 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { isFailed } from 'state/automated-transfer/selectors/is-automated-transfer-failed';
-import { transferStates } from 'state/automated-transfer/constants';
+import { isFailed } from 'wp-calypso-client/state/automated-transfer/selectors/is-automated-transfer-failed';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
 
 describe( 'Automated Transfer', () => {
 	describe( 'isFailed()', () => {

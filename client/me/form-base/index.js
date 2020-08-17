@@ -8,8 +8,8 @@ const debug = debugFactory( 'calypso:me:form-base' );
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import user from 'lib/user';
+import notices from 'wp-calypso-client/notices';
+import user from 'wp-calypso-client/lib/user';
 
 export default {
 	componentDidMount: function () {

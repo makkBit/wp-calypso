@@ -9,16 +9,16 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import notices from 'notices';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import QuerySiteSettings from 'components/data/query-site-settings';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import notices from 'wp-calypso-client/notices';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
 import {
 	getSitePurchases,
 	hasLoadedSitePurchasesFromServer,
 	getPurchasesError,
-} from 'state/purchases/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 export class SeoSettings extends Component {
 	UNSAFE_componentWillReceiveProps( nextProps ) {
@@ -34,7 +34,10 @@ export class SeoSettings extends Component {
 			<div>
 				<QuerySiteSettings siteId={ siteId } />
 				<QuerySitePurchases siteId={ siteId } />
-				<AsyncLoad require="my-sites/site-settings/seo-settings/form" placeholder={ null } />
+				<AsyncLoad
+					require="wp-calypso-client/my-sites/site-settings/seo-settings/form"
+					placeholder={ null }
+				/>
 			</div>
 		);
 	}

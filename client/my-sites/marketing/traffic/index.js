@@ -10,23 +10,23 @@ import { flowRight, partialRight, pick } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import EmptyContent from 'components/empty-content';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import SeoSettingsMain from 'my-sites/site-settings/seo-settings/main';
-import SeoSettingsHelpCard from 'my-sites/site-settings/seo-settings/help';
-import SiteVerification from 'my-sites/site-settings/seo-settings/site-verification';
-import AnalyticsSettings from 'my-sites/site-settings/form-analytics';
-import JetpackDevModeNotice from 'my-sites/site-settings/jetpack-dev-mode-notice';
-import JetpackSiteStats from 'my-sites/site-settings/jetpack-site-stats';
-import JetpackAds from 'my-sites/site-settings/jetpack-ads';
-import RelatedPosts from 'my-sites/site-settings/related-posts';
-import Sitemaps from 'my-sites/site-settings/sitemaps';
-import Shortlinks from 'my-sites/site-settings/shortlinks';
-import wrapSettingsForm from 'my-sites/site-settings/wrap-settings-form';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
+import Main from 'wp-calypso-client/components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import SeoSettingsMain from 'wp-calypso-client/my-sites/site-settings/seo-settings/main';
+import SeoSettingsHelpCard from 'wp-calypso-client/my-sites/site-settings/seo-settings/help';
+import SiteVerification from 'wp-calypso-client/my-sites/site-settings/seo-settings/site-verification';
+import AnalyticsSettings from 'wp-calypso-client/my-sites/site-settings/form-analytics';
+import JetpackDevModeNotice from 'wp-calypso-client/my-sites/site-settings/jetpack-dev-mode-notice';
+import JetpackSiteStats from 'wp-calypso-client/my-sites/site-settings/jetpack-site-stats';
+import JetpackAds from 'wp-calypso-client/my-sites/site-settings/jetpack-ads';
+import RelatedPosts from 'wp-calypso-client/my-sites/site-settings/related-posts';
+import Sitemaps from 'wp-calypso-client/my-sites/site-settings/sitemaps';
+import Shortlinks from 'wp-calypso-client/my-sites/site-settings/shortlinks';
+import wrapSettingsForm from 'wp-calypso-client/my-sites/site-settings/wrap-settings-form';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Style dependencies

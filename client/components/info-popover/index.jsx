@@ -9,9 +9,9 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import Popover from 'components/popover';
-import { gaRecordEvent } from 'lib/analytics/ga';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Popover from 'wp-calypso-client/components/popover';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 
 /**
  * Style dependencies

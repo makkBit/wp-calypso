@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { addExternalMedia as addExternalMediaThunk } from 'state/media/thunks/add-external-media';
-import { uploadMedia } from 'state/media/thunks/upload-media';
+import { addExternalMedia as addExternalMediaThunk } from 'wp-calypso-client/state/media/thunks/add-external-media';
+import { uploadMedia } from 'wp-calypso-client/state/media/thunks/upload-media';
 
 jest.mock( 'state/media/thunks/upload-media', () => ( {
 	uploadMedia: jest.fn(),

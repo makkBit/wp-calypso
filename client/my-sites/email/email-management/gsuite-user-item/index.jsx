@@ -9,8 +9,8 @@ import { useTranslate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ExternalLink from 'components/external-link';
-import PendingGSuiteTosNoticeDialog from 'my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice-dialog';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import PendingGSuiteTosNoticeDialog from 'wp-calypso-client/my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice-dialog';
 
 /**
  * Style dependencies

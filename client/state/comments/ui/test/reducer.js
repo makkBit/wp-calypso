@@ -11,9 +11,9 @@ import {
 	COMMENTS_DELETE,
 	COMMENTS_QUERY_UPDATE,
 	COMMENTS_LIST_REQUEST,
-} from 'state/action-types';
-import { queries, pendingActions } from 'state/comments/ui/reducer';
-import { getRequestKey } from 'state/data-layer/wpcom-http/utils';
+} from 'wp-calypso-client/state/action-types';
+import { queries, pendingActions } from 'wp-calypso-client/state/comments/ui/reducer';
+import { getRequestKey } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 
 const siteId = 12345678;
 const postId = 1234;

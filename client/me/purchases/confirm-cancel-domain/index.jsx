@@ -10,43 +10,46 @@ import { map, find } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import cancellationReasons from './cancellation-reasons';
-import { cancelAndRefundPurchase } from 'lib/purchases/actions';
+import { cancelAndRefundPurchase } from 'wp-calypso-client/lib/purchases/actions';
 import { Card } from '@automattic/components';
-import { clearPurchases } from 'state/purchases/actions';
+import { clearPurchases } from 'wp-calypso-client/state/purchases/actions';
 import ConfirmCancelDomainLoadingPlaceholder from './loading-placeholder';
 import { connect } from 'react-redux';
-import FormButton from 'components/forms/form-button';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormLabel from 'components/forms/form-label';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormTextarea from 'components/forms/form-textarea';
-import HeaderCake from 'components/header-cake';
-import isDomainOnly from 'state/selectors/is-domain-only-site';
-import { getByPurchaseId, hasLoadedUserPurchasesFromServer } from 'state/purchases/selectors';
-import { getName as getDomainName } from 'lib/purchases';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import isDomainOnly from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import {
+	getByPurchaseId,
+	hasLoadedUserPurchasesFromServer,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getName as getDomainName } from 'wp-calypso-client/lib/purchases';
 import { isDataLoading } from '../utils';
-import { getSelectedSite } from 'state/ui/selectors';
-import { isDomainRegistration } from 'lib/products-values';
-import { isRequestingSites } from 'state/sites/selectors';
-import Main from 'components/main';
-import notices from 'notices';
-import { cancelPurchase, purchasesRoot } from 'me/purchases/paths';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { receiveDeletedSite } from 'state/sites/actions';
-import { refreshSitePlans } from 'state/sites/plans/actions';
-import { setAllSitesSelected } from 'state/ui/actions';
-import titles from 'me/purchases/titles';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import TrackPurchasePageView from 'me/purchases/track-purchase-page-view';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { isDomainRegistration } from 'wp-calypso-client/lib/products-values';
+import { isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import Main from 'wp-calypso-client/components/main';
+import notices from 'wp-calypso-client/notices';
+import { cancelPurchase, purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { receiveDeletedSite } from 'wp-calypso-client/state/sites/actions';
+import { refreshSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
+import { setAllSitesSelected } from 'wp-calypso-client/state/ui/actions';
+import titles from 'wp-calypso-client/me/purchases/titles';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import TrackPurchasePageView from 'wp-calypso-client/me/purchases/track-purchase-page-view';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies
  */
 import './style.scss';
-import FormSelect from 'components/forms/form-select';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
 
 class ConfirmCancelDomain extends React.Component {
 	static propTypes = {

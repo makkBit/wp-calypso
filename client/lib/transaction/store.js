@@ -8,7 +8,7 @@ import update from 'immutability-helper';
 /**
  * Internal dependencies
  */
-import { CART_ITEM_REMOVE } from 'lib/cart/action-types';
+import { CART_ITEM_REMOVE } from 'wp-calypso-client/lib/cart/action-types';
 import {
 	TRANSACTION_DOMAIN_DETAILS_SET,
 	TRANSACTION_NEW_CREDIT_CARD_DETAILS_SET,
@@ -18,11 +18,11 @@ import {
 	TRANSACTION_STRIPE_SET,
 } from './action-types';
 import { hasDomainDetails } from './selectors';
-import { hasDomainRegistration } from 'lib/cart-values/cart-items';
-import CartStore from 'lib/cart/store';
-import Emitter from 'lib/mixins/emitter';
-import Dispatcher from 'dispatcher';
-import { BEFORE_SUBMIT } from 'lib/store-transactions/step-types';
+import { hasDomainRegistration } from 'wp-calypso-client/lib/cart-values/cart-items';
+import CartStore from 'wp-calypso-client/lib/cart/store';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import { BEFORE_SUBMIT } from 'wp-calypso-client/lib/store-transactions/step-types';
 
 let _transaction = createInitialTransaction();
 

@@ -2,8 +2,11 @@
  * Internal Dependencies
  */
 import { fetch, onSuccess } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { requestChartCounts, receiveChartCounts } from 'state/stats/chart-tabs/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	requestChartCounts,
+	receiveChartCounts,
+} from 'wp-calypso-client/state/stats/chart-tabs/actions';
 
 describe( 'fetch', () => {
 	it( 'should dispatch two http requests: one for the currently selected tab and another for the other tabs', () => {

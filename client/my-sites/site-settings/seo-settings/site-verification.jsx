@@ -3,7 +3,7 @@
  */
 
 import React, { Component } from 'react';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import { connect } from 'react-redux';
 import { get, includes, isString, omit, partial, pickBy } from 'lodash';
 import { localize } from 'i18n-calypso';
@@ -12,27 +12,30 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import SupportInfo from 'components/support-info';
-import ExternalLink from 'components/external-link';
-import FormInput from 'components/forms/form-text-input-with-affixes';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormFieldset from 'components/forms/form-fieldset';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { isJetpackSite } from 'state/sites/selectors';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormInput from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 import {
 	isSiteSettingsSaveSuccessful,
 	getSiteSettingsSaveError,
-} from 'state/site-settings/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { requestSite } from 'state/sites/actions';
-import { requestSiteSettings, saveSiteSettings } from 'state/site-settings/actions';
-import { protectForm } from 'lib/protect-form';
+} from 'wp-calypso-client/state/site-settings/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import {
+	requestSiteSettings,
+	saveSiteSettings,
+} from 'wp-calypso-client/state/site-settings/actions';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
 
 class SiteVerification extends Component {
 	static serviceIds = {

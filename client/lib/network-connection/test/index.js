@@ -7,8 +7,8 @@ import sinon from 'sinon';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import NetworkConnectionApp from 'lib/network-connection';
+import config from 'wp-calypso-client/config';
+import NetworkConnectionApp from 'wp-calypso-client/lib/network-connection';
 
 describe( 'index', () => {
 	let configStub;

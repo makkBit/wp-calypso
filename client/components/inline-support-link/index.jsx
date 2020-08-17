@@ -5,20 +5,20 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import { openSupportArticleDialog } from 'state/inline-support-article/actions';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { openSupportArticleDialog } from 'wp-calypso-client/state/inline-support-article/actions';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/state/analytics/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

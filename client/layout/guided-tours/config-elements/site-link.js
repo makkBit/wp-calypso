@@ -10,8 +10,8 @@ import PropTypes from 'prop-types';
  * Internal dependencies
  */
 import { contextTypes } from '../context-types';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 import { Button } from '@automattic/components';
 
 class SiteLink extends Component {

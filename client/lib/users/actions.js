@@ -9,9 +9,9 @@ const debug = debugFactory( 'calypso:users:actions' );
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import wpcom from 'lib/wp';
-import UsersStore from 'lib/users/store';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import wpcom from 'wp-calypso-client/lib/wp';
+import UsersStore from 'wp-calypso-client/lib/users/store';
 
 export function fetchUsers( fetchOptions ) {
 	const paginationData = UsersStore.getPaginationData( fetchOptions );

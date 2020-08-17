@@ -9,9 +9,9 @@ import { get, unionBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getPluginsWithUpdates } from 'state/plugins/installed/selectors';
-import { isJetpackSiteSecondaryNetworkSite } from 'state/sites/selectors';
-import { requestSiteAlerts } from 'state/data-getters';
+import { getPluginsWithUpdates } from 'wp-calypso-client/state/plugins/installed/selectors';
+import { isJetpackSiteSecondaryNetworkSite } from 'wp-calypso-client/state/sites/selectors';
+import { requestSiteAlerts } from 'wp-calypso-client/state/data-getters';
 
 const emptyList = [];
 

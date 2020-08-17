@@ -10,25 +10,28 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { isFreePlan } from 'lib/plans';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getHttpData } from 'state/data-layer/http-data';
-import { requestActivityLogs, getRequestActivityLogsId } from 'state/data-getters';
-import { siteHasBackupProductPurchase } from 'state/purchases/selectors';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import ActivityCardList from 'components/activity-card-list';
-import DocumentHead from 'components/data/document-head';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import FormattedHeader from 'components/formatted-header';
-import Upsell from 'components/jetpack/upsell';
-import getActivityLogFilter from 'state/selectors/get-activity-log-filter';
-import isVipSite from 'state/selectors/is-vip-site';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
+import { isFreePlan } from 'wp-calypso-client/lib/plans';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import {
+	requestActivityLogs,
+	getRequestActivityLogsId,
+} from 'wp-calypso-client/state/data-getters';
+import { siteHasBackupProductPurchase } from 'wp-calypso-client/state/purchases/selectors';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import ActivityCardList from 'wp-calypso-client/components/activity-card-list';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Upsell from 'wp-calypso-client/components/jetpack/upsell';
+import getActivityLogFilter from 'wp-calypso-client/state/selectors/get-activity-log-filter';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
 
 /**
  * Style dependencies

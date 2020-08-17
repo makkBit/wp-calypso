@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import getInlineHelpCurrentlySelectedResult from 'state/inline-help/selectors/get-inline-help-currently-selected-result';
+import getInlineHelpCurrentlySelectedResult from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-currently-selected-result';
 
-import 'state/inline-help/init';
+import 'wp-calypso-client/state/inline-help/init';
 
 /**
  * Returns the link / href of the selected search result item

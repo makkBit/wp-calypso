@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { READER_VIEW_STREAM } from 'state/reader/action-types';
+import { READER_VIEW_STREAM } from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * this is a relatively generic action type for something very specific (marking up the watermark)

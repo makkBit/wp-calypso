@@ -6,7 +6,7 @@ import { uniqueId, isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	WOOCOMMERCE_PROMOTION_EDIT,
 	WOOCOMMERCE_PROMOTION_EDIT_CLEAR,

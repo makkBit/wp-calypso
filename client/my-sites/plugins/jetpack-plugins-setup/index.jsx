@@ -12,22 +12,22 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import Spinner from 'components/spinner';
-import QueryPluginKeys from 'components/data/query-plugin-keys';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import PluginIcon from 'my-sites/plugins/plugin-icon/plugin-icon';
-import JetpackManageErrorPage from 'my-sites/jetpack-manage-error-page';
-import PluginItem from 'my-sites/plugins/plugin-item/plugin-item';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import Spinner from 'wp-calypso-client/components/spinner';
+import QueryPluginKeys from 'wp-calypso-client/components/data/query-plugin-keys';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import PluginIcon from 'wp-calypso-client/my-sites/plugins/plugin-icon/plugin-icon';
+import JetpackManageErrorPage from 'wp-calypso-client/my-sites/jetpack-manage-error-page';
+import PluginItem from 'wp-calypso-client/my-sites/plugins/plugin-item/plugin-item';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import {
 	JETPACK_CONTACT_SUPPORT,
 	JETPACK_SERVICE_AKISMET,
 	JETPACK_SERVICE_VAULTPRESS,
 	JETPACK_SUPPORT,
-} from 'lib/url/support';
-import { getSiteFileModDisableReason } from 'lib/site/utils';
+} from 'wp-calypso-client/lib/url/support';
+import { getSiteFileModDisableReason } from 'wp-calypso-client/lib/site/utils';
 
 /**
  * Style dependencies
@@ -35,13 +35,13 @@ import { getSiteFileModDisableReason } from 'lib/site/utils';
 import './style.scss';
 
 // Redux actions & selectors
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { isRequestingSites } from 'state/sites/selectors';
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
-import { getPlugin } from 'state/plugins/wporg/selectors';
-import { fetchPluginData } from 'state/plugins/wporg/actions';
-import { requestSites } from 'state/sites/actions';
-import { installPlugin } from 'state/plugins/premium/actions';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
+import { getPlugin } from 'wp-calypso-client/state/plugins/wporg/selectors';
+import { fetchPluginData } from 'wp-calypso-client/state/plugins/wporg/actions';
+import { requestSites } from 'wp-calypso-client/state/sites/actions';
+import { installPlugin } from 'wp-calypso-client/state/plugins/premium/actions';
 import {
 	getPluginsForSite,
 	getActivePlugin,
@@ -50,9 +50,9 @@ import {
 	isInstalling,
 	isRequesting,
 	hasRequested,
-} from 'state/plugins/premium/selectors';
+} from 'wp-calypso-client/state/plugins/premium/selectors';
 // Store for existing plugins
-import PluginsStore from 'lib/plugins/store';
+import PluginsStore from 'wp-calypso-client/lib/plugins/store';
 
 const helpLinks = {
 	vaultpress: JETPACK_SERVICE_VAULTPRESS,

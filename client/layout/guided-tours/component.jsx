@@ -8,19 +8,19 @@ import { defer } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import AllTours from './all-tours';
-import QueryPreferences from 'components/data/query-preferences';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
 import { RootChild } from '@automattic/components';
-import { getGuidedTourState } from 'state/guided-tours/selectors';
-import { getLastAction } from 'state/ui/action-log/selectors';
-import { getSectionName, isSectionLoading } from 'state/ui/selectors';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
+import { getGuidedTourState } from 'wp-calypso-client/state/guided-tours/selectors';
+import { getLastAction } from 'wp-calypso-client/state/ui/action-log/selectors';
+import { getSectionName, isSectionLoading } from 'wp-calypso-client/state/ui/selectors';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
 import {
 	nextGuidedTourStep,
 	quitGuidedTour,
 	resetGuidedToursHistory,
-} from 'state/guided-tours/actions';
+} from 'wp-calypso-client/state/guided-tours/actions';
 
 /**
  * Style dependencies

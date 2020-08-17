@@ -13,9 +13,9 @@ import {
 	IMAGE_EDITOR_STATE_RESET,
 	IMAGE_EDITOR_STATE_RESET_ALL,
 	IMAGE_EDITOR_IMAGE_HAS_LOADED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 // Doesn't reset image file info (src, fileName, etc).
 // additionalData can contain arbitrarily needed data.

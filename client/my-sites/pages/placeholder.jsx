@@ -8,7 +8,7 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import SiteIcon from 'blocks/site-icon';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
 
 class PagePlaceholder extends React.Component {
 	static displayName = 'PagePlaceholder';

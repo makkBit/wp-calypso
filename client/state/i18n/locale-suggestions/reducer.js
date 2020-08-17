@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { I18N_LOCALE_SUGGESTIONS_ADD } from 'state/action-types';
+import { I18N_LOCALE_SUGGESTIONS_ADD } from 'wp-calypso-client/state/action-types';
 
 export const items = ( state = null, action ) => {
 	switch ( action.type ) {

@@ -7,9 +7,9 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInputWithAffixes from 'components/forms/form-text-input-with-affixes';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInputWithAffixes from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
 import FieldError from '../field-error';
 
 const WeightField = ( {

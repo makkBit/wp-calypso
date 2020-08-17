@@ -11,9 +11,9 @@
 /**
  * Internal dependencies
  */
-import { STATUS_READY } from 'state/help/directly/constants';
+import { STATUS_READY } from 'wp-calypso-client/state/help/directly/constants';
 
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 export default function getDirectlyStatus( state ) {
 	return state.help?.directly.status === STATUS_READY;

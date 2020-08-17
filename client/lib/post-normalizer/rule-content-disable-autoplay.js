@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getUrlParts, getUrlFromParts } from 'lib/url';
+import { getUrlParts, getUrlFromParts } from 'wp-calypso-client/lib/url';
 
 function stripAutoPlays( searchParams ) {
 	const returnVal = new URLSearchParams( searchParams );

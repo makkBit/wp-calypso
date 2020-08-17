@@ -7,14 +7,14 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import { languages } from 'languages';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import LanguagePicker from 'components/language-picker';
+import { languages } from 'wp-calypso-client/languages';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import LanguagePicker from 'wp-calypso-client/components/language-picker';
 import SettingsPaymentsLocationCurrency from 'woocommerce/app/settings/payments/payments-location-currency.js';
-import TimeZone from 'components/timezone';
+import TimeZone from 'wp-calypso-client/components/timezone';
 import { translate } from 'i18n-calypso';
 
 const fields = [

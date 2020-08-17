@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 import { apiTransformer, handleRequestSuccess, requestApplicationPasswords } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receiveApplicationPasswords } from 'state/application-passwords/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receiveApplicationPasswords } from 'wp-calypso-client/state/application-passwords/actions';
 
 const appPasswords = [
 	{

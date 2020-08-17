@@ -6,22 +6,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import { get } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import formatCurrency from '@automattic/format-currency';
 
 /**
  * Internal dependencies
  */
-import { next } from 'lib/shortcode';
-import { deserialize } from 'components/tinymce/plugins/simple-payments/shortcode-utils';
-import getMediaItem from 'state/selectors/get-media-item';
-import getSimplePayments from 'state/selectors/get-simple-payments';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import QuerySimplePayments from 'components/data/query-simple-payments';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QueryMedia from 'components/data/query-media';
-import { getCurrentPlan, hasFeature } from 'state/sites/plans/selectors';
-import { FEATURE_SIMPLE_PAYMENTS } from 'lib/plans/constants';
+import { next } from 'wp-calypso-client/lib/shortcode';
+import { deserialize } from 'wp-calypso-client/components/tinymce/plugins/simple-payments/shortcode-utils';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
+import getSimplePayments from 'wp-calypso-client/state/selectors/get-simple-payments';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import QuerySimplePayments from 'wp-calypso-client/components/data/query-simple-payments';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QueryMedia from 'wp-calypso-client/components/data/query-media';
+import { getCurrentPlan, hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { FEATURE_SIMPLE_PAYMENTS } from 'wp-calypso-client/lib/plans/constants';
 
 class SimplePaymentsView extends Component {
 	render() {

@@ -7,13 +7,17 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { receiveDeletedSite, receiveSite } from 'state/sites/actions';
-import { withoutNotice } from 'state/notices/actions';
-import { JETPACK_CONNECT_USER_ALREADY_CONNECTED } from 'state/jetpack-connect/action-types';
-import { SITE_REQUEST, SITE_REQUEST_FAILURE, SITE_REQUEST_SUCCESS } from 'state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { receiveDeletedSite, receiveSite } from 'wp-calypso-client/state/sites/actions';
+import { withoutNotice } from 'wp-calypso-client/state/notices/actions';
+import { JETPACK_CONNECT_USER_ALREADY_CONNECTED } from 'wp-calypso-client/state/jetpack-connect/action-types';
+import {
+	SITE_REQUEST,
+	SITE_REQUEST_FAILURE,
+	SITE_REQUEST_SUCCESS,
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Module constants

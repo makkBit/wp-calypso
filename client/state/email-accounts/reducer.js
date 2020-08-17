@@ -7,12 +7,12 @@ import {
 	withSchemaValidation,
 	withoutPersistence,
 	withStorageKey,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 import {
 	EMAIL_ACCOUNTS_REQUEST,
 	EMAIL_ACCOUNTS_REQUEST_FAILURE,
 	EMAIL_ACCOUNTS_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import emailAccountsSchema from './schema';
 
 export const emailAccountsReducer = withSchemaValidation(

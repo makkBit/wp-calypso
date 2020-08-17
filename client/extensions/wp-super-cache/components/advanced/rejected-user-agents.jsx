@@ -9,10 +9,10 @@ import { pick } from 'lodash';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextarea from 'components/forms/form-textarea';
-import SectionHeader from 'components/section-header';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import WrapSettingsForm from '../wrap-settings-form';
 
 const RejectedUserAgents = ( {

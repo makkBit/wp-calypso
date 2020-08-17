@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import makeJsonSchemaParser from 'lib/make-json-schema-parser';
+import makeJsonSchemaParser from 'wp-calypso-client/lib/make-json-schema-parser';
 import responseSchema from './schema';
-import { transform as appointmentTransformer } from 'state/data-layer/wpcom/concierge/schedules/appointments/detail/from-api';
+import { transform as appointmentTransformer } from 'wp-calypso-client/state/data-layer/wpcom/concierge/schedules/appointments/detail/from-api';
 
 export const convertToMilliseconds = ( timestampInSeconds ) => timestampInSeconds * 1000;
 

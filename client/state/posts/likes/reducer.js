@@ -7,14 +7,14 @@ import { dropWhile, some } from 'lodash';
  * Internal dependencies
  */
 import itemSchema from './schema';
-import { combineReducers, keyedReducer, withSchemaValidation } from 'state/utils';
+import { combineReducers, keyedReducer, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import {
 	POST_LIKES_ADD_LIKER,
 	POST_LIKES_RECEIVE,
 	POST_LIKES_REMOVE_LIKER,
 	POST_LIKE,
 	POST_UNLIKE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Returns the updated items state after an action has been dispatched. The

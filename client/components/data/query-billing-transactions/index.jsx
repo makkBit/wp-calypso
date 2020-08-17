@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import isRequestingBillingTransactions from 'state/selectors/is-requesting-billing-transactions';
-import { requestBillingTransactions } from 'state/billing-transactions/actions';
+import isRequestingBillingTransactions from 'wp-calypso-client/state/selectors/is-requesting-billing-transactions';
+import { requestBillingTransactions } from 'wp-calypso-client/state/billing-transactions/actions';
 
 class QueryBillingTransactions extends Component {
 	static propTypes = {

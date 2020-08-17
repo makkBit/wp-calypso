@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 /**
  * Return the connection object accoring to the given connectionId.

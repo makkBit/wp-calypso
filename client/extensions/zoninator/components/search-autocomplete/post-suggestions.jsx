@@ -9,9 +9,9 @@ import { find, map } from 'lodash';
 /**
  * Internal depencencies
  */
-import QueryPosts from 'components/data/query-posts';
-import { getPostsForQuery } from 'state/posts/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import { getPostsForQuery } from 'wp-calypso-client/state/posts/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { Suggestions } from '@automattic/components';
 
 class PostSuggestions extends Component {

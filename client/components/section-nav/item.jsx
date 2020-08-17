@@ -5,13 +5,13 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import Count from 'components/count';
-import { preload } from 'sections-helper';
+import Count from 'wp-calypso-client/components/count';
+import { preload } from 'wp-calypso-client/sections-helper';
 
 /**
  * Style dependencies

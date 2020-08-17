@@ -8,14 +8,14 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FAQ from 'components/faq';
-import FAQItem from 'components/faq/faq-item';
-import HappychatButton from 'components/happychat/button';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { isEnabled } from 'config';
-import { purchasesRoot } from 'me/purchases/paths';
-import { localizeUrl } from 'lib/i18n-utils';
+import FAQ from 'wp-calypso-client/components/faq';
+import FAQItem from 'wp-calypso-client/components/faq/faq-item';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isEnabled } from 'wp-calypso-client/config';
+import { purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 const WpcomFAQ = ( { isChatAvailable, siteSlug, translate } ) => {
 	const helpLink =

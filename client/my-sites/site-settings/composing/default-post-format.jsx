@@ -11,12 +11,12 @@ import { map } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import QueryPostFormats from 'components/data/query-post-formats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getPostFormats } from 'state/post-formats/selectors';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import QueryPostFormats from 'wp-calypso-client/components/data/query-post-formats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getPostFormats } from 'wp-calypso-client/state/post-formats/selectors';
 
 const DefaultPostFormat = ( {
 	fields,

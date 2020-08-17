@@ -6,10 +6,10 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { calculateMonthlyPriceForPlan } from 'lib/plans';
+import { calculateMonthlyPriceForPlan } from 'wp-calypso-client/lib/plans';
 import { getPlan } from './plan';
 
-import 'state/plans/init';
+import 'wp-calypso-client/state/plans/init';
 
 /**
  * Returns a plan price

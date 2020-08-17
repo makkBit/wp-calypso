@@ -23,7 +23,7 @@ import {
 	DomainContactValidationRequestExtraFields,
 	DomainContactValidationResponse,
 } from './backend/domain-contact-validation-endpoint';
-import { tryToGuessPostalCodeFormat } from 'lib/postal-code';
+import { tryToGuessPostalCodeFormat } from 'wp-calypso-client/lib/postal-code';
 import { SignupValidationResponse } from './backend/signup-validation-endpoint';
 
 export type ManagedContactDetailsShape< T > = {

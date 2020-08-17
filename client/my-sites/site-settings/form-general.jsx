@@ -4,7 +4,7 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { flowRight, get, has } from 'lodash';
 
 /**
@@ -12,39 +12,43 @@ import { flowRight, get, has } from 'lodash';
  */
 import wrapSettingsForm from './wrap-settings-form';
 import { Card, CompactCard, Button } from '@automattic/components';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import LanguagePicker from 'components/language-picker';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import config from 'config';
-import { languages } from 'languages';
-import FormInput from 'components/forms/form-text-input';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import Timezone from 'components/timezone';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import LanguagePicker from 'wp-calypso-client/components/language-picker';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import config from 'wp-calypso-client/config';
+import { languages } from 'wp-calypso-client/languages';
+import FormInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import Timezone from 'wp-calypso-client/components/timezone';
 import SiteIconSetting from './site-icon-setting';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { isBusiness } from 'lib/products-values';
-import { FEATURE_NO_BRANDING, PLAN_BUSINESS } from 'lib/plans/constants';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import { isJetpackSite, isCurrentPlanPaid } from 'state/sites/selectors';
-import isSiteComingSoon from 'state/selectors/is-site-coming-soon';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import guessTimezone from 'lib/i18n-utils/guess-timezone';
-import { preventWidows } from 'lib/formatting';
-import scrollTo from 'lib/scroll-to';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import isVipSite from 'state/selectors/is-vip-site';
-import { isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import { launchSite } from 'state/sites/launch/actions';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import FormInputCheckbox from 'components/forms/form-checkbox';
-import { hasLocalizedText } from 'blocks/eligibility-warnings/has-localized-text';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { isBusiness } from 'wp-calypso-client/lib/products-values';
+import { FEATURE_NO_BRANDING, PLAN_BUSINESS } from 'wp-calypso-client/lib/plans/constants';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import { isJetpackSite, isCurrentPlanPaid } from 'wp-calypso-client/state/sites/selectors';
+import isSiteComingSoon from 'wp-calypso-client/state/selectors/is-site-coming-soon';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import guessTimezone from 'wp-calypso-client/lib/i18n-utils/guess-timezone';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { isCurrentUserEmailVerified } from 'wp-calypso-client/state/current-user/selectors';
+import { launchSite } from 'wp-calypso-client/state/sites/launch/actions';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import FormInputCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import { hasLocalizedText } from 'wp-calypso-client/blocks/eligibility-warnings/has-localized-text';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 export class SiteSettingsFormGeneral extends Component {
 	componentDidMount() {

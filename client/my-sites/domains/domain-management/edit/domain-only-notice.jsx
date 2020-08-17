@@ -10,12 +10,12 @@ import { useSelector } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { isExpiringSoon } from 'lib/domains/utils';
+import { isExpiringSoon } from 'wp-calypso-client/lib/domains/utils';
 import {
 	domainManagementNameServers,
 	domainManagementTransferToOtherSite,
-} from 'my-sites/domains/paths';
-import getCurrentRoute from 'state/selectors/get-current-route';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 const DomainOnlyNotice = ( { domain, selectedSiteSlug, translate } ) => {
 	const currentRoute = useSelector( getCurrentRoute );

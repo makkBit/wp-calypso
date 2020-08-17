@@ -10,9 +10,9 @@ import { defer } from 'lodash';
 /**
  * Internal dependencies
  */
-import { requestSiteStats } from 'state/stats/lists/actions';
-import { isRequestingSiteStatsForQuery } from 'state/stats/lists/selectors';
-import { isAutoRefreshAllowedForQuery } from 'state/stats/lists/utils';
+import { requestSiteStats } from 'wp-calypso-client/state/stats/lists/actions';
+import { isRequestingSiteStatsForQuery } from 'wp-calypso-client/state/stats/lists/selectors';
+import { isAutoRefreshAllowedForQuery } from 'wp-calypso-client/state/stats/lists/utils';
 import { DEFAULT_HEARTBEAT } from './constants';
 
 class QuerySiteStats extends Component {

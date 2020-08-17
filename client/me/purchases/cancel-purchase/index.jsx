@@ -12,7 +12,7 @@ import React from 'react';
  */
 import { Card, CompactCard } from '@automattic/components';
 import CancelPurchaseButton from './button';
-import CancelPurchaseLoadingPlaceholder from 'me/purchases/cancel-purchase/loading-placeholder';
+import CancelPurchaseLoadingPlaceholder from 'wp-calypso-client/me/purchases/cancel-purchase/loading-placeholder';
 import CancelPurchaseRefundInformation from './refund-information';
 import {
 	getName,
@@ -21,24 +21,24 @@ import {
 	isOneTimePurchase,
 	isRefundable,
 	isSubscription,
-} from 'lib/purchases';
-import { isDataLoading } from 'me/purchases/utils';
+} from 'wp-calypso-client/lib/purchases';
+import { isDataLoading } from 'wp-calypso-client/me/purchases/utils';
 import {
 	getByPurchaseId,
 	hasLoadedUserPurchasesFromServer,
 	getIncludedDomainPurchase,
-} from 'state/purchases/selectors';
-import HeaderCake from 'components/header-cake';
-import { isDomainRegistration, isDomainTransfer } from 'lib/products-values';
-import { isRequestingSites, getSite } from 'state/sites/selectors';
-import Main from 'components/main';
-import { managePurchase, purchasesRoot } from 'me/purchases/paths';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { withLocalizedMoment } from 'components/localized-moment';
-import ProductLink from 'me/purchases/product-link';
-import titles from 'me/purchases/titles';
-import TrackPurchasePageView from 'me/purchases/track-purchase-page-view';
-import { getCurrentUserId } from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/purchases/selectors';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import { isDomainRegistration, isDomainTransfer } from 'wp-calypso-client/lib/products-values';
+import { isRequestingSites, getSite } from 'wp-calypso-client/state/sites/selectors';
+import Main from 'wp-calypso-client/components/main';
+import { managePurchase, purchasesRoot } from 'wp-calypso-client/me/purchases/paths';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import ProductLink from 'wp-calypso-client/me/purchases/product-link';
+import titles from 'wp-calypso-client/me/purchases/titles';
+import TrackPurchasePageView from 'wp-calypso-client/me/purchases/track-purchase-page-view';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

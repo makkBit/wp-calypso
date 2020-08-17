@@ -11,25 +11,25 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import HeaderCake from 'components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import { Card, Button } from '@automattic/components';
-import PeopleListItem from 'my-sites/people/people-list-item';
-import Gravatar from 'components/gravatar';
-import QuerySiteInvites from 'components/data/query-site-invites';
-import EmptyContent from 'components/empty-content';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getSelectedSite } from 'state/ui/selectors';
+import PeopleListItem from 'wp-calypso-client/my-sites/people/people-list-item';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import QuerySiteInvites from 'wp-calypso-client/components/data/query-site-invites';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 import {
 	isRequestingInvitesForSite,
 	getInviteForSite,
 	isDeletingInvite,
 	didInviteDeletionSucceed,
-} from 'state/invites/selectors';
-import { deleteInvite } from 'state/invites/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+} from 'wp-calypso-client/state/invites/selectors';
+import { deleteInvite } from 'wp-calypso-client/state/invites/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /**
  * Style dependencies

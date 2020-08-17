@@ -9,7 +9,7 @@ import { translate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { createSiteDomainObject } from './assembler';
-import wp from 'lib/wp';
+import wp from 'wp-calypso-client/lib/wp';
 import {
 	DOMAIN_PRIVACY_ENABLE,
 	DOMAIN_PRIVACY_DISABLE,
@@ -19,10 +19,10 @@ import {
 	SITE_DOMAINS_REQUEST_FAILURE,
 	DOMAIN_CONTACT_INFO_DISCLOSE,
 	DOMAIN_CONTACT_INFO_REDACT,
-} from 'state/action-types';
-import { requestSite } from 'state/sites/actions';
+} from 'wp-calypso-client/state/action-types';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 
-import 'state/data-layer/wpcom/domains/privacy/index.js';
+import 'wp-calypso-client/state/data-layer/wpcom/domains/privacy/index.js';
 
 /**
  * Module vars

@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ImagePreloader from 'components/image-preloader';
+import ImagePreloader from 'wp-calypso-client/components/image-preloader';
 
 const ImagePreloaderExample = () => (
 	<ImagePreloader

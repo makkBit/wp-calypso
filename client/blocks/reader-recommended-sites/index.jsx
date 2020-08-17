@@ -5,16 +5,20 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { map, partial, isEmpty } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
  * Internal dependencies
  */
-import { recordAction, recordTrackWithRailcar, recordTracksRailcarRender } from 'reader/stats';
+import {
+	recordAction,
+	recordTrackWithRailcar,
+	recordTracksRailcarRender,
+} from 'wp-calypso-client/reader/stats';
 import { Button } from '@automattic/components';
-import { dismissSite } from 'state/reader/site-dismissals/actions';
-import ConnectedListItem from 'blocks/reader-list-item/connected';
+import { dismissSite } from 'wp-calypso-client/state/reader/site-dismissals/actions';
+import ConnectedListItem from 'wp-calypso-client/blocks/reader-list-item/connected';
 
 /**
  * Style dependencies

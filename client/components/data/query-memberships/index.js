@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestProducts } from 'state/memberships/product-list/actions';
+import { requestProducts } from 'wp-calypso-client/state/memberships/product-list/actions';
 
 class QueryMemberships extends Component {
 	static propTypes = {

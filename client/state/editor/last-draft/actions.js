@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { EDITOR_LAST_DRAFT_SET } from 'state/action-types';
+import { EDITOR_LAST_DRAFT_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 /**
  * Returns an action object signalling that the editor last draft should be set

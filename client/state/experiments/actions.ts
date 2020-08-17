@@ -1,8 +1,8 @@
 /**
  * Internal Dependencies
  */
-import { EXPERIMENT_ASSIGN } from 'state/action-types';
-import { ExperimentResponse } from 'state/experiments/types';
+import { EXPERIMENT_ASSIGN } from 'wp-calypso-client/state/action-types';
+import { ExperimentResponse } from 'wp-calypso-client/state/experiments/types';
 
 /**
  * Assign the user to the specified experiments

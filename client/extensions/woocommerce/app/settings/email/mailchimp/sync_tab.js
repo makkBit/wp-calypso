@@ -10,8 +10,8 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Notice from 'components/notice';
-import TooltipComponent from 'components/tooltip';
+import Notice from 'wp-calypso-client/components/notice';
+import TooltipComponent from 'wp-calypso-client/components/tooltip';
 
 class Tooltip extends React.Component {
 	constructor( props ) {

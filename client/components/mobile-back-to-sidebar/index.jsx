@@ -4,12 +4,12 @@
 
 import React from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 
 /**
  * Style dependencies

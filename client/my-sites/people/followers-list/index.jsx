@@ -11,24 +11,24 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import PeopleListItem from 'my-sites/people/people-list-item';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PeopleListItem from 'wp-calypso-client/my-sites/people/people-list-item';
 import { Card, Button } from '@automattic/components';
 import classNames from 'classnames';
-import PeopleListSectionHeader from 'my-sites/people/people-list-section-header';
-import FollowersActions from 'lib/followers/actions';
-import EmailFollowersActions from 'lib/email-followers/actions';
-import InfiniteList from 'components/infinite-list';
-import FollowersData from 'components/data/followers-data';
-import EmailFollowersData from 'components/data/email-followers-data';
-import NoResults from 'my-sites/no-results';
-import EmptyContent from 'components/empty-content';
-import FollowersStore from 'lib/followers/store';
-import EmailFollowersStore from 'lib/email-followers/store';
-import accept from 'lib/accept';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import ListEnd from 'components/list-end';
-import { preventWidows } from 'lib/formatting';
+import PeopleListSectionHeader from 'wp-calypso-client/my-sites/people/people-list-section-header';
+import FollowersActions from 'wp-calypso-client/lib/followers/actions';
+import EmailFollowersActions from 'wp-calypso-client/lib/email-followers/actions';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
+import FollowersData from 'wp-calypso-client/components/data/followers-data';
+import EmailFollowersData from 'wp-calypso-client/components/data/email-followers-data';
+import NoResults from 'wp-calypso-client/my-sites/no-results';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import FollowersStore from 'wp-calypso-client/lib/followers/store';
+import EmailFollowersStore from 'wp-calypso-client/lib/email-followers/store';
+import accept from 'wp-calypso-client/lib/accept';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import ListEnd from 'wp-calypso-client/components/list-end';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Stylesheet dependencies

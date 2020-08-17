@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 /**
  * Returns true if the save sharing buttons requests is successful

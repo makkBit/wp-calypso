@@ -15,16 +15,16 @@ import StatsList from '../stats-list';
 import StatsListLegend from '../stats-list/legend';
 import StatsModulePlaceholder from '../stats-module/placeholder';
 import ErrorPanel from '../stats-error';
-import Pagination from 'components/pagination';
+import Pagination from 'wp-calypso-client/components/pagination';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	isRequestingSiteStatsForQuery,
 	getSiteStatsNormalizedData,
 	hasSiteStatsQueryFailed,
-} from 'state/stats/lists/selectors';
+} from 'wp-calypso-client/state/stats/lists/selectors';
 
 class StatModuleFollowersPage extends Component {
 	render() {

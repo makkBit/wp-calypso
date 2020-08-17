@@ -12,8 +12,8 @@ import sinon from 'sinon';
  * Internal dependencies
  */
 import mockedFlows from './fixtures/flows';
-import flows from 'signup/config/flows';
-import userFactory from 'lib/user';
+import flows from 'wp-calypso-client/signup/config/flows';
+import userFactory from 'wp-calypso-client/lib/user';
 
 jest.mock( 'lib/user', () => require( './mocks/lib/user' ) );
 

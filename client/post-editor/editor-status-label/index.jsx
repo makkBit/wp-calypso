@@ -11,12 +11,12 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import * as postUtils from 'state/posts/utils';
+import * as postUtils from 'wp-calypso-client/state/posts/utils';
 import EditorStatusLabelPlaceholder from './placeholder';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId, isEditorNewPost } from 'state/editor/selectors';
-import { getSitePost } from 'state/posts/selectors';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId, isEditorNewPost } from 'wp-calypso-client/state/editor/selectors';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

@@ -24,21 +24,25 @@ import {
 	PUBLICIZE_CONNECTION_DELETE,
 	PURCHASE_REMOVE_COMPLETED,
 	SITE_SETTINGS_SAVE_SUCCESS,
-} from 'state/action-types';
-import { JETPACK_CONNECT_AUTHORIZE } from 'state/jetpack-connect/action-types';
+} from 'wp-calypso-client/state/action-types';
+import { JETPACK_CONNECT_AUTHORIZE } from 'wp-calypso-client/state/jetpack-connect/action-types';
 import {
 	HAPPYCHAT_CHAT_STATUS_ASSIGNED,
 	HAPPYCHAT_CHAT_STATUS_PENDING,
-} from 'state/happychat/constants';
-import { sendEvent, sendLog, sendPreferences } from 'state/happychat/connection/actions';
-import getHappychatChatStatus from 'state/happychat/selectors/get-happychat-chat-status';
-import getGroups from 'state/happychat/selectors/get-groups';
-import getSkills from 'state/happychat/selectors/get-skills';
-import isHappychatChatAssigned from 'state/happychat/selectors/is-happychat-chat-assigned';
-import isHappychatClientConnected from 'state/happychat/selectors/is-happychat-client-connected';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/happychat/constants';
+import {
+	sendEvent,
+	sendLog,
+	sendPreferences,
+} from 'wp-calypso-client/state/happychat/connection/actions';
+import getHappychatChatStatus from 'wp-calypso-client/state/happychat/selectors/get-happychat-chat-status';
+import getGroups from 'wp-calypso-client/state/happychat/selectors/get-groups';
+import getSkills from 'wp-calypso-client/state/happychat/selectors/get-skills';
+import isHappychatChatAssigned from 'wp-calypso-client/state/happychat/selectors/is-happychat-chat-assigned';
+import isHappychatClientConnected from 'wp-calypso-client/state/happychat/selectors/is-happychat-client-connected';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
 
 const getRouteSetMessage = ( state, path ) => {
 	return `Looking at https://wordpress.com${ path }`;

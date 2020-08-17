@@ -9,9 +9,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { fetchPost } from 'state/reader/posts/actions';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import { isPostKeyLike } from 'reader/post-key';
+import { fetchPost } from 'wp-calypso-client/state/reader/posts/actions';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import { isPostKeyLike } from 'wp-calypso-client/reader/post-key';
 
 class QueryReaderPost extends Component {
 	static propTypes = {

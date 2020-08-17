@@ -3,13 +3,13 @@
  */
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import SharingPreviewPane from 'blocks/sharing-preview-pane';
+import SharingPreviewPane from 'wp-calypso-client/blocks/sharing-preview-pane';
 
 const SharingPreviewModal = ( props ) => {
 	const { isVisible, onClose, ...previewProps } = props;

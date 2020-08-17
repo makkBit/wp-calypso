@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import getRawSite from 'state/selectors/get-raw-site';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 
 /**
  * Returns true if the site can be upgraded by the user, false if the

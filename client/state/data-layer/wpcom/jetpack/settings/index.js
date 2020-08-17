@@ -7,21 +7,27 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { JETPACK_SETTINGS_REQUEST, JETPACK_SETTINGS_SAVE } from 'state/action-types';
-import getJetpackSettings from 'state/selectors/get-jetpack-settings';
-import getSiteUrl from 'state/selectors/get-site-url';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	JETPACK_SETTINGS_REQUEST,
+	JETPACK_SETTINGS_SAVE,
+} from 'wp-calypso-client/state/action-types';
+import getJetpackSettings from 'wp-calypso-client/state/selectors/get-jetpack-settings';
+import getSiteUrl from 'wp-calypso-client/state/selectors/get-site-url';
 import {
 	filterSettingsByActiveModules,
 	normalizeSettings,
 	sanitizeSettings,
-} from 'state/jetpack/settings/utils';
-import { saveJetpackSettingsSuccess, updateJetpackSettings } from 'state/jetpack/settings/actions';
-import { trailingslashit } from 'lib/route';
+} from 'wp-calypso-client/state/jetpack/settings/utils';
+import {
+	saveJetpackSettingsSuccess,
+	updateJetpackSettings,
+} from 'wp-calypso-client/state/jetpack/settings/actions';
+import { trailingslashit } from 'wp-calypso-client/lib/route';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const MAX_WOOCOMMERCE_INSTALL_RETRIES = 2;
 

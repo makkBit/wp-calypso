@@ -8,21 +8,25 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import GoMobile from 'my-sites/customer-home/cards/features/go-mobile';
-import QuickStart from 'my-sites/customer-home/cards/features/quick-start';
-import QuickLinks from 'my-sites/customer-home/cards/actions/quick-links';
-import HelpSearch from 'my-sites/customer-home/cards/features/help-search';
-import WpForTeamsQuickLinks from 'my-sites/customer-home/cards/actions/wp-for-teams-quick-links';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getHomeLayout } from 'state/selectors/get-home-layout';
+import GoMobile from 'wp-calypso-client/my-sites/customer-home/cards/features/go-mobile';
+import QuickStart from 'wp-calypso-client/my-sites/customer-home/cards/features/quick-start';
+import QuickLinks from 'wp-calypso-client/my-sites/customer-home/cards/actions/quick-links';
+import HelpSearch from 'wp-calypso-client/my-sites/customer-home/cards/features/help-search';
+import WpForTeamsQuickLinks from 'wp-calypso-client/my-sites/customer-home/cards/actions/wp-for-teams-quick-links';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getHomeLayout } from 'wp-calypso-client/state/selectors/get-home-layout';
 import {
 	ACTION_QUICK_LINKS,
 	ACTION_WP_FOR_TEAMS_QUICK_LINKS,
 	FEATURE_GO_MOBILE,
 	FEATURE_QUICK_START,
 	FEATURE_SUPPORT,
-} from 'my-sites/customer-home/cards/constants';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 const cardComponents = {
 	[ FEATURE_GO_MOBILE ]: GoMobile,

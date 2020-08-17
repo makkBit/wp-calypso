@@ -8,7 +8,7 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { requestLanguageNames } from 'state/i18n/language-names/actions';
+import { requestLanguageNames } from 'wp-calypso-client/state/i18n/language-names/actions';
 
 export default function QueryLanguageNames() {
 	const dispatch = useDispatch();

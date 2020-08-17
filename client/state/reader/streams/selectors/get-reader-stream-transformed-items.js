@@ -1,12 +1,16 @@
 /**
  * Internal dependencies
  */
-import { getReaderFollows } from 'state/reader/follows/selectors';
-import getReaderStream from 'state/reader/streams/selectors/get-reader-stream';
+import { getReaderFollows } from 'wp-calypso-client/state/reader/follows/selectors';
+import getReaderStream from 'wp-calypso-client/state/reader/streams/selectors/get-reader-stream';
 import treeSelect from '@automattic/tree-select';
-import { injectRecommendations, getDistanceBetweenRecs, combineCards } from 'reader/stream/utils';
+import {
+	injectRecommendations,
+	getDistanceBetweenRecs,
+	combineCards,
+} from 'wp-calypso-client/reader/stream/utils';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /*
  * getTransformedStreamItems performs the transformations from raw state to data suitable for

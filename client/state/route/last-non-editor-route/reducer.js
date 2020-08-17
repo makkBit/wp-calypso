@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { ROUTE_SET } from 'state/action-types';
+import { ROUTE_SET } from 'wp-calypso-client/state/action-types';
 
 /**
  * Include paths which start in the classic editor because it is common

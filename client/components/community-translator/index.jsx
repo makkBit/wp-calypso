@@ -9,9 +9,9 @@ import { find, isEmpty } from 'lodash';
  * Internal dependencies
  */
 import Translatable from './translatable';
-import { languages } from 'languages';
-import userSettings from 'lib/user-settings';
-import { isCommunityTranslatorEnabled } from 'components/community-translator/utils';
+import { languages } from 'wp-calypso-client/languages';
+import userSettings from 'wp-calypso-client/lib/user-settings';
+import { isCommunityTranslatorEnabled } from 'wp-calypso-client/components/community-translator/utils';
 
 /**
  * Style dependencies

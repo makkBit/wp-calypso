@@ -7,10 +7,10 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import Stream from 'reader/stream';
-import DocumentHead from 'components/data/document-head';
+import Stream from 'wp-calypso-client/reader/stream';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import ConversationsIntro from './intro';
-import ConversationsEmptyContent from 'blocks/conversations/empty';
+import ConversationsEmptyContent from 'wp-calypso-client/blocks/conversations/empty';
 
 /**
  * Style dependencies

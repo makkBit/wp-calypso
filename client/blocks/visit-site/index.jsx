@@ -7,7 +7,7 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 
 /**
  * Style dependencies

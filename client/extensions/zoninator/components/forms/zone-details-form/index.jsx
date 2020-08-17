@@ -11,13 +11,13 @@ import { flowRight, mapValues, trim } from 'lodash';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormTextInput from 'components/forms/form-text-input';
-import FormTextarea from 'components/forms/form-textarea';
-import ReduxFormFieldset from 'components/redux-forms/redux-form-fieldset';
-import SectionHeader from 'components/section-header';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import ReduxFormFieldset from 'wp-calypso-client/components/redux-forms/redux-form-fieldset';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const form = 'extensions.zoninator.zoneDetails';
 

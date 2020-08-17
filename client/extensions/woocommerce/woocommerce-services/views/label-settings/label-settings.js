@@ -8,19 +8,19 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
 import { find, isBoolean } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { getPaperSizes } from 'woocommerce/woocommerce-services/lib/pdf-label-utils';
 import { Button } from '@automattic/components';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
 import PaymentMethod, { getPaymentMethodTitle } from './label-payment-method';
 import { getOrigin } from 'woocommerce/lib/nav-utils';
 import {
@@ -41,7 +41,7 @@ import {
 	userCanEditSettings,
 	userCanManagePayments,
 } from 'woocommerce/woocommerce-services/state/label-settings/selectors';
-import QueryStoredCards from 'components/data/query-stored-cards';
+import QueryStoredCards from 'wp-calypso-client/components/data/query-stored-cards';
 import AddCardDialog from 'woocommerce/woocommerce-services/views/label-settings/add-credit-card-modal';
 
 class ShippingLabels extends Component {

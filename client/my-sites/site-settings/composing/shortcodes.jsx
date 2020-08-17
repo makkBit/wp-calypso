@@ -10,14 +10,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import SupportInfo from 'components/support-info';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import SupportInfo from 'wp-calypso-client/components/support-info';
 import { Card } from '@automattic/components';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isJetpackModuleUnavailableInDevelopmentMode from 'state/selectors/is-jetpack-module-unavailable-in-development-mode';
-import isJetpackSiteInDevelopmentMode from 'state/selectors/is-jetpack-site-in-development-mode';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isJetpackModuleUnavailableInDevelopmentMode from 'wp-calypso-client/state/selectors/is-jetpack-module-unavailable-in-development-mode';
+import isJetpackSiteInDevelopmentMode from 'wp-calypso-client/state/selectors/is-jetpack-site-in-development-mode';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
 
 class Shortcodes extends Component {
 	static defaultProps = {

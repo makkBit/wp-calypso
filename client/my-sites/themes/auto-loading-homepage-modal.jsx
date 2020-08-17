@@ -18,13 +18,13 @@ import {
 	isThemeActive,
 	shouldShowHomepageWarning,
 	getPreActivateThemeId,
-} from 'state/themes/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/themes/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	acceptAutoLoadingHomepageWarning,
 	hideAutoLoadingHomepageWarning,
 	activate as activateTheme,
-} from 'state/themes/actions';
+} from 'wp-calypso-client/state/themes/actions';
 
 /**
  * Style dependencies

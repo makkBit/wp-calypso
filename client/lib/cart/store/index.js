@@ -20,18 +20,21 @@ import {
 	CART_TAX_COUNTRY_CODE_SET,
 	CART_TAX_POSTAL_CODE_SET,
 	CART_RELOAD,
-} from 'lib/cart/action-types';
+} from 'wp-calypso-client/lib/cart/action-types';
 import {
 	TRANSACTION_NEW_CREDIT_CARD_DETAILS_SET,
 	TRANSACTION_PAYMENT_SET,
-} from 'lib/transaction/action-types';
-import emitter from 'lib/mixins/emitter';
+} from 'wp-calypso-client/lib/transaction/action-types';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 import cartSynchronizer from './cart-synchronizer';
-import PollerPool from 'lib/data-poller';
-import { recordEvents, recordUnrecognizedPaymentMethod } from 'lib/analytics/cart';
-import productsListFactory from 'lib/products-list';
+import PollerPool from 'wp-calypso-client/lib/data-poller';
+import {
+	recordEvents,
+	recordUnrecognizedPaymentMethod,
+} from 'wp-calypso-client/lib/analytics/cart';
+import productsListFactory from 'wp-calypso-client/lib/products-list';
 const productsList = productsListFactory();
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 import {
 	applyCoupon,
 	removeCoupon,
@@ -39,7 +42,7 @@ import {
 	setTaxCountryCode,
 	setTaxPostalCode,
 	setTaxLocation,
-} from 'lib/cart-values';
+} from 'wp-calypso-client/lib/cart-values';
 import {
 	addPrivacyToAllDomains,
 	removePrivacyFromAllDomains,
@@ -49,12 +52,12 @@ import {
 	removeItemAndDependencies,
 	clearCart,
 	replaceItem as replaceCartItem,
-} from 'lib/cart-values/cart-items';
-import wp from 'lib/wp';
-import { getReduxStore } from 'lib/redux-bridge';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isUserLoggedIn } from 'state/current-user/selectors';
-import { extractStoredCardMetaValue } from 'state/payment/util';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import wp from 'wp-calypso-client/lib/wp';
+import { getReduxStore } from 'wp-calypso-client/lib/redux-bridge';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isUserLoggedIn } from 'wp-calypso-client/state/current-user/selectors';
+import { extractStoredCardMetaValue } from 'wp-calypso-client/state/payment/util';
 
 const wpcom = wp.undocumented();
 

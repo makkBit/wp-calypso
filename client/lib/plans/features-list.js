@@ -9,8 +9,8 @@ import { invoke } from 'lodash';
  * Internal dependencies
  */
 import * as constants from './constants';
-import { DOMAIN_PRICING_AND_AVAILABLE_TLDS } from 'lib/url/support';
-import ExternalLinkWithTracking from 'components/external-link/with-tracking';
+import { DOMAIN_PRICING_AND_AVAILABLE_TLDS } from 'wp-calypso-client/lib/url/support';
+import ExternalLinkWithTracking from 'wp-calypso-client/components/external-link/with-tracking';
 
 export const FEATURES_LIST = {
 	[ constants.FEATURE_BLANK ]: {

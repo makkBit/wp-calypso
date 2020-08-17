@@ -7,7 +7,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestRewindCapabilities } from 'state/rewind/capabilities/actions';
+import { requestRewindCapabilities } from 'wp-calypso-client/state/rewind/capabilities/actions';
 
 export class QueryRewindCapabilities extends Component {
 	componentDidMount() {

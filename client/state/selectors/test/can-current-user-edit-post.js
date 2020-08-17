@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { canCurrentUserEditPost } from 'state/posts/selectors/can-current-user-edit-post';
+import { canCurrentUserEditPost } from 'wp-calypso-client/state/posts/selectors/can-current-user-edit-post';
 
 describe( 'canCurrentUserEditPost()', () => {
 	const fakeGlobalId = 'abcdef1234';

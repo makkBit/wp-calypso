@@ -7,15 +7,18 @@ import { get, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { bumpStat, recordTracksEvent } from 'state/analytics/actions';
-import { getVisibility, isPublished } from 'state/posts/utils';
-import { getEditedPost, getSitePost } from 'state/posts/selectors';
-import getPodcastingCategoryId from 'state/selectors/get-podcasting-category-id';
-import { isJetpackSite } from 'state/sites/selectors';
-import { recordEditorEvent } from 'state/posts/stats/record-editor-event';
-import { recordEditorStat } from 'state/posts/stats/record-editor-stat';
-import { getEditorPostId, isConfirmationSidebarEnabled } from 'state/editor/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { bumpStat, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getVisibility, isPublished } from 'wp-calypso-client/state/posts/utils';
+import { getEditedPost, getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import getPodcastingCategoryId from 'wp-calypso-client/state/selectors/get-podcasting-category-id';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { recordEditorEvent } from 'wp-calypso-client/state/posts/stats/record-editor-event';
+import { recordEditorStat } from 'wp-calypso-client/state/posts/stats/record-editor-stat';
+import {
+	getEditorPostId,
+	isConfirmationSidebarEnabled,
+} from 'wp-calypso-client/state/editor/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Module variables

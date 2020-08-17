@@ -6,9 +6,9 @@ import path from 'path';
 /**
  * Internal dependencies
  */
-import impureLodash from 'lib/impure-lodash';
-import { getFileExtension } from 'lib/media/utils/get-file-extension';
-import { getMimeType } from 'lib/media/utils/get-mime-type';
+import impureLodash from 'wp-calypso-client/lib/impure-lodash';
+import { getFileExtension } from 'wp-calypso-client/lib/media/utils/get-file-extension';
+import { getMimeType } from 'wp-calypso-client/lib/media/utils/get-mime-type';
 
 const { uniqueId } = impureLodash;
 

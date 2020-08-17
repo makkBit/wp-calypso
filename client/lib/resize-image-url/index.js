@@ -7,8 +7,8 @@ import { mapValues } from 'lodash';
 /**
  * Internal dependencies
  */
-import safeImageUrl from 'lib/safe-image-url';
-import { getUrlParts, getUrlFromParts } from 'lib/url/url-parts';
+import safeImageUrl from 'wp-calypso-client/lib/safe-image-url';
+import { getUrlParts, getUrlFromParts } from 'wp-calypso-client/lib/url/url-parts';
 
 /**
  * Pattern matching valid http(s) URLs

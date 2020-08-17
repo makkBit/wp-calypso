@@ -8,8 +8,8 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import CompactToggle from 'components/forms/form-toggle/compact';
-import InfoPopover from 'components/info-popover';
+import CompactToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
 
 /**
  * Style dependencies

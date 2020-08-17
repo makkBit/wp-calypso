@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 /**
  * Returns all billing transactions.

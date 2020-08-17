@@ -12,13 +12,13 @@ import { assert } from 'chai';
  */
 import actions from './fixtures/actions';
 import site from './fixtures/site';
-import userActions from 'lib/users/test/fixtures/actions';
+import userActions from 'wp-calypso-client/lib/users/test/fixtures/actions';
 
 describe( 'Viewers Store', () => {
 	let Dispatcher, PeopleLogStore;
 
 	beforeEach( () => {
-		Dispatcher = require( 'dispatcher' );
+		Dispatcher = require( 'wp-calypso-client/dispatcher' );
 		PeopleLogStore = require( '../log-store' );
 		PeopleLogStore.clear();
 	} );

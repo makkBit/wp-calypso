@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { JETPACK_CONTACT_SUPPORT } from 'lib/url/support';
-import { addQueryArgs } from 'lib/url';
+import { JETPACK_CONTACT_SUPPORT } from 'wp-calypso-client/lib/url/support';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 
 /**
  * Creates a URL that refers to the Jetpack 'Contact Support' page,

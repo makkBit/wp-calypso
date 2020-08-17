@@ -11,17 +11,17 @@ import { CompactCard, ProductIcon } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import Gridicon from 'components/gridicon';
-import HeaderCake from 'components/header-cake';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import MigrateButton from './migrate-button.jsx';
-import PlanPrice from 'my-sites/plan-price';
-import QueryPlans from 'components/data/query-plans';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getPlan } from 'lib/plans';
-import { getPlanRawPrice } from 'state/plans/selectors';
-import { PLAN_BUSINESS } from 'lib/plans/constants';
-import { recordTracksEvent } from 'state/analytics/actions';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { getPlanRawPrice } from 'wp-calypso-client/state/plans/selectors';
+import { PLAN_BUSINESS } from 'wp-calypso-client/lib/plans/constants';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

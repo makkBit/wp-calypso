@@ -13,8 +13,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { AspectRatios } from 'state/editor/image-editor/constants';
-import { useSandbox } from 'test-helpers/use-sinon';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 jest.mock( 'event', () => require( 'component-event' ), { virtual: true } );
 jest.mock( 'lib/oauth-token', () => ( {
@@ -37,12 +37,12 @@ describe( 'EditGravatar', () => {
 	} );
 
 	beforeAll( function () {
-		EditGravatar = require( 'blocks/edit-gravatar' ).EditGravatar;
-		FilePicker = require( 'components/file-picker' );
-		Gravatar = require( 'components/gravatar' ).default;
-		ImageEditor = require( 'blocks/image-editor' );
-		VerifyEmailDialog = require( 'components/email-verification/email-verification-dialog' );
-		DropZone = require( 'components/drop-zone' ).default;
+		EditGravatar = require( 'wp-calypso-client/blocks/edit-gravatar' ).EditGravatar;
+		FilePicker = require( 'wp-calypso-client/components/file-picker' );
+		Gravatar = require( 'wp-calypso-client/components/gravatar' ).default;
+		ImageEditor = require( 'wp-calypso-client/blocks/image-editor' );
+		VerifyEmailDialog = require( 'wp-calypso-client/components/email-verification/email-verification-dialog' );
+		DropZone = require( 'wp-calypso-client/components/drop-zone' ).default;
 	} );
 
 	describe( 'component rendering', () => {

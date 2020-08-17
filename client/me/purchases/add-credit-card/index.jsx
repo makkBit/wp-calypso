@@ -9,18 +9,18 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import { addStoredCard } from 'state/stored-cards/actions';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { concatTitle } from 'lib/react-helpers';
-import { createCardToken } from 'lib/store-transactions';
-import CreditCardForm from 'blocks/credit-card-form';
-import DocumentHead from 'components/data/document-head';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import titles from 'me/purchases/titles';
-import { billingHistory } from 'me/purchases/paths';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { StripeHookProvider } from 'lib/stripe';
+import { addStoredCard } from 'wp-calypso-client/state/stored-cards/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { concatTitle } from 'wp-calypso-client/lib/react-helpers';
+import { createCardToken } from 'wp-calypso-client/lib/store-transactions';
+import CreditCardForm from 'wp-calypso-client/blocks/credit-card-form';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import titles from 'wp-calypso-client/me/purchases/titles';
+import { billingHistory } from 'wp-calypso-client/me/purchases/paths';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { StripeHookProvider } from 'wp-calypso-client/lib/stripe';
 
 function AddCreditCard( props ) {
 	const createAddCardToken = ( ...args ) => createCardToken( 'card_add', ...args );

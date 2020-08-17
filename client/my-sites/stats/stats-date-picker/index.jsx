@@ -10,10 +10,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getSiteStatsQueryDate, isRequestingSiteStatsForQuery } from 'state/stats/lists/selectors';
-import { isAutoRefreshAllowedForQuery } from 'state/stats/lists/utils';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import {
+	getSiteStatsQueryDate,
+	isRequestingSiteStatsForQuery,
+} from 'wp-calypso-client/state/stats/lists/selectors';
+import { isAutoRefreshAllowedForQuery } from 'wp-calypso-client/state/stats/lists/utils';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

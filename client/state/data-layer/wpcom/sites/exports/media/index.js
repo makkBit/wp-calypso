@@ -6,12 +6,12 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { errorNotice } from 'state/notices/actions';
-import { setMediaExportData } from 'state/exporter/actions';
-import { EXPORT_MEDIA_REQUEST } from 'state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { setMediaExportData } from 'wp-calypso-client/state/exporter/actions';
+import { EXPORT_MEDIA_REQUEST } from 'wp-calypso-client/state/action-types';
 
 export const fetch = ( action ) =>
 	http(

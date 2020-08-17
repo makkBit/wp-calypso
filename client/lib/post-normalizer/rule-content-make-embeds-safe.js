@@ -3,7 +3,7 @@
  */
 import { some, forEach, startsWith, endsWith } from 'lodash';
 import { iframeIsAllowed } from './utils';
-import { getUrlParts } from 'lib/url';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
 
 /**
  * Internal dependencies

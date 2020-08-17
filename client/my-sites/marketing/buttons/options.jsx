@@ -11,16 +11,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import MultiCheckbox from 'components/forms/multi-checkbox';
-import SupportInfo from 'components/support-info';
-import { getPostTypes } from 'state/post-types/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSettings } from 'state/site-settings/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getSharingButtons from 'state/selectors/get-sharing-buttons';
-import { isJetpackSite } from 'state/sites/selectors';
-import QueryPostTypes from 'components/data/query-post-types';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import MultiCheckbox from 'wp-calypso-client/components/forms/multi-checkbox';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import { getPostTypes } from 'wp-calypso-client/state/post-types/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getSharingButtons from 'wp-calypso-client/state/selectors/get-sharing-buttons';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /* eslint-disable wpcalypso/jsx-classname-namespace */
 

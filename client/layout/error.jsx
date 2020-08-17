@@ -11,10 +11,10 @@ import { stringify } from 'qs';
 /**
  * Internal dependencies
  */
-import { bumpStat } from 'lib/analytics/mc';
-import EmptyContent from 'components/empty-content';
-import { makeLayout, render as clientRender } from 'controller';
-import { SECTION_SET } from 'state/action-types';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { SECTION_SET } from 'wp-calypso-client/state/action-types';
 
 /**
  * Module variables

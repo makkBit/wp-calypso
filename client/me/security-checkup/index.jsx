@@ -8,13 +8,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import ReauthRequired from 'me/reauth-required';
-import SectionHeader from 'components/section-header';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import SecurityCheckupAccountEmail from './account-email';
 import SecurityCheckupAccountRecoveryEmail from './account-recovery-email';
 import SecurityCheckupAccountRecoveryPhone from './account-recovery-phone';
@@ -23,8 +23,8 @@ import SecurityCheckupPassword from './password';
 import SecurityCheckupSocialLogins from './social-logins';
 import SecurityCheckupTwoFactorAuthentication from './two-factor-authentication';
 import SecurityCheckupTwoFactorBackupCodes from './two-factor-backup-codes';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import VerticalNav from 'components/vertical-nav';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
 
 /**
  * Style dependencies

@@ -1,16 +1,16 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withoutPersistence } from 'state/utils';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	IMPORTER_NUX_SITE_DETAILS_SET,
 	IMPORTS_IMPORT_CANCEL,
 	IMPORTER_NUX_FROM_SIGNUP_CLEAR,
 	IMPORTER_NUX_FROM_SIGNUP_SET,
 	IMPORTER_NUX_URL_INPUT_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import { registerActionForward } from 'lib/redux-bridge';
+import { registerActionForward } from 'wp-calypso-client/lib/redux-bridge';
 
 registerActionForward( IMPORTS_IMPORT_CANCEL );
 

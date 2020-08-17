@@ -7,14 +7,18 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { newPost } from 'lib/paths';
-import { isWpComBusinessPlan, isWpComEcommercePlan, isWpComPremiumPlan } from 'lib/plans';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { newPost } from 'wp-calypso-client/lib/paths';
+import {
+	isWpComBusinessPlan,
+	isWpComEcommercePlan,
+	isWpComPremiumPlan,
+} from 'wp-calypso-client/lib/plans';
 
 /**
  * Image dependencies
  */
-import videoImage from 'assets/images/illustrations/video-hosting.svg';
+import videoImage from 'wp-calypso-client/assets/images/illustrations/video-hosting.svg';
 
 function getDescription( plan, translate ) {
 	if ( isWpComBusinessPlan( plan ) ) {

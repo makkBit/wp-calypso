@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
 
 /**
  * Return primary domain from state object and

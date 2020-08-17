@@ -7,9 +7,9 @@ import { keyBy, some, get } from 'lodash';
  * Internal depedencies
  */
 import treeSelect from '@automattic/tree-select';
-import { keyToString, keyForPost } from 'reader/post-key';
+import { keyToString, keyForPost } from 'wp-calypso-client/reader/post-key';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Returns a single post.

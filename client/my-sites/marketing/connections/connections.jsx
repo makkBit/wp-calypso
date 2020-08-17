@@ -10,10 +10,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryKeyringConnections from 'components/data/query-keyring-connections';
-import QueryKeyringServices from 'components/data/query-keyring-services';
-import QueryPublicizeConnections from 'components/data/query-publicize-connections';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryKeyringConnections from 'wp-calypso-client/components/data/query-keyring-connections';
+import QueryKeyringServices from 'wp-calypso-client/components/data/query-keyring-services';
+import QueryPublicizeConnections from 'wp-calypso-client/components/data/query-publicize-connections';
 import SharingServicesGroup from './services-group';
 
 const SharingConnections = ( { translate } ) => (

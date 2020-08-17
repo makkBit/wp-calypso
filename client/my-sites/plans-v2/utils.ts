@@ -20,14 +20,18 @@ import {
 	TERM_BIENNIALLY,
 	JETPACK_LEGACY_PLANS,
 	JETPACK_RESET_PLANS,
-} from 'lib/plans/constants';
-import { getPlan, getMonthlyPlanByYearly, planHasFeature } from 'lib/plans';
-import { JETPACK_PRODUCT_PRICE_MATRIX } from 'lib/products-values/constants';
-import { Product, JETPACK_PRODUCTS_LIST, objectIsProduct } from 'lib/products-values/products-list';
-import { getJetpackProductDisplayName } from 'lib/products-values/get-jetpack-product-display-name';
-import { getJetpackProductTagline } from 'lib/products-values/get-jetpack-product-tagline';
-import { getJetpackProductDescription } from 'lib/products-values/get-jetpack-product-description';
-import { getJetpackProductShortName } from 'lib/products-values/get-jetpack-product-short-name';
+} from 'wp-calypso-client/lib/plans/constants';
+import { getPlan, getMonthlyPlanByYearly, planHasFeature } from 'wp-calypso-client/lib/plans';
+import { JETPACK_PRODUCT_PRICE_MATRIX } from 'wp-calypso-client/lib/products-values/constants';
+import {
+	Product,
+	JETPACK_PRODUCTS_LIST,
+	objectIsProduct,
+} from 'wp-calypso-client/lib/products-values/products-list';
+import { getJetpackProductDisplayName } from 'wp-calypso-client/lib/products-values/get-jetpack-product-display-name';
+import { getJetpackProductTagline } from 'wp-calypso-client/lib/products-values/get-jetpack-product-tagline';
+import { getJetpackProductDescription } from 'wp-calypso-client/lib/products-values/get-jetpack-product-description';
+import { getJetpackProductShortName } from 'wp-calypso-client/lib/products-values/get-jetpack-product-short-name';
 
 /**
  * Type dependencies
@@ -45,9 +49,9 @@ import type {
 	JetpackRealtimePlan,
 	JetpackPlanSlugs,
 	Plan,
-} from 'lib/plans/types';
-import type { JetpackProductSlug } from 'lib/products-values/types';
-import type { Purchase } from 'lib/purchases/types';
+} from 'wp-calypso-client/lib/plans/types';
+import type { JetpackProductSlug } from 'wp-calypso-client/lib/products-values/types';
+import type { Purchase } from 'wp-calypso-client/lib/purchases/types';
 
 /**
  * Duration utils.

@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { JITM_SET } from 'state/action-types';
-import { combineReducers, keyedReducer } from 'state/utils';
+import { JITM_SET } from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 
 export const storeJITM = ( state = {}, { type, jitms } ) => ( type === JITM_SET ? jitms : state );
 

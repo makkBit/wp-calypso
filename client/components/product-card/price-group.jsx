@@ -8,7 +8,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import PlanPrice from 'my-sites/plan-price';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
 
 const ProductCardPriceGroup = ( props ) => {
 	const { billingTimeFrame, currencyCode, discountedPrice, fullPrice } = props;

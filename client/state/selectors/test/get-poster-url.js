@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getPosterUrl from 'state/selectors/get-poster-url';
+import getPosterUrl from 'wp-calypso-client/state/selectors/get-poster-url';
 
 describe( 'getPosterUrl()', () => {
 	test( 'should return the current video editor poster', () => {

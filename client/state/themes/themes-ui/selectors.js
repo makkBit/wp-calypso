@@ -6,9 +6,9 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 // Returns destination for theme sheet 'back' button
 export function getBackPath( state ) {

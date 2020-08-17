@@ -13,16 +13,16 @@ import Bluehost from './bluehost';
 import ErrorNotice from './error-notice';
 import SiteGround from './siteground';
 import Pressable from './pressable';
-import SectionHeader from 'components/section-header';
-import { guidedTransferItem } from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { guidedTransferItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
 import page from 'page';
-import { saveHostDetails } from 'state/sites/guided-transfer/actions';
+import { saveHostDetails } from 'wp-calypso-client/state/sites/guided-transfer/actions';
 import {
 	isGuidedTransferSavingHostDetails,
 	isGuidedTransferAwaitingPurchase,
-} from 'state/sites/guided-transfer/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+} from 'wp-calypso-client/state/sites/guided-transfer/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 class HostCredentialsPage extends Component {
 	static propTypes = {

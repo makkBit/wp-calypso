@@ -9,11 +9,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { isSubdomain } from 'lib/domains';
-import { isBusiness } from 'lib/products-values';
-import { MAP_EXISTING_DOMAIN, MAP_SUBDOMAIN } from 'lib/url/support';
-import { getSelectedSite } from 'state/ui/selectors';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { isSubdomain } from 'wp-calypso-client/lib/domains';
+import { isBusiness } from 'wp-calypso-client/lib/products-values';
+import { MAP_EXISTING_DOMAIN, MAP_SUBDOMAIN } from 'wp-calypso-client/lib/url/support';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 const DomainMappingDetails = ( {
 	domain,

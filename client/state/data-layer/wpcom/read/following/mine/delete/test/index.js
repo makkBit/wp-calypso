@@ -2,10 +2,10 @@
  * Internal dependencies
  */
 import { fromApi, requestUnfollow, unfollowError } from '../';
-import { NOTICE_CREATE } from 'state/action-types';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { follow, unfollow } from 'state/reader/follows/actions';
+import { NOTICE_CREATE } from 'wp-calypso-client/state/action-types';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { follow, unfollow } from 'wp-calypso-client/state/reader/follows/actions';
 
 describe( 'following/mine/delete', () => {
 	describe( 'requestUnfollow', () => {

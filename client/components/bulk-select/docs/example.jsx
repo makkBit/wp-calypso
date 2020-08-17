@@ -8,7 +8,7 @@ import React from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import BulkSelect from 'components/bulk-select';
+import BulkSelect from 'wp-calypso-client/components/bulk-select';
 
 export default class extends React.Component {
 	static displayName = 'BulkSelects';

@@ -7,9 +7,9 @@ import { noop, map, compact } from 'lodash';
 /**
  * Internal dependencies
  */
-import { ConversationCommentList } from 'blocks/conversations/list';
-import { posts } from 'blocks/reader-post-card/docs/fixtures';
-import { commentsTree } from 'blocks/conversations/docs/fixtures';
+import { ConversationCommentList } from 'wp-calypso-client/blocks/conversations/list';
+import { posts } from 'wp-calypso-client/blocks/reader-post-card/docs/fixtures';
+import { commentsTree } from 'wp-calypso-client/blocks/conversations/docs/fixtures';
 
 const ConversationCommentListExample = () => {
 	const post = posts[ 0 ];

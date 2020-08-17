@@ -10,14 +10,14 @@ import { get, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import SectionNav from 'components/section-nav';
-import SectionNavTabs from 'components/section-nav/tabs';
-import SectionNavTabItem from 'components/section-nav/item';
-import { addSiteFragment } from 'lib/route';
-import versionCompare from 'lib/version-compare';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getPluginOnSite } from 'state/plugins/installed/selectors';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SectionNavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import SectionNavTabItem from 'wp-calypso-client/components/section-nav/item';
+import { addSiteFragment } from 'wp-calypso-client/lib/route';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getPluginOnSite } from 'wp-calypso-client/state/plugins/installed/selectors';
 import { Tabs } from '../../app/constants';
 
 const Navigation = ( { activeTab, pluginVersion, siteSlug, translate } ) => (

@@ -13,11 +13,11 @@ import { times } from 'lodash';
 import {
 	getEligibleKeyringServices,
 	isKeyringServicesFetching,
-} from 'state/sharing/services/selectors';
-import { getExpandedService } from 'state/sharing/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Notice from 'components/notice';
-import SectionHeader from 'components/section-header';
+} from 'wp-calypso-client/state/sharing/services/selectors';
+import { getExpandedService } from 'wp-calypso-client/state/sharing/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import Service from './service';
 import * as Components from './services';
 import ServicePlaceholder from './service-placeholder';

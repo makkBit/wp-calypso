@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import MediaStore from 'lib/media/store';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import MediaStore from 'wp-calypso-client/lib/media/store';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const { getAll: getAllMedia } = MediaStore;
 

@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card, Dialog } from '@automattic/components';
-import FormLabel from 'components/forms/form-label';
-import CardHeading from 'components/card-heading';
-import MaterialIcon from 'components/material-icon';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { clearWordPressCache } from 'state/hosting/actions';
-import getRequest from 'state/selectors/get-request';
-import { isAtomicClearCacheEnabled } from 'state/selectors/is-atomic-clear-cache-enabled';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { clearWordPressCache } from 'wp-calypso-client/state/hosting/actions';
+import getRequest from 'wp-calypso-client/state/selectors/get-request';
+import { isAtomicClearCacheEnabled } from 'wp-calypso-client/state/selectors/is-atomic-clear-cache-enabled';
 
 /**
  * Style dependencies

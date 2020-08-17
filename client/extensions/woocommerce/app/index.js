@@ -10,21 +10,21 @@ import PropTypes from 'prop-types';
  * Internal dependencies
  */
 import { areAllRequiredPluginsActive } from 'woocommerce/state/selectors/plugins';
-import canCurrentUser from 'state/selectors/can-current-user';
-import hasSitePendingAutomatedTransfer from 'state/selectors/has-site-pending-automated-transfer';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import hasSitePendingAutomatedTransfer from 'wp-calypso-client/state/selectors/has-site-pending-automated-transfer';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 import { Card } from '@automattic/components';
-import config from 'config';
-import DocumentHead from 'components/data/document-head';
+import config from 'wp-calypso-client/config';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import { fetchSetupChoices } from 'woocommerce/state/sites/setup-choices/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteHomeUrl } from 'state/sites/selectors';
-import { isLoaded as arePluginsLoaded } from 'state/plugins/installed/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteHomeUrl } from 'wp-calypso-client/state/sites/selectors';
+import { isLoaded as arePluginsLoaded } from 'wp-calypso-client/state/plugins/installed/selectors';
 import { isStoreSetupComplete } from 'woocommerce/state/sites/setup-choices/selectors';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import Placeholder from './dashboard/placeholder';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
 import RequiredPluginsInstallView from 'woocommerce/app/dashboard/required-plugins-install-view';
 import WooCommerceColophon from 'woocommerce/components/woocommerce-colophon';
 

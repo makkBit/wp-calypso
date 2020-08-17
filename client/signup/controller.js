@@ -8,9 +8,9 @@ import { isEmpty } from 'lodash';
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { sectionify } from 'lib/route';
-import { recordPageView } from 'lib/analytics/page-view';
+import config from 'wp-calypso-client/config';
+import { sectionify } from 'wp-calypso-client/lib/route';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
 import SignupComponent from './main';
 import { getStepComponent } from './config/step-components';
 import {
@@ -23,27 +23,27 @@ import {
 	getFlowPageTitle,
 	shouldForceLogin,
 } from './utils';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
 import store from 'store';
-import { setCurrentFlowName } from 'state/signup/flow/actions';
-import { setSelectedSiteId } from 'state/ui/actions';
-import { isUserLoggedIn } from 'state/current-user/selectors';
-import { getSignupProgress } from 'state/signup/progress/selectors';
-import { getCurrentFlowName } from 'state/signup/flow/selectors';
+import { setCurrentFlowName } from 'wp-calypso-client/state/signup/flow/actions';
+import { setSelectedSiteId } from 'wp-calypso-client/state/ui/actions';
+import { isUserLoggedIn } from 'wp-calypso-client/state/current-user/selectors';
+import { getSignupProgress } from 'wp-calypso-client/state/signup/progress/selectors';
+import { getCurrentFlowName } from 'wp-calypso-client/state/signup/flow/selectors';
 import {
 	getSiteVerticalId,
 	getSiteVerticalIsUserInput,
-} from 'state/signup/steps/site-vertical/selectors';
-import { setSiteVertical } from 'state/signup/steps/site-vertical/actions';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { setSiteType } from 'state/signup/steps/site-type/actions';
-import { login } from 'lib/paths';
-import { waitForData } from 'state/data-layer/http-data';
-import { requestGeoLocation } from 'state/data-getters';
+} from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { setSiteVertical } from 'wp-calypso-client/state/signup/steps/site-vertical/actions';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { setSiteType } from 'wp-calypso-client/state/signup/steps/site-type/actions';
+import { login } from 'wp-calypso-client/lib/paths';
+import { waitForData } from 'wp-calypso-client/state/data-layer/http-data';
+import { requestGeoLocation } from 'wp-calypso-client/state/data-getters';
 import { getDotBlogVerticalId } from './config/dotblog-verticals';
-import { abtest } from 'lib/abtest';
-import Experiment, { DefaultVariation, Variation } from 'components/experiment';
-import user from 'lib/user';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import Experiment, { DefaultVariation, Variation } from 'wp-calypso-client/components/experiment';
+import user from 'wp-calypso-client/lib/user';
 
 /**
  * Constants

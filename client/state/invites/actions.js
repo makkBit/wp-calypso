@@ -7,7 +7,7 @@ const debug = debugFactory( 'calypso:invites-actions' );
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	INVITES_DELETE_REQUEST,
 	INVITES_DELETE_REQUEST_FAILURE,
@@ -18,9 +18,9 @@ import {
 	INVITE_RESEND_REQUEST,
 	INVITE_RESEND_REQUEST_FAILURE,
 	INVITE_RESEND_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/invites/init';
+import 'wp-calypso-client/state/invites/init';
 
 /**
  * Triggers a network request to fetch invites for the specified site.

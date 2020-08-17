@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { USER_PROFILE_LINKS_DELETE } from 'state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { USER_PROFILE_LINKS_DELETE } from 'wp-calypso-client/state/action-types';
 import {
 	deleteUserProfileLinkError,
 	deleteUserProfileLinkSuccess,
-} from 'state/profile-links/actions';
+} from 'wp-calypso-client/state/profile-links/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Dispatches a request to delete a profile link for the current user

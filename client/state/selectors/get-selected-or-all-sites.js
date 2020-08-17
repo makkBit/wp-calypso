@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 
-import createSelector from 'lib/create-selector';
-import getSites from 'state/selectors/get-sites';
-import { getSelectedSite } from 'state/ui/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 export default createSelector(
 	( state ) => {

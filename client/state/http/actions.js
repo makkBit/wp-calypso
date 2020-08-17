@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { HTTP_REQUEST } from 'state/action-types';
+import { HTTP_REQUEST } from 'wp-calypso-client/state/action-types';
 
 /**
  * @typedef {object} RequestDescription

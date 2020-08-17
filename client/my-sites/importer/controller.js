@@ -8,10 +8,13 @@ import { get, isEmpty, omit, pick } from 'lodash';
 /**
  * Internal Dependencies
  */
-import SectionImport from 'my-sites/importer/section-import';
-import { setImportingFromSignupFlow, setImportOriginSiteDetails } from 'state/importer-nux/actions';
-import { decodeURIComponentIfValid } from 'lib/url';
-import { addQueryArgs } from 'lib/route';
+import SectionImport from 'wp-calypso-client/my-sites/importer/section-import';
+import {
+	setImportingFromSignupFlow,
+	setImportOriginSiteDetails,
+} from 'wp-calypso-client/state/importer-nux/actions';
+import { decodeURIComponentIfValid } from 'wp-calypso-client/lib/url';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
 export function importSite( context, next ) {
 	const { query } = context;

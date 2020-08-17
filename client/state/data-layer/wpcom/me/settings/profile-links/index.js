@@ -6,12 +6,12 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { USER_PROFILE_LINKS_REQUEST } from 'state/action-types';
-import { receiveUserProfileLinks } from 'state/profile-links/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { USER_PROFILE_LINKS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { receiveUserProfileLinks } from 'wp-calypso-client/state/profile-links/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Dispatches a request to fetch profile links of the current user

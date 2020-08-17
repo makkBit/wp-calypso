@@ -16,7 +16,7 @@ import moment from 'moment';
  */
 import { MediaLibraryList as MediaList } from '../list';
 import fixtures from './fixtures';
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 
 /**
  * Module variables
@@ -25,10 +25,14 @@ const DUMMY_SITE_ID = 2916284;
 const mockSelectedItems = [];
 
 jest.mock( 'lib/user', () => () => {} );
-jest.mock( 'components/infinite-list', () => require( 'components/empty-component' ) );
-jest.mock( 'my-sites/media-library/list-item', () => require( 'components/empty-component' ) );
+jest.mock( 'components/infinite-list', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
+jest.mock( 'my-sites/media-library/list-item', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 jest.mock( 'my-sites/media-library/list-plan-upgrade-nudge', () =>
-	require( 'components/empty-component' )
+	require( 'wp-calypso-client/components/empty-component' )
 );
 
 describe( 'MediaLibraryList item selection', () => {

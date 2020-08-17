@@ -10,12 +10,12 @@ import React from 'react';
  * Internal dependencies
  */
 import AuthorMapping from './author-mapping-item';
-import SiteUsersFetcher from 'components/site-users-fetcher';
-import UsersStore from 'lib/users/store';
+import SiteUsersFetcher from 'wp-calypso-client/components/site-users-fetcher';
+import UsersStore from 'wp-calypso-client/lib/users/store';
 
-import ImporterActionButtonContainer from 'my-sites/importer/importer-action-buttons/container';
-import ImporterActionButton from 'my-sites/importer/importer-action-buttons/action-button';
-import ImporterCloseButton from 'my-sites/importer/importer-action-buttons/close-button';
+import ImporterActionButtonContainer from 'wp-calypso-client/my-sites/importer/importer-action-buttons/container';
+import ImporterActionButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/action-button';
+import ImporterCloseButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/close-button';
 
 /**
  * Style dependencies

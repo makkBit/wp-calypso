@@ -9,10 +9,10 @@ import page from 'page';
  */
 import Hosting from './main';
 import HostingActivate from './hosting-activate';
-import canSiteViewAtomicHosting from 'state/selectors/can-site-view-atomic-hosting';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { fetchSitePlans } from 'state/sites/plans/actions';
+import canSiteViewAtomicHosting from 'wp-calypso-client/state/selectors/can-site-view-atomic-hosting';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { fetchSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
 
 function waitForState( context ) {
 	return new Promise( ( resolve ) => {

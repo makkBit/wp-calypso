@@ -7,7 +7,7 @@ import bodyParser from 'body-parser';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 function oauth() {
 	return {

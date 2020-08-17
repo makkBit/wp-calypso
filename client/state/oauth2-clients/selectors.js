@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/oauth2-clients/init';
+import 'wp-calypso-client/state/oauth2-clients/init';
 
 /**
  * Gets the OAuth2 client data.

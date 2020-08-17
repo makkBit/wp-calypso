@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns a post object by its global ID.

@@ -8,43 +8,43 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
 import formatCurrency from '@automattic/format-currency';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import DomainStatus from '../card/domain-status';
-import DomainWarnings from 'my-sites/domains/components/domain-warnings';
-import IcannVerificationCard from 'my-sites/domains/domain-management/components/icann-verification';
-import { isRecentlyRegistered, isExpiringSoon } from 'lib/domains/utils';
+import DomainWarnings from 'wp-calypso-client/my-sites/domains/components/domain-warnings';
+import IcannVerificationCard from 'wp-calypso-client/my-sites/domains/domain-management/components/icann-verification';
+import { isRecentlyRegistered, isExpiringSoon } from 'wp-calypso-client/lib/domains/utils';
 import {
 	DOMAIN_EXPIRATION,
 	DOMAIN_EXPIRATION_REDEMPTION,
 	DOMAIN_RECENTLY_REGISTERED,
-} from 'lib/url/support';
+} from 'wp-calypso-client/lib/url/support';
 import SubscriptionSettings from '../card/subscription-settings';
 import { recordPaymentSettingsClick } from '../payment-settings-analytics';
-import { getProductBySlug } from 'state/products-list/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { getProductBySlug } from 'wp-calypso-client/state/products-list/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getByPurchaseId,
 	isFetchingSitePurchases,
 	hasLoadedSitePurchasesFromServer,
-} from 'state/purchases/selectors';
+} from 'wp-calypso-client/state/purchases/selectors';
 import NonPrimaryDomainPlanUpsell from '../../components/domain/non-primary-domain-plan-upsell';
-import RenewButton from 'my-sites/domains/domain-management/edit/card/renew-button';
-import AutoRenewToggle from 'me/purchases/manage-purchase/auto-renew-toggle';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { shouldRenderExpiringCreditCard } from 'lib/purchases';
+import RenewButton from 'wp-calypso-client/my-sites/domains/domain-management/edit/card/renew-button';
+import AutoRenewToggle from 'wp-calypso-client/me/purchases/manage-purchase/auto-renew-toggle';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { shouldRenderExpiringCreditCard } from 'wp-calypso-client/lib/purchases';
 import ExpiringCreditCard from '../card/notices/expiring-credit-card';
 import ExpiringSoon from '../card/notices/expiring-soon';
 import DomainManagementNavigation from '../navigation';
 import DomainManagementNavigationEnhanced from '../navigation/enhanced';
 import { DomainExpiryOrRenewal, WrapDomainStatusButtons } from './helpers';
 import OutboundTransferConfirmation from '../../components/outbound-transfer-confirmation';
-import { hasPendingGSuiteUsers } from 'lib/gsuite';
-import PendingGSuiteTosNotice from 'my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice';
-import { resolveDomainStatus } from 'lib/domains';
-import getSiteIsDomainOnly from 'state/selectors/is-domain-only-site';
+import { hasPendingGSuiteUsers } from 'wp-calypso-client/lib/gsuite';
+import PendingGSuiteTosNotice from 'wp-calypso-client/my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice';
+import { resolveDomainStatus } from 'wp-calypso-client/lib/domains';
+import getSiteIsDomainOnly from 'wp-calypso-client/state/selectors/is-domain-only-site';
 import DomainOnlyNotice from '../domain-only-notice';
 
 class RegisteredDomainType extends React.Component {

@@ -10,12 +10,12 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
-import { addQueryArgs } from 'lib/url';
-import { getCustomizerUrl, getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isRequesting, getPluginOnSite } from 'state/plugins/installed/selectors';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { getCustomizerUrl, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isRequesting, getPluginOnSite } from 'wp-calypso-client/state/plugins/installed/selectors';
 
 /**
  * Style dependencies

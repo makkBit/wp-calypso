@@ -6,18 +6,18 @@ import { flowRight as compose, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getAutomatedTransfer } from 'state/automated-transfer/selectors/get-automated-transfer';
+import { getAutomatedTransfer } from 'wp-calypso-client/state/automated-transfer/selectors/get-automated-transfer';
 
-import 'state/automated-transfer/init';
+import 'wp-calypso-client/state/automated-transfer/init';
 
 /**
  * Re-exports
  */
-export { getAutomatedTransfer } from 'state/automated-transfer/selectors/get-automated-transfer';
-export { getAutomatedTransferStatus } from 'state/automated-transfer/selectors/get-automated-transfer-status';
-export { isAutomatedTransferActive } from 'state/automated-transfer/selectors/is-automated-transfer-active';
-export { isAutomatedTransferFailed } from 'state/automated-transfer/selectors/is-automated-transfer-failed';
-export { default as isFetchingAutomatedTransferStatus } from 'state/automated-transfer/selectors/is-fetching-automated-transfer-status';
+export { getAutomatedTransfer } from 'wp-calypso-client/state/automated-transfer/selectors/get-automated-transfer';
+export { getAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors/get-automated-transfer-status';
+export { isAutomatedTransferActive } from 'wp-calypso-client/state/automated-transfer/selectors/is-automated-transfer-active';
+export { isAutomatedTransferFailed } from 'wp-calypso-client/state/automated-transfer/selectors/is-automated-transfer-failed';
+export { default as isFetchingAutomatedTransferStatus } from 'wp-calypso-client/state/automated-transfer/selectors/is-fetching-automated-transfer-status';
 
 export interface EligibilityWarning {
 	description: string;

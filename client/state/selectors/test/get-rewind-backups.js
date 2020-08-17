@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getRewindBackups from 'state/selectors/get-rewind-backups';
+import getRewindBackups from 'wp-calypso-client/state/selectors/get-rewind-backups';
 
 describe( 'getRewindBackups()', () => {
 	test( 'should return null if there is no rewind data', () => {

@@ -9,7 +9,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { recordPermalinkClick } from 'reader/stats';
+import { recordPermalinkClick } from 'wp-calypso-client/reader/stats';
 
 /**
  * Style dependencies

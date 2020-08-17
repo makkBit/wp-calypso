@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { action as ActionTypes } from 'lib/invites/constants';
+import { action as ActionTypes } from 'wp-calypso-client/lib/invites/constants';
 
 export const initialState = {
 	successes: {},

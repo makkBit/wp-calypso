@@ -57,8 +57,8 @@ import {
 	hasDefaultSiteTitle,
 	getSiteComputedAttributes,
 } from '../selectors';
-import config from 'config';
-import { userState } from 'state/selectors/test/fixtures/user-state';
+import config from 'wp-calypso-client/config';
+import { userState } from 'wp-calypso-client/state/selectors/test/fixtures/user-state';
 
 describe( 'selectors', () => {
 	const createStateWithItems = ( items ) =>

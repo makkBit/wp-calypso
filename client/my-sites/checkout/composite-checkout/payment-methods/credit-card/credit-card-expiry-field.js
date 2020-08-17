@@ -9,9 +9,9 @@ import { useFormStatus, useSelect } from '@automattic/composite-checkout';
 /**
  * Internal dependencies
  */
-import { shouldRenderAdditionalCountryFields } from 'lib/checkout/processor-specific';
+import { shouldRenderAdditionalCountryFields } from 'wp-calypso-client/lib/checkout/processor-specific';
 import { Label, LabelText, StripeFieldWrapper, StripeErrorMessage } from './form-layout-components';
-import { Input } from 'my-sites/domains/components/form';
+import { Input } from 'wp-calypso-client/my-sites/domains/components/form';
 
 export default function CreditCardExpiryField( {
 	handleStripeFieldChange,

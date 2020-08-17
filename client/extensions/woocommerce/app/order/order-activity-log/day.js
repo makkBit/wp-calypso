@@ -8,8 +8,8 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
-import { withLocalizedMoment } from 'components/localized-moment';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class OrderEventsByDay extends Component {
 	static propTypes = {

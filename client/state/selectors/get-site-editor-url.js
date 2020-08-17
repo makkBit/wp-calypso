@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { shouldRedirectGutenberg } from 'state/selectors/should-redirect-gutenberg';
-import { getSiteAdminUrl, getSiteSlug } from 'state/sites/selectors';
+import { shouldRedirectGutenberg } from 'wp-calypso-client/state/selectors/should-redirect-gutenberg';
+import { getSiteAdminUrl, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Retrieves url for site editor.

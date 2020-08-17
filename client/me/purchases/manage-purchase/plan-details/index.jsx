@@ -10,18 +10,21 @@ import { localize } from 'i18n-calypso';
  * Internal Dependencies
  */
 import { Card } from '@automattic/components';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import QueryPluginKeys from 'components/data/query-plugin-keys';
-import SectionHeader from 'components/section-header';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import QueryPluginKeys from 'wp-calypso-client/components/data/query-plugin-keys';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import PlanBillingPeriod from './billing-period';
-import { isRequestingSites, getSite } from 'state/sites/selectors';
-import { getByPurchaseId, hasLoadedUserPurchasesFromServer } from 'state/purchases/selectors';
-import { isDataLoading } from 'me/purchases/utils';
-import { getName, isExpired, isPartnerPurchase } from 'lib/purchases';
-import { isJetpackPlan, isFreeJetpackPlan } from 'lib/products-values';
-import { getPluginsForSite } from 'state/plugins/premium/selectors';
+import { isRequestingSites, getSite } from 'wp-calypso-client/state/sites/selectors';
+import {
+	getByPurchaseId,
+	hasLoadedUserPurchasesFromServer,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { isDataLoading } from 'wp-calypso-client/me/purchases/utils';
+import { getName, isExpired, isPartnerPurchase } from 'wp-calypso-client/lib/purchases';
+import { isJetpackPlan, isFreeJetpackPlan } from 'wp-calypso-client/lib/products-values';
+import { getPluginsForSite } from 'wp-calypso-client/state/plugins/premium/selectors';
 
 /**
  * Style dependencies

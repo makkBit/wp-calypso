@@ -3,24 +3,24 @@
  */
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React, { Component, Fragment } from 'react';
 
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { preventWidows } from 'lib/formatting';
-import { SETTING_UP_PREMIUM_SERVICES } from 'lib/url/support';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { SETTING_UP_PREMIUM_SERVICES } from 'wp-calypso-client/lib/url/support';
 import { Button, ProgressBar } from '@automattic/components';
-import getJetpackProductInstallProgress from 'state/selectors/get-jetpack-product-install-progress';
+import getJetpackProductInstallProgress from 'wp-calypso-client/state/selectors/get-jetpack-product-install-progress';
 import ThankYou from './thank-you';
 
 /**
  * Image dependencies
  */
-import fireworksIllustration from 'assets/images/illustrations/fireworks.svg';
+import fireworksIllustration from 'wp-calypso-client/assets/images/illustrations/fireworks.svg';
 
 const INSTALL_STATE_COMPLETE = 1;
 const INSTALL_STATE_INCOMPLETE = 2;

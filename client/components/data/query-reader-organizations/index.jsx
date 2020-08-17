@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestOrganizations } from 'state/reader/organizations/actions';
+import { requestOrganizations } from 'wp-calypso-client/state/reader/organizations/actions';
 
 export default function QueryReaderOrganizations() {
 	const dispatch = useDispatch();

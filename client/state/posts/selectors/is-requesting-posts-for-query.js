@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getSerializedPostsQuery } from 'state/posts/utils';
+import { getSerializedPostsQuery } from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if currently requesting posts for the posts query, or false

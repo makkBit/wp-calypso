@@ -6,9 +6,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { RelatedPostCard } from 'blocks/reader-related-card';
-import { recordTrackForPost, recordAction } from 'reader/stats';
-import { EMPTY_SEARCH_RECOMMENDATIONS } from 'reader/follow-sources';
+import { RelatedPostCard } from 'wp-calypso-client/blocks/reader-related-card';
+import { recordTrackForPost, recordAction } from 'wp-calypso-client/reader/stats';
+import { EMPTY_SEARCH_RECOMMENDATIONS } from 'wp-calypso-client/reader/follow-sources';
 
 export default function EmptySearchRecommendedPost( { post } ) {
 	function handlePostClick() {

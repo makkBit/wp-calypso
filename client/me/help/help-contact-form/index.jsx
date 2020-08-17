@@ -6,35 +6,35 @@ import React from 'react';
 import { debounce, isEqual, find, isEmpty, isArray } from 'lodash';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { preventWidows } from 'lib/formatting';
-import config from 'config';
-import FormLabel from 'components/forms/form-label';
-import SegmentedControl from 'components/segmented-control';
-import SelectDropdown from 'components/select-dropdown';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInput from 'components/forms/form-text-input';
-import FormButton from 'components/forms/form-button';
-import SitesDropdown from 'components/sites-dropdown';
-import InlineHelpCompactResults from 'blocks/inline-help/inline-help-compact-results';
-import { selectSiteId } from 'state/help/actions';
-import { getHelpSelectedSite, getHelpSelectedSiteId } from 'state/help/selectors';
-import wpcomLib from 'lib/wp';
-import HelpResults from 'me/help/help-results';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import config from 'wp-calypso-client/config';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import SitesDropdown from 'wp-calypso-client/components/sites-dropdown';
+import InlineHelpCompactResults from 'wp-calypso-client/blocks/inline-help/inline-help-compact-results';
+import { selectSiteId } from 'wp-calypso-client/state/help/actions';
+import { getHelpSelectedSite, getHelpSelectedSiteId } from 'wp-calypso-client/state/help/selectors';
+import wpcomLib from 'wp-calypso-client/lib/wp';
+import HelpResults from 'wp-calypso-client/me/help/help-results';
 import {
 	bumpStat,
 	recordTracksEvent as recordTracksEventAction,
 	composeAnalytics,
-} from 'state/analytics/actions';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import isShowingQandAInlineHelpContactForm from 'state/selectors/is-showing-q-and-a-inline-help-contact-form';
-import { showQandAOnInlineHelpContactForm } from 'state/inline-help/actions';
-import { getNpsSurveyFeedback } from 'state/nps-survey/selectors';
+} from 'wp-calypso-client/state/analytics/actions';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import isShowingQandAInlineHelpContactForm from 'wp-calypso-client/state/selectors/is-showing-q-and-a-inline-help-contact-form';
+import { showQandAOnInlineHelpContactForm } from 'wp-calypso-client/state/inline-help/actions';
+import { getNpsSurveyFeedback } from 'wp-calypso-client/state/nps-survey/selectors';
 import { generateSubjectFromMessage } from './utils';
 
 /**

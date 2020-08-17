@@ -11,11 +11,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import CloseOnEscape from 'components/close-on-escape';
-import SiteSelector from 'components/site-selector';
-import { hasTouch } from 'lib/touch-detect';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { setNextLayoutFocus, setLayoutFocus } from 'state/ui/layout-focus/actions';
+import CloseOnEscape from 'wp-calypso-client/components/close-on-escape';
+import SiteSelector from 'wp-calypso-client/components/site-selector';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import {
+	setNextLayoutFocus,
+	setLayoutFocus,
+} from 'wp-calypso-client/state/ui/layout-focus/actions';
 
 class SitePicker extends React.Component {
 	static displayName = 'SitePicker';

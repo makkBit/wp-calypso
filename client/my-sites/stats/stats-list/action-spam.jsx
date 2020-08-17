@@ -9,10 +9,10 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { gaRecordEvent } from 'lib/analytics/ga';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 const debug = debugFactory( 'calypso:stats:action-spam' );
 

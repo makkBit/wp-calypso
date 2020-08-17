@@ -9,14 +9,14 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import { bumpStat as bumpAnalyticsStat } from 'state/analytics/actions';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { bumpStat as bumpAnalyticsStat } from 'wp-calypso-client/state/analytics/actions';
 import { bumpStatGenerator } from './utils';
-import { getPost } from 'state/posts/selectors';
-import { toggleSharePanel } from 'state/ui/post-type-list/actions';
-import isPublicizeEnabled from 'state/selectors/is-publicize-enabled';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getPost } from 'wp-calypso-client/state/posts/selectors';
+import { toggleSharePanel } from 'wp-calypso-client/state/ui/post-type-list/actions';
+import isPublicizeEnabled from 'wp-calypso-client/state/selectors/is-publicize-enabled';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 class PostActionsEllipsisMenuShare extends Component {
 	static propTypes = {

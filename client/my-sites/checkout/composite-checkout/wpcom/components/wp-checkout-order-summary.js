@@ -19,23 +19,23 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { showInlineHelpPopover } from 'state/inline-help/actions';
-import PaymentChatButton from 'my-sites/checkout/checkout/payment-chat-button';
+import { showInlineHelpPopover } from 'wp-calypso-client/state/inline-help/actions';
+import PaymentChatButton from 'wp-calypso-client/my-sites/checkout/checkout/payment-chat-button';
 import getSupportVariation, {
 	SUPPORT_FORUM,
 	SUPPORT_DIRECTLY,
-} from 'state/selectors/get-inline-help-support-variation';
+} from 'wp-calypso-client/state/selectors/get-inline-help-support-variation';
 import { useHasDomainsInCart, useDomainsInCart } from '../hooks/has-domains';
 import { useHasPlanInCart, usePlanInCart } from '../hooks/has-plan';
 import { useHasRenewalInCart } from '../hooks/has-renewal';
-import { isWpComBusinessPlan, isWpComEcommercePlan } from 'lib/plans';
-import isPresalesChatAvailable from 'state/happychat/selectors/is-presales-chat-available';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import QuerySupportTypes from 'blocks/inline-help/inline-help-query-support-types';
-import isSupportVariationDetermined from 'state/selectors/is-support-variation-determined';
-import { isEnabled } from 'config';
-import { isJetpackSite } from 'state/sites/selectors';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
+import { isWpComBusinessPlan, isWpComEcommercePlan } from 'wp-calypso-client/lib/plans';
+import isPresalesChatAvailable from 'wp-calypso-client/state/happychat/selectors/is-presales-chat-available';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import QuerySupportTypes from 'wp-calypso-client/blocks/inline-help/inline-help-query-support-types';
+import isSupportVariationDetermined from 'wp-calypso-client/state/selectors/is-support-variation-determined';
+import { isEnabled } from 'wp-calypso-client/config';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 
 export default function WPCheckoutOrderSummary() {
 	const translate = useTranslate();

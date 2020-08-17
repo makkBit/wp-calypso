@@ -10,20 +10,20 @@ import { get, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import EmptyContent from 'components/empty-content';
-import DocumentHead from 'components/data/document-head';
-import QuerySiteCommentsTree from 'components/data/query-site-comments-tree';
-import ModerateComment from 'components/data/moderate-comment';
-import Comment from 'my-sites/comments/comment';
-import CommentPermalink from 'my-sites/comment/comment-permalink';
-import CommentDeleteWarning from 'my-sites/comment/comment-delete-warning';
-import CommentListHeader from 'my-sites/comments/comment-list/comment-list-header';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { preventWidows } from 'lib/formatting';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSiteComment } from 'state/comments/selectors';
-import getSiteId from 'state/selectors/get-site-id';
+import Main from 'wp-calypso-client/components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QuerySiteCommentsTree from 'wp-calypso-client/components/data/query-site-comments-tree';
+import ModerateComment from 'wp-calypso-client/components/data/moderate-comment';
+import Comment from 'wp-calypso-client/my-sites/comments/comment';
+import CommentPermalink from 'wp-calypso-client/my-sites/comment/comment-permalink';
+import CommentDeleteWarning from 'wp-calypso-client/my-sites/comment/comment-delete-warning';
+import CommentListHeader from 'wp-calypso-client/my-sites/comments/comment-list/comment-list-header';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
 
 /**
  * Style dependencies

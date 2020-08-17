@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { makeLayout } from 'controller';
+import { makeLayout } from 'wp-calypso-client/controller';
 import {
 	fetchThemeData,
 	fetchThemeFilters,

@@ -11,7 +11,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import FormCountrySelect from 'components/forms/form-country-select';
+import FormCountrySelect from 'wp-calypso-client/components/forms/form-country-select';
 import {
 	formatNumber,
 	toIcannFormat,
@@ -19,9 +19,9 @@ import {
 	processNumber,
 	getUpdatedCursorPosition,
 	MIN_LENGTH_TO_FORMAT,
-} from 'components/phone-input/phone-number';
-import CountryFlag from 'components/phone-input/country-flag';
-import { countries } from 'components/phone-input/data';
+} from 'wp-calypso-client/components/phone-input/phone-number';
+import CountryFlag from 'wp-calypso-client/components/phone-input/country-flag';
+import { countries } from 'wp-calypso-client/components/phone-input/data';
 
 /**
  * Style dependencies

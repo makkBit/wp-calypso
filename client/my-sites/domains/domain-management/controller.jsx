@@ -8,7 +8,7 @@ import React from 'react';
  * Internal Dependencies
  */
 import DomainManagement from '.';
-import DomainManagementData from 'components/data/domain-management';
+import DomainManagementData from 'wp-calypso-client/components/data/domain-management';
 import {
 	domainManagementChangeSiteAddress,
 	domainManagementContactsPrivacy,
@@ -28,14 +28,14 @@ import {
 	domainManagementManageConsent,
 	domainManagementDomainConnectMapping,
 	domainManagementRoot,
-} from 'my-sites/domains/paths';
+} from 'wp-calypso-client/my-sites/domains/paths';
 import {
 	emailManagement,
 	emailManagementAddGSuiteUsers,
 	emailManagementForwarding,
-} from 'my-sites/email/paths';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { decodeURIComponentIfValid } from 'lib/url';
+} from 'wp-calypso-client/my-sites/email/paths';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { decodeURIComponentIfValid } from 'wp-calypso-client/lib/url';
 
 export default {
 	domainManagementList( pageContext, next ) {

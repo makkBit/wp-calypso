@@ -6,13 +6,13 @@ import {
 	COUNTRY_STATES_REQUEST,
 	COUNTRY_STATES_REQUEST_FAILURE,
 	COUNTRY_STATES_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import {
 	combineReducers,
 	withoutPersistence,
 	withSchemaValidation,
 	withStorageKey,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 import { itemSchema } from './schema';
 
 // Stores the complete list of states, indexed by locale key

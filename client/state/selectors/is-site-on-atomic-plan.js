@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { isEcommercePlan, isBusinessPlan } from 'lib/plans';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isEcommercePlan, isBusinessPlan } from 'wp-calypso-client/lib/plans';
 
 /**
  * Returns true if site is on a paid plan that is eligible to be an Atomic site,

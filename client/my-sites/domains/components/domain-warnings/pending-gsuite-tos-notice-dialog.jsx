@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PropTypes from 'prop-types';
 import React, { Fragment, useState } from 'react';
 import { useTranslate } from 'i18n-calypso';
@@ -11,14 +11,18 @@ import { useTranslate } from 'i18n-calypso';
  * Internal Dependencies
  */
 import { Button, Dialog } from '@automattic/components';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import ClipboardButton from 'components/forms/clipboard-button';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { errorNotice } from 'state/notices/actions';
-import { getLoginUrlWithTOSRedirect } from 'lib/gsuite';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import wp from 'lib/wp';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { getLoginUrlWithTOSRedirect } from 'wp-calypso-client/lib/gsuite';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import wp from 'wp-calypso-client/lib/wp';
 
 function PendingGSuiteTosNoticeDialog( props ) {
 	const [ password, setPassword ] = useState( false );

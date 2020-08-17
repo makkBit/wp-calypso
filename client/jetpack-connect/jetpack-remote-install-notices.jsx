@@ -10,10 +10,10 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormattedHeader from 'components/formatted-header';
-import { addQueryArgs } from 'lib/route';
-import { getConnectingSite } from 'state/jetpack-connect/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import { getConnectingSite } from 'wp-calypso-client/state/jetpack-connect/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	ACTIVATION_FAILURE,
 	ACTIVATION_RESPONSE_ERROR,

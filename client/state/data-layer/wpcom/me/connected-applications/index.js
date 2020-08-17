@@ -6,14 +6,14 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import makeJsonSchemaParser from 'lib/make-json-schema-parser';
+import makeJsonSchemaParser from 'wp-calypso-client/lib/make-json-schema-parser';
 import schema from './schema';
-import { CONNECTED_APPLICATIONS_REQUEST } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receiveConnectedApplications } from 'state/connected-applications/actions';
+import { CONNECTED_APPLICATIONS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receiveConnectedApplications } from 'wp-calypso-client/state/connected-applications/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const apiTransformer = ( data ) => data.connected_applications;
 

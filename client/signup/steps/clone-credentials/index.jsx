@@ -10,13 +10,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import RewindCredentialsForm from 'components/rewind-credentials-form';
-import getRewindState from 'state/selectors/get-rewind-state';
-import getJetpackCredentialsUpdateStatus from 'state/selectors/get-jetpack-credentials-update-status';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import RewindCredentialsForm from 'wp-calypso-client/components/rewind-credentials-form';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import getJetpackCredentialsUpdateStatus from 'wp-calypso-client/state/selectors/get-jetpack-credentials-update-status';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

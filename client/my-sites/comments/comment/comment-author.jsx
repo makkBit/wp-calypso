@@ -5,23 +5,23 @@ import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import CommentLink from 'my-sites/comments/comment/comment-link';
-import CommentPostLink from 'my-sites/comments/comment/comment-post-link';
-import Emojify from 'components/emojify';
-import ExternalLink from 'components/external-link';
-import Gravatar from 'components/gravatar';
-import Tooltip from 'components/tooltip';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { decodeEntities } from 'lib/formatting';
-import { urlToDomainAndPath } from 'lib/url';
-import { getSiteComment } from 'state/comments/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import CommentLink from 'wp-calypso-client/my-sites/comments/comment/comment-link';
+import CommentPostLink from 'wp-calypso-client/my-sites/comments/comment/comment-post-link';
+import Emojify from 'wp-calypso-client/components/emojify';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import Tooltip from 'wp-calypso-client/components/tooltip';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { urlToDomainAndPath } from 'wp-calypso-client/lib/url';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 export class CommentAuthor extends Component {
 	static propTypes = {

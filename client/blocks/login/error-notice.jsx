@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
@@ -16,8 +16,8 @@ import {
 	getTwoFactorAuthRequestError,
 	getCreateSocialAccountError,
 	getRequestSocialAccountError,
-} from 'state/login/selectors';
-import Notice from 'components/notice';
+} from 'wp-calypso-client/state/login/selectors';
+import Notice from 'wp-calypso-client/components/notice';
 
 class ErrorNotice extends Component {
 	static propTypes = {

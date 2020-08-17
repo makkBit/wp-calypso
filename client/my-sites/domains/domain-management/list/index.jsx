@@ -5,7 +5,7 @@
  */
 import { connect } from 'react-redux';
 import { find, findIndex, get, identity, noop, times, isEmpty } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import page from 'page';
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -14,45 +14,52 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import DomainWarnings from 'my-sites/domains/components/domain-warnings';
+import config from 'wp-calypso-client/config';
+import DomainWarnings from 'wp-calypso-client/my-sites/domains/components/domain-warnings';
 import DomainOnly from './domain-only';
 import ListItem from './item';
 import ListItemPlaceholder from './item-placeholder';
-import Main from 'components/main';
-import { domainManagementRoot, domainManagementList } from 'my-sites/domains/paths';
-import SectionHeader from 'components/section-header';
+import Main from 'wp-calypso-client/components/main';
+import {
+	domainManagementRoot,
+	domainManagementList,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { Button, CompactCard } from '@automattic/components';
-import PlansNavigation from 'my-sites/plans/navigation';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import { setPrimaryDomain } from 'state/sites/domains/actions';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import EmptyContent from 'components/empty-content';
-import { hasDomainCredit } from 'state/sites/plans/selectors';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import DomainToPlanNudge from 'blocks/domain-to-plan-nudge';
-import { type } from 'lib/domains/constants';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import getSites from 'state/selectors/get-sites';
-import { currentUserHasFlag, getCurrentUser } from 'state/current-user/selectors';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
+import PlansNavigation from 'wp-calypso-client/my-sites/plans/navigation';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import { setPrimaryDomain } from 'wp-calypso-client/state/sites/domains/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { hasDomainCredit } from 'wp-calypso-client/state/sites/plans/selectors';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import DomainToPlanNudge from 'wp-calypso-client/blocks/domain-to-plan-nudge';
+import { type } from 'wp-calypso-client/lib/domains/constants';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import { currentUserHasFlag, getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
 import { getDomainManagementPath } from './utils';
 import DomainItem from './domain-item';
 import ListHeader from './list-header';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import PopoverCart from 'my-sites/checkout/cart/popover-cart';
-import InfoPopover from 'components/info-popover';
-import ExternalLink from 'components/external-link';
-import { getAllCartItems } from 'lib/cart-values/cart-items';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import PopoverCart from 'wp-calypso-client/my-sites/checkout/cart/popover-cart';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
 
 /**
  * Style dependencies

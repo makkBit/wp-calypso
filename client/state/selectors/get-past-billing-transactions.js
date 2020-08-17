@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import getBillingTransactions from 'state/selectors/get-billing-transactions';
+import getBillingTransactions from 'wp-calypso-client/state/selectors/get-billing-transactions';
 
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 /**
  * Returns all past billing transactions.

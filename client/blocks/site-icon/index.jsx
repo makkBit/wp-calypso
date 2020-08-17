@@ -7,20 +7,20 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { get } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Image from 'components/image';
-import MediaImage from 'my-sites/media-library/media-image';
-import Spinner from 'components/spinner';
-import QuerySites from 'components/data/query-sites';
-import { getSite } from 'state/sites/selectors';
-import getSiteIconId from 'state/selectors/get-site-icon-id';
-import getSiteIconUrl from 'state/selectors/get-site-icon-url';
-import isTransientMedia from 'state/selectors/is-transient-media';
-import resizeImageUrl from 'lib/resize-image-url';
+import Image from 'wp-calypso-client/components/image';
+import MediaImage from 'wp-calypso-client/my-sites/media-library/media-image';
+import Spinner from 'wp-calypso-client/components/spinner';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import getSiteIconId from 'wp-calypso-client/state/selectors/get-site-icon-id';
+import getSiteIconUrl from 'wp-calypso-client/state/selectors/get-site-icon-url';
+import isTransientMedia from 'wp-calypso-client/state/selectors/is-transient-media';
+import resizeImageUrl from 'wp-calypso-client/lib/resize-image-url';
 
 /**
  * Style dependencies

@@ -10,9 +10,9 @@ import { size, map, first } from 'lodash';
 /**
  * Internal dependencies
  */
-import getUserDevices from 'state/selectors/get-user-devices';
+import getUserDevices from 'wp-calypso-client/state/selectors/get-user-devices';
 import StreamHeader from './stream-header';
-import FormSelect from 'components/forms/form-select';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
 
 class NotificationSettingsFormDeviceSelector extends PureComponent {
 	static propTypes = {

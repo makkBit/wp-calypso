@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/jetpack/init';
 
 export default function getCredentialsAutoConfigStatus( state, siteId ) {
 	return get( state, [ 'jetpack', 'credentials', 'items', siteId, 'main' ], false )

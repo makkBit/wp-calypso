@@ -7,13 +7,16 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import InlineSupportLink from 'components/inline-support-link';
-import { domainManagementEdit, domainManagementList } from 'my-sites/domains/paths';
-import { requestSiteChecklistTaskUpdate } from 'state/checklist/actions';
-import { launchSiteOrRedirectToLaunchSignupFlow } from 'state/sites/launch/actions';
-import { localizeUrl } from 'lib/i18n-utils';
-import { verifyEmail } from 'state/current-user/email-verification/actions';
-import { CHECKLIST_KNOWN_TASKS } from 'state/data-layer/wpcom/checklist/index.js';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import {
+	domainManagementEdit,
+	domainManagementList,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { requestSiteChecklistTaskUpdate } from 'wp-calypso-client/state/checklist/actions';
+import { launchSiteOrRedirectToLaunchSignupFlow } from 'wp-calypso-client/state/sites/launch/actions';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { verifyEmail } from 'wp-calypso-client/state/current-user/email-verification/actions';
+import { CHECKLIST_KNOWN_TASKS } from 'wp-calypso-client/state/data-layer/wpcom/checklist/index.js';
 
 const getTaskDescription = ( task, { isDomainUnverified, isEmailUnverified } ) => {
 	switch ( task.id ) {

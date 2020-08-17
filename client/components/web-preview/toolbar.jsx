@@ -5,7 +5,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { partial } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
@@ -13,14 +13,14 @@ import { connect } from 'react-redux';
  */
 import { localize } from 'i18n-calypso';
 import { Button } from '@automattic/components';
-import SelectDropdown from 'components/select-dropdown';
-import ClipboardButtonInput from 'components/clipboard-button-input';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getCurrentUser } from 'state/current-user/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getCustomizerUrl } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import ClipboardButtonInput from 'wp-calypso-client/components/clipboard-button-input';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getCustomizerUrl } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const possibleDevices = [ 'computer', 'tablet', 'phone' ];
 

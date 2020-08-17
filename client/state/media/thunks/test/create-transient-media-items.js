@@ -1,11 +1,11 @@
 /**
  * Internal dependencies
  */
-import { createTransientMediaItems as createTransientMediaItemsThunk } from 'state/media/thunks/create-transient-media-items';
-import { createTransientMedia, validateMediaItem } from 'lib/media/utils';
-import * as dateUtils from 'state/media/utils/transient-date';
-import * as fluxUtils from 'state/media/utils/flux-adapter';
-import * as syncActions from 'state/media/actions';
+import { createTransientMediaItems as createTransientMediaItemsThunk } from 'wp-calypso-client/state/media/thunks/create-transient-media-items';
+import { createTransientMedia, validateMediaItem } from 'wp-calypso-client/lib/media/utils';
+import * as dateUtils from 'wp-calypso-client/state/media/utils/transient-date';
+import * as fluxUtils from 'wp-calypso-client/state/media/utils/flux-adapter';
+import * as syncActions from 'wp-calypso-client/state/media/actions';
 
 jest.mock( 'lib/media/utils', () => ( {
 	createTransientMedia: jest.fn(),

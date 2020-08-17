@@ -13,10 +13,10 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import AllSitesIcon from './all-sites-icon';
-import config from 'config';
-import Count from 'components/count';
-import getSites from 'state/selectors/get-sites';
-import { getCurrentUserVisibleSiteCount } from 'state/current-user/selectors';
+import config from 'wp-calypso-client/config';
+import Count from 'wp-calypso-client/components/count';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import { getCurrentUserVisibleSiteCount } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

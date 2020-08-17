@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingDomainsSuggestions } from 'state/domains/suggestions/selectors';
-import { requestDomainsSuggestions } from 'state/domains/suggestions/actions';
+import { isRequestingDomainsSuggestions } from 'wp-calypso-client/state/domains/suggestions/selectors';
+import { requestDomainsSuggestions } from 'wp-calypso-client/state/domains/suggestions/actions';
 
 function getQueryObject( props ) {
 	return {

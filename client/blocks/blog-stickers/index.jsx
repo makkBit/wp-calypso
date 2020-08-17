@@ -9,13 +9,13 @@ import React from 'react';
  * Internal Dependencies
  */
 import { connect } from 'react-redux';
-import QueryReaderTeams from 'components/data/query-reader-teams';
-import QueryBlogStickers from 'components/data/query-blog-stickers';
-import getBlogStickers from 'state/selectors/get-blog-stickers';
-import { getReaderTeams } from 'state/reader/teams/selectors';
-import BlogStickersList from 'blocks/blog-stickers/list';
-import InfoPopover from 'components/info-popover';
-import { isAutomatticTeamMember } from 'reader/lib/teams';
+import QueryReaderTeams from 'wp-calypso-client/components/data/query-reader-teams';
+import QueryBlogStickers from 'wp-calypso-client/components/data/query-blog-stickers';
+import getBlogStickers from 'wp-calypso-client/state/selectors/get-blog-stickers';
+import { getReaderTeams } from 'wp-calypso-client/state/reader/teams/selectors';
+import BlogStickersList from 'wp-calypso-client/blocks/blog-stickers/list';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { isAutomatticTeamMember } from 'wp-calypso-client/reader/lib/teams';
 
 /**
  * Style dependencies

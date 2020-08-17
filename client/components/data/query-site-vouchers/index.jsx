@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingSiteVouchers } from 'state/sites/vouchers/selectors';
-import { requestSiteVouchers as requestVouchers } from 'state/sites/vouchers/actions';
+import { isRequestingSiteVouchers } from 'wp-calypso-client/state/sites/vouchers/selectors';
+import { requestSiteVouchers as requestVouchers } from 'wp-calypso-client/state/sites/vouchers/actions';
 
 class QuerySiteVouchers extends Component {
 	constructor( props ) {

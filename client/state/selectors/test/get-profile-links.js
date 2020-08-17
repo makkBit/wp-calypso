@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getProfileLinks from 'state/selectors/get-profile-links';
+import getProfileLinks from 'wp-calypso-client/state/selectors/get-profile-links';
 
 describe( 'getProfileLinks()', () => {
 	const profileLinks = [

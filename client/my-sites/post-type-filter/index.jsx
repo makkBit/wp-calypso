@@ -10,23 +10,30 @@ import { compact, find, flow, reduce } from 'lodash';
 /**
  * Internal dependencies
  */
-import areAllSitesSingleUser from 'state/selectors/are-all-sites-single-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite, isSingleUserSite, getSiteSlug } from 'state/sites/selectors';
-import { getPostTypeLabel } from 'state/post-types/selectors';
-import { getNormalizedMyPostCounts, getNormalizedPostCounts } from 'state/posts/counts/selectors';
-import { isMultiSelectEnabled } from 'state/ui/post-type-list/selectors';
-import { toggleMultiSelect } from 'state/ui/post-type-list/actions';
-import { isEnabled } from 'config';
-import urlSearch from 'lib/url-search';
-import QueryPostCounts from 'components/data/query-post-counts';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import Search from 'components/search';
+import areAllSitesSingleUser from 'wp-calypso-client/state/selectors/are-all-sites-single-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	isJetpackSite,
+	isSingleUserSite,
+	getSiteSlug,
+} from 'wp-calypso-client/state/sites/selectors';
+import { getPostTypeLabel } from 'wp-calypso-client/state/post-types/selectors';
+import {
+	getNormalizedMyPostCounts,
+	getNormalizedPostCounts,
+} from 'wp-calypso-client/state/posts/counts/selectors';
+import { isMultiSelectEnabled } from 'wp-calypso-client/state/ui/post-type-list/selectors';
+import { toggleMultiSelect } from 'wp-calypso-client/state/ui/post-type-list/actions';
+import { isEnabled } from 'wp-calypso-client/config';
+import urlSearch from 'wp-calypso-client/lib/url-search';
+import QueryPostCounts from 'wp-calypso-client/components/data/query-post-counts';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import Search from 'wp-calypso-client/components/search';
 import AuthorSegmented from './author-segmented';
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies

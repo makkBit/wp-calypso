@@ -11,13 +11,13 @@ import { camelCase, difference, filter, get, includes, isEmpty, keys, map, pick 
 /**
  * Internal dependencies
  */
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
-import { updateContactDetailsCache } from 'state/domains/management/actions';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
+import { updateContactDetailsCache } from 'wp-calypso-client/state/domains/management/actions';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import WithContactDetailsValidation, {
 	disableSubmitButton,
 } from './with-contact-details-validation';

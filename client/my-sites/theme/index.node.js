@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 
-import config from 'config';
-import { makeLayout } from 'controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout } from 'wp-calypso-client/controller';
 import { details, fetchThemeDetailsData, notFoundError } from './controller';
 
 export default function ( router ) {

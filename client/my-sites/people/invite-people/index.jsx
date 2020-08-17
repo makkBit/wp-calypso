@@ -13,53 +13,53 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ContractorSelect from 'my-sites/people/contractor-select';
-import RoleSelect from 'my-sites/people/role-select';
-import TokenField from 'components/token-field';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import ContractorSelect from 'wp-calypso-client/my-sites/people/contractor-select';
+import RoleSelect from 'wp-calypso-client/my-sites/people/role-select';
+import TokenField from 'wp-calypso-client/components/token-field';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 import {
 	sendInvites,
 	createInviteValidation,
 	generateInviteLinks,
 	disableInviteLinks,
-} from 'lib/invites/actions';
+} from 'wp-calypso-client/lib/invites/actions';
 import { Card, Button } from '@automattic/components';
-import Main from 'components/main';
-import HeaderCake from 'components/header-cake';
-import CountedTextarea from 'components/forms/counted-textarea';
-import InvitesCreateValidationStore from 'lib/invites/stores/invites-create-validation';
-import InvitesSentStore from 'lib/invites/stores/invites-sent';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import EmptyContent from 'components/empty-content';
-import { userCan } from 'lib/site/utils';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import FeatureExample from 'components/feature-example';
-import versionCompare from 'lib/version-compare';
-import { isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { isJetpackSite } from 'state/sites/selectors';
-import { activateModule } from 'state/jetpack/modules/actions';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import withTrackingTool from 'lib/analytics/with-tracking-tool';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
-import QuerySiteInvites from 'components/data/query-site-invites';
-import { getInviteLinksForSite } from 'state/invites/selectors';
-import { getSiteRoles } from 'state/site-roles/selectors';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
-import ClipboardButton from 'components/forms/clipboard-button';
-import SectionHeader from 'components/section-header';
-import accept from 'lib/accept';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
+import Main from 'wp-calypso-client/components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import CountedTextarea from 'wp-calypso-client/components/forms/counted-textarea';
+import InvitesCreateValidationStore from 'wp-calypso-client/lib/invites/stores/invites-create-validation';
+import InvitesSentStore from 'wp-calypso-client/lib/invites/stores/invites-sent';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { userCan } from 'wp-calypso-client/lib/site/utils';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import FeatureExample from 'wp-calypso-client/components/feature-example';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { isCurrentUserEmailVerified } from 'wp-calypso-client/state/current-user/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { activateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import withTrackingTool from 'wp-calypso-client/lib/analytics/with-tracking-tool';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
+import QuerySiteInvites from 'wp-calypso-client/components/data/query-site-invites';
+import { getInviteLinksForSite } from 'wp-calypso-client/state/invites/selectors';
+import { getSiteRoles } from 'wp-calypso-client/state/site-roles/selectors';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import accept from 'wp-calypso-client/lib/accept';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
 
 /**
  * Style dependencies

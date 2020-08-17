@@ -10,19 +10,19 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import wpcom from 'lib/wp';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import formState from 'lib/form-state';
-import { login } from 'lib/paths';
-import ValidationFieldset from 'signup/validation-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormButton from 'components/forms/form-button';
-import FormTextInput from 'components/forms/form-text-input';
-import StepWrapper from 'signup/step-wrapper';
-import LoggedOutForm from 'components/logged-out-form';
-import LoggedOutFormFooter from 'components/logged-out-form/footer';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
+import config from 'wp-calypso-client/config';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import formState from 'wp-calypso-client/lib/form-state';
+import { login } from 'wp-calypso-client/lib/paths';
+import ValidationFieldset from 'wp-calypso-client/signup/validation-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import LoggedOutForm from 'wp-calypso-client/components/logged-out-form';
+import LoggedOutFormFooter from 'wp-calypso-client/components/logged-out-form/footer';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

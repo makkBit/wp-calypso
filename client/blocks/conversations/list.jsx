@@ -9,8 +9,8 @@ import { map, zipObject, fill, size, filter, get, compact, partition, min, noop 
 /**
  * Internal dependencies
  */
-import PostComment from 'blocks/comments/post-comment';
-import { POST_COMMENT_DISPLAY_TYPES } from 'state/comments/constants';
+import PostComment from 'wp-calypso-client/blocks/comments/post-comment';
+import { POST_COMMENT_DISPLAY_TYPES } from 'wp-calypso-client/state/comments/constants';
 import {
 	commentsFetchingStatus,
 	getActiveReplyCommentId,
@@ -19,13 +19,17 @@ import {
 	getExpansionsForPost,
 	getHiddenCommentsForPost,
 	getPostCommentsTree,
-} from 'state/comments/selectors';
-import ConversationCaterpillar from 'blocks/conversation-caterpillar';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import PostCommentFormRoot from 'blocks/comments/form-root';
-import { requestPostComments, requestComment, setActiveReply } from 'state/comments/actions';
-import { getErrorKey } from 'state/comments/utils';
-import { getCurrentUserId } from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/comments/selectors';
+import ConversationCaterpillar from 'wp-calypso-client/blocks/conversation-caterpillar';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import PostCommentFormRoot from 'wp-calypso-client/blocks/comments/form-root';
+import {
+	requestPostComments,
+	requestComment,
+	setActiveReply,
+} from 'wp-calypso-client/state/comments/actions';
+import { getErrorKey } from 'wp-calypso-client/state/comments/utils';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

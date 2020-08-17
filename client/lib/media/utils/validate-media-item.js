@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { ValidationErrors as MediaValidationErrors } from 'lib/media/constants';
-import { isExceedingSiteMaxUploadSize } from 'lib/media/utils/is-exceeding-site-max-upload-size';
-import { isSupportedFileTypeForSite } from 'lib/media/utils/is-supported-file-type-for-site';
-import { isSupportedFileTypeInPremium } from 'lib/media/utils/is-supported-file-type-in-premium';
+import { ValidationErrors as MediaValidationErrors } from 'wp-calypso-client/lib/media/constants';
+import { isExceedingSiteMaxUploadSize } from 'wp-calypso-client/lib/media/utils/is-exceeding-site-max-upload-size';
+import { isSupportedFileTypeForSite } from 'wp-calypso-client/lib/media/utils/is-supported-file-type-for-site';
+import { isSupportedFileTypeInPremium } from 'wp-calypso-client/lib/media/utils/is-supported-file-type-in-premium';
 
 /**
  * Validates a media item for a site, and returns validation errors (if any).

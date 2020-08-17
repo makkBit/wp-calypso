@@ -6,10 +6,10 @@ import { some, trim } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getEditedPost } from 'state/posts/selectors/get-edited-post';
-import { getEditorRawContent } from 'state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors/get-edited-post';
+import { getEditorRawContent } from 'wp-calypso-client/state/editor/selectors';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 const REGEXP_EMPTY_CONTENT = /^<p>(<br[^>]*>|&nbsp;|\s)*<\/p>$/;
 const CONTENT_LENGTH_ASSUME_SET = 50;

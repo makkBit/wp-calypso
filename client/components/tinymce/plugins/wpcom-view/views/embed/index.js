@@ -7,10 +7,10 @@ import EventEmitter from 'events';
  * Internal dependencies
  */
 import EmbedView from './view';
-import getCurrentSiteEmbeds from 'state/selectors/get-current-site-embeds';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getReduxStore, reduxDispatch, reduxGetState } from 'lib/redux-bridge';
-import { requestEmbeds } from 'state/embeds/actions';
+import getCurrentSiteEmbeds from 'wp-calypso-client/state/selectors/get-current-site-embeds';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getReduxStore, reduxDispatch, reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import { requestEmbeds } from 'wp-calypso-client/state/embeds/actions';
 
 export default class EmbedViewManager extends EventEmitter {
 	constructor() {

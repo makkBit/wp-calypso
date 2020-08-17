@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getRewindState from 'state/selectors/get-rewind-state';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
 
 /**
  * Get the entire Rewind state object.

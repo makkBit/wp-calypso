@@ -9,8 +9,8 @@ import { difference, isEmpty, keys } from 'lodash';
 /**
  * Internal dependencies
  */
-import getValidationSchemas from 'state/selectors/get-validation-schemas';
-import { requestValidationSchemas } from 'state/domains/management/validation-schemas/actions';
+import getValidationSchemas from 'wp-calypso-client/state/selectors/get-validation-schemas';
+import { requestValidationSchemas } from 'wp-calypso-client/state/domains/management/validation-schemas/actions';
 
 export class QueryTldValidationSchemas extends Component {
 	static propTypes = {

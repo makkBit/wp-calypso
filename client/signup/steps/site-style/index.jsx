@@ -13,17 +13,17 @@ import { find } from 'lodash';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import StepWrapper from 'signup/step-wrapper';
-import { setSiteStyle } from 'state/signup/steps/site-style/actions';
-import { getSiteStyle } from 'state/signup/steps/site-style/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getSiteStyleOptions } from 'lib/signup/site-styles';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import { setSiteStyle } from 'wp-calypso-client/state/signup/steps/site-style/actions';
+import { getSiteStyle } from 'wp-calypso-client/state/signup/steps/site-style/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getSiteStyleOptions } from 'wp-calypso-client/lib/signup/site-styles';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

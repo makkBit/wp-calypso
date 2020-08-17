@@ -11,11 +11,11 @@ import { defer, mapValues, omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import Theme from 'components/theme';
-import SiteSelectorModal from 'components/site-selector-modal';
+import Theme from 'wp-calypso-client/components/theme';
+import SiteSelectorModal from 'wp-calypso-client/components/site-selector-modal';
 import { trackClick } from './helpers';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getTheme } from 'state/themes/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getTheme } from 'wp-calypso-client/state/themes/selectors';
 
 /**
  * Style dependencies

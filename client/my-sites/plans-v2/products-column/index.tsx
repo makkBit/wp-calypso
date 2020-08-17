@@ -17,12 +17,15 @@ import {
 	getProductPrices,
 } from '../utils';
 import { PRODUCTS_TYPES, SELECTOR_PRODUCTS } from '../constants';
-import { isProductsListFetching, getAvailableProductsList } from 'state/products-list/selectors';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import getSitePlan from 'state/sites/selectors/get-site-plan';
-import getSiteProducts from 'state/sites/selectors/get-site-products';
-import JetpackProductCard from 'components/jetpack/card/jetpack-product-card';
-import FormattedHeader from 'components/formatted-header';
+import {
+	isProductsListFetching,
+	getAvailableProductsList,
+} from 'wp-calypso-client/state/products-list/selectors';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import getSitePlan from 'wp-calypso-client/state/sites/selectors/get-site-plan';
+import getSiteProducts from 'wp-calypso-client/state/sites/selectors/get-site-products';
+import JetpackProductCard from 'wp-calypso-client/components/jetpack/card/jetpack-product-card';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 
 /**
  * Type dependencies

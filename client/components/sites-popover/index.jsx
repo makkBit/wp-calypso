@@ -9,9 +9,9 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
-import { hasTouch } from 'lib/touch-detect';
-import SiteSelector from 'components/site-selector';
+import Popover from 'wp-calypso-client/components/popover';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import SiteSelector from 'wp-calypso-client/components/site-selector';
 
 /**
  * Style dependencies

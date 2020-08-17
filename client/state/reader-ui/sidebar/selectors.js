@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 /**
  * Whether or not a specific reader organization sidebar item is open

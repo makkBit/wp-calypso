@@ -6,7 +6,7 @@ import { isArray, isUndefined, map, omitBy } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { toValidId } from 'reader/id-helpers';
+import { toValidId } from 'wp-calypso-client/reader/id-helpers';
 
 export const isValidApiResponse = ( apiResponse ) => {
 	const hasSubscriptions =

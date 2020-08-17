@@ -8,7 +8,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { find, isEmpty, round } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
@@ -26,11 +26,11 @@ import {
 import { areTaxRatesLoaded, getTaxRates } from 'woocommerce/state/sites/meta/taxrates/selectors';
 import { Card } from '@automattic/components';
 import ExtendedHeader from 'woocommerce/components/extended-header';
-import ExternalLink from 'components/external-link';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 import { fetchLocations } from 'woocommerce/state/sites/data/locations/actions';
 import { fetchTaxRates } from 'woocommerce/state/sites/meta/taxrates/actions';
-import FormToggle from 'components/forms/form-toggle';
-import Notice from 'components/notice';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
+import Notice from 'wp-calypso-client/components/notice';
 import Table from 'woocommerce/components/table';
 import TableRow from 'woocommerce/components/table/table-row';
 import TableItem from 'woocommerce/components/table/table-item';

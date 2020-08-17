@@ -8,13 +8,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import CartStore from 'lib/cart/store';
-import { hasStaleItem } from 'lib/cart-values/cart-items';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { infoNotice, removeNotice } from 'state/notices/actions';
-import { getNoticeLastTimeShown } from 'state/notices/selectors';
-import { getSectionName, getSelectedSiteSlug } from 'state/ui/selectors';
-import { reloadCart } from 'lib/cart/actions';
+import CartStore from 'wp-calypso-client/lib/cart/store';
+import { hasStaleItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { infoNotice, removeNotice } from 'wp-calypso-client/state/notices/actions';
+import { getNoticeLastTimeShown } from 'wp-calypso-client/state/notices/selectors';
+import { getSectionName, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { reloadCart } from 'wp-calypso-client/lib/cart/actions';
 
 const staleCartItemNoticeId = 'stale-cart-item-notice';
 

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { initialSiteState } from 'state/sites/plans/reducer';
+import { initialSiteState } from 'wp-calypso-client/state/sites/plans/reducer';
 
 export function getPlansBySite( state, site ) {
 	if ( ! site ) {

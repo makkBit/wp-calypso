@@ -12,19 +12,19 @@ import { get, find, noop, assign } from 'lodash';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import TermTreeSelectorTerms from 'blocks/term-tree-selector/terms';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInput from 'components/forms/form-text-input';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormToggle from 'components/forms/form-toggle';
-import FormLegend from 'components/forms/form-legend';
-import FormFieldset from 'components/forms/form-fieldset';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getPostTypeTaxonomy } from 'state/post-types/taxonomies/selectors';
-import { getTerms } from 'state/terms/selectors';
-import { addTerm, updateTerm } from 'state/terms/actions';
-import { recordGoogleEvent, bumpStat } from 'state/analytics/actions';
+import TermTreeSelectorTerms from 'wp-calypso-client/blocks/term-tree-selector/terms';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getPostTypeTaxonomy } from 'wp-calypso-client/state/post-types/taxonomies/selectors';
+import { getTerms } from 'wp-calypso-client/state/terms/selectors';
+import { addTerm, updateTerm } from 'wp-calypso-client/state/terms/actions';
+import { recordGoogleEvent, bumpStat } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

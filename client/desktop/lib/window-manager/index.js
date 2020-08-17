@@ -21,7 +21,7 @@ app.on( 'ready', () => {
 /**
  * Internal dependencies
  */
-const Config = require( 'desktop/lib/config' );
+const Config = require( 'wp-calypso-client/desktop/lib/config' );
 
 /**
  * Module variables

@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import Pagination from 'components/pagination';
+import Pagination from 'wp-calypso-client/components/pagination';
 
 class PaginationExample extends Component {
 	state = {

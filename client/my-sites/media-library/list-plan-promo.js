@@ -6,16 +6,16 @@ import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 import page from 'page';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { preventWidows } from 'lib/formatting';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 import { Button } from '@automattic/components';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 class MediaLibraryListPlanPromo extends React.Component {
 	static displayName = 'MediaLibraryListPlanPromo';

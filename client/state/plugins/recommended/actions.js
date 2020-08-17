@@ -5,9 +5,9 @@ import {
 	PLUGINS_RECOMMENDED_RECEIVE,
 	PLUGINS_RECOMMENDED_REQUEST_FAILURE,
 	PLUGINS_RECOMMENDED_REQUEST,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/plugins/recommended';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/plugins/recommended';
 
 /**
  * Returns an action object that's bound to the data layer;

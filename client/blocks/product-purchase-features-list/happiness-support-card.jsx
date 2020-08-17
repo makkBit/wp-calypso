@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import HappinessSupport from 'components/happiness-support';
+import HappinessSupport from 'wp-calypso-client/components/happiness-support';
 
 export const HappinessSupportCard = ( {
 	isFeatureCard,

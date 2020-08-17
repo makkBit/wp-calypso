@@ -8,15 +8,15 @@ import { toPairs, isEqual, omit } from 'lodash';
  */
 
 import debug from 'debug';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	MEDIA_REQUEST,
 	MEDIA_ITEM_REQUEST,
 	MEDIA_ITEM_UPDATE,
 	MEDIA_ITEM_EDIT,
 	MEDIA_ITEM_DELETE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import {
 	deleteMedia,
 	failMediaItemRequest,
@@ -25,8 +25,8 @@ import {
 	setNextPageHandle,
 	successMediaItemRequest,
 	successMediaRequest,
-} from 'state/media/actions';
-import { requestMediaStorage } from 'state/sites/media-storage/actions';
+} from 'wp-calypso-client/state/media/actions';
+import { requestMediaStorage } from 'wp-calypso-client/state/sites/media-storage/actions';
 import {
 	dispatchFluxUpdateMediaItemSuccess,
 	dispatchFluxUpdateMediaItemError,
@@ -35,10 +35,10 @@ import {
 	dispatchFluxRequestMediaItemSuccess,
 	dispatchFluxRequestMediaItemError,
 	dispatchFluxRequestMediaItemsSuccess,
-} from 'state/media/utils/flux-adapter';
+} from 'wp-calypso-client/state/media/utils/flux-adapter';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import getNextPageQuery from 'state/selectors/get-next-page-query';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import getNextPageQuery from 'wp-calypso-client/state/selectors/get-next-page-query';
 
 /**
  * Module variables

@@ -6,8 +6,8 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getMediaItem from 'state/selectors/get-media-item';
-import MediaQueryManager from 'lib/query-manager/media';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
+import MediaQueryManager from 'wp-calypso-client/lib/query-manager/media';
 
 describe( 'getMediaItem()', () => {
 	const siteId = 2916284;

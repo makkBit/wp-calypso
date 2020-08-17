@@ -7,8 +7,8 @@ import page from 'page';
  * Internal dependencies
  */
 import controller from './controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { getLanguageRouteParam } from 'lib/i18n-utils';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { getLanguageRouteParam } from 'wp-calypso-client/lib/i18n-utils';
 
 export default function () {
 	const lang = getLanguageRouteParam();

@@ -3,7 +3,7 @@
  */
 import { getUserPurchases } from './get-user-purchases';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Does the user have any current purchases?

@@ -15,15 +15,18 @@ import { Button, Card } from '@automattic/components';
 import StatsTabs from '../stats-tabs';
 import StatsTab from '../stats-tabs/tab';
 import StatsModulePlaceholder from '../stats-module/placeholder';
-import Emojify from 'components/emojify';
-import SectionHeader from 'components/section-header';
-import QueryPosts from 'components/data/query-posts';
-import QueryPostStats from 'components/data/query-post-stats';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { isRequestingPostsForQuery, getPostsForQuery } from 'state/posts/selectors';
-import { getPostStat } from 'state/stats/posts/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import Emojify from 'wp-calypso-client/components/emojify';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import QueryPostStats from 'wp-calypso-client/components/data/query-post-stats';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import {
+	isRequestingPostsForQuery,
+	getPostsForQuery,
+} from 'wp-calypso-client/state/posts/selectors';
+import { getPostStat } from 'wp-calypso-client/state/stats/posts/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

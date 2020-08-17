@@ -6,20 +6,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import page from 'page';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import AccordionSection from 'components/accordion/section';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
 import { Button, Dialog } from '@automattic/components';
-import EditorDrawerLabel from 'post-editor/editor-drawer/label';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import PostSelector from 'my-sites/post-selector';
+import EditorDrawerLabel from 'wp-calypso-client/post-editor/editor-drawer/label';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import PostSelector from 'wp-calypso-client/my-sites/post-selector';
 
 /**
  * Style dependencies

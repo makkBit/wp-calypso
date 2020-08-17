@@ -12,9 +12,9 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import config from 'config';
-import { sendEmailLogin } from 'state/auth/actions';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import config from 'wp-calypso-client/config';
+import { sendEmailLogin } from 'wp-calypso-client/state/auth/actions';
 import {
 	getAuthAccountType,
 	getRedirectToOriginal,
@@ -25,29 +25,29 @@ import {
 	isTwoFactorAuthTypeSupported,
 	getSocialAccountIsLinking,
 	getSocialAccountLinkService,
-} from 'state/login/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { wasManualRenewalImmediateLoginAttempted } from 'state/immediate-login/selectors';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getPartnerSlugFromQuery from 'state/selectors/get-partner-slug-from-query';
-import { rebootAfterLogin } from 'state/login/actions';
-import { isPasswordlessAccount } from 'state/login/utils';
+} from 'wp-calypso-client/state/login/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { wasManualRenewalImmediateLoginAttempted } from 'wp-calypso-client/state/immediate-login/selectors';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getPartnerSlugFromQuery from 'wp-calypso-client/state/selectors/get-partner-slug-from-query';
+import { rebootAfterLogin } from 'wp-calypso-client/state/login/actions';
+import { isPasswordlessAccount } from 'wp-calypso-client/state/login/utils';
 import {
 	isCrowdsignalOAuth2Client,
 	isJetpackCloudOAuth2Client,
 	isWooOAuth2Client,
-} from 'lib/oauth2-clients';
-import { login } from 'lib/paths';
-import Notice from 'components/notice';
-import AsyncLoad from 'components/async-load';
-import VisitSite from 'blocks/visit-site';
-import WooCommerceConnectCartHeader from 'extensions/woocommerce/components/woocommerce-connect-cart-header';
+} from 'wp-calypso-client/lib/oauth2-clients';
+import { login } from 'wp-calypso-client/lib/paths';
+import Notice from 'wp-calypso-client/components/notice';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import VisitSite from 'wp-calypso-client/blocks/visit-site';
+import WooCommerceConnectCartHeader from 'wp-calypso-client/extensions/woocommerce/components/woocommerce-connect-cart-header';
 import ContinueAsUser from './continue-as-user';
 import ErrorNotice from './error-notice';
 import LoginForm from './login-form';
-import { isWebAuthnSupported } from 'lib/webauthn';
-import JetpackPlusWpComLogo from 'components/jetpack-plus-wpcom-logo';
+import { isWebAuthnSupported } from 'wp-calypso-client/lib/webauthn';
+import JetpackPlusWpComLogo from 'wp-calypso-client/components/jetpack-plus-wpcom-logo';
 
 /**
  * Style dependencies
@@ -288,7 +288,7 @@ class Login extends Component {
 								<div className={ classNames( 'login__woocommerce-logo' ) }>
 									<svg width={ 200 } viewBox={ '0 0 1270 170' }>
 										<AsyncLoad
-											require="components/jetpack-header/woocommerce"
+											require="wp-calypso-client/components/jetpack-header/woocommerce"
 											darkColorScheme={ false }
 											placeholder={ null }
 										/>
@@ -341,7 +341,7 @@ class Login extends Component {
 			preHeader = (
 				<div className="login__jetpack-logo">
 					<AsyncLoad
-						require="components/jetpack-header"
+						require="wp-calypso-client/components/jetpack-header"
 						placeholder={ null }
 						partnerSlug={ this.props.partnerSlug }
 						isWoo
@@ -362,7 +362,7 @@ class Login extends Component {
 			preHeader = (
 				<div className="login__jetpack-logo">
 					<AsyncLoad
-						require="components/jetpack-header"
+						require="wp-calypso-client/components/jetpack-header"
 						placeholder={ null }
 						partnerSlug={ this.props.partnerSlug }
 						darkColorScheme
@@ -435,7 +435,7 @@ class Login extends Component {
 		if ( socialConnect ) {
 			return (
 				<AsyncLoad
-					require="blocks/login/social-connect-prompt"
+					require="wp-calypso-client/blocks/login/social-connect-prompt"
 					onSuccess={ this.handleValidLogin }
 				/>
 			);
@@ -444,7 +444,7 @@ class Login extends Component {
 		if ( twoFactorEnabled ) {
 			return (
 				<AsyncLoad
-					require="blocks/login/two-factor-authentication/two-factor-content"
+					require="wp-calypso-client/blocks/login/two-factor-authentication/two-factor-content"
 					isBrowserSupported={ this.state.isBrowserSupported }
 					isJetpack={ isJetpack }
 					isGutenboarding={ isGutenboarding }

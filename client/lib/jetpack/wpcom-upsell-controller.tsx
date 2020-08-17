@@ -6,11 +6,11 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import type { Context } from './types';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import BusinessATSwitch from 'components/jetpack/business-at-switch';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import BusinessATSwitch from 'wp-calypso-client/components/jetpack/business-at-switch';
 
 export default function upsellSwitch( UpsellComponent: typeof React.Component ): Function {
 	return ( context: Context, next: Function ) => {

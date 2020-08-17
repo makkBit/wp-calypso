@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { getPreference } from 'state/preferences/selectors';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
 
-import 'state/guided-tours/init';
+import 'wp-calypso-client/state/guided-tours/init';
 
 export default ( state ) => getPreference( state, 'guided-tours-history' );

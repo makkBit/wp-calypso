@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSectionName } from 'state/ui/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Returns whether the docked happychat client UI should be displayed

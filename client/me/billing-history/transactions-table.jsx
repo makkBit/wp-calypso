@@ -7,21 +7,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import titleCase from 'to-title-case';
-import { capitalPDangit } from 'lib/formatting';
+import { capitalPDangit } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import Pagination from 'components/pagination';
+import Pagination from 'wp-calypso-client/components/pagination';
 import TransactionsHeader from './transactions-header';
 import { groupDomainProducts, renderTransactionAmount } from './utils';
-import SearchCard from 'components/search-card';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { setPage, setQuery } from 'state/billing-transactions/ui/actions';
-import getBillingTransactionFilters from 'state/selectors/get-billing-transaction-filters';
-import getFilteredBillingTransactions from 'state/selectors/get-filtered-billing-transactions';
-import { getPlanTermLabel } from 'lib/plans';
+import SearchCard from 'wp-calypso-client/components/search-card';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { setPage, setQuery } from 'wp-calypso-client/state/billing-transactions/ui/actions';
+import getBillingTransactionFilters from 'wp-calypso-client/state/selectors/get-billing-transaction-filters';
+import getFilteredBillingTransactions from 'wp-calypso-client/state/selectors/get-filtered-billing-transactions';
+import { getPlanTermLabel } from 'wp-calypso-client/lib/plans';
 
 class TransactionsTable extends React.Component {
 	static displayName = 'TransactionsTable';

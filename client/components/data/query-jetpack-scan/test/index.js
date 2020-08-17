@@ -13,9 +13,9 @@ import { render } from '@testing-library/react';
 /**
  * Internal dependencies
  */
-import QueryJetpackScan from 'components/data/query-jetpack-scan';
-import * as jetpackScanActions from 'state/jetpack-scan/actions';
-import { JETPACK_SCAN_REQUEST } from 'state/action-types';
+import QueryJetpackScan from 'wp-calypso-client/components/data/query-jetpack-scan';
+import * as jetpackScanActions from 'wp-calypso-client/state/jetpack-scan/actions';
+import { JETPACK_SCAN_REQUEST } from 'wp-calypso-client/state/action-types';
 
 function setup( siteId ) {
 	// Set spy on action creator to verify it gets called when the component renders.

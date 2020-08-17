@@ -8,14 +8,14 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import { withApplySiteOffset, applySiteOffsetType } from 'components/site-offset';
-import { useLocalizedMoment } from 'components/localized-moment';
+import Notice from 'wp-calypso-client/components/notice';
+import { withApplySiteOffset, applySiteOffsetType } from 'wp-calypso-client/components/site-offset';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Type dependencies
  */
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 interface ConnectedProps {
 	applySiteOffset: applySiteOffsetType;

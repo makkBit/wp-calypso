@@ -7,7 +7,7 @@ import debug from 'debug';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 
 const referDebug = debug( 'calypso:analytics:refer' );
 

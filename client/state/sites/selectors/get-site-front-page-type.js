@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getSiteOption } from 'state/sites/selectors';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns the front page type.

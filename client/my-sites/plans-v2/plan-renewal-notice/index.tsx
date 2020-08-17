@@ -9,14 +9,14 @@ import React, { FunctionComponent, ReactElement } from 'react';
  */
 import { OFFER_RESET_SUPPORT_PAGE, PLAN_RENEWAL_RECOMMENDATION } from '../constants';
 import { isEligibleForRenewalAtOldRate, slugToSelectorProduct } from '../utils';
-import ExternalLink from 'components/external-link';
-import { useLocalizedMoment } from 'components/localized-moment';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Type dependencies
  */
 
-import type { Purchase } from 'lib/purchases/types';
+import type { Purchase } from 'wp-calypso-client/lib/purchases/types';
 
 type Props = {
 	purchase: Purchase;

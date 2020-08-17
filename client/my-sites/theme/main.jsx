@@ -6,9 +6,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import i18n, { localize } from 'i18n-calypso';
 import classNames from 'classnames';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import titlecase from 'to-title-case';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { head, split } from 'lodash';
 import photon from 'photon';
 import page from 'page';
@@ -16,32 +16,32 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import QueryCanonicalTheme from 'components/data/query-canonical-theme';
-import Main from 'components/main';
-import HeaderCake from 'components/header-cake';
-import SectionHeader from 'components/section-header';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import QueryCanonicalTheme from 'wp-calypso-client/components/data/query-canonical-theme';
+import Main from 'wp-calypso-client/components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import ThemeDownloadCard from './theme-download-card';
-import ThemePreview from 'my-sites/themes/theme-preview';
-import UpsellNudge from 'blocks/upsell-nudge';
+import ThemePreview from 'wp-calypso-client/my-sites/themes/theme-preview';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 import { Button, Card } from '@automattic/components';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import isVipSite from 'state/selectors/is-vip-site';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { isUserPaid } from 'state/purchases/selectors';
-import ThanksModal from 'my-sites/themes/thanks-modal';
-import AutoLoadingHomepageModal from 'my-sites/themes/auto-loading-homepage-modal';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { isUserPaid } from 'wp-calypso-client/state/purchases/selectors';
+import ThanksModal from 'wp-calypso-client/my-sites/themes/thanks-modal';
+import AutoLoadingHomepageModal from 'wp-calypso-client/my-sites/themes/auto-loading-homepage-modal';
 
-import QueryActiveTheme from 'components/data/query-active-theme';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import ThemesSiteSelectorModal from 'my-sites/themes/themes-site-selector-modal';
-import { connectOptions } from 'my-sites/themes/theme-options';
+import QueryActiveTheme from 'wp-calypso-client/components/data/query-active-theme';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import ThemesSiteSelectorModal from 'wp-calypso-client/my-sites/themes/themes-site-selector-modal';
+import { connectOptions } from 'wp-calypso-client/my-sites/themes/theme-options';
 import {
 	isThemeActive,
 	isThemePremium,
@@ -52,18 +52,21 @@ import {
 	getThemeDetailsUrl,
 	getThemeRequestErrors,
 	getThemeForumUrl,
-} from 'state/themes/selectors';
-import { getBackPath } from 'state/themes/themes-ui/selectors';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import DocumentHead from 'components/data/document-head';
-import { decodeEntities, preventWidows } from 'lib/formatting';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { setThemePreviewOptions } from 'state/themes/actions';
+} from 'wp-calypso-client/state/themes/selectors';
+import { getBackPath } from 'wp-calypso-client/state/themes/themes-ui/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { decodeEntities, preventWidows } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setThemePreviewOptions } from 'wp-calypso-client/state/themes/actions';
 import ThemeNotFoundError from './theme-not-found-error';
 import ThemeFeaturesCard from './theme-features-card';
-import { FEATURE_UNLIMITED_PREMIUM_THEMES, PLAN_PREMIUM } from 'lib/plans/constants';
-import { hasFeature } from 'state/sites/plans/selectors';
-import getPreviousRoute from 'state/selectors/get-previous-route';
+import {
+	FEATURE_UNLIMITED_PREMIUM_THEMES,
+	PLAN_PREMIUM,
+} from 'wp-calypso-client/lib/plans/constants';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import getPreviousRoute from 'wp-calypso-client/state/selectors/get-previous-route';
 
 /**
  * Style dependencies
@@ -339,7 +342,10 @@ class ThemeSheet extends React.Component {
 		return (
 			<div className="theme__sheet-content">
 				{ config.isEnabled( 'jitms' ) && this.props.siteSlug && (
-					<AsyncLoad require="blocks/jitm" messagePath={ 'calypso:theme:admin_notices' } />
+					<AsyncLoad
+						require="wp-calypso-client/blocks/jitm"
+						messagePath={ 'calypso:theme:admin_notices' }
+					/>
 				) }
 				{ this.renderSectionNav( section ) }
 				{ activeSection }

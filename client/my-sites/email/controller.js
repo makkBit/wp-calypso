@@ -7,10 +7,10 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import EmailForwarding from 'my-sites/email/email-forwarding';
-import EmailManagement from 'my-sites/email/email-management';
-import { emailManagementAddGSuiteUsers } from 'my-sites/email/paths';
-import GSuiteAddUsers from 'my-sites/email/gsuite-add-users';
+import EmailForwarding from 'wp-calypso-client/my-sites/email/email-forwarding';
+import EmailManagement from 'wp-calypso-client/my-sites/email/email-management';
+import { emailManagementAddGSuiteUsers } from 'wp-calypso-client/my-sites/email/paths';
+import GSuiteAddUsers from 'wp-calypso-client/my-sites/email/gsuite-add-users';
 
 export default {
 	emailManagementAddGSuiteUsers( pageContext, next ) {

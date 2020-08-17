@@ -10,21 +10,21 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import PluginsActions from 'lib/plugins/actions';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
 import { Button } from '@automattic/components';
-import InfoPopover from 'components/info-popover';
-import ExternalLink from 'components/external-link';
-import { getSiteFileModDisableReason, isMainNetworkSite } from 'lib/site/utils';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import QuerySiteConnectionStatus from 'components/data/query-site-connection-status';
-import getSiteConnectionStatus from 'state/selectors/get-site-connection-status';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
-import { localizeUrl } from 'lib/i18n-utils';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { getSiteFileModDisableReason, isMainNetworkSite } from 'wp-calypso-client/lib/site/utils';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import QuerySiteConnectionStatus from 'wp-calypso-client/components/data/query-site-connection-status';
+import getSiteConnectionStatus from 'wp-calypso-client/state/selectors/get-site-connection-status';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 import { isCompatiblePlugin } from '../plugin-compatibility';
 
 /**

@@ -9,32 +9,35 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import QuerySites from 'components/data/query-sites';
-import QueryProductsList from 'components/data/query-products-list';
-import QuerySitePlans from 'components/data/query-site-plans';
+import Main from 'wp-calypso-client/components/main';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
 import { CompactCard } from '@automattic/components';
-import { getCurrentUserCurrencyCode, isUserLoggedIn } from 'state/current-user/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import {
+	getCurrentUserCurrencyCode,
+	isUserLoggedIn,
+} from 'wp-calypso-client/state/current-user/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 import {
 	getProductsList,
 	getProductDisplayCost,
 	getProductCost,
 	isProductsListFetching,
-} from 'state/products-list/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/products-list/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { localize } from 'i18n-calypso';
 import {
 	isRequestingSitePlans,
 	getPlansBySiteId,
 	getSitePlanRawPrice,
 	getPlanDiscountedRawPrice,
-} from 'state/sites/plans/selectors';
+} from 'wp-calypso-client/state/sites/plans/selectors';
 import { ConciergeQuickstartSession } from './concierge-quickstart-session';
 import { ConciergeSupportSession } from './concierge-support-session';
 import { PlanUpgradeUpsell } from './plan-upgrade-upsell';
-import getUpgradePlanSlugFromPath from 'state/selectors/get-upgrade-plan-slug-from-path';
+import getUpgradePlanSlugFromPath from 'wp-calypso-client/state/selectors/get-upgrade-plan-slug-from-path';
 
 /**
  * Style dependencies

@@ -10,11 +10,11 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Dialog } from '@automattic/components';
-import CancelAutoRenewalForm from 'components/marketing-survey/cancel-auto-renewal-form';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { isDomainRegistration, isPlan } from 'lib/products-values';
-import isSiteAtomic from 'state/selectors/is-site-automated-transfer';
-import { getSite } from 'state/sites/selectors';
+import CancelAutoRenewalForm from 'wp-calypso-client/components/marketing-survey/cancel-auto-renewal-form';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { isDomainRegistration, isPlan } from 'wp-calypso-client/lib/products-values';
+import isSiteAtomic from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
 import './style.scss';
 
 const DIALOG = {

@@ -15,7 +15,7 @@ import React from 'react';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 
 class HelpModal extends React.Component {
 	static propTypes = {

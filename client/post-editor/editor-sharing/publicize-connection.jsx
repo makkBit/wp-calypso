@@ -6,28 +6,28 @@ import { localize } from 'i18n-calypso';
 import React from 'react';
 import { connect } from 'react-redux';
 import { includes } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import FormCheckbox from 'components/forms/form-checkbox';
-import PostMetadata from 'lib/post-metadata';
-import { addSiteFragment } from 'lib/route';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { updatePostMetadata, deletePostMetadata } from 'state/posts/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
+import { addSiteFragment } from 'wp-calypso-client/lib/route';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { updatePostMetadata, deletePostMetadata } from 'wp-calypso-client/state/posts/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
 import {
 	getKeyringConnectionById,
 	isKeyringConnectionsFetching,
-} from 'state/sharing/keyring/selectors';
-import QueryKeyringConnections from 'components/data/query-keyring-connections';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/state/sharing/keyring/selectors';
+import QueryKeyringConnections from 'wp-calypso-client/components/data/query-keyring-connections';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export class EditorSharingPublicizeConnection extends React.Component {
 	static propTypes = {

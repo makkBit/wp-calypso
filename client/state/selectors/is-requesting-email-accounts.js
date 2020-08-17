@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { get } from 'lodash';
-import 'state/email-accounts/init';
+import 'wp-calypso-client/state/email-accounts/init';
 
 /**
  * Determines whether the list of email accounts is being requested.

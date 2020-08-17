@@ -9,11 +9,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Gravatar from 'components/gravatar';
-import QueryPostLikes from 'components/data/query-post-likes';
-import { countPostLikes } from 'state/posts/selectors/count-post-likes';
-import { getPostLikes } from 'state/posts/selectors/get-post-likes';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import QueryPostLikes from 'wp-calypso-client/components/data/query-post-likes';
+import { countPostLikes } from 'wp-calypso-client/state/posts/selectors/count-post-likes';
+import { getPostLikes } from 'wp-calypso-client/state/posts/selectors/get-post-likes';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

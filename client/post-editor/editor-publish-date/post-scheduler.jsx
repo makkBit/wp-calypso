@@ -10,11 +10,11 @@ import moment from 'moment-timezone';
 /**
  * Internal dependencies
  */
-import PostSchedule from 'components/post-schedule';
-import QueryPosts from 'components/data/query-posts';
-import * as postUtils from 'state/posts/utils';
-import { timezone, gmtOffset } from 'lib/site/utils';
-import { getPostsForQueryIgnoringPage } from 'state/posts/selectors';
+import PostSchedule from 'wp-calypso-client/components/post-schedule';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import * as postUtils from 'wp-calypso-client/state/posts/utils';
+import { timezone, gmtOffset } from 'wp-calypso-client/lib/site/utils';
+import { getPostsForQueryIgnoringPage } from 'wp-calypso-client/state/posts/selectors';
 
 const PostScheduleWithOtherPostsIndicated = connect( ( state, { site, query } ) => ( {
 	posts: getPostsForQueryIgnoringPage( state, get( site, 'ID' ), query ) || [],

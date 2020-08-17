@@ -11,21 +11,21 @@ import titlecase from 'to-title-case';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import DocumentHead from 'components/data/document-head';
-import urlSearch from 'lib/url-search';
-import Main from 'components/main';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import urlSearch from 'wp-calypso-client/lib/url-search';
+import Main from 'wp-calypso-client/components/main';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
 import PageList from './page-list';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import Search from 'components/search';
-import SectionNav from 'components/section-nav';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import { mapPostStatus as mapStatus } from 'lib/route';
-import { POST_STATUSES } from 'state/posts/constants';
-import { getPostTypeLabel } from 'state/post-types/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import Search from 'wp-calypso-client/components/search';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { mapPostStatus as mapStatus } from 'wp-calypso-client/lib/route';
+import { POST_STATUSES } from 'wp-calypso-client/state/posts/constants';
+import { getPostTypeLabel } from 'wp-calypso-client/state/post-types/selectors';
 
 /**
  * Style dependencies

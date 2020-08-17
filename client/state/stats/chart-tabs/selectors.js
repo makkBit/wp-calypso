@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { QUERY_FIELDS } from 'state/stats/chart-tabs/constants';
+import { QUERY_FIELDS } from 'wp-calypso-client/state/stats/chart-tabs/constants';
 
-import 'state/stats/init';
+import 'wp-calypso-client/state/stats/init';
 
 const EMPTY_RESULT = [];
 

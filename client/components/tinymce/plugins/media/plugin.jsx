@@ -7,32 +7,35 @@ import React from 'react';
 import tinymce from 'tinymce/tinymce';
 import { assign, debounce, find, findLast, pick, values } from 'lodash';
 import i18n from 'i18n-calypso';
-import { parse, stringify } from 'lib/shortcode';
+import { parse, stringify } from 'wp-calypso-client/lib/shortcode';
 import closest from 'component-closest';
 
 /**
  * Internal dependencies
  */
-import * as MediaConstants from 'lib/media/constants';
-import { getThumbnailSizeDimensions } from 'lib/media/utils';
-import { deserialize } from 'lib/media-serialization';
-import MediaMarkup from 'post-editor/media-modal/markup';
-import MediaStore from 'lib/media/store';
-import EditorMediaModal from 'post-editor/editor-media-modal';
-import notices from 'notices';
+import * as MediaConstants from 'wp-calypso-client/lib/media/constants';
+import { getThumbnailSizeDimensions } from 'wp-calypso-client/lib/media/utils';
+import { deserialize } from 'wp-calypso-client/lib/media-serialization';
+import MediaMarkup from 'wp-calypso-client/post-editor/media-modal/markup';
+import MediaStore from 'wp-calypso-client/lib/media/store';
+import EditorMediaModal from 'wp-calypso-client/post-editor/editor-media-modal';
+import notices from 'wp-calypso-client/notices';
 import TinyMCEDropZone from './drop-zone';
 import restrictSize from './restrict-size';
-import config from 'config';
-import { getSelectedSite } from 'state/ui/selectors';
-import { setEditorMediaModalView } from 'state/editor/actions';
-import { unblockSave } from 'state/editor/save-blockers/actions';
-import { getEditorRawContent, isEditorSaveBlocked } from 'state/editor/selectors';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { renderWithReduxStore } from 'lib/react-helpers';
-import Gridicon from 'components/gridicon';
-import { clearMediaItemErrors, setMediaLibrarySelectedItems } from 'state/media/actions';
-import { fetchMediaItem } from 'state/media/thunks';
-import getMediaItem from 'state/selectors/get-media-item';
+import config from 'wp-calypso-client/config';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
+import { unblockSave } from 'wp-calypso-client/state/editor/save-blockers/actions';
+import { getEditorRawContent, isEditorSaveBlocked } from 'wp-calypso-client/state/editor/selectors';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { renderWithReduxStore } from 'wp-calypso-client/lib/react-helpers';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import {
+	clearMediaItemErrors,
+	setMediaLibrarySelectedItems,
+} from 'wp-calypso-client/state/media/actions';
+import { fetchMediaItem } from 'wp-calypso-client/state/media/thunks';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
 
 /**
  * Module variables

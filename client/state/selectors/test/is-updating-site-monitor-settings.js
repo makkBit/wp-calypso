@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isUpdatingSiteMonitorSettings from 'state/selectors/is-updating-site-monitor-settings';
+import isUpdatingSiteMonitorSettings from 'wp-calypso-client/state/selectors/is-updating-site-monitor-settings';
 
 describe( 'isUpdatingSiteMonitorSettings()', () => {
 	const siteId = 2916284;

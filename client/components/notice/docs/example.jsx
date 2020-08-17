@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import NoticeAction from 'components/notice/notice-action';
-import Notice from 'components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import Notice from 'wp-calypso-client/components/notice';
 
 class Notices extends React.PureComponent {
 	static displayName = 'Notice';

@@ -7,20 +7,20 @@ import { connect } from 'react-redux';
 import { get, isUndefined } from 'lodash';
 import classNames from 'classnames';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import { getPostTypeTaxonomy } from 'state/post-types/taxonomies/selectors';
-import { countFoundTermsForQuery, getTerm } from 'state/terms/selectors';
-import { getSiteSettings } from 'state/site-settings/selectors';
-import { decodeEntities } from 'lib/formatting';
-import { recordGoogleEvent, bumpStat } from 'state/analytics/actions';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getPostTypeTaxonomy } from 'wp-calypso-client/state/post-types/taxonomies/selectors';
+import { countFoundTermsForQuery, getTerm } from 'wp-calypso-client/state/terms/selectors';
+import { getSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { recordGoogleEvent, bumpStat } from 'wp-calypso-client/state/analytics/actions';
 import { CompactCard } from '@automattic/components';
-import QueryTerms from 'components/data/query-terms';
-import QuerySiteSettings from 'components/data/query-site-settings';
+import QueryTerms from 'wp-calypso-client/components/data/query-terms';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
 
 const TaxonomyCard = ( {
 	count,

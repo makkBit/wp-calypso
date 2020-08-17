@@ -11,13 +11,13 @@ import debugFactory from 'debug';
  * Internal dependencies
  */
 import { Card, Dialog, Suggestions } from '@automattic/components';
-import SearchCard from 'components/search-card';
-import FormButton from 'components/forms/form-button';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { saveDomainIpsTag } from 'state/domains/transfer/actions';
-import getGainingRegistrar from 'state/selectors/get-gaining-registrar';
-import getIpsTagSaveStatus from 'state/selectors/get-ips-tag-save-status';
+import SearchCard from 'wp-calypso-client/components/search-card';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { saveDomainIpsTag } from 'wp-calypso-client/state/domains/transfer/actions';
+import getGainingRegistrar from 'wp-calypso-client/state/selectors/get-gaining-registrar';
+import getIpsTagSaveStatus from 'wp-calypso-client/state/selectors/get-ips-tag-save-status';
 
 const debug = debugFactory( 'calypso:domains:select-ips-tag' );
 

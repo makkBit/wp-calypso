@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { keyToString } from 'reader/post-key';
+import { keyToString } from 'wp-calypso-client/reader/post-key';
 
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 export default function isReaderCardExpanded( state, postKey ) {
 	const key = keyToString( postKey );

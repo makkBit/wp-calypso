@@ -8,8 +8,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import DomainPrimaryFlag from 'my-sites/domains/domain-management/components/domain/primary-flag';
-import SectionHeader from 'components/section-header';
+import DomainPrimaryFlag from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/primary-flag';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
 class Header extends React.Component {
 	static propTypes = {

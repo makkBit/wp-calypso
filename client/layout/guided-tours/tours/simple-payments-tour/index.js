@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React, { Fragment } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
@@ -16,8 +16,8 @@ import {
 	SiteLink,
 	Link,
 	Quit,
-} from 'layout/guided-tours/config-elements';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export const SimplePaymentsTour = makeTour(
 	<Tour { ...meta }>

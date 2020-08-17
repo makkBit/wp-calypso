@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { addMedia as addMediaThunk } from 'state/media/thunks/add-media';
-import { uploadMedia } from 'state/media/thunks/upload-media';
-import { getFileUploader } from 'lib/media/utils';
+import { addMedia as addMediaThunk } from 'wp-calypso-client/state/media/thunks/add-media';
+import { uploadMedia } from 'wp-calypso-client/state/media/thunks/upload-media';
+import { getFileUploader } from 'wp-calypso-client/lib/media/utils';
 
 jest.mock( 'lib/media/utils', () => ( { getFileUploader: jest.fn() } ) );
 jest.mock( 'state/media/thunks/upload-media', () => ( {

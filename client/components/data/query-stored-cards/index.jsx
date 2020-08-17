@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isFetchingStoredCards } from 'state/stored-cards/selectors';
-import { fetchStoredCards } from 'state/stored-cards/actions';
+import { isFetchingStoredCards } from 'wp-calypso-client/state/stored-cards/selectors';
+import { fetchStoredCards } from 'wp-calypso-client/state/stored-cards/actions';
 
 class QueryStoredCards extends Component {
 	UNSAFE_componentWillMount() {

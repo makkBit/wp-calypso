@@ -8,7 +8,7 @@ import deepFreeze from 'deep-freeze';
  * Internal dependencies
  */
 import reducer, { queries, queryRequests } from '../reducer';
-import TermQueryManager from 'lib/query-manager/term';
+import TermQueryManager from 'wp-calypso-client/lib/query-manager/term';
 import {
 	DESERIALIZE,
 	TERM_REMOVE,
@@ -17,8 +17,8 @@ import {
 	TERMS_REQUEST_FAILURE,
 	TERMS_REQUEST_SUCCESS,
 	SERIALIZE,
-} from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 /**
  * Test Data

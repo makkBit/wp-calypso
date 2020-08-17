@@ -11,12 +11,12 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import ReaderAvatar from 'blocks/reader-avatar';
-import ReaderAuthorLink from 'blocks/reader-author-link';
-import ReaderSiteStreamLink from 'blocks/reader-site-stream-link';
-import ReaderFollowButton from 'reader/follow-button';
-import { getStreamUrl } from 'reader/route';
-import { areEqualIgnoringWhitespaceAndCase } from 'lib/string';
+import ReaderAvatar from 'wp-calypso-client/blocks/reader-avatar';
+import ReaderAuthorLink from 'wp-calypso-client/blocks/reader-author-link';
+import ReaderSiteStreamLink from 'wp-calypso-client/blocks/reader-site-stream-link';
+import ReaderFollowButton from 'wp-calypso-client/reader/follow-button';
+import { getStreamUrl } from 'wp-calypso-client/reader/route';
+import { areEqualIgnoringWhitespaceAndCase } from 'wp-calypso-client/lib/string';
 import AuthorCompactProfilePlaceholder from './placeholder';
 
 /**

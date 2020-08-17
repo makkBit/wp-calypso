@@ -8,9 +8,9 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormRadioWithThumbnail from 'components/forms/form-radio-with-thumbnail';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormRadioWithThumbnail from 'wp-calypso-client/components/forms/form-radio-with-thumbnail';
 
 /**
  * Style dependencies

@@ -9,8 +9,8 @@ const debug = debugFactory( 'calypso:viewers:store' );
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 let _fetchingViewers = {},
 	_viewersBySite = {},

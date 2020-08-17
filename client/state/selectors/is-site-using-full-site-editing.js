@@ -6,8 +6,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import getRawSite from 'state/selectors/get-raw-site';
-import { hasStaticFrontPage } from 'state/sites/selectors';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
+import { hasStaticFrontPage } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Checks if a site is using the new Full Site Editing experience

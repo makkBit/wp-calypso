@@ -12,14 +12,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import Gridicon from 'components/gridicon';
-import HeaderCake from 'components/header-cake';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import MigrateButton from './migrate-button.jsx';
-import SitesBlock from 'my-sites/migrate/components/sites-block';
-import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'lib/plans/constants';
-import { planHasFeature } from 'lib/plans';
-import { recordTracksEvent } from 'state/analytics/actions';
+import SitesBlock from 'wp-calypso-client/my-sites/migrate/components/sites-block';
+import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'wp-calypso-client/lib/plans/constants';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

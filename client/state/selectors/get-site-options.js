@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import getRawSite from 'state/selectors/get-raw-site';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 
 const EMPTY_OPTIONS = Object.freeze( {} );
 

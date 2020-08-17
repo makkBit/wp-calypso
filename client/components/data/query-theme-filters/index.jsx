@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestThemeFilters } from 'state/themes/actions';
+import { requestThemeFilters } from 'wp-calypso-client/state/themes/actions';
 
 export class QueryThemeFilters extends Component {
 	static propTypes = {

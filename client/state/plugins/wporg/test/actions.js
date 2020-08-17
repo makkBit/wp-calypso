@@ -9,8 +9,8 @@ import thunk from 'redux-thunk';
  */
 import { fetchPluginData } from '../actions';
 import wporgReducer from '../reducer';
-import { combineReducers } from 'state/utils';
-import * as wporg from 'lib/wporg';
+import { combineReducers } from 'wp-calypso-client/state/utils';
+import * as wporg from 'wp-calypso-client/lib/wporg';
 
 jest.mock( 'lib/wporg', () => ( {
 	fetchPluginInformation: jest.fn( ( slug ) => Promise.resolve( { slug } ) ),

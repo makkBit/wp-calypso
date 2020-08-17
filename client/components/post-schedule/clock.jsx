@@ -12,10 +12,10 @@ import 'moment-timezone'; // monkey patches the existing moment.js
 /**
  * Internal dependencies
  */
-import SegmentedControl from 'components/segmented-control';
-import InfoPopover from 'components/info-popover';
-import { withLocalizedMoment } from 'components/localized-moment';
-import getSiteSetting from 'state/selectors/get-site-setting';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import getSiteSetting from 'wp-calypso-client/state/selectors/get-site-setting';
 
 /**
  * Local dependencies

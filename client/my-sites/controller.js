@@ -9,33 +9,40 @@ import { get, noop, some, startsWith, uniq } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { requestSite } from 'state/sites/actions';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 import {
 	getSite,
 	getSiteAdminUrl,
 	getSiteSlug,
 	isJetpackModuleActive,
 	isJetpackSite,
-} from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { setSelectedSiteId, setSection, setAllSitesSelected } from 'state/ui/actions';
-import { savePreference } from 'state/preferences/actions';
-import { hasReceivedRemotePreferences, getPreference } from 'state/preferences/selectors';
-import NavigationComponent from 'my-sites/navigation';
-import { addQueryArgs, getSiteFragment, sectionify } from 'lib/route';
-import notices from 'notices';
-import config from 'config';
-import { recordPageView } from 'lib/analytics/page-view';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
-import getPrimaryDomainBySiteId from 'state/selectors/get-primary-domain-by-site-id';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import getSiteId from 'state/selectors/get-site-id';
-import { getCurrentUser } from 'state/current-user/selectors';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isSiteMigrationInProgress from 'state/selectors/is-site-migration-in-progress';
-import canCurrentUser from 'state/selectors/can-current-user';
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	setSelectedSiteId,
+	setSection,
+	setAllSitesSelected,
+} from 'wp-calypso-client/state/ui/actions';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import {
+	hasReceivedRemotePreferences,
+	getPreference,
+} from 'wp-calypso-client/state/preferences/selectors';
+import NavigationComponent from 'wp-calypso-client/my-sites/navigation';
+import { addQueryArgs, getSiteFragment, sectionify } from 'wp-calypso-client/lib/route';
+import notices from 'wp-calypso-client/notices';
+import config from 'wp-calypso-client/config';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import getPrimaryDomainBySiteId from 'wp-calypso-client/state/selectors/get-primary-domain-by-site-id';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isSiteMigrationInProgress from 'wp-calypso-client/state/selectors/is-site-migration-in-progress';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import {
 	domainManagementContactsPrivacy,
 	domainManagementDns,
@@ -48,19 +55,19 @@ import {
 	domainManagementTransferOut,
 	domainManagementTransferToOtherSite,
 	domainManagementRoot,
-} from 'my-sites/domains/paths';
+} from 'wp-calypso-client/my-sites/domains/paths';
 import {
 	emailManagement,
 	emailManagementForwarding,
 	emailManagementAddGSuiteUsers,
 	emailManagementNewGSuiteAccount,
-} from 'my-sites/email/paths';
-import SitesComponent from 'my-sites/sites';
-import { warningNotice } from 'state/notices/actions';
-import { makeLayout, render as clientRender } from 'controller';
-import NoSitesMessage from 'components/empty-content/no-sites-message';
-import EmptyContentComponent from 'components/empty-content';
-import DomainOnly from 'my-sites/domains/domain-management/list/domain-only';
+} from 'wp-calypso-client/my-sites/email/paths';
+import SitesComponent from 'wp-calypso-client/my-sites/sites';
+import { warningNotice } from 'wp-calypso-client/state/notices/actions';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import NoSitesMessage from 'wp-calypso-client/components/empty-content/no-sites-message';
+import EmptyContentComponent from 'wp-calypso-client/components/empty-content';
+import DomainOnly from 'wp-calypso-client/my-sites/domains/domain-management/list/domain-only';
 
 /*
  * @FIXME Shorthand, but I might get rid of this.

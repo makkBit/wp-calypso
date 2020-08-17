@@ -6,13 +6,13 @@ import { compact } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import createSelector from 'lib/create-selector';
-import { decodeEntities } from 'lib/formatting';
-import { getSelectedSiteId, isSiteSection } from 'state/ui/selectors';
-import getSiteTitle from 'state/sites/selectors/get-site-title';
-import { getDocumentHeadTitle } from 'state/document-head/selectors/get-document-head-title';
-import { getDocumentHeadCappedUnreadCount } from 'state/document-head/selectors/get-document-head-capped-unread-count';
+import config from 'wp-calypso-client/config';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { getSelectedSiteId, isSiteSection } from 'wp-calypso-client/state/ui/selectors';
+import getSiteTitle from 'wp-calypso-client/state/sites/selectors/get-site-title';
+import { getDocumentHeadTitle } from 'wp-calypso-client/state/document-head/selectors/get-document-head-title';
+import { getDocumentHeadCappedUnreadCount } from 'wp-calypso-client/state/document-head/selectors/get-document-head-capped-unread-count';
 
 /**
  * Returns the formatted document title, based on the currently set title,

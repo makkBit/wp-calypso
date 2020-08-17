@@ -9,8 +9,8 @@ const debug = debugFactory( 'calypso:my-sites:people:log-store' );
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 let _errors = [],
 	_inProgress = [],

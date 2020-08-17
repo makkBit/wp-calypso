@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/jetpack/init';
 
 /**
  * Returns the Jetpack settings on a certain site.

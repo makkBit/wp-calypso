@@ -11,26 +11,26 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import Main from 'components/main';
-import EmptyContent from 'components/empty-content';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import PlansFeaturesMain from 'my-sites/plans-features-main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import PlansNavigation from 'my-sites/plans/navigation';
-import isSiteAutomatedTransferSelector from 'state/selectors/is-site-automated-transfer';
-import { isJetpackSite } from 'state/sites/selectors';
-import QueryContactDetailsCache from 'components/data/query-contact-details-cache';
-import withTrackingTool from 'lib/analytics/with-tracking-tool';
-import { getByPurchaseId } from 'state/purchases/selectors';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import CartData from 'components/data/cart';
-import { PerformanceTrackerStop } from 'lib/performance-tracking';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import Main from 'wp-calypso-client/components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import PlansFeaturesMain from 'wp-calypso-client/my-sites/plans-features-main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import PlansNavigation from 'wp-calypso-client/my-sites/plans/navigation';
+import isSiteAutomatedTransferSelector from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import QueryContactDetailsCache from 'wp-calypso-client/components/data/query-contact-details-cache';
+import withTrackingTool from 'wp-calypso-client/lib/analytics/with-tracking-tool';
+import { getByPurchaseId } from 'wp-calypso-client/state/purchases/selectors';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import CartData from 'wp-calypso-client/components/data/cart';
+import { PerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
 
 class Plans extends React.Component {
 	static propTypes = {

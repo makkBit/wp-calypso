@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 /**
  * Check if we have Reader unseen content

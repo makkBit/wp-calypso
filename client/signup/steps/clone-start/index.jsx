@@ -10,10 +10,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card, Button } from '@automattic/components';
-import { getSiteBySlug } from 'state/sites/selectors';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import { getSiteBySlug } from 'wp-calypso-client/state/sites/selectors';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

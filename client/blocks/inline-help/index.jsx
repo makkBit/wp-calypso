@@ -8,23 +8,26 @@ import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
 import debugFactory from 'debug';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import config from 'config';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getGlobalKeyboardShortcuts from 'lib/keyboard-shortcuts/global';
+import config from 'wp-calypso-client/config';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getGlobalKeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts/global';
 import { Button, RootChild } from '@automattic/components';
 import { isWithinBreakpoint } from '@automattic/viewport';
-import HappychatButton from 'components/happychat/button';
-import isHappychatOpen from 'state/happychat/selectors/is-happychat-open';
-import hasActiveHappychatSession from 'state/happychat/selectors/has-active-happychat-session';
-import AsyncLoad from 'components/async-load';
-import { showInlineHelpPopover, hideInlineHelpPopover } from 'state/inline-help/actions';
-import isInlineHelpPopoverVisible from 'state/inline-help/selectors/is-inline-help-popover-visible';
-import isInlineHelpVisible from 'state/selectors/is-inline-help-visible';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import isHappychatOpen from 'wp-calypso-client/state/happychat/selectors/is-happychat-open';
+import hasActiveHappychatSession from 'wp-calypso-client/state/happychat/selectors/has-active-happychat-session';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import {
+	showInlineHelpPopover,
+	hideInlineHelpPopover,
+} from 'wp-calypso-client/state/inline-help/actions';
+import isInlineHelpPopoverVisible from 'wp-calypso-client/state/inline-help/selectors/is-inline-help-popover-visible';
+import isInlineHelpVisible from 'wp-calypso-client/state/selectors/is-inline-help-visible';
 
 /**
  * Style dependencies
@@ -41,11 +44,19 @@ const globalKeyboardShortcuts = globalKeyBoardShortcutsEnabled
 const debug = debugFactory( 'calypso:inline-help' );
 
 const InlineHelpPopover = ( props ) => (
-	<AsyncLoad { ...props } require="blocks/inline-help/popover" placeholder={ null } />
+	<AsyncLoad
+		{ ...props }
+		require="wp-calypso-client/blocks/inline-help/popover"
+		placeholder={ null }
+	/>
 );
 
 const InlineHelpDialog = ( props ) => (
-	<AsyncLoad { ...props } require="blocks/inline-help/dialog" placeholder={ null } />
+	<AsyncLoad
+		{ ...props }
+		require="wp-calypso-client/blocks/inline-help/dialog"
+		placeholder={ null }
+	/>
 );
 
 class InlineHelp extends Component {
@@ -84,7 +95,7 @@ class InlineHelp extends Component {
 	// Preload the async chunk on mouse hover or touch start
 	preload = () => {
 		if ( ! this.preloaded ) {
-			asyncRequire( 'blocks/inline-help/popover' );
+			asyncRequire( 'wp-calypso-client/blocks/inline-help/popover' );
 			this.preloaded = true;
 		}
 	};

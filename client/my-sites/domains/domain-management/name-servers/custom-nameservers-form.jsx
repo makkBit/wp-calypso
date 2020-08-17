@@ -12,12 +12,16 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormFooter from 'my-sites/domains/domain-management/components/form-footer';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFooter from 'wp-calypso-client/my-sites/domains/domain-management/components/form-footer';
 import CustomNameserversRow from './custom-nameservers-row';
-import { change, remove } from 'lib/domains/nameservers';
-import { CHANGE_NAME_SERVERS_FINDING_OUT_NEW_NS } from 'lib/url/support';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import { change, remove } from 'wp-calypso-client/lib/domains/nameservers';
+import { CHANGE_NAME_SERVERS_FINDING_OUT_NEW_NS } from 'wp-calypso-client/lib/url/support';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 const MIN_NAMESERVER_LENGTH = 2;
 const MAX_NAMESERVER_LENGTH = 4;

@@ -4,17 +4,17 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import QueryLanguageNames from 'components/data/query-language-names';
-import getLocalizedLanguageNames from 'state/selectors/get-localized-language-names';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getCurrentNonDefaultLocale } from 'components/translator-invite/utils';
+import QueryLanguageNames from 'wp-calypso-client/components/data/query-language-names';
+import getLocalizedLanguageNames from 'wp-calypso-client/state/selectors/get-localized-language-names';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getCurrentNonDefaultLocale } from 'wp-calypso-client/components/translator-invite/utils';
 
 /**
  * Style dependencies

@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import { HAPPYCHAT_GROUP_WPCOM, HAPPYCHAT_GROUP_JPOP } from 'state/happychat/constants';
-import { isEnabled } from 'config';
-import { isJetpackSite, getSite } from 'state/sites/selectors';
-import { isATEnabled } from 'lib/automated-transfer';
-import { getSectionName } from 'state/ui/selectors';
+import {
+	HAPPYCHAT_GROUP_WPCOM,
+	HAPPYCHAT_GROUP_JPOP,
+} from 'wp-calypso-client/state/happychat/constants';
+import { isEnabled } from 'wp-calypso-client/config';
+import { isJetpackSite, getSite } from 'wp-calypso-client/state/sites/selectors';
+import { isATEnabled } from 'wp-calypso-client/lib/automated-transfer';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Grab the group or groups for happychat based on siteId

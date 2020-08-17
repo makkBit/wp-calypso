@@ -8,23 +8,23 @@ import ReactDom from 'react-dom';
 import closest from 'component-closest';
 import { localize } from 'i18n-calypso';
 import classnames from 'classnames';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import Emojify from 'components/emojify';
-import ReaderExcerpt from 'blocks/reader-excerpt';
-import ReaderVisitLink from 'blocks/reader-visit-link';
-import ReaderAuthorLink from 'blocks/reader-author-link';
-import { recordPermalinkClick } from 'reader/stats';
-import TimeSince from 'components/time-since';
-import ReaderFeaturedImage from 'blocks/reader-featured-image';
-import ReaderFeaturedVideo from 'blocks/reader-featured-video';
-import ReaderCombinedCardPostPlaceholder from 'blocks/reader-combined-card/placeholders/post';
-import { isAuthorNameBlocked } from 'reader/lib/author-name-blocklist';
-import QueryReaderPost from 'components/data/query-reader-post';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Emojify from 'wp-calypso-client/components/emojify';
+import ReaderExcerpt from 'wp-calypso-client/blocks/reader-excerpt';
+import ReaderVisitLink from 'wp-calypso-client/blocks/reader-visit-link';
+import ReaderAuthorLink from 'wp-calypso-client/blocks/reader-author-link';
+import { recordPermalinkClick } from 'wp-calypso-client/reader/stats';
+import TimeSince from 'wp-calypso-client/components/time-since';
+import ReaderFeaturedImage from 'wp-calypso-client/blocks/reader-featured-image';
+import ReaderFeaturedVideo from 'wp-calypso-client/blocks/reader-featured-video';
+import ReaderCombinedCardPostPlaceholder from 'wp-calypso-client/blocks/reader-combined-card/placeholders/post';
+import { isAuthorNameBlocked } from 'wp-calypso-client/reader/lib/author-name-blocklist';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
 
 class ReaderCombinedCardPost extends React.Component {
 	static propTypes = {

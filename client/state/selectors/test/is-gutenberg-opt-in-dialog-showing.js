@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import isGutenbergOptInDialogShowing from 'state/selectors/is-gutenberg-opt-in-dialog-showing';
+import isGutenbergOptInDialogShowing from 'wp-calypso-client/state/selectors/is-gutenberg-opt-in-dialog-showing';
 
 describe( 'isGutenbergOptInDialogShowing()', () => {
 	test( 'should return false if the value is not known', () => {

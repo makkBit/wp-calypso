@@ -11,13 +11,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import FormInputValidation from 'components/forms/form-input-validation';
-import { getCountryStates } from 'state/country-states/selectors';
-import QueryCountryStates from 'components/data/query-country-states';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import scrollIntoViewport from 'lib/scroll-into-viewport';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import { getCountryStates } from 'wp-calypso-client/state/country-states/selectors';
+import QueryCountryStates from 'wp-calypso-client/components/data/query-country-states';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import scrollIntoViewport from 'wp-calypso-client/lib/scroll-into-viewport';
 import Input from './input';
 
 class StateSelect extends PureComponent {

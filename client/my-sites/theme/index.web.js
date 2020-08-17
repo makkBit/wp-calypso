@@ -2,10 +2,10 @@
  * Internal dependencies
  */
 
-import config from 'config';
-import { makeLayout, redirectLoggedOut } from 'controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout, redirectLoggedOut } from 'wp-calypso-client/controller';
 import { details, fetchThemeDetailsData } from './controller';
-import { siteSelection } from 'my-sites/controller';
+import { siteSelection } from 'wp-calypso-client/my-sites/controller';
 
 function redirectToLoginIfSiteRequested( context, next ) {
 	if ( context.params.site_id ) {

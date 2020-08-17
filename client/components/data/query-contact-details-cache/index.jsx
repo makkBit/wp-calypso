@@ -10,10 +10,10 @@ import { isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
 
-import isRequestingContactDetailsCache from 'state/selectors/is-requesting-contact-details-cache';
-import { requestContactDetailsCache } from 'state/domains/management/actions';
+import isRequestingContactDetailsCache from 'wp-calypso-client/state/selectors/is-requesting-contact-details-cache';
+import { requestContactDetailsCache } from 'wp-calypso-client/state/domains/management/actions';
 
 class QueryContactDetailsCache extends Component {
 	UNSAFE_componentWillMount() {

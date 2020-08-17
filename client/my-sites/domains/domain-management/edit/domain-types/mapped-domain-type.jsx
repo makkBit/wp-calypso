@@ -8,34 +8,34 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import DomainStatus from '../card/domain-status';
-import { isExpiringSoon } from 'lib/domains/utils';
+import { isExpiringSoon } from 'wp-calypso-client/lib/domains/utils';
 import SubscriptionSettings from '../card/subscription-settings';
 import { recordPaymentSettingsClick } from '../payment-settings-analytics';
-import { WPCOM_DEFAULTS } from 'lib/domains/nameservers';
-import AutoRenewToggle from 'me/purchases/manage-purchase/auto-renew-toggle';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { isSubdomain, resolveDomainStatus } from 'lib/domains';
-import { MAP_EXISTING_DOMAIN, MAP_SUBDOMAIN } from 'lib/url/support';
-import RenewButton from 'my-sites/domains/domain-management/edit/card/renew-button';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { WPCOM_DEFAULTS } from 'wp-calypso-client/lib/domains/nameservers';
+import AutoRenewToggle from 'wp-calypso-client/me/purchases/manage-purchase/auto-renew-toggle';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { isSubdomain, resolveDomainStatus } from 'wp-calypso-client/lib/domains';
+import { MAP_EXISTING_DOMAIN, MAP_SUBDOMAIN } from 'wp-calypso-client/lib/url/support';
+import RenewButton from 'wp-calypso-client/my-sites/domains/domain-management/edit/card/renew-button';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getByPurchaseId,
 	isFetchingSitePurchases,
 	hasLoadedSitePurchasesFromServer,
-} from 'state/purchases/selectors';
+} from 'wp-calypso-client/state/purchases/selectors';
 import ExpiringCreditCard from '../card/notices/expiring-credit-card';
 import ExpiringSoon from '../card/notices/expiring-soon';
 import DomainManagementNavigation from '../navigation';
 import DomainManagementNavigationEnhanced from '../navigation/enhanced';
 import { DomainExpiryOrRenewal, WrapDomainStatusButtons } from './helpers';
-import { hasPendingGSuiteUsers } from 'lib/gsuite';
-import PendingGSuiteTosNotice from 'my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice';
+import { hasPendingGSuiteUsers } from 'wp-calypso-client/lib/gsuite';
+import PendingGSuiteTosNotice from 'wp-calypso-client/my-sites/domains/components/domain-warnings/pending-gsuite-tos-notice';
 
 class MappedDomainType extends React.Component {
 	renderSettingUpNameservers() {

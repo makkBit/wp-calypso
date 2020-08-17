@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import { concat, difference, flatten, map } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
@@ -15,11 +15,11 @@ import Gridicon from 'components/gridicon';
 import EditPackage from './edit-package';
 import checkInputs from './modal-errors';
 import { Dialog } from '@automattic/components';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormButton from 'components/forms/form-button';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 import inputFilters from './input-filters';
 import PredefinedPackages from './predefined-packages';
-import SimplifiedSegmentedControl from 'components/segmented-control/simplified';
+import SimplifiedSegmentedControl from 'wp-calypso-client/components/segmented-control/simplified';
 import { getPredefinedPackagesChangesSummary } from '../../state/packages/selectors';
 
 const AddPackageDialog = ( props ) => {

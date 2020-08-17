@@ -2,12 +2,12 @@
  * Internal dependencies
  */
 
-import canCurrentUser from 'state/selectors/can-current-user';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 
-import { isJetpackSite } from 'state/sites/selectors';
-import isMappedDomainSite from 'state/selectors/is-mapped-domain-site';
-import isSiteOnFreePlan from 'state/selectors/is-site-on-free-plan';
-import isVipSite from 'state/selectors/is-vip-site';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isMappedDomainSite from 'wp-calypso-client/state/selectors/is-mapped-domain-site';
+import isSiteOnFreePlan from 'wp-calypso-client/state/selectors/is-site-on-free-plan';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
 /**
  * Returns true if the current user is eligible to participate in the free to paid plan upsell for the site
  *

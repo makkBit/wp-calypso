@@ -1,15 +1,15 @@
 /**
  * External dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React, { Fragment } from 'react';
 
 /**
  * Internal dependencies
  */
 import meta from './meta';
-import PluginsStore from 'lib/plugins/store';
-import { getSelectedSite } from 'state/ui/selectors';
+import PluginsStore from 'wp-calypso-client/lib/plugins/store';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 import {
 	ButtonRow,
 	Continue,
@@ -18,7 +18,7 @@ import {
 	SiteLink,
 	Step,
 	Tour,
-} from 'layout/guided-tours/config-elements';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
 
 const JETPACK_TOGGLE_SELECTOR = '.plugin-item-jetpack .form-toggle__switch';
 

@@ -11,7 +11,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import afterLayoutFlush from 'lib/after-layout-flush';
+import afterLayoutFlush from 'wp-calypso-client/lib/after-layout-flush';
 
 /**
  * Style dependencies

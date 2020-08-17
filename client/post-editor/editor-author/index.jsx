@@ -10,16 +10,16 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import Gravatar from 'components/gravatar';
-import AuthorSelector from 'blocks/author-selector';
-import { hasTouch } from 'lib/touch-detect';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId, isEditorNewPost } from 'state/editor/selectors';
-import { getSite } from 'state/sites/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
-import { getCurrentUser } from 'state/current-user/selectors';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import AuthorSelector from 'wp-calypso-client/blocks/author-selector';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId, isEditorNewPost } from 'wp-calypso-client/state/editor/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

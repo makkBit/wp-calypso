@@ -9,26 +9,26 @@ import styled from '@emotion/styled';
 /**
  * Internal dependencies
  */
-import { ReduxDispatch } from 'state/redux-store';
-import { recordTracksEvent } from 'state/analytics/actions';
-import QueryUserPurchases from 'components/data/query-user-purchases';
+import { ReduxDispatch } from 'wp-calypso-client/state/redux-store';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
 import { Button } from '@automattic/components';
-import { getRenewalItemFromProduct } from 'lib/cart-values/cart-items';
-import { getName, isExpired, isRenewing } from 'lib/purchases';
-import { isPlan, isDomainRegistration } from 'lib/products-values';
-import SectionHeader from 'components/section-header';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { getRenewalItemFromProduct } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { getName, isExpired, isRenewing } from 'wp-calypso-client/lib/purchases';
+import { isPlan, isDomainRegistration } from 'wp-calypso-client/lib/products-values';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	getRenewableSitePurchases,
 	hasLoadedUserPurchasesFromServer,
-} from 'state/purchases/selectors';
+} from 'wp-calypso-client/state/purchases/selectors';
 import UpcomingRenewalsDialog, {
 	Purchase,
-} from 'me/purchases/upcoming-renewals/upcoming-renewals-dialog';
-import { MockResponseCart } from 'my-sites/checkout/composite-checkout/wpcom/components/secondary-cart-promotions';
-import { useLocalizedMoment } from 'components/localized-moment';
+} from 'wp-calypso-client/me/purchases/upcoming-renewals/upcoming-renewals-dialog';
+import { MockResponseCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/secondary-cart-promotions';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 const OtherPurchasesLink = styled.button`
 	background: transparent;

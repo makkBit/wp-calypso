@@ -1,9 +1,13 @@
 /**
  * Internal dependencies
  */
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
-import 'state/domains/init';
+import 'wp-calypso-client/state/domains/init';
 
 export const recordAddDomainButtonClick = ( domainName, section ) =>
 	composeAnalytics(

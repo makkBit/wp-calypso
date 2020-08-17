@@ -6,10 +6,10 @@ import { assign } from 'lodash';
 /**
  * Internal dependencies
  */
-import { createTransientMedia } from 'lib/media/utils';
-import { dispatchFluxUpdateMediaItem } from 'state/media/utils/flux-adapter';
-import { editMediaItem } from 'state/media/actions';
-import getMediaItem from 'state/selectors/get-media-item';
+import { createTransientMedia } from 'wp-calypso-client/lib/media/utils';
+import { dispatchFluxUpdateMediaItem } from 'wp-calypso-client/state/media/utils/flux-adapter';
+import { editMediaItem } from 'wp-calypso-client/state/media/actions';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
 
 /**
  * Redux thunk to edit a media item.

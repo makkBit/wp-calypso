@@ -6,20 +6,23 @@ import { map, truncate } from 'lodash';
 /**
  * Internal dependencies
  */
-import { READER_FEED_SEARCH_REQUEST, READER_FEED_REQUEST } from 'state/reader/action-types';
-import { receiveFeedSearch } from 'state/reader/feed-searches/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
+import {
+	READER_FEED_SEARCH_REQUEST,
+	READER_FEED_REQUEST,
+} from 'wp-calypso-client/state/reader/action-types';
+import { receiveFeedSearch } from 'wp-calypso-client/state/reader/feed-searches/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { translate } from 'i18n-calypso';
-import queryKey from 'state/reader/feed-searches/query-key';
+import queryKey from 'wp-calypso-client/state/reader/feed-searches/query-key';
 import {
 	receiveReaderFeedRequestSuccess,
 	receiveReaderFeedRequestFailure,
-} from 'state/reader/feeds/actions';
-import { noRetry } from 'state/data-layer/wpcom-http/pipeline/retry-on-failure/policies';
+} from 'wp-calypso-client/state/reader/feeds/actions';
+import { noRetry } from 'wp-calypso-client/state/data-layer/wpcom-http/pipeline/retry-on-failure/policies';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function fromApi( apiResponse ) {
 	const feeds = map( apiResponse.feeds, ( feed ) => ( {

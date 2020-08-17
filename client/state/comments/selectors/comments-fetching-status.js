@@ -6,11 +6,11 @@ import { size } from 'lodash';
 /**
  * Internal dependencies
  */
-import { fetchStatusInitialState } from 'state/comments/reducer';
-import { getPostCommentItems } from 'state/comments/selectors/get-post-comment-items';
-import { getStateKey } from 'state/comments/utils';
+import { fetchStatusInitialState } from 'wp-calypso-client/state/comments/reducer';
+import { getPostCommentItems } from 'wp-calypso-client/state/comments/selectors/get-post-comment-items';
+import { getStateKey } from 'wp-calypso-client/state/comments/utils';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 export function commentsFetchingStatus( state, siteId, postId, commentTotal = 0 ) {
 	const fetchStatus =

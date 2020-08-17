@@ -10,17 +10,17 @@ import { isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import { abtest } from 'lib/abtest';
-import { isEcommercePlan } from 'lib/plans';
-import config from 'config';
-import ECommerceManageNudge from 'blocks/ecommerce-manage-nudge';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getSitePlanSlug } from 'state/sites/selectors';
-import GoogleMyBusinessStatsNudge from 'blocks/google-my-business-stats-nudge';
-import isGoogleMyBusinessStatsNudgeVisibleSelector from 'state/selectors/is-google-my-business-stats-nudge-visible';
-import isUpworkStatsNudgeDismissed from 'state/selectors/is-upwork-stats-nudge-dismissed';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import UpworkStatsNudge from 'blocks/upwork-stats-nudge';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { isEcommercePlan } from 'wp-calypso-client/lib/plans';
+import config from 'wp-calypso-client/config';
+import ECommerceManageNudge from 'wp-calypso-client/blocks/ecommerce-manage-nudge';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { getSitePlanSlug } from 'wp-calypso-client/state/sites/selectors';
+import GoogleMyBusinessStatsNudge from 'wp-calypso-client/blocks/google-my-business-stats-nudge';
+import isGoogleMyBusinessStatsNudgeVisibleSelector from 'wp-calypso-client/state/selectors/is-google-my-business-stats-nudge-visible';
+import isUpworkStatsNudgeDismissed from 'wp-calypso-client/state/selectors/is-upwork-stats-nudge-dismissed';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import UpworkStatsNudge from 'wp-calypso-client/blocks/upwork-stats-nudge';
 
 class StatsBanners extends Component {
 	static propTypes = {

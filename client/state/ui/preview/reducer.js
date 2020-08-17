@@ -2,8 +2,12 @@
  * Internal dependencies
  */
 
-import { PREVIEW_SITE_SET, PREVIEW_URL_CLEAR, PREVIEW_URL_SET } from 'state/action-types';
-import { combineReducers } from 'state/utils';
+import {
+	PREVIEW_SITE_SET,
+	PREVIEW_URL_CLEAR,
+	PREVIEW_URL_SET,
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 
 export function currentPreviewSiteId( state = null, action ) {
 	switch ( action.type ) {

@@ -30,8 +30,8 @@ import {
 	EXPORT_START_REQUEST,
 	EXPORT_STARTED,
 	EXPORT_STATUS_FETCH,
-} from 'state/action-types';
-import useNock from 'test-helpers/use-nock';
+} from 'wp-calypso-client/state/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
 
 describe( 'actions', () => {
 	const spy = sinon.spy();

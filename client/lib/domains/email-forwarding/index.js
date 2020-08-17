@@ -7,8 +7,8 @@ import emailValidator from 'email-validator';
 /**
  * Internal dependencies
  */
-import { hasGSuiteWithUs } from 'lib/gsuite';
-import { type as domainTypes } from 'lib/domains/constants';
+import { hasGSuiteWithUs } from 'wp-calypso-client/lib/gsuite';
+import { type as domainTypes } from 'wp-calypso-client/lib/domains/constants';
 
 /**
  * Retrieves the first domain that is eligible for Email Forwarding either from the current selected site or the list of domains.

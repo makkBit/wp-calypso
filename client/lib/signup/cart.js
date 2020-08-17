@@ -6,11 +6,14 @@ import { forEach } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import productsListFactory from 'lib/products-list';
+import wpcom from 'wp-calypso-client/lib/wp';
+import productsListFactory from 'wp-calypso-client/lib/products-list';
 const productsList = productsListFactory();
-import { preprocessCartForServer, fillInAllCartItemAttributes } from 'lib/cart-values';
-import { addCartItem } from 'lib/cart-values/cart-items';
+import {
+	preprocessCartForServer,
+	fillInAllCartItemAttributes,
+} from 'wp-calypso-client/lib/cart-values';
+import { addCartItem } from 'wp-calypso-client/lib/cart-values/cart-items';
 
 function addProductsToCart( cart, newCartItems ) {
 	forEach( newCartItems, function ( cartItem ) {

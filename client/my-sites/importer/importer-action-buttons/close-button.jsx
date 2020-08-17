@@ -12,9 +12,9 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import ImporterActionButton from './action-button';
-import { appStates } from 'state/imports/constants';
-import { cancelImport } from 'lib/importer/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
+import { cancelImport } from 'wp-calypso-client/lib/importer/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 export class ImporterCloseButton extends React.PureComponent {
 	static displayName = 'ImporterCloseButton';

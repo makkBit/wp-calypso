@@ -14,7 +14,7 @@ import {
 	getSiteStatsCSVData,
 	hasSiteStatsQueryFailed,
 } from '../selectors';
-import { userState } from 'state/selectors/test/fixtures/user-state';
+import { userState } from 'wp-calypso-client/state/selectors/test/fixtures/user-state';
 
 describe( 'selectors', () => {
 	beforeEach( () => {

@@ -29,8 +29,11 @@ import { getLocaleSlug, translate } from 'i18n-calypso';
  * Internal dependencies
  */
 import AtDCore from './core';
-import { fetchPreferences, savePreference } from 'state/preferences/actions';
-import { getPreference, hasReceivedRemotePreferences } from 'state/preferences/selectors';
+import { fetchPreferences, savePreference } from 'wp-calypso-client/state/preferences/actions';
+import {
+	getPreference,
+	hasReceivedRemotePreferences,
+} from 'wp-calypso-client/state/preferences/selectors';
 
 /**
  * Module variables

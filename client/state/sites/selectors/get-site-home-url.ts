@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { canCurrentUserUseCustomerHome, getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getStatsDefaultSitePage } from 'lib/route/path';
+import {
+	canCurrentUserUseCustomerHome,
+	getSiteSlug,
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getStatsDefaultSitePage } from 'wp-calypso-client/lib/route/path';
 
 /**
  * Determine the default section to show for the specified site.

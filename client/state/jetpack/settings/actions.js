@@ -6,10 +6,10 @@ import {
 	JETPACK_SETTINGS_SAVE,
 	JETPACK_SETTINGS_SAVE_SUCCESS,
 	JETPACK_SETTINGS_UPDATE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/jetpack/settings';
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/data-layer/wpcom/jetpack/settings';
+import 'wp-calypso-client/state/jetpack/init';
 
 export const requestJetpackSettings = ( siteId, query ) => ( {
 	type: JETPACK_SETTINGS_REQUEST,

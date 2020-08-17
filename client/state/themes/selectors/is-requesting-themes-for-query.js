@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getSerializedThemesQuery } from 'state/themes/utils';
+import { getSerializedThemesQuery } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns true if currently requesting themes for the themes query, or false

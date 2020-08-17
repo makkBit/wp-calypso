@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import areSitePermalinksEditable from 'state/selectors/are-site-permalinks-editable';
+import areSitePermalinksEditable from 'wp-calypso-client/state/selectors/are-site-permalinks-editable';
 
 describe( 'areSitePermalinksEditable()', () => {
 	test( 'should return false if site ID is not tracked', () => {

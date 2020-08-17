@@ -12,8 +12,8 @@ import { connect } from 'react-redux';
 import {
 	hasLoadedUserPurchasesFromServer,
 	isFetchingUserPurchases,
-} from 'state/purchases/selectors';
-import { fetchUserPurchases } from 'state/purchases/actions';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { fetchUserPurchases } from 'wp-calypso-client/state/purchases/actions';
 
 class QueryUserPurchases extends Component {
 	requestUserPurchases( nextProps ) {

@@ -7,14 +7,14 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import { withPerformanceTrackerStop } from 'lib/performance-tracking';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import { withPerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
 
 /**
  * Image dependencies
  */
-import welcomeImage from 'assets/images/reader/reader-welcome-illustration.svg';
+import welcomeImage from 'wp-calypso-client/assets/images/reader/reader-welcome-illustration.svg';
 
 class FollowingEmptyContent extends React.Component {
 	shouldComponentUpdate() {

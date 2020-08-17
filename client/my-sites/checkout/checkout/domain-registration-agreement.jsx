@@ -8,14 +8,14 @@ import { get, map, reduce } from 'lodash';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import Gridicon from 'components/gridicon';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import {
 	getDomainRegistrations,
 	getDomainTransfers,
 	hasDomainRegistration,
 	hasTransferProduct,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 
 class DomainRegistrationAgreement extends React.Component {
 	recordRegistrationAgreementClick = () => {

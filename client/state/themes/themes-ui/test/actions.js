@@ -6,7 +6,7 @@ import {
 	THEMES_BANNER_HIDE,
 	THEMES_SHOWCASE_OPEN,
 	THEMES_BOOKMARK_SET,
-} from 'state/themes/action-types';
+} from 'wp-calypso-client/state/themes/action-types';
 
 describe( 'actions', () => {
 	describe( 'hideThemesBanner()', () => {

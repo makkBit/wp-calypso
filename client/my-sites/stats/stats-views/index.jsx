@@ -11,12 +11,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getSiteStatsViewSummary } from 'state/stats/lists/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteStatsViewSummary } from 'wp-calypso-client/state/stats/lists/selectors';
 import { Card } from '@automattic/components';
 import Months from './months';
-import SimplifiedSegmentedControl from 'components/segmented-control/simplified';
+import SimplifiedSegmentedControl from 'wp-calypso-client/components/segmented-control/simplified';
 import StatsModulePlaceholder from '../stats-module/placeholder';
 
 /**

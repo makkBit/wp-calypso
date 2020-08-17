@@ -9,15 +9,15 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSite } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getTopJITM } from 'state/jitm/selectors';
-import { dismissJITM, setupDevTool } from 'state/jitm/actions';
-import AsyncLoad from 'components/async-load';
-import QueryJITM from 'components/data/query-jitm';
-import 'state/data-layer/wpcom/marketing';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getTopJITM } from 'wp-calypso-client/state/jitm/selectors';
+import { dismissJITM, setupDevTool } from 'wp-calypso-client/state/jitm/actions';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import QueryJITM from 'wp-calypso-client/components/data/query-jitm';
+import 'wp-calypso-client/state/data-layer/wpcom/marketing';
 
 /**
  * Style dependencies
@@ -28,14 +28,16 @@ const debug = debugFactory( 'calypso:jitm' );
 
 function renderTemplate( template, props ) {
 	if ( template === 'notice' ) {
-		return <AsyncLoad { ...props } require="blocks/jitm/templates/notice" />;
+		return <AsyncLoad { ...props } require="wp-calypso-client/blocks/jitm/templates/notice" />;
 	}
 
 	if ( template === 'sidebar-banner' ) {
-		return <AsyncLoad { ...props } require="blocks/jitm/templates/sidebar-banner" />;
+		return (
+			<AsyncLoad { ...props } require="wp-calypso-client/blocks/jitm/templates/sidebar-banner" />
+		);
 	}
 
-	return <AsyncLoad { ...props } require="blocks/jitm/templates/default" />;
+	return <AsyncLoad { ...props } require="wp-calypso-client/blocks/jitm/templates/default" />;
 }
 
 function getEventHandlers( props, dispatch ) {

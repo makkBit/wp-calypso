@@ -6,10 +6,10 @@ import { includes, uniq } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSerializedThemesQuery } from 'state/themes/utils';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSerializedThemesQuery } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns an array of normalized themes for the themes query, or null if no

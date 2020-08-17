@@ -8,12 +8,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 
 /**
  * Image dependencies
  */
-import wordAdsImage from 'assets/images/illustrations/dotcom-wordads.svg';
+import wordAdsImage from 'wp-calypso-client/assets/images/illustrations/dotcom-wordads.svg';
 
 export default localize( ( { selectedSite, translate } ) => {
 	const adSettingsUrl = selectedSite.jetpack

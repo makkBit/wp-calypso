@@ -15,9 +15,13 @@ import {
 	TERMS_REQUEST_FAILURE,
 	TERMS_REQUEST_SUCCESS,
 	SERIALIZE,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation, withStorageKey } from 'state/utils';
-import TermQueryManager from 'lib/query-manager/term';
+} from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
+import TermQueryManager from 'wp-calypso-client/lib/query-manager/term';
 import { getSerializedTermsQuery } from './utils';
 import { queriesSchema } from './schema';
 

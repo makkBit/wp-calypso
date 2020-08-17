@@ -7,26 +7,26 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { getHappychatAuth } from 'state/happychat/utils';
-import hasActiveHappychatSession from 'state/happychat/selectors/has-active-happychat-session';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import isHappychatConnectionUninitialized from 'state/happychat/selectors/is-happychat-connection-uninitialized';
-import { initConnection, sendEvent } from 'state/happychat/connection/actions';
-import { openChat } from 'state/happychat/ui/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import { getHappychatAuth } from 'wp-calypso-client/state/happychat/utils';
+import hasActiveHappychatSession from 'wp-calypso-client/state/happychat/selectors/has-active-happychat-session';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import isHappychatConnectionUninitialized from 'wp-calypso-client/state/happychat/selectors/is-happychat-connection-uninitialized';
+import { initConnection, sendEvent } from 'wp-calypso-client/state/happychat/connection/actions';
+import { openChat } from 'wp-calypso-client/state/happychat/ui/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 import {
 	JETPACK_CREDENTIALS_UPDATE,
 	JETPACK_CREDENTIALS_UPDATE_SUCCESS,
 	JETPACK_CREDENTIALS_UPDATE_FAILURE,
 	JETPACK_CREDENTIALS_STORE,
 	REWIND_STATE_UPDATE,
-} from 'state/action-types';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import { transformApi } from 'state/data-layer/wpcom/sites/rewind/api-transformer';
+} from 'wp-calypso-client/state/action-types';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { transformApi } from 'wp-calypso-client/state/data-layer/wpcom/sites/rewind/api-transformer';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const navigateTo =
 	undefined !== typeof window

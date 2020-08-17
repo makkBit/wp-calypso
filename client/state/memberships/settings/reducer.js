@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import { MEMBERSHIPS_SETTINGS_RECEIVE } from '../../action-types';
 
 export default withoutPersistence( ( state = {}, action ) => {

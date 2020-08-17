@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 import UserUtils from '../utils';
-import config from 'config';
-import User from 'lib/user';
+import config from 'wp-calypso-client/config';
+import User from 'wp-calypso-client/lib/user';
 
 const user = User();
 

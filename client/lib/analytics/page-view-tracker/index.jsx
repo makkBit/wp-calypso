@@ -11,14 +11,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getSiteFragment } from 'lib/route';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 import {
 	recordPageViewWithClientId as recordPageView,
 	enhanceWithSiteType,
-} from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+} from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Module variables

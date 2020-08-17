@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import getSitesItems from 'state/selectors/get-sites-items';
-import { isSingleUserSite } from 'state/sites/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import { isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns true if every site of the current user is a single user site

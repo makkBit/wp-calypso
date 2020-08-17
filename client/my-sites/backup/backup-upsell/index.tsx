@@ -8,13 +8,13 @@ import { useSelector, useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import Upsell from 'components/jetpack/upsell';
-import { UpsellComponentProps } from 'components/jetpack/upsell-switch';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import Upsell from 'wp-calypso-client/components/jetpack/upsell';
+import { UpsellComponentProps } from 'wp-calypso-client/components/jetpack/upsell-switch';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

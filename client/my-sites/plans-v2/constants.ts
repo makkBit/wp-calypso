@@ -14,7 +14,7 @@ import {
 	PRODUCT_JETPACK_BACKUP_DAILY_MONTHLY,
 	PRODUCT_JETPACK_BACKUP_REALTIME,
 	PRODUCT_JETPACK_BACKUP_REALTIME_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 import {
 	PLAN_JETPACK_COMPLETE,
 	PLAN_JETPACK_COMPLETE_MONTHLY,
@@ -31,12 +31,15 @@ import {
 	PLAN_JETPACK_PREMIUM_MONTHLY,
 	PLAN_JETPACK_BUSINESS,
 	PLAN_JETPACK_BUSINESS_MONTHLY,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Type dependencies
  */
-import type { JetpackOfferDailyPlans, JetpackOfferRealtimePlans } from 'lib/plans/types';
+import type {
+	JetpackOfferDailyPlans,
+	JetpackOfferRealtimePlans,
+} from 'wp-calypso-client/lib/plans/types';
 import type { SelectorProduct, SelectorProductSlug, ProductType } from './types';
 
 export const ALL = 'all';

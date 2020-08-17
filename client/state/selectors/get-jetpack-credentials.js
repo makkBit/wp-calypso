@@ -6,7 +6,7 @@ import { get, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/jetpack/init';
 
 // We might have to re-think this approach since the credentials from `jetpackScan.scan[siteId].credentials`
 // are only updated when we receive a new response from `/scan`. So, for instance, if a user completes

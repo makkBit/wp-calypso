@@ -11,24 +11,24 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config, { isEnabled } from 'config';
-import ExternalLink from 'components/external-link';
-import Gridicon from 'components/gridicon';
-import LoggedOutFormBackLink from 'components/logged-out-form/back-link';
+import config, { isEnabled } from 'wp-calypso-client/config';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import LoggedOutFormBackLink from 'wp-calypso-client/components/logged-out-form/back-link';
 import {
 	isCrowdsignalOAuth2Client,
 	isJetpackCloudOAuth2Client,
 	isWooOAuth2Client,
-} from 'lib/oauth2-clients';
-import { addQueryArgs, getUrlParts } from 'lib/url';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { login } from 'lib/paths';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
-import { resetMagicLoginRequestForm } from 'state/login/magic-login/actions';
-import { isDomainConnectAuthorizePath } from 'lib/domains/utils';
+} from 'wp-calypso-client/lib/oauth2-clients';
+import { addQueryArgs, getUrlParts } from 'wp-calypso-client/lib/url';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { login } from 'wp-calypso-client/lib/paths';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { resetMagicLoginRequestForm } from 'wp-calypso-client/state/login/magic-login/actions';
+import { isDomainConnectAuthorizePath } from 'wp-calypso-client/lib/domains/utils';
 
 export class LoginLinks extends React.Component {
 	static propTypes = {

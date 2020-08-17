@@ -6,17 +6,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { get, some } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { url } from 'lib/media/utils';
-import Spinner from 'components/spinner';
-import SpinnerLine from 'components/spinner-line';
-import ImagePreloader from 'components/image-preloader';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getMediaItem from 'state/media/thunks/get-media-item';
+import { url } from 'wp-calypso-client/lib/media/utils';
+import Spinner from 'wp-calypso-client/components/spinner';
+import SpinnerLine from 'wp-calypso-client/components/spinner-line';
+import ImagePreloader from 'wp-calypso-client/components/image-preloader';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getMediaItem from 'wp-calypso-client/state/media/thunks/get-media-item';
 
 class EditorFeaturedImagePreview extends Component {
 	static propTypes = {

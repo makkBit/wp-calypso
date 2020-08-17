@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/data-layer/wpcom/sites/scan';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/scan';
 
 /**
  * Returns the current Jetpack Scan request status for a given site.

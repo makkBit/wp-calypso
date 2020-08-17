@@ -8,14 +8,17 @@ import { omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import { THEME_FILTERS_REQUEST, THEME_FILTERS_ADD } from 'state/themes/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isSiteEligibleForFullSiteEditing from 'state/selectors/is-site-eligible-for-full-site-editing';
+import {
+	THEME_FILTERS_REQUEST,
+	THEME_FILTERS_ADD,
+} from 'wp-calypso-client/state/themes/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isSiteEligibleForFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-eligible-for-full-site-editing';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const fetchFilters = ( action ) =>
 	http(

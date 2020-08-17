@@ -6,10 +6,10 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getSiteSlug } from 'state/sites/selectors';
-import getPostTypeAllPostsUrl from 'state/selectors/get-post-type-all-posts-url';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import getLastNonEditorRoute from 'state/selectors/get-last-non-editor-route';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import getPostTypeAllPostsUrl from 'wp-calypso-client/state/selectors/get-post-type-all-posts-url';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import getLastNonEditorRoute from 'wp-calypso-client/state/selectors/get-last-non-editor-route';
 
 /**
  * Gets the URL for the close button for the block editor, dependent previous referral state

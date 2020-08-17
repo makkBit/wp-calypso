@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	SHORTCODE_RECEIVE,
 	SHORTCODE_REQUEST,
 	SHORTCODE_REQUEST_FAILURE,
 	SHORTCODE_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/shortcodes/init';
+import 'wp-calypso-client/state/shortcodes/init';
 
 export function fetchShortcode( siteId, shortcode ) {
 	return ( dispatch ) => {

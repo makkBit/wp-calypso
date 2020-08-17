@@ -9,16 +9,16 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 import { CompactCard } from '@automattic/components';
-import AllSites from 'blocks/all-sites';
-import PluginsLog from 'lib/plugins/log-store';
-import PluginActivateToggle from 'my-sites/plugins/plugin-activate-toggle';
-import PluginAutoupdateToggle from 'my-sites/plugins/plugin-autoupdate-toggle';
-import PluginUpdateIndicator from 'my-sites/plugins/plugin-site-update-indicator';
-import PluginInstallButton from 'my-sites/plugins/plugin-install-button';
-import PluginRemoveButton from 'my-sites/plugins/plugin-remove-button';
-import Site from 'blocks/site';
+import AllSites from 'wp-calypso-client/blocks/all-sites';
+import PluginsLog from 'wp-calypso-client/lib/plugins/log-store';
+import PluginActivateToggle from 'wp-calypso-client/my-sites/plugins/plugin-activate-toggle';
+import PluginAutoupdateToggle from 'wp-calypso-client/my-sites/plugins/plugin-autoupdate-toggle';
+import PluginUpdateIndicator from 'wp-calypso-client/my-sites/plugins/plugin-site-update-indicator';
+import PluginInstallButton from 'wp-calypso-client/my-sites/plugins/plugin-install-button';
+import PluginRemoveButton from 'wp-calypso-client/my-sites/plugins/plugin-remove-button';
+import Site from 'wp-calypso-client/blocks/site';
 
 /**
  * Style dependencies

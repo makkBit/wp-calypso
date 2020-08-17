@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 const initialState = {};
 export function getSignupDependencyStore( state ) {

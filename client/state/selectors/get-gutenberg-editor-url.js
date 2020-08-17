@@ -1,11 +1,11 @@
 /**
  * Internal dependencies
  */
-import { shouldRedirectGutenberg } from 'state/selectors/should-redirect-gutenberg';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import { getSiteAdminUrl, getSiteSlug } from 'state/sites/selectors';
-import { getEditorPath } from 'state/editor/selectors';
-import { addQueryArgs } from 'lib/route';
+import { shouldRedirectGutenberg } from 'wp-calypso-client/state/selectors/should-redirect-gutenberg';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import { getSiteAdminUrl, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getEditorPath } from 'wp-calypso-client/state/editor/selectors';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 
 export const getGutenbergEditorUrl = ( state, siteId, postId = null, postType = 'post' ) => {
 	if ( shouldRedirectGutenberg( state, siteId ) ) {

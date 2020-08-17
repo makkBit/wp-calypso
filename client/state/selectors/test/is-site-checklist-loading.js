@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import isSiteChecklistLoading from 'state/selectors/is-site-checklist-loading';
-import { getRequestKey } from 'state/data-layer/wpcom-http/utils';
-import { requestSiteChecklist } from 'state/checklist/actions';
+import isSiteChecklistLoading from 'wp-calypso-client/state/selectors/is-site-checklist-loading';
+import { getRequestKey } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { requestSiteChecklist } from 'wp-calypso-client/state/checklist/actions';
 
 describe( 'isSiteChecklistLoading()', () => {
 	test( 'should return `false` by default', () => {

@@ -9,7 +9,7 @@ import React from 'react';
  */
 import { CompactCard } from '@automattic/components';
 import HelpResult from './item';
-import SectionHeader from 'components/section-header';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
 /**
  * Style dependencies

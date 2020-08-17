@@ -9,8 +9,8 @@ import React, { Component } from 'react';
  */
 import { Card } from '@automattic/components';
 import SitePickerSubmit from './site-picker-submit';
-import SiteSelector from 'components/site-selector';
-import StepWrapper from 'signup/step-wrapper';
+import SiteSelector from 'wp-calypso-client/components/site-selector';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 
 /**
  * Style dependencies

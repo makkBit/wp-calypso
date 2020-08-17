@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isVipSite from 'state/selectors/is-vip-site';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
 
 describe( 'isVipSite()', () => {
 	test( 'returns null if site does not exist', () => {

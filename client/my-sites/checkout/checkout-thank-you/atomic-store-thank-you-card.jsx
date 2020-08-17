@@ -10,14 +10,17 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import PlanThankYouCard from 'blocks/plan-thank-you-card';
-import { Interval, EVERY_FIVE_SECONDS } from 'lib/interval';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getPlanClass } from 'lib/plans';
-import { getCurrentUserEmail, isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import { errorNotice, removeNotice } from 'state/notices/actions';
-import user from 'lib/user';
+import PlanThankYouCard from 'wp-calypso-client/blocks/plan-thank-you-card';
+import { Interval, EVERY_FIVE_SECONDS } from 'wp-calypso-client/lib/interval';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getPlanClass } from 'wp-calypso-client/lib/plans';
+import {
+	getCurrentUserEmail,
+	isCurrentUserEmailVerified,
+} from 'wp-calypso-client/state/current-user/selectors';
+import { errorNotice, removeNotice } from 'wp-calypso-client/state/notices/actions';
+import user from 'wp-calypso-client/lib/user';
 
 const VERIFY_EMAIL_ERROR_NOTICE = 'ecommerce-verify-email-error';
 const RESEND_ERROR = 'RESEND_ERROR';

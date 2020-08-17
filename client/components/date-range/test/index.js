@@ -15,11 +15,11 @@ import moment from 'moment';
  * Internal dependencies
  */
 import { DateRange } from '../index.js';
-import DatePicker from 'components/date-picker';
-import DateRangeTrigger from 'components/date-range/trigger';
-import DateRangeInputs from 'components/date-range/inputs';
-import DateRangeHeader from 'components/date-range/header';
-import Popover from 'components/popover';
+import DatePicker from 'wp-calypso-client/components/date-picker';
+import DateRangeTrigger from 'wp-calypso-client/components/date-range/trigger';
+import DateRangeInputs from 'wp-calypso-client/components/date-range/inputs';
+import DateRangeHeader from 'wp-calypso-client/components/date-range/header';
+import Popover from 'wp-calypso-client/components/popover';
 
 function dateToLocaleString( date ) {
 	return moment.isDate( date ) || moment.isMoment( date ) ? moment( date ).format( 'L' ) : date;

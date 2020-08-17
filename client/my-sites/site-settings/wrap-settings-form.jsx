@@ -11,29 +11,29 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { protectForm } from 'lib/protect-form';
-import trackForm from 'lib/track-form';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import trackForm from 'wp-calypso-client/lib/track-form';
 import {
 	isRequestingSiteSettings,
 	isSavingSiteSettings,
 	isSiteSettingsSaveSuccessful,
 	getSiteSettingsSaveError,
 	getSiteSettings,
-} from 'state/site-settings/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getJetpackSettings from 'state/selectors/get-jetpack-settings';
-import isJetpackSettingsSaveFailure from 'state/selectors/is-jetpack-settings-save-failure';
-import isRequestingJetpackSettings from 'state/selectors/is-requesting-jetpack-settings';
-import isUpdatingJetpackSettings from 'state/selectors/is-updating-jetpack-settings';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import { saveJetpackSettings } from 'state/jetpack/settings/actions';
-import { removeNotice, successNotice, errorNotice } from 'state/notices/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import QueryJetpackSettings from 'components/data/query-jetpack-settings';
+} from 'wp-calypso-client/state/site-settings/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getJetpackSettings from 'wp-calypso-client/state/selectors/get-jetpack-settings';
+import isJetpackSettingsSaveFailure from 'wp-calypso-client/state/selectors/is-jetpack-settings-save-failure';
+import isRequestingJetpackSettings from 'wp-calypso-client/state/selectors/is-requesting-jetpack-settings';
+import isUpdatingJetpackSettings from 'wp-calypso-client/state/selectors/is-updating-jetpack-settings';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { saveJetpackSettings } from 'wp-calypso-client/state/jetpack/settings/actions';
+import { removeNotice, successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import QueryJetpackSettings from 'wp-calypso-client/components/data/query-jetpack-settings';
 
 const debug = debugFactory( 'calypso:site-settings' );
 

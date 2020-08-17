@@ -6,7 +6,7 @@
 /**
  * Internal Dependencies
  */
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 import { setReduxStore, registerActionForward, clearActionForwards } from '../';
 
 describe( 'redux-bridge', () => {

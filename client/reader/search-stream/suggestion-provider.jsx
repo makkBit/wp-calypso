@@ -8,9 +8,9 @@ import { map, sampleSize, times } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { getLocaleSlug } from 'lib/i18n-utils';
-import { suggestions } from 'reader/search-stream/suggestions';
-import { getReaderFollowedTags } from 'state/reader/tags/selectors';
+import { getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
+import { suggestions } from 'wp-calypso-client/reader/search-stream/suggestions';
+import { getReaderFollowedTags } from 'wp-calypso-client/state/reader/tags/selectors';
 
 function createRandomId( randomBytesLength = 9 ) {
 	// 9 * 4/3 = 12

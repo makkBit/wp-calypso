@@ -18,7 +18,7 @@ import {
 	GP_PROJECT,
 	GP_BASE_URL,
 	GP_PROJECT_TRANSLATION_SET_SLUGS,
-} from 'lib/i18n-utils/constants';
+} from 'wp-calypso-client/lib/i18n-utils/constants';
 
 jest.mock( '@automattic/viewport', () => ( {
 	isMobile: jest.fn(),

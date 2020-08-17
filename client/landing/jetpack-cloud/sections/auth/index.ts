@@ -8,8 +8,8 @@ import page from 'page';
  */
 import { authConnectPath, authTokenRedirectPath } from './paths';
 import { connect, tokenRedirect } from './controller';
-import { makeLayout, render as clientRender } from 'controller';
-import config from 'config';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import config from 'wp-calypso-client/config';
 
 export default () => {
 	if ( config.isEnabled( 'jetpack-cloud' ) ) {

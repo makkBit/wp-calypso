@@ -12,32 +12,36 @@ import { trim, trimEnd } from 'lodash';
 /**
  * Internal dependencies
  */
-import Header from 'my-sites/domains/domain-management/components/header';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormFooter from 'my-sites/domains/domain-management/components/form-footer';
-import FormLabel from 'components/forms/form-label';
-import FormTextInputWithAffixes from 'components/forms/form-text-input-with-affixes';
-import Main from 'components/main';
-import Notice from 'components/notice';
-import notices from 'notices';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormFooter from 'wp-calypso-client/my-sites/domains/domain-management/components/form-footer';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInputWithAffixes from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
+import Main from 'wp-calypso-client/components/main';
+import Notice from 'wp-calypso-client/components/notice';
+import notices from 'wp-calypso-client/notices';
 import {
 	domainManagementSiteRedirect,
 	domainManagementRedirectSettings,
-} from 'my-sites/domains/paths';
+} from 'wp-calypso-client/my-sites/domains/paths';
 import {
 	closeSiteRedirectNotice,
 	fetchSiteRedirect,
 	updateSiteRedirect,
-} from 'state/domains/site-redirect/actions';
+} from 'wp-calypso-client/state/domains/site-redirect/actions';
 import { CompactCard as Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSite } from 'state/ui/selectors';
-import { getSiteRedirectLocation } from 'state/domains/site-redirect/selectors';
-import { withoutHttp } from 'lib/url';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { SITE_REDIRECT } from 'lib/url/support';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteRedirectLocation } from 'wp-calypso-client/state/domains/site-redirect/selectors';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { SITE_REDIRECT } from 'wp-calypso-client/lib/url/support';
 
 /**
  * Style dependencies

@@ -9,10 +9,10 @@ import { useTranslate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Gravatar from 'components/gravatar';
-import userUtilities from 'lib/user/utils';
-import { getCurrentUser } from 'state/current-user/selectors';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import userUtilities from 'wp-calypso-client/lib/user/utils';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
 
 /**
  * Style dependencies

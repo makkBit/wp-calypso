@@ -11,12 +11,12 @@ import { v4 as uuid } from 'uuid';
 /**
  * Internal dependencies
  */
-import SuggestionSearch from 'components/suggestion-search';
-import PopularTopics from 'components/site-verticals-suggestion-search/popular-topics';
-import QueryVerticals from 'components/data/query-verticals';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getVerticals } from 'state/signup/verticals/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
+import SuggestionSearch from 'wp-calypso-client/components/suggestion-search';
+import PopularTopics from 'wp-calypso-client/components/site-verticals-suggestion-search/popular-topics';
+import QueryVerticals from 'wp-calypso-client/components/data/query-verticals';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getVerticals } from 'wp-calypso-client/state/signup/verticals/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
 
 /**
  * Style dependencies

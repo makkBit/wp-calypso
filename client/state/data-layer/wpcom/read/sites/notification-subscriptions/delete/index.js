@@ -6,15 +6,15 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { READER_UNSUBSCRIBE_TO_NEW_POST_NOTIFICATIONS } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
+import { READER_UNSUBSCRIBE_TO_NEW_POST_NOTIFICATIONS } from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { translate } from 'i18n-calypso';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { subscribeToNewPostNotifications } from 'state/reader/follows/actions';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { subscribeToNewPostNotifications } from 'wp-calypso-client/state/reader/follows/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function fromApi( response ) {
 	const isUnsubscribed = !! ( response && response.subscribed === false );

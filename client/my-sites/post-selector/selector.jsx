@@ -25,18 +25,18 @@ import {
  * Internal dependencies
  */
 import NoResults from './no-results';
-import { gaRecordEvent } from 'lib/analytics/ga';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 import Search from './search';
-import { decodeEntities } from 'lib/formatting';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 import {
 	getPostsForQueryIgnoringPage,
 	isRequestingPostsForQueryIgnoringPage,
 	getPostsFoundForQuery,
 	getPostsLastPageForQuery,
-} from 'state/posts/selectors';
-import { getPostTypes } from 'state/post-types/selectors';
-import QueryPostTypes from 'components/data/query-post-types';
-import QueryPosts from 'components/data/query-posts';
+} from 'wp-calypso-client/state/posts/selectors';
+import { getPostTypes } from 'wp-calypso-client/state/post-types/selectors';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
 
 /**
  * Constants

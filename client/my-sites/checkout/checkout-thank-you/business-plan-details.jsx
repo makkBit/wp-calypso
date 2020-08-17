@@ -11,24 +11,27 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import CustomDomainPurchaseDetail from './custom-domain-purchase-detail';
 import GoogleAppsDetails from './google-apps-details';
-import { isEnabled } from 'config';
-import { isBusiness, isGoogleApps } from 'lib/products-values';
-import PurchaseDetail from 'components/purchase-detail';
-import isJetpackSectionEnabledForSite from 'state/selectors/is-jetpack-section-enabled-for-site';
-import QueryProductsList from 'components/data/query-products-list';
-import { getProductsList, getProductDisplayCost } from 'state/products-list/selectors';
+import { isEnabled } from 'wp-calypso-client/config';
+import { isBusiness, isGoogleApps } from 'wp-calypso-client/lib/products-values';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import isJetpackSectionEnabledForSite from 'wp-calypso-client/state/selectors/is-jetpack-section-enabled-for-site';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import {
+	getProductsList,
+	getProductDisplayCost,
+} from 'wp-calypso-client/state/products-list/selectors';
 
 /**
  * Image dependencies
  */
-import analyticsImage from 'assets/images/illustrations/google-analytics.svg';
-import conciergeImage from 'assets/images/illustrations/jetpack-concierge.svg';
-import jetpackBackupImage from 'assets/images/illustrations/jetpack-backup.svg';
-import themeImage from 'assets/images/illustrations/themes.svg';
-import updatesImage from 'assets/images/illustrations/updates.svg';
+import analyticsImage from 'wp-calypso-client/assets/images/illustrations/google-analytics.svg';
+import conciergeImage from 'wp-calypso-client/assets/images/illustrations/jetpack-concierge.svg';
+import jetpackBackupImage from 'wp-calypso-client/assets/images/illustrations/jetpack-backup.svg';
+import themeImage from 'wp-calypso-client/assets/images/illustrations/themes.svg';
+import updatesImage from 'wp-calypso-client/assets/images/illustrations/updates.svg';
 
 function trackOnboardingButtonClick() {
 	recordTracksEvent( 'calypso_checkout_thank_you_onboarding_click' );

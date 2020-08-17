@@ -1,15 +1,15 @@
 /**
  * Internal Dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { receiveMarkAllAsSeen } from 'state/reader/seen-posts/actions';
-import { READER_SEEN_MARK_ALL_AS_SEEN_REQUEST } from 'state/reader/action-types';
-import { getStream } from 'state/reader/streams/selectors';
-import { getPostsByKeys } from 'state/reader/posts/selectors';
-import { requestUnseenStatus } from 'state/reader-ui/seen-posts/actions';
-import { requestFollows } from 'state/reader/follows/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { receiveMarkAllAsSeen } from 'wp-calypso-client/state/reader/seen-posts/actions';
+import { READER_SEEN_MARK_ALL_AS_SEEN_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { getStream } from 'wp-calypso-client/state/reader/streams/selectors';
+import { getPostsByKeys } from 'wp-calypso-client/state/reader/posts/selectors';
+import { requestUnseenStatus } from 'wp-calypso-client/state/reader-ui/seen-posts/actions';
+import { requestFollows } from 'wp-calypso-client/state/reader/follows/actions';
 
 const toApi = ( action ) => {
 	return {

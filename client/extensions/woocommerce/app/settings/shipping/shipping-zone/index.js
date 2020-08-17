@@ -13,9 +13,9 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import accept from 'lib/accept';
-import FormattedHeader from 'components/formatted-header';
-import Main from 'components/main';
+import accept from 'wp-calypso-client/lib/accept';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Main from 'wp-calypso-client/components/main';
 import QueryShippingZones, {
 	areShippingZonesFullyLoaded,
 } from 'woocommerce/components/query-shipping-zones';
@@ -32,10 +32,10 @@ import {
 	createShippingZoneDeleteActionList,
 } from 'woocommerce/state/ui/shipping/zones/actions';
 import { getCurrentlyEditingShippingZone } from 'woocommerce/state/ui/shipping/zones/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { getLink } from 'woocommerce/lib/nav-utils';
-import { ProtectFormGuard } from 'lib/protect-form';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
 import { getSaveZoneActionListSteps } from 'woocommerce/state/data-layer/ui/shipping-zones';
 
 class Shipping extends Component {

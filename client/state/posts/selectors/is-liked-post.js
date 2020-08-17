@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Whether or not the current user likes this post

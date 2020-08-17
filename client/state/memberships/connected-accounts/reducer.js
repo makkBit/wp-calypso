@@ -4,8 +4,8 @@
 import {
 	MEMBERSHIPS_CONNECTED_ACCOUNTS_LIST,
 	MEMBERSHIPS_CONNECTED_ACCOUNTS_RECEIVE,
-} from 'state/action-types';
-import { combineReducers, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 const accounts = withoutPersistence( ( state = {}, action ) => {
 	switch ( action.type ) {

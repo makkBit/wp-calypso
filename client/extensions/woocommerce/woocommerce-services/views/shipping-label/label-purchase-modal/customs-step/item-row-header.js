@@ -9,7 +9,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 import InfoTooltip from 'woocommerce/woocommerce-services/components/info-tooltip';
 import { getShippingLabel } from 'woocommerce/woocommerce-services/state/shipping-label/selectors';
 

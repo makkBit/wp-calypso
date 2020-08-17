@@ -10,14 +10,14 @@ import moment from 'moment';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormSelect from 'components/forms/form-select';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextInput from 'components/forms/form-text-input';
-import FormToggle from 'components/forms/form-toggle/compact';
-import SectionHeader from 'components/section-header';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import WrapSettingsForm from '../wrap-settings-form';
 
 const ExpiryTime = ( {

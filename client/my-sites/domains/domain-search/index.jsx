@@ -12,14 +12,14 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import RegisterDomainStep from 'components/domains/register-domain-step';
-import PlansNavigation from 'my-sites/plans/navigation';
-import Main from 'components/main';
-import { addItem, removeItem } from 'lib/cart/actions';
-import { canDomainAddGSuite } from 'lib/gsuite';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import RegisterDomainStep from 'wp-calypso-client/components/domains/register-domain-step';
+import PlansNavigation from 'wp-calypso-client/my-sites/plans/navigation';
+import Main from 'wp-calypso-client/components/main';
+import { addItem, removeItem } from 'wp-calypso-client/lib/cart/actions';
+import { canDomainAddGSuite } from 'wp-calypso-client/lib/gsuite';
 import {
 	hasPlan,
 	hasDomainInCart,
@@ -27,18 +27,25 @@ import {
 	domainTransfer,
 	domainRegistration,
 	updatePrivacyForDomain,
-} from 'lib/cart-values/cart-items';
-import { currentUserHasFlag } from 'state/current-user/selectors';
-import isSiteUpgradeable from 'state/selectors/is-site-upgradeable';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryProductsList from 'components/data/query-products-list';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import { getProductsList } from 'state/products-list/selectors';
-import { recordAddDomainButtonClick, recordRemoveDomainButtonClick } from 'state/domains/actions';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import { getSuggestionsVendor } from 'lib/domains/suggestions';
-import NewDomainsRedirectionNoticeUpsell from 'my-sites/domains/domain-management/components/domain/new-domains-redirection-notice-upsell';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import isSiteUpgradeable from 'wp-calypso-client/state/selectors/is-site-upgradeable';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import {
+	recordAddDomainButtonClick,
+	recordRemoveDomainButtonClick,
+} from 'wp-calypso-client/state/domains/actions';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import { getSuggestionsVendor } from 'wp-calypso-client/lib/domains/suggestions';
+import NewDomainsRedirectionNoticeUpsell from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/new-domains-redirection-notice-upsell';
 
 /**
  * Style dependencies

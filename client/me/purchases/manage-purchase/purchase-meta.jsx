@@ -24,7 +24,7 @@ import {
 	isSubscription,
 	paymentLogoType,
 	hasPaymentMethod,
-} from 'lib/purchases';
+} from 'wp-calypso-client/lib/purchases';
 import {
 	isDomainRegistration,
 	isDomainTransfer,
@@ -34,20 +34,23 @@ import {
 	isJetpackProduct,
 	isPlan,
 	getProductFromSlug,
-} from 'lib/products-values';
-import { getPlan } from 'lib/plans';
+} from 'wp-calypso-client/lib/products-values';
+import { getPlan } from 'wp-calypso-client/lib/plans';
 
-import { getByPurchaseId, hasLoadedUserPurchasesFromServer } from 'state/purchases/selectors';
-import { getSite, isRequestingSites } from 'state/sites/selectors';
-import { getUser } from 'state/users/selectors';
+import {
+	getByPurchaseId,
+	hasLoadedUserPurchasesFromServer,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getSite, isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import { getUser } from 'wp-calypso-client/state/users/selectors';
 import { managePurchase } from '../paths';
 import AutoRenewToggle from './auto-renew-toggle';
-import PaymentLogo from 'components/payment-logo';
-import { CALYPSO_CONTACT, JETPACK_SUPPORT } from 'lib/url/support';
-import UserItem from 'components/user';
-import { withLocalizedMoment } from 'components/localized-moment';
+import PaymentLogo from 'wp-calypso-client/components/payment-logo';
+import { CALYPSO_CONTACT, JETPACK_SUPPORT } from 'wp-calypso-client/lib/url/support';
+import UserItem from 'wp-calypso-client/components/user';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import { canEditPaymentDetails, getEditCardDetailsPath, isDataLoading } from '../utils';
-import { TERM_BIENNIALLY, TERM_MONTHLY } from 'lib/plans/constants';
+import { TERM_BIENNIALLY, TERM_MONTHLY } from 'wp-calypso-client/lib/plans/constants';
 
 class PurchaseMeta extends Component {
 	static propTypes = {

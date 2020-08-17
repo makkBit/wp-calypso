@@ -9,7 +9,7 @@ import deepFreeze from 'deep-freeze';
  * Internal Dependencies
  */
 import { GlobalNotices } from '..';
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 
 const baseProps = deepFreeze( {
 	storeNotices: [],

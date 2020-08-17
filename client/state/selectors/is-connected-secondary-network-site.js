@@ -7,9 +7,9 @@ import { some } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import getSitesItems from 'state/selectors/get-sites-items';
-import isMainSiteOf from 'state/selectors/is-main-site-of';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import isMainSiteOf from 'wp-calypso-client/state/selectors/is-main-site-of';
 
 /**
  * Returns true if site with id equal to siteId is a connected secondary network site and false otherwise

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { createPurchasesArray } from 'lib/purchases/assembler';
+import { createPurchasesArray } from 'wp-calypso-client/lib/purchases/assembler';
 import {
 	getByPurchaseId,
 	getIncludedDomainPurchase,

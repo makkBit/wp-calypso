@@ -12,24 +12,24 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import EditGravatar from 'blocks/edit-gravatar';
-import formBase from 'me/form-base';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInput from 'components/forms/form-text-input';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import observe from 'lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
-import ProfileLinks from 'me/profile-links';
-import ReauthRequired from 'me/reauth-required';
-import SectionHeader from 'components/section-header';
-import { localizeUrl } from 'lib/i18n-utils';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import { protectForm } from 'lib/protect-form';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import EditGravatar from 'wp-calypso-client/blocks/edit-gravatar';
+import formBase from 'wp-calypso-client/me/form-base';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import observe from 'wp-calypso-client/lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
+import ProfileLinks from 'wp-calypso-client/me/profile-links';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /**
  * Style dependencies

@@ -7,7 +7,7 @@ import { flowRight as compose, noop } from 'lodash';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { withMobileBreakpoint } from '@automattic/viewport-react';
 import { __ } from '@wordpress/i18n';
 
@@ -15,35 +15,38 @@ import { __ } from '@wordpress/i18n';
  * Internal Dependencies
  */
 import { VIEW_CONTACT, VIEW_RICH_RESULT } from './constants';
-import { selectResult, resetInlineHelpContactForm } from 'state/inline-help/actions';
+import {
+	selectResult,
+	resetInlineHelpContactForm,
+} from 'wp-calypso-client/state/inline-help/actions';
 import { Button } from '@automattic/components';
-import Popover from 'components/popover';
+import Popover from 'wp-calypso-client/components/popover';
 import InlineHelpSearchResults from './inline-help-search-results';
 import InlineHelpSearchCard from './inline-help-search-card';
 import InlineHelpRichResult from './inline-help-rich-result';
-import getSearchQuery from 'state/inline-help/selectors/get-search-query';
-import getInlineHelpCurrentlySelectedResult from 'state/inline-help/selectors/get-inline-help-currently-selected-result';
-import { getHelpSelectedSite } from 'state/help/selectors';
-import QuerySupportTypes from 'blocks/inline-help/inline-help-query-support-types';
-import InlineHelpContactView from 'blocks/inline-help/inline-help-contact-view';
-import isEligibleForDotcomChecklist from 'state/selectors/is-eligible-for-dotcom-checklist';
-import { getSelectedSiteId, getSection } from 'state/ui/selectors';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { setSelectedEditor } from 'state/selected-editor/actions';
+import getSearchQuery from 'wp-calypso-client/state/inline-help/selectors/get-search-query';
+import getInlineHelpCurrentlySelectedResult from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-currently-selected-result';
+import { getHelpSelectedSite } from 'wp-calypso-client/state/help/selectors';
+import QuerySupportTypes from 'wp-calypso-client/blocks/inline-help/inline-help-query-support-types';
+import InlineHelpContactView from 'wp-calypso-client/blocks/inline-help/inline-help-contact-view';
+import isEligibleForDotcomChecklist from 'wp-calypso-client/state/selectors/is-eligible-for-dotcom-checklist';
+import { getSelectedSiteId, getSection } from 'wp-calypso-client/state/ui/selectors';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { setSelectedEditor } from 'wp-calypso-client/state/selected-editor/actions';
 import {
 	composeAnalytics,
 	recordGoogleEvent,
 	recordTracksEvent,
 	withAnalytics,
 	bumpStat,
-} from 'state/analytics/actions';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import QueryActiveTheme from 'components/data/query-active-theme';
-import isGutenbergOptInEnabled from 'state/selectors/is-gutenberg-opt-in-enabled';
-import isGutenbergOptOutEnabled from 'state/selectors/is-gutenberg-opt-out-enabled';
-import inEditorDeprecationGroup from 'state/editor-deprecation-group/selectors/in-editor-deprecation-group';
+} from 'wp-calypso-client/state/analytics/actions';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import QueryActiveTheme from 'wp-calypso-client/components/data/query-active-theme';
+import isGutenbergOptInEnabled from 'wp-calypso-client/state/selectors/is-gutenberg-opt-in-enabled';
+import isGutenbergOptOutEnabled from 'wp-calypso-client/state/selectors/is-gutenberg-opt-out-enabled';
+import inEditorDeprecationGroup from 'wp-calypso-client/state/editor-deprecation-group/selectors/in-editor-deprecation-group';
 
 class InlineHelpPopover extends Component {
 	static propTypes = {

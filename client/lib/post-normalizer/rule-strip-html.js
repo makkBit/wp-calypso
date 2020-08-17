@@ -6,7 +6,7 @@ import { forEach } from 'lodash';
 /**
  * Internal dependencies
  */
-import { stripHTML } from 'lib/formatting';
+import { stripHTML } from 'wp-calypso-client/lib/formatting';
 
 export default function stripHtml( post ) {
 	forEach( [ 'excerpt', 'title', 'site_name' ], function ( prop ) {

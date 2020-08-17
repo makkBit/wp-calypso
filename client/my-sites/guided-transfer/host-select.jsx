@@ -10,8 +10,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { Card, Button } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import { localizeUrl } from 'lib/i18n-utils';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 class HostSelect extends React.Component {
 	static displayName = 'HostSelect';

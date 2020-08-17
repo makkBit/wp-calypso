@@ -7,10 +7,10 @@ import React, { FunctionComponent } from 'react';
  * Internal dependencies
  */
 import { translate } from 'i18n-calypso';
-import Gravatar from 'components/gravatar';
-import Gridicon from 'components/gridicon';
-import JetpackLogo from 'components/jetpack-logo';
-import SocialLogo from 'components/social-logo';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
+import SocialLogo from 'wp-calypso-client/components/social-logo';
 
 /**
  * Module constants

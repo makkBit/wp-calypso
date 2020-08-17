@@ -10,10 +10,10 @@ import {
 	ALL_DOMAINS_REQUEST,
 	ALL_DOMAINS_REQUEST_FAILURE,
 	ALL_DOMAINS_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/all-domains/init';
-import 'state/data-layer/wpcom/all-domains/index';
+import 'wp-calypso-client/state/all-domains/init';
+import 'wp-calypso-client/state/data-layer/wpcom/all-domains/index';
 
 /**
  * Module vars

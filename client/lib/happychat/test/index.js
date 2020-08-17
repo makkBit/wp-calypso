@@ -22,7 +22,7 @@ import {
 	receiveUnauthorized,
 	requestTranscript,
 	sendTyping,
-} from 'state/happychat/connection/actions';
+} from 'wp-calypso-client/state/happychat/connection/actions';
 import buildConnection from '../connection';
 
 describe( 'connection', () => {

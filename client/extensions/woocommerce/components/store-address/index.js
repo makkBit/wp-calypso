@@ -14,7 +14,7 @@ import { find, isEmpty } from 'lodash';
  */
 import AddressView from 'woocommerce/components/address-view';
 import { Button, Card, Dialog } from '@automattic/components';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 import {
 	areLocationsLoaded,
 	getAllCountries,
@@ -26,7 +26,7 @@ import {
 	areSettingsGeneralLoadError,
 } from 'woocommerce/state/sites/settings/general/selectors';
 import { setAddress } from 'woocommerce/state/sites/settings/actions';
-import FormLabel from 'components/forms/form-label';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
 import QuerySettingsGeneral from 'woocommerce/components/query-settings-general';
 import QueryLocations from 'woocommerce/components/query-locations';
 

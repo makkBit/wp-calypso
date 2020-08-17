@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestSupportHistory } from 'state/help/actions';
+import { requestSupportHistory } from 'wp-calypso-client/state/help/actions';
 
 export default function QuerySupportHistory( { email } ) {
 	const dispatch = useDispatch();

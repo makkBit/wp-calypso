@@ -9,10 +9,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import PeopleLog from 'lib/people/log-store';
-import PeopleActions from 'lib/people/actions';
-import Notice from 'components/notice';
-import { getSelectedSite } from 'state/ui/selectors';
+import PeopleLog from 'wp-calypso-client/lib/people/log-store';
+import PeopleActions from 'wp-calypso-client/lib/people/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

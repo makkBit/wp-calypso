@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { addQueryArgs } from 'lib/url';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 
 export const backupMainPath = ( siteName?: string | null, query = {} ) =>
 	siteName ? addQueryArgs( query, `/backup/${ siteName }` ) : '/backup';

@@ -16,9 +16,9 @@ import {
 	POST_REVISIONS_DIFF_SPLIT_VIEW,
 	POST_REVISIONS_DIFF_UNIFY_VIEW,
 	SELECTED_SITE_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import authors from './authors/reducer';
-import { combineReducers } from 'state/utils';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 
 export function diffs( state = {}, { diffs: diffsFromServer, postId, revisions, siteId, type } ) {
 	if ( type !== POST_REVISIONS_RECEIVE ) {

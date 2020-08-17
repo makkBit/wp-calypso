@@ -7,7 +7,7 @@ import { Provider as ReduxProvider } from 'react-redux';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	login,
 	magicLogin,
@@ -16,10 +16,10 @@ import {
 	redirectDefaultLocale,
 } from './controller';
 import { setShouldServerSideRenderLogin } from './ssr';
-import { setUpLocale, setSection, makeLayoutMiddleware } from 'controller/shared';
-import { redirectLoggedIn } from 'controller/web-util';
-import LayoutLoggedOut from 'layout/logged-out';
-import { getLanguageRouteParam } from 'lib/i18n-utils';
+import { setUpLocale, setSection, makeLayoutMiddleware } from 'wp-calypso-client/controller/shared';
+import { redirectLoggedIn } from 'wp-calypso-client/controller/web-util';
+import LayoutLoggedOut from 'wp-calypso-client/layout/logged-out';
+import { getLanguageRouteParam } from 'wp-calypso-client/lib/i18n-utils';
 
 export const LOGIN_SECTION_DEFINITION = {
 	name: 'login',

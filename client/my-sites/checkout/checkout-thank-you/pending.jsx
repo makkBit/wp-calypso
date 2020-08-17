@@ -11,15 +11,15 @@ import { identity } from 'lodash';
 /**
  * Internal dependencies
  */
-import getOrderTransaction from 'state/selectors/get-order-transaction';
+import getOrderTransaction from 'wp-calypso-client/state/selectors/get-order-transaction';
 
-import getOrderTransactionError from 'state/selectors/get-order-transaction-error';
-import { ORDER_TRANSACTION_STATUS } from 'state/order-transactions/constants';
-import { errorNotice } from 'state/notices/actions';
-import QueryOrderTransaction from 'components/data/query-order-transaction';
-import EmptyContent from 'components/empty-content';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import getOrderTransactionError from 'wp-calypso-client/state/selectors/get-order-transaction-error';
+import { ORDER_TRANSACTION_STATUS } from 'wp-calypso-client/state/order-transactions/constants';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import QueryOrderTransaction from 'wp-calypso-client/components/data/query-order-transaction';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 class CheckoutPending extends PureComponent {
 	static propTypes = {

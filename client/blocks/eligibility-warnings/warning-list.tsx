@@ -4,14 +4,14 @@
 import React from 'react';
 import { localize, LocalizeProps } from 'i18n-calypso';
 import { map } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import hasLocalizedText from './has-localized-text';
-import ExternalLink from 'components/external-link';
-import ActionPanelLink from 'components/action-panel/link';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import ActionPanelLink from 'wp-calypso-client/components/action-panel/link';
 
 interface ExternalProps {
 	context: string | null;

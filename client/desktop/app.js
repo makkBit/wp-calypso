@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 require( './env' ); // Must come first to setup the environment
-const log = require( 'desktop/lib/logger' )( 'desktop:index' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:index' );
 
 module.exports = function ( finished_cb ) {
 	log.info( 'Starting app handlers' );

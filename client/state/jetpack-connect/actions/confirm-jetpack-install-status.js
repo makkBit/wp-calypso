@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { JETPACK_CONNECT_CONFIRM_JETPACK_STATUS } from 'state/jetpack-connect/action-types';
+import { JETPACK_CONNECT_CONFIRM_JETPACK_STATUS } from 'wp-calypso-client/state/jetpack-connect/action-types';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 export function confirmJetpackInstallStatus( status ) {
 	return {

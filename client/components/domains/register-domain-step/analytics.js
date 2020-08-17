@@ -6,7 +6,11 @@ import { flow, mapKeys, mapValues, snakeCase, startsWith, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 export const recordMapDomainButtonClick = ( section ) =>
 	composeAnalytics(

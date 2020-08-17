@@ -9,13 +9,13 @@ import { cloneDeep, findIndex, map, toArray } from 'lodash';
 /**
  * Internal dependencies
  */
-import TermTreeSelector from 'blocks/term-tree-selector';
+import TermTreeSelector from 'wp-calypso-client/blocks/term-tree-selector';
 import AddTerm from './add-term';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { editPost, addTermForPost } from 'state/posts/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { editPost, addTermForPost } from 'wp-calypso-client/state/posts/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
 
 class EditorTermSelector extends Component {
 	static propTypes = {

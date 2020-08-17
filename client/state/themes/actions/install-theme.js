@@ -6,16 +6,16 @@ import { endsWith } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	THEME_INSTALL,
 	THEME_INSTALL_SUCCESS,
 	THEME_INSTALL_FAILURE,
-} from 'state/themes/action-types';
-import { receiveTheme } from 'state/themes/actions/receive-theme';
-import { getWpcomParentThemeId } from 'state/themes/selectors';
+} from 'wp-calypso-client/state/themes/action-types';
+import { receiveTheme } from 'wp-calypso-client/state/themes/actions/receive-theme';
+import { getWpcomParentThemeId } from 'wp-calypso-client/state/themes/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Triggers a network request to install a WordPress.org or WordPress.com theme on a Jetpack site.

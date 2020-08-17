@@ -7,8 +7,8 @@ import React, { Children, cloneElement } from 'react';
 /**
  * Internal dependencies
  */
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuSeparator from 'components/popover/menu-separator';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuSeparator from 'wp-calypso-client/components/popover/menu-separator';
 import PostActionsEllipsisMenuEdit from './edit';
 import PostActionsEllipsisMenuStats from './stats';
 import PostActionsEllipsisMenuComments from './comments';

@@ -10,31 +10,35 @@ import { localize, LocalizeProps } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { Checklist, Task } from 'components/checklist';
-import getJetpackProductInstallStatus from 'state/selectors/get-jetpack-product-install-status';
-import getSiteChecklist from 'state/selectors/get-site-checklist';
-import getRewindState from 'state/selectors/get-rewind-state';
-import isSiteOnPaidPlan from 'state/selectors/is-site-on-paid-plan';
+import { Checklist, Task } from 'wp-calypso-client/components/checklist';
+import getJetpackProductInstallStatus from 'wp-calypso-client/state/selectors/get-jetpack-product-install-status';
+import getSiteChecklist from 'wp-calypso-client/state/selectors/get-site-checklist';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import isSiteOnPaidPlan from 'wp-calypso-client/state/selectors/is-site-on-paid-plan';
 import JetpackChecklistHeader from './header';
-import QueryJetpackProductInstallStatus from 'components/data/query-jetpack-product-install-status';
-import QueryRewindState from 'components/data/query-rewind-state';
-import QuerySiteChecklist from 'components/data/query-site-checklist';
+import QueryJetpackProductInstallStatus from 'wp-calypso-client/components/data/query-jetpack-product-install-status';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import QuerySiteChecklist from 'wp-calypso-client/components/data/query-site-checklist';
 // eslint-disable-next-line no-restricted-imports
 import { format as formatUrl, parse as parseUrl } from 'url';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug, getCustomizerUrl, getSiteProducts } from 'state/sites/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { requestGuidedTour } from 'state/guided-tours/actions';
-import { URL } from 'types';
-import { getSitePlanSlug } from 'state/sites/plans/selectors';
-import { isBusinessPlan, isPremiumPlan } from 'lib/plans';
-import { isJetpackAntiSpam } from 'lib/products-values';
-import withTrackingTool from 'lib/analytics/with-tracking-tool';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getSiteSlug,
+	getCustomizerUrl,
+	getSiteProducts,
+} from 'wp-calypso-client/state/sites/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { requestGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
+import { URL } from 'wp-calypso-client/types';
+import { getSitePlanSlug } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isBusinessPlan, isPremiumPlan } from 'wp-calypso-client/lib/plans';
+import { isJetpackAntiSpam } from 'wp-calypso-client/lib/products-values';
+import withTrackingTool from 'wp-calypso-client/lib/analytics/with-tracking-tool';
 import { Button, Card } from '@automattic/components';
-import JetpackProductInstall from 'my-sites/plans/current-plan/jetpack-product-install';
-import { getTaskList } from 'lib/checklist';
-import { settingsPath } from 'lib/jetpack/paths';
-import { CHECKLIST_KNOWN_TASKS } from 'state/data-layer/wpcom/checklist/index.js';
+import JetpackProductInstall from 'wp-calypso-client/my-sites/plans/current-plan/jetpack-product-install';
+import { getTaskList } from 'wp-calypso-client/lib/checklist';
+import { settingsPath } from 'wp-calypso-client/lib/jetpack/paths';
+import { CHECKLIST_KNOWN_TASKS } from 'wp-calypso-client/state/data-layer/wpcom/checklist/index.js';
 
 /**
  * Style dependencies

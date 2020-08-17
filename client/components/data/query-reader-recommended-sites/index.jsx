@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestRecommendedSites } from 'state/reader/recommended-sites/actions';
+import { requestRecommendedSites } from 'wp-calypso-client/state/reader/recommended-sites/actions';
 
 class QueryReaderRecommendedSites extends Component {
 	static propTypes = {

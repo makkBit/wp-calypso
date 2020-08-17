@@ -9,14 +9,14 @@ import React, { Component, Fragment } from 'react';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormCheckbox from 'components/forms/form-checkbox';
-import { MOVE_DOMAIN } from 'lib/url/support';
-import { getName } from 'lib/purchases';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import { MOVE_DOMAIN } from 'wp-calypso-client/lib/url/support';
+import { getName } from 'wp-calypso-client/lib/purchases';
 
 class RemoveDomainDialog extends Component {
 	static propTypes = {

@@ -5,21 +5,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { head, uniqueId } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import DropZone from 'components/drop-zone';
-import { filterItemsByMimePrefix } from 'lib/media/utils';
+import DropZone from 'wp-calypso-client/components/drop-zone';
+import { filterItemsByMimePrefix } from 'wp-calypso-client/lib/media/utils';
 import FeaturedImageDropZoneIcon from './dropzone-icon';
 
-import { addMedia } from 'state/media/thunks';
-import { editPost } from 'state/posts/actions';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { userCan } from 'lib/site/utils';
+import { addMedia } from 'wp-calypso-client/state/media/thunks';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { userCan } from 'wp-calypso-client/lib/site/utils';
 
 class FeaturedImageDropZone extends Component {
 	onFilesDrop = async ( files ) => {

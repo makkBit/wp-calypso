@@ -9,10 +9,10 @@ import debugModule from 'debug';
 /**
  * Internal dependencies
  */
-import FollowersStore from 'lib/followers/store';
-import FollowersActions from 'lib/followers/actions';
-import passToChildren from 'lib/react-pass-to-children';
-import pollers from 'lib/data-poller';
+import FollowersStore from 'wp-calypso-client/lib/followers/store';
+import FollowersActions from 'wp-calypso-client/lib/followers/actions';
+import passToChildren from 'wp-calypso-client/lib/react-pass-to-children';
+import pollers from 'wp-calypso-client/lib/data-poller';
 
 /**
  * Module variables

@@ -13,10 +13,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import generateEmbedFrameMarkup from 'lib/embed-frame-markup';
-import getEmbed from 'state/selectors/get-embed';
-import QueryEmbed from 'components/data/query-embed';
-import ResizableIframe from 'components/resizable-iframe';
+import generateEmbedFrameMarkup from 'wp-calypso-client/lib/embed-frame-markup';
+import getEmbed from 'wp-calypso-client/state/selectors/get-embed';
+import QueryEmbed from 'wp-calypso-client/components/data/query-embed';
+import ResizableIframe from 'wp-calypso-client/components/resizable-iframe';
 
 class EmbedView extends Component {
 	state = {

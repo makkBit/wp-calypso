@@ -11,9 +11,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import warn from 'lib/warn';
-import PlanFeatures from 'my-sites/plan-features';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import warn from 'wp-calypso-client/lib/warn';
+import PlanFeatures from 'wp-calypso-client/my-sites/plan-features';
 import {
 	JETPACK_PLANS,
 	PLAN_JETPACK_PERSONAL,
@@ -29,18 +29,21 @@ import {
 	GROUP_WPCOM,
 	GROUP_JETPACK,
 	PLAN_PERSONAL,
-} from 'lib/plans/constants';
-import { JETPACK_PRODUCTS_LIST, JETPACK_PRODUCT_PRICE_MATRIX } from 'lib/products-values/constants';
-import { getJetpackProducts } from 'lib/products-values/translations';
-import { addQueryArgs } from 'lib/url';
+} from 'wp-calypso-client/lib/plans/constants';
+import {
+	JETPACK_PRODUCTS_LIST,
+	JETPACK_PRODUCT_PRICE_MATRIX,
+} from 'wp-calypso-client/lib/products-values/constants';
+import { getJetpackProducts } from 'wp-calypso-client/lib/products-values/translations';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 import JetpackFAQ from './jetpack-faq';
 import PlansFeaturesMainProductsHeader from './products-header';
 import WpcomFAQ from './wpcom-faq';
-import CartData from 'components/data/cart';
-import QueryPlans from 'components/data/query-plans';
-import QuerySites from 'components/data/query-sites';
-import QuerySitePlans from 'components/data/query-site-plans';
-import { isEnabled } from 'config';
+import CartData from 'wp-calypso-client/components/data/cart';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import { isEnabled } from 'wp-calypso-client/config';
 import {
 	chooseDefaultCustomerType,
 	findPlansKeys,
@@ -54,28 +57,28 @@ import {
 	isEcommercePlan,
 	planMatches,
 	plansLink,
-} from 'lib/plans';
-import { isValidFeatureKey } from 'lib/plans/features-list';
+} from 'wp-calypso-client/lib/plans';
+import { isValidFeatureKey } from 'wp-calypso-client/lib/plans/features-list';
 import { Button } from '@automattic/components';
-import SegmentedControl from 'components/segmented-control';
-import PaymentMethods from 'blocks/payment-methods';
-import ProductSelector from 'blocks/product-selector';
-import FormattedHeader from 'components/formatted-header';
-import HappychatConnection from 'components/happychat/connection-connected';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import { getDiscountByName } from 'lib/discounts';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import PaymentMethods from 'wp-calypso-client/blocks/payment-methods';
+import ProductSelector from 'wp-calypso-client/blocks/product-selector';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import HappychatConnection from 'wp-calypso-client/components/happychat/connection-connected';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import { getDiscountByName } from 'wp-calypso-client/lib/discounts';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
 import {
 	getSitePlan,
 	getSiteSlug,
 	isJetpackSite,
 	isJetpackSiteMultiSite,
-} from 'state/sites/selectors';
-import getPreviousRoute from 'state/selectors/get-previous-route';
-import { getTld } from 'lib/domains';
-import { isDiscountActive } from 'state/selectors/get-active-discount.js';
-import { selectSiteId as selectHappychatSiteId } from 'state/help/actions';
-import { getABTestVariation } from 'lib/abtest';
+} from 'wp-calypso-client/state/sites/selectors';
+import getPreviousRoute from 'wp-calypso-client/state/selectors/get-previous-route';
+import { getTld } from 'wp-calypso-client/lib/domains';
+import { isDiscountActive } from 'wp-calypso-client/state/selectors/get-active-discount.js';
+import { selectSiteId as selectHappychatSiteId } from 'wp-calypso-client/state/help/actions';
+import { getABTestVariation } from 'wp-calypso-client/lib/abtest';
 
 /**
  * Style dependencies
@@ -519,7 +522,7 @@ export class PlansFeaturesMain extends Component {
 			<div className="plans-features-main__group is-jetpack-products">
 				<PlansFeaturesMainProductsHeader />
 				<AsyncLoad
-					require="blocks/product-plan-overlap-notices"
+					require="wp-calypso-client/blocks/product-plan-overlap-notices"
 					placeholder={ null }
 					plans={ JETPACK_PLANS }
 					products={ JETPACK_PRODUCTS_LIST }

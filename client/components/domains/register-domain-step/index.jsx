@@ -31,40 +31,40 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import wpcom from 'lib/wp';
+import config from 'wp-calypso-client/config';
+import wpcom from 'wp-calypso-client/lib/wp';
 import { CompactCard, Button } from '@automattic/components';
-import Notice from 'components/notice';
-import StickyPanel from 'components/sticky-panel';
+import Notice from 'wp-calypso-client/components/notice';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
 import {
 	checkDomainAvailability,
 	getFixedDomainSearch,
 	getAvailableTlds,
 	getDomainSuggestionSearch,
-} from 'lib/domains';
-import { domainAvailability } from 'lib/domains/constants';
-import { getAvailabilityNotice } from 'lib/domains/registration/availability-messages';
-import Search from 'components/search';
-import DomainRegistrationSuggestion from 'components/domains/domain-registration-suggestion';
-import DomainTransferSuggestion from 'components/domains/domain-transfer-suggestion';
-import DomainSkipSuggestion from 'components/domains/domain-skip-suggestion';
-import DomainSuggestion from 'components/domains/domain-suggestion';
-import DomainSearchResults from 'components/domains/domain-search-results';
-import ExampleDomainSuggestions from 'components/domains/example-domain-suggestions';
-import FreeDomainExplainer from 'components/domains/free-domain-explainer';
+} from 'wp-calypso-client/lib/domains';
+import { domainAvailability } from 'wp-calypso-client/lib/domains/constants';
+import { getAvailabilityNotice } from 'wp-calypso-client/lib/domains/registration/availability-messages';
+import Search from 'wp-calypso-client/components/search';
+import DomainRegistrationSuggestion from 'wp-calypso-client/components/domains/domain-registration-suggestion';
+import DomainTransferSuggestion from 'wp-calypso-client/components/domains/domain-transfer-suggestion';
+import DomainSkipSuggestion from 'wp-calypso-client/components/domains/domain-skip-suggestion';
+import DomainSuggestion from 'wp-calypso-client/components/domains/domain-suggestion';
+import DomainSearchResults from 'wp-calypso-client/components/domains/domain-search-results';
+import ExampleDomainSuggestions from 'wp-calypso-client/components/domains/example-domain-suggestions';
+import FreeDomainExplainer from 'wp-calypso-client/components/domains/free-domain-explainer';
 import {
 	DropdownFilters,
 	FilterResetNotice,
 	TldFilterBar,
-} from 'components/domains/search-filters';
-import { getCurrentUser } from 'state/current-user/selectors';
-import QueryContactDetailsCache from 'components/data/query-contact-details-cache';
-import QueryDomainsSuggestions from 'components/data/query-domains-suggestions';
-import { hasDomainInCart } from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/components/domains/search-filters';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import QueryContactDetailsCache from 'wp-calypso-client/components/data/query-contact-details-cache';
+import QueryDomainsSuggestions from 'wp-calypso-client/components/data/query-domains-suggestions';
+import { hasDomainInCart } from 'wp-calypso-client/lib/cart-values/cart-items';
 import {
 	getDomainsSuggestions,
 	getDomainsSuggestionsError,
-} from 'state/domains/suggestions/selectors';
+} from 'wp-calypso-client/state/domains/suggestions/selectors';
 import {
 	getStrippedDomainBase,
 	getTldWeightOverrides,
@@ -72,7 +72,7 @@ import {
 	isUnknownSuggestion,
 	isMissingVendor,
 	markFeaturedSuggestions,
-} from 'components/domains/register-domain-step/utility';
+} from 'wp-calypso-client/components/domains/register-domain-step/utility';
 import {
 	recordDomainAvailabilityReceive,
 	recordDomainAddAvailabilityPreCheck,
@@ -87,12 +87,12 @@ import {
 	recordUseYourDomainButtonClick,
 	resetSearchCount,
 	enqueueSearchStatReport,
-} from 'components/domains/register-domain-step/analytics';
-import { getSuggestionsVendor } from 'lib/domains/suggestions';
-import { isBlogger } from 'lib/products-values';
-import TrademarkClaimsNotice from 'components/domains/trademark-claims-notice';
-import { isSitePreviewVisible } from 'state/signup/preview/selectors';
-import { hideSitePreview, showSitePreview } from 'state/signup/preview/actions';
+} from 'wp-calypso-client/components/domains/register-domain-step/analytics';
+import { getSuggestionsVendor } from 'wp-calypso-client/lib/domains/suggestions';
+import { isBlogger } from 'wp-calypso-client/lib/products-values';
+import TrademarkClaimsNotice from 'wp-calypso-client/components/domains/trademark-claims-notice';
+import { isSitePreviewVisible } from 'wp-calypso-client/state/signup/preview/selectors';
+import { hideSitePreview, showSitePreview } from 'wp-calypso-client/state/signup/preview/actions';
 
 /**
  * Style dependencies

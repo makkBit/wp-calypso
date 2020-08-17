@@ -1,8 +1,12 @@
 /**
  * Internal dependencies
  */
-import { getDomainTypeText } from 'lib/domains';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import { getDomainTypeText } from 'wp-calypso-client/lib/domains';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 export const recordPaymentSettingsClick = ( domain ) => {
 	const domainType = getDomainTypeText( domain );

@@ -6,13 +6,13 @@ import { Reducer, AnyAction, Dispatch, Action, StoreEnhancerStoreCreator } from 
 /**
  * Internal dependencies
  */
-import { HTTP_DATA_REQUEST, HTTP_DATA_TICK } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+import { HTTP_DATA_REQUEST, HTTP_DATA_TICK } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 
 /**
  * Types
  */
-import { Lazy, TimestampMS, TimerHandle } from 'types';
+import { Lazy, TimestampMS, TimerHandle } from 'wp-calypso-client/types';
 
 export enum DataState {
 	Failure = 'failure',

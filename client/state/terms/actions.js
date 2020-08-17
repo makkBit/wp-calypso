@@ -6,21 +6,21 @@ import { filter, get, uniqueId } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	TERM_REMOVE,
 	TERMS_RECEIVE,
 	TERMS_REQUEST,
 	TERMS_REQUEST_SUCCESS,
 	TERMS_REQUEST_FAILURE,
-} from 'state/action-types';
-import { editPost } from 'state/posts/actions';
-import { updateSiteSettings } from 'state/site-settings/actions';
-import { getSitePostsByTerm } from 'state/posts/selectors';
-import { getSiteSettings } from 'state/site-settings/selectors';
+} from 'wp-calypso-client/state/action-types';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import { updateSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { getSitePostsByTerm } from 'wp-calypso-client/state/posts/selectors';
+import { getSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
 import { getTerm, getTerms } from './selectors';
 
-import 'state/terms/init';
+import 'wp-calypso-client/state/terms/init';
 
 /**
  * Returns an action thunk, dispatching progress of a request to add a new term

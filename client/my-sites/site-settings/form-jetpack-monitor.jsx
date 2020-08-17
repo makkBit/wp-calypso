@@ -10,24 +10,24 @@ import { isEmpty, partial } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import SupportInfo from 'components/support-info';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import QuerySiteMonitorSettings from 'components/data/query-site-monitor-settings';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { updateSiteMonitorSettings } from 'state/sites/monitor/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import getSiteMonitorSettings from 'state/selectors/get-site-monitor-settings';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isDeactivatingJetpackModule from 'state/selectors/is-deactivating-jetpack-module';
-import isFetchingJetpackModules from 'state/selectors/is-fetching-jetpack-modules';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isRequestingSiteMonitorSettings from 'state/selectors/is-requesting-site-monitor-settings';
-import isUpdatingSiteMonitorSettings from 'state/selectors/is-updating-site-monitor-settings';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import QuerySiteMonitorSettings from 'wp-calypso-client/components/data/query-site-monitor-settings';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { updateSiteMonitorSettings } from 'wp-calypso-client/state/sites/monitor/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import getSiteMonitorSettings from 'wp-calypso-client/state/selectors/get-site-monitor-settings';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isDeactivatingJetpackModule from 'wp-calypso-client/state/selectors/is-deactivating-jetpack-module';
+import isFetchingJetpackModules from 'wp-calypso-client/state/selectors/is-fetching-jetpack-modules';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isRequestingSiteMonitorSettings from 'wp-calypso-client/state/selectors/is-requesting-site-monitor-settings';
+import isUpdatingSiteMonitorSettings from 'wp-calypso-client/state/selectors/is-updating-site-monitor-settings';
 
 class SiteSettingsFormJetpackMonitor extends Component {
 	state = {};

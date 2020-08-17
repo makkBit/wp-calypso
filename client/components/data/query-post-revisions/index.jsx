@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestPostRevisions } from 'state/posts/revisions/actions';
-import { getEditedPostValue } from 'state/posts/selectors';
+import { requestPostRevisions } from 'wp-calypso-client/state/posts/revisions/actions';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
 
 class QueryPostRevisions extends Component {
 	componentDidMount() {

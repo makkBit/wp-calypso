@@ -7,10 +7,10 @@ import React, { Component, Fragment } from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import FormattedHeader from 'components/formatted-header';
-import ExternalLink from 'components/external-link';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 import { localize } from 'i18n-calypso';
-import { CONCIERGE_SUPPORT } from 'lib/url/support';
+import { CONCIERGE_SUPPORT } from 'wp-calypso-client/lib/url/support';
 
 class PrimaryHeader extends Component {
 	render() {

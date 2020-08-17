@@ -15,11 +15,11 @@ import {
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { deleteComment } from 'state/comments/actions';
-import { getSiteComment } from 'state/comments/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
+} from 'wp-calypso-client/state/analytics/actions';
+import { deleteComment } from 'wp-calypso-client/state/comments/actions';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
 
 const CommentDeleteWarning = ( { isLoading, destroyComment, translate } ) =>
 	! isLoading && (

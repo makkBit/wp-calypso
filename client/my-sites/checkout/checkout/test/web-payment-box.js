@@ -14,8 +14,8 @@ import { identity } from 'lodash';
  * Internal dependencies
  */
 import { WebPaymentBox } from '../web-payment-box';
-import PaymentCountrySelect from 'components/payment-country-select';
-import { setTaxCountryCode, setTaxPostalCode } from 'lib/cart/actions';
+import PaymentCountrySelect from 'wp-calypso-client/components/payment-country-select';
+import { setTaxCountryCode, setTaxPostalCode } from 'wp-calypso-client/lib/cart/actions';
 
 jest.mock( 'config', () => {
 	const configMock = jest.fn( ( i ) => i );

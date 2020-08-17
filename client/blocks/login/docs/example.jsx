@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import LoginBlock from 'blocks/login';
+import LoginBlock from 'wp-calypso-client/blocks/login';
 
 const LoginExample = () => (
 	<React.Fragment>

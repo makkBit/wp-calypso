@@ -12,9 +12,12 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Dialog, Button } from '@automattic/components';
-import Spinner from 'components/spinner';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import { verifyEmail, resetVerifyEmailState } from 'state/current-user/email-verification/actions';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	verifyEmail,
+	resetVerifyEmailState,
+} from 'wp-calypso-client/state/current-user/email-verification/actions';
 
 /**
  * Style dependencies

@@ -6,7 +6,7 @@ const { BrowserWindow, ipcMain: ipc } = require( 'electron' ); // eslint-disable
 /**
  * Internal dependencies
  */
-const log = require( 'desktop/lib/logger' )( 'desktop:printer' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:printer' );
 
 module.exports = function () {
 	ipc.on( 'print', function ( event, title, contents ) {

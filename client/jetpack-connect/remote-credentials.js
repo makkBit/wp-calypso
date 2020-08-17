@@ -3,7 +3,7 @@
  */
 import classnames from 'classnames';
 import React, { Component, Fragment } from 'react';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import page from 'page';
 import { connect } from 'react-redux';
 import { flowRight, includes } from 'lodash';
@@ -12,31 +12,31 @@ import { localize } from 'i18n-calypso';
  * External dependencies
  */
 import { Button, Card } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormattedHeader from 'components/formatted-header';
-import FormPasswordInput from 'components/forms/form-password-input';
-import Gridicon from 'components/gridicon';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import HelpButton from './help-button';
 import JetpackConnectNotices from './jetpack-connect-notices';
 import JetpackRemoteInstallNotices from './jetpack-remote-install-notices';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
-import LoggedOutFormLinkItem from 'components/logged-out-form/link-item';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
+import LoggedOutFormLinkItem from 'wp-calypso-client/components/logged-out-form/link-item';
 import MainWrapper from './main-wrapper';
-import Spinner from 'components/spinner';
+import Spinner from 'wp-calypso-client/components/spinner';
 import { addCalypsoEnvQueryArg } from './utils';
-import { addQueryArgs } from 'lib/route';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 import {
 	jetpackRemoteInstall,
 	jetpackRemoteInstallUpdateError,
-} from 'state/jetpack-remote-install/actions';
-import getJetpackRemoteInstallErrorCode from 'state/selectors/get-jetpack-remote-install-error-code';
-import getJetpackRemoteInstallErrorMessage from 'state/selectors/get-jetpack-remote-install-error-message';
-import isJetpackRemoteInstallComplete from 'state/selectors/is-jetpack-remote-install-complete';
-import { getConnectingSite } from 'state/jetpack-connect/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/jetpack-remote-install/actions';
+import getJetpackRemoteInstallErrorCode from 'wp-calypso-client/state/selectors/get-jetpack-remote-install-error-code';
+import getJetpackRemoteInstallErrorMessage from 'wp-calypso-client/state/selectors/get-jetpack-remote-install-error-message';
+import isJetpackRemoteInstallComplete from 'wp-calypso-client/state/selectors/is-jetpack-remote-install-complete';
+import { getConnectingSite } from 'wp-calypso-client/state/jetpack-connect/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { REMOTE_PATH_AUTH } from './constants';
 import {
 	ACTIVATION_FAILURE,
@@ -46,7 +46,7 @@ import {
 	INVALID_PERMISSIONS,
 	UNKNOWN_REMOTE_INSTALL_ERROR,
 } from './connection-notice-types';
-import WordPressLogo from 'components/wordpress-logo';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
 
 export class OrgCredentialsForm extends Component {
 	state = {

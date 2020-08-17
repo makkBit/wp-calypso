@@ -4,7 +4,7 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import { startCase } from 'lodash';
@@ -12,26 +12,26 @@ import { startCase } from 'lodash';
 /**
  * Internal dependencies
  */
-import AutomatticLogo from 'components/automattic-logo';
-import DocumentHead from 'components/data/document-head';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import LocaleSuggestions from 'components/locale-suggestions';
-import LoggedOutFormBackLink from 'components/logged-out-form/back-link';
-import TranslatorInvite from 'components/translator-invite';
-import LoginBlock from 'blocks/login';
-import { isCrowdsignalOAuth2Client } from 'lib/oauth2-clients';
+import AutomatticLogo from 'wp-calypso-client/components/automattic-logo';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
+import LoggedOutFormBackLink from 'wp-calypso-client/components/logged-out-form/back-link';
+import TranslatorInvite from 'wp-calypso-client/components/translator-invite';
+import LoginBlock from 'wp-calypso-client/blocks/login';
+import { isCrowdsignalOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
 import LoginLinks from './login-links';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import PrivateSite from './private-site';
-import { localizeUrl } from 'lib/i18n-utils';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	recordPageViewWithClientId as recordPageView,
 	recordTracksEventWithClientId as recordTracksEvent,
 	enhanceWithSiteType,
-} from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
+} from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 
 /**
  * Style dependencies

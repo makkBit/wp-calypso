@@ -3,7 +3,7 @@
  */
 import { getPurchases } from './get-purchases';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 /**
  * Returns a list of Purchases associated with a User from the state using its userId

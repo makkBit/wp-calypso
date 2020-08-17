@@ -8,17 +8,17 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import InlineSupportLink from 'components/inline-support-link';
-import Gridicon from 'components/gridicon';
-import MaterialIcon from 'components/material-icon';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { navigate } from 'state/ui/actions';
+} from 'wp-calypso-client/state/analytics/actions';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 
 /**
  * Style dependencies

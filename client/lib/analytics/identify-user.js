@@ -6,7 +6,7 @@ import debugModule from 'debug';
 /**
  * Internal dependencies
  */
-import { recordAliasInFloodlight } from 'lib/analytics/ad-tracking';
+import { recordAliasInFloodlight } from 'wp-calypso-client/lib/analytics/ad-tracking';
 import {
 	identifyUser as baseIdentifyUser,
 	getTracksAnonymousUserId,

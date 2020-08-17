@@ -6,14 +6,14 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import PromoCard from 'components/promo-section/promo-card';
-import PromoCardCta from 'components/promo-section/promo-card/cta';
-import { FEATURE_MEMBERSHIPS } from 'lib/plans/constants';
+import PromoCard from 'wp-calypso-client/components/promo-section/promo-card';
+import PromoCardCta from 'wp-calypso-client/components/promo-section/promo-card/cta';
+import { FEATURE_MEMBERSHIPS } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Image dependencies
  */
-import referralImage from 'assets/images/earn/referral.svg';
+import referralImage from 'wp-calypso-client/assets/images/earn/referral.svg';
 
 /* eslint-disable wpcalypso/jsx-classname-namespace */
 const PromoCardExample = () => {

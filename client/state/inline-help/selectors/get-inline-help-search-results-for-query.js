@@ -6,8 +6,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/inline-help/init';
-import getSearchQuery from 'state/inline-help/selectors/get-search-query';
+import 'wp-calypso-client/state/inline-help/init';
+import getSearchQuery from 'wp-calypso-client/state/inline-help/selectors/get-search-query';
 
 /**
  * Returns an array of all search results for the current search query or an

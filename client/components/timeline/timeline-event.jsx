@@ -9,8 +9,8 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button, CompactCard } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import { withLocalizedMoment } from 'components/localized-moment';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class TimelineEvent extends PureComponent {
 	static propTypes = {

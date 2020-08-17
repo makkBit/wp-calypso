@@ -9,14 +9,18 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import { localizeUrl } from 'lib/i18n-utils';
-import { composeAnalytics, recordTracksEvent, bumpStat } from 'state/analytics/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteOption } from 'state/sites/selectors';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import {
+	composeAnalytics,
+	recordTracksEvent,
+	bumpStat,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
 
 /**
  * Style dependencies
@@ -26,7 +30,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import happinessIllustration from 'assets/images/customer-home/happiness.png';
+import happinessIllustration from 'wp-calypso-client/assets/images/customer-home/happiness.png';
 
 const Support = ( { trackContactAction, trackDocsAction } ) => {
 	const translate = useTranslate();

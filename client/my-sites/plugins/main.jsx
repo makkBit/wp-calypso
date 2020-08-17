@@ -6,36 +6,44 @@ import page from 'page';
 import { connect } from 'react-redux';
 import { capitalize, find, flow, isEmpty, some } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import DocumentHead from 'components/data/document-head';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import Search from 'components/search';
-import urlSearch from 'lib/url-search';
-import EmptyContent from 'components/empty-content';
-import PluginsStore from 'lib/plugins/store';
-import { fetchPluginData as wporgFetchPluginData } from 'state/plugins/wporg/actions';
-import { getPlugin } from 'state/plugins/wporg/selectors';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import Search from 'wp-calypso-client/components/search';
+import urlSearch from 'wp-calypso-client/lib/url-search';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PluginsStore from 'wp-calypso-client/lib/plugins/store';
+import { fetchPluginData as wporgFetchPluginData } from 'wp-calypso-client/state/plugins/wporg/actions';
+import { getPlugin } from 'wp-calypso-client/state/plugins/wporg/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import PluginsList from './plugins-list';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import PluginsBrowser from './plugins-browser';
 import NoPermissionsError from './no-permissions-error';
-import canCurrentUser from 'state/selectors/can-current-user';
-import canCurrentUserManagePlugins from 'state/selectors/can-current-user-manage-plugins';
-import getSelectedOrAllSitesWithPlugins from 'state/selectors/get-selected-or-all-sites-with-plugins';
-import hasJetpackSites from 'state/selectors/has-jetpack-sites';
-import { canJetpackSiteUpdateFiles, isJetpackSite, isRequestingSites } from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import canCurrentUserManagePlugins from 'wp-calypso-client/state/selectors/can-current-user-manage-plugins';
+import getSelectedOrAllSitesWithPlugins from 'wp-calypso-client/state/selectors/get-selected-or-all-sites-with-plugins';
+import hasJetpackSites from 'wp-calypso-client/state/selectors/has-jetpack-sites';
+import {
+	canJetpackSiteUpdateFiles,
+	isJetpackSite,
+	isRequestingSites,
+} from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
 import { Button } from '@automattic/components';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /**
  * Style dependencies

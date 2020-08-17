@@ -9,11 +9,11 @@ import { useSelector } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import { getProductBySlug } from 'state/products-list/selectors';
-import { getJetpackProductDisplayName } from 'lib/products-values/get-jetpack-product-display-name';
-import { getSitePurchases } from 'state/purchases/selectors';
-import type { Plan } from 'state/plans/types';
-import type { RawSiteProduct } from 'state/sites/selectors/get-site-products';
+import { getProductBySlug } from 'wp-calypso-client/state/products-list/selectors';
+import { getJetpackProductDisplayName } from 'wp-calypso-client/lib/products-values/get-jetpack-product-display-name';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
+import type { Plan } from 'wp-calypso-client/state/plans/types';
+import type { RawSiteProduct } from 'wp-calypso-client/state/sites/selectors/get-site-products';
 
 type Site = {
 	ID: number;

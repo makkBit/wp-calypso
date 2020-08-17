@@ -13,10 +13,10 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import { ProtectFormGuard } from 'lib/protect-form';
+import Main from 'wp-calypso-client/components/main';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 import {
 	clearProductEdits,
 	editProduct,
@@ -44,7 +44,7 @@ import { getProductCategoriesWithLocalEdits } from 'woocommerce/state/ui/product
 import ProductForm from './product-form';
 import ProductHeader from './product-header';
 import { getLink } from 'woocommerce/lib/nav-utils';
-import { withAnalytics, recordTracksEvent } from 'state/analytics/actions';
+import { withAnalytics, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { getSaveErrorMessage } from './save-error-message';
 
 class ProductCreate extends React.Component {

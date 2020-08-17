@@ -6,10 +6,10 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { mergePostEdits, normalizePostForEditing } from 'state/posts/utils';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { mergePostEdits, normalizePostForEditing } from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an object of edited post attributes for the site ID post ID pairing.

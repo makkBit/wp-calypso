@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_COMPLETE_RESET, SIGNUP_STEPS_SITE_TYPE_SET } from 'state/action-types';
+import {
+	SIGNUP_COMPLETE_RESET,
+	SIGNUP_STEPS_SITE_TYPE_SET,
+} from 'wp-calypso-client/state/action-types';
 
-import { withSchemaValidation } from 'state/utils';
+import { withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { siteTypeSchema } from './schema';
 
 export default withSchemaValidation( siteTypeSchema, ( state = '', action ) => {

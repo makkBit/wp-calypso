@@ -8,7 +8,7 @@ import { includes } from 'lodash';
  * Internal dependencies
  */
 import { Formats, MediaTypes } from './constants';
-import { getMimePrefix } from 'lib/media/utils';
+import { getMimePrefix } from 'wp-calypso-client/lib/media/utils';
 
 /**
  * Module variables

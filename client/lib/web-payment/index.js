@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Web Payment method identifiers.

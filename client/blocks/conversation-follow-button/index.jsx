@@ -10,10 +10,13 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import ConversationFollowButton from './button';
-import { isFollowingReaderConversation } from 'state/reader/conversations/selectors';
-import { followConversation, muteConversation } from 'state/reader/conversations/actions';
-import { getTracksPropertiesForPost } from 'reader/stats';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { isFollowingReaderConversation } from 'wp-calypso-client/state/reader/conversations/selectors';
+import {
+	followConversation,
+	muteConversation,
+} from 'wp-calypso-client/state/reader/conversations/actions';
+import { getTracksPropertiesForPost } from 'wp-calypso-client/reader/stats';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

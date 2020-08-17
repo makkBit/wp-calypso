@@ -8,8 +8,8 @@ import { shallow } from 'enzyme';
  * Internal dependencies
  */
 import { MySitesSidebar } from '..';
-import config from 'config';
-import { abtest } from 'lib/abtest';
+import config from 'wp-calypso-client/config';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 jest.mock( 'lib/user', () => () => null );
 jest.mock( 'lib/user/index', () => () => {} );

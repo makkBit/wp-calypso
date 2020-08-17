@@ -7,30 +7,30 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
 import { debounce, get, flow, inRange, isEmpty } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormTextInputWithAffixes from 'components/forms/form-text-input-with-affixes';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormTextInputWithAffixes from 'wp-calypso-client/components/forms/form-text-input-with-affixes';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
 import ConfirmationDialog from './dialog';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	requestSiteAddressChange,
 	requestSiteAddressAvailability,
 	clearValidationError,
-} from 'state/site-address-change/actions';
-import getSiteAddressAvailabilityPending from 'state/selectors/get-site-address-availability-pending';
-import getSiteAddressValidationError from 'state/selectors/get-site-address-validation-error';
-import isRequestingSiteAddressChange from 'state/selectors/is-requesting-site-address-change';
-import { getSelectedSite } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/site-address-change/actions';
+import getSiteAddressAvailabilityPending from 'wp-calypso-client/state/selectors/get-site-address-availability-pending';
+import getSiteAddressValidationError from 'wp-calypso-client/state/selectors/get-site-address-validation-error';
+import isRequestingSiteAddressChange from 'wp-calypso-client/state/selectors/is-requesting-site-address-change';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

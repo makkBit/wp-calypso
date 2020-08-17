@@ -10,22 +10,22 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import ContactsPrivacyCard from './card';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
 import {
 	domainManagementEdit,
 	domainManagementEditContactInfo,
 	domainManagementManageConsent,
-} from 'my-sites/domains/paths';
-import { getSelectedDomain } from 'lib/domains';
-import isRequestingWhois from 'state/selectors/is-requesting-whois';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import NonOwnerCard from 'my-sites/domains/domain-management/components/domain/non-owner-card';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import isRequestingWhois from 'wp-calypso-client/state/selectors/is-requesting-whois';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import NonOwnerCard from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/non-owner-card';
 
 /**
  * Style dependencies

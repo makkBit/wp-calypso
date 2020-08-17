@@ -12,35 +12,35 @@ import page from 'page';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 import EmailedLoginLinkExpired from './emailed-login-link-expired';
-import config from 'config';
-import { login } from 'lib/paths';
+import config from 'wp-calypso-client/config';
+import { login } from 'wp-calypso-client/lib/paths';
 import { localize } from 'i18n-calypso';
-import { LINK_EXPIRED_PAGE } from 'state/login/magic-login/constants';
+import { LINK_EXPIRED_PAGE } from 'wp-calypso-client/state/login/magic-login/constants';
 import {
 	fetchMagicLoginAuthenticate,
 	showMagicLoginLinkExpiredPage,
-} from 'state/login/magic-login/actions';
-import { rebootAfterLogin } from 'state/login/actions';
-import getMagicLoginCurrentView from 'state/selectors/get-magic-login-current-view';
-import getMagicLoginRequestAuthError from 'state/selectors/get-magic-login-request-auth-error';
-import getMagicLoginRequestedAuthSuccessfully from 'state/selectors/get-magic-login-requested-auth-successfully';
-import isFetchingMagicLoginAuth from 'state/selectors/is-fetching-magic-login-auth';
+} from 'wp-calypso-client/state/login/magic-login/actions';
+import { rebootAfterLogin } from 'wp-calypso-client/state/login/actions';
+import getMagicLoginCurrentView from 'wp-calypso-client/state/selectors/get-magic-login-current-view';
+import getMagicLoginRequestAuthError from 'wp-calypso-client/state/selectors/get-magic-login-request-auth-error';
+import getMagicLoginRequestedAuthSuccessfully from 'wp-calypso-client/state/selectors/get-magic-login-requested-auth-successfully';
+import isFetchingMagicLoginAuth from 'wp-calypso-client/state/selectors/is-fetching-magic-login-auth';
 import {
 	getRedirectToOriginal,
 	getRedirectToSanitized,
 	getTwoFactorNotificationSent,
 	isTwoFactorEnabled,
-} from 'state/login/selectors';
+} from 'wp-calypso-client/state/login/selectors';
 import {
 	wasImmediateLoginAttempted,
 	wasManualRenewalImmediateLoginAttempted,
-} from 'state/immediate-login/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
+} from 'wp-calypso-client/state/immediate-login/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
 
 class HandleEmailedLinkForm extends React.Component {
 	static propTypes = {

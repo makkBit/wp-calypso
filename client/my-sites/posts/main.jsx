@@ -9,18 +9,18 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import PostTypeFilter from 'my-sites/post-type-filter';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import PostTypeList from 'my-sites/post-type-list';
-import PostTypeBulkEditBar from 'my-sites/post-type-list/bulk-edit-bar';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import PostTypeFilter from 'wp-calypso-client/my-sites/post-type-filter';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import PostTypeList from 'wp-calypso-client/my-sites/post-type-list';
+import PostTypeBulkEditBar from 'wp-calypso-client/my-sites/post-type-list/bulk-edit-bar';
 import titlecase from 'to-title-case';
-import Main from 'components/main';
-import { POST_STATUSES } from 'state/posts/constants';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { mapPostStatus } from 'lib/route';
+import Main from 'wp-calypso-client/components/main';
+import { POST_STATUSES } from 'wp-calypso-client/state/posts/constants';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { mapPostStatus } from 'wp-calypso-client/lib/route';
 
 /**
  * Style dependencies

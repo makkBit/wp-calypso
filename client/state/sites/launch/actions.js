@@ -1,11 +1,15 @@
 /**
  * Internal dependencies
  */
-import { SITE_LAUNCH } from 'state/action-types';
-import 'state/data-layer/wpcom/sites/launch';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import { getSiteSlug, isCurrentPlanPaid, getSiteOption } from 'state/sites/selectors';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
+import { SITE_LAUNCH } from 'wp-calypso-client/state/action-types';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/launch';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import {
+	getSiteSlug,
+	isCurrentPlanPaid,
+	getSiteOption,
+} from 'wp-calypso-client/state/sites/selectors';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
 
 export const launchSite = ( siteId ) => ( {
 	type: SITE_LAUNCH,

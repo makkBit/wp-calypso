@@ -6,10 +6,10 @@ import { find, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import getPastBillingTransactions from 'state/selectors/get-past-billing-transactions';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getPastBillingTransactions from 'wp-calypso-client/state/selectors/get-past-billing-transactions';
 
-import 'state/billing-transactions/init';
+import 'wp-calypso-client/state/billing-transactions/init';
 
 /**
  * Utility function to retrieve a transaction from individualTransactions state subtree

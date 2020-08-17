@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { FEATURE_UNLIMITED_PREMIUM_THEMES } from 'lib/plans/constants';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { isThemePremium } from 'state/themes/selectors/is-theme-premium';
+import { FEATURE_UNLIMITED_PREMIUM_THEMES } from 'wp-calypso-client/lib/plans/constants';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isThemePremium } from 'wp-calypso-client/state/themes/selectors/is-theme-premium';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns the URL for purchasing a Jetpack Professional plan if the theme is a premium theme and site doesn't have access to them.

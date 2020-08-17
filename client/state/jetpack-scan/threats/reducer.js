@@ -5,8 +5,8 @@ import {
 	JETPACK_SCAN_UPDATE,
 	JETPACK_SCAN_UPDATE_THREAT,
 	JETPACK_SCAN_UPDATE_THREAT_COMPLETED,
-} from 'state/action-types';
-import { combineReducers, keyedReducer } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 
 const updating = keyedReducer( 'siteId', ( state = [], { type, ...payload } ) => {
 	switch ( type ) {

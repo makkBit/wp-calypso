@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { LOGIN_EMAIL_SEND } from 'state/action-types';
-import { getLanguage, getLocaleSlug } from 'lib/i18n-utils';
-import 'state/data-layer/wpcom/auth/send-login-email';
+import { LOGIN_EMAIL_SEND } from 'wp-calypso-client/state/action-types';
+import { getLanguage, getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
+import 'wp-calypso-client/state/data-layer/wpcom/auth/send-login-email';
 
 /**
  * Sends an email with a link that allows a user to login WordPress.com or the native apps

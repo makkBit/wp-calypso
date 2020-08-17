@@ -4,8 +4,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import AutoDirection from 'components/auto-direction';
-import Emojify from 'components/emojify';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Emojify from 'wp-calypso-client/components/emojify';
 
 /**
  * Style dependencies

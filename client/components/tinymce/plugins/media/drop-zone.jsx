@@ -9,15 +9,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { bumpStat } from 'lib/analytics/mc';
-import getMediaErrors from 'state/selectors/get-media-errors';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import MediaDropZone from 'my-sites/media-library/drop-zone';
-import { getMimePrefix } from 'lib/media/utils';
-import markup from 'post-editor/media-modal/markup';
-import { getSelectedSite } from 'state/ui/selectors';
-import { blockSave } from 'state/editor/save-blockers/actions';
-import { setMediaLibrarySelectedItems } from 'state/media/actions';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import getMediaErrors from 'wp-calypso-client/state/selectors/get-media-errors';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import MediaDropZone from 'wp-calypso-client/my-sites/media-library/drop-zone';
+import { getMimePrefix } from 'wp-calypso-client/lib/media/utils';
+import markup from 'wp-calypso-client/post-editor/media-modal/markup';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { blockSave } from 'wp-calypso-client/state/editor/save-blockers/actions';
+import { setMediaLibrarySelectedItems } from 'wp-calypso-client/state/media/actions';
 
 class TinyMCEDropZone extends React.Component {
 	static propTypes = {

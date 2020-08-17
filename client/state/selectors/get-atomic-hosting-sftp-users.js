@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/hosting/init';
+import 'wp-calypso-client/state/hosting/init';
 
 /**
  * Returns the sftp users details for given site.

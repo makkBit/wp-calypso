@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 
 function goBack() {
 	if ( typeof window !== 'undefined' ) {

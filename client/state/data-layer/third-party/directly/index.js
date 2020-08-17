@@ -1,11 +1,17 @@
 /**
  * Internal dependencies
  */
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { DIRECTLY_ASK_QUESTION, DIRECTLY_INITIALIZATION_START } from 'state/action-types';
-import { initializationCompleted, initializationFailed } from 'state/help/directly/actions';
-import * as directly from 'lib/directly';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import {
+	DIRECTLY_ASK_QUESTION,
+	DIRECTLY_INITIALIZATION_START,
+} from 'wp-calypso-client/state/action-types';
+import {
+	initializationCompleted,
+	initializationFailed,
+} from 'wp-calypso-client/state/help/directly/actions';
+import * as directly from 'wp-calypso-client/lib/directly';
 
 export function askQuestion( { dispatch }, action ) {
 	return directly

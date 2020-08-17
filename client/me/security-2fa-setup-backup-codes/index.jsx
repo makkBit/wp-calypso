@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import Security2faBackupCodesList from 'me/security-2fa-backup-codes-list';
-import Security2faProgress from 'me/security-2fa-progress';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import Security2faBackupCodesList from 'wp-calypso-client/me/security-2fa-backup-codes-list';
+import Security2faProgress from 'wp-calypso-client/me/security-2fa-progress';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class Security2faSetupBackupCodes extends React.Component {
 	state = {

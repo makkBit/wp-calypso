@@ -8,19 +8,19 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import QueryJetpackScanHistory from 'components/data/query-jetpack-scan-history';
-import ThreatDialog from 'components/jetpack/threat-dialog';
-import ThreatItem from 'components/jetpack/threat-item';
-import SimplifiedSegmentedControl from 'components/segmented-control/simplified';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteSlug, getSelectedSite } from 'state/ui/selectors';
-import isRequestingJetpackScanHistory from 'state/selectors/is-requesting-jetpack-scan-history';
-import getSiteScanHistory from 'state/selectors/get-site-scan-history';
-import contactSupportUrl from 'lib/jetpack/contact-support-url';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { useThreats } from 'lib/jetpack/use-threats';
-import { Threat } from 'components/jetpack/threat-item/types';
-import { Site } from 'my-sites/scan/types';
+import QueryJetpackScanHistory from 'wp-calypso-client/components/data/query-jetpack-scan-history';
+import ThreatDialog from 'wp-calypso-client/components/jetpack/threat-dialog';
+import ThreatItem from 'wp-calypso-client/components/jetpack/threat-item';
+import SimplifiedSegmentedControl from 'wp-calypso-client/components/segmented-control/simplified';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteSlug, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import isRequestingJetpackScanHistory from 'wp-calypso-client/state/selectors/is-requesting-jetpack-scan-history';
+import getSiteScanHistory from 'wp-calypso-client/state/selectors/get-site-scan-history';
+import contactSupportUrl from 'wp-calypso-client/lib/jetpack/contact-support-url';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { useThreats } from 'wp-calypso-client/lib/jetpack/use-threats';
+import { Threat } from 'wp-calypso-client/components/jetpack/threat-item/types';
+import { Site } from 'wp-calypso-client/my-sites/scan/types';
 
 /**
  * Style dependencies

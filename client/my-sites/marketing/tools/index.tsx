@@ -10,19 +10,19 @@ import { useTranslate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import MarketingToolsFeature from './feature';
 import MarketingToolsGoogleMyBusinessFeature from './google-my-business-feature';
 import MarketingToolsHeader from './header';
-import { marketingConnections, marketingTraffic } from 'my-sites/marketing/paths';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import earnIllustration from 'assets/images/customer-home/illustration--task-earn.svg';
+import { marketingConnections, marketingTraffic } from 'wp-calypso-client/my-sites/marketing/paths';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import earnIllustration from 'wp-calypso-client/assets/images/customer-home/illustration--task-earn.svg';
 
 /**
  * Types
  */
-import * as T from 'types';
+import * as T from 'wp-calypso-client/types';
 
 /**
  * Style dependencies

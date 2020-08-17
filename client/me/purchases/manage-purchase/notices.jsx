@@ -10,8 +10,8 @@ import { isEmpty, merge, minBy } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import config from 'config';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import config from 'wp-calypso-client/config';
 import {
 	canExplicitRenew,
 	creditCardExpiresBeforeSubscription,
@@ -31,20 +31,20 @@ import {
 	showCreditCardExpiringWarning,
 	isPaidWithCredits,
 	shouldAddPaymentSourceInsteadOfRenewingNow,
-} from 'lib/purchases';
+} from 'wp-calypso-client/lib/purchases';
 import {
 	isDomainTransfer,
 	isConciergeSession,
 	isPlan,
 	isDomainRegistration,
-} from 'lib/products-values';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { isMonthly } from 'lib/plans/constants';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { managePurchase } from 'me/purchases/paths';
-import UpcomingRenewalsDialog from 'me/purchases/upcoming-renewals/upcoming-renewals-dialog';
+} from 'wp-calypso-client/lib/products-values';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { isMonthly } from 'wp-calypso-client/lib/plans/constants';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
+import UpcomingRenewalsDialog from 'wp-calypso-client/me/purchases/upcoming-renewals/upcoming-renewals-dialog';
 
 /**
  * Style dependencies

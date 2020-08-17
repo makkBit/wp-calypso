@@ -8,9 +8,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Animate from 'components/animate';
-import Gravatar from 'components/gravatar';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import Animate from 'wp-calypso-client/components/animate';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

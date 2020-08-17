@@ -6,9 +6,9 @@ const { ipcMain: ipc } = require( 'electron' ); // eslint-disable-line import/no
 /**
  * Internal dependencies
  */
-const Settings = require( 'desktop/lib/settings' );
-const Platform = require( 'desktop/lib/platform' );
-const log = require( 'desktop/lib/logger' )( 'desktop:notifications' );
+const Settings = require( 'wp-calypso-client/desktop/lib/settings' );
+const Platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:notifications' );
 
 /**
  * Module variables

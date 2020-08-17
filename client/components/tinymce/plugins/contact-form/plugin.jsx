@@ -18,12 +18,12 @@ import {
 	fieldRemove,
 	fieldUpdate,
 	settingsUpdate,
-} from 'state/editor/contact-form/actions';
+} from 'wp-calypso-client/state/editor/contact-form/actions';
 import { serialize, deserialize } from './shortcode-utils';
-import { renderWithReduxStore } from 'lib/react-helpers';
-import Gridicon from 'components/gridicon';
+import { renderWithReduxStore } from 'wp-calypso-client/lib/react-helpers';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 function wpcomContactForm( editor ) {
 	let node;

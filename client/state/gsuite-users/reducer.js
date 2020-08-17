@@ -6,12 +6,12 @@ import {
 	keyedReducer,
 	withSchemaValidation,
 	withoutPersistence,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 import {
 	GSUITE_USERS_REQUEST,
 	GSUITE_USERS_REQUEST_FAILURE,
 	GSUITE_USERS_REQUEST_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { usersSchema } from './schema';
 
 export const usersReducer = withSchemaValidation( usersSchema, ( state = null, action ) => {

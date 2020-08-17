@@ -1,16 +1,16 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	KEYRING_SERVICES_RECEIVE,
 	KEYRING_SERVICES_REQUEST,
 	KEYRING_SERVICES_REQUEST_FAILURE,
 	KEYRING_SERVICES_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/action-types';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 /**
  * Triggers a network request for Keyring services.

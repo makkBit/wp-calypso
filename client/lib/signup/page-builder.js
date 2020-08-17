@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { abtest, getABTestVariation } from 'lib/abtest';
-import { getLocaleSlug } from 'lib/i18n-utils';
-import { getSectionGroup } from 'state/ui/selectors';
-import { getSiteOption } from 'state/sites/selectors';
+import { abtest, getABTestVariation } from 'wp-calypso-client/lib/abtest';
+import { getLocaleSlug } from 'wp-calypso-client/lib/i18n-utils';
+import { getSectionGroup } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
 
 export function isInPageBuilderTest() {
 	return 'test' === getABTestVariation( 'pageBuilderMVP' );

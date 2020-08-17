@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { TimerHandle } from 'types';
+import { TimerHandle } from 'wp-calypso-client/types';
 
 interface Cancelable {
 	cancel: () => void;

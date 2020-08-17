@@ -10,8 +10,8 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
-import FormButton from 'components/forms/form-button';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 
 /**
  * Style dependencies

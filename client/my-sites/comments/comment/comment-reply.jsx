@@ -11,19 +11,19 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
 import { Button } from '@automattic/components';
-import { decodeEntities } from 'lib/formatting';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { changeCommentStatus, replyComment } from 'state/comments/actions';
-import { removeNotice, successNotice } from 'state/notices/actions';
-import { getSiteComment } from 'state/comments/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/analytics/actions';
+import { changeCommentStatus, replyComment } from 'wp-calypso-client/state/comments/actions';
+import { removeNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const TEXTAREA_HEIGHT_COLLAPSED = 47; // 1 line
 const TEXTAREA_HEIGHT_FOCUSED = 68; // 2 lines

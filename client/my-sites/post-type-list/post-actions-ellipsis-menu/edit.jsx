@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import { bumpStat as bumpAnalyticsStat } from 'state/analytics/actions';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { bumpStat as bumpAnalyticsStat } from 'wp-calypso-client/state/analytics/actions';
 import { bumpStatGenerator } from './utils';
-import { getPost } from 'state/posts/selectors';
-import { canCurrentUserEditPost } from 'state/posts/selectors/can-current-user-edit-post';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import { preload } from 'sections-helper';
+import { getPost } from 'wp-calypso-client/state/posts/selectors';
+import { canCurrentUserEditPost } from 'wp-calypso-client/state/posts/selectors/can-current-user-edit-post';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import { preload } from 'wp-calypso-client/sections-helper';
 
 function preloadEditor() {
 	preload( 'post-editor' );

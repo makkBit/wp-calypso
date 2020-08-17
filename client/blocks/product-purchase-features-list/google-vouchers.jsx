@@ -8,14 +8,14 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import GoogleVoucherDetails from 'my-sites/checkout/checkout-thank-you/google-voucher';
-import PurchaseDetail from 'components/purchase-detail';
-import QuerySiteVouchers from 'components/data/query-site-vouchers';
+import GoogleVoucherDetails from 'wp-calypso-client/my-sites/checkout/checkout-thank-you/google-voucher';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import QuerySiteVouchers from 'wp-calypso-client/components/data/query-site-vouchers';
 
 /**
  * Image dependencies
  */
-import googleAdwordsImage from 'assets/images/illustrations/adwords-google.svg';
+import googleAdwordsImage from 'wp-calypso-client/assets/images/illustrations/adwords-google.svg';
 
 export default ( { selectedSite } ) => {
 	const translate = useTranslate();

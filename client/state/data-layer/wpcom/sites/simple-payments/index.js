@@ -7,31 +7,34 @@ import formatCurrency from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import { decodeEntities } from 'lib/formatting';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { getFeaturedImageId } from 'state/posts/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { isValidSimplePaymentsProduct } from 'lib/simple-payments/utils';
-import { metaKeyToSchemaKeyMap, metadataSchema } from 'state/simple-payments/product-list/schema';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { getFeaturedImageId } from 'wp-calypso-client/state/posts/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { isValidSimplePaymentsProduct } from 'wp-calypso-client/lib/simple-payments/utils';
+import {
+	metaKeyToSchemaKeyMap,
+	metadataSchema,
+} from 'wp-calypso-client/state/simple-payments/product-list/schema';
 import {
 	SIMPLE_PAYMENTS_PRODUCT_POST_TYPE,
 	NUMBER_OF_POSTS_BY_REQUEST,
-} from 'lib/simple-payments/constants';
-import { TransformerError } from 'lib/make-json-schema-parser';
+} from 'wp-calypso-client/lib/simple-payments/constants';
+import { TransformerError } from 'wp-calypso-client/lib/make-json-schema-parser';
 import {
 	SIMPLE_PAYMENTS_PRODUCT_GET,
 	SIMPLE_PAYMENTS_PRODUCTS_LIST,
 	SIMPLE_PAYMENTS_PRODUCTS_LIST_ADD,
 	SIMPLE_PAYMENTS_PRODUCTS_LIST_DELETE,
 	SIMPLE_PAYMENTS_PRODUCTS_LIST_EDIT,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import {
 	receiveDeleteProduct,
 	receiveProductsList,
 	receiveUpdateProduct,
-} from 'state/simple-payments/product-list/actions';
+} from 'wp-calypso-client/state/simple-payments/product-list/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Convert custom post metadata array to product attributes

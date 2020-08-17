@@ -10,13 +10,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { errorNotice } from 'state/notices/actions';
-import Gridicon from 'components/gridicon';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import {
 	READER_EXPORT_TYPE_SUBSCRIPTIONS,
 	READER_EXPORT_TYPE_LIST,
-} from 'blocks/reader-export-button/constants';
+} from 'wp-calypso-client/blocks/reader-export-button/constants';
 
 /**
  * Style dependencies

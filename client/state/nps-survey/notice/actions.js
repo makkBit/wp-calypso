@@ -1,14 +1,14 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { NPS_SURVEY_DIALOG_IS_SHOWING } from 'state/action-types';
+import config from 'wp-calypso-client/config';
+import { NPS_SURVEY_DIALOG_IS_SHOWING } from 'wp-calypso-client/state/action-types';
 import {
 	setNpsSurveyEligibility,
 	setNpsConciergeSessionAvailaibility,
-} from 'state/nps-survey/actions';
+} from 'wp-calypso-client/state/nps-survey/actions';
 
-import 'state/nps-survey/init';
+import 'wp-calypso-client/state/nps-survey/init';
 
 export function setNpsSurveyDialogShowing( isShowing ) {
 	return {

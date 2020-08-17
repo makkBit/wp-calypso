@@ -4,13 +4,13 @@
 
 import PropTypes from 'prop-types';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import Spinner from 'components/spinner';
-import { flagUrl } from 'lib/flags';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { flagUrl } from 'wp-calypso-client/lib/flags';
 
 export default class extends React.Component {
 	static displayName = 'PhoneInputCountryFlag';

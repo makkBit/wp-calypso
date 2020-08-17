@@ -9,8 +9,8 @@ const debug = debugFactory( 'calypso:ProductsList' );
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import Emitter from 'lib/mixins/emitter';
+import wpcom from 'wp-calypso-client/lib/wp';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 /**
  * Initialize a new list of products.

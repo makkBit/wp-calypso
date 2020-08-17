@@ -16,7 +16,7 @@ import { useTrackStep } from '../../hooks/use-track-step';
 import useStepNavigation from '../../hooks/use-step-navigation';
 import Badge from '../../components/badge';
 import designs, { getDesignImageUrl } from '../../available-designs';
-import JetpackLogo from 'components/jetpack-logo'; // @TODO: extract to @automattic package
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo'; // @TODO: extract to @automattic package
 import type { Design } from '../../stores/onboard/types';
 
 /**

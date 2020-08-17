@@ -10,8 +10,8 @@ import { identity, omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import QueryShortcode from 'components/data/query-shortcode';
-import { getShortcode } from 'state/shortcodes/selectors';
+import QueryShortcode from 'wp-calypso-client/components/data/query-shortcode';
+import { getShortcode } from 'wp-calypso-client/state/shortcodes/selectors';
 
 /**
  * Local dependencies

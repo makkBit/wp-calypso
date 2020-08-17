@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getRewindBackups from 'state/selectors/get-rewind-backups';
+import getRewindBackups from 'wp-calypso-client/state/selectors/get-rewind-backups';
 
 /**
  * Get the last full site backup.

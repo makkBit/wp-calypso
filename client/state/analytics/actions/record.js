@@ -1,7 +1,10 @@
 /**
  * Internal dependencies
  */
-import { ANALYTICS_EVENT_RECORD, ANALYTICS_PAGE_VIEW_RECORD } from 'state/action-types';
+import {
+	ANALYTICS_EVENT_RECORD,
+	ANALYTICS_PAGE_VIEW_RECORD,
+} from 'wp-calypso-client/state/action-types';
 
 export const recordEvent = ( service, args ) => ( {
 	type: ANALYTICS_EVENT_RECORD,

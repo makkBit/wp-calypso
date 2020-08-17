@@ -11,10 +11,10 @@ import debugFactory from 'debug';
  * Internal dependencies
  */
 /* eslint-disable no-restricted-imports */
-import observe from 'lib/mixins/data-observe';
+import observe from 'wp-calypso-client/lib/mixins/data-observe';
 /* eslint-enable no-restricted-imports */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import Gridicon from 'components/gridicon';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 const debug = debugFactory( 'calypso:stats:action-follow' );
 

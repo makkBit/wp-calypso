@@ -4,18 +4,18 @@
 import React from 'react';
 import { localize } from 'i18n-calypso';
 import { connect, useDispatch } from 'react-redux';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import Stream from 'reader/stream';
+import Stream from 'wp-calypso-client/reader/stream';
 import { Button } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import { requestMarkAllAsSeen } from 'state/reader/seen-posts/actions';
-import { SECTION_A8C_FOLLOWING } from 'state/reader/seen-posts/constants';
-import { AUTOMATTIC_ORG_ID } from 'state/reader/organizations/constants';
-import { getReaderOrganizationFeedsInfo } from 'state/reader/organizations/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { requestMarkAllAsSeen } from 'wp-calypso-client/state/reader/seen-posts/actions';
+import { SECTION_A8C_FOLLOWING } from 'wp-calypso-client/state/reader/seen-posts/constants';
+import { AUTOMATTIC_ORG_ID } from 'wp-calypso-client/state/reader/organizations/constants';
+import { getReaderOrganizationFeedsInfo } from 'wp-calypso-client/state/reader/organizations/selectors';
 
 const A8CFollowing = ( props ) => {
 	const { translate } = props;

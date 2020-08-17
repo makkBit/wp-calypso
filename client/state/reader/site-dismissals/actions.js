@@ -1,11 +1,14 @@
 /**
  * Internal dependencies
  */
-import { READER_DISMISS_POST, READER_DISMISS_SITE } from 'state/reader/action-types';
+import {
+	READER_DISMISS_POST,
+	READER_DISMISS_SITE,
+} from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/data-layer/wpcom/me/dismiss/sites/new';
+import 'wp-calypso-client/state/data-layer/wpcom/me/dismiss/sites/new';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 export const dismissPost = ( { streamKey, postKey } ) => {
 	return {

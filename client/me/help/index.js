@@ -2,10 +2,10 @@
  * Internal dependencies
  */
 import * as helpController from './controller';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import page from 'page';
-import { makeLayout, render as clientRender } from 'controller';
-import { sidebar } from 'me/controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { sidebar } from 'wp-calypso-client/me/controller';
 
 export default function () {
 	if ( config.isEnabled( 'help' ) ) {

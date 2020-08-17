@@ -6,10 +6,10 @@ import { includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSitePost } from 'state/posts/selectors/get-site-post';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors/get-site-post';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if the post status is publish, private, or future

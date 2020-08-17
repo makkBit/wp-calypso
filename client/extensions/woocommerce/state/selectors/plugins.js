@@ -5,15 +5,15 @@ import { every, find } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	getPlugins,
 	isRequestingForSites,
 	getPluginOnSite,
-} from 'state/plugins/installed/selectors';
+} from 'wp-calypso-client/state/plugins/installed/selectors';
 import { getRequiredPluginsForCalypso } from 'woocommerce/lib/get-required-plugins';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import createSelector from 'lib/create-selector';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 const getWcsPluginData = createSelector(
 	( state, siteId ) => {

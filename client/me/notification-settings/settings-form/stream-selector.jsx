@@ -10,9 +10,9 @@ import { map } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormSelect from 'components/forms/form-select';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
 import { getLabelForStream } from './locales';
-import getUserDevices from 'state/selectors/get-user-devices';
+import getUserDevices from 'wp-calypso-client/state/selectors/get-user-devices';
 
 class NotificationSettingsFormStreamSelector extends PureComponent {
 	static propTypes = {

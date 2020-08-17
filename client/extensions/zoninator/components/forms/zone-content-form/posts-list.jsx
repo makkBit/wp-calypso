@@ -10,8 +10,8 @@ import { findIndex, map, times } from 'lodash';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import SortableList from 'components/forms/sortable-list';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import SortableList from 'wp-calypso-client/components/forms/sortable-list';
 import PostCard from './post-card';
 import PostPlaceholder from './post-placeholder';
 import RecentPostsDropdown from '../../recent-posts-dropdown';

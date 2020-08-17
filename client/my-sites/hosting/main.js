@@ -9,34 +9,34 @@ import wrapWithClickOutside from 'react-click-outside';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isSiteOnAtomicPlan from 'state/selectors/is-site-on-atomic-plan';
-import canSiteViewAtomicHosting from 'state/selectors/can-site-view-atomic-hosting';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isSiteOnAtomicPlan from 'wp-calypso-client/state/selectors/is-site-on-atomic-plan';
+import canSiteViewAtomicHosting from 'wp-calypso-client/state/selectors/can-site-view-atomic-hosting';
 import SFTPCard from './sftp-card';
 import PhpMyAdminCard from './phpmyadmin-card';
 import SupportCard from './support-card';
 import PhpVersionCard from './php-version-card';
 import SiteBackupCard from './site-backup-card';
 import MiscellaneousCard from './miscellaneous-card';
-import NoticeAction from 'components/notice/notice-action';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import Notice from 'components/notice';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { recordTracksEvent } from 'state/analytics/actions';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import Notice from 'wp-calypso-client/components/notice';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	getAutomatedTransferStatus,
 	isAutomatedTransferActive,
-} from 'state/automated-transfer/selectors';
-import { transferStates } from 'state/automated-transfer/constants';
-import { requestSite } from 'state/sites/actions';
-import FeatureExample from 'components/feature-example';
-import { PLAN_BUSINESS, FEATURE_SFTP } from 'lib/plans/constants';
+} from 'wp-calypso-client/state/automated-transfer/selectors';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import FeatureExample from 'wp-calypso-client/components/feature-example';
+import { PLAN_BUSINESS, FEATURE_SFTP } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style dependencies

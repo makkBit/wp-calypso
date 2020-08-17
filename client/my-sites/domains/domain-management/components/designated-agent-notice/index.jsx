@@ -4,12 +4,15 @@
 
 import React from 'react';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import { DESIGNATED_AGENT, DOMAIN_REGISTRATION_AGREEMENTS } from 'lib/url/support';
+import {
+	DESIGNATED_AGENT,
+	DOMAIN_REGISTRATION_AGREEMENTS,
+} from 'wp-calypso-client/lib/url/support';
 
 /**
  * Style dependencies

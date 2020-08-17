@@ -7,60 +7,67 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { get, includes, map, concat } from 'lodash';
 import { localize } from 'i18n-calypso';
-import { isEnabled } from 'config';
-import Gridicon from 'components/gridicon';
+import { isEnabled } from 'wp-calypso-client/config';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { current as currentPage } from 'page';
 
 /**
  * Internal dependencies
  */
-import QueryPostTypes from 'components/data/query-post-types';
-import QueryPublicizeConnections from 'components/data/query-publicize-connections';
-import QuerySitePlans from 'components/data/query-site-plans';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import QueryPublicizeConnections from 'wp-calypso-client/components/data/query-publicize-connections';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
 import { Button } from '@automattic/components';
-import ButtonGroup from 'components/button-group';
-import NoticeAction from 'components/notice/notice-action';
-import { withLocalizedMoment } from 'components/localized-moment';
-import getPostSharePublishedActions from 'state/selectors/get-post-share-published-actions';
-import getPostShareScheduledActions from 'state/selectors/get-post-share-scheduled-actions';
-import getScheduledPublicizeShareActionTime from 'state/selectors/get-scheduled-publicize-share-action-time';
-import isPublicizeEnabled from 'state/selectors/is-publicize-enabled';
-import isSchedulingPublicizeShareAction from 'state/selectors/is-scheduling-publicize-share-action';
-import isSchedulingPublicizeShareActionError from 'state/selectors/is-scheduling-publicize-share-action-error';
-import { getSiteSlug, getSitePlanSlug, isJetpackSite } from 'state/sites/selectors';
-import { getCurrentUserId, getCurrentUserCurrencyCode } from 'state/current-user/selectors';
+import ButtonGroup from 'wp-calypso-client/components/button-group';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import getPostSharePublishedActions from 'wp-calypso-client/state/selectors/get-post-share-published-actions';
+import getPostShareScheduledActions from 'wp-calypso-client/state/selectors/get-post-share-scheduled-actions';
+import getScheduledPublicizeShareActionTime from 'wp-calypso-client/state/selectors/get-scheduled-publicize-share-action-time';
+import isPublicizeEnabled from 'wp-calypso-client/state/selectors/is-publicize-enabled';
+import isSchedulingPublicizeShareAction from 'wp-calypso-client/state/selectors/is-scheduling-publicize-share-action';
+import isSchedulingPublicizeShareActionError from 'wp-calypso-client/state/selectors/is-scheduling-publicize-share-action-error';
+import {
+	getSiteSlug,
+	getSitePlanSlug,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import {
+	getCurrentUserId,
+	getCurrentUserCurrencyCode,
+} from 'wp-calypso-client/state/current-user/selectors';
 
 import {
 	fetchConnections as requestConnections,
 	sharePost,
 	dismissShareConfirmation,
-} from 'state/sharing/publicize/actions';
-import { schedulePostShareAction } from 'state/sharing/publicize/publicize-actions/actions';
+} from 'wp-calypso-client/state/sharing/publicize/actions';
+import { schedulePostShareAction } from 'wp-calypso-client/state/sharing/publicize/publicize-actions/actions';
 import {
 	getSiteUserConnections,
 	hasFetchedConnections as siteHasFetchedConnections,
 	isRequestingSharePost,
 	sharePostFailure,
 	sharePostSuccessMessage,
-} from 'state/sharing/publicize/selectors';
-import PostMetadata from 'lib/post-metadata';
-import PublicizeMessage from 'post-editor/editor-sharing/publicize-message';
-import Notice from 'components/notice';
+} from 'wp-calypso-client/state/sharing/publicize/selectors';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
+import PublicizeMessage from 'wp-calypso-client/post-editor/editor-sharing/publicize-message';
+import Notice from 'wp-calypso-client/components/notice';
 import {
 	hasFeature,
 	isRequestingSitePlans as siteIsRequestingPlans,
-} from 'state/sites/plans/selectors';
-import { FEATURE_REPUBLICIZE } from 'lib/plans/constants';
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import { FEATURE_REPUBLICIZE } from 'wp-calypso-client/lib/plans/constants';
 import { UpgradeToPremiumNudge } from './nudges';
 import SharingPreviewModal from './sharing-preview-modal';
 import ConnectionsList from './connections-list';
 import NoConnectionsNotice from './no-connections-notice';
 import ActionsList from './publicize-actions-list';
-import CalendarButton from 'blocks/calendar-button';
-import EventsTooltip from 'components/date-picker/events-tooltip';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { sectionify } from 'lib/route';
+import CalendarButton from 'wp-calypso-client/blocks/calendar-button';
+import EventsTooltip from 'wp-calypso-client/components/date-picker/events-tooltip';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { sectionify } from 'wp-calypso-client/lib/route';
 
 /**
  * Style dependencies

@@ -6,14 +6,18 @@ import store from 'store';
 /**
  * Internal dependencies
  */
-import { saveEdited } from 'state/posts/actions/save-edited';
-import { getSitePost, getEditedPost, isEditedPostDirty } from 'state/posts/selectors';
-import { isPublished } from 'state/posts/utils';
-import { editorAutosave } from 'state/editor/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { saveEdited } from 'wp-calypso-client/state/posts/actions/save-edited';
+import {
+	getSitePost,
+	getEditedPost,
+	isEditedPostDirty,
+} from 'wp-calypso-client/state/posts/selectors';
+import { isPublished } from 'wp-calypso-client/state/posts/utils';
+import { editorAutosave } from 'wp-calypso-client/state/editor/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 export const autosave = () => async ( dispatch, getState ) => {
 	const state = getState();

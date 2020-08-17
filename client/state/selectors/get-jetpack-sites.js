@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 
-import createSelector from 'lib/create-selector';
-import getSites from 'state/selectors/get-sites';
-import { isJetpackSite } from 'state/sites/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Get all Jetpack sites

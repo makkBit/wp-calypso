@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { type } from 'lib/domains/constants';
+import { type } from 'wp-calypso-client/lib/domains/constants';
 import {
 	domainManagementEdit,
 	domainManagementSiteRedirect,
 	domainManagementTransferIn,
-} from 'my-sites/domains/paths';
+} from 'wp-calypso-client/my-sites/domains/paths';
 
 export const getDomainManagementPath = ( domainName, domainType, siteSlug, currentRoute ) => {
 	switch ( domainType ) {

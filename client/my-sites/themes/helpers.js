@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 import titlecase from 'to-title-case';
 import { mapValues } from 'lodash';
 

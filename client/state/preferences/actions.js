@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	PREFERENCES_SET,
 	PREFERENCES_RECEIVE,
@@ -11,10 +11,10 @@ import {
 	PREFERENCES_SAVE,
 	PREFERENCES_SAVE_FAILURE,
 	PREFERENCES_SAVE_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { USER_SETTING_KEY } from './constants';
 
-import 'state/preferences/init';
+import 'wp-calypso-client/state/preferences/init';
 
 /**
  * Returns an action object signalling the remote preferences have been

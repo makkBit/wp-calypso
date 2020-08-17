@@ -6,11 +6,11 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import { recordPageView } from 'lib/analytics/page-view';
-import canCurrentUser from 'state/selectors/can-current-user';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import titlecase from 'to-title-case';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { sectionify } from 'lib/route';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { sectionify } from 'wp-calypso-client/lib/route';
 
 export function siteSettings( context, next ) {
 	let analyticsPageTitle = 'Site Settings';

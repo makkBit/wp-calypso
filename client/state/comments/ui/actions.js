@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { COMMENTS_QUERY_UPDATE } from 'state/action-types';
+import { COMMENTS_QUERY_UPDATE } from 'wp-calypso-client/state/action-types';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Creates an action that updates the comments pagination for the given site and filters.

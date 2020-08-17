@@ -6,8 +6,11 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { SharingService, connectFor } from 'my-sites/marketing/connections/service';
-import { localizeUrl } from 'lib/i18n-utils';
+import {
+	SharingService,
+	connectFor,
+} from 'wp-calypso-client/my-sites/marketing/connections/service';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export class Facebook extends SharingService {
 	static propTypes = {

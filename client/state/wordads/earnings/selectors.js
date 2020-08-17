@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/wordads/init';
+import 'wp-calypso-client/state/wordads/init';
 
 /**
  * Returns earnings object for a siteId

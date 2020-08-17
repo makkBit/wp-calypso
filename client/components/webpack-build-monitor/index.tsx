@@ -7,7 +7,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Spinner from 'components/spinner';
+import Spinner from 'wp-calypso-client/components/spinner';
 import connectToWebpackServer, { BuildState } from './webpack-client';
 
 /**

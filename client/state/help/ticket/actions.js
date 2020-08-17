@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	HELP_TICKET_CONFIGURATION_REQUEST,
 	HELP_TICKET_CONFIGURATION_REQUEST_SUCCESS,
 	HELP_TICKET_CONFIGURATION_REQUEST_FAILURE,
 	HELP_TICKET_CONFIGURATION_DISMISS_ERROR,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 export const ticketSupportConfigurationRequestSuccess = ( configuration ) => {
 	return {

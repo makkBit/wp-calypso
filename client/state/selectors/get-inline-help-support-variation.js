@@ -1,13 +1,13 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import isDirectlyReady from 'state/selectors/is-directly-ready';
-import isEligibleForUpworkSupport from 'state/selectors/is-eligible-for-upwork-support';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import isHappychatUserEligible from 'state/happychat/selectors/is-happychat-user-eligible';
-import { isTicketSupportEligible } from 'state/help/ticket/selectors';
+import config from 'wp-calypso-client/config';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import isDirectlyReady from 'wp-calypso-client/state/selectors/is-directly-ready';
+import isEligibleForUpworkSupport from 'wp-calypso-client/state/selectors/is-eligible-for-upwork-support';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import isHappychatUserEligible from 'wp-calypso-client/state/happychat/selectors/is-happychat-user-eligible';
+import { isTicketSupportEligible } from 'wp-calypso-client/state/help/ticket/selectors';
 
 export const SUPPORT_CHAT_OVERFLOW = 'SUPPORT_CHAT_OVERFLOW';
 export const SUPPORT_DIRECTLY = 'SUPPORT_DIRECTLY';

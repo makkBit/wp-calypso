@@ -7,7 +7,7 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import TooltipComponent from 'components/tooltip';
+import TooltipComponent from 'wp-calypso-client/components/tooltip';
 
 class Tooltip extends PureComponent {
 	constructor( props ) {

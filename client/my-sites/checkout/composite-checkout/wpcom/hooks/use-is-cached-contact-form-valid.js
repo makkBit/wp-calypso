@@ -9,7 +9,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
 
 const debug = debugFactory( 'calypso:composite-checkout:use-is-cached-contact-form-valid' );
 

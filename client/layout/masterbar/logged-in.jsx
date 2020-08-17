@@ -9,37 +9,40 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import Masterbar from './masterbar';
 import Item from './item';
 import Publish from './publish';
 import Notifications from './notifications';
-import Gravatar from 'components/gravatar';
-import config from 'config';
-import { preload } from 'sections-helper';
-import { getCurrentUserSiteCount, getCurrentUser } from 'state/current-user/selectors';
-import { isSupportSession } from 'state/support/selectors';
-import AsyncLoad from 'components/async-load';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isNotificationsOpen from 'state/selectors/is-notifications-open';
-import isSiteMigrationInProgress from 'state/selectors/is-site-migration-in-progress';
-import isSiteMigrationActiveRoute from 'state/selectors/is-site-migration-active-route';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import canCurrentUserUseCustomerHome from 'state/sites/selectors/can-current-user-use-customer-home';
-import { getStatsPathForTab } from 'lib/route';
-import { domainManagementList } from 'my-sites/domains/paths';
-import WordPressWordmark from 'components/wordpress-wordmark';
-import getSiteMigrationStatus from 'state/selectors/get-site-migration-status';
-import { updateSiteMigrationMeta } from 'state/sites/actions';
-import { requestHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { hasUnseen } from 'state/reader-ui/seen-posts/selectors';
-import getPreviousPath from 'state/selectors/get-previous-path.js';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import JetpackLogo from 'components/jetpack-logo';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import config from 'wp-calypso-client/config';
+import { preload } from 'wp-calypso-client/sections-helper';
+import {
+	getCurrentUserSiteCount,
+	getCurrentUser,
+} from 'wp-calypso-client/state/current-user/selectors';
+import { isSupportSession } from 'wp-calypso-client/state/support/selectors';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isNotificationsOpen from 'wp-calypso-client/state/selectors/is-notifications-open';
+import isSiteMigrationInProgress from 'wp-calypso-client/state/selectors/is-site-migration-in-progress';
+import isSiteMigrationActiveRoute from 'wp-calypso-client/state/selectors/is-site-migration-active-route';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUserUseCustomerHome from 'wp-calypso-client/state/sites/selectors/can-current-user-use-customer-home';
+import { getStatsPathForTab } from 'wp-calypso-client/lib/route';
+import { domainManagementList } from 'wp-calypso-client/my-sites/domains/paths';
+import WordPressWordmark from 'wp-calypso-client/components/wordpress-wordmark';
+import getSiteMigrationStatus from 'wp-calypso-client/state/selectors/get-site-migration-status';
+import { updateSiteMigrationMeta } from 'wp-calypso-client/state/sites/actions';
+import { requestHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { hasUnseen } from 'wp-calypso-client/state/reader-ui/seen-posts/selectors';
+import getPreviousPath from 'wp-calypso-client/state/selectors/get-previous-path.js';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
 
 class MasterbarLoggedIn extends React.Component {
 	static propTypes = {
@@ -222,7 +225,7 @@ class MasterbarLoggedIn extends React.Component {
 				{ ( this.props.isSupportSession || config.isEnabled( 'quick-language-switcher' ) ) && (
 					<AsyncLoad require="./quick-language-switcher" placeholder={ null } />
 				) }
-				<AsyncLoad require="my-sites/resume-editing" placeholder={ null } />
+				<AsyncLoad require="wp-calypso-client/my-sites/resume-editing" placeholder={ null } />
 				{ ! domainOnlySite && ! isMigrationInProgress && (
 					<Publish
 						isActive={ this.isActive( 'post' ) }

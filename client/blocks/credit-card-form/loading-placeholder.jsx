@@ -8,9 +8,9 @@ import React from 'react';
  * Internal Dependencies
  */
 import { Card, CompactCard } from '@automattic/components';
-import CreditCardFormFieldsLoadingPlaceholder from 'components/credit-card-form-fields/loading-placeholder';
-import FormButton from 'components/forms/form-button';
-import LoadingPlaceholder from 'me/purchases/components/loading-placeholder';
+import CreditCardFormFieldsLoadingPlaceholder from 'wp-calypso-client/components/credit-card-form-fields/loading-placeholder';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import LoadingPlaceholder from 'wp-calypso-client/me/purchases/components/loading-placeholder';
 
 const CreditCardFormLoadingPlaceholder = ( { title } ) => {
 	return (

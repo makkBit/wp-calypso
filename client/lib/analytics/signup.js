@@ -6,15 +6,15 @@ import debug from 'debug';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { identifyUser } from 'lib/analytics/identify-user';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { addToQueue } from 'lib/analytics/queue';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { identifyUser } from 'wp-calypso-client/lib/analytics/identify-user';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { addToQueue } from 'wp-calypso-client/lib/analytics/queue';
 import {
 	adTrackSignupStart,
 	adTrackSignupComplete,
 	adTrackRegistration,
-} from 'lib/analytics/ad-tracking';
+} from 'wp-calypso-client/lib/analytics/ad-tracking';
 
 const signupDebug = debug( 'calypso:analytics:signup' );
 

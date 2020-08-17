@@ -13,7 +13,7 @@ import { localize } from 'i18n-calypso';
 import { Dialog } from '@automattic/components';
 import Dropdown from 'woocommerce/woocommerce-services/components/dropdown';
 import { getPaperSizes } from 'woocommerce/woocommerce-services/lib/pdf-label-utils';
-import FormSectionHeading from 'components/forms/form-section-heading';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
 import {
 	closeReprintDialog,
 	confirmReprint,

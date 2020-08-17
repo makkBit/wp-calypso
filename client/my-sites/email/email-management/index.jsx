@@ -10,39 +10,49 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import Main from 'components/main';
-import Header from 'my-sites/domains/domain-management/components/header';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
+import config from 'wp-calypso-client/config';
+import Main from 'wp-calypso-client/components/main';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import {
 	canUserPurchaseGSuite,
 	getEligibleGSuiteDomain,
 	hasGSuiteSupportedDomain,
 	hasGSuiteWithAnotherProvider,
 	hasGSuiteWithUs,
-} from 'lib/gsuite';
-import { getEligibleEmailForwardingDomain } from 'lib/domains/email-forwarding';
-import getGSuiteUsers from 'state/selectors/get-gsuite-users';
-import hasLoadedGSuiteUsers from 'state/selectors/has-loaded-gsuite-users';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getDomainsBySiteId, hasLoadedSiteDomains } from 'state/sites/domains/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import GSuitePurchaseCta from 'my-sites/email/gsuite-purchase-cta';
-import GSuiteUsersCard from 'my-sites/email/email-management/gsuite-users-card';
-import Placeholder from 'my-sites/email/email-management/gsuite-users-card/placeholder';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import EmptyContent from 'components/empty-content';
-import { domainManagementEdit, domainManagementList } from 'my-sites/domains/paths';
-import { emailManagementForwarding } from 'my-sites/email/paths';
-import { getSelectedDomain, isMappedDomain, isMappedDomainWithWpcomNameservers } from 'lib/domains';
-import DocumentHead from 'components/data/document-head';
-import QueryEmailAccounts from 'components/data/query-email-accounts';
-import QueryGSuiteUsers from 'components/data/query-gsuite-users';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import { localizeUrl } from 'lib/i18n-utils';
-import getCurrentRoute from 'state/selectors/get-current-route';
+} from 'wp-calypso-client/lib/gsuite';
+import { getEligibleEmailForwardingDomain } from 'wp-calypso-client/lib/domains/email-forwarding';
+import getGSuiteUsers from 'wp-calypso-client/state/selectors/get-gsuite-users';
+import hasLoadedGSuiteUsers from 'wp-calypso-client/state/selectors/has-loaded-gsuite-users';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import {
+	getDomainsBySiteId,
+	hasLoadedSiteDomains,
+} from 'wp-calypso-client/state/sites/domains/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import GSuitePurchaseCta from 'wp-calypso-client/my-sites/email/gsuite-purchase-cta';
+import GSuiteUsersCard from 'wp-calypso-client/my-sites/email/email-management/gsuite-users-card';
+import Placeholder from 'wp-calypso-client/my-sites/email/email-management/gsuite-users-card/placeholder';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import {
+	domainManagementEdit,
+	domainManagementList,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagementForwarding } from 'wp-calypso-client/my-sites/email/paths';
+import {
+	getSelectedDomain,
+	isMappedDomain,
+	isMappedDomainWithWpcomNameservers,
+} from 'wp-calypso-client/lib/domains';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QueryEmailAccounts from 'wp-calypso-client/components/data/query-email-accounts';
+import QueryGSuiteUsers from 'wp-calypso-client/components/data/query-gsuite-users';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies
@@ -52,7 +62,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import customDomainImage from 'assets/images/illustrations/custom-domain.svg';
+import customDomainImage from 'wp-calypso-client/assets/images/illustrations/custom-domain.svg';
 
 class EmailManagement extends React.Component {
 	static propTypes = {

@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
 
 describe( 'hasInitializedSites()', () => {
 	test( 'should return false if site selection has not occurred', () => {

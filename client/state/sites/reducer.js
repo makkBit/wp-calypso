@@ -37,15 +37,15 @@ import {
 	SITE_PLUGIN_UPDATED,
 	SITE_FRONT_PAGE_UPDATE,
 	SITE_MIGRATION_STATUS_UPDATE,
-} from 'state/action-types';
-import { THEME_ACTIVATE_SUCCESS } from 'state/themes/action-types';
+} from 'wp-calypso-client/state/action-types';
+import { THEME_ACTIVATE_SUCCESS } from 'wp-calypso-client/state/themes/action-types';
 import { sitesSchema, hasAllSitesListSchema } from './schema';
 import {
 	combineReducers,
 	keyedReducer,
 	withSchemaValidation,
 	withoutPersistence,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 
 /**
  * Tracks all known site objects, indexed by site ID.

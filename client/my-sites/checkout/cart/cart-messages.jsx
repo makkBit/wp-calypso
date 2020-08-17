@@ -9,8 +9,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import { getNewMessages } from 'lib/cart-values';
+import notices from 'wp-calypso-client/notices';
+import { getNewMessages } from 'wp-calypso-client/lib/cart-values';
 
 class CartMessages extends PureComponent {
 	static propTypes = {

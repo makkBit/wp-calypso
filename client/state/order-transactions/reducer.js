@@ -1,13 +1,13 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer, withoutPersistence } from 'state/utils';
+import { combineReducers, keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 import {
 	ORDER_TRANSACTION_FETCH,
 	ORDER_TRANSACTION_FETCH_ERROR,
 	ORDER_TRANSACTION_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 export const items = keyedReducer(
 	'orderId',

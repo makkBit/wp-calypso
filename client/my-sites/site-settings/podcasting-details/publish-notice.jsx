@@ -4,13 +4,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getTerm } from 'state/terms/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getTerm } from 'wp-calypso-client/state/terms/selectors';
 
 function PodcastingPublishNotice( { translate, podcastingCategoryName } ) {
 	let podcastNoticeText;

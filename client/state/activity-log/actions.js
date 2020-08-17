@@ -24,15 +24,15 @@ import {
 	REWIND_BACKUP_UPDATE_ERROR,
 	REWIND_BACKUP_UPDATE_PROGRESS,
 	REWIND_BACKUP_DISMISS_PROGRESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/activity-log/activate';
-import 'state/data-layer/wpcom/activity-log/deactivate';
-import 'state/data-layer/wpcom/activity-log/rewind/downloads';
-import 'state/data-layer/wpcom/activity-log/rewind/restore-status';
-import 'state/data-layer/wpcom/activity-log/rewind/to';
-import 'state/data-layer/wpcom/sites/rewind/downloads';
-import 'state/data-layer/wpcom/sites/rewind/restores';
+import 'wp-calypso-client/state/data-layer/wpcom/activity-log/activate';
+import 'wp-calypso-client/state/data-layer/wpcom/activity-log/deactivate';
+import 'wp-calypso-client/state/data-layer/wpcom/activity-log/rewind/downloads';
+import 'wp-calypso-client/state/data-layer/wpcom/activity-log/rewind/restore-status';
+import 'wp-calypso-client/state/data-layer/wpcom/activity-log/rewind/to';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/rewind/downloads';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/rewind/restores';
 
 /**
  * Turn the 'rewind' feature on for a site.

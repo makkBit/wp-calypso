@@ -11,11 +11,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import TaxonomyManager from 'blocks/taxonomy-manager';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { getPostTypeTaxonomy } from 'state/post-types/taxonomies/selectors';
-import DocumentHead from 'components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import TaxonomyManager from 'wp-calypso-client/blocks/taxonomy-manager';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getPostTypeTaxonomy } from 'wp-calypso-client/state/post-types/taxonomies/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 
 /**
  * Style dependencies

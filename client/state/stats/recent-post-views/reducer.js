@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { items as itemsSchemas } from './schema';
-import { STATS_RECENT_POST_VIEWS_RECEIVE } from 'state/action-types';
+import { STATS_RECENT_POST_VIEWS_RECEIVE } from 'wp-calypso-client/state/action-types';
 
 /**
  * Returns the updated items state after an action has been dispatched. The

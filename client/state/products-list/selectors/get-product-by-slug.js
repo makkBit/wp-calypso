@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/products-list/init';
+import 'wp-calypso-client/state/products-list/init';
 
 /**
  * Retrieves the product with the specified slug.

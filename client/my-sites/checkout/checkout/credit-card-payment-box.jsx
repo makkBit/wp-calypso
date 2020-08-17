@@ -4,7 +4,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { noop, overSome, some } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
@@ -21,17 +21,17 @@ import {
 	RECEIVED_AUTHORIZATION_RESPONSE,
 	SUBMITTING_PAYMENT_KEY_REQUEST,
 	SUBMITTING_WPCOM_REQUEST,
-} from 'lib/store-transactions/step-types';
-import CartCoupon from 'my-sites/checkout/cart/cart-coupon';
+} from 'wp-calypso-client/lib/store-transactions/step-types';
+import CartCoupon from 'wp-calypso-client/my-sites/checkout/cart/cart-coupon';
 import PaymentChatButton from './payment-chat-button';
-import { isWpComBusinessPlan, isWpComEcommercePlan } from 'lib/plans';
+import { isWpComBusinessPlan, isWpComEcommercePlan } from 'wp-calypso-client/lib/plans';
 import { ProgressBar } from '@automattic/components';
 import CartToggle from './cart-toggle';
 import RecentRenewals from './recent-renewals';
 import CheckoutTerms from './checkout-terms';
 import IncompatibleProductMessage from './incompatible-product-message';
-import { withStripeProps } from 'lib/stripe';
-import { setStripeObject } from 'lib/transaction/actions';
+import { withStripeProps } from 'wp-calypso-client/lib/stripe';
+import { setStripeObject } from 'wp-calypso-client/lib/transaction/actions';
 
 function isFormSubmitting( transactionStep ) {
 	if ( ! transactionStep ) {

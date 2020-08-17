@@ -10,13 +10,13 @@ import {
 	READER_STREAMS_SELECT_NEXT_ITEM,
 	READER_STREAMS_SELECT_PREV_ITEM,
 	READER_STREAMS_UPDATES_RECEIVE,
-} from 'state/reader/action-types';
-import { getStream } from 'state/reader/streams/selectors';
-import { getStreamType } from 'reader/utils';
+} from 'wp-calypso-client/state/reader/action-types';
+import { getStream } from 'wp-calypso-client/state/reader/streams/selectors';
+import { getStreamType } from 'wp-calypso-client/reader/utils';
 
-import 'state/data-layer/wpcom/read/streams';
+import 'wp-calypso-client/state/data-layer/wpcom/read/streams';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Fetch posts into a stream

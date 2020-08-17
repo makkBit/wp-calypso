@@ -6,8 +6,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import TokenField from 'components/token-field';
-import { unescapeAndFormatSpaces } from 'lib/formatting';
+import TokenField from 'wp-calypso-client/components/token-field';
+import { unescapeAndFormatSpaces } from 'wp-calypso-client/lib/formatting';
 
 const suggestions = [
 	'the',

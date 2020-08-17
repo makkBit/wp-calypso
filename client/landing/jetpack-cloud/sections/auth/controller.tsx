@@ -10,12 +10,12 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import Connect from './connect';
 import GetToken from './get-token';
-import userModule from 'lib/user';
-import wpcom from 'lib/wp';
-import { setCurrentUser } from 'state/current-user/actions';
+import userModule from 'wp-calypso-client/lib/user';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { setCurrentUser } from 'wp-calypso-client/state/current-user/actions';
 
 import { authTokenRedirectPath } from './paths';
 

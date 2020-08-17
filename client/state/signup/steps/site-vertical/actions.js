@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_STEPS_SITE_VERTICAL_SET } from 'state/action-types';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import { SIGNUP_STEPS_SITE_VERTICAL_SET } from 'wp-calypso-client/state/action-types';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 /**
  * Action creator: Set site vertical data

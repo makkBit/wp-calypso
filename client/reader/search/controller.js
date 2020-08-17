@@ -8,10 +8,14 @@ import { stringify } from 'qs';
 /**
  * Internal dependencies
  */
-import { recordTrack } from 'reader/stats';
-import { trackPageLoad, trackUpdatesLoaded, trackScrollPage } from 'reader/controller-helper';
-import AsyncLoad from 'components/async-load';
-import { SEARCH_TYPES } from 'reader/search-stream/search-stream-header';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import {
+	trackPageLoad,
+	trackUpdatesLoaded,
+	trackScrollPage,
+} from 'wp-calypso-client/reader/controller-helper';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { SEARCH_TYPES } from 'wp-calypso-client/reader/search-stream/search-stream-header';
 
 const analyticsPageTitle = 'Reader';
 
@@ -64,7 +68,7 @@ const exported = {
 
 		context.primary = (
 			<AsyncLoad
-				require="reader/search-stream"
+				require="wp-calypso-client/reader/search-stream"
 				key="search"
 				streamKey={ streamKey }
 				isSuggestion={ isQuerySuggestion }

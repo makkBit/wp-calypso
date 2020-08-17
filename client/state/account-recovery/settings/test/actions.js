@@ -51,9 +51,9 @@ import {
 	ACCOUNT_RECOVERY_SETTINGS_VALIDATE_PHONE,
 	ACCOUNT_RECOVERY_SETTINGS_VALIDATE_PHONE_SUCCESS,
 	ACCOUNT_RECOVERY_SETTINGS_VALIDATE_PHONE_FAILED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import { useSandbox } from 'test-helpers/use-sinon';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'account-recovery actions', () => {
 	let spy;

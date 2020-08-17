@@ -13,13 +13,13 @@ import { get } from 'lodash';
  */
 
 import { Button } from '@automattic/components';
-import { hasProduct, siteRedirect } from 'lib/cart-values/cart-items';
-import { errorNotice } from 'state/notices/actions';
-import { canRedirect } from 'lib/domains';
-import DomainProductPrice from 'components/domains/domain-product-price';
-import { addItem } from 'lib/cart/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { withoutHttp } from 'lib/url';
+import { hasProduct, siteRedirect } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { canRedirect } from 'wp-calypso-client/lib/domains';
+import DomainProductPrice from 'wp-calypso-client/components/domains/domain-product-price';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
 
 /**
  * Style dependencies

@@ -11,26 +11,26 @@ import i18n, { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import AppsBadge from './apps-badge';
-import ReauthRequired from 'me/reauth-required';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
 import { Card, Button } from '@automattic/components';
-import QuerySmsCountries from 'components/data/query-countries/sms';
-import FormPhoneInput from 'components/forms/form-phone-input';
-import getCountries from 'state/selectors/get-countries';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import { fetchUserSettings } from 'state/user-settings/actions';
-import { accountRecoverySettingsFetch } from 'state/account-recovery/settings/actions';
+import QuerySmsCountries from 'wp-calypso-client/components/data/query-countries/sms';
+import FormPhoneInput from 'wp-calypso-client/components/forms/form-phone-input';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { fetchUserSettings } from 'wp-calypso-client/state/user-settings/actions';
+import { accountRecoverySettingsFetch } from 'wp-calypso-client/state/account-recovery/settings/actions';
 import {
 	getAccountRecoveryPhone,
 	isAccountRecoverySettingsReady,
-} from 'state/account-recovery/settings/selectors';
-import getUserSettings from 'state/selectors/get-user-settings';
-import hasUserSettings from 'state/selectors/has-user-settings';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import phoneValidation from 'lib/phone-validation';
-import userAgent from 'lib/user-agent';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { sendEmailLogin } from 'state/auth/actions';
+} from 'wp-calypso-client/state/account-recovery/settings/selectors';
+import getUserSettings from 'wp-calypso-client/state/selectors/get-user-settings';
+import hasUserSettings from 'wp-calypso-client/state/selectors/has-user-settings';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import phoneValidation from 'wp-calypso-client/lib/phone-validation';
+import userAgent from 'wp-calypso-client/lib/user-agent';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import { sendEmailLogin } from 'wp-calypso-client/state/auth/actions';
 
 function sendSMS( phone ) {
 	function onSuccess( dispatch ) {

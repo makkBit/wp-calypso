@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { THEME_BACK_PATH_SET } from 'state/themes/action-types';
+import { THEME_BACK_PATH_SET } from 'wp-calypso-client/state/themes/action-types';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 // Set destination for 'back' button on theme sheet
 export function setBackPath( path ) {

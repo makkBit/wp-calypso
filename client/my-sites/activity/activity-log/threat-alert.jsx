@@ -4,8 +4,8 @@
 import React, { Component, Fragment } from 'react';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
-import Spinner from 'components/spinner';
-import { Interval, EVERY_TEN_SECONDS } from 'lib/interval';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { Interval, EVERY_TEN_SECONDS } from 'wp-calypso-client/lib/interval';
 import classNames from 'classnames';
 
 /**
@@ -13,18 +13,21 @@ import classNames from 'classnames';
  */
 import ActivityIcon from '../activity-log-item/activity-icon';
 import { Button, Card } from '@automattic/components';
-import DiffViewer from 'components/diff-viewer';
-import FoldableCard from 'components/foldable-card';
-import { JETPACK_CONTACT_SUPPORT } from 'lib/url/support';
-import InfoPopover from 'components/info-popover';
-import MarkedLines from 'components/marked-lines';
-import TimeSince from 'components/time-since';
-import PopoverMenuItem from 'components/popover/menu-item';
-import SplitButton from 'components/split-button';
-import { fixThreatAlert, ignoreThreatAlert } from 'state/jetpack/site-alerts/actions';
-import { requestRewindState } from 'state/rewind/state/actions';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
+import DiffViewer from 'wp-calypso-client/components/diff-viewer';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { JETPACK_CONTACT_SUPPORT } from 'wp-calypso-client/lib/url/support';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import MarkedLines from 'wp-calypso-client/components/marked-lines';
+import TimeSince from 'wp-calypso-client/components/time-since';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import SplitButton from 'wp-calypso-client/components/split-button';
+import {
+	fixThreatAlert,
+	ignoreThreatAlert,
+} from 'wp-calypso-client/state/jetpack/site-alerts/actions';
+import { requestRewindState } from 'wp-calypso-client/state/rewind/state/actions';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

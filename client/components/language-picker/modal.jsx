@@ -23,21 +23,25 @@ import {
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Dialog } from '@automattic/components';
-import QueryLanguageNames from 'components/data/query-language-names';
-import SectionNav from 'components/section-nav';
-import SectionNavTabs from 'components/section-nav/tabs';
-import SectionNavTabItem from 'components/section-nav/item';
-import Search from 'components/search';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormLabel from 'components/forms/form-label';
+import QueryLanguageNames from 'wp-calypso-client/components/data/query-language-names';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SectionNavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import SectionNavTabItem from 'wp-calypso-client/components/section-nav/item';
+import Search from 'wp-calypso-client/components/search';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
 import LanguagePickerItemTooltip from './tooltip';
-import getLocalizedLanguageNames from 'state/selectors/get-localized-language-names';
+import getLocalizedLanguageNames from 'wp-calypso-client/state/selectors/get-localized-language-names';
 import { getLanguageGroupByCountryCode, getLanguageGroupById } from './utils';
 import { LANGUAGE_GROUPS, DEFAULT_LANGUAGE_GROUP } from './constants';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
-import { getLanguage, isDefaultLocale, isTranslatedIncompletely } from 'lib/i18n-utils/utils';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getLanguage,
+	isDefaultLocale,
+	isTranslatedIncompletely,
+} from 'wp-calypso-client/lib/i18n-utils/utils';
 
 /**
  * Style dependencies

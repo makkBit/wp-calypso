@@ -10,7 +10,7 @@ import {
 	READER_SITE_REQUEST,
 	READER_SITE_REQUEST_SUCCESS,
 	READER_SITE_REQUEST_FAILURE,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 
 describe( 'actions', () => {
 	describe( '#requestSite', () => {

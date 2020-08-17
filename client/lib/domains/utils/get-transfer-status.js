@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { transferStatus } from 'lib/domains/constants';
+import { transferStatus } from 'wp-calypso-client/lib/domains/constants';
 
 export function getTransferStatus( domainFromApi ) {
 	if ( domainFromApi.transfer_status === 'pending_owner' ) {

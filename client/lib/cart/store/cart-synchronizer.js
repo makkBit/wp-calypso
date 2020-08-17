@@ -2,17 +2,20 @@
  * External dependencies
  */
 import { assign, flowRight, flow, get } from 'lodash';
-import Dispatcher from 'dispatcher';
-import { TRANSACTION_STEP_SET } from 'lib/transaction/action-types';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import { TRANSACTION_STEP_SET } from 'wp-calypso-client/lib/transaction/action-types';
 import debugFactory from 'debug';
 
 /**
  * Internal dependencies
  */
-import Emitter from 'lib/mixins/emitter';
-import { preprocessCartForServer, fillInAllCartItemAttributes } from 'lib/cart-values';
-import { addCartItem } from 'lib/cart-values/cart-items';
-import productsListFactory from 'lib/products-list';
+import Emitter from 'wp-calypso-client/lib/mixins/emitter';
+import {
+	preprocessCartForServer,
+	fillInAllCartItemAttributes,
+} from 'wp-calypso-client/lib/cart-values';
+import { addCartItem } from 'wp-calypso-client/lib/cart-values/cart-items';
+import productsListFactory from 'wp-calypso-client/lib/products-list';
 const productsList = productsListFactory();
 
 /**

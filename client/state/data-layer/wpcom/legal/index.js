@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { LEGAL_REQUEST, TOS_ACCEPT } from 'state/action-types';
-import { setLegalData } from 'state/legal/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { LEGAL_REQUEST, TOS_ACCEPT } from 'wp-calypso-client/state/action-types';
+import { setLegalData } from 'wp-calypso-client/state/legal/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const requestLegalData = ( action ) => {
 	return http(

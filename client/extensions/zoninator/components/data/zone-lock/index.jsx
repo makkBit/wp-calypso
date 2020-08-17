@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import getRequest from 'state/selectors/get-request';
+import getRequest from 'wp-calypso-client/state/selectors/get-request';
 import { requestLock, resetLock } from '../../../state/locks/actions';
 import { created, expires, maxLockPeriod } from '../../../state/locks/selectors';
 

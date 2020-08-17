@@ -11,21 +11,21 @@ import url from 'url';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 // This is a custom AsyncLoad component for devdocs that includes a
 // `props.component`-aware placeholder. It still needs to be imported as
 // `AsyncLoad` though–see https://github.com/Automattic/babel-plugin-transform-wpcalypso-async/blob/HEAD/index.js#L12
 import AsyncLoad from './devdocs-async-load';
 import DocsComponent from './main';
-import { login } from 'lib/paths';
+import { login } from 'wp-calypso-client/lib/paths';
 import SingleDocComponent from './doc';
 import DevWelcome from './welcome';
 import Sidebar from './sidebar';
 import FormStateExamplesComponent from './form-state-examples';
-import EmptyContent from 'components/empty-content';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 import WizardComponent from './wizard-component';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { navigate } from 'state/ui/actions';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 
 const devdocs = {
 	/*

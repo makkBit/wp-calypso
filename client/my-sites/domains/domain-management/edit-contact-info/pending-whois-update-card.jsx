@@ -9,9 +9,9 @@ import { useTranslate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import Notice from 'components/notice';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import { localizeUrl } from 'lib/i18n-utils';
+import Notice from 'wp-calypso-client/components/notice';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

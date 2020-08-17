@@ -12,20 +12,20 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import compareProps from 'lib/compare-props';
-import Chart from 'components/chart';
-import Legend from 'components/chart/legend';
+import compareProps from 'wp-calypso-client/lib/compare-props';
+import Chart from 'wp-calypso-client/components/chart';
+import Legend from 'wp-calypso-client/components/chart/legend';
 import StatTabs from '../stats-tabs';
 import StatsModulePlaceholder from '../stats-module/placeholder';
 import { Card } from '@automattic/components';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getSiteStatsNormalizedData,
 	isRequestingSiteStatsForQuery,
-} from 'state/stats/lists/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { getSiteOption } from 'state/sites/selectors';
+} from 'wp-calypso-client/state/stats/lists/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
 import { formatDate, getQueryDate } from '../stats-chart-tabs/utility';
 
 const ChartTabShape = PropTypes.shape( {

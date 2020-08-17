@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
-import 'state/jetpack/init';
+import 'wp-calypso-client/state/jetpack/init';
 
 /**
  * Returns an array of modules that require connection in order to work.

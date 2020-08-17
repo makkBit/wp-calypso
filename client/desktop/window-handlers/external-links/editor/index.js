@@ -8,11 +8,13 @@ const { dialog, ipcMain: ipc } = require( 'electron' ); // eslint-disable-line i
 /**
  * Internal dependencies
  */
-const Settings = require( 'desktop/lib/settings' );
+const Settings = require( 'wp-calypso-client/desktop/lib/settings' );
 const openInBrowser = require( '../open-in-browser' );
-const { showMySites } = require( 'desktop/lib/calypso-commands' );
-const settingConstants = require( 'desktop/lib/settings/constants' );
-const log = require( 'desktop/lib/logger' )( 'desktop:external-links:handle-jetpack' );
+const { showMySites } = require( 'wp-calypso-client/desktop/lib/calypso-commands' );
+const settingConstants = require( 'wp-calypso-client/desktop/lib/settings/constants' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )(
+	'desktop:external-links:handle-jetpack'
+);
 
 /**
  * Module variables

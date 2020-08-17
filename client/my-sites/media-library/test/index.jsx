@@ -13,13 +13,21 @@ import React from 'react';
  * Internal dependencies
  */
 import MediaLibrary from '..';
-import { requestKeyringConnections as requestStub } from 'state/sharing/keyring/actions';
+import { requestKeyringConnections as requestStub } from 'wp-calypso-client/state/sharing/keyring/actions';
 
-jest.mock( 'components/data/query-preferences', () => require( 'components/empty-component' ) );
+jest.mock( 'components/data/query-preferences', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 jest.mock( 'lib/media/actions', () => () => null );
-jest.mock( 'my-sites/media-library/content', () => require( 'components/empty-component' ) );
-jest.mock( 'my-sites/media-library/drop-zone', () => require( 'components/empty-component' ) );
-jest.mock( 'my-sites/media-library/filter-bar', () => require( 'components/empty-component' ) );
+jest.mock( 'my-sites/media-library/content', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
+jest.mock( 'my-sites/media-library/drop-zone', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
+jest.mock( 'my-sites/media-library/filter-bar', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 jest.mock( 'state/sharing/keyring/actions', () => ( {
 	requestKeyringConnections: require( 'sinon' ).stub(),
 } ) );

@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import userFactory from 'lib/user';
-import { makeLayout, redirectLoggedOut } from 'controller';
-import { navigation, siteSelection, sites } from 'my-sites/controller';
+import userFactory from 'wp-calypso-client/lib/user';
+import { makeLayout, redirectLoggedOut } from 'wp-calypso-client/controller';
+import { navigation, siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
 import { loggedIn, loggedOut, upload, fetchThemeFilters } from './controller';
 import { validateFilters, validateVertical } from './validate-filters';
 

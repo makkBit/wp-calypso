@@ -3,7 +3,7 @@
  */
 
 import { merge, omit, uniqueId } from 'lodash';
-import { combineReducers } from 'state/utils';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 
 /**
  * Internal dependencies

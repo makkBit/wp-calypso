@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { calculateMonthlyPriceForPlan } from 'lib/plans';
-import { getSitePlan } from 'state/sites/plans/selectors/get-site-plan';
-import { isSitePlanDiscounted } from 'state/sites/plans/selectors/is-site-plan-discounted';
+import { calculateMonthlyPriceForPlan } from 'wp-calypso-client/lib/plans';
+import { getSitePlan } from 'wp-calypso-client/state/sites/plans/selectors/get-site-plan';
+import { isSitePlanDiscounted } from 'wp-calypso-client/state/sites/plans/selectors/is-site-plan-discounted';
 
 /**
  * Returns a plan raw discount. It's the value which was subtracted from the plan's original raw price.

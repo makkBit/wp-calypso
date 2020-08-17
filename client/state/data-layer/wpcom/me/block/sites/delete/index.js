@@ -9,14 +9,14 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { READER_SITE_UNBLOCK } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, plainNotice } from 'state/notices/actions';
-import { blockSite } from 'state/reader/site-blocks/actions';
-import { bypassDataLayer } from 'state/data-layer/utils';
+import { READER_SITE_UNBLOCK } from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, plainNotice } from 'wp-calypso-client/state/notices/actions';
+import { blockSite } from 'wp-calypso-client/state/reader/site-blocks/actions';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestSiteUnblock( action ) {
 	return http(

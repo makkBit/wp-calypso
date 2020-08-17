@@ -6,8 +6,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import SegmentedControl from 'components/segmented-control';
-import SimplifiedSegmentedControl from 'components/segmented-control/simplified';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import SimplifiedSegmentedControl from 'wp-calypso-client/components/segmented-control/simplified';
 
 class SegmentedControlDemo extends React.PureComponent {
 	static displayName = 'SegmentedControl';

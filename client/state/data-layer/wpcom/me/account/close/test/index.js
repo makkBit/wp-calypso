@@ -7,9 +7,9 @@ import {
 	receiveAccountCloseError,
 	fromApi,
 } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { closeAccount } from 'state/account/actions';
-import { ACCOUNT_CLOSE_SUCCESS } from 'state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { closeAccount } from 'wp-calypso-client/state/account/actions';
+import { ACCOUNT_CLOSE_SUCCESS } from 'wp-calypso-client/state/action-types';
 
 jest.mock( 'lib/user', () => () => {
 	return { clear: jest.fn() };

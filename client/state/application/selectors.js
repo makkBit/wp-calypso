@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/application/init';
+import 'wp-calypso-client/state/application/init';
 
 export function isOffline( state ) {
 	return state.application.connectionState === 'OFFLINE';

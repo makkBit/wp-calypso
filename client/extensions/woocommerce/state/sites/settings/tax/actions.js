@@ -3,7 +3,7 @@
  */
 
 import { areTaxSettingsLoaded, areTaxSettingsLoading } from './selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import request from 'woocommerce/state/sites/request';
 import { setError } from '../../status/wc-api/actions';
 import {

@@ -10,10 +10,10 @@ import { flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import ExtensionRedirect from 'blocks/extension-redirect';
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import ExtensionRedirect from 'wp-calypso-client/blocks/extension-redirect';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { ZONINATOR_MIN_VERSION } from '../../app/constants';
 import QueryZones from '../data/query-zones';
 

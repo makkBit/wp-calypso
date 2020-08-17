@@ -11,9 +11,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import QueryTimezones from 'components/data/query-timezones';
-import getRawOffsets from 'state/selectors/get-raw-offsets';
-import getTimezones from 'state/selectors/get-timezones';
+import QueryTimezones from 'wp-calypso-client/components/data/query-timezones';
+import getRawOffsets from 'wp-calypso-client/state/selectors/get-raw-offsets';
+import getTimezones from 'wp-calypso-client/state/selectors/get-timezones';
 
 class Timezone extends Component {
 	onSelect = ( event ) => {

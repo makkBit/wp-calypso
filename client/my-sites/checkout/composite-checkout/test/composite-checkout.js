@@ -16,7 +16,7 @@ import { render, act, fireEvent } from '@testing-library/react'; // eslint-disab
  * Internal dependencies
  */
 import CompositeCheckout from '../composite-checkout';
-import { StripeHookProvider } from 'lib/stripe';
+import { StripeHookProvider } from 'wp-calypso-client/lib/stripe';
 
 jest.mock( 'page', () => ( {
 	redirect: jest.fn(),

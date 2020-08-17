@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal Dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import Emojify from 'components/emojify';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Emojify from 'wp-calypso-client/components/emojify';
 
 /**
  * Style dependencies

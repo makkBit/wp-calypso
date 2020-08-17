@@ -8,8 +8,8 @@ import { expect } from 'chai';
  */
 import * as steps from '../steps';
 import stepsForProductAndSurvey from '../steps-for-product-and-survey';
-import { abtest } from 'lib/abtest';
-import * as plans from 'lib/plans/constants';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import * as plans from 'wp-calypso-client/lib/plans/constants';
 jest.mock( 'lib/abtest', () => ( { abtest: require( 'sinon' ).stub() } ) );
 
 const PLAN_SURVEY_STEPS = [ steps.INITIAL_STEP, steps.FINAL_STEP ];

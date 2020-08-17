@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { POSTS_RECEIVE } from 'state/action-types';
+import { POSTS_RECEIVE } from 'wp-calypso-client/state/action-types';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an action object to be used in signalling that post objects have

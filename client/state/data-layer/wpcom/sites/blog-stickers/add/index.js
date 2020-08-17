@@ -8,14 +8,14 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { SITES_BLOG_STICKER_ADD } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { removeBlogSticker } from 'state/sites/blog-stickers/actions';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { bypassDataLayer } from 'state/data-layer/utils';
+import { SITES_BLOG_STICKER_ADD } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { removeBlogSticker } from 'wp-calypso-client/state/sites/blog-stickers/actions';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const requestBlogStickerAdd = ( action ) =>
 	http(

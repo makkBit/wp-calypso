@@ -3,13 +3,13 @@
  */
 
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classNames from 'classnames';
 
 /**
  * Internal dependencies
  */
-import SocialLogo from 'components/social-logo';
+import SocialLogo from 'wp-calypso-client/components/social-logo';
 
 const renderIcon = ( icon ) =>
 	icon && (

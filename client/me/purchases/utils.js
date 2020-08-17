@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { addCardDetails, editCardDetails } from './paths';
 import {
 	isExpired,
 	isIncludedWithPlan,
 	isOneTimePurchase,
 	isPaidWithCreditCard,
-} from 'lib/purchases';
-import { isDomainTransfer } from 'lib/products-values';
+} from 'wp-calypso-client/lib/purchases';
+import { isDomainTransfer } from 'wp-calypso-client/lib/products-values';
 
 function isDataLoading( props ) {
 	return ! props.hasLoadedSites || ! props.hasLoadedUserPurchasesFromServer;

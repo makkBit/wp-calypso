@@ -11,7 +11,7 @@ import React, { Component } from 'react';
 import { Card } from '@automattic/components';
 import OrderEvents from './events';
 import CreateOrderNote from './new-note';
-import SectionHeader from 'components/section-header';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
 class OrderActivityLog extends Component {
 	static propTypes = {

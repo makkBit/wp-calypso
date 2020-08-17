@@ -1,7 +1,11 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation, withStorageKey } from 'state/utils';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
 import lastNonEditorRoute from './last-non-editor-route/reducer';
 import schema from './last-non-editor-route/schema';
 import path from './path/reducer';

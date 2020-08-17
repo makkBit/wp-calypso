@@ -15,10 +15,10 @@ import { noop, get } from 'lodash';
  */
 import { CompactCard } from '@automattic/components';
 import photon from 'photon';
-import { hasTouch } from 'lib/touch-detect';
-import * as utils from 'state/posts/utils';
-import TimeSince from 'components/time-since';
-import { getEditorUrl } from 'state/selectors/get-editor-url';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import * as utils from 'wp-calypso-client/state/posts/utils';
+import TimeSince from 'wp-calypso-client/components/time-since';
+import { getEditorUrl } from 'wp-calypso-client/state/selectors/get-editor-url';
 
 /**
  * Style dependencies

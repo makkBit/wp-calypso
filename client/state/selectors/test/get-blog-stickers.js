@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getBlogStickers from 'state/selectors/get-blog-stickers';
+import getBlogStickers from 'wp-calypso-client/state/selectors/get-blog-stickers';
 
 describe( 'getBlogStickers()', () => {
 	test( 'should return stickers for a known blog', () => {

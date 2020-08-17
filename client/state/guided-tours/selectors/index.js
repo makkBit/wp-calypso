@@ -19,18 +19,18 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { GUIDED_TOUR_UPDATE, ROUTE_SET } from 'state/action-types';
-import { getSectionName, getSectionGroup } from 'state/ui/selectors';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
-import { getActionLog } from 'state/ui/action-log/selectors';
-import { preferencesLastFetchedTimestamp } from 'state/preferences/selectors';
-import GuidedToursConfig from 'layout/guided-tours/config';
-import createSelector from 'lib/create-selector';
+import { GUIDED_TOUR_UPDATE, ROUTE_SET } from 'wp-calypso-client/state/action-types';
+import { getSectionName, getSectionGroup } from 'wp-calypso-client/state/ui/selectors';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
+import { getActionLog } from 'wp-calypso-client/state/ui/action-log/selectors';
+import { preferencesLastFetchedTimestamp } from 'wp-calypso-client/state/preferences/selectors';
+import GuidedToursConfig from 'wp-calypso-client/layout/guided-tours/config';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 import findOngoingTour from './find-ongoing-tour';
 import getToursHistory from './get-tours-history';
 
-import 'state/guided-tours/init';
+import 'wp-calypso-client/state/guided-tours/init';
 
 const SECTIONS_WITHOUT_TOURS = [
 	'signup',

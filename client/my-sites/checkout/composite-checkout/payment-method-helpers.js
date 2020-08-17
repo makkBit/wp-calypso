@@ -9,24 +9,24 @@ import { defaultRegistry } from '@automattic/composite-checkout';
 /**
  * Internal dependencies
  */
-import wp from 'lib/wp';
+import wp from 'wp-calypso-client/lib/wp';
 import {
 	createTransactionEndpointRequestPayloadFromLineItems,
 	createPayPalExpressEndpointRequestPayloadFromLineItems,
 } from './types';
-import { translateCheckoutPaymentMethodToWpcomPaymentMethod } from 'my-sites/checkout/composite-checkout/wpcom';
+import { translateCheckoutPaymentMethodToWpcomPaymentMethod } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom';
 import {
 	hasGoogleApps,
 	hasDomainRegistration,
 	hasOnlyRenewalItems,
 	hasTransferProduct,
-} from 'lib/cart-values/cart-items';
-import { createStripePaymentMethod } from 'lib/stripe';
-import { prepareDomainContactDetailsForTransaction } from 'my-sites/checkout/composite-checkout/wpcom/types/wpcom-store-state';
-import { tryToGuessPostalCodeFormat } from 'lib/postal-code';
-import { getSavedVariations } from 'lib/abtest';
-import { stringifyBody } from 'state/login/utils';
-import { recordGoogleRecaptchaAction } from 'lib/analytics/recaptcha';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { createStripePaymentMethod } from 'wp-calypso-client/lib/stripe';
+import { prepareDomainContactDetailsForTransaction } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/types/wpcom-store-state';
+import { tryToGuessPostalCodeFormat } from 'wp-calypso-client/lib/postal-code';
+import { getSavedVariations } from 'wp-calypso-client/lib/abtest';
+import { stringifyBody } from 'wp-calypso-client/state/login/utils';
+import { recordGoogleRecaptchaAction } from 'wp-calypso-client/lib/analytics/recaptcha';
 
 const debug = debugFactory( 'calypso:composite-checkout:payment-method-helpers' );
 const { select } = defaultRegistry;

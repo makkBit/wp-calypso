@@ -12,11 +12,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import GoogleIcon from 'components/social-icons/google';
-import Popover from 'components/popover';
-import { preventWidows } from 'lib/formatting';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
-import { isFormDisabled } from 'state/login/selectors';
+import GoogleIcon from 'wp-calypso-client/components/social-icons/google';
+import Popover from 'wp-calypso-client/components/popover';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { isFormDisabled } from 'wp-calypso-client/state/login/selectors';
 
 let auth2InitDone = false;
 

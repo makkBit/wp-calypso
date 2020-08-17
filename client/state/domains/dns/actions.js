@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	DOMAINS_DNS_ADD,
 	DOMAINS_DNS_ADD_COMPLETED,
@@ -13,10 +13,10 @@ import {
 	DOMAINS_DNS_FETCH,
 	DOMAINS_DNS_FETCH_COMPLETED,
 	DOMAINS_DNS_FETCH_FAILED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { getDomainDns } from './selectors';
 
-import 'state/domains/init';
+import 'wp-calypso-client/state/domains/init';
 
 export const fetchDns = ( domainName ) => ( dispatch, getState ) => {
 	const dns = getDomainDns( getState(), domainName );

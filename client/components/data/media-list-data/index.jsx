@@ -10,13 +10,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import MediaActions from 'lib/media/actions';
-import MediaListStore from 'lib/media/list-store';
-import passToChildren from 'lib/react-pass-to-children';
+import MediaActions from 'wp-calypso-client/lib/media/actions';
+import MediaListStore from 'wp-calypso-client/lib/media/list-store';
+import passToChildren from 'wp-calypso-client/lib/react-pass-to-children';
 import utils from './utils';
-import { setQuery } from 'state/media/actions';
-import { fetchNextMediaPage } from 'state/media/thunks';
-import getMediaSortedByDate from 'state/selectors/get-media-sorted-by-date';
+import { setQuery } from 'wp-calypso-client/state/media/actions';
+import { fetchNextMediaPage } from 'wp-calypso-client/state/media/thunks';
+import getMediaSortedByDate from 'wp-calypso-client/state/selectors/get-media-sorted-by-date';
 
 function getStateData( siteId ) {
 	return {

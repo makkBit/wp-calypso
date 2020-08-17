@@ -12,7 +12,7 @@ import {
 	getSiteTitle,
 	isJetpackSite,
 	isJetpackSiteSecondaryNetworkSite,
-} from 'state/sites/selectors';
+} from 'wp-calypso-client/state/sites/selectors';
 
 const _filters = {
 	none: function () {

@@ -9,11 +9,14 @@ import { isEmpty, join, merge, reduce } from 'lodash';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import { getDomainRegistrations, getDomainTransfers } from 'lib/cart-values/cart-items';
-import { HTTPS_SSL } from 'lib/url/support';
-import { getProductsList } from 'state/products-list/selectors';
-import { getTld, isHstsRequired } from 'lib/domains';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import {
+	getDomainRegistrations,
+	getDomainTransfers,
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { HTTPS_SSL } from 'wp-calypso-client/lib/url/support';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import { getTld, isHstsRequired } from 'wp-calypso-client/lib/domains';
 
 class DomainRegistrationHsts extends React.PureComponent {
 	getHstsTlds = () => {

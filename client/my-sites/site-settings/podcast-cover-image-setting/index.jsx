@@ -11,23 +11,26 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
 import { Button } from '@automattic/components';
-import EditorMediaModalDialog from 'post-editor/media-modal/dialog';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import getMediaItem from 'state/media/thunks/get-media-item';
-import Image from 'components/image';
-import { addMedia } from 'state/media/thunks';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import { resetAllImageEditorState } from 'state/editor/image-editor/actions';
-import { getImageEditorCrop, getImageEditorTransform } from 'state/editor/image-editor/selectors';
-import { setEditorMediaModalView } from 'state/editor/actions';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import resizeImageUrl from 'lib/resize-image-url';
-import { AspectRatios } from 'state/editor/image-editor/constants';
-import Spinner from 'components/spinner';
+import EditorMediaModalDialog from 'wp-calypso-client/post-editor/media-modal/dialog';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import getMediaItem from 'wp-calypso-client/state/media/thunks/get-media-item';
+import Image from 'wp-calypso-client/components/image';
+import { addMedia } from 'wp-calypso-client/state/media/thunks';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { resetAllImageEditorState } from 'wp-calypso-client/state/editor/image-editor/actions';
+import {
+	getImageEditorCrop,
+	getImageEditorTransform,
+} from 'wp-calypso-client/state/editor/image-editor/selectors';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import resizeImageUrl from 'wp-calypso-client/lib/resize-image-url';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
+import Spinner from 'wp-calypso-client/components/spinner';
 
 /**
  * Debug
@@ -163,7 +166,7 @@ class PodcastCoverImageSetting extends PureComponent {
 	}
 
 	preloadModal() {
-		asyncRequire( 'post-editor/media-modal' );
+		asyncRequire( 'wp-calypso-client/post-editor/media-modal' );
 	}
 
 	renderChangeButton() {
@@ -225,7 +228,7 @@ class PodcastCoverImageSetting extends PureComponent {
 		return (
 			hasToggledModal && (
 				<AsyncLoad
-					require="post-editor/media-modal"
+					require="wp-calypso-client/post-editor/media-modal"
 					placeholder={ <EditorMediaModalDialog isVisible /> }
 					siteId={ siteId }
 					onClose={ this.editSelectedMedia }

@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { useTranslate } from 'i18n-calypso';
 
 // Returns React component with a localized label and optional icon

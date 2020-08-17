@@ -11,11 +11,11 @@ import {
 	READER_FEED_REQUEST_SUCCESS,
 	READER_FEED_REQUEST_FAILURE,
 	READER_FEED_UPDATE,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/data-layer/wpcom/read/feed';
+import 'wp-calypso-client/state/data-layer/wpcom/read/feed';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 export function requestFeed( feedId ) {
 	return {

@@ -10,11 +10,11 @@ import { includes } from 'lodash';
  * Internal dependencies
  */
 import { localize } from 'i18n-calypso';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId, getEditorNewPostPath } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPostTypes, getPostType } from 'state/post-types/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId, getEditorNewPostPath } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPostTypes, getPostType } from 'wp-calypso-client/state/post-types/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 import { Button, Dialog } from '@automattic/components';
 
 /**

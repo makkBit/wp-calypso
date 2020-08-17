@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import CommentButton from 'blocks/comment-button';
+import CommentButton from 'wp-calypso-client/blocks/comment-button';
 import { Card } from '@automattic/components';
 
 export default class CommentButtonExample extends React.Component {

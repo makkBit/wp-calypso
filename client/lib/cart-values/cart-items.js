@@ -24,7 +24,10 @@ import emailValidator from 'email-validator';
 /**
  * Internal dependencies
  */
-import { GSUITE_BASIC_SLUG, GSUITE_EXTRA_LICENSE_SLUG } from 'lib/gsuite/constants';
+import {
+	GSUITE_BASIC_SLUG,
+	GSUITE_EXTRA_LICENSE_SLUG,
+} from 'wp-calypso-client/lib/gsuite/constants';
 import {
 	formatProduct,
 	getDomain,
@@ -53,10 +56,10 @@ import {
 	isUnlimitedThemes,
 	isVideoPress,
 	isConciergeSession,
-} from 'lib/products-values';
-import sortProducts from 'lib/products-values/sort';
-import { getTld } from 'lib/domains';
-import { domainProductSlugs } from 'lib/domains/constants';
+} from 'wp-calypso-client/lib/products-values';
+import sortProducts from 'wp-calypso-client/lib/products-values/sort';
+import { getTld } from 'wp-calypso-client/lib/domains';
+import { domainProductSlugs } from 'wp-calypso-client/lib/domains/constants';
 import {
 	getPlan,
 	isBloggerPlan,
@@ -65,8 +68,8 @@ import {
 	isPremiumPlan,
 	isWpComFreePlan,
 	isWpComBloggerPlan,
-} from 'lib/plans';
-import { getTermDuration } from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans';
+import { getTermDuration } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * @typedef { import("./types").CartItemValue} CartItemValue

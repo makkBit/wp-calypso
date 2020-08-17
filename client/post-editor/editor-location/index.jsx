@@ -10,21 +10,21 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import EditorDrawerWell from 'post-editor/editor-drawer-well';
+import EditorDrawerWell from 'wp-calypso-client/post-editor/editor-drawer-well';
 import { reverseGeocode } from '../../lib/geocoding';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import PostMetadata from 'lib/post-metadata';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
 import EditorLocationSearch from './search';
-import Notice from 'components/notice';
-import RemoveButton from 'components/remove-button';
+import Notice from 'wp-calypso-client/components/notice';
+import RemoveButton from 'wp-calypso-client/components/remove-button';
 import {
 	updatePostMetadata,
 	deletePostMetadata,
 	requestPostGeoImageUrl,
-} from 'state/posts/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getSitePost, getEditedPost } from 'state/posts/selectors';
+} from 'wp-calypso-client/state/posts/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getSitePost, getEditedPost } from 'wp-calypso-client/state/posts/selectors';
 
 /**
  * Style dependencies

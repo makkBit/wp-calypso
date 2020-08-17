@@ -9,18 +9,22 @@ import nock from 'nock';
 /**
  * Internal dependencies
  */
-import posts from 'state/posts/reducer';
-import preferences from 'state/preferences/reducer';
-import sites from 'state/sites/reducer';
-import siteSettings from 'state/site-settings/reducer';
-import { selectedSiteId } from 'state/ui/reducer';
-import editor from 'state/editor/reducer';
-import { setSelectedSiteId } from 'state/ui/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { editPost, saveEdited } from 'state/posts/actions';
-import { startEditingNewPost } from 'state/editor/actions';
-import { getEditedPost, getEditedPostValue, isEditedPostDirty } from 'state/posts/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
+import posts from 'wp-calypso-client/state/posts/reducer';
+import preferences from 'wp-calypso-client/state/preferences/reducer';
+import sites from 'wp-calypso-client/state/sites/reducer';
+import siteSettings from 'wp-calypso-client/state/site-settings/reducer';
+import { selectedSiteId } from 'wp-calypso-client/state/ui/reducer';
+import editor from 'wp-calypso-client/state/editor/reducer';
+import { setSelectedSiteId } from 'wp-calypso-client/state/ui/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { editPost, saveEdited } from 'wp-calypso-client/state/posts/actions';
+import { startEditingNewPost } from 'wp-calypso-client/state/editor/actions';
+import {
+	getEditedPost,
+	getEditedPostValue,
+	isEditedPostDirty,
+} from 'wp-calypso-client/state/posts/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
 
 const SITE_ID = 123;
 const POST_ID = 456;

@@ -12,10 +12,10 @@ import { connect } from 'react-redux';
 
 import { Button, Card } from '@automattic/components';
 import { localize } from 'i18n-calypso';
-import { isTwoFactorAuthTypeSupported } from 'state/login/selectors';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
-import { sendSmsCode } from 'state/login/actions';
-import { isWebAuthnSupported } from 'lib/webauthn';
+import { isTwoFactorAuthTypeSupported } from 'wp-calypso-client/state/login/selectors';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { sendSmsCode } from 'wp-calypso-client/state/login/actions';
+import { isWebAuthnSupported } from 'wp-calypso-client/lib/webauthn';
 
 /**
  * Style dependencies

@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { combineReducers, keyedReducer, withoutPersistence } from 'state/utils';
+import { combineReducers, keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	ZONINATOR_REQUEST_FEED,
 	ZONINATOR_REQUEST_FEED_ERROR,

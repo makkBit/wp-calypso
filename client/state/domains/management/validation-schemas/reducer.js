@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { DOMAIN_MANAGEMENT_VALIDATION_SCHEMAS_ADD } from 'state/action-types';
+import { DOMAIN_MANAGEMENT_VALIDATION_SCHEMAS_ADD } from 'wp-calypso-client/state/action-types';
 
 export const validationSchemas = ( state = {}, action ) => {
 	switch ( action.type ) {

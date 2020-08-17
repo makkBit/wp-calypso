@@ -8,7 +8,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 /**
  * Style dependencies

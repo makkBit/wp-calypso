@@ -7,7 +7,7 @@ import { keyBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { combineReducers } from 'state/utils';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 import {
 	WOOCOMMERCE_CUSTOMERS_REQUEST,
 	WOOCOMMERCE_CUSTOMERS_REQUEST_FAILURE,

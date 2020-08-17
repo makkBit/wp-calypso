@@ -20,7 +20,7 @@ import { useDomainNamesInCart } from '../hooks/has-domains';
 import Field from './field';
 import { LeftColumn, RightColumn } from './ie-fallback';
 import { prepareDomainContactDetails, prepareDomainContactDetailsErrors, isValid } from '../types';
-import { isGSuiteProductSlug } from 'lib/gsuite';
+import { isGSuiteProductSlug } from 'wp-calypso-client/lib/gsuite';
 import useSkipToLastStepIfFormComplete from '../hooks/use-skip-to-last-step-if-form-complete';
 import useIsCachedContactFormValid from '../hooks/use-is-cached-contact-form-valid';
 import CountrySelectMenu from './country-select-menu';
@@ -29,11 +29,11 @@ import {
 	hasDomainRegistration,
 	hasTransferProduct,
 	needsExplicitAlternateEmailForGSuite,
-} from 'lib/cart-values/cart-items';
-import { useCart } from 'my-sites/checkout/composite-checkout/cart-provider';
-import { getTopLevelOfTld } from 'lib/domains';
-import ManagedContactDetailsFormFields from 'components/domains/contact-details-form-fields/managed-contact-details-form-fields';
-import RegistrantExtraInfoForm from 'components/domains/registrant-extra-info';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { useCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/cart-provider';
+import { getTopLevelOfTld } from 'wp-calypso-client/lib/domains';
+import ManagedContactDetailsFormFields from 'wp-calypso-client/components/domains/contact-details-form-fields/managed-contact-details-form-fields';
+import RegistrantExtraInfoForm from 'wp-calypso-client/components/domains/registrant-extra-info';
 
 export default function WPContactForm( {
 	countriesList,

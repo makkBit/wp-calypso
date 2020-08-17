@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { addQueryArgs } from 'lib/url';
-import { addLocaleToPath, localizeUrl } from 'lib/i18n-utils';
-import config, { isEnabled } from 'config';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import { addLocaleToPath, localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import config, { isEnabled } from 'wp-calypso-client/config';
 
 export function login( {
 	isJetpack,

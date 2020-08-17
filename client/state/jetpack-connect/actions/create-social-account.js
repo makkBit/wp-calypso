@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { recordTracksEvent } from 'state/analytics/actions';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 /**
  * Create a user account

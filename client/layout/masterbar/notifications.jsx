@@ -12,13 +12,13 @@ import { partial } from 'lodash';
  * Internal dependencies
  */
 import MasterbarItem from './item';
-import AsyncLoad from 'components/async-load';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
 import store from 'store';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { toggleNotificationsPanel } from 'state/ui/actions';
-import isNotificationsOpen from 'state/selectors/is-notifications-open';
-import TranslatableString from 'components/translatable/proptype';
-import hasUnseenNotifications from 'state/selectors/has-unseen-notifications';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { toggleNotificationsPanel } from 'wp-calypso-client/state/ui/actions';
+import isNotificationsOpen from 'wp-calypso-client/state/selectors/is-notifications-open';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
+import hasUnseenNotifications from 'wp-calypso-client/state/selectors/has-unseen-notifications';
 
 class MasterbarItemNotifications extends Component {
 	static propTypes = {

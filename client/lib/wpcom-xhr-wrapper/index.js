@@ -6,7 +6,7 @@ import debugModule from 'debug';
 /**
  * Internal dependencies
  */
-import userUtils from 'lib/user/utils';
+import userUtils from 'wp-calypso-client/lib/user/utils';
 
 /**
  * Module variables

@@ -8,7 +8,7 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import Week from './week';
 
 class PostTrendsMonth extends Component {

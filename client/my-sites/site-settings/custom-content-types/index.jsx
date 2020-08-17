@@ -11,18 +11,18 @@ import classnames from 'classnames';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormTextInput from 'components/forms/form-text-input';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { activateModule } from 'state/jetpack/modules/actions';
-import { isJetpackSite } from 'state/sites/selectors';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import SupportInfo from 'components/support-info';
-import { localizeUrl } from 'lib/i18n-utils';
-import InlineSupportLink from 'components/inline-support-link';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { activateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
 
 /**
  * Style dependencies

@@ -9,22 +9,26 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
+import Accordion from 'wp-calypso-client/components/accordion';
 import { Card, Button } from '@automattic/components';
-import CardHeading from 'components/card-heading';
-import MaterialIcon from 'components/material-icon';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getHttpData, requestHttpData, resetHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import {
+	getHttpData,
+	requestHttpData,
+	resetHttpData,
+} from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import RestorePasswordDialog from './restore-db-password';
 import {
 	composeAnalytics,
 	recordTracksEvent,
 	recordGoogleEvent,
 	bumpStat,
-} from 'state/analytics/actions';
-import ExternalLink from 'components/external-link';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/state/analytics/actions';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Style dependencies

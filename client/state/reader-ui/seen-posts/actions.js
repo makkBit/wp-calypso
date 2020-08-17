@@ -1,14 +1,17 @@
 /**
  * Internal Dependencies
  */
-import { READER_UNSEEN_STATUS_REQUEST, READER_UNSEEN_STATUS_RECEIVE } from 'state/action-types';
+import {
+	READER_UNSEEN_STATUS_REQUEST,
+	READER_UNSEEN_STATUS_RECEIVE,
+} from 'wp-calypso-client/state/action-types';
 
 /**
  * Load data layer dependencies
  */
-import 'state/data-layer/wpcom/seen-posts/unseen/status';
+import 'wp-calypso-client/state/data-layer/wpcom/seen-posts/unseen/status';
 
-import 'state/reader-ui/init';
+import 'wp-calypso-client/state/reader-ui/init';
 
 /**
  * Request unseen status for any section

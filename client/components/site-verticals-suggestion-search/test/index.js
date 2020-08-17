@@ -8,8 +8,8 @@ import { shallow } from 'enzyme';
  * Internal dependencies
  */
 import { SiteVerticalsSuggestionSearch } from '../';
-import SuggestionSearch from 'components/suggestion-search';
-import PopularTopics from 'components/site-verticals-suggestion-search/popular-topics';
+import SuggestionSearch from 'wp-calypso-client/components/suggestion-search';
+import PopularTopics from 'wp-calypso-client/components/site-verticals-suggestion-search/popular-topics';
 
 jest.mock( 'uuid', () => ( {
 	v4: () => 'fake-uuid',

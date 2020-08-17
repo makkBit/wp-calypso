@@ -7,10 +7,10 @@ import { filter } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import getSitesItems from 'state/selectors/get-sites-items';
-import isMainSiteOf from 'state/selectors/is-main-site-of';
-import { getSite, isJetpackSiteMainNetworkSite } from 'state/sites/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import isMainSiteOf from 'wp-calypso-client/state/selectors/is-main-site-of';
+import { getSite, isJetpackSiteMainNetworkSite } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns the member sites (main or secondary) of given network site

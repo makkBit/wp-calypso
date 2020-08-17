@@ -23,42 +23,42 @@ import classNames from 'classnames';
 import { localize } from 'i18n-calypso';
 import page from 'page';
 import PropTypes from 'prop-types';
-import { abtest } from 'lib/abtest';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 /**
  * Internal dependencies
  */
-import { localizeUrl } from 'lib/i18n-utils';
-import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'lib/oauth2-clients';
-import wpcom from 'lib/wp';
-import config from 'config';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { isCrowdsignalOAuth2Client, isWooOAuth2Client } from 'wp-calypso-client/lib/oauth2-clients';
+import wpcom from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import { Button } from '@automattic/components';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextInput from 'components/forms/form-text-input';
-import FormButton from 'components/forms/form-button';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import notices from 'notices';
-import Notice from 'components/notice';
-import LoggedOutForm from 'components/logged-out-form';
-import { login } from 'lib/paths';
-import formState from 'lib/form-state';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
-import LoggedOutFormLinkItem from 'components/logged-out-form/link-item';
-import LoggedOutFormBackLink from 'components/logged-out-form/back-link';
-import LoggedOutFormFooter from 'components/logged-out-form/footer';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import notices from 'wp-calypso-client/notices';
+import Notice from 'wp-calypso-client/components/notice';
+import LoggedOutForm from 'wp-calypso-client/components/logged-out-form';
+import { login } from 'wp-calypso-client/lib/paths';
+import formState from 'wp-calypso-client/lib/form-state';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
+import LoggedOutFormLinkItem from 'wp-calypso-client/components/logged-out-form/link-item';
+import LoggedOutFormBackLink from 'wp-calypso-client/components/logged-out-form/back-link';
+import LoggedOutFormFooter from 'wp-calypso-client/components/logged-out-form/footer';
 import PasswordlessSignupForm from './passwordless';
 import CrowdsignalSignupForm from './crowdsignal';
 import SocialSignupForm from './social';
-import { recordTracksEventWithClientId } from 'state/analytics/actions';
-import { createSocialUserFailed } from 'state/login/actions';
-import { getCurrentOAuth2Client } from 'state/oauth2-clients/ui/selectors';
-import { getSectionName } from 'state/ui/selectors';
-import TextControl from 'extensions/woocommerce/components/text-control';
-import wooDnaConfig from 'jetpack-connect/woo-dna-config';
+import { recordTracksEventWithClientId } from 'wp-calypso-client/state/analytics/actions';
+import { createSocialUserFailed } from 'wp-calypso-client/state/login/actions';
+import { getCurrentOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
+import TextControl from 'wp-calypso-client/extensions/woocommerce/components/text-control';
+import wooDnaConfig from 'wp-calypso-client/jetpack-connect/woo-dna-config';
 
 /**
  * Style dependencies

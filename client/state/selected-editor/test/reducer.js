@@ -6,7 +6,7 @@ import deepFreeze from 'deep-freeze';
 /**
  * Internal dependencies
  */
-import { EDITOR_TYPE_SET } from 'state/action-types';
+import { EDITOR_TYPE_SET } from 'wp-calypso-client/state/action-types';
 import selectedEditor from '../reducer';
 
 describe( 'reducer', () => {

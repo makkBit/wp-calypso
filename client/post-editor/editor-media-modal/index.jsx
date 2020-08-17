@@ -9,12 +9,12 @@ import { some, partial, map, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import MediaModal from 'post-editor/media-modal';
-import { generateGalleryShortcode } from 'lib/media/utils';
-import markup from 'post-editor/media-modal/markup';
-import { bumpStat } from 'state/analytics/actions';
-import { getSelectedSite } from 'state/ui/selectors';
-import { blockSave } from 'state/editor/save-blockers/actions';
+import MediaModal from 'wp-calypso-client/post-editor/media-modal';
+import { generateGalleryShortcode } from 'wp-calypso-client/lib/media/utils';
+import markup from 'wp-calypso-client/post-editor/media-modal/markup';
+import { bumpStat } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { blockSave } from 'wp-calypso-client/state/editor/save-blockers/actions';
 
 class EditorMediaModal extends Component {
 	static propTypes = {

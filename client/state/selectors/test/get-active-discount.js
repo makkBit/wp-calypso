@@ -1,18 +1,20 @@
 /**
  * Internal dependencies
  */
-import getActiveDiscount, { isDiscountActive } from 'state/selectors/get-active-discount';
-import { hasActivePromotion } from 'state/active-promotions/selectors';
-import { getSitePlanSlug } from 'state/sites/selectors';
-import { abtest } from 'lib/abtest';
-import discounts from 'lib/discounts';
+import getActiveDiscount, {
+	isDiscountActive,
+} from 'wp-calypso-client/state/selectors/get-active-discount';
+import { hasActivePromotion } from 'wp-calypso-client/state/active-promotions/selectors';
+import { getSitePlanSlug } from 'wp-calypso-client/state/sites/selectors';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import discounts from 'wp-calypso-client/lib/discounts';
 import {
 	PLAN_PREMIUM_2_YEARS,
 	TYPE_FREE,
 	TYPE_PREMIUM,
 	TERM_ANNUALLY,
 	TERM_BIENNIALLY,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 jest.mock( 'state/active-promotions/selectors', () => ( {
 	hasActivePromotion: jest.fn( () => null ),

@@ -6,7 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { isEmpty, startsWith } from 'lodash';
 
 /**
@@ -14,11 +14,11 @@ import { isEmpty, startsWith } from 'lodash';
  */
 import { Dialog } from '@automattic/components';
 import FlatRate from './shipping-methods/flat-rate';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
-import FormToggle from 'components/forms/form-toggle/compact';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
 import FreeShipping from './shipping-methods/free-shipping';
 import LocalPickup from './shipping-methods/local-pickup';
 import { bindActionCreatorsWithSiteId } from 'woocommerce/lib/redux-utils';

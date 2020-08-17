@@ -22,8 +22,8 @@ import {
 	READER_LISTS_REQUEST,
 	READER_LISTS_FOLLOW,
 	READER_LISTS_UNFOLLOW,
-} from 'state/reader/action-types';
-import useNock from 'test-helpers/use-nock';
+} from 'wp-calypso-client/state/reader/action-types';
+import useNock from 'wp-calypso-client/test-helpers/use-nock';
 
 describe( 'actions', () => {
 	const spy = sinon.spy();

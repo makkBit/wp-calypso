@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 import { handleSiteBlocksRequest, siteBlocksRequestReceived, siteBlocksRequestFailure } from '../';
-import { READER_SITE_BLOCKS_RECEIVE } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { READER_SITE_BLOCKS_RECEIVE } from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 const action = { type: 'DUMMY_ACTION' };
 

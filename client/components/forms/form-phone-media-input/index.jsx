@@ -7,9 +7,9 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import PhoneInput from 'components/phone-input';
-import FormLabel from 'components/forms/form-label';
-import FormInputValidation from 'components/forms/form-input-validation';
+import PhoneInput from 'wp-calypso-client/components/phone-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 
 export default function FormPhoneMediaInput( {
 	additionalClasses,

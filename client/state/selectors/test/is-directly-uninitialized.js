@@ -6,13 +6,13 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isDirectlyUninitialized from 'state/selectors/is-directly-uninitialized';
+import isDirectlyUninitialized from 'wp-calypso-client/state/selectors/is-directly-uninitialized';
 import {
 	STATUS_ERROR,
 	STATUS_INITIALIZING,
 	STATUS_READY,
 	STATUS_UNINITIALIZED,
-} from 'state/help/directly/constants';
+} from 'wp-calypso-client/state/help/directly/constants';
 
 describe( 'isDirectlyUninitialized()', () => {
 	test( 'should be true when uninitialized', () => {

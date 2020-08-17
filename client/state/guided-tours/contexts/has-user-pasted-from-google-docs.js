@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { EDITOR_PASTE_EVENT } from 'state/action-types';
-import { SOURCE_GOOGLE_DOCS } from 'components/tinymce/plugins/wpcom-track-paste/sources';
-import { getLastAction } from 'state/ui/action-log/selectors';
+import { EDITOR_PASTE_EVENT } from 'wp-calypso-client/state/action-types';
+import { SOURCE_GOOGLE_DOCS } from 'wp-calypso-client/components/tinymce/plugins/wpcom-track-paste/sources';
+import { getLastAction } from 'wp-calypso-client/state/ui/action-log/selectors';
 
 /**
  * Returns true if user has just pasted something from Google Docs.

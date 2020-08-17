@@ -5,13 +5,13 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Count from 'components/count';
-import TranslatableString from 'components/translatable/proptype';
+import Count from 'wp-calypso-client/components/count';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 class SelectDropdownItem extends Component {
 	static propTypes = {

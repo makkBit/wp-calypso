@@ -9,16 +9,16 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import QueryActiveTheme from 'components/data/query-active-theme';
-import QueryTheme from 'components/data/query-theme';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import QueryActiveTheme from 'wp-calypso-client/components/data/query-active-theme';
+import QueryTheme from 'wp-calypso-client/components/data/query-theme';
 import ThemeSetupCard from './theme-setup-card';
 import ThemeSetupPlaceholder from './theme-setup-placeholder';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getActiveTheme, getTheme } from 'state/themes/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { toggleDialog } from 'state/theme-setup/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { getActiveTheme, getTheme } from 'wp-calypso-client/state/themes/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { toggleDialog } from 'wp-calypso-client/state/theme-setup/actions';
 
 /**
  * Style dependencies

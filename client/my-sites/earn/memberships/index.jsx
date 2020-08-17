@@ -11,45 +11,56 @@ import { saveAs } from 'browser-filesaver';
 /**
  * Internal dependencies
  */
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 import { Card, Button, CompactCard, Dialog } from '@automattic/components';
-import InfiniteScroll from 'components/infinite-scroll';
-import QueryMembershipsEarnings from 'components/data/query-memberships-earnings';
-import QueryMembershipsSettings from 'components/data/query-memberships-settings';
-import { requestDisconnectStripeAccount } from 'state/memberships/settings/actions';
-import { requestSubscribers, requestSubscriptionStop } from 'state/memberships/subscribers/actions';
-import { decodeEntities, preventWidows } from 'lib/formatting';
-import Gravatar from 'components/gravatar';
-import isSiteOnPaidPlan from 'state/selectors/is-site-on-paid-plan';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_MEMBERSHIPS, PLAN_PERSONAL, PLAN_JETPACK_PERSONAL } from 'lib/plans/constants';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import SectionHeader from 'components/section-header';
-import QueryMembershipProducts from 'components/data/query-memberships';
-import Gridicon from 'components/gridicon';
-import { userCan } from 'lib/site/utils';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import ExternalLink from 'components/external-link';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { localizeUrl } from 'lib/i18n-utils';
-import { getEarningsWithDefaultsForSiteId } from 'state/memberships/earnings/selectors';
+import InfiniteScroll from 'wp-calypso-client/components/infinite-scroll';
+import QueryMembershipsEarnings from 'wp-calypso-client/components/data/query-memberships-earnings';
+import QueryMembershipsSettings from 'wp-calypso-client/components/data/query-memberships-settings';
+import { requestDisconnectStripeAccount } from 'wp-calypso-client/state/memberships/settings/actions';
+import {
+	requestSubscribers,
+	requestSubscriptionStop,
+} from 'wp-calypso-client/state/memberships/subscribers/actions';
+import { decodeEntities, preventWidows } from 'wp-calypso-client/lib/formatting';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import isSiteOnPaidPlan from 'wp-calypso-client/state/selectors/is-site-on-paid-plan';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import {
+	FEATURE_MEMBERSHIPS,
+	PLAN_PERSONAL,
+	PLAN_JETPACK_PERSONAL,
+} from 'wp-calypso-client/lib/plans/constants';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QueryMembershipProducts from 'wp-calypso-client/components/data/query-memberships';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { userCan } from 'wp-calypso-client/lib/site/utils';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { getEarningsWithDefaultsForSiteId } from 'wp-calypso-client/state/memberships/earnings/selectors';
 import {
 	getTotalSubscribersForSiteId,
 	getOwnershipsForSiteId,
-} from 'state/memberships/subscribers/selectors';
+} from 'wp-calypso-client/state/memberships/subscribers/selectors';
 import {
 	getConnectedAccountIdForSiteId,
 	getConnectUrlForSiteId,
-} from 'state/memberships/settings/selectors';
-import { getProductsForSiteId } from 'state/memberships/product-list/selectors';
+} from 'wp-calypso-client/state/memberships/settings/selectors';
+import { getProductsForSiteId } from 'wp-calypso-client/state/memberships/product-list/selectors';
 
 /**
  * Image dependencies
  */
-import paymentsImage from 'assets/images/earn/payments-illustration.svg';
+import paymentsImage from 'wp-calypso-client/assets/images/earn/payments-illustration.svg';
 
 /**
  * Style dependencies

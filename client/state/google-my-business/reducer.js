@@ -1,13 +1,18 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer, withoutPersistence, withStorageKey } from 'state/utils';
+import {
+	combineReducers,
+	keyedReducer,
+	withoutPersistence,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
 import {
 	GOOGLE_MY_BUSINESS_STATS_FAILURE,
 	GOOGLE_MY_BUSINESS_STATS_RECEIVE,
 	GOOGLE_MY_BUSINESS_STATS_REQUEST,
-} from 'state/action-types';
-import { statsInterval } from 'state/google-my-business/ui/reducer';
+} from 'wp-calypso-client/state/action-types';
+import { statsInterval } from 'wp-calypso-client/state/google-my-business/ui/reducer';
 
 const stats = withoutPersistence( ( state = null, action ) => {
 	switch ( action.type ) {

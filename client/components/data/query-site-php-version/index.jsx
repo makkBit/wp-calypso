@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getAtomicPhpVersion } from 'state/hosting/actions';
+import { getAtomicPhpVersion } from 'wp-calypso-client/state/hosting/actions';
 
 export default function QuerySitePhpVersion( { siteId } ) {
 	const dispatch = useDispatch();

@@ -10,25 +10,25 @@ import { flowRight, get, pick } from 'lodash';
  * Internal dependencies
  */
 import wrapSettingsForm from './wrap-settings-form';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import PressThis from './press-this';
-import QueryTaxonomies from 'components/data/query-taxonomies';
+import QueryTaxonomies from 'wp-calypso-client/components/data/query-taxonomies';
 import TaxonomyCard from './taxonomies/taxonomy-card';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { requestPostTypes } from 'state/post-types/actions';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { requestPostTypes } from 'wp-calypso-client/state/post-types/actions';
 import Composing from './composing';
 import CustomContentTypes from './custom-content-types';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import FeedSettings from 'my-sites/site-settings/feed-settings';
-import PodcastingLink from 'my-sites/site-settings/podcasting-details/link';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import FeedSettings from 'wp-calypso-client/my-sites/site-settings/feed-settings';
+import PodcastingLink from 'wp-calypso-client/my-sites/site-settings/podcasting-details/link';
 import Masterbar from './masterbar';
 import MediaSettingsWriting from './media-settings-writing';
 import ThemeEnhancements from './theme-enhancements';
 import Widgets from './widgets';
 import PublishingTools from './publishing-tools';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
 
 class SiteSettingsFormWriting extends Component {
 	isMobile() {

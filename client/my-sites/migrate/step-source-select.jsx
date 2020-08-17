@@ -12,18 +12,18 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import HeaderCake from 'components/header-cake';
-import Notice from 'components/notice';
-import wpLib from 'lib/wp';
-import { recordTracksEvent } from 'state/analytics/actions';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Notice from 'wp-calypso-client/components/notice';
+import wpLib from 'wp-calypso-client/lib/wp';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies
  */
 import './section-migrate.scss';
-import SitesBlock from 'my-sites/migrate/components/sites-block';
-import { getImportSectionLocation, redirectTo } from 'my-sites/migrate/helpers';
+import SitesBlock from 'wp-calypso-client/my-sites/migrate/components/sites-block';
+import { getImportSectionLocation, redirectTo } from 'wp-calypso-client/my-sites/migrate/helpers';
 
 const wpcom = wpLib.undocumented();
 

@@ -8,12 +8,12 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 /*
  * Render a `FormFieldset` parametrized by the input field component type.

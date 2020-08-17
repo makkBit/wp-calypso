@@ -9,10 +9,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import ExternalLink from 'components/external-link';
-import FormLegend from 'components/forms/form-legend';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 
 class FormAnalyticsStores extends Component {
 	handleToggleChange = ( name ) => () => {

@@ -6,10 +6,10 @@ import { find, get, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getPostsForQuery } from 'state/posts/selectors';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import getFrontPageEditorUrl from 'state/selectors/get-front-page-editor-url';
-import createSelector from 'lib/create-selector';
+import { getPostsForQuery } from 'wp-calypso-client/state/posts/selectors';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import getFrontPageEditorUrl from 'wp-calypso-client/state/selectors/get-front-page-editor-url';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 export const FIRST_TEN_SITE_POSTS_QUERY = { type: 'any', number: 10, order_by: 'ID', order: 'ASC' };
 

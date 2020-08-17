@@ -7,8 +7,8 @@ import { useDispatch } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingActivePromotions } from 'state/active-promotions/selectors';
-import { requestActivePromotions } from 'state/active-promotions/actions';
+import { isRequestingActivePromotions } from 'wp-calypso-client/state/active-promotions/selectors';
+import { requestActivePromotions } from 'wp-calypso-client/state/active-promotions/actions';
 
 const request = () => ( dispatch, getState ) => {
 	if ( ! isRequestingActivePromotions( getState() ) ) {

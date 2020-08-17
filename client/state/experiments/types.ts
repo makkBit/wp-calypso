@@ -1,7 +1,7 @@
 /**
  * Internal Dependencies
  */
-import { EXPERIMENT_ASSIGN } from 'state/action-types';
+import { EXPERIMENT_ASSIGN } from 'wp-calypso-client/state/action-types';
 
 export type ExperimentResponse = {
 	variations: object;

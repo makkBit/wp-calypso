@@ -5,8 +5,8 @@ import {
 	HOME_LAYOUT_SET,
 	HOME_QUICK_LINKS_EXPAND,
 	HOME_QUICK_LINKS_COLLAPSE,
-} from 'state/action-types';
-import { combineReducers, keyedReducer, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer, withSchemaValidation } from 'wp-calypso-client/state/utils';
 
 export const layout = ( state = {}, action ) =>
 	action.type === HOME_LAYOUT_SET ? action.layout : state;

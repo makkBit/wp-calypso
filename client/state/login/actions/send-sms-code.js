@@ -7,20 +7,20 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	TWO_FACTOR_AUTHENTICATION_SEND_SMS_CODE_REQUEST,
 	TWO_FACTOR_AUTHENTICATION_SEND_SMS_CODE_REQUEST_FAILURE,
 	TWO_FACTOR_AUTHENTICATION_SEND_SMS_CODE_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { getTwoFactorAuthNonce, getTwoFactorUserId } from 'state/login/selectors';
+} from 'wp-calypso-client/state/action-types';
+import { getTwoFactorAuthNonce, getTwoFactorUserId } from 'wp-calypso-client/state/login/selectors';
 import {
 	getErrorFromHTTPError,
 	getSMSMessageFromResponse,
 	postLoginRequest,
-} from 'state/login/utils';
+} from 'wp-calypso-client/state/login/utils';
 
-import 'state/login/init';
+import 'wp-calypso-client/state/login/init';
 
 /**
  * Sends a two factor authentication recovery code to a user.

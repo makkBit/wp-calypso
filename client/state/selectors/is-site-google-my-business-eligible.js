@@ -5,10 +5,14 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSitePlanSlug } from 'state/sites/selectors';
-import { planHasFeature, planMatches } from 'lib/plans';
-import { FEATURE_GOOGLE_MY_BUSINESS, TYPE_BUSINESS, GROUP_JETPACK } from 'lib/plans/constants';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSitePlanSlug } from 'wp-calypso-client/state/sites/selectors';
+import { planHasFeature, planMatches } from 'wp-calypso-client/lib/plans';
+import {
+	FEATURE_GOOGLE_MY_BUSINESS,
+	TYPE_BUSINESS,
+	GROUP_JETPACK,
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Returns true if site has business/ecommerce plan

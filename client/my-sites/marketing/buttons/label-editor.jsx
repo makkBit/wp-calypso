@@ -10,7 +10,7 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { decodeEntities } from 'lib/formatting';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 const closeKeyCodes = [
 	13, // Return

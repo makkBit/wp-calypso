@@ -7,8 +7,8 @@
 /**
  * Internal dependencies
  */
-import { getSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Returns the URL if SitePreview currently has one.

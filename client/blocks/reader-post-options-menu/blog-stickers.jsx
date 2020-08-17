@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import getBlogStickers from 'state/selectors/get-blog-stickers';
-import QueryBlogStickers from 'components/data/query-blog-stickers';
+import getBlogStickers from 'wp-calypso-client/state/selectors/get-blog-stickers';
+import QueryBlogStickers from 'wp-calypso-client/components/data/query-blog-stickers';
 import ReaderPostOptionsMenuBlogStickerMenuItem from './blog-sticker-menu-item';
 
 class ReaderPostOptionsMenuBlogStickers extends React.Component {

@@ -13,21 +13,25 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLegend from 'components/forms/form-legend';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import { getCustomizerUrl, isJetpackSite, isJetpackMinimumVersion } from 'state/sites/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import SupportInfo from 'components/support-info';
-import versionCompare from 'lib/version-compare';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import {
+	getCustomizerUrl,
+	isJetpackSite,
+	isJetpackMinimumVersion,
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
 
 class ThemeEnhancements extends Component {
 	static defaultProps = {

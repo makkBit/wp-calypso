@@ -9,10 +9,10 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import getPastBillingTransaction from 'state/selectors/get-past-billing-transaction';
+import getPastBillingTransaction from 'wp-calypso-client/state/selectors/get-past-billing-transaction';
 
-import isRequestingBillingTransaction from 'state/selectors/is-requesting-billing-transaction';
-import { requestBillingTransaction } from 'state/billing-transactions/individual-transactions/actions';
+import isRequestingBillingTransaction from 'wp-calypso-client/state/selectors/is-requesting-billing-transaction';
+import { requestBillingTransaction } from 'wp-calypso-client/state/billing-transactions/individual-transactions/actions';
 
 class QueryBillingTransaction extends Component {
 	fetch( props ) {

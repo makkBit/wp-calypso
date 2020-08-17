@@ -6,7 +6,7 @@ import { get, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/login/init';
+import 'wp-calypso-client/state/login/init';
 
 /**
  * Retrieve the user ID for the two factor authentication process.

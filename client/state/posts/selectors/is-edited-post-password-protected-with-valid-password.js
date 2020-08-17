@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getEditedPostValue } from 'state/posts/selectors/get-edited-post-value';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors/get-edited-post-value';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if the edited post is password protected and has a valid password set

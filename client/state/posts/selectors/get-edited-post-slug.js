@@ -6,12 +6,12 @@ import { get, has } from 'lodash';
 /**
  * Internal dependencies
  */
-import { decodeURIIfValid } from 'lib/url';
-import { getPostEdits } from 'state/posts/selectors/get-post-edits';
-import { getSitePost } from 'state/posts/selectors/get-site-post';
-import { isPostPublished } from 'state/posts/selectors/is-post-published';
+import { decodeURIIfValid } from 'wp-calypso-client/lib/url';
+import { getPostEdits } from 'wp-calypso-client/state/posts/selectors/get-post-edits';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors/get-site-post';
+import { isPostPublished } from 'wp-calypso-client/state/posts/selectors/is-post-published';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns the slug, or suggested_slug, for the edited post

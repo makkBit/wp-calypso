@@ -10,9 +10,9 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import config from 'config';
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
-import KEY_BINDINGS from 'lib/keyboard-shortcuts/key-bindings';
+import config from 'wp-calypso-client/config';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
+import KEY_BINDINGS from 'wp-calypso-client/lib/keyboard-shortcuts/key-bindings';
 
 /**
  * Style dependencies

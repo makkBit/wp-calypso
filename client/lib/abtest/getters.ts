@@ -12,7 +12,7 @@
 /**
  * Internal dependencies
  */
-import { abtest } from 'lib/abtest';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 /**
  * Returns whether the Offer Reset AB experiment is active.

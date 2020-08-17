@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/help/init';
+import 'wp-calypso-client/state/help/init';
 
 /**
  * Returns an array of course objects.

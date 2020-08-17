@@ -21,15 +21,15 @@ import {
 /**
  * Internal dependencies
  */
-import { PaymentMethodLogos } from 'my-sites/checkout/composite-checkout/wpcom/components/payment-method-logos';
-import Field from 'my-sites/checkout/composite-checkout/wpcom/components/field';
+import { PaymentMethodLogos } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/payment-method-logos';
+import Field from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/field';
 import {
 	SummaryLine,
 	SummaryDetails,
-} from 'my-sites/checkout/composite-checkout/wpcom/components/summary-details';
-import WeChatPaymentQRcode from 'my-sites/checkout/checkout/wechat-payment-qrcode';
-import { useCart } from 'my-sites/checkout/composite-checkout/cart-provider';
-import userAgent from 'lib/user-agent';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/summary-details';
+import WeChatPaymentQRcode from 'wp-calypso-client/my-sites/checkout/checkout/wechat-payment-qrcode';
+import { useCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/cart-provider';
+import userAgent from 'wp-calypso-client/lib/user-agent';
 
 const debug = debugFactory( 'calypso:composite-checkout:wechat-payment-method' );
 

@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isFetchingAtomicTransfer from 'state/selectors/is-fetching-atomic-transfer';
+import isFetchingAtomicTransfer from 'wp-calypso-client/state/selectors/is-fetching-atomic-transfer';
 
 describe( 'isFetchingAtomicTransfer()', () => {
 	test( 'should return false if the transfer is not found', () => {

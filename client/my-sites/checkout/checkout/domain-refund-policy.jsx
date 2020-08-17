@@ -7,15 +7,15 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { DOMAIN_CANCEL, REFUNDS } from 'lib/url/support';
-import Gridicon from 'components/gridicon';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { DOMAIN_CANCEL, REFUNDS } from 'wp-calypso-client/lib/url/support';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import {
 	hasDomainBeingUsedForPlan,
 	hasDomainRegistration,
 	hasDomainRenewal,
 	hasNewDomainRegistration,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 
 class DomainRefundPolicy extends React.Component {
 	recordCancelDomainSupportClick = () => {

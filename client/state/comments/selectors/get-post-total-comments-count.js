@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Get total number of comments on the server for a given post

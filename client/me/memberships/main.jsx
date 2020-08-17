@@ -9,17 +9,17 @@ import formatCurrency from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import MeSidebarNavigation from 'me/sidebar-navigation';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
 import PurchasesHeader from '../purchases/purchases-list/header';
-import Main from 'components/main';
-import DocumentHead from 'components/data/document-head';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryMembershipsSubscriptions from 'components/data/query-memberships-subscriptions';
-import SectionHeader from 'components/section-header';
+import Main from 'wp-calypso-client/components/main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryMembershipsSubscriptions from 'wp-calypso-client/components/data/query-memberships-subscriptions';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { CompactCard } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getAllSubscriptions } from 'state/memberships/subscriptions/selectors';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getAllSubscriptions } from 'wp-calypso-client/state/memberships/subscriptions/selectors';
 
 /**
  * Style dependencies
@@ -29,7 +29,7 @@ import './main.scss';
 /**
  * Image dependencies
  */
-import noMembershipsImage from 'assets/images/illustrations/no-memberships.svg';
+import noMembershipsImage from 'wp-calypso-client/assets/images/illustrations/no-memberships.svg';
 
 const getMembershipEndDate = ( translate, endDate, moment ) => {
 	if ( ! endDate ) {

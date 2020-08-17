@@ -9,17 +9,17 @@ import { useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import QueryJetpackScanHistory from 'components/data/query-jetpack-scan-history';
-import EmptyContent from 'components/empty-content';
-import FormattedHeader from 'components/formatted-header';
-import ThreatHistoryList from 'components/jetpack/threat-history-list';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import QueryJetpackScanHistory from 'wp-calypso-client/components/data/query-jetpack-scan-history';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import ThreatHistoryList from 'wp-calypso-client/components/jetpack/threat-history-list';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import ScanNavigation from '../navigation';
 
 /**

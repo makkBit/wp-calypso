@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
 
 export const shouldRedirectGutenberg = ( state, siteId ) => {
 	const validEditors = [ 'gutenberg-redirect', 'gutenberg-redirect-and-style' ];

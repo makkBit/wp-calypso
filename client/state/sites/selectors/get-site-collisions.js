@@ -3,9 +3,9 @@ import { filter, map, some } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { withoutHttp } from 'lib/url';
-import getSitesItems from 'state/selectors/get-sites-items';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
 
 /**
  * Returns a filtered array of WordPress.com site IDs where a Jetpack site

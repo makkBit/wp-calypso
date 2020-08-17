@@ -3,15 +3,15 @@
  */
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { connect } from 'react-redux';
-import { AppState } from 'types';
+import { AppState } from 'wp-calypso-client/types';
 
 /**
  * Internal Dependencies
  */
-import { getVariationForUser, isLoading } from 'state/experiments/selectors';
-import QueryExperiments from 'components/data/query-experiments';
+import { getVariationForUser, isLoading } from 'wp-calypso-client/state/experiments/selectors';
+import QueryExperiments from 'wp-calypso-client/components/data/query-experiments';
 import { ExperimentProps } from './experiment-props';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 
 export { default as Variation } from './variation';
 export { default as DefaultVariation } from './default-variation';

@@ -8,7 +8,10 @@ import i18n from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { TRANSFER_DOMAIN_REGISTRATION, UPDATE_NAMESERVERS } from 'lib/url/support';
+import {
+	TRANSFER_DOMAIN_REGISTRATION,
+	UPDATE_NAMESERVERS,
+} from 'wp-calypso-client/lib/url/support';
 
 export default [
 	{

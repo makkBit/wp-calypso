@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { LOGIN_FORM_UPDATE } from 'state/action-types';
+import { LOGIN_FORM_UPDATE } from 'wp-calypso-client/state/action-types';
 
-import 'state/login/init';
+import 'wp-calypso-client/state/login/init';
 
 export const formUpdate = () => ( { type: LOGIN_FORM_UPDATE } );

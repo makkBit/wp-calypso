@@ -9,11 +9,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { like, unlike } from 'state/posts/likes/actions';
+import { like, unlike } from 'wp-calypso-client/state/posts/likes/actions';
 import LikeButton from './button';
-import { getPostLikeCount } from 'state/posts/selectors/get-post-like-count';
-import { isLikedPost } from 'state/posts/selectors/is-liked-post';
-import QueryPostLikes from 'components/data/query-post-likes';
+import { getPostLikeCount } from 'wp-calypso-client/state/posts/selectors/get-post-like-count';
+import { isLikedPost } from 'wp-calypso-client/state/posts/selectors/is-liked-post';
+import QueryPostLikes from 'wp-calypso-client/components/data/query-post-likes';
 
 class LikeButtonContainer extends Component {
 	static propTypes = {

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import { notifyUpgradeNudgeClick } from '../';
 
 describe( 'notifyUpgradeNudgeClick', () => {

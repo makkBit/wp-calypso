@@ -12,13 +12,13 @@ import { connect } from 'react-redux';
  */
 import { localize } from 'i18n-calypso';
 import { Card } from '@automattic/components';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormTextInput from 'components/forms/form-text-input';
-import Notice from 'components/notice';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import Notice from 'wp-calypso-client/components/notice';
 import QueryMailChimpSyncStatus from 'woocommerce/state/sites/settings/mailchimp/querySyncStatus';
 import {
 	syncStatus,
@@ -33,7 +33,7 @@ import {
 	submitMailChimpNewsletterSettings,
 	requestResync,
 } from 'woocommerce/state/sites/settings/mailchimp/actions.js';
-import { errorNotice, successNotice } from 'state/notices/actions';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 import SyncTab from './sync_tab.js';
 
 const Settings = localize( ( { translate, settings, oldCheckbox, onChange } ) => {

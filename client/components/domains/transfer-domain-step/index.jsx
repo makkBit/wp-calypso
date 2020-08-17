@@ -23,34 +23,41 @@ import {
 	getFixedDomainSearch,
 	getTld,
 	startInboundTransfer,
-} from 'lib/domains';
-import { getProductsList } from 'state/products-list/selectors';
-import { domainAvailability } from 'lib/domains/constants';
-import { PLAN_PERSONAL } from 'lib/plans/constants';
-import { getAvailabilityNotice } from 'lib/domains/registration/availability-messages';
-import DomainRegistrationSuggestion from 'components/domains/domain-registration-suggestion';
-import { getCurrentUser, getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import UpsellNudge from 'blocks/upsell-nudge';
-import Notice from 'components/notice';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSite } from 'state/ui/selectors';
-import FormTextInput from 'components/forms/form-text-input';
+} from 'wp-calypso-client/lib/domains';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import { domainAvailability } from 'wp-calypso-client/lib/domains/constants';
+import { PLAN_PERSONAL } from 'wp-calypso-client/lib/plans/constants';
+import { getAvailabilityNotice } from 'wp-calypso-client/lib/domains/registration/availability-messages';
+import DomainRegistrationSuggestion from 'wp-calypso-client/components/domains/domain-registration-suggestion';
+import {
+	getCurrentUser,
+	getCurrentUserCurrencyCode,
+} from 'wp-calypso-client/state/current-user/selectors';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import Notice from 'wp-calypso-client/components/notice';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import TransferDomainPrecheck from './transfer-domain-precheck';
-import { INCOMING_DOMAIN_TRANSFER } from 'lib/url/support';
-import HeaderCake from 'components/header-cake';
+import { INCOMING_DOMAIN_TRANSFER } from 'wp-calypso-client/lib/url/support';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import { Button } from '@automattic/components';
-import TransferRestrictionMessage from 'components/domains/transfer-domain-step/transfer-restriction-message';
-import { fetchSiteDomains } from 'state/sites/domains/actions';
-import { domainManagementTransferIn } from 'my-sites/domains/paths';
-import { errorNotice } from 'state/notices/actions';
-import QueryProducts from 'components/data/query-products-list';
-import QueryPlans from 'components/data/query-plans';
-import { isPlan } from 'lib/products-values';
+import TransferRestrictionMessage from 'wp-calypso-client/components/domains/transfer-domain-step/transfer-restriction-message';
+import { fetchSiteDomains } from 'wp-calypso-client/state/sites/domains/actions';
+import { domainManagementTransferIn } from 'wp-calypso-client/my-sites/domains/paths';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import QueryProducts from 'wp-calypso-client/components/data/query-products-list';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import { isPlan } from 'wp-calypso-client/lib/products-values';
 import {
 	isDomainBundledWithPlan,
 	isNextDomainFree,
 	hasToUpgradeToPayForADomain,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 
 /**
  * Style dependencies

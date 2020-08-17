@@ -12,24 +12,27 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import Spinner from 'components/spinner';
-import { getTaskList } from 'lib/checklist';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { requestSiteChecklistTaskUpdate } from 'state/checklist/actions';
-import { resetVerifyEmailState } from 'state/current-user/email-verification/actions';
-import { getCurrentUser, isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import getChecklistTaskUrls from 'state/selectors/get-checklist-task-urls';
-import getSiteChecklist from 'state/selectors/get-site-checklist';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import getMenusUrl from 'state/selectors/get-menus-url';
-import { getSiteOption, getSiteSlug } from 'state/sites/selectors';
-import { requestGuidedTour } from 'state/guided-tours/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { skipCurrentViewHomeLayout } from 'state/home/actions';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { getTaskList } from 'wp-calypso-client/lib/checklist';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { requestSiteChecklistTaskUpdate } from 'wp-calypso-client/state/checklist/actions';
+import { resetVerifyEmailState } from 'wp-calypso-client/state/current-user/email-verification/actions';
+import {
+	getCurrentUser,
+	isCurrentUserEmailVerified,
+} from 'wp-calypso-client/state/current-user/selectors';
+import getChecklistTaskUrls from 'wp-calypso-client/state/selectors/get-checklist-task-urls';
+import getSiteChecklist from 'wp-calypso-client/state/selectors/get-site-checklist';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import getMenusUrl from 'wp-calypso-client/state/selectors/get-menus-url';
+import { getSiteOption, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { requestGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { skipCurrentViewHomeLayout } from 'wp-calypso-client/state/home/actions';
 import NavItem from './nav-item';
 import CurrentTaskItem from './current-task-item';
-import { CHECKLIST_KNOWN_TASKS } from 'state/data-layer/wpcom/checklist/index.js';
+import { CHECKLIST_KNOWN_TASKS } from 'wp-calypso-client/state/data-layer/wpcom/checklist/index.js';
 import { getTask } from './get-task';
 
 /**

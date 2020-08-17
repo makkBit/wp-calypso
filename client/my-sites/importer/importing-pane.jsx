@@ -11,17 +11,17 @@ import { defer, get, has, omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import { mapAuthor, startImporting } from 'lib/importer/actions';
-import { appStates } from 'state/imports/constants';
+import { mapAuthor, startImporting } from 'wp-calypso-client/lib/importer/actions';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
 import { ProgressBar } from '@automattic/components';
 import AuthorMappingPane from './author-mapping-pane';
-import Spinner from 'components/spinner';
-import { loadTrackingTool } from 'state/analytics/actions';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { loadTrackingTool } from 'wp-calypso-client/state/analytics/actions';
 
-import ImporterCloseButton from 'my-sites/importer/importer-action-buttons/close-button';
-import ImporterDoneButton from 'my-sites/importer/importer-action-buttons/done-button';
-import BusyImportingButton from 'my-sites/importer/importer-action-buttons/busy-importing-button';
-import ImporterActionButtonContainer from 'my-sites/importer/importer-action-buttons/container';
+import ImporterCloseButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/close-button';
+import ImporterDoneButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/done-button';
+import BusyImportingButton from 'wp-calypso-client/my-sites/importer/importer-action-buttons/busy-importing-button';
+import ImporterActionButtonContainer from 'wp-calypso-client/my-sites/importer/importer-action-buttons/container';
 
 /**
  * Style dependencies

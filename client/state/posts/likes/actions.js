@@ -8,11 +8,11 @@ import {
 	POST_LIKES_ADD_LIKER,
 	POST_LIKES_REMOVE_LIKER,
 	POST_UNLIKE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/posts/likes';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/posts/likes';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an action thunk which, when invoked, triggers a network request to

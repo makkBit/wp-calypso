@@ -11,20 +11,24 @@ import { get, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import MapDomainStep from 'components/domains/map-domain-step';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
-import { domainRegistration, domainMapping } from 'lib/cart-values/cart-items';
-import { addItem } from 'lib/cart/actions';
-import wp from 'lib/wp';
-import { domainManagementList } from 'my-sites/domains/paths';
-import Notice from 'components/notice';
-import { currentUserHasFlag } from 'state/current-user/selectors';
-import isSiteUpgradeable from 'state/selectors/is-site-upgradeable';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryProductsList from 'components/data/query-products-list';
-import { getProductsList } from 'state/products-list/selectors';
-import TrademarkClaimsNotice from 'components/domains/trademark-claims-notice';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import MapDomainStep from 'wp-calypso-client/components/domains/map-domain-step';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
+import { domainRegistration, domainMapping } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import wp from 'wp-calypso-client/lib/wp';
+import { domainManagementList } from 'wp-calypso-client/my-sites/domains/paths';
+import Notice from 'wp-calypso-client/components/notice';
+import { currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import isSiteUpgradeable from 'wp-calypso-client/state/selectors/is-site-upgradeable';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import TrademarkClaimsNotice from 'wp-calypso-client/components/domains/trademark-claims-notice';
 
 const wpcom = wp.undocumented();
 

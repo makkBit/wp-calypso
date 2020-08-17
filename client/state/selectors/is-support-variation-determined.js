@@ -1,18 +1,18 @@
 /**
  * Internal Dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 // State Selectors
 import {
 	isTicketSupportConfigurationReady,
 	getTicketSupportRequestError,
-} from 'state/help/ticket/selectors';
-import isHappychatUserEligible from 'state/happychat/selectors/is-happychat-user-eligible';
-import isDirectlyFailed from 'state/selectors/is-directly-failed';
-import isDirectlyReady from 'state/selectors/is-directly-ready';
-import isDirectlyUninitialized from 'state/selectors/is-directly-uninitialized';
-import getHappychatConnectionStatus from 'state/happychat/selectors/get-happychat-connection-status';
+} from 'wp-calypso-client/state/help/ticket/selectors';
+import isHappychatUserEligible from 'wp-calypso-client/state/happychat/selectors/is-happychat-user-eligible';
+import isDirectlyFailed from 'wp-calypso-client/state/selectors/is-directly-failed';
+import isDirectlyReady from 'wp-calypso-client/state/selectors/is-directly-ready';
+import isDirectlyUninitialized from 'wp-calypso-client/state/selectors/is-directly-uninitialized';
+import getHappychatConnectionStatus from 'wp-calypso-client/state/happychat/selectors/get-happychat-connection-status';
 
 /**
  * @param {object} state Global state tree

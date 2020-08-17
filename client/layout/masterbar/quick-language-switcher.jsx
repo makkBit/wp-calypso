@@ -7,16 +7,16 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import MasterbarItem from './item';
-import LanguagePickerModal from 'components/language-picker/modal';
-import { languages } from 'languages';
-import { setLocale } from 'state/ui/language/actions';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
+import LanguagePickerModal from 'wp-calypso-client/components/language-picker/modal';
+import { languages } from 'wp-calypso-client/languages';
+import { setLocale } from 'wp-calypso-client/state/ui/language/actions';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
 import {
 	getLanguageEmpathyModeActive,
 	toggleLanguageEmpathyMode,
-} from 'lib/i18n-utils/empathy-mode';
+} from 'wp-calypso-client/lib/i18n-utils/empathy-mode';
 
 function QuickLanguageSwitcher( props ) {
 	const [ isShowingModal, toggleLanguagesModal ] = useReducer( ( toggled ) => ! toggled, false );

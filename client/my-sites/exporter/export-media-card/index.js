@@ -9,14 +9,14 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 import { Button } from '@automattic/components';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import QueryMediaStorage from 'components/data/query-media-storage';
-import QueryMediaExport from 'components/data/query-media-export';
-import getMediaExportUrl from 'state/selectors/get-media-export-url';
-import getMediaStorageUsed from 'state/selectors/get-media-storage-used';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import QueryMediaStorage from 'wp-calypso-client/components/data/query-media-storage';
+import QueryMediaExport from 'wp-calypso-client/components/data/query-media-export';
+import getMediaExportUrl from 'wp-calypso-client/state/selectors/get-media-export-url';
+import getMediaStorageUsed from 'wp-calypso-client/state/selectors/get-media-storage-used';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class ExportMediaCard extends Component {
 	static propTypes = {

@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getActiveTheme } from 'state/themes/selectors/get-active-theme';
+import { getActiveTheme } from 'wp-calypso-client/state/themes/selectors/get-active-theme';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns whether the theme is currently active on the given site.

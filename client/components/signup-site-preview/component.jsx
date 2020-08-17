@@ -10,10 +10,10 @@ import { localize, translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SignupSitePreviewIframe from 'components/signup-site-preview/iframe';
-import SignupSitePreviewScreenshot from 'components/signup-site-preview/screenshot';
-import Spinner from 'components/spinner';
-import { getSiteVerticalPreviewScreenshot } from 'state/signup/steps/site-vertical/selectors';
+import SignupSitePreviewIframe from 'wp-calypso-client/components/signup-site-preview/iframe';
+import SignupSitePreviewScreenshot from 'wp-calypso-client/components/signup-site-preview/screenshot';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { getSiteVerticalPreviewScreenshot } from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
 
 /**
  * Style dependencies

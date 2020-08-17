@@ -13,10 +13,10 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import Notice from 'components/notice';
-import { editComment } from 'state/comments/actions';
-import { recordAction, recordGaEvent } from 'reader/stats';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Notice from 'wp-calypso-client/components/notice';
+import { editComment } from 'wp-calypso-client/state/comments/actions';
+import { recordAction, recordGaEvent } from 'wp-calypso-client/reader/stats';
 import PostCommentFormTextarea from './form-textarea';
 
 /**

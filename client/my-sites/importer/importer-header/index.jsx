@@ -11,9 +11,9 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import { appStates } from 'state/imports/constants';
-import { isUploading } from 'state/imports/uploads/selectors';
-import ImporterLogo from 'my-sites/importer/importer-logo';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
+import { isUploading } from 'wp-calypso-client/state/imports/uploads/selectors';
+import ImporterLogo from 'wp-calypso-client/my-sites/importer/importer-logo';
 
 /**
  * Style dependencies

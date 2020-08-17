@@ -6,12 +6,12 @@ const { app } = require( 'electron' ); // eslint-disable-line import/no-extraneo
 /**
  * Internal dependencies
  */
-const platform = require( 'desktop/lib/platform' );
-const Config = require( 'desktop/lib/config' );
-const settings = require( 'desktop/lib/settings' );
+const platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const Config = require( 'wp-calypso-client/desktop/lib/config' );
+const settings = require( 'wp-calypso-client/desktop/lib/settings' );
 const AutoUpdater = require( './auto-updater' );
 const ManualUpdater = require( './manual-updater' );
-const log = require( 'desktop/lib/logger' )( 'desktop:updater' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:updater' );
 
 let updater = false;
 

@@ -10,11 +10,11 @@ import qs from 'qs';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import { withLocalizedMoment } from 'components/localized-moment';
-import StatsPeriodNavigation from 'my-sites/stats/stats-period-navigation';
-import Intervals from 'blocks/stats-navigation/intervals';
-import DatePicker from 'my-sites/stats/stats-date-picker';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import StatsPeriodNavigation from 'wp-calypso-client/my-sites/stats/stats-period-navigation';
+import Intervals from 'wp-calypso-client/blocks/stats-navigation/intervals';
+import DatePicker from 'wp-calypso-client/my-sites/stats/stats-date-picker';
 import { getWidgetPath } from 'woocommerce/app/store-stats/utils';
 
 const goBack = ( unit, slug, queryParams ) => {

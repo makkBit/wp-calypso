@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { parse } from 'lib/shortcode';
+import { parse } from 'wp-calypso-client/lib/shortcode';
 import { deserialize as _recurse } from '../';
 import createElementFromString from '../create-element-from-string';
 

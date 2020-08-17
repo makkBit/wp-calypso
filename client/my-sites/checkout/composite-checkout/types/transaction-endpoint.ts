@@ -6,13 +6,13 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { getNonProductWPCOMCartItemTypes } from 'my-sites/checkout/composite-checkout/wpcom';
+import { getNonProductWPCOMCartItemTypes } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom';
 import type {
 	WPCOMCartItem,
 	DomainContactDetails,
-} from 'my-sites/checkout/composite-checkout/wpcom/types';
-import type { CartItemExtra } from 'lib/cart-values/types';
-import { isGSuiteProductSlug } from 'lib/gsuite';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/types';
+import type { CartItemExtra } from 'wp-calypso-client/lib/cart-values/types';
+import { isGSuiteProductSlug } from 'wp-calypso-client/lib/gsuite';
 
 const debug = debugFactory( 'calypso:composite-checkout:transaction-endpoint' );
 

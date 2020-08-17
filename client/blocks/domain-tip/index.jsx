@@ -9,16 +9,16 @@ import React, { Fragment } from 'react';
 /**
  * Internal dependencies
  */
-import { getSite, getSiteSlug } from 'state/sites/selectors';
-import { hasDomainCredit } from 'state/sites/plans/selectors';
-import { getDomainsSuggestions } from 'state/domains/suggestions/selectors';
-import { currentUserHasFlag } from 'state/current-user/selectors';
-import QueryDomainsSuggestions from 'components/data/query-domains-suggestions';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_CUSTOM_DOMAIN } from 'lib/plans/constants';
-import { isFreePlan } from 'lib/products-values';
-import { getSuggestionsVendor } from 'lib/domains/suggestions';
+import { getSite, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { hasDomainCredit } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getDomainsSuggestions } from 'wp-calypso-client/state/domains/suggestions/selectors';
+import { currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import QueryDomainsSuggestions from 'wp-calypso-client/components/data/query-domains-suggestions';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { FEATURE_CUSTOM_DOMAIN } from 'wp-calypso-client/lib/plans/constants';
+import { isFreePlan } from 'wp-calypso-client/lib/products-values';
+import { getSuggestionsVendor } from 'wp-calypso-client/lib/domains/suggestions';
 
 function getQueryObject( site, siteSlug, vendor ) {
 	if ( ! site || ! siteSlug ) {

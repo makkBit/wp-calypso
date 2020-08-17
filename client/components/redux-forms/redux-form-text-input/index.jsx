@@ -8,9 +8,9 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const TextInputRenderer = ( { input, meta, ...props } ) => (
 	<FormTextInput { ...input } { ...props } />

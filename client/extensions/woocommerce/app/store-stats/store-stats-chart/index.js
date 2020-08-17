@@ -11,9 +11,9 @@ import { findIndex, find } from 'lodash';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import ElementChart from 'components/chart';
-import Legend from 'components/chart/legend';
-import { withLocalizedMoment } from 'components/localized-moment';
+import ElementChart from 'wp-calypso-client/components/chart';
+import Legend from 'wp-calypso-client/components/chart/legend';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import { recordTrack } from 'woocommerce/lib/analytics';
 import { getWidgetPath, formatValue } from 'woocommerce/app/store-stats/utils';
 import { UNITS } from 'woocommerce/app/store-stats/constants';

@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { isRequestingReaderTeams } from 'state/reader/teams/selectors';
+import { isRequestingReaderTeams } from 'wp-calypso-client/state/reader/teams/selectors';
 
 describe( 'isRequestingReaderTeams()', () => {
 	test( 'should return false if not requesting teams', () => {

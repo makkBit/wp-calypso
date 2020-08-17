@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { keyedReducer, withoutPersistence } from 'state/utils';
+import { keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	WOOCOMMERCE_SERVICES_SHIPPING_METHOD_SCHEMA_REQUEST,
 	WOOCOMMERCE_SERVICES_SHIPPING_METHOD_SCHEMA_REQUEST_SUCCESS,

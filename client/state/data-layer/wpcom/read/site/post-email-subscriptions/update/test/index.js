@@ -11,9 +11,9 @@ import {
 	receiveUpdatePostEmailSubscription,
 	receiveUpdatePostEmailSubscriptionError,
 } from '../';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { updateNewPostEmailSubscription } from 'state/reader/follows/actions';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { updateNewPostEmailSubscription } from 'wp-calypso-client/state/reader/follows/actions';
 
 describe( 'comment-email-subscriptions', () => {
 	describe( 'requestUpdatePostEmailSubscription', () => {

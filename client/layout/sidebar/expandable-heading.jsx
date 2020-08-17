@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { noop } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -9,10 +9,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Count from 'components/count';
-import MaterialIcon from 'components/material-icon';
-import SidebarHeading from 'layout/sidebar/heading';
-import TranslatableString from 'components/translatable/proptype';
+import Count from 'wp-calypso-client/components/count';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import SidebarHeading from 'wp-calypso-client/layout/sidebar/heading';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 const ExpandableSidebarHeading = ( {
 	title,

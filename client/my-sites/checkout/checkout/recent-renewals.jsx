@@ -9,10 +9,10 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { useLocalizedMoment } from 'components/localized-moment';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSitePurchases } from 'state/purchases/selectors';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
 
 function RecentRenewalListItem( { domain, productName, expiryString, translate } ) {
 	return (

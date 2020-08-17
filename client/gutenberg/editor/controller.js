@@ -8,30 +8,30 @@ import { get, has, isInteger, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { shouldLoadGutenberg } from 'state/selectors/should-load-gutenberg';
-import { shouldRedirectGutenberg } from 'state/selectors/should-redirect-gutenberg';
-import { EDITOR_START, POST_EDIT } from 'state/action-types';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import { shouldLoadGutenberg } from 'wp-calypso-client/state/selectors/should-load-gutenberg';
+import { shouldRedirectGutenberg } from 'wp-calypso-client/state/selectors/should-redirect-gutenberg';
+import { EDITOR_START, POST_EDIT } from 'wp-calypso-client/state/action-types';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import CalypsoifyIframe from './calypsoify-iframe';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import { addQueryArgs } from 'lib/route';
-import { getSelectedEditor } from 'state/selectors/get-selected-editor';
-import { requestSelectedEditor } from 'state/selected-editor/actions';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import { getSelectedEditor } from 'wp-calypso-client/state/selectors/get-selected-editor';
+import { requestSelectedEditor } from 'wp-calypso-client/state/selected-editor/actions';
 import {
 	getSiteUrl,
 	getSiteOption,
 	getSite,
 	isJetpackSite,
 	isSSOEnabled,
-} from 'state/sites/selectors';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
-import { isEnabled } from 'config';
+} from 'wp-calypso-client/state/sites/selectors';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
+import { isEnabled } from 'wp-calypso-client/config';
 import { Placeholder } from './placeholder';
-import { makeLayout, render } from 'controller';
-import isSiteUsingCoreSiteEditor from 'state/selectors/is-site-using-core-site-editor';
-import getSiteEditorUrl from 'state/selectors/get-site-editor-url';
-import { REASON_BLOCK_EDITOR_JETPACK_REQUIRES_SSO } from 'state/desktop/window-events';
-import { notifyDesktopCannotOpenEditor } from 'state/desktop/actions';
+import { makeLayout, render } from 'wp-calypso-client/controller';
+import isSiteUsingCoreSiteEditor from 'wp-calypso-client/state/selectors/is-site-using-core-site-editor';
+import getSiteEditorUrl from 'wp-calypso-client/state/selectors/get-site-editor-url';
+import { REASON_BLOCK_EDITOR_JETPACK_REQUIRES_SSO } from 'wp-calypso-client/state/desktop/window-events';
+import { notifyDesktopCannotOpenEditor } from 'wp-calypso-client/state/desktop/actions';
 
 function determinePostType( context ) {
 	if ( context.path.startsWith( '/block-editor/post/' ) ) {

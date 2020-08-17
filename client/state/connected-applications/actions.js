@@ -6,11 +6,11 @@ import {
 	CONNECTED_APPLICATION_DELETE_SUCCESS,
 	CONNECTED_APPLICATIONS_RECEIVE,
 	CONNECTED_APPLICATIONS_REQUEST,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/me/connected-applications';
-import 'state/data-layer/wpcom/me/connected-applications/delete';
-import 'state/connected-applications/init';
+import 'wp-calypso-client/state/data-layer/wpcom/me/connected-applications';
+import 'wp-calypso-client/state/data-layer/wpcom/me/connected-applications/delete';
+import 'wp-calypso-client/state/connected-applications/init';
 
 /**
  * Returns an action object to signal the request of the user's connected applications.

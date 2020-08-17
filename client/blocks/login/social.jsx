@@ -5,27 +5,31 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AppleLoginButton from 'components/social-buttons/apple';
-import GoogleLoginButton from 'components/social-buttons/google';
+import AppleLoginButton from 'wp-calypso-client/components/social-buttons/apple';
+import GoogleLoginButton from 'wp-calypso-client/components/social-buttons/google';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
-import { loginSocialUser, createSocialUser, createSocialUserFailed } from 'state/login/actions';
+import {
+	loginSocialUser,
+	createSocialUser,
+	createSocialUserFailed,
+} from 'wp-calypso-client/state/login/actions';
 import {
 	getCreatedSocialAccountUsername,
 	getCreatedSocialAccountBearerToken,
 	getRedirectToOriginal,
 	isSocialAccountCreating,
-} from 'state/login/selectors';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
-import WpcomLoginForm from 'signup/wpcom-login-form';
-import { InfoNotice } from 'blocks/global-notice';
-import { localizeUrl } from 'lib/i18n-utils';
-import { login } from 'lib/paths';
+} from 'wp-calypso-client/state/login/selectors';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import WpcomLoginForm from 'wp-calypso-client/signup/wpcom-login-form';
+import { InfoNotice } from 'wp-calypso-client/blocks/global-notice';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { login } from 'wp-calypso-client/lib/paths';
 
 /**
  * Style dependencies

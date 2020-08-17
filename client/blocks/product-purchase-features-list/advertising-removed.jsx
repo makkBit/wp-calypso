@@ -8,12 +8,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 
 /**
  * Image dependencies
  */
-import adsRemovedImage from 'assets/images/illustrations/removed-ads.svg';
+import adsRemovedImage from 'wp-calypso-client/assets/images/illustrations/removed-ads.svg';
 
 export default localize( ( { isBusinessPlan, selectedSite, translate } ) => {
 	return (

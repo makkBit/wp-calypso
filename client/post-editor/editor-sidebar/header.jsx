@@ -5,15 +5,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { flow } from 'lodash';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import EditorPostType from 'post-editor/editor-post-type';
-import { closeEditorSidebar } from 'state/editor/sidebar/actions';
+import EditorPostType from 'wp-calypso-client/post-editor/editor-post-type';
+import { closeEditorSidebar } from 'wp-calypso-client/state/editor/sidebar/actions';
 
 const EditorSidebarHeader = ( { closeSidebar, translate } ) => (
 	<div className="editor-sidebar__header">

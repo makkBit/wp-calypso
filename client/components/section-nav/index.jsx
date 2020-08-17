@@ -6,15 +6,15 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { includes } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import CommentNavigationTab from 'my-sites/comments/comment-navigation/comment-navigation-tab';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import Search from 'components/search';
+import CommentNavigationTab from 'wp-calypso-client/my-sites/comments/comment-navigation/comment-navigation-tab';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import Search from 'wp-calypso-client/components/search';
 
 /**
  * Style dependencies

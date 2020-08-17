@@ -5,21 +5,21 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import CommentLink from 'my-sites/comments/comment/comment-link';
-import CommentPostLink from 'my-sites/comments/comment/comment-post-link';
-import Emojify from 'components/emojify';
-import QueryComment from 'components/data/query-comment';
-import { stripHTML, decodeEntities } from 'lib/formatting';
-import { getParentComment, getSiteComment } from 'state/comments/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import CommentLink from 'wp-calypso-client/my-sites/comments/comment/comment-link';
+import CommentPostLink from 'wp-calypso-client/my-sites/comments/comment/comment-post-link';
+import Emojify from 'wp-calypso-client/components/emojify';
+import QueryComment from 'wp-calypso-client/components/data/query-comment';
+import { stripHTML, decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { getParentComment, getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 export class CommentContent extends Component {
 	static propTypes = {

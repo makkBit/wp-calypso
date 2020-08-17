@@ -8,8 +8,8 @@ import page from 'page';
  * Internal Dependencies
  */
 import CustomerHome from './main';
-import { getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import { canCurrentUserUseCustomerHome } from 'state/sites/selectors';
+import { getSelectedSiteSlug, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { canCurrentUserUseCustomerHome } from 'wp-calypso-client/state/sites/selectors';
 
 export default async function ( context, next ) {
 	const state = await context.store.getState();

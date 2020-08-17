@@ -6,7 +6,7 @@ const { app } = require( 'electron' ); // eslint-disable-line import/no-extraneo
 /**
  * Internal dependencies
  */
-const AppQuit = require( 'desktop/lib/app-quit' );
+const AppQuit = require( 'wp-calypso-client/desktop/lib/app-quit' );
 
 module.exports = function ( restoreApp ) {
 	return [

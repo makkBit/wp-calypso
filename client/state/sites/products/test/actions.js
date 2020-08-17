@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import { fetchSiteProductsCompleted } from '../actions';
-import { SITE_PRODUCTS_FETCH_COMPLETED } from 'state/action-types';
+import { SITE_PRODUCTS_FETCH_COMPLETED } from 'wp-calypso-client/state/action-types';
 
 describe( 'actions', () => {
 	describe( '#fetchSiteProductsCompleted()', () => {

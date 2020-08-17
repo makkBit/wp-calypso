@@ -5,9 +5,9 @@ import {
 	HELP_CONTACT_FORM_SITE_SELECT,
 	HELP_LINKS_RECEIVE,
 	SUPPORT_HISTORY_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import courses from './courses/reducer';
-import { combineReducers, withStorageKey } from 'state/utils';
+import { combineReducers, withStorageKey } from 'wp-calypso-client/state/utils';
 import directly from './directly/reducer';
 import ticket from './ticket/reducer';
 

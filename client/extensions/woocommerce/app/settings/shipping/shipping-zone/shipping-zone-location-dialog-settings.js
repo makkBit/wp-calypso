@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import FilteredList from 'woocommerce/components/filtered-list';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormRadio from 'components/forms/form-radio';
-import FormTextInput from 'components/forms/form-text-input';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 import { bindActionCreatorsWithSiteId } from 'woocommerce/lib/redux-utils';
 import {
 	getShippingZoneLocationsWithEdits,

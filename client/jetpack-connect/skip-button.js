@@ -10,8 +10,8 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import { recordTracksEvent } from 'state/analytics/actions';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class SkipButton extends PureComponent {
 	static propTypes = {

@@ -6,8 +6,8 @@
  * Internal dependencies
  */
 import { transactionPaymentSetActions, paymentActionLocations } from './fixtures/actions';
-import { recordUnrecognizedPaymentMethod } from 'lib/analytics/cart';
-import { setTaxLocation } from 'lib/cart-values';
+import { recordUnrecognizedPaymentMethod } from 'wp-calypso-client/lib/analytics/cart';
+import { setTaxLocation } from 'wp-calypso-client/lib/cart-values';
 
 jest.mock( 'lib/analytics/cart', () => ( {
 	recordEvents: () => ( {} ),
@@ -48,8 +48,8 @@ describe( 'Cart Store', () => {
 
 	beforeEach( () => {
 		jest.isolateModules( () => {
-			CartStore = require( 'lib/cart/store' );
-			Dispatcher = require( 'dispatcher' );
+			CartStore = require( 'wp-calypso-client/lib/cart/store' );
+			Dispatcher = require( 'wp-calypso-client/dispatcher' );
 		} );
 
 		CartStore.setSelectedSiteId();

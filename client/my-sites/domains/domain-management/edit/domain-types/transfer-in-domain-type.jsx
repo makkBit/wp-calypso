@@ -10,19 +10,19 @@ import page from 'page';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import DomainStatus from '../card/domain-status';
-import QuerySitePurchases from 'components/data/query-site-purchases';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
 import {
 	getByPurchaseId,
 	isFetchingSitePurchases,
 	hasLoadedSitePurchasesFromServer,
-} from 'state/purchases/selectors';
-import { transferStatus } from 'lib/domains/constants';
-import { domainManagementTransferInPrecheck } from 'my-sites/domains/paths';
-import { INCOMING_DOMAIN_TRANSFER_STATUSES } from 'lib/url/support';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { transferStatus } from 'wp-calypso-client/lib/domains/constants';
+import { domainManagementTransferInPrecheck } from 'wp-calypso-client/my-sites/domains/paths';
+import { INCOMING_DOMAIN_TRANSFER_STATUSES } from 'wp-calypso-client/lib/url/support';
 import DomainManagementNavigation from '../navigation';
-import { resolveDomainStatus } from 'lib/domains';
+import { resolveDomainStatus } from 'wp-calypso-client/lib/domains';
 
 class TransferInDomainType extends React.Component {
 	startTransfer = () => {

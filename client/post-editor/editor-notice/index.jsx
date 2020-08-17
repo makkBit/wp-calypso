@@ -11,16 +11,16 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import GlobalNoticesContainer from 'components/global-notices/container';
-import Notice from 'components/notice';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import { getPostType } from 'state/post-types/selectors';
-import QueryPostTypes from 'components/data/query-post-types';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import GlobalNoticesContainer from 'wp-calypso-client/components/global-notices/container';
+import Notice from 'wp-calypso-client/components/notice';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { getPostType } from 'wp-calypso-client/state/post-types/selectors';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 export class EditorNotice extends Component {
 	static propTypes = {

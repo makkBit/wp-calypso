@@ -23,13 +23,13 @@ import {
 	areProductsLoaded,
 	areProductsLoading,
 } from 'woocommerce/state/sites/products/selectors';
-import Main from 'components/main';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
+import Main from 'wp-calypso-client/components/main';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
 import ProductsList from './products-list';
 import ProductsListSearchResults from './products-list-search-results';
-import SectionNav from 'components/section-nav';
-import Search from 'components/search';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import Search from 'wp-calypso-client/components/search';
 
 class Products extends Component {
 	static propTypes = {

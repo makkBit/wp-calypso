@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import isRequestingEmailForwards from 'state/selectors/is-requesting-email-forwards';
-import { getEmailForwards } from 'state/email-forwarding/actions';
+import isRequestingEmailForwards from 'wp-calypso-client/state/selectors/is-requesting-email-forwards';
+import { getEmailForwards } from 'wp-calypso-client/state/email-forwarding/actions';
 
 class QueryEmailForwards extends PureComponent {
 	static propTypes = {

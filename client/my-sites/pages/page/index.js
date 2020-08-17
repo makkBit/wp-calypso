@@ -13,42 +13,47 @@ import { saveAs } from 'browser-filesaver';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import PopoverMenuItemClipboard from 'components/popover/menu-item-clipboard';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import SiteIcon from 'blocks/site-icon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import PopoverMenuItemClipboard from 'wp-calypso-client/components/popover/menu-item-clipboard';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
 import { statsLinkForPage } from '../helpers';
-import * as utils from 'state/posts/utils';
+import * as utils from 'wp-calypso-client/state/posts/utils';
 import classNames from 'classnames';
-import MenuSeparator from 'components/popover/menu-separator';
+import MenuSeparator from 'wp-calypso-client/components/popover/menu-separator';
 import PageCardInfo from '../page-card-info';
-import InfoPopover from 'components/info-popover';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import { preload } from 'sections-helper';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import { preload } from 'wp-calypso-client/sections-helper';
 import {
 	getSite,
 	hasStaticFrontPage,
 	isJetpackSite,
 	isSitePreviewable,
-} from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isFrontPage, isPostsPage } from 'state/pages/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { setPreviewUrl } from 'state/ui/preview/actions';
-import { setLayoutFocus } from 'state/ui/layout-focus/actions';
-import { savePost, deletePost, trashPost, restorePost } from 'state/posts/actions';
-import { infoNotice, withoutNotice } from 'state/notices/actions';
-import { shouldRedirectGutenberg } from 'state/selectors/should-redirect-gutenberg';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import { getEditorDuplicatePostPath } from 'state/editor/selectors';
-import { updateSiteFrontPage } from 'state/sites/actions';
-import isSiteUsingFullSiteEditing from 'state/selectors/is-site-using-full-site-editing';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import canCurrentUser from 'state/selectors/can-current-user';
-import config from 'config';
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isFrontPage, isPostsPage } from 'wp-calypso-client/state/pages/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setPreviewUrl } from 'wp-calypso-client/state/ui/preview/actions';
+import { setLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import {
+	savePost,
+	deletePost,
+	trashPost,
+	restorePost,
+} from 'wp-calypso-client/state/posts/actions';
+import { infoNotice, withoutNotice } from 'wp-calypso-client/state/notices/actions';
+import { shouldRedirectGutenberg } from 'wp-calypso-client/state/selectors/should-redirect-gutenberg';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import { getEditorDuplicatePostPath } from 'wp-calypso-client/state/editor/selectors';
+import { updateSiteFrontPage } from 'wp-calypso-client/state/sites/actions';
+import isSiteUsingFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-using-full-site-editing';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import config from 'wp-calypso-client/config';
 
 const recordEvent = partial( recordGoogleEvent, 'Pages' );
 

@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import getTimezonesLabels from 'state/selectors/get-timezones-labels';
+import getTimezonesLabels from 'wp-calypso-client/state/selectors/get-timezones-labels';
 
-import 'state/timezones/init';
+import 'wp-calypso-client/state/timezones/init';
 
 /**
  * Return timezone `label` according to the given timezone key (value)

@@ -9,26 +9,26 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import ReauthRequired from 'me/reauth-required';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import MeSidebarNavigation from 'me/sidebar-navigation';
+import Main from 'wp-calypso-client/components/main';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
 import Navigation from '../navigation';
 import { Card } from '@automattic/components';
-import FormSectionHeading from 'components/forms/form-section-heading';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
 import ActionButtons from '../settings-form/actions';
 import {
 	fetchSettings,
 	toggleWPcomEmailSetting,
 	saveSettings,
-} from 'state/notification-settings/actions';
+} from 'wp-calypso-client/state/notification-settings/actions';
 import {
 	getNotificationSettings,
 	hasUnsavedNotificationSettingsChanges,
-} from 'state/notification-settings/selectors';
+} from 'wp-calypso-client/state/notification-settings/selectors';
 import EmailCategory from './email-category';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import hasJetpackSites from 'state/selectors/has-jetpack-sites';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import hasJetpackSites from 'wp-calypso-client/state/selectors/has-jetpack-sites';
 
 /**
  * Style dependencies

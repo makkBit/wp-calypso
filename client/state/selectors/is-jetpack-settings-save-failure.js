@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getJetpackSettingsSaveRequestStatus from 'state/selectors/get-jetpack-settings-save-request-status';
+import getJetpackSettingsSaveRequestStatus from 'wp-calypso-client/state/selectors/get-jetpack-settings-save-request-status';
 
 /**
  * Returns true if the save Jetpack site settings requests is successful

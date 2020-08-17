@@ -6,16 +6,16 @@ import { random, map, includes, get, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import warn from 'lib/warn';
-import { READER_STREAMS_PAGE_REQUEST } from 'state/reader/action-types';
-import { receivePage, receiveUpdates } from 'state/reader/streams/actions';
-import { receivePosts } from 'state/reader/posts/actions';
-import { keyForPost } from 'reader/post-key';
-import { recordTracksEvent } from 'state/analytics/actions';
-import XPostHelper from 'reader/xpost-helper';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import warn from 'wp-calypso-client/lib/warn';
+import { READER_STREAMS_PAGE_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { receivePage, receiveUpdates } from 'wp-calypso-client/state/reader/streams/actions';
+import { receivePosts } from 'wp-calypso-client/state/reader/posts/actions';
+import { keyForPost } from 'wp-calypso-client/reader/post-key';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import XPostHelper from 'wp-calypso-client/reader/xpost-helper';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Pull the suffix off of a stream key

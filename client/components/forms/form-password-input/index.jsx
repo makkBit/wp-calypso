@@ -3,14 +3,14 @@
  */
 import { isMobile } from '@automattic/viewport';
 import React from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classNames from 'classnames';
 import { omit } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 /**
  * Style dependencies

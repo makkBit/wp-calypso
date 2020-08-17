@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { localize } from 'i18n-calypso';
-import { getSelectedSite } from 'state/ui/selectors';
-import EmptyContent from 'components/empty-content';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 
 class JetpackImporter extends PureComponent {
 	render() {

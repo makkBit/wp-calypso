@@ -6,10 +6,10 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { navigation, siteSelection } from 'my-sites/controller';
+import { navigation, siteSelection } from 'wp-calypso-client/my-sites/controller';
 import { pages } from './controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { getSiteFragment } from 'lib/route';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 
 export default function () {
 	page(

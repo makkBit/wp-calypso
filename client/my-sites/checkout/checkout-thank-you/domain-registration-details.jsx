@@ -18,13 +18,16 @@ import {
 	isPlan,
 	isFreePlan,
 	isDomainRegistration,
-} from 'lib/products-values';
-import PurchaseDetail from 'components/purchase-detail';
-import { EMAIL_VALIDATION_AND_VERIFICATION, DOMAIN_WAITING } from 'lib/url/support';
-import { currentUserHasFlag, getCurrentUser } from 'state/current-user/selectors';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/lib/products-values';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import {
+	EMAIL_VALIDATION_AND_VERIFICATION,
+	DOMAIN_WAITING,
+} from 'wp-calypso-client/lib/url/support';
+import { currentUserHasFlag, getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const DomainRegistrationDetails = ( {
 	selectedSite,

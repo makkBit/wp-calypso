@@ -3,7 +3,7 @@
  */
 import React, { PureComponent } from 'react';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { snakeCase, includes } from 'lodash';
 
 /**
@@ -11,20 +11,20 @@ import { snakeCase, includes } from 'lodash';
  */
 import { localize } from 'i18n-calypso';
 import { Card } from '@automattic/components';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
-import Notice from 'components/notice';
-import SectionNav from 'components/section-nav';
-import SectionHeader from 'components/section-header';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { paymentMethodName, isPaymentMethodEnabled } from 'lib/cart-values';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import Notice from 'wp-calypso-client/components/notice';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { paymentMethodName, isPaymentMethodEnabled } from 'wp-calypso-client/lib/cart-values';
 import {
 	detectWebPaymentMethod,
 	getWebPaymentMethodName,
 	WEB_PAYMENT_BASIC_CARD_METHOD,
 	WEB_PAYMENT_APPLE_PAY_METHOD,
-} from 'lib/web-payment';
+} from 'wp-calypso-client/lib/web-payment';
 import IncompatibleProductNotice from './incompatible-product-notice';
 
 export class PaymentBox extends PureComponent {

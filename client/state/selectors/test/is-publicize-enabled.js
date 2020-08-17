@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import isPublicizeEnabled from 'state/selectors/is-publicize-enabled';
+import isPublicizeEnabled from 'wp-calypso-client/state/selectors/is-publicize-enabled';
 
 describe( 'isPublicizeEnabled()', () => {
 	const siteId = 2916284;

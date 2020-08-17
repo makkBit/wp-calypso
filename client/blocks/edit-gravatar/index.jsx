@@ -7,30 +7,34 @@ import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import path from 'path';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { ALLOWED_FILE_EXTENSIONS } from './constants';
-import { AspectRatios } from 'state/editor/image-editor/constants';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
 import { Dialog } from '@automattic/components';
-import FilePicker from 'components/file-picker';
-import { getCurrentUser } from 'state/current-user/selectors';
-import Gravatar from 'components/gravatar';
-import { isCurrentUserUploadingGravatar } from 'state/current-user/gravatar-status/selectors';
-import { resetAllImageEditorState } from 'state/editor/image-editor/actions';
-import Spinner from 'components/spinner';
+import FilePicker from 'wp-calypso-client/components/file-picker';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { isCurrentUserUploadingGravatar } from 'wp-calypso-client/state/current-user/gravatar-status/selectors';
+import { resetAllImageEditorState } from 'wp-calypso-client/state/editor/image-editor/actions';
+import Spinner from 'wp-calypso-client/components/spinner';
 import {
 	receiveGravatarImageFailed,
 	uploadGravatar,
-} from 'state/current-user/gravatar-status/actions';
-import ImageEditor from 'blocks/image-editor';
-import InfoPopover from 'components/info-popover';
-import ExternalLink from 'components/external-link';
-import VerifyEmailDialog from 'components/email-verification/email-verification-dialog';
-import DropZone from 'components/drop-zone';
-import { recordTracksEvent, recordGoogleEvent, composeAnalytics } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/current-user/gravatar-status/actions';
+import ImageEditor from 'wp-calypso-client/blocks/image-editor';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import VerifyEmailDialog from 'wp-calypso-client/components/email-verification/email-verification-dialog';
+import DropZone from 'wp-calypso-client/components/drop-zone';
+import {
+	recordTracksEvent,
+	recordGoogleEvent,
+	composeAnalytics,
+} from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

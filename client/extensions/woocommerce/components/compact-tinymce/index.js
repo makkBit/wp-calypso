@@ -14,12 +14,12 @@ import 'tinymce/plugins/lists/plugin.js';
 /**
  * Internal dependencies
  */
-import i18n from 'components/tinymce/i18n';
-import { wpautop } from 'lib/formatting';
+import i18n from 'wp-calypso-client/components/tinymce/i18n';
+import { wpautop } from 'wp-calypso-client/lib/formatting';
 // TinyMCE plugins & dependencies
-import wplinkPlugin from 'components/tinymce/plugins/wplink/plugin';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import { isLocaleRtl } from 'lib/i18n-utils';
+import wplinkPlugin from 'wp-calypso-client/components/tinymce/plugins/wplink/plugin';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import { isLocaleRtl } from 'wp-calypso-client/lib/i18n-utils';
 
 class CompactTinyMCE extends Component {
 	static propTypes = {

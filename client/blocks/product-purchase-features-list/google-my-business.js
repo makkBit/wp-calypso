@@ -8,12 +8,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 
 /**
  * Image dependencies
  */
-import googleMyBusinessImage from 'assets/images/illustrations/google-my-business-feature.svg';
+import googleMyBusinessImage from 'wp-calypso-client/assets/images/illustrations/google-my-business-feature.svg';
 
 export default localize( ( { selectedSite, translate } ) => {
 	return (

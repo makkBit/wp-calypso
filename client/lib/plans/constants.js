@@ -12,7 +12,7 @@ import {
 	PRODUCT_JETPACK_ANTI_SPAM_MONTHLY,
 	PRODUCT_JETPACK_SEARCH,
 	PRODUCT_JETPACK_SEARCH_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 
 // plans constants
 export const PLAN_BUSINESS_MONTHLY = 'business-bundle-monthly';

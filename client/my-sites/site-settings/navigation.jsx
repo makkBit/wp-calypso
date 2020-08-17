@@ -9,14 +9,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import { siteHasScanProductPurchase } from 'state/purchases/selectors';
-import isJetpackSectionEnabledForSite from 'state/selectors/is-jetpack-section-enabled-for-site';
-import isRewindActive from 'state/selectors/is-rewind-active';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
+import config from 'wp-calypso-client/config';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import { siteHasScanProductPurchase } from 'wp-calypso-client/state/purchases/selectors';
+import isJetpackSectionEnabledForSite from 'wp-calypso-client/state/selectors/is-jetpack-section-enabled-for-site';
+import isRewindActive from 'wp-calypso-client/state/selectors/is-rewind-active';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 export class SiteSettingsNavigation extends Component {
 	static propTypes = {

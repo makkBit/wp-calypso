@@ -17,11 +17,11 @@ import {
 	Continue,
 	Link,
 	Quit,
-} from 'layout/guided-tours/config-elements';
-import { AddContentButton } from 'layout/guided-tours/button-labels';
-import { getSectionName, hasSidebar } from 'state/ui/selectors';
-import { targetForSlug } from 'layout/guided-tours/positioning';
-import { localizeUrl } from 'lib/i18n-utils';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
+import { AddContentButton } from 'wp-calypso-client/layout/guided-tours/button-labels';
+import { getSectionName, hasSidebar } from 'wp-calypso-client/state/ui/selectors';
+import { targetForSlug } from 'wp-calypso-client/layout/guided-tours/positioning';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 const sectionHasSidebar = ( state ) =>
 	hasSidebar( state ) && ! includes( [ 'customize' ], getSectionName( state ) );

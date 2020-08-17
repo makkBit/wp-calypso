@@ -15,8 +15,8 @@ import EditorRevisionsListHeader from './header';
 import EditorRevisionsListViewButtons from './view-buttons';
 import EditorRevisionsListNavigation from './navigation';
 import EditorRevisionsListItem from './item';
-import { selectPostRevision } from 'state/posts/revisions/actions';
-import KeyboardShortcuts from 'lib/keyboard-shortcuts';
+import { selectPostRevision } from 'wp-calypso-client/state/posts/revisions/actions';
+import KeyboardShortcuts from 'wp-calypso-client/lib/keyboard-shortcuts';
 
 /**
  * Style dependencies

@@ -6,15 +6,15 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { READER_FOLLOW_TAG_REQUEST } from 'state/reader/action-types';
-import { receiveTags as receiveTagsAction } from 'state/reader/tags/items/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { fromApi as transformTagFromApi } from 'state/data-layer/wpcom/read/tags/utils';
-import { errorNotice } from 'state/notices/actions';
+import { READER_FOLLOW_TAG_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { receiveTags as receiveTagsAction } from 'wp-calypso-client/state/reader/tags/items/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { fromApi as transformTagFromApi } from 'wp-calypso-client/state/data-layer/wpcom/read/tags/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { translate } from 'i18n-calypso';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestFollowTag( action ) {
 	return http( {

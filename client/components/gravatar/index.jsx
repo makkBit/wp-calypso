@@ -10,15 +10,15 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import safeImageURL from 'lib/safe-image-url';
+import safeImageURL from 'wp-calypso-client/lib/safe-image-url';
 import {
 	getUrlParts,
 	getUrlFromParts,
 	determineUrlType,
 	URL_TYPE,
 	format as formatUrl,
-} from 'lib/url';
-import { getUserTempGravatar } from 'state/current-user/gravatar-status/selectors';
+} from 'wp-calypso-client/lib/url';
+import { getUserTempGravatar } from 'wp-calypso-client/state/current-user/gravatar-status/selectors';
 
 /**
  * Style dependencies

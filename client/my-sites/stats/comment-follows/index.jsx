@@ -13,12 +13,12 @@ import { flowRight } from 'lodash';
  * Internal dependencies
  */
 import Followers from '../stats-comment-followers-page';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class StatsCommentFollows extends Component {
 	static propTypes = {

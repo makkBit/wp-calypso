@@ -8,7 +8,7 @@ import {
 	TERM_MONTHLY,
 	PLAN_MONTHLY_PERIOD,
 	PLAN_ANNUAL_PERIOD,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Type dependencies

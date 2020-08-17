@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getMimeType } from 'lib/media/utils/get-mime-type';
+import { getMimeType } from 'wp-calypso-client/lib/media/utils/get-mime-type';
 
 /**
  * Given a media string or object, returns the MIME type prefix.

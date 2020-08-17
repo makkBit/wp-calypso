@@ -2,9 +2,13 @@
  * Internal dependencies
  */
 
-import canCurrentUser from 'state/selectors/can-current-user';
-import { isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import { getSiteAdminUrl, getSiteSlug, isJetpackSite } from 'state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { isCurrentUserEmailVerified } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getSiteAdminUrl,
+	getSiteSlug,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns the menus admin URL for the given site ID

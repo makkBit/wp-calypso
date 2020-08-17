@@ -11,18 +11,22 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SidebarItem from 'layout/sidebar/item';
-import config from 'config';
-import { bumpStat } from 'lib/analytics/mc';
-import compareProps from 'lib/compare-props';
-import { getSiteAdminUrl, getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import { canCurrentUser as canCurrentUserStateSelector } from 'state/selectors/can-current-user';
-import canCurrentUserManagePlugins from 'state/selectors/can-current-user-manage-plugins';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import config from 'wp-calypso-client/config';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import compareProps from 'wp-calypso-client/lib/compare-props';
+import {
+	getSiteAdminUrl,
+	getSiteSlug,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import { canCurrentUser as canCurrentUserStateSelector } from 'wp-calypso-client/state/selectors/can-current-user';
+import canCurrentUserManagePlugins from 'wp-calypso-client/state/selectors/can-current-user-manage-plugins';
 import { itemLinkMatches } from './utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { expandMySitesSidebarSection as expandSection } from 'state/my-sites/sidebar/actions';
-import { SIDEBAR_SECTION_TOOLS } from 'my-sites/sidebar/constants';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { expandMySitesSidebarSection as expandSection } from 'wp-calypso-client/state/my-sites/sidebar/actions';
+import { SIDEBAR_SECTION_TOOLS } from 'wp-calypso-client/my-sites/sidebar/constants';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 class ToolsMenu extends PureComponent {
 	static propTypes = {

@@ -16,29 +16,32 @@ import { v4 as uuid } from 'uuid';
 /**
  * Internal dependencies
  */
-import { autosave, editPost, saveEdited } from 'state/posts/actions';
-import { addSiteFragment } from 'lib/route';
-import EditorActionBar from 'post-editor/editor-action-bar';
-import FeaturedImage from 'post-editor/editor-featured-image';
-import EditorTitle from 'post-editor/editor-title';
-import EditorPageSlug from 'post-editor/editor-page-slug';
-import TinyMCE from 'components/tinymce';
-import SegmentedControl from 'components/segmented-control';
-import InvalidURLDialog from 'post-editor/invalid-url-dialog';
-import RestorePostDialog from 'post-editor/restore-post-dialog';
-import VerifyEmailDialog from 'components/email-verification/email-verification-dialog';
-import * as utils from 'state/posts/utils';
+import { autosave, editPost, saveEdited } from 'wp-calypso-client/state/posts/actions';
+import { addSiteFragment } from 'wp-calypso-client/lib/route';
+import EditorActionBar from 'wp-calypso-client/post-editor/editor-action-bar';
+import FeaturedImage from 'wp-calypso-client/post-editor/editor-featured-image';
+import EditorTitle from 'wp-calypso-client/post-editor/editor-title';
+import EditorPageSlug from 'wp-calypso-client/post-editor/editor-page-slug';
+import TinyMCE from 'wp-calypso-client/components/tinymce';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import InvalidURLDialog from 'wp-calypso-client/post-editor/invalid-url-dialog';
+import RestorePostDialog from 'wp-calypso-client/post-editor/restore-post-dialog';
+import VerifyEmailDialog from 'wp-calypso-client/components/email-verification/email-verification-dialog';
+import * as utils from 'wp-calypso-client/state/posts/utils';
 import EditorPreview from './editor-preview';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import { bumpStat } from 'lib/analytics/mc';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 import {
 	saveConfirmationSidebarPreference,
 	editorEditRawContent,
 	editorResetRawContent,
 	setEditorIframeLoaded,
-} from 'state/editor/actions';
-import { closeEditorSidebar, openEditorSidebar } from 'state/editor/sidebar/actions';
+} from 'wp-calypso-client/state/editor/actions';
+import {
+	closeEditorSidebar,
+	openEditorSidebar,
+} from 'wp-calypso-client/state/editor/sidebar/actions';
 import {
 	getEditorPostId,
 	isConfirmationSidebarEnabled,
@@ -48,45 +51,48 @@ import {
 	isEditorSaveBlocked,
 	getEditorPostPreviewUrl,
 	getEditorLoadingError,
-} from 'state/editor/selectors';
-import { recordTracksEvent, recordGoogleEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/editor/selectors';
+import { recordTracksEvent, recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	getSitePost,
 	getEditedPost,
 	getEditedPostValue,
 	isEditedPostDirty,
-} from 'state/posts/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { editedPostHasContent } from 'state/posts/selectors/edited-post-has-content';
-import hasBrokenSiteUserConnection from 'state/selectors/has-broken-site-user-connection';
-import isVipSite from 'state/selectors/is-vip-site';
-import EditorConfirmationSidebar from 'post-editor/editor-confirmation-sidebar';
-import EditorDocumentHead from 'post-editor/editor-document-head';
-import EditorPostTypeUnsupported from 'post-editor/editor-post-type-unsupported';
-import EditorForbidden from 'post-editor/editor-forbidden';
-import EditorNotice from 'post-editor/editor-notice';
-import EditorGutenbergOptInNotice from 'post-editor/editor-gutenberg-opt-in-notice';
-import EditorGutenbergDialogs from 'post-editor/editor-gutenberg-dialogs';
-import EditorDeprecationDialog from 'post-editor/editor-deprecation-dialog';
-import EditorWordCount from 'post-editor/editor-word-count';
-import { savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
-import QueryPreferences from 'components/data/query-preferences';
-import { setLayoutFocus, setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { protectForm } from 'lib/protect-form';
-import EditorSidebar from 'post-editor/editor-sidebar';
-import Site from 'blocks/site';
-import EditorStatusLabel from 'post-editor/editor-status-label';
-import EditorGroundControl from 'post-editor/editor-ground-control';
-import { isSitePreviewable } from 'state/sites/selectors';
-import { removep } from 'lib/formatting';
-import QuickSaveButtons from 'post-editor/editor-ground-control/quick-save-buttons';
-import EditorRevisionsDialog from 'post-editor/editor-revisions/dialog';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { pauseGuidedTour } from 'state/guided-tours/actions';
-import inEditorDeprecationGroup from 'state/editor-deprecation-group/selectors/in-editor-deprecation-group';
-import { isEnabled } from 'config';
+} from 'wp-calypso-client/state/posts/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { editedPostHasContent } from 'wp-calypso-client/state/posts/selectors/edited-post-has-content';
+import hasBrokenSiteUserConnection from 'wp-calypso-client/state/selectors/has-broken-site-user-connection';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import EditorConfirmationSidebar from 'wp-calypso-client/post-editor/editor-confirmation-sidebar';
+import EditorDocumentHead from 'wp-calypso-client/post-editor/editor-document-head';
+import EditorPostTypeUnsupported from 'wp-calypso-client/post-editor/editor-post-type-unsupported';
+import EditorForbidden from 'wp-calypso-client/post-editor/editor-forbidden';
+import EditorNotice from 'wp-calypso-client/post-editor/editor-notice';
+import EditorGutenbergOptInNotice from 'wp-calypso-client/post-editor/editor-gutenberg-opt-in-notice';
+import EditorGutenbergDialogs from 'wp-calypso-client/post-editor/editor-gutenberg-dialogs';
+import EditorDeprecationDialog from 'wp-calypso-client/post-editor/editor-deprecation-dialog';
+import EditorWordCount from 'wp-calypso-client/post-editor/editor-word-count';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import {
+	setLayoutFocus,
+	setNextLayoutFocus,
+} from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import EditorSidebar from 'wp-calypso-client/post-editor/editor-sidebar';
+import Site from 'wp-calypso-client/blocks/site';
+import EditorStatusLabel from 'wp-calypso-client/post-editor/editor-status-label';
+import EditorGroundControl from 'wp-calypso-client/post-editor/editor-ground-control';
+import { isSitePreviewable } from 'wp-calypso-client/state/sites/selectors';
+import { removep } from 'wp-calypso-client/lib/formatting';
+import QuickSaveButtons from 'wp-calypso-client/post-editor/editor-ground-control/quick-save-buttons';
+import EditorRevisionsDialog from 'wp-calypso-client/post-editor/editor-revisions/dialog';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { pauseGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
+import inEditorDeprecationGroup from 'wp-calypso-client/state/editor-deprecation-group/selectors/in-editor-deprecation-group';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /**
  * Style dependencies

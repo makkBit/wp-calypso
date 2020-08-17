@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getTimezones from 'state/selectors/get-timezones';
+import getTimezones from 'wp-calypso-client/state/selectors/get-timezones';
 
 describe( 'getTimezones()', () => {
 	test( "should return [] if `timezones` aren't synced", () => {

@@ -9,12 +9,12 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SegmentedControl from 'components/segmented-control';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
 import {
 	splitPostRevisionsDiffView,
 	unifyPostRevisionsDiffView,
-} from 'state/posts/revisions/actions';
-import { getPostRevisionsDiffView } from 'state/posts/selectors/get-post-revisions-diff-view';
+} from 'wp-calypso-client/state/posts/revisions/actions';
+import { getPostRevisionsDiffView } from 'wp-calypso-client/state/posts/selectors/get-post-revisions-diff-view';
 
 const EditorRevisionsListViewButtons = ( { diffView, viewSplit, viewUnified } ) => {
 	const translate = useTranslate();

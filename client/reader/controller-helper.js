@@ -7,11 +7,11 @@ import moment from 'moment';
 /**
  * Internal Dependencies
  */
-import { recordPageView } from 'lib/analytics/page-view';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { bumpStat } from 'lib/analytics/mc';
-import { recordTrack } from 'reader/stats';
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
+import { recordPageView } from 'wp-calypso-client/lib/analytics/page-view';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
 
 export function trackPageLoad( path, title, readerView ) {
 	recordPageView( path, title );

@@ -8,9 +8,9 @@ import formatCurrency from '@automattic/format-currency';
  * Internal dependencies
  */
 import { CompactCard, Button } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import WordPressLogo from 'components/wordpress-logo';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
 import Checklist from './checklist';
 
 /**

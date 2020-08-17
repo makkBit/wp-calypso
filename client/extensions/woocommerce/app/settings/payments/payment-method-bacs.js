@@ -11,13 +11,13 @@ import { get } from 'lodash';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextarea from 'components/forms/form-textarea';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormTextInput from 'components/forms/form-text-input';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 class PaymentMethodBACS extends Component {
 	static propTypes = {

@@ -7,8 +7,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import MaterialIcon from 'components/material-icon';
-import Gridicon from 'components/gridicon';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 const ActionBox = ( { href, onClick, target, iconSrc, label, materialIcon, gridicon } ) => {
 	const buttonAction = { href, onClick, target };

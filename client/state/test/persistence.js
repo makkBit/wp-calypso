@@ -6,9 +6,9 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { DESERIALIZE, SERIALIZE } from 'state/action-types';
-import { createReduxStore } from 'state';
-import reducer from 'state/reducer';
+import { DESERIALIZE, SERIALIZE } from 'wp-calypso-client/state/action-types';
+import { createReduxStore } from 'wp-calypso-client/state';
+import reducer from 'wp-calypso-client/state/reducer';
 
 // Gets rid of warnings such as 'UnhandledPromiseRejectionWarning: Error: No available storage method found.'
 jest.mock( 'lib/user', () => () => {} );

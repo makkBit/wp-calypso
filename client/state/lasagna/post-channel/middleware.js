@@ -9,10 +9,10 @@ import debugFactory from 'debug';
 import {
 	READER_VIEWING_FULL_POST_SET,
 	READER_VIEWING_FULL_POST_UNSET,
-} from 'state/reader/action-types';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import { getSite } from 'state/reader/sites/selectors';
-import { receiveComments } from 'state/comments/actions';
+} from 'wp-calypso-client/state/reader/action-types';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { receiveComments } from 'wp-calypso-client/state/comments/actions';
 import { lasagna } from '../middleware';
 
 const debug = debugFactory( 'lasagna:channel' );

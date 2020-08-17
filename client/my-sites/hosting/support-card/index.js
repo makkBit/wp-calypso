@@ -9,16 +9,16 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import HappinessEngineersTray from 'components/happiness-engineers-tray';
-import CardHeading from 'components/card-heading';
+import HappinessEngineersTray from 'wp-calypso-client/components/happiness-engineers-tray';
+import CardHeading from 'wp-calypso-client/components/card-heading';
 import {
 	withAnalytics,
 	composeAnalytics,
 	recordTracksEvent,
 	recordGoogleEvent,
 	bumpStat,
-} from 'state/analytics/actions';
-import { navigate } from 'state/ui/actions';
+} from 'wp-calypso-client/state/analytics/actions';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 
 /**
  * Style dependencies

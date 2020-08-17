@@ -6,9 +6,9 @@ import { values } from 'lodash';
 /**
  * Internal dependencies
  */
-import { isItemBeingUploaded } from 'lib/media/utils';
-import Dispatcher from 'dispatcher';
-import emitter from 'lib/mixins/emitter';
+import { isItemBeingUploaded } from 'wp-calypso-client/lib/media/utils';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 /**
  * @typedef {import('events').EventEmitter} Emitter

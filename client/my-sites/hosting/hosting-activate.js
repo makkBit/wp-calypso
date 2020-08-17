@@ -9,12 +9,12 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import MainComponent from 'components/main';
-import HeaderCake from 'components/header-cake';
-import EligibilityWarnings from 'blocks/eligibility-warnings';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { initiateThemeTransfer } from 'state/themes/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import MainComponent from 'wp-calypso-client/components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import EligibilityWarnings from 'wp-calypso-client/blocks/eligibility-warnings';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { initiateThemeTransfer } from 'wp-calypso-client/state/themes/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 const HostingActivate = ( { initiateTransfer, siteId, siteSlug, translate } ) => {
 	const backUrl = `/hosting-config/${ siteSlug }`;

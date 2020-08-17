@@ -4,16 +4,16 @@
 import React, { Component } from 'react';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { isEmpty } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
-import importerConfig from 'lib/importer/importer-config';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import importerConfig from 'wp-calypso-client/lib/importer/importer-config';
 import { Button, Card } from '@automattic/components';
-import ImporterLogo from 'my-sites/importer/importer-logo';
+import ImporterLogo from 'wp-calypso-client/my-sites/importer/importer-logo';
 import StepWrapper from '../../step-wrapper';
 
 /**

@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/country-states/init';
+import 'wp-calypso-client/state/country-states/init';
 
 /**
  * Returns an array of states objects for the specified country code, or null

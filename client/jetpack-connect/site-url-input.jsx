@@ -3,7 +3,7 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { noop } from 'lodash';
 
@@ -11,11 +11,11 @@ import { noop } from 'lodash';
  * Internal dependencies
  */
 import { Card, Button } from '@automattic/components';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import Spinner from 'components/spinner';
-import SuggestionSearch from 'components/suggestion-search';
-import { localizeUrl } from 'lib/i18n-utils';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import Spinner from 'wp-calypso-client/components/spinner';
+import SuggestionSearch from 'wp-calypso-client/components/suggestion-search';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 class JetpackConnectSiteUrlInput extends Component {
 	static propTypes = {

@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import ConnectedApplicationIcon from 'me/connected-application-icon';
-import FoldableCard from 'components/foldable-card';
-import { withLocalizedMoment } from 'components/localized-moment';
-import safeProtocolUrl from 'lib/safe-protocol-url';
-import { deleteConnectedApplication } from 'state/connected-applications/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import ConnectedApplicationIcon from 'wp-calypso-client/me/connected-application-icon';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import safeProtocolUrl from 'wp-calypso-client/lib/safe-protocol-url';
+import { deleteConnectedApplication } from 'wp-calypso-client/state/connected-applications/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

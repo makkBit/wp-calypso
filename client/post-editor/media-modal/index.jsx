@@ -23,29 +23,36 @@ import {
 /**
  * Internal dependencies
  */
-import MediaLibrary from 'my-sites/media-library';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import { bumpStat as mcBumpStat } from 'lib/analytics/mc';
-import { recordEditorEvent, recordEditorStat } from 'state/posts/stats';
+import MediaLibrary from 'wp-calypso-client/my-sites/media-library';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import { bumpStat as mcBumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { recordEditorEvent, recordEditorStat } from 'wp-calypso-client/state/posts/stats';
 import MediaModalGallery from './gallery';
-import MediaActions from 'lib/media/actions';
-import * as MediaUtils from 'lib/media/utils';
-import CloseOnEscape from 'components/close-on-escape';
-import accept from 'lib/accept';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import { getMediaModalView } from 'state/ui/media-modal/selectors';
-import { getSite } from 'state/sites/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { resetMediaModalView } from 'state/ui/media-modal/actions';
-import { setEditorMediaModalView } from 'state/editor/actions';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { editMedia, deleteMedia, addExternalMedia } from 'state/media/thunks';
-import { setMediaLibrarySelectedItems, changeMediaSource } from 'state/media/actions';
-import ImageEditor from 'blocks/image-editor';
-import VideoEditor from 'blocks/video-editor';
+import MediaActions from 'wp-calypso-client/lib/media/actions';
+import * as MediaUtils from 'wp-calypso-client/lib/media/utils';
+import CloseOnEscape from 'wp-calypso-client/components/close-on-escape';
+import accept from 'wp-calypso-client/lib/accept';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import { getMediaModalView } from 'wp-calypso-client/state/ui/media-modal/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { resetMediaModalView } from 'wp-calypso-client/state/ui/media-modal/actions';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { editMedia, deleteMedia, addExternalMedia } from 'wp-calypso-client/state/media/thunks';
+import {
+	setMediaLibrarySelectedItems,
+	changeMediaSource,
+} from 'wp-calypso-client/state/media/actions';
+import ImageEditor from 'wp-calypso-client/blocks/image-editor';
+import VideoEditor from 'wp-calypso-client/blocks/video-editor';
 import MediaModalDialog from './dialog';
 import MediaModalDetail from './detail';
-import { withAnalytics, bumpStat, recordGoogleEvent } from 'state/analytics/actions';
+import {
+	withAnalytics,
+	bumpStat,
+	recordGoogleEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

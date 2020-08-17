@@ -19,22 +19,22 @@ import { isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import QueryConciergeInitial from 'components/data/query-concierge-initial';
-import QueryUserSettings from 'components/data/query-user-settings';
-import QuerySites from 'components/data/query-sites';
-import QuerySitePlans from 'components/data/query-site-plans';
-import getConciergeAvailableTimes from 'state/selectors/get-concierge-available-times';
-import getConciergeScheduleId from 'state/selectors/get-concierge-schedule-id';
-import getConciergeNextAppointment from 'state/selectors/get-concierge-next-appointment';
-import getUserSettings from 'state/selectors/get-user-settings';
-import { getSite } from 'state/sites/selectors';
+import Main from 'wp-calypso-client/components/main';
+import QueryConciergeInitial from 'wp-calypso-client/components/data/query-concierge-initial';
+import QueryUserSettings from 'wp-calypso-client/components/data/query-user-settings';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import getConciergeAvailableTimes from 'wp-calypso-client/state/selectors/get-concierge-available-times';
+import getConciergeScheduleId from 'wp-calypso-client/state/selectors/get-concierge-schedule-id';
+import getConciergeNextAppointment from 'wp-calypso-client/state/selectors/get-concierge-next-appointment';
+import getUserSettings from 'wp-calypso-client/state/selectors/get-user-settings';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
 import NoAvailableTimes from './shared/no-available-times';
 import Upsell from './shared/upsell';
 import AppointmentInfo from './shared/appointment-info';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import ReauthRequired from 'me/reauth-required';
-import twoStepAuthorization from 'lib/two-step-authorization';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
 
 export class ConciergeMain extends Component {
 	constructor( props ) {

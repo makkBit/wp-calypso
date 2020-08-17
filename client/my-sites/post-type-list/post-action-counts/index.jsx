@@ -10,14 +10,21 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import PostLikesPopover from 'blocks/post-likes/popover';
-import { getNormalizedPost } from 'state/posts/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSiteSlug, isJetpackModuleActive, isJetpackSite } from 'state/sites/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { hideActiveLikesPopover, toggleLikesPopover } from 'state/ui/post-type-list/actions';
-import { isLikesPopoverOpen } from 'state/ui/post-type-list/selectors';
-import { getRecentViewsForPost } from 'state/stats/recent-post-views/selectors';
+import PostLikesPopover from 'wp-calypso-client/blocks/post-likes/popover';
+import { getNormalizedPost } from 'wp-calypso-client/state/posts/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import {
+	getSiteSlug,
+	isJetpackModuleActive,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import {
+	hideActiveLikesPopover,
+	toggleLikesPopover,
+} from 'wp-calypso-client/state/ui/post-type-list/actions';
+import { isLikesPopoverOpen } from 'wp-calypso-client/state/ui/post-type-list/selectors';
+import { getRecentViewsForPost } from 'wp-calypso-client/state/stats/recent-post-views/selectors';
 import { ScreenReaderText } from '@automattic/components';
 
 /**

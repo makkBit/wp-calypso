@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import getNextPageHandle from 'state/selectors/get-next-page-handle';
+import getNextPageHandle from 'wp-calypso-client/state/selectors/get-next-page-handle';
 
 const DEFAULT_QUERY = Object.freeze( { number: 20 } );
 

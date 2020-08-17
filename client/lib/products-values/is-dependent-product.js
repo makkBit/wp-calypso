@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { assertValidProduct } from 'lib/products-values/utils/assert-valid-product';
-import { formatProduct } from 'lib/products-values/format-product';
-import { getDomain } from 'lib/products-values/get-domain';
-import { isDomainMapping } from 'lib/products-values/is-domain-mapping';
-import { isDomainRegistration } from 'lib/products-values/is-domain-registration';
-import { isPlan } from 'lib/products-values/is-plan';
+import { assertValidProduct } from 'wp-calypso-client/lib/products-values/utils/assert-valid-product';
+import { formatProduct } from 'wp-calypso-client/lib/products-values/format-product';
+import { getDomain } from 'wp-calypso-client/lib/products-values/get-domain';
+import { isDomainMapping } from 'wp-calypso-client/lib/products-values/is-domain-mapping';
+import { isDomainRegistration } from 'wp-calypso-client/lib/products-values/is-domain-registration';
+import { isPlan } from 'wp-calypso-client/lib/products-values/is-plan';
 import {
 	PLAN_BUSINESS_MONTHLY,
 	PLAN_BUSINESS,
@@ -15,7 +15,7 @@ import {
 	PLAN_PREMIUM_2_YEARS,
 	PLAN_PERSONAL,
 	PLAN_PERSONAL_2_YEARS,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 const productDependencies = {
 	domain: {

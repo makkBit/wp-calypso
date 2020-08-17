@@ -9,16 +9,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Button } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import FormFieldset from 'components/forms/form-fieldset';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { setSiteTitle } from 'state/signup/steps/site-title/actions';
-import { getSiteTitle } from 'state/signup/steps/site-title/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/actions';
+import { getSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

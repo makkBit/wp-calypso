@@ -11,7 +11,7 @@ import { getCurrencyObject } from '@automattic/format-currency';
 /**
  * Internal dependencies
  */
-import Badge from 'components/badge';
+import Badge from 'wp-calypso-client/components/badge';
 
 /**
  * Style dependencies

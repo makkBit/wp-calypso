@@ -10,28 +10,28 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import Header from 'my-sites/domains/domain-management/components/header';
-import { domainManagementEdit } from 'my-sites/domains/paths';
+import Main from 'wp-calypso-client/components/main';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import { domainManagementEdit } from 'wp-calypso-client/my-sites/domains/paths';
 import { CompactCard, Button } from '@automattic/components';
-import MaterialIcon from 'components/material-icon';
-import { getSelectedDomain } from 'lib/domains';
-import RenewButton from 'my-sites/domains/domain-management/edit/card/renew-button';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { getProductBySlug } from 'state/products-list/selectors';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import RenewButton from 'wp-calypso-client/my-sites/domains/domain-management/edit/card/renew-button';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { getProductBySlug } from 'wp-calypso-client/state/products-list/selectors';
 import {
 	getByPurchaseId,
 	isFetchingSitePurchases,
 	hasLoadedSitePurchasesFromServer,
-} from 'state/purchases/selectors';
-import { sslStatuses } from 'lib/domains/constants';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import VerticalNavItem from 'components/vertical-nav/item';
-import VerticalNav from 'components/vertical-nav';
-import { ECOMMERCE, FORMS } from 'lib/url/support';
-import { showInlineHelpPopover } from 'state/inline-help/actions';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { sslStatuses } from 'wp-calypso-client/lib/domains/constants';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import { ECOMMERCE, FORMS } from 'wp-calypso-client/lib/url/support';
+import { showInlineHelpPopover } from 'wp-calypso-client/state/inline-help/actions';
 import { recordTracksEvent } from '@automattic/calypso-analytics';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 import './style.scss';
 

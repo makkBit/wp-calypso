@@ -13,26 +13,26 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import notices from 'notices';
-import { login } from 'lib/paths';
-import { CHECK_YOUR_EMAIL_PAGE } from 'state/login/magic-login/constants';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getMagicLoginCurrentView from 'state/selectors/get-magic-login-current-view';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
-import { hideMagicLoginRequestForm } from 'state/login/magic-login/actions';
-import LocaleSuggestions from 'components/locale-suggestions';
+import notices from 'wp-calypso-client/notices';
+import { login } from 'wp-calypso-client/lib/paths';
+import { CHECK_YOUR_EMAIL_PAGE } from 'wp-calypso-client/state/login/magic-login/constants';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getMagicLoginCurrentView from 'wp-calypso-client/state/selectors/get-magic-login-current-view';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
+import { hideMagicLoginRequestForm } from 'wp-calypso-client/state/login/magic-login/actions';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
 import {
 	recordTracksEventWithClientId as recordTracksEvent,
 	recordPageViewWithClientId as recordPageView,
 	enhanceWithSiteType,
-} from 'state/analytics/actions';
-import { withEnhancers } from 'state/utils';
-import Main from 'components/main';
-import JetpackHeader from 'components/jetpack-header';
+} from 'wp-calypso-client/state/analytics/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
+import Main from 'wp-calypso-client/components/main';
+import JetpackHeader from 'wp-calypso-client/components/jetpack-header';
 import RequestLoginEmailForm from './request-login-email-form';
-import GlobalNotices from 'components/global-notices';
-import Gridicon from 'components/gridicon';
+import GlobalNotices from 'wp-calypso-client/components/global-notices';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Style dependencies

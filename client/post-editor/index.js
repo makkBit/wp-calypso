@@ -6,10 +6,10 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { siteSelection, sites } from 'my-sites/controller';
+import { siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
 import controller from './controller';
-import config from 'config';
-import { makeLayout, render as clientRender } from 'controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default function () {
 	page( '/post', controller.pressThis, siteSelection, sites, makeLayout, clientRender );

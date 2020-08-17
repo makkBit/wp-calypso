@@ -14,12 +14,12 @@ import { localize } from 'i18n-calypso';
 import ButtonsPreview from './preview';
 import ButtonsPreviewPlaceholder from './preview-placeholder';
 import ButtonsStyle from './style';
-import SupportInfo from 'components/support-info';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import isPrivateSite from 'state/selectors/is-private-site';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class SharingButtonsAppearance extends Component {
 	static propTypes = {

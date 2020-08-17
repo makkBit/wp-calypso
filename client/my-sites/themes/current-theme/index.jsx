@@ -16,9 +16,9 @@ import { Card } from '@automattic/components';
 import CurrentThemeButton from './button';
 import { connectOptions } from '../theme-options';
 import { trackClick } from '../helpers';
-import { getActiveTheme, getCanonicalTheme } from 'state/themes/selectors';
-import QueryActiveTheme from 'components/data/query-active-theme';
-import QueryCanonicalTheme from 'components/data/query-canonical-theme';
+import { getActiveTheme, getCanonicalTheme } from 'wp-calypso-client/state/themes/selectors';
+import QueryActiveTheme from 'wp-calypso-client/components/data/query-active-theme';
+import QueryCanonicalTheme from 'wp-calypso-client/components/data/query-canonical-theme';
 
 /**
  * Style dependencies

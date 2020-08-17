@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
-import { updateMedia } from 'state/media/thunks';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { updateMedia } from 'wp-calypso-client/state/media/thunks';
 
 class EditorMediaModalGalleryCaption extends React.Component {
 	static displayName = 'EditorMediaModalGalleryCaption';

@@ -7,7 +7,7 @@ import { assign, filter, map, pick, sortBy, transform } from 'lodash';
 /**
  * Internal dependencies
  */
-import { decodeEntities, parseHtml } from 'lib/formatting';
+import { decodeEntities, parseHtml } from 'wp-calypso-client/lib/formatting';
 import { sanitizeSectionContent } from './sanitize-section-content';
 
 /**

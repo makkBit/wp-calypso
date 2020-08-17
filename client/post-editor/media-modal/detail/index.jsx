@@ -11,11 +11,11 @@ import { noop, partial } from 'lodash';
  * Internal dependencies
  */
 import DetailItem from './detail-item';
-import { getMimePrefix, filterItemsByMimePrefix, url } from 'lib/media/utils';
-import HeaderCake from 'components/header-cake';
+import { getMimePrefix, filterItemsByMimePrefix, url } from 'wp-calypso-client/lib/media/utils';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import preloadImage from '../preload-image';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { setEditorMediaModalView } from 'state/editor/actions';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
 
 /**
  * Style dependencies

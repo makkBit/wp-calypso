@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Return the theme ID of the theme BEFORE to activated it.

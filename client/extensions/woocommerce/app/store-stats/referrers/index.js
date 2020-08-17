@@ -12,20 +12,20 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import { getEndPeriod, getWidgetPath } from 'woocommerce/app/store-stats/utils';
 import StoreStatsPeriodNav from 'woocommerce/app/store-stats/store-stats-period-nav';
-import JetpackColophon from 'components/jetpack-colophon';
-import Main from 'components/main';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
+import Main from 'wp-calypso-client/components/main';
 import Module from 'woocommerce/app/store-stats/store-stats-module';
-import SearchCard from 'components/search-card';
+import SearchCard from 'wp-calypso-client/components/search-card';
 import StoreStatsReferrerWidget from 'woocommerce/app/store-stats/store-stats-referrer-widget';
 import StoreStatsReferrerConvWidget from 'woocommerce/app/store-stats/store-stats-referrer-conv-widget';
 import { sortBySales } from 'woocommerce/app/store-stats/referrers/helpers';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import titlecase from 'to-title-case';
-import getStoreReferrersByDate from 'state/selectors/get-store-referrers-by-date';
+import getStoreReferrersByDate from 'wp-calypso-client/state/selectors/get-store-referrers-by-date';
 import Chart from './chart';
 import { UNITS, noDataMsg } from 'woocommerce/app/store-stats/constants';
 

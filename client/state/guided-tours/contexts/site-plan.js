@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isCurrentPlanPaid } from 'state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isCurrentPlanPaid } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns true if the selected site has a paid plan

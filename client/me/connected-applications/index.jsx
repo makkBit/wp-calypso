@@ -10,19 +10,19 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import ConnectedAppItem from 'me/connected-application-item';
-import DocumentHead from 'components/data/document-head';
-import EmptyContent from 'components/empty-content';
-import getConnectedApplications from 'state/selectors/get-connected-applications';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryConnectedApplications from 'components/data/query-connected-applications';
-import ReauthRequired from 'me/reauth-required';
-import SecuritySectionNav from 'me/security-section-nav';
-import twoStepAuthorization from 'lib/two-step-authorization';
+import config from 'wp-calypso-client/config';
+import ConnectedAppItem from 'wp-calypso-client/me/connected-application-item';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import getConnectedApplications from 'wp-calypso-client/state/selectors/get-connected-applications';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryConnectedApplications from 'wp-calypso-client/components/data/query-connected-applications';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import SecuritySectionNav from 'wp-calypso-client/me/security-section-nav';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
 
 /**
  * Style dependencies

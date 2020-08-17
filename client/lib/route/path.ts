@@ -1,7 +1,7 @@
 /**
  * External dependencies
  */
-import { URL as URLString, SiteSlug, SiteId } from 'types';
+import { URL as URLString, SiteSlug, SiteId } from 'wp-calypso-client/types';
 
 /**
  * Internal Dependencies

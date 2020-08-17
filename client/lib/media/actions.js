@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 
 /**
  * @typedef IMediaActions

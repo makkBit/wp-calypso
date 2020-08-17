@@ -6,11 +6,11 @@ import { values, reject } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /*
  * Get all sites/feeds the user follows.

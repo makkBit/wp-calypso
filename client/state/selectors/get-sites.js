@@ -7,10 +7,10 @@ import { partition, sortBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSite } from 'state/sites/selectors';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import getSitesItems from 'state/selectors/get-sites-items';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
 
 const sortByNameAndUrl = ( list ) => sortBy( list, [ 'name', 'URL' ] );
 

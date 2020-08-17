@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { mergeHandlers } from 'state/action-watchers/utils';
+import { mergeHandlers } from 'wp-calypso-client/state/action-watchers/utils';
 import payments from './payments';
 import products from './products';
 import shippingZones from './shipping-zones';

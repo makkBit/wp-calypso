@@ -1,11 +1,11 @@
 /**
  * Internal dependencies
  */
-import canCurrentUser from 'state/selectors/can-current-user';
-import { isJetpackSite } from 'state/sites/selectors';
-import isVipSite from 'state/selectors/is-vip-site';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import getSite from './get-site';
 
 /**

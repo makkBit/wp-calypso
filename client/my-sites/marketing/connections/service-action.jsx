@@ -11,11 +11,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { Button } from '@automattic/components';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import getRemovableConnections from 'state/selectors/get-removable-connections';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import getRemovableConnections from 'wp-calypso-client/state/selectors/get-removable-connections';
 
 const SharingServiceAction = ( {
 	isConnecting,

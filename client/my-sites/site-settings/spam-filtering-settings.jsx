@@ -11,20 +11,23 @@ import { includes, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
-import FoldableCard from 'components/foldable-card';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormInputValidation from 'components/forms/form-input-validation';
-import Gridicon from 'components/gridicon';
-import SupportInfo from 'components/support-info';
-import ExternalLink from 'components/external-link';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isJetpackSettingsSaveFailure from 'state/selectors/is-jetpack-settings-save-failure';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { FEATURE_SPAM_AKISMET_PLUS, PLAN_JETPACK_PERSONAL } from 'lib/plans/constants';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isJetpackSettingsSaveFailure from 'wp-calypso-client/state/selectors/is-jetpack-settings-save-failure';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import {
+	FEATURE_SPAM_AKISMET_PLUS,
+	PLAN_JETPACK_PERSONAL,
+} from 'wp-calypso-client/lib/plans/constants';
 
 const SpamFilteringSettings = ( {
 	currentAkismetKey,

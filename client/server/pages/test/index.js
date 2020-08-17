@@ -127,7 +127,7 @@ import cloneDeep from 'lodash/cloneDeep';
 /**
  * Internal dependencies
  */
-import sections from 'sections';
+import sections from 'wp-calypso-client/sections';
 
 /**
  * Builds an app for an specific environment.
@@ -157,7 +157,7 @@ const buildApp = ( environment ) => {
 		// When the app requries these modules, they are loaded from its isolated registry.
 		// Requiring them here will give us the same instance used by the app, this will allow
 		// us to change the mock implementation later or make assertions about it.
-		mocks.config = require( 'config' );
+		mocks.config = require( 'wp-calypso-client/config' );
 		mocks.matchesUA = require( 'browserslist-useragent' ).matchesUA;
 		const {
 			attachBuildTimestamp,
@@ -165,15 +165,15 @@ const buildApp = ( environment ) => {
 			attachHead,
 			renderJsx,
 			serverRender,
-		} = require( 'server/render' );
+		} = require( 'wp-calypso-client/server/render' );
 		mocks = { ...mocks, attachBuildTimestamp, attachI18n, attachHead, renderJsx, serverRender };
 		mocks.sanitize = require( 'sanitize' );
-		mocks.createReduxStore = require( 'state' ).createReduxStore;
+		mocks.createReduxStore = require( 'wp-calypso-client/state' ).createReduxStore;
 		mocks.execSync = require( 'child_process' ).execSync;
-		mocks.login = require( 'lib/paths' ).login;
-		mocks.getBootstrappedUser = require( 'server/user-bootstrap' );
-		mocks.setCurrentUser = require( 'state/current-user/actions' ).setCurrentUser;
-		mocks.analytics = require( 'server/lib/analytics' );
+		mocks.login = require( 'wp-calypso-client/lib/paths' ).login;
+		mocks.getBootstrappedUser = require( 'wp-calypso-client/server/user-bootstrap' );
+		mocks.setCurrentUser = require( 'wp-calypso-client/state/current-user/actions' ).setCurrentUser;
+		mocks.analytics = require( 'wp-calypso-client/server/lib/analytics' );
 
 		// Set the environment. This has to be done before requiring `../index.js`
 		mocks.config.mockImplementation(

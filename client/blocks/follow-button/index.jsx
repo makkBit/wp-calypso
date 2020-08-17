@@ -10,8 +10,8 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import FollowButton from './button';
-import { isFollowing } from 'state/reader/follows/selectors';
-import { follow, unfollow } from 'state/reader/follows/actions';
+import { isFollowing } from 'wp-calypso-client/state/reader/follows/selectors';
+import { follow, unfollow } from 'wp-calypso-client/state/reader/follows/actions';
 
 class FollowButtonContainer extends Component {
 	static propTypes = {

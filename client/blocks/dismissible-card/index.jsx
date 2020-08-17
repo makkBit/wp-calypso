@@ -7,15 +7,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { noop, flow } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import QueryPreferences from 'components/data/query-preferences';
-import { savePreference, setPreference } from 'state/preferences/actions';
-import { getPreference, hasReceivedRemotePreferences } from 'state/preferences/selectors';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import { savePreference, setPreference } from 'wp-calypso-client/state/preferences/actions';
+import {
+	getPreference,
+	hasReceivedRemotePreferences,
+} from 'wp-calypso-client/state/preferences/selectors';
 
 /**
  * Style dependencies

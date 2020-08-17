@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_SEGMENTS_REQUEST, SIGNUP_SEGMENTS_SET } from 'state/action-types';
+import { SIGNUP_SEGMENTS_REQUEST, SIGNUP_SEGMENTS_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/signup/segments';
-import 'state/signup/init';
+import 'wp-calypso-client/state/data-layer/wpcom/signup/segments';
+import 'wp-calypso-client/state/signup/init';
 
 /**
  * Action creator: Request segments data.

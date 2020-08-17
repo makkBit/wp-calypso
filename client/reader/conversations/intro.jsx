@@ -4,21 +4,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { connect } from 'react-redux';
 
 /**
  * Internal dependencies
  */
-import QueryPreferences from 'components/data/query-preferences';
-import { savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
-import { recordTrack } from 'reader/stats';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
 
 /**
  * Image dependencies
  */
-import charactersImage from 'assets/images/reader/reader-conversations-characters.svg';
+import charactersImage from 'wp-calypso-client/assets/images/reader/reader-conversations-characters.svg';
 
 /**
  * Style dependencies

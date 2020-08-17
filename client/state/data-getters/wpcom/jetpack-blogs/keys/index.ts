@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { empty, getHttpData, requestHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { SiteId } from 'types';
+import { empty, getHttpData, requestHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { SiteId } from 'wp-calypso-client/types';
 
 export const dataKey = ( siteId: number ) => `wpcom__jetpack-blogs__keys:${ siteId }`;
 

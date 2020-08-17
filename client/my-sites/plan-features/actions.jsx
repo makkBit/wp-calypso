@@ -13,11 +13,11 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isMonthly } from 'lib/plans/constants';
-import { getPlanClass, planLevelsMatch } from 'lib/plans';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isMonthly } from 'wp-calypso-client/lib/plans/constants';
+import { getPlanClass, planLevelsMatch } from 'wp-calypso-client/lib/plans';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const PlanFeaturesActions = ( {
 	availableForPurchase = true,

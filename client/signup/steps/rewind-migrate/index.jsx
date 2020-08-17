@@ -10,11 +10,11 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card } from '@automattic/components';
-import ActivityLogRewindToggle from 'my-sites/activity/activity-log/activity-log-rewind-toggle';
-import getRewindState from 'state/selectors/get-rewind-state';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import ActivityLogRewindToggle from 'wp-calypso-client/my-sites/activity/activity-log/activity-log-rewind-toggle';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

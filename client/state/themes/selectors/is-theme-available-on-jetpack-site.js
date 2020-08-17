@@ -1,11 +1,11 @@
 /**
  * Internal dependencies
  */
-import { hasJetpackSiteJetpackThemesExtendedFeatures } from 'state/sites/selectors';
-import { getTheme } from 'state/themes/selectors/get-theme';
-import { isWpcomTheme } from 'state/themes/selectors/is-wpcom-theme';
+import { hasJetpackSiteJetpackThemesExtendedFeatures } from 'wp-calypso-client/state/sites/selectors';
+import { getTheme } from 'wp-calypso-client/state/themes/selectors/get-theme';
+import { isWpcomTheme } from 'wp-calypso-client/state/themes/selectors/is-wpcom-theme';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Whether a given theme is installed or can be installed on a Jetpack site.

@@ -7,8 +7,8 @@ import page from 'page';
  * Internal dependencies
  */
 import { followingManage } from './controller';
-import { initAbTests, updateLastRoute, sidebar } from 'reader/controller';
-import { makeLayout, render as clientRender } from 'controller';
+import { initAbTests, updateLastRoute, sidebar } from 'wp-calypso-client/reader/controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default function () {
 	page( '/following/*', initAbTests );

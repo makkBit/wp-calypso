@@ -10,13 +10,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import ExpandableSidebarMenu from 'layout/sidebar/expandable';
+import ExpandableSidebarMenu from 'wp-calypso-client/layout/sidebar/expandable';
 import ReaderSidebarTagsList from './list';
-import QueryReaderFollowedTags from 'components/data/query-reader-followed-tags';
-import FormTextInputWithAction from 'components/forms/form-text-input-with-action';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import { requestFollowTag } from 'state/reader/tags/items/actions';
-import { getReaderFollowedTags } from 'state/reader/tags/selectors';
+import QueryReaderFollowedTags from 'wp-calypso-client/components/data/query-reader-followed-tags';
+import FormTextInputWithAction from 'wp-calypso-client/components/forms/form-text-input-with-action';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import { requestFollowTag } from 'wp-calypso-client/state/reader/tags/items/actions';
+import { getReaderFollowedTags } from 'wp-calypso-client/state/reader/tags/selectors';
 
 export class ReaderSidebarTags extends Component {
 	static propTypes = {

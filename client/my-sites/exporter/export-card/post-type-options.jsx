@@ -10,15 +10,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import FormRadio from 'components/forms/form-radio';
-import Label from 'components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import Label from 'wp-calypso-client/components/forms/form-label';
 import Select from './select';
-import Tooltip from 'components/tooltip';
-import { setPostType } from 'state/exporter/actions';
+import Tooltip from 'wp-calypso-client/components/tooltip';
+import { setPostType } from 'wp-calypso-client/state/exporter/actions';
 import {
 	getSelectedPostType,
 	isDateRangeValid as isExportDateRangeValid,
-} from 'state/exporter/selectors';
+} from 'wp-calypso-client/state/exporter/selectors';
 
 const mapStateToProps = ( state, ownProps ) => {
 	const siteId = state.ui.selectedSiteId;

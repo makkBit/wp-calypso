@@ -9,11 +9,11 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import ThreatItemHeader from 'components/jetpack/threat-item-header';
-import ServerCredentialsWizardDialog from 'components/jetpack/server-credentials-wizard-dialog';
-import { FixableThreat } from 'components/jetpack/threat-item/types';
-import { getThreatFix } from 'components/jetpack/threat-item/utils';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import ThreatItemHeader from 'wp-calypso-client/components/jetpack/threat-item-header';
+import ServerCredentialsWizardDialog from 'wp-calypso-client/components/jetpack/server-credentials-wizard-dialog';
+import { FixableThreat } from 'wp-calypso-client/components/jetpack/threat-item/types';
+import { getThreatFix } from 'wp-calypso-client/components/jetpack/threat-item/utils';
 
 /**
  * Style dependencies

@@ -1,11 +1,11 @@
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getPost } from 'state/posts/selectors/get-post';
-import { normalizePostForDisplay } from 'state/posts/utils';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getPost } from 'wp-calypso-client/state/posts/selectors/get-post';
+import { normalizePostForDisplay } from 'wp-calypso-client/state/posts/utils';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns a normalized post object by its global ID, or null if the post does

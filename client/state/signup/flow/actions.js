@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { SIGNUP_CURRENT_FLOW_NAME_SET } from 'state/action-types';
+import { SIGNUP_CURRENT_FLOW_NAME_SET } from 'wp-calypso-client/state/action-types';
 
-import 'state/signup/init';
+import 'wp-calypso-client/state/signup/init';
 
 export function setCurrentFlowName( flowName ) {
 	return {

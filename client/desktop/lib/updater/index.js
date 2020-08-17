@@ -7,9 +7,9 @@ const { EventEmitter } = require( 'events' );
 /**
  * Internal dependencies
  */
-const platform = require( 'desktop/lib/platform' );
-const config = require( 'desktop/lib/config' );
-const log = require( 'desktop/lib/logger' )( 'desktop:updater' );
+const platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const config = require( 'wp-calypso-client/desktop/lib/config' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:updater' );
 
 class Updater extends EventEmitter {
 	constructor( options ) {

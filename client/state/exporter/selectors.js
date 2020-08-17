@@ -4,7 +4,7 @@
 import { States } from './constants.js';
 import { get } from 'lodash';
 
-import 'state/exporter/init';
+import 'wp-calypso-client/state/exporter/init';
 
 export const getExportingState = ( state, siteId ) => {
 	const exportingState = state.exporter.exportingState;

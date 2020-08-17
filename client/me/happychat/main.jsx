@@ -9,24 +9,28 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { isOutsideCalypso } from 'lib/url';
+import config from 'wp-calypso-client/config';
+import { isOutsideCalypso } from 'wp-calypso-client/lib/url';
 // actions
-import { sendMessage, sendNotTyping, sendTyping } from 'state/happychat/connection/actions';
-import { blur, focus, setCurrentMessage } from 'state/happychat/ui/actions';
+import {
+	sendMessage,
+	sendNotTyping,
+	sendTyping,
+} from 'wp-calypso-client/state/happychat/connection/actions';
+import { blur, focus, setCurrentMessage } from 'wp-calypso-client/state/happychat/ui/actions';
 // selectors
-import canUserSendMessages from 'state/happychat/selectors/can-user-send-messages';
-import { getCurrentUser } from 'state/current-user/selectors';
-import getCurrentMessage from 'state/happychat/selectors/get-happychat-current-message';
-import getHappychatChatStatus from 'state/happychat/selectors/get-happychat-chat-status';
-import getHappychatConnectionStatus from 'state/happychat/selectors/get-happychat-connection-status';
-import getHappychatTimeline from 'state/happychat/selectors/get-happychat-timeline';
-import isHappychatServerReachable from 'state/happychat/selectors/is-happychat-server-reachable';
+import canUserSendMessages from 'wp-calypso-client/state/happychat/selectors/can-user-send-messages';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import getCurrentMessage from 'wp-calypso-client/state/happychat/selectors/get-happychat-current-message';
+import getHappychatChatStatus from 'wp-calypso-client/state/happychat/selectors/get-happychat-chat-status';
+import getHappychatConnectionStatus from 'wp-calypso-client/state/happychat/selectors/get-happychat-connection-status';
+import getHappychatTimeline from 'wp-calypso-client/state/happychat/selectors/get-happychat-timeline';
+import isHappychatServerReachable from 'wp-calypso-client/state/happychat/selectors/is-happychat-server-reachable';
 // UI components
-import HappychatConnection from 'components/happychat/connection-connected';
-import { Composer } from 'components/happychat/composer';
-import { Notices } from 'components/happychat/notices';
-import { Timeline } from 'components/happychat/timeline';
+import HappychatConnection from 'wp-calypso-client/components/happychat/connection-connected';
+import { Composer } from 'wp-calypso-client/components/happychat/composer';
+import { Notices } from 'wp-calypso-client/components/happychat/notices';
+import { Timeline } from 'wp-calypso-client/components/happychat/timeline';
 
 /**
  * Style dependencies

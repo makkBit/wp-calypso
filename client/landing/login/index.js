@@ -1,8 +1,8 @@
 /**
  * Global polyfills
  */
-import 'boot/polyfills';
-import { render } from 'controller/web-util';
+import 'wp-calypso-client/boot/polyfills';
+import { render } from 'wp-calypso-client/controller/web-util';
 
 /**
  * External dependencies
@@ -15,16 +15,16 @@ import page from 'page';
  */
 import createStore from './store';
 import { setupMiddlewares, configureReduxStore } from './common';
-import initLoginSection from 'login';
-import userFactory from 'lib/user';
-import { setupLocale } from 'boot/locale';
-import { setStore } from 'state/redux-store';
+import initLoginSection from 'wp-calypso-client/login';
+import userFactory from 'wp-calypso-client/lib/user';
+import { setupLocale } from 'wp-calypso-client/boot/locale';
+import { setStore } from 'wp-calypso-client/state/redux-store';
 
 const debug = debugFactory( 'calypso' );
 
-import 'assets/stylesheets/style.scss';
+import 'wp-calypso-client/assets/stylesheets/style.scss';
 // goofy import for environment badge, which is SSR'd
-import 'components/environment-badge/style.scss';
+import 'wp-calypso-client/components/environment-badge/style.scss';
 
 // Create Redux store
 const store = createStore();

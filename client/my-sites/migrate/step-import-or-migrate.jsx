@@ -10,15 +10,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import CardHeading from 'components/card-heading';
-import ImportTypeChoice from 'my-sites/migrate/components/import-type-choice';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import ImportTypeChoice from 'wp-calypso-client/my-sites/migrate/components/import-type-choice';
 import { get } from 'lodash';
-import { getImportSectionLocation, redirectTo } from 'my-sites/migrate/helpers';
-import SitesBlock from 'my-sites/migrate/components/sites-block';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'lib/plans/constants';
-import { planHasFeature } from 'lib/plans';
+import { getImportSectionLocation, redirectTo } from 'wp-calypso-client/my-sites/migrate/helpers';
+import SitesBlock from 'wp-calypso-client/my-sites/migrate/components/sites-block';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'wp-calypso-client/lib/plans/constants';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
 
 /**
  * Style dependencies

@@ -6,9 +6,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import withUserMentions from 'blocks/user-mentions/index';
-import withPasteToLink from 'lib/paste-to-link';
-import { isEnabled } from 'config';
+import withUserMentions from 'wp-calypso-client/blocks/user-mentions/index';
+import withPasteToLink from 'wp-calypso-client/lib/paste-to-link';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /* eslint-disable jsx-a11y/no-autofocus */
 const PostCommentFormTextarea = React.forwardRef( ( props, ref ) => (

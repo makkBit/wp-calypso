@@ -9,7 +9,7 @@ import classNames from 'classnames';
 /**
  * Internal Dependencies
  */
-import SegmentedControl from 'components/segmented-control';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
 
 /**
  * Style dependencies

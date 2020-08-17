@@ -11,12 +11,12 @@ import React, { Component, Fragment } from 'react';
 /**
  * Internal Dependencies
  */
-import AsyncLoad from 'components/async-load';
-import { abtest } from 'lib/abtest';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { applyTestFiltersToPlansList } from 'lib/plans';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { applyTestFiltersToPlansList } from 'wp-calypso-client/lib/plans';
 import { Button, Card, CompactCard, ProductIcon } from '@automattic/components';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import {
 	cardProcessorSupportsUpdates,
 	getDomainRegistrationAgreementUrl,
@@ -37,17 +37,17 @@ import {
 	isSubscription,
 	purchaseType,
 	getName,
-} from 'lib/purchases';
+} from 'wp-calypso-client/lib/purchases';
 import { canEditPaymentDetails, getEditCardDetailsPath, isDataLoading } from '../utils';
 import {
 	getByPurchaseId,
 	hasLoadedUserPurchasesFromServer,
 	getRenewableSitePurchases,
-} from 'state/purchases/selectors';
-import { getCanonicalTheme } from 'state/themes/selectors';
-import isSiteAtomic from 'state/selectors/is-site-automated-transfer';
-import Gridicon from 'components/gridicon';
-import HeaderCake from 'components/header-cake';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { getCanonicalTheme } from 'wp-calypso-client/state/themes/selectors';
+import isSiteAtomic from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import {
 	isPersonal,
 	isPremium,
@@ -60,33 +60,37 @@ import {
 	isTheme,
 	isJetpackProduct,
 	isConciergeSession,
-} from 'lib/products-values';
-import { getSite, isRequestingSites } from 'state/sites/selectors';
-import { JETPACK_PRODUCTS_LIST } from 'lib/products-values/constants';
-import { JETPACK_PLANS } from 'lib/plans/constants';
-import Main from 'components/main';
-import PlanPrice from 'my-sites/plan-price';
-import ProductLink from 'me/purchases/product-link';
+} from 'wp-calypso-client/lib/products-values';
+import { getSite, isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import { JETPACK_PRODUCTS_LIST } from 'wp-calypso-client/lib/products-values/constants';
+import { JETPACK_PLANS } from 'wp-calypso-client/lib/plans/constants';
+import Main from 'wp-calypso-client/components/main';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
+import ProductLink from 'wp-calypso-client/me/purchases/product-link';
 import PurchaseMeta from './purchase-meta';
 import PurchaseNotice from './notices';
 import PurchasePlanDetails from './plan-details';
 import PurchaseSiteHeader from '../purchases-site/header';
-import QueryCanonicalTheme from 'components/data/query-canonical-theme';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import QueryUserPurchases from 'components/data/query-user-purchases';
+import QueryCanonicalTheme from 'wp-calypso-client/components/data/query-canonical-theme';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
 import RemovePurchase from '../remove-purchase';
-import VerticalNavItem from 'components/vertical-nav/item';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
 import { cancelPurchase, purchasesRoot } from '../paths';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import titles from 'me/purchases/titles';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import TrackPurchasePageView from 'me/purchases/track-purchase-page-view';
-import { currentUserHasFlag, getCurrentUser, getCurrentUserId } from 'state/current-user/selectors';
-import CartStore from 'lib/cart/store';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
-import { hasCustomDomain } from 'lib/site/utils';
-import { hasLoadedSiteDomains } from 'state/sites/domains/selectors';
-import NonPrimaryDomainDialog from 'me/purchases/non-primary-domain-dialog';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import titles from 'wp-calypso-client/me/purchases/titles';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import TrackPurchasePageView from 'wp-calypso-client/me/purchases/track-purchase-page-view';
+import {
+	currentUserHasFlag,
+	getCurrentUser,
+	getCurrentUserId,
+} from 'wp-calypso-client/state/current-user/selectors';
+import CartStore from 'wp-calypso-client/lib/cart/store';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
+import { hasCustomDomain } from 'wp-calypso-client/lib/site/utils';
+import { hasLoadedSiteDomains } from 'wp-calypso-client/state/sites/domains/selectors';
+import NonPrimaryDomainDialog from 'wp-calypso-client/me/purchases/non-primary-domain-dialog';
 
 /**
  * Style dependencies
@@ -556,7 +560,7 @@ class ManagePurchase extends Component {
 						editCardDetailsPath={ editCardDetailsPath }
 					/>
 					<AsyncLoad
-						require="blocks/product-plan-overlap-notices"
+						require="wp-calypso-client/blocks/product-plan-overlap-notices"
 						placeholder={ null }
 						plans={ JETPACK_PLANS }
 						products={ JETPACK_PRODUCTS_LIST }

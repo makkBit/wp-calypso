@@ -2,12 +2,12 @@
  * Internal dependencies
  */
 import { addApplicationPassword, apiTransformer, handleAddError, handleAddSuccess } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	createApplicationPassword,
 	createApplicationPasswordSuccess,
 	requestApplicationPasswords,
-} from 'state/application-passwords/actions';
+} from 'wp-calypso-client/state/application-passwords/actions';
 
 describe( 'addApplicationPassword()', () => {
 	test( 'should return an action for HTTP request to create an application password', () => {

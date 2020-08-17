@@ -6,8 +6,12 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSiteSlug, isJetpackSite, isSingleUserSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import {
+	getSiteSlug,
+	isJetpackSite,
+	isSingleUserSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 export const getPostTypeTrashUrl = ( state, postType ) => {
 	const siteId = getSelectedSiteId( state );

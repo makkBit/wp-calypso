@@ -11,9 +11,9 @@ const debug = debugFactory( 'calypso:site-users-fetcher' );
 /**
  * Internal dependencies
  */
-import UsersStore from 'lib/users/store';
-import { fetchUpdated, fetchUsers } from 'lib/users/actions';
-import pollers from 'lib/data-poller';
+import UsersStore from 'wp-calypso-client/lib/users/store';
+import { fetchUpdated, fetchUsers } from 'wp-calypso-client/lib/users/actions';
+import pollers from 'wp-calypso-client/lib/data-poller';
 
 /**
  * Module variables

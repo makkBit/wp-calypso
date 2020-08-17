@@ -10,13 +10,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DropZone from 'components/drop-zone';
-import { filterItemsByMimePrefix } from 'lib/media/utils';
+import DropZone from 'wp-calypso-client/components/drop-zone';
+import { filterItemsByMimePrefix } from 'wp-calypso-client/lib/media/utils';
 import ImageSelectorDropZoneIcon from './dropzone-icon';
 
-import { addMedia } from 'state/media/thunks';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
+import { addMedia } from 'wp-calypso-client/state/media/thunks';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
 
 class ImageSelectorDropZone extends Component {
 	static propTypes = {

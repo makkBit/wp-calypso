@@ -10,14 +10,14 @@ import { isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
 import { Card, Button } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormInputValidation from 'components/forms/form-input-validation';
-import ExternalLink from 'components/external-link';
-import { localizeUrl } from 'lib/i18n-utils';
-import { submitSignupStep } from 'state/signup/progress/actions';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 /**
  * Style dependencies

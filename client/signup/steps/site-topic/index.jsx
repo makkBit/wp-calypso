@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import SiteTopicForm from './form';
-import StepWrapper from 'signup/step-wrapper';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
-import { getSiteVerticalIsUserInput } from 'state/signup/steps/site-vertical/selectors';
-import { submitSiteVertical } from 'state/signup/steps/site-vertical/actions';
-import { saveSignupStep } from 'state/signup/progress/actions';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
+import { getSiteVerticalIsUserInput } from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { submitSiteVertical } from 'wp-calypso-client/state/signup/steps/site-vertical/actions';
+import { saveSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 class SiteTopicStep extends Component {
 	static propTypes = {

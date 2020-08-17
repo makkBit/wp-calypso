@@ -14,10 +14,10 @@ import PodcastFeedUrl from './feed-url';
 import PodcastingPrivateSiteMessage from './private-site';
 import PodcastingSupportLink from './support-link';
 import PodcastingPublishNotice from './publish-notice';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import isPrivateSite from 'state/selectors/is-private-site';
-import { getTerm } from 'state/terms/selectors';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import { getTerm } from 'wp-calypso-client/state/terms/selectors';
 
 class PodcastingLink extends Component {
 	render() {

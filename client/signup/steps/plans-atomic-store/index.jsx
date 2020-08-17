@@ -11,18 +11,18 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import getSiteId from 'state/selectors/get-site-id';
-import StepWrapper from 'signup/step-wrapper';
-import QueryPlans from 'components/data/query-plans';
-import QuerySitePlans from 'components/data/query-site-plans';
-import { getDesignType } from 'state/signup/steps/design-type/selectors';
-import { isEnabled } from 'config';
-import PlanFeatures from 'my-sites/plan-features';
-import { DESIGN_TYPE_STORE } from 'signup/constants';
-import { submitSignupStep } from 'state/signup/progress/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import { getDesignType } from 'wp-calypso-client/state/signup/steps/design-type/selectors';
+import { isEnabled } from 'wp-calypso-client/config';
+import PlanFeatures from 'wp-calypso-client/my-sites/plan-features';
+import { DESIGN_TYPE_STORE } from 'wp-calypso-client/signup/constants';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
-import { planHasFeature } from 'lib/plans';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
 import {
 	FEATURE_UPLOAD_THEMES_PLUGINS,
 	PLAN_FREE,
@@ -30,7 +30,7 @@ import {
 	PLAN_PREMIUM,
 	PLAN_BUSINESS,
 	PLAN_ECOMMERCE,
-} from 'lib/plans/constants';
+} from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style dependencies

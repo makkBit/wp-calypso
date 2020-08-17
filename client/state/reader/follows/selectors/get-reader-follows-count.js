@@ -6,7 +6,7 @@ import { size, filter } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /*
  * Get the count of follows a user has

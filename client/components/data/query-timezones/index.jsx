@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestTimezones } from 'state/timezones/actions';
+import { requestTimezones } from 'wp-calypso-client/state/timezones/actions';
 
 export class QueryTimezones extends Component {
 	static propTypes = {

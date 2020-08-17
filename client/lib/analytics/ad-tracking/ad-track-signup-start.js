@@ -1,7 +1,10 @@
 /**
  * Internal dependencies
  */
-import { isAdTrackingAllowed, refreshCountryCodeCookieGdpr } from 'lib/analytics/utils';
+import {
+	isAdTrackingAllowed,
+	refreshCountryCodeCookieGdpr,
+} from 'wp-calypso-client/lib/analytics/utils';
 
 import { getCurrentUser } from '@automattic/calypso-analytics';
 import { debug, isWpcomGoogleAdsGtagEnabled, isFloodlightEnabled, TRACKING_IDS } from './constants';

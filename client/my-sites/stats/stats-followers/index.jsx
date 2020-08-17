@@ -17,16 +17,16 @@ import StatsModulePlaceholder from '../stats-module/placeholder';
 import StatsList from '../stats-list';
 import ErrorPanel from '../stats-error';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import QuerySiteStats from 'components/data/query-site-stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 import {
 	isRequestingSiteStatsForQuery,
 	getSiteStatsNormalizedData,
 	hasSiteStatsQueryFailed,
-} from 'state/stats/lists/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/state/stats/lists/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class StatModuleFollowers extends Component {
 	state = {

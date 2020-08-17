@@ -5,13 +5,13 @@ import {
 	READER_CONVERSATION_FOLLOW,
 	READER_CONVERSATION_MUTE,
 	READER_CONVERSATION_UPDATE_FOLLOW_STATUS,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 import {
 	followConversation,
 	muteConversation,
 	updateConversationFollowStatus,
-} from 'state/reader/conversations/actions';
-import { CONVERSATION_FOLLOW_STATUS } from 'state/reader/conversations/follow-status';
+} from 'wp-calypso-client/state/reader/conversations/actions';
+import { CONVERSATION_FOLLOW_STATUS } from 'wp-calypso-client/state/reader/conversations/follow-status';
 
 describe( 'actions', () => {
 	describe( '#followConversation', () => {

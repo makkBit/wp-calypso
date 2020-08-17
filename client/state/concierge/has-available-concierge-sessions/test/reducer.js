@@ -2,7 +2,10 @@
  * Internal dependencies
  */
 import { hasAvailableConciergeSessions } from '../reducer';
-import { CONCIERGE_INITIAL_REQUEST, CONCIERGE_INITIAL_UPDATE } from 'state/action-types';
+import {
+	CONCIERGE_INITIAL_REQUEST,
+	CONCIERGE_INITIAL_UPDATE,
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'concierge/scheduleId/reducer', () => {
 	test( 'should default to null.', () => {

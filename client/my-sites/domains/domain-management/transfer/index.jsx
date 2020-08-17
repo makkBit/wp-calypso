@@ -8,23 +8,23 @@ import React from 'react';
  * Internal Dependencies
  */
 import { get } from 'lodash';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Header from 'my-sites/domains/domain-management/components/header';
-import getPrimaryDomainBySiteId from 'state/selectors/get-primary-domain-by-site-id';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isPrimaryDomainBySiteId from 'state/selectors/is-primary-domain-by-site-id';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import getPrimaryDomainBySiteId from 'wp-calypso-client/state/selectors/get-primary-domain-by-site-id';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isPrimaryDomainBySiteId from 'wp-calypso-client/state/selectors/is-primary-domain-by-site-id';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 import { localize } from 'i18n-calypso';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import {
 	domainManagementEdit,
 	domainManagementTransferOut,
 	domainManagementTransferToAnotherUser,
 	domainManagementTransferToOtherSite,
-} from 'my-sites/domains/paths';
-import VerticalNav from 'components/vertical-nav';
-import VerticalNavItem from 'components/vertical-nav/item';
-import getCurrentRoute from 'state/selectors/get-current-route';
+} from 'wp-calypso-client/my-sites/domains/paths';
+import VerticalNav from 'wp-calypso-client/components/vertical-nav';
+import VerticalNavItem from 'wp-calypso-client/components/vertical-nav/item';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 function Transfer( props ) {
 	const {

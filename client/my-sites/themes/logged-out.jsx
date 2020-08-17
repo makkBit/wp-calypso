@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import ThemeShowcase from './theme-showcase';
 import { connectOptions } from './theme-options';
 

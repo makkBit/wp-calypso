@@ -11,30 +11,34 @@ import { isEmpty, flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import HeaderCake from 'components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import { Card, ProgressBar } from '@automattic/components';
-import UploadDropZone from 'blocks/upload-drop-zone';
-import EligibilityWarnings from 'blocks/eligibility-warnings';
-import EmptyContent from 'components/empty-content';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryEligibility from 'components/data/query-atat-eligibility';
-import { uploadPlugin, clearPluginUpload } from 'state/plugins/upload/actions';
-import { initiateAutomatedTransferWithPluginZip } from 'state/automated-transfer/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import getPluginUploadError from 'state/selectors/get-plugin-upload-error';
-import getPluginUploadProgress from 'state/selectors/get-plugin-upload-progress';
-import getUploadedPluginId from 'state/selectors/get-uploaded-plugin-id';
-import isPluginUploadComplete from 'state/selectors/is-plugin-upload-complete';
-import isPluginUploadInProgress from 'state/selectors/is-plugin-upload-in-progress';
-import { getSiteAdminUrl, isJetpackSite, isJetpackSiteMultiSite } from 'state/sites/selectors';
+import UploadDropZone from 'wp-calypso-client/blocks/upload-drop-zone';
+import EligibilityWarnings from 'wp-calypso-client/blocks/eligibility-warnings';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryEligibility from 'wp-calypso-client/components/data/query-atat-eligibility';
+import { uploadPlugin, clearPluginUpload } from 'wp-calypso-client/state/plugins/upload/actions';
+import { initiateAutomatedTransferWithPluginZip } from 'wp-calypso-client/state/automated-transfer/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import getPluginUploadError from 'wp-calypso-client/state/selectors/get-plugin-upload-error';
+import getPluginUploadProgress from 'wp-calypso-client/state/selectors/get-plugin-upload-progress';
+import getUploadedPluginId from 'wp-calypso-client/state/selectors/get-uploaded-plugin-id';
+import isPluginUploadComplete from 'wp-calypso-client/state/selectors/is-plugin-upload-complete';
+import isPluginUploadInProgress from 'wp-calypso-client/state/selectors/is-plugin-upload-in-progress';
+import {
+	getSiteAdminUrl,
+	isJetpackSite,
+	isJetpackSiteMultiSite,
+} from 'wp-calypso-client/state/sites/selectors';
 import {
 	getEligibility,
 	isEligibleForAutomatedTransfer,
 	getAutomatedTransferStatus,
-} from 'state/automated-transfer/selectors';
-import { successNotice } from 'state/notices/actions';
-import { transferStates } from 'state/automated-transfer/constants';
+} from 'wp-calypso-client/state/automated-transfer/selectors';
+import { successNotice } from 'wp-calypso-client/state/notices/actions';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
 
 class PluginUpload extends React.Component {
 	state = {

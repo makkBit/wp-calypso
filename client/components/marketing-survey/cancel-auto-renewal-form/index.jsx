@@ -11,16 +11,16 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import { submitSurvey } from 'lib/purchases/actions';
-import { isDomainRegistration, isPlan } from 'lib/products-values';
-import enrichedSurveyData from 'components/marketing-survey/cancel-purchase-form/enriched-survey-data';
-import PrecancellationChatButton from 'components/marketing-survey/cancel-purchase-form/precancellation-chat-button';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import { submitSurvey } from 'wp-calypso-client/lib/purchases/actions';
+import { isDomainRegistration, isPlan } from 'wp-calypso-client/lib/products-values';
+import enrichedSurveyData from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form/enriched-survey-data';
+import PrecancellationChatButton from 'wp-calypso-client/components/marketing-survey/cancel-purchase-form/precancellation-chat-button';
 
 /**
  * Style dependencies

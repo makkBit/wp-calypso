@@ -7,35 +7,35 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { compact, includes, omit, reduce, get, partial } from 'lodash';
 import { localize } from 'i18n-calypso';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import SidebarItem from 'layout/sidebar/item';
-import { getPostTypes } from 'state/post-types/selectors';
-import QueryPostTypes from 'components/data/query-post-types';
-import { getSiteCommentCounts } from 'state/comments/selectors';
-import QuerySiteCommentCounts from 'components/data/query-site-comment-counts';
-import { bumpStat } from 'lib/analytics/mc';
-import { decodeEntities } from 'lib/formatting';
-import compareProps from 'lib/compare-props';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import { getPostTypes } from 'wp-calypso-client/state/post-types/selectors';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
+import { getSiteCommentCounts } from 'wp-calypso-client/state/comments/selectors';
+import QuerySiteCommentCounts from 'wp-calypso-client/components/data/query-site-comment-counts';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import compareProps from 'wp-calypso-client/lib/compare-props';
 import {
 	getSite,
 	getSiteAdminUrl,
 	getSiteSlug,
 	isJetpackSite,
 	isSingleUserSite,
-} from 'state/sites/selectors';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
-import areAllSitesSingleUser from 'state/selectors/are-all-sites-single-user';
-import { canCurrentUser as canCurrentUserStateSelector } from 'state/selectors/can-current-user';
+} from 'wp-calypso-client/state/sites/selectors';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
+import areAllSitesSingleUser from 'wp-calypso-client/state/selectors/are-all-sites-single-user';
+import { canCurrentUser as canCurrentUserStateSelector } from 'wp-calypso-client/state/selectors/can-current-user';
 import { itemLinkMatches } from './utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import isVipSite from 'state/selectors/is-vip-site';
-import { SIDEBAR_SECTION_SITE } from 'my-sites/sidebar/constants';
-import { expandMySitesSidebarSection as expandSection } from 'state/my-sites/sidebar/actions';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import { SIDEBAR_SECTION_SITE } from 'wp-calypso-client/my-sites/sidebar/constants';
+import { expandMySitesSidebarSection as expandSection } from 'wp-calypso-client/state/my-sites/sidebar/actions';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 class SiteMenu extends PureComponent {
 	static propTypes = {

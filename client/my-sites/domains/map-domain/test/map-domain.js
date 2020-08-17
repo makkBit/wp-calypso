@@ -13,9 +13,9 @@ import React from 'react';
  * Internal dependencies
  */
 import { MapDomain } from '..';
-import MapDomainStep from 'components/domains/map-domain-step';
-import HeaderCake from 'components/header-cake';
-import { domainManagementList } from 'my-sites/domains/paths';
+import MapDomainStep from 'wp-calypso-client/components/domains/map-domain-step';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import { domainManagementList } from 'wp-calypso-client/my-sites/domains/paths';
 
 jest.mock( 'lib/user', () => () => {} );
 jest.mock( 'page', () => {

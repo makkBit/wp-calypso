@@ -12,33 +12,33 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import MediaListData from 'components/data/media-list-data';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import MediaListData from 'wp-calypso-client/components/data/media-list-data';
 import {
 	ValidationErrors as MediaValidationErrors,
 	MEDIA_IMAGE_RESIZER,
 	MEDIA_IMAGE_THUMBNAIL,
-} from 'lib/media/constants';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSiteSlug } from 'state/sites/selectors';
+} from 'wp-calypso-client/lib/media/constants';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
 import MediaLibraryHeader from './header';
 import MediaLibraryExternalHeader from './external-media-header';
 import MediaLibraryList from './list';
-import InlineConnection from 'my-sites/marketing/connections/inline-connection';
+import InlineConnection from 'wp-calypso-client/my-sites/marketing/connections/inline-connection';
 import {
 	isKeyringConnectionsFetching,
 	getKeyringConnectionsByName,
-} from 'state/sharing/keyring/selectors';
-import { pauseGuidedTour, resumeGuidedTour } from 'state/guided-tours/actions';
-import { deleteKeyringConnection } from 'state/sharing/keyring/actions';
-import { getGuidedTourState } from 'state/guided-tours/selectors';
-import { withoutNotice } from 'state/notices/actions';
-import { clearMediaErrors, changeMediaSource } from 'state/media/actions';
+} from 'wp-calypso-client/state/sharing/keyring/selectors';
+import { pauseGuidedTour, resumeGuidedTour } from 'wp-calypso-client/state/guided-tours/actions';
+import { deleteKeyringConnection } from 'wp-calypso-client/state/sharing/keyring/actions';
+import { getGuidedTourState } from 'wp-calypso-client/state/guided-tours/selectors';
+import { withoutNotice } from 'wp-calypso-client/state/notices/actions';
+import { clearMediaErrors, changeMediaSource } from 'wp-calypso-client/state/media/actions';
 
 /**
  * Style dependencies

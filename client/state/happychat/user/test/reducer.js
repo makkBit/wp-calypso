@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { HAPPYCHAT_IO_RECEIVE_INIT, DESERIALIZE } from 'state/action-types';
+import { HAPPYCHAT_IO_RECEIVE_INIT, DESERIALIZE } from 'wp-calypso-client/state/action-types';
 import { geoLocation } from '../reducer';
 
 describe( '#geoLocation()', () => {

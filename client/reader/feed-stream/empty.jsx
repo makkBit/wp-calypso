@@ -7,8 +7,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 
 class FeedEmptyContent extends React.PureComponent {
 	recordAction = () => {

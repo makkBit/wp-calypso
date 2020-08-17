@@ -13,10 +13,10 @@ import {
 	JETPACK_CONNECT_AUTHORIZE_RECEIVE,
 	JETPACK_CONNECT_AUTHORIZE_RECEIVE_SITE_LIST,
 	JETPACK_CONNECT_QUERY_SET,
-} from 'state/jetpack-connect/action-types';
-import { DESERIALIZE, SERIALIZE, SITE_REQUEST_FAILURE } from 'state/action-types';
+} from 'wp-calypso-client/state/jetpack-connect/action-types';
+import { DESERIALIZE, SERIALIZE, SITE_REQUEST_FAILURE } from 'wp-calypso-client/state/action-types';
 
-import { useSandbox } from 'test-helpers/use-sinon';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( '#jetpackConnectAuthorize()', () => {
 	useSandbox( ( sandbox ) => {

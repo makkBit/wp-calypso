@@ -7,18 +7,18 @@ import { localize } from 'i18n-calypso';
 import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
-import FormCheckbox from 'components/forms/form-checkbox';
+import Popover from 'wp-calypso-client/components/popover';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
 import { Button } from '@automattic/components';
-import { setPreference, savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
-import { getSectionName } from 'state/ui/selectors';
-import QueryPreferences from 'components/data/query-preferences';
+import { setPreference, savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
 
 class EditorMediaModalGalleryHelp extends React.PureComponent {
 	static displayName = 'EditorMediaModalGalleryHelp';

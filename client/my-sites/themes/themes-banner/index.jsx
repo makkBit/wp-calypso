@@ -4,7 +4,7 @@
 
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
@@ -13,12 +13,12 @@ import Gridicon from 'components/gridicon';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 import { Button } from '@automattic/components';
-import safeImageUrl from 'lib/safe-image-url';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import { getActiveTheme, getThemeDetailsUrl } from 'state/themes/selectors';
-import { isThemesBannerVisible } from 'state/themes/themes-ui/selectors';
-import { hideThemesBanner as hideThemesBannerAction } from 'state/themes/themes-ui/actions';
+import safeImageUrl from 'wp-calypso-client/lib/safe-image-url';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import { getActiveTheme, getThemeDetailsUrl } from 'wp-calypso-client/state/themes/selectors';
+import { isThemesBannerVisible } from 'wp-calypso-client/state/themes/themes-ui/selectors';
+import { hideThemesBanner as hideThemesBannerAction } from 'wp-calypso-client/state/themes/themes-ui/actions';
 
 /**
  * Style dependencies

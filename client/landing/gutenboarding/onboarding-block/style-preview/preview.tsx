@@ -10,7 +10,7 @@ import { useSelect } from '@wordpress/data';
  */
 import { STORE_KEY } from '../../stores/onboard';
 import { useLangRouteParam } from '../../path';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import { fontPairings } from '../../constants';
 import type { Viewport } from './types';
 

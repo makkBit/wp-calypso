@@ -9,8 +9,8 @@ import { isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import { fetchPlugins } from 'state/plugins/installed/actions';
-import { isRequestingForSites } from 'state/plugins/installed/selectors';
+import { fetchPlugins } from 'wp-calypso-client/state/plugins/installed/actions';
+import { isRequestingForSites } from 'wp-calypso-client/state/plugins/installed/selectors';
 
 class QueryJetpackPlugins extends Component {
 	static propTypes = {

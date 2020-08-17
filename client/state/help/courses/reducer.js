@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 
-import { combineReducers } from 'state/utils';
-import { HELP_COURSES_RECEIVE } from 'state/action-types';
+import { combineReducers } from 'wp-calypso-client/state/utils';
+import { HELP_COURSES_RECEIVE } from 'wp-calypso-client/state/action-types';
 
 export const items = ( state = null, action ) => {
 	switch ( action.type ) {

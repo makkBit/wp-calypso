@@ -13,9 +13,9 @@ import { identity, includes, noop, without } from 'lodash';
  * Internal dependencies
  */
 import { RootChild } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import { hideDropZone, showDropZone } from 'state/drop-zone/actions';
-import TranslatableString from 'components/translatable/proptype';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { hideDropZone, showDropZone } from 'wp-calypso-client/state/drop-zone/actions';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
 
 /**
  * Style dependencies

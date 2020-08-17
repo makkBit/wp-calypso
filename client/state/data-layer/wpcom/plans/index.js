@@ -1,15 +1,15 @@
 /**
  * Internal dependencies
  */
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { PLANS_REQUEST } from 'state/action-types';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { PLANS_REQUEST } from 'wp-calypso-client/state/action-types';
 import {
 	plansReceiveAction,
 	plansRequestFailureAction,
 	plansRequestSuccessAction,
-} from 'state/plans/actions';
+} from 'wp-calypso-client/state/plans/actions';
 
 /**
  * @module state/data-layer/wpcom/plans

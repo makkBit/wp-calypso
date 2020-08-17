@@ -8,9 +8,9 @@ import {
 	EDITOR_CONTACT_FORM_FIELD_REMOVE,
 	EDITOR_CONTACT_FORM_FIELD_UPDATE,
 	EDITOR_CONTACT_FORM_SETTINGS_UPDATE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 export function formClear() {
 	return {

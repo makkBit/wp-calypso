@@ -6,7 +6,7 @@ import {
 	MY_SITES_SIDEBAR_SECTION_TOGGLE,
 	MY_SITES_SIDEBAR_SECTION_EXPAND,
 	MY_SITES_SIDEBAR_SECTION_COLLAPSE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const createSidebarAction = ( type ) => ( sidebarSection ) => ( {
 	type,

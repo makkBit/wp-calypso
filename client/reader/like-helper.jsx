@@ -1,7 +1,11 @@
 /**
  * Internal dependencies
  */
-import { isDiscoverPost, isInternalDiscoverPost, isDiscoverSitePick } from 'reader/discover/helper';
+import {
+	isDiscoverPost,
+	isInternalDiscoverPost,
+	isDiscoverSitePick,
+} from 'wp-calypso-client/reader/discover/helper';
 
 export function shouldShowLikes( post ) {
 	let showLikes = false;

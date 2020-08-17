@@ -11,10 +11,10 @@ import { isFunction } from 'lodash';
  * Internal dependencies
  */
 import DocService from './service';
-import DocumentHead from 'components/data/document-head';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import { Card } from '@automattic/components';
-import Main from 'components/main';
-import SearchCard from 'components/search-card';
+import Main from 'wp-calypso-client/components/main';
+import SearchCard from 'wp-calypso-client/components/search-card';
 
 /**
  * Style dependencies

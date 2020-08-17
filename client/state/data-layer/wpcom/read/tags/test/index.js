@@ -8,13 +8,13 @@ import { map } from 'lodash';
  * Internal dependencies
  */
 import { requestTags, receiveTagsSuccess, receiveTagsError } from '../';
-import { NOTICE_CREATE } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { fromApi } from 'state/data-layer/wpcom/read/tags/utils';
+import { NOTICE_CREATE } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { fromApi } from 'wp-calypso-client/state/data-layer/wpcom/read/tags/utils';
 import {
 	requestTags as requestTagsAction,
 	receiveTags as receiveTagsAction,
-} from 'state/reader/tags/items/actions';
+} from 'wp-calypso-client/state/reader/tags/items/actions';
 
 const successfulFollowedTagsResponse = deepFreeze( {
 	tags: [

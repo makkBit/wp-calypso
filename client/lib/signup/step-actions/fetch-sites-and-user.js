@@ -6,12 +6,12 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import user from 'lib/user';
+import user from 'wp-calypso-client/lib/user';
 
 // State actions and selectors
-import getSiteId from 'state/selectors/get-site-id';
-import { requestSites } from 'state/sites/actions';
-import { promisify } from 'utils';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import { requestSites } from 'wp-calypso-client/state/sites/actions';
+import { promisify } from 'wp-calypso-client/utils';
 
 /**
  * Constants

@@ -8,7 +8,7 @@ import React, { PureComponent, ReactNode } from 'react';
  * Internal dependencies
  */
 import LogItem from '../';
-import CardHeading from 'components/card-heading';
+import CardHeading from 'wp-calypso-client/components/card-heading';
 
 export default class LogItemExample extends PureComponent {
 	static displayName = 'LogItem';

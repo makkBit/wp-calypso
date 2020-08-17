@@ -11,11 +11,11 @@ import React from 'react';
  */
 import hasLocalizedText from './has-localized-text';
 import { Button } from '@automattic/components';
-import CardHeading from 'components/card-heading';
-import Gridicon from 'components/gridicon';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { localizeUrl } from 'lib/i18n-utils';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 // Mapping eligibility holds to messages that will be shown to the user
 function getHoldMessages( context: string | null, translate: LocalizeProps[ 'translate' ] ) {

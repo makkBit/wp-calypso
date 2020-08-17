@@ -11,13 +11,13 @@ import i18n from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
-import InviteAccept from 'my-sites/invites/invite-accept';
-import { hideSidebar } from 'state/ui/actions';
-import { getRedirectAfterAccept } from 'my-sites/invites/utils';
-import { acceptInvite as acceptInviteAction } from 'lib/invites/actions';
-import user from 'lib/user';
-import { getLocaleFromPath, removeLocaleFromPath } from 'lib/i18n-utils';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
+import InviteAccept from 'wp-calypso-client/my-sites/invites/invite-accept';
+import { hideSidebar } from 'wp-calypso-client/state/ui/actions';
+import { getRedirectAfterAccept } from 'wp-calypso-client/my-sites/invites/utils';
+import { acceptInvite as acceptInviteAction } from 'wp-calypso-client/lib/invites/actions';
+import user from 'wp-calypso-client/lib/user';
+import { getLocaleFromPath, removeLocaleFromPath } from 'wp-calypso-client/lib/i18n-utils';
 
 /**
  * Module variables

@@ -7,9 +7,9 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import SegmentedControl from 'components/segmented-control';
-import SelectDropdown from 'components/select-dropdown';
-import { TERM_MONTHLY, TERM_ANNUALLY } from 'lib/plans/constants';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import { TERM_MONTHLY, TERM_ANNUALLY } from 'wp-calypso-client/lib/plans/constants';
 import { PRODUCT_TYPE_OPTIONS } from '../constants';
 
 /**

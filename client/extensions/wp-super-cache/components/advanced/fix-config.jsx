@@ -12,9 +12,9 @@ import { flowRight } from 'lodash';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { restoreSettings } from '../../state/settings/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { isRestoringSettings } from '../../state/settings/selectors';
 
 class FixConfig extends Component {

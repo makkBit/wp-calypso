@@ -8,8 +8,8 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { newPost } from 'lib/paths';
-import PurchaseDetail from 'components/purchase-detail';
+import { newPost } from 'wp-calypso-client/lib/paths';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 
 const ChargebackDetails = ( { selectedSite } ) => {
 	return (

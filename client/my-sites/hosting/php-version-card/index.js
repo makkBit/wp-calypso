@@ -9,16 +9,16 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import CardHeading from 'components/card-heading';
-import FormSelect from 'components/forms/form-select';
-import FormLabel from 'components/forms/form-label';
-import MaterialIcon from 'components/material-icon';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Spinner from 'components/spinner';
-import { updateAtomicPhpVersion } from 'state/hosting/actions';
-import { getAtomicHostingPhpVersion } from 'state/selectors/get-atomic-hosting-php-version';
-import QuerySitePhpVersion from 'components/data/query-site-php-version';
-import getRequest from 'state/selectors/get-request';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { updateAtomicPhpVersion } from 'wp-calypso-client/state/hosting/actions';
+import { getAtomicHostingPhpVersion } from 'wp-calypso-client/state/selectors/get-atomic-hosting-php-version';
+import QuerySitePhpVersion from 'wp-calypso-client/components/data/query-site-php-version';
+import getRequest from 'wp-calypso-client/state/selectors/get-request';
 
 /**
  * Style dependencies

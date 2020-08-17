@@ -7,8 +7,8 @@ import createDebug from 'debug';
  * Internal dependencies
  */
 import { lasagna } from './middleware';
-import { getCurrentUserLasagnaJwt } from 'state/current-user/selectors';
-import { socketConnected, socketDisconnected } from 'state/lasagna/actions';
+import { getCurrentUserLasagnaJwt } from 'wp-calypso-client/state/current-user/selectors';
+import { socketConnected, socketDisconnected } from 'wp-calypso-client/state/lasagna/actions';
 
 const debug = createDebug( 'lasagna:socket' );
 

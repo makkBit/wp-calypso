@@ -6,7 +6,7 @@ import { overEvery, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import QueryManager from 'lib/query-manager';
+import QueryManager from 'wp-calypso-client/lib/query-manager';
 
 /**
  * ActivityQueryManager manages Activity which can be queried

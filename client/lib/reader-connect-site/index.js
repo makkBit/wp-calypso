@@ -9,10 +9,10 @@ import { connect } from 'react-redux';
 /*
  * Internal Dependencies
  */
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
 
 /**
  * A HoC function that will take in reader identifiers siteId or feedId and

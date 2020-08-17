@@ -10,11 +10,11 @@ const debug = debugFactory( 'calypso:my-sites:posts' );
 /**
  * Internal Dependencies
  */
-import areAllSitesSingleUser from 'state/selectors/are-all-sites-single-user';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite, isSingleUserSite } from 'state/sites/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import Posts from 'my-sites/posts/main';
+import areAllSitesSingleUser from 'wp-calypso-client/state/selectors/are-all-sites-single-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite, isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import Posts from 'wp-calypso-client/my-sites/posts/main';
 
 export default {
 	posts: function ( context, next ) {

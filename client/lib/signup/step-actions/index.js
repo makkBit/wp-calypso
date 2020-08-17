@@ -21,46 +21,58 @@ import {
  */
 
 // Libraries
-import wpcom from 'lib/wp';
-import guessTimezone from 'lib/i18n-utils/guess-timezone';
-import user from 'lib/user';
-import { getSavedVariations } from 'lib/abtest';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { recordRegistration } from 'lib/analytics/signup';
+import wpcom from 'wp-calypso-client/lib/wp';
+import guessTimezone from 'wp-calypso-client/lib/i18n-utils/guess-timezone';
+import user from 'wp-calypso-client/lib/user';
+import { getSavedVariations } from 'wp-calypso-client/lib/abtest';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { recordRegistration } from 'wp-calypso-client/lib/analytics/signup';
 import {
 	updatePrivacyForDomain,
 	supportsPrivacyProtectionPurchase,
 	planItem as getCartItemForPlan,
-} from 'lib/cart-values/cart-items';
-import { getUrlParts } from 'lib/url';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
 
 // State actions and selectors
-import { getDesignType } from 'state/signup/steps/design-type/selectors';
-import { getSiteTitle } from 'state/signup/steps/site-title/selectors';
-import { getSurveyVertical, getSurveySiteType } from 'state/signup/steps/survey/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getSiteVerticalId, getSiteVerticalName } from 'state/signup/steps/site-vertical/selectors';
-import { getSiteGoals } from 'state/signup/steps/site-goals/selectors';
-import { getSiteStyle } from 'state/signup/steps/site-style/selectors';
-import { getUserExperience } from 'state/signup/steps/user-experience/selectors';
-import { getSignupDependencyStore } from 'state/signup/dependency-store/selectors';
-import { getProductsList } from 'state/products-list/selectors';
-import { getSelectedImportEngine, getNuxUrlInputValue } from 'state/importer-nux/temp-selectors';
-import getNewSitePublicSetting from 'state/selectors/get-new-site-public-setting';
-import getNewSiteComingSoonSetting from 'state/selectors/get-new-site-coming-soon-setting';
+import { getDesignType } from 'wp-calypso-client/state/signup/steps/design-type/selectors';
+import { getSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/selectors';
+import {
+	getSurveyVertical,
+	getSurveySiteType,
+} from 'wp-calypso-client/state/signup/steps/survey/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import {
+	getSiteVerticalId,
+	getSiteVerticalName,
+} from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { getSiteGoals } from 'wp-calypso-client/state/signup/steps/site-goals/selectors';
+import { getSiteStyle } from 'wp-calypso-client/state/signup/steps/site-style/selectors';
+import { getUserExperience } from 'wp-calypso-client/state/signup/steps/user-experience/selectors';
+import { getSignupDependencyStore } from 'wp-calypso-client/state/signup/dependency-store/selectors';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import {
+	getSelectedImportEngine,
+	getNuxUrlInputValue,
+} from 'wp-calypso-client/state/importer-nux/temp-selectors';
+import getNewSitePublicSetting from 'wp-calypso-client/state/selectors/get-new-site-public-setting';
+import getNewSiteComingSoonSetting from 'wp-calypso-client/state/selectors/get-new-site-coming-soon-setting';
 
 // Current directory dependencies
-import { isValidLandingPageVertical } from 'lib/signup/verticals';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
+import { isValidLandingPageVertical } from 'wp-calypso-client/lib/signup/verticals';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
 
-import SignupCart from 'lib/signup/cart';
+import SignupCart from 'wp-calypso-client/lib/signup/cart';
 
 // Others
-import flows from 'signup/config/flows';
-import steps, { isDomainStepSkippable } from 'signup/config/steps';
-import { isEligibleForPageBuilder, shouldEnterPageBuilder } from 'lib/signup/page-builder';
+import flows from 'wp-calypso-client/signup/config/flows';
+import steps, { isDomainStepSkippable } from 'wp-calypso-client/signup/config/steps';
+import {
+	isEligibleForPageBuilder,
+	shouldEnterPageBuilder,
+} from 'wp-calypso-client/lib/signup/page-builder';
 
-import { fetchSitesAndUser } from 'lib/signup/step-actions/fetch-sites-and-user';
+import { fetchSitesAndUser } from 'wp-calypso-client/lib/signup/step-actions/fetch-sites-and-user';
 
 /**
  * Constants

@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { ANALYTICS_EVENT_RECORD } from 'state/action-types';
-import { getLastAction } from 'state/ui/action-log/selectors';
+import { ANALYTICS_EVENT_RECORD } from 'wp-calypso-client/state/action-types';
+import { getLastAction } from 'wp-calypso-client/state/ui/action-log/selectors';
 
 /**
  * Returns a selector that tests whether a certain analytics event has been

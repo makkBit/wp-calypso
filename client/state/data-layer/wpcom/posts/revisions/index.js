@@ -6,11 +6,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { POST_REVISIONS_REQUEST } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receivePostRevisions } from 'state/posts/revisions/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { POST_REVISIONS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receivePostRevisions } from 'wp-calypso-client/state/posts/revisions/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Dispatches returned post revisions

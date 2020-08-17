@@ -6,9 +6,12 @@ import uniqueId from 'lodash/uniqueId';
 /**
  * Internal dependencies
  */
-import { saveSiteSettings, updateSiteSettings } from 'state/site-settings/actions';
-import { errorNotice } from 'state/notices/actions';
-import { addMedia } from 'state/media/thunks/add-media';
+import {
+	saveSiteSettings,
+	updateSiteSettings,
+} from 'wp-calypso-client/state/site-settings/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { addMedia } from 'wp-calypso-client/state/media/thunks/add-media';
 
 const updateSiteIcon = ( siteId, mediaId ) => updateSiteSettings( siteId, { site_icon: mediaId } );
 

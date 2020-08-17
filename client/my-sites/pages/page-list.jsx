@@ -11,28 +11,28 @@ import { flowRight, isEqual, size, without } from 'lodash';
 /**
  * Internal dependencies
  */
-import ListEnd from 'components/list-end';
-import QueryPosts from 'components/data/query-posts';
+import ListEnd from 'wp-calypso-client/components/list-end';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
 import Page from './page';
-import { preload } from 'sections-helper';
-import InfiniteScroll from 'components/infinite-scroll';
-import EmptyContent from 'components/empty-content';
-import NoResults from 'my-sites/no-results';
+import { preload } from 'wp-calypso-client/sections-helper';
+import InfiniteScroll from 'wp-calypso-client/components/infinite-scroll';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import NoResults from 'wp-calypso-client/my-sites/no-results';
 import Placeholder from './placeholder';
 import { sortPagesHierarchically } from './helpers';
 import BlogPostsPage from './blog-posts-page';
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
 import {
 	getPostsForQueryIgnoringPage,
 	isRequestingPostsForQuery,
 	isPostsLastPageForQuery,
-} from 'state/posts/selectors';
-import { getSite } from 'state/sites/selectors';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import SectionHeader from 'components/section-header';
+} from 'wp-calypso-client/state/posts/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 import { Button } from '@automattic/components';
-import { withLocalizedMoment } from 'components/localized-moment';
-import config from 'config';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import config from 'wp-calypso-client/config';
 
 function preloadEditor() {
 	preload( 'post-editor' );

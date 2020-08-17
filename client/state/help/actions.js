@@ -7,11 +7,11 @@ import {
 	HELP_LINKS_REQUEST,
 	SUPPORT_HISTORY_REQUEST,
 	SUPPORT_HISTORY_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/help/search';
-import 'state/data-layer/wpcom/help/support-history';
-import 'state/help/init';
+import 'wp-calypso-client/state/data-layer/wpcom/help/search';
+import 'wp-calypso-client/state/data-layer/wpcom/help/support-history';
+import 'wp-calypso-client/state/help/init';
 
 export const selectSiteId = ( siteId ) => ( {
 	type: HELP_CONTACT_FORM_SITE_SELECT,

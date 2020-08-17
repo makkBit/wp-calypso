@@ -6,16 +6,16 @@ import { start, stop } from '@automattic/browser-data-collector';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { abtest } from 'lib/abtest';
+import config from 'wp-calypso-client/config';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 import { CONFIG_NAME, AB_NAME, AB_VARIATION_ON } from './const';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite, isSingleUserSite } from 'state/sites/selectors';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite, isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
 import {
 	getCurrentUserSiteCount,
 	getCurrentUserVisibleSiteCount,
-} from 'state/current-user/selectors';
+} from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * This reporter is added to _all_ performance tracking metrics.

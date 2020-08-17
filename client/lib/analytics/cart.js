@@ -6,9 +6,9 @@ import { differenceWith, get, isEqual, each, omit } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { recordAddToCart } from 'lib/analytics/record-add-to-cart';
-import { getAllCartItems } from 'lib/cart-values/cart-items';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { recordAddToCart } from 'wp-calypso-client/lib/analytics/record-add-to-cart';
+import { getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
 
 export function recordEvents( previousCart, nextCart ) {
 	const previousItems = getAllCartItems( previousCart );

@@ -7,8 +7,8 @@
  */
 
 import suggestions from './suggestions/reducer';
-import { combineReducers } from 'state/utils';
-import { CURRENT_USER_RECEIVE } from 'state/action-types';
+import { combineReducers } from 'wp-calypso-client/state/utils';
+import { CURRENT_USER_RECEIVE } from 'wp-calypso-client/state/action-types';
 
 /**
  * Tracks user objects, indexed by user ID.

@@ -7,8 +7,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestSiteInvites } from 'state/invites/actions';
-import { isRequestingInvitesForSite } from 'state/invites/selectors';
+import { requestSiteInvites } from 'wp-calypso-client/state/invites/actions';
+import { isRequestingInvitesForSite } from 'wp-calypso-client/state/invites/selectors';
 
 class QuerySiteInvites extends Component {
 	UNSAFE_componentWillMount() {

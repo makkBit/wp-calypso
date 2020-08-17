@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import { isThemePremium } from 'state/themes/selectors/is-theme-premium';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { isThemePremium } from 'wp-calypso-client/state/themes/selectors/is-theme-premium';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns the URL for purchasing the given theme for the given site.

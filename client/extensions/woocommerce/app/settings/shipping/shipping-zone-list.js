@@ -21,10 +21,10 @@ import {
 	areSettingsGeneralLoaded,
 	areSettingsGeneralLoadError,
 } from 'woocommerce/state/sites/settings/general/selectors';
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 import { getLink } from 'woocommerce/lib/nav-utils';
 import { getShippingZones } from 'woocommerce/state/ui/shipping/zones/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { areShippingZonesLocationsValid } from 'woocommerce/state/sites/shipping-zone-locations/selectors';
 import { getActionList } from 'woocommerce/state/action-list/selectors';
 import { createAddDefultShippingZoneActionList } from 'woocommerce/state/ui/shipping/zones/actions';

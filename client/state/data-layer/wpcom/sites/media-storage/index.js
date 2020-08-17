@@ -2,16 +2,16 @@
  * Internal dependencies
  */
 
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	SITE_MEDIA_STORAGE_REQUEST,
 	SITE_MEDIA_STORAGE_REQUEST_SUCCESS,
 	SITE_MEDIA_STORAGE_REQUEST_FAILURE,
-} from 'state/action-types';
-import { receiveMediaStorage } from 'state/sites/media-storage/actions';
+} from 'wp-calypso-client/state/action-types';
+import { receiveMediaStorage } from 'wp-calypso-client/state/sites/media-storage/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestMediaStorage( action ) {
 	return [

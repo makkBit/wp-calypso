@@ -8,15 +8,18 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import ReaderPostCard from 'blocks/reader-post-card';
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import { recordAction, recordGaEvent, recordTrackForPost } from 'reader/stats';
-import { getSourceData as getDiscoverSourceData, discoverBlogId } from 'reader/discover/helper';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import QueryReaderPost from 'components/data/query-reader-post';
+import ReaderPostCard from 'wp-calypso-client/blocks/reader-post-card';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import { recordAction, recordGaEvent, recordTrackForPost } from 'wp-calypso-client/reader/stats';
+import {
+	getSourceData as getDiscoverSourceData,
+	discoverBlogId,
+} from 'wp-calypso-client/reader/discover/helper';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
 
 class ReaderPostCardAdapter extends React.Component {
 	static displayName = 'ReaderPostCardAdapter';

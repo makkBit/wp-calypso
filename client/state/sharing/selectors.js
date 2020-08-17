@@ -6,13 +6,13 @@ import { some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { getKeyringConnectionsByName } from './keyring/selectors';
 import { getSiteUserConnectionsForService } from './publicize/selectors';
 import { getKeyringServiceByName } from './services/selectors';
 
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 /**
  * Given a service, returns a flattened array of all possible accounts for the

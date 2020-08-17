@@ -6,11 +6,11 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { HOSTING_RESTORE_DATABASE_PASSWORD } from 'state/action-types';
-import { errorNotice, successNotice } from 'state/notices/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { HOSTING_RESTORE_DATABASE_PASSWORD } from 'wp-calypso-client/state/action-types';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 
 const requestRestoreDatabasePassword = ( action ) =>
 	http(

@@ -13,15 +13,15 @@ const debug = debugFactory( 'calypso:me:security:2fa-enable' );
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import FormButton from 'components/forms/form-button';
-import FormButtonsBar from 'components/forms/form-buttons-bar';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormVerificationCodeInput from 'components/forms/form-verification-code-input';
-import Notice from 'components/notice';
-import Security2faProgress from 'me/security-2fa-progress';
-import twoStepAuthorization from 'lib/two-step-authorization';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormButtonsBar from 'wp-calypso-client/components/forms/form-buttons-bar';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormVerificationCodeInput from 'wp-calypso-client/components/forms/form-verification-code-input';
+import Notice from 'wp-calypso-client/components/notice';
+import Security2faProgress from 'wp-calypso-client/me/security-2fa-progress';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
 
 /**
  * Style dependencies

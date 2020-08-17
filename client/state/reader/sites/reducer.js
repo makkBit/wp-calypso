@@ -12,12 +12,16 @@ import {
 	READER_SITE_REQUEST_SUCCESS,
 	READER_SITE_REQUEST_FAILURE,
 	READER_SITE_UPDATE,
-} from 'state/reader/action-types';
-import { SERIALIZE } from 'state/action-types';
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/reader/action-types';
+import { SERIALIZE } from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { readerSitesSchema } from './schema';
-import { withoutHttp } from 'lib/url';
-import { decodeEntities } from 'lib/formatting';
+import { withoutHttp } from 'wp-calypso-client/lib/url';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 function handleSerialize( state ) {
 	// remove errors from the serialized state

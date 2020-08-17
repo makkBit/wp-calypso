@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/products-list/init';
+import 'wp-calypso-client/state/products-list/init';
 
 export function isProductsListFetching( state ) {
 	return state.productsList.isFetching;

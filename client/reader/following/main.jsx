@@ -6,27 +6,27 @@ import { localize } from 'i18n-calypso';
 import page from 'page';
 import { initial, flatMap, trim } from 'lodash';
 import { connect, useDispatch } from 'react-redux';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import BlankSuggestions from 'reader/components/reader-blank-suggestions';
-import Stream from 'reader/stream';
+import BlankSuggestions from 'wp-calypso-client/reader/components/reader-blank-suggestions';
+import Stream from 'wp-calypso-client/reader/stream';
 import { CompactCard, Button } from '@automattic/components';
-import SearchInput from 'components/search';
-import { recordTrack } from 'reader/stats';
-import Suggestion from 'reader/search-stream/suggestion';
-import SuggestionProvider from 'reader/search-stream/suggestion-provider';
+import SearchInput from 'wp-calypso-client/components/search';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import Suggestion from 'wp-calypso-client/reader/search-stream/suggestion';
+import SuggestionProvider from 'wp-calypso-client/reader/search-stream/suggestion-provider';
 import FollowingIntro from './intro';
-import { getSearchPlaceholderText } from 'reader/search/utils';
-import Banner from 'components/banner';
-import { getCurrentUserCountryCode } from 'state/current-user/selectors';
-import SectionHeader from 'components/section-header';
-import { requestMarkAllAsSeen } from 'state/reader/seen-posts/actions';
-import { SECTION_FOLLOWING } from 'state/reader/seen-posts/constants';
-import { getReaderOrganizationFeedsInfo } from 'state/reader/organizations/selectors';
-import { NO_ORG_ID } from 'state/reader/organizations/constants';
+import { getSearchPlaceholderText } from 'wp-calypso-client/reader/search/utils';
+import Banner from 'wp-calypso-client/components/banner';
+import { getCurrentUserCountryCode } from 'wp-calypso-client/state/current-user/selectors';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { requestMarkAllAsSeen } from 'wp-calypso-client/state/reader/seen-posts/actions';
+import { SECTION_FOLLOWING } from 'wp-calypso-client/state/reader/seen-posts/constants';
+import { getReaderOrganizationFeedsInfo } from 'wp-calypso-client/state/reader/organizations/selectors';
+import { NO_ORG_ID } from 'wp-calypso-client/state/reader/organizations/constants';
 
 /**
  * Style dependencies

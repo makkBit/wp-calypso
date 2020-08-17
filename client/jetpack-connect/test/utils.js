@@ -5,7 +5,7 @@
  * External dependencies
  */
 import page from 'page';
-import { externalRedirect } from 'lib/route';
+import { externalRedirect } from 'wp-calypso-client/lib/route';
 
 /**
  * Internal dependencies

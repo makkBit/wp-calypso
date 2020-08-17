@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { combineReducers } from 'state/utils';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 import { WOOCOMMERCE_UI_ORDERS_SET_QUERY } from 'woocommerce/state/action-types';
 
 /**

@@ -12,19 +12,19 @@ import emailValidator from 'email-validator';
 /**
  * Internal dependencies
  */
-import QueryContactDetailsCache from 'components/data/query-contact-details-cache';
-import QueryTldValidationSchemas from 'components/data/query-tld-validation-schemas';
+import QueryContactDetailsCache from 'wp-calypso-client/components/data/query-contact-details-cache';
+import QueryTldValidationSchemas from 'wp-calypso-client/components/data/query-tld-validation-schemas';
 import PaymentBox from './payment-box';
-import FormButton from 'components/forms/form-button';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 import SecurePaymentFormPlaceholder from './secure-payment-form-placeholder.jsx';
-import wp from 'lib/wp';
-import config from 'config';
-import ContactDetailsFormFields from 'components/domains/contact-details-form-fields';
+import wp from 'wp-calypso-client/lib/wp';
+import config from 'wp-calypso-client/config';
+import ContactDetailsFormFields from 'wp-calypso-client/components/domains/contact-details-form-fields';
 import ExtraInfoForm, {
 	getApplicableTldsWithAdditionalDetailsForms,
-} from 'components/domains/registrant-extra-info';
-import { setDomainDetails } from 'lib/transaction/actions';
-import { addGoogleAppsRegistrationData } from 'lib/cart/actions';
+} from 'wp-calypso-client/components/domains/registrant-extra-info';
+import { setDomainDetails } from 'wp-calypso-client/lib/transaction/actions';
+import { addGoogleAppsRegistrationData } from 'wp-calypso-client/lib/cart/actions';
 import {
 	getDomainRegistrations,
 	getDomainTransfers,
@@ -37,11 +37,11 @@ import {
 	hasTld,
 	hasSomeDomainProductsWithPrivacySupport,
 	hasAllDomainProductsWithPrivacySupport,
-} from 'lib/cart-values/cart-items';
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
-import { updateContactDetailsCache } from 'state/domains/management/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { PUBLIC_VS_PRIVATE } from 'lib/url/support';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
+import { updateContactDetailsCache } from 'wp-calypso-client/state/domains/management/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { PUBLIC_VS_PRIVATE } from 'wp-calypso-client/lib/url/support';
 
 const debug = debugFactory( 'calypso:my-sites:upgrades:checkout:domain-details' );
 const wpcom = wp.undocumented();

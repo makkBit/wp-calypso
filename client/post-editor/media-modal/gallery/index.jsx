@@ -10,16 +10,16 @@ import { noop, assign, omitBy, some, isEqual, partial } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import EditorMediaModalContent from '../content';
 import EditorMediaModalGalleryDropZone from './drop-zone';
 import EditorMediaModalGalleryFields from './fields';
 import EditorMediaModalGalleryPreview from './preview';
-import { GalleryDefaultAttrs } from 'lib/media/constants';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { setEditorMediaModalView } from 'state/editor/actions';
-import { isModuleActive } from 'lib/site/utils';
-import getMediaItem from 'state/media/thunks/get-media-item';
+import { GalleryDefaultAttrs } from 'wp-calypso-client/lib/media/constants';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
+import { isModuleActive } from 'wp-calypso-client/lib/site/utils';
+import getMediaItem from 'wp-calypso-client/state/media/thunks/get-media-item';
 
 /**
  * Style dependencies

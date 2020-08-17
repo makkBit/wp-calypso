@@ -6,28 +6,28 @@ import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
 import { camelCase, values } from 'lodash';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import debugFactory from 'debug';
 
 /**
  * Internal dependencies
  */
 import { Card, CompactCard } from '@automattic/components';
-import CreditCardFormFields from 'components/credit-card-form-fields';
-import FormButton from 'components/forms/form-button';
-import notices from 'notices';
-import { validatePaymentDetails } from 'lib/checkout';
-import ValidationErrorList from 'notices/validation-error-list';
-import { AUTO_RENEWAL, MANAGE_PURCHASES } from 'lib/url/support';
-import getCountries from 'state/selectors/get-countries';
-import QueryPaymentCountries from 'components/data/query-countries/payments';
-import { localizeUrl } from 'lib/i18n-utils';
+import CreditCardFormFields from 'wp-calypso-client/components/credit-card-form-fields';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import notices from 'wp-calypso-client/notices';
+import { validatePaymentDetails } from 'wp-calypso-client/lib/checkout';
+import ValidationErrorList from 'wp-calypso-client/notices/validation-error-list';
+import { AUTO_RENEWAL, MANAGE_PURCHASES } from 'wp-calypso-client/lib/url/support';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import QueryPaymentCountries from 'wp-calypso-client/components/data/query-countries/payments';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 import {
 	createStripeSetupIntent,
 	StripeSetupIntentError,
 	StripeValidationError,
 	useStripe,
-} from 'lib/stripe';
+} from 'wp-calypso-client/lib/stripe';
 import {
 	getInitializedFields,
 	camelCaseFormFields,

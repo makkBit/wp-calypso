@@ -8,18 +8,18 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { identity } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { ScreenReaderText } from '@automattic/components';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import UsersStore from 'lib/users/store';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import UsersStore from 'wp-calypso-client/lib/users/store';
 
 class SharingConnection extends Component {
 	static propTypes = {

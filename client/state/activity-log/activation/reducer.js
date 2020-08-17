@@ -11,8 +11,8 @@ import {
 	REWIND_ACTIVATE_FAILURE,
 	REWIND_ACTIVATE_REQUEST,
 	REWIND_ACTIVATE_SUCCESS,
-} from 'state/action-types';
-import { keyedReducer, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { keyedReducer, withoutPersistence } from 'wp-calypso-client/state/utils';
 
 export const activationRequesting = keyedReducer(
 	'siteId',

@@ -8,7 +8,7 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import FoldableCard from 'components/foldable-card';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 import { Button } from '@automattic/components';
 
 export default class FoldableCardExample extends PureComponent {

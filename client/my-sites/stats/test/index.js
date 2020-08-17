@@ -25,11 +25,11 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { navigation, siteSelection, sites } from 'my-sites/controller';
+import { navigation, siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
 import statsController from '../controller';
-import { redirect as redirectToAcivity } from 'my-sites/activity/controller';
-import config from 'config';
-import { makeLayout, render as clientRender } from 'controller';
+import { redirect as redirectToAcivity } from 'wp-calypso-client/my-sites/activity/controller';
+import config from 'wp-calypso-client/config';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 import router from '../index';
 

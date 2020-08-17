@@ -35,7 +35,7 @@ import { shallow } from 'enzyme';
  * Internal dependencies
  */
 import { Banner } from '../index';
-import PlanPrice from 'my-sites/plan-price/';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price/';
 
 const props = {
 	callToAction: null,

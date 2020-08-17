@@ -6,7 +6,7 @@ import {
 	JETPACK_REMOTE_INSTALL,
 	JETPACK_REMOTE_INSTALL_FAILURE,
 	JETPACK_REMOTE_INSTALL_SUCCESS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 const url = 'https://yourgroovydomain.com';
 const errorCodeString = 'INVALID_CREDENTIALS';

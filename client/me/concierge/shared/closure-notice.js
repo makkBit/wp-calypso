@@ -10,7 +10,7 @@ import 'moment-timezone'; // monkey patches the existing moment.js
  * Internal dependencies
  */
 import { CompactCard as Card } from '@automattic/components';
-import { useLocalizedMoment } from 'components/localized-moment';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 const DATE_FORMAT = 'LLL';
 

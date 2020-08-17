@@ -10,16 +10,16 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import ButtonsLabelEditor from './label-editor';
 import ButtonsPreviewButtons from './preview-buttons';
 import ButtonsPreviewAction from './preview-action';
 import ButtonsTray from './tray';
-import { decodeEntities } from 'lib/formatting';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 class SharingButtonsPreview extends React.Component {
 	static displayName = 'SharingButtonsPreview';

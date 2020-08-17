@@ -9,16 +9,16 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import PostShare from 'blocks/post-share';
-import QueryPosts from 'components/data/query-posts';
-import QuerySitePlans from 'components/data/query-site-plans';
-import { getSite, getSitePlanSlug } from 'state/sites/selectors';
-import { getSitePosts } from 'state/posts/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
+import PostShare from 'wp-calypso-client/blocks/post-share';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import { getSite, getSitePlanSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSitePosts } from 'wp-calypso-client/state/posts/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 import { Card } from '@automattic/components';
-import QuerySites from 'components/data/query-sites';
-import FormToggle from 'components/forms/form-toggle/compact';
-import Notice from 'components/notice';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import Notice from 'wp-calypso-client/components/notice';
 
 class PostShareExample extends Component {
 	state = {

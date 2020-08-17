@@ -7,8 +7,11 @@ import reducer, {
 	themesShowcaseOpen,
 	themesBookmark,
 } from '../reducer';
-import { THEMES_SHOWCASE_OPEN, THEMES_BOOKMARK_SET } from 'state/themes/action-types';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
+import {
+	THEMES_SHOWCASE_OPEN,
+	THEMES_BOOKMARK_SET,
+} from 'wp-calypso-client/state/themes/action-types';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	test( 'should include expected keys in return value', () => {

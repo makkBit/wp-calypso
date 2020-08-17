@@ -1,11 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { POST_RESTORE_FAILURE, POST_RESTORE_SUCCESS, POST_RESTORE } from 'state/action-types';
-import { receivePost } from 'state/posts/actions/receive-post';
+import wpcom from 'wp-calypso-client/lib/wp';
+import {
+	POST_RESTORE_FAILURE,
+	POST_RESTORE_SUCCESS,
+	POST_RESTORE,
+} from 'wp-calypso-client/state/action-types';
+import { receivePost } from 'wp-calypso-client/state/posts/actions/receive-post';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns an action thunk which, when dispatched, triggers a network request

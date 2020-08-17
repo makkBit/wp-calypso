@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/data-layer/wpcom/sites/scan';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/scan';
 
 /**
  * Returns an array of threat IDs from threats that are being updated (fixing/ignoring).

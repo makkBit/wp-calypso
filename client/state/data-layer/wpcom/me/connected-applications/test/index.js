@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 import { apiTransformer, handleRequestSuccess, requestConnectedApplications } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receiveConnectedApplications } from 'state/connected-applications/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receiveConnectedApplications } from 'wp-calypso-client/state/connected-applications/actions';
 
 const apps = [
 	{

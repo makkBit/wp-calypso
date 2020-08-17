@@ -10,18 +10,21 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Draggable from 'components/draggable';
+import Draggable from 'wp-calypso-client/components/draggable';
 import {
 	getImageEditorCropBounds,
 	getImageEditorAspectRatio,
 	getImageEditorTransform,
 	getImageEditorCrop,
 	imageEditorHasChanges,
-} from 'state/editor/image-editor/selectors';
-import { AspectRatios } from 'state/editor/image-editor/constants';
-import { imageEditorCrop, imageEditorComputedCrop } from 'state/editor/image-editor/actions';
-import { defaultCrop } from 'state/editor/image-editor/reducer';
-import getImageEditorOriginalAspectRatio from 'state/selectors/get-image-editor-original-aspect-ratio';
+} from 'wp-calypso-client/state/editor/image-editor/selectors';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
+import {
+	imageEditorCrop,
+	imageEditorComputedCrop,
+} from 'wp-calypso-client/state/editor/image-editor/actions';
+import { defaultCrop } from 'wp-calypso-client/state/editor/image-editor/reducer';
+import getImageEditorOriginalAspectRatio from 'wp-calypso-client/state/selectors/get-image-editor-original-aspect-ratio';
 
 class ImageEditorCrop extends Component {
 	static propTypes = {

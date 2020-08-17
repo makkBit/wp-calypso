@@ -12,7 +12,7 @@ import {
 	planItem,
 	themeItem,
 	jetpackProductItem,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 import {
 	JETPACK_PRODUCTS_LIST,
 	JETPACK_SEARCH_PRODUCTS,
@@ -20,9 +20,9 @@ import {
 	PRODUCT_JETPACK_SEARCH_MONTHLY,
 	PRODUCT_WPCOM_SEARCH,
 	PRODUCT_WPCOM_SEARCH_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 import type { RequestCartProduct } from './wpcom/types';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 const debug = debugFactory( 'calypso:composite-checkout:add-items' );
 

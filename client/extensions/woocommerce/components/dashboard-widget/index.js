@@ -7,7 +7,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { isUndefined, noop } from 'lodash';
 import { localize } from 'i18n-calypso';
 
@@ -15,8 +15,8 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import Popover from 'components/popover';
-import Tooltip from 'components/tooltip';
+import Popover from 'wp-calypso-client/components/popover';
+import Tooltip from 'wp-calypso-client/components/tooltip';
 
 class DashboardWidget extends Component {
 	constructor( props ) {

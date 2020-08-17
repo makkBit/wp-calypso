@@ -11,11 +11,11 @@ import { find, pick, compact, escape, unescape } from 'lodash';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import TokenField from 'components/token-field';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import TokenField from 'wp-calypso-client/components/token-field';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 import { generateProductCategoryId } from 'woocommerce/state/ui/product-categories/actions';
 
 // TODO Rename this card since it contains other controls, and may contain more in the future (like tax)

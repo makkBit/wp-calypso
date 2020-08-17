@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import { ERROR, LOADING } from 'woocommerce/state/constants';
 import { updateSettings } from '../helpers';
 import {

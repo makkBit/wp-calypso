@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { MASTERBAR_TOGGLE_VISIBILITY } from 'state/action-types';
+import { MASTERBAR_TOGGLE_VISIBILITY } from 'wp-calypso-client/state/action-types';
 
 /**
  * Hide the masterbar.

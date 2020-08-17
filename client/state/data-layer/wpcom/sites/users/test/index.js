@@ -12,12 +12,12 @@ import {
 	normalizeUser,
 	receivePostRevisionAuthorsSuccess,
 } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	receivePostRevisionAuthors,
 	requestPostRevisionAuthors,
-} from 'state/posts/revisions/authors/actions';
-import { POST_REVISION_AUTHORS_RECEIVE } from 'state/action-types';
+} from 'wp-calypso-client/state/posts/revisions/authors/actions';
+import { POST_REVISION_AUTHORS_RECEIVE } from 'wp-calypso-client/state/action-types';
 
 describe( '#normalizeRevision', () => {
 	test( 'should rename `id`, `name` and `slug`', () => {

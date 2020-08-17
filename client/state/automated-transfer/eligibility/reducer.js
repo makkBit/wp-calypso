@@ -7,7 +7,7 @@ import { property, sortBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { AUTOMATED_TRANSFER_ELIGIBILITY_UPDATE as UPDATE } from 'state/action-types';
+import { AUTOMATED_TRANSFER_ELIGIBILITY_UPDATE as UPDATE } from 'wp-calypso-client/state/action-types';
 
 const initialState = {
 	eligibilityHolds: [],

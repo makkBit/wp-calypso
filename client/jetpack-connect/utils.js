@@ -1,18 +1,18 @@
 /**
  * External dependencies
  */
-import config, { isCalypsoLive } from 'config';
-import makeJsonSchemaParser from 'lib/make-json-schema-parser';
+import config, { isCalypsoLive } from 'wp-calypso-client/config';
+import makeJsonSchemaParser from 'wp-calypso-client/lib/make-json-schema-parser';
 import PropTypes from 'prop-types';
 import { authorizeQueryDataSchema } from './schema';
 import { head, includes, isEmpty, split } from 'lodash';
 import page from 'page';
-import { urlToSlug } from 'lib/url';
+import { urlToSlug } from 'wp-calypso-client/lib/url';
 
 /**
  * Internal dependencies
  */
-import { addQueryArgs, externalRedirect, untrailingslashit } from 'lib/route';
+import { addQueryArgs, externalRedirect, untrailingslashit } from 'wp-calypso-client/lib/route';
 import {
 	JPC_PATH_PLANS,
 	JPC_PATH_REMOTE_INSTALL,

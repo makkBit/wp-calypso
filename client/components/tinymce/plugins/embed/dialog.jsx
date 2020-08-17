@@ -14,12 +14,12 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import { Button, Dialog } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import wpcom from 'lib/wp';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Spinner from 'components/spinner';
-import generateEmbedFrameMarkup from 'lib/embed-frame-markup';
-import ResizableIframe from 'components/resizable-iframe';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Spinner from 'wp-calypso-client/components/spinner';
+import generateEmbedFrameMarkup from 'wp-calypso-client/lib/embed-frame-markup';
+import ResizableIframe from 'wp-calypso-client/components/resizable-iframe';
 
 /*
  * Shows the URL and preview of an embed, and allows it to be edited.

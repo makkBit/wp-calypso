@@ -9,22 +9,22 @@ import dynamicMiddlewares from 'redux-dynamic-middlewares';
  * Internal dependencies
  */
 import initialReducer from './reducer';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /**
  * Store enhancers
  */
 import actionLogger from './action-log';
 import consoleDispatcher from './console-dispatch';
-import { enhancer as httpDataEnhancer } from 'state/data-layer/http-data';
-import { addReducerEnhancer } from 'state/utils/add-reducer-enhancer';
+import { enhancer as httpDataEnhancer } from 'wp-calypso-client/state/data-layer/http-data';
+import { addReducerEnhancer } from 'wp-calypso-client/state/utils/add-reducer-enhancer';
 
 /**
  * Redux middleware
  */
 import navigationMiddleware from './navigation/middleware';
 import noticesMiddleware from './notices/middleware';
-import wpcomApiMiddleware from 'state/data-layer/wpcom-api-middleware';
+import wpcomApiMiddleware from 'wp-calypso-client/state/data-layer/wpcom-api-middleware';
 
 /**
  * @typedef {object} ReduxStore

@@ -6,9 +6,13 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { sectionify } from 'lib/route';
-import { trackPageLoad, trackUpdatesLoaded, trackScrollPage } from 'reader/controller-helper';
-import LikedPostsStream from 'reader/liked-stream/main';
+import { sectionify } from 'wp-calypso-client/lib/route';
+import {
+	trackPageLoad,
+	trackUpdatesLoaded,
+	trackScrollPage,
+} from 'wp-calypso-client/reader/controller-helper';
+import LikedPostsStream from 'wp-calypso-client/reader/liked-stream/main';
 
 const analyticsPageTitle = 'Reader';
 

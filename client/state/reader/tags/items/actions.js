@@ -12,13 +12,13 @@ import {
 	READER_UNFOLLOW_TAG_REQUEST,
 	READER_UNFOLLOW_TAG_RECEIVE,
 	READER_FOLLOW_TAG_REQUEST,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/data-layer/wpcom/read/tags';
-import 'state/data-layer/wpcom/read/tags/mine/delete';
-import 'state/data-layer/wpcom/read/tags/mine/new';
+import 'wp-calypso-client/state/data-layer/wpcom/read/tags';
+import 'wp-calypso-client/state/data-layer/wpcom/read/tags/mine/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/read/tags/mine/new';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Helper function. Turns a tag name into a tag "slug" for use with the API.

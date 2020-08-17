@@ -7,8 +7,8 @@ import debugModule from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import user from 'lib/user';
+import config from 'wp-calypso-client/config';
+import user from 'wp-calypso-client/lib/user';
 
 /**
  * Module Variables

@@ -6,8 +6,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import UpsellNudge from 'blocks/upsell-nudge';
-import { preventWidows } from 'lib/formatting';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
 
 /**
  * Style dependencies

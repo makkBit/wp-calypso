@@ -10,18 +10,18 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isActivityBackup } from 'lib/jetpack/backup-utils';
-import { updateFilter } from 'state/activity-log/actions';
-import { withApplySiteOffset } from 'components/site-offset';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isActivityBackup } from 'wp-calypso-client/lib/jetpack/backup-utils';
+import { updateFilter } from 'wp-calypso-client/state/activity-log/actions';
+import { withApplySiteOffset } from 'wp-calypso-client/components/site-offset';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import { withMobileBreakpoint } from '@automattic/viewport-react';
-import ActivityCard from 'components/activity-card';
-import Filterbar from 'my-sites/activity/filterbar';
-import getActivityLogFilter from 'state/selectors/get-activity-log-filter';
-import Pagination from 'components/pagination';
-import QueryRewindCapabilities from 'components/data/query-rewind-capabilities';
-import QueryRewindState from 'components/data/query-rewind-state';
+import ActivityCard from 'wp-calypso-client/components/activity-card';
+import Filterbar from 'wp-calypso-client/my-sites/activity/filterbar';
+import getActivityLogFilter from 'wp-calypso-client/state/selectors/get-activity-log-filter';
+import Pagination from 'wp-calypso-client/components/pagination';
+import QueryRewindCapabilities from 'wp-calypso-client/components/data/query-rewind-capabilities';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
 
 /**
  * Style dependencies

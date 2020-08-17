@@ -10,14 +10,17 @@ import page from 'page';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import PulsingDot from 'components/pulsing-dot';
-import { getSelectedSite } from 'state/ui/selectors';
-import { toggleDialog, runThemeSetup as runThemeSetupAction } from 'state/theme-setup/actions';
+import PulsingDot from 'wp-calypso-client/components/pulsing-dot';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import {
+	toggleDialog,
+	runThemeSetup as runThemeSetupAction,
+} from 'wp-calypso-client/state/theme-setup/actions';
 import {
 	isThemeSetupDialogVisible,
 	isThemeSetupActive,
 	getThemeSetupResult,
-} from 'state/theme-setup/selectors';
+} from 'wp-calypso-client/state/theme-setup/selectors';
 
 /**
  * Style dependencies

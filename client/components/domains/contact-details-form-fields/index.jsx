@@ -23,23 +23,27 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getCountryStates } from 'state/country-states/selectors';
-import { CountrySelect, Input, HiddenInput } from 'my-sites/domains/components/form';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormFooter from 'my-sites/domains/domain-management/components/form-footer';
-import FormButton from 'components/forms/form-button';
-import FormPhoneMediaInput from 'components/forms/form-phone-media-input';
-import { countries } from 'components/phone-input/data';
-import formState from 'lib/form-state';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { tryToGuessPostalCodeFormat } from 'lib/postal-code';
-import { toIcannFormat } from 'components/phone-input/phone-number';
-import NoticeErrorMessage from 'my-sites/checkout/checkout/notice-error-message';
+import { getCountryStates } from 'wp-calypso-client/state/country-states/selectors';
+import {
+	CountrySelect,
+	Input,
+	HiddenInput,
+} from 'wp-calypso-client/my-sites/domains/components/form';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormFooter from 'wp-calypso-client/my-sites/domains/domain-management/components/form-footer';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormPhoneMediaInput from 'wp-calypso-client/components/forms/form-phone-media-input';
+import { countries } from 'wp-calypso-client/components/phone-input/data';
+import formState from 'wp-calypso-client/lib/form-state';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { tryToGuessPostalCodeFormat } from 'wp-calypso-client/lib/postal-code';
+import { toIcannFormat } from 'wp-calypso-client/components/phone-input/phone-number';
+import NoticeErrorMessage from 'wp-calypso-client/my-sites/checkout/checkout/notice-error-message';
 import RegionAddressFieldsets from './custom-form-fieldsets/region-address-fieldsets';
-import notices from 'notices';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import getCountries from 'state/selectors/get-countries';
-import QueryDomainCountries from 'components/data/query-countries/domains';
+import notices from 'wp-calypso-client/notices';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import QueryDomainCountries from 'wp-calypso-client/components/data/query-countries/domains';
 import {
 	CONTACT_DETAILS_FORM_FIELDS,
 	CHECKOUT_EU_ADDRESS_FORMAT_COUNTRY_CODES,

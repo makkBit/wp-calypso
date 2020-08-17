@@ -2,12 +2,12 @@
  * External dependencies
  */
 import { map, pickBy } from 'lodash';
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 /**
  * Internal dependencies
  */
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Returns a list of site IDs dismissed by the user

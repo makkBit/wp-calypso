@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestApplicationPasswords } from 'state/application-passwords/actions';
+import { requestApplicationPasswords } from 'wp-calypso-client/state/application-passwords/actions';
 
 class QueryApplicationPasswords extends Component {
 	static propTypes = {

@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { noop } from 'lodash';
 import { useTranslate } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
@@ -14,17 +14,17 @@ import Gridicon from 'components/gridicon';
 import { Button, Dialog } from '@automattic/components';
 import SupportArticleHeader from './header';
 import Placeholders from './placeholders';
-import EmbedContainer from 'components/embed-container';
-import Emojify from 'components/emojify';
-import QueryReaderPost from 'components/data/query-reader-post';
-import QueryReaderSite from 'components/data/query-reader-site';
-import { getPostByKey } from 'state/reader/posts/selectors';
-import { SUPPORT_BLOG_ID } from 'blocks/inline-help/constants';
-import getInlineSupportArticlePostId from 'state/selectors/get-inline-support-article-post-id';
-import getInlineSupportArticleActionUrl from 'state/selectors/get-inline-support-article-action-url';
-import getInlineSupportArticleActionLabel from 'state/selectors/get-inline-support-article-action-label';
-import getInlineSupportArticleActionIsExternal from 'state/selectors/get-inline-support-article-action-is-external';
-import { closeSupportArticleDialog as closeDialog } from 'state/inline-support-article/actions';
+import EmbedContainer from 'wp-calypso-client/components/embed-container';
+import Emojify from 'wp-calypso-client/components/emojify';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
+import { SUPPORT_BLOG_ID } from 'wp-calypso-client/blocks/inline-help/constants';
+import getInlineSupportArticlePostId from 'wp-calypso-client/state/selectors/get-inline-support-article-post-id';
+import getInlineSupportArticleActionUrl from 'wp-calypso-client/state/selectors/get-inline-support-article-action-url';
+import getInlineSupportArticleActionLabel from 'wp-calypso-client/state/selectors/get-inline-support-article-action-label';
+import getInlineSupportArticleActionIsExternal from 'wp-calypso-client/state/selectors/get-inline-support-article-action-is-external';
+import { closeSupportArticleDialog as closeDialog } from 'wp-calypso-client/state/inline-support-article/actions';
 
 /**
  * Style Dependencies

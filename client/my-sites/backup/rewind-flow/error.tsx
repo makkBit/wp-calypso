@@ -8,8 +8,8 @@ import React, { FunctionComponent } from 'react';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import contactSupportUrl from 'lib/jetpack/contact-support-url';
-import Gridicon from 'components/gridicon';
+import contactSupportUrl from 'wp-calypso-client/lib/jetpack/contact-support-url';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 interface Props {
 	imgSrc?: string;

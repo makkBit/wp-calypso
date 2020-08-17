@@ -4,20 +4,20 @@
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { isEqual, pick } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import config from 'config';
-import ValidationFieldset from 'signup/validation-fieldset';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormInputCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import Popover from 'components/popover';
+import config from 'wp-calypso-client/config';
+import ValidationFieldset from 'wp-calypso-client/signup/validation-fieldset';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import Popover from 'wp-calypso-client/components/popover';
 import { Button } from '@automattic/components';
 
 const HANDLED_FILTER_KEYS = [ 'includeDashes', 'maxCharacters', 'exactSldMatchesOnly' ];

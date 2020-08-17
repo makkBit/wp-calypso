@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { AppState } from 'types';
+import { AppState } from 'wp-calypso-client/types';
 
 /**
  * Returns the user's assigned variation for a given experiment

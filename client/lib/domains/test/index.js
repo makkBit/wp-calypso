@@ -6,7 +6,7 @@ import { forEach } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getFixedDomainSearch, getDomainSuggestionSearch } from 'lib/domains';
+import { getFixedDomainSearch, getDomainSuggestionSearch } from 'wp-calypso-client/lib/domains';
 
 describe( 'index', () => {
 	describe( '#getFixedDomainSearch', () => {

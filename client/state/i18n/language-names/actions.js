@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { I18N_LANGUAGE_NAMES_REQUEST, I18N_LANGUAGE_NAMES_ADD } from 'state/action-types';
+import {
+	I18N_LANGUAGE_NAMES_REQUEST,
+	I18N_LANGUAGE_NAMES_ADD,
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/i18n/language-names';
+import 'wp-calypso-client/state/data-layer/wpcom/i18n/language-names';
 
 /**
  * Action creator function: I18N_LANGUAGE_NAMES_ADD

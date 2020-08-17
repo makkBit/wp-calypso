@@ -9,22 +9,22 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import { setDocumentHeadTitle as setTitle } from 'state/document-head/actions';
-import { setSection } from 'state/ui/actions';
-import { getSiteBySlug } from 'state/sites/selectors';
-import { getSelectedSite } from 'state/ui/selectors';
+import { setDocumentHeadTitle as setTitle } from 'wp-calypso-client/state/document-head/actions';
+import { setSection } from 'wp-calypso-client/state/ui/actions';
+import { getSiteBySlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
 import GSuiteNudge from './gsuite-nudge';
 import CheckoutContainer from './checkout/checkout-container';
 import CheckoutSystemDecider from './checkout-system-decider';
 import CheckoutPendingComponent from './checkout-thank-you/pending';
 import CheckoutThankYouComponent from './checkout-thank-you';
 import UpsellNudge from './upsell-nudge';
-import { canUserPurchaseGSuite } from 'lib/gsuite';
-import { getRememberedCoupon } from 'lib/cart/actions';
-import { sites } from 'my-sites/controller';
-import CartData from 'components/data/cart';
-import userFactory from 'lib/user';
-import { getCurrentUser } from 'state/current-user/selectors';
+import { canUserPurchaseGSuite } from 'wp-calypso-client/lib/gsuite';
+import { getRememberedCoupon } from 'wp-calypso-client/lib/cart/actions';
+import { sites } from 'wp-calypso-client/my-sites/controller';
+import CartData from 'wp-calypso-client/components/data/cart';
+import userFactory from 'wp-calypso-client/lib/user';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 export function checkout( context, next ) {
 	const { feature, plan, domainOrProduct, purchaseId } = context.params;

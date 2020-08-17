@@ -11,18 +11,18 @@ import { useDispatch, useSelector } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import { preventWidows } from 'lib/formatting';
-import PlanPrice from 'my-sites/plan-price';
-import { JETPACK_OFFER_RESET_UPGRADE_NUDGE_DISMISS } from 'my-sites/plans-v2/constants';
-import { savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import PlanPrice from 'wp-calypso-client/my-sites/plan-price';
+import { JETPACK_OFFER_RESET_UPGRADE_NUDGE_DISMISS } from 'wp-calypso-client/my-sites/plans-v2/constants';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
 import { DEFAULT_UPGRADE_NUDGE_FEATURES } from './fixtures';
 
 /**
  * Type dependencies
  */
-import type { SelectorProduct } from 'my-sites/plans-v2/types';
+import type { SelectorProduct } from 'wp-calypso-client/my-sites/plans-v2/types';
 import type { FeaturesItem } from './types';
 
 type OwnProps = {

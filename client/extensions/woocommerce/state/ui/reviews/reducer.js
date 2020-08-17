@@ -2,7 +2,7 @@
  * External dependencies
  */
 
-import { combineReducers, keyedReducer } from 'state/utils';
+import { combineReducers, keyedReducer } from 'wp-calypso-client/state/utils';
 
 /**
  * Internal dependencies

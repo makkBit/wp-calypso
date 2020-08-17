@@ -10,24 +10,24 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getEditorPostId } from 'state/editor/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
 import { Dialog } from '@automattic/components';
-import { setSelectedEditor } from 'state/selected-editor/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isPrivateSite from 'state/selectors/is-private-site';
-import { openPostRevisionsDialog } from 'state/posts/revisions/actions';
-import getWpAdminClassicEditorRedirectionUrl from 'state/selectors/get-wp-admin-classic-editor-redirection-url';
+import { setSelectedEditor } from 'wp-calypso-client/state/selected-editor/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import { openPostRevisionsDialog } from 'wp-calypso-client/state/posts/revisions/actions';
+import getWpAdminClassicEditorRedirectionUrl from 'wp-calypso-client/state/selectors/get-wp-admin-classic-editor-redirection-url';
 import {
 	composeAnalytics,
 	recordGoogleEvent,
 	recordTracksEvent,
 	withAnalytics,
 	bumpStat,
-} from 'state/analytics/actions';
-import isGutenbergOptInEnabled from 'state/selectors/is-gutenberg-opt-in-enabled';
+} from 'wp-calypso-client/state/analytics/actions';
+import isGutenbergOptInEnabled from 'wp-calypso-client/state/selectors/is-gutenberg-opt-in-enabled';
 
 /**
  * Style dependencies

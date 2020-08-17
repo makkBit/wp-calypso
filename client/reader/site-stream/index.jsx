@@ -10,17 +10,17 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import ReaderFeedHeader from 'blocks/reader-feed-header';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import ReaderFeedHeader from 'wp-calypso-client/blocks/reader-feed-header';
 import EmptyContent from './empty';
-import Stream from 'reader/stream';
-import FeedError from 'reader/feed-error';
-import { getSite } from 'state/reader/sites/selectors';
-import { getFeed } from 'state/reader/feeds/selectors';
-import { isSiteBlocked } from 'state/reader/site-blocks/selectors';
-import SiteBlocked from 'reader/site-blocked';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
+import Stream from 'wp-calypso-client/reader/stream';
+import FeedError from 'wp-calypso-client/reader/feed-error';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { isSiteBlocked } from 'wp-calypso-client/state/reader/site-blocks/selectors';
+import SiteBlocked from 'wp-calypso-client/reader/site-blocked';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
 
 class SiteStream extends React.Component {
 	static propTypes = {

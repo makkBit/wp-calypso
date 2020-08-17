@@ -6,7 +6,7 @@ import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 // eslint-disable-next-line no-restricted-imports
 import { format as formatUrl, parse as parseUrl } from 'url';
 import { memoize } from 'lodash';
@@ -15,66 +15,69 @@ import { ProgressBar } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import CurrentSite from 'my-sites/current-site';
-import ExpandableSidebarMenu from 'layout/sidebar/expandable';
-import ExternalLink from 'components/external-link';
-import JetpackLogo from 'components/jetpack-logo';
-import Sidebar from 'layout/sidebar';
-import SidebarFooter from 'layout/sidebar/footer';
-import SidebarItem from 'layout/sidebar/item';
-import SidebarMenu from 'layout/sidebar/menu';
-import SidebarRegion from 'layout/sidebar/region';
+import { isEnabled } from 'wp-calypso-client/config';
+import CurrentSite from 'wp-calypso-client/my-sites/current-site';
+import ExpandableSidebarMenu from 'wp-calypso-client/layout/sidebar/expandable';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
+import Sidebar from 'wp-calypso-client/layout/sidebar';
+import SidebarFooter from 'wp-calypso-client/layout/sidebar/footer';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import SidebarMenu from 'wp-calypso-client/layout/sidebar/menu';
+import SidebarRegion from 'wp-calypso-client/layout/sidebar/region';
 import SiteMenu from './site-menu';
-import StatsSparkline from 'blocks/stats-sparkline';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import QuerySiteChecklist from 'components/data/query-site-checklist';
-import QueryRewindState from 'components/data/query-rewind-state';
-import QueryScanState from 'components/data/query-jetpack-scan';
+import StatsSparkline from 'wp-calypso-client/blocks/stats-sparkline';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import QuerySiteChecklist from 'wp-calypso-client/components/data/query-site-checklist';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import QueryScanState from 'wp-calypso-client/components/data/query-jetpack-scan';
 import ToolsMenu from './tools-menu';
-import isCurrentPlanPaid from 'state/sites/selectors/is-current-plan-paid';
-import { siteHasJetpackProductPurchase } from 'state/purchases/selectors';
-import { isFreeTrial, isEcommerce } from 'lib/products-values';
-import { isWpMobileApp } from 'lib/mobile-app';
-import isJetpackSectionEnabledForSite from 'state/selectors/is-jetpack-section-enabled-for-site';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isSidebarSectionOpen } from 'state/my-sites/sidebar/selectors';
-import { setNextLayoutFocus, setLayoutFocus } from 'state/ui/layout-focus/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import hasJetpackSites from 'state/selectors/has-jetpack-sites';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isEligibleForDotcomChecklist from 'state/selectors/is-eligible-for-dotcom-checklist';
-import isSiteChecklistComplete from 'state/selectors/is-site-checklist-complete';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import isSiteMigrationInProgress from 'state/selectors/is-site-migration-in-progress';
-import isSiteMigrationActiveRoute from 'state/selectors/is-site-migration-active-route';
-import getRewindState from 'state/selectors/get-rewind-state';
-import getScanState from 'state/selectors/get-site-scan-state';
-import isJetpackCloudEligible from 'state/selectors/is-jetpack-cloud-eligible';
+import isCurrentPlanPaid from 'wp-calypso-client/state/sites/selectors/is-current-plan-paid';
+import { siteHasJetpackProductPurchase } from 'wp-calypso-client/state/purchases/selectors';
+import { isFreeTrial, isEcommerce } from 'wp-calypso-client/lib/products-values';
+import { isWpMobileApp } from 'wp-calypso-client/lib/mobile-app';
+import isJetpackSectionEnabledForSite from 'wp-calypso-client/state/selectors/is-jetpack-section-enabled-for-site';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isSidebarSectionOpen } from 'wp-calypso-client/state/my-sites/sidebar/selectors';
+import {
+	setNextLayoutFocus,
+	setLayoutFocus,
+} from 'wp-calypso-client/state/ui/layout-focus/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import hasJetpackSites from 'wp-calypso-client/state/selectors/has-jetpack-sites';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isEligibleForDotcomChecklist from 'wp-calypso-client/state/selectors/is-eligible-for-dotcom-checklist';
+import isSiteChecklistComplete from 'wp-calypso-client/state/selectors/is-site-checklist-complete';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isSiteMigrationInProgress from 'wp-calypso-client/state/selectors/is-site-migration-in-progress';
+import isSiteMigrationActiveRoute from 'wp-calypso-client/state/selectors/is-site-migration-active-route';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import getScanState from 'wp-calypso-client/state/selectors/get-site-scan-state';
+import isJetpackCloudEligible from 'wp-calypso-client/state/selectors/is-jetpack-cloud-eligible';
 import {
 	getCustomizerUrl,
 	getSite,
 	isJetpackSite,
 	canCurrentUserUseEarn,
 	canCurrentUserUseStore,
-} from 'state/sites/selectors';
-import getSiteChecklist from 'state/selectors/get-site-checklist';
-import getSiteTaskList from 'state/selectors/get-site-task-list';
-import canCurrentUserUseCustomerHome from 'state/sites/selectors/can-current-user-use-customer-home';
-import canCurrentUserManagePlugins from 'state/selectors/can-current-user-manage-plugins';
-import { getStatsPathForTab } from 'lib/route';
+} from 'wp-calypso-client/state/sites/selectors';
+import getSiteChecklist from 'wp-calypso-client/state/selectors/get-site-checklist';
+import getSiteTaskList from 'wp-calypso-client/state/selectors/get-site-task-list';
+import canCurrentUserUseCustomerHome from 'wp-calypso-client/state/sites/selectors/can-current-user-use-customer-home';
+import canCurrentUserManagePlugins from 'wp-calypso-client/state/selectors/can-current-user-manage-plugins';
+import { getStatsPathForTab } from 'wp-calypso-client/lib/route';
 import { itemLinkMatches } from './utils';
-import { recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import { recordGoogleEvent, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	expandMySitesSidebarSection as expandSection,
 	toggleMySitesSidebarSection as toggleSection,
-} from 'state/my-sites/sidebar/actions';
-import isVipSite from 'state/selectors/is-vip-site';
-import isSiteUsingFullSiteEditing from 'state/selectors/is-site-using-full-site-editing';
-import isSiteUsingCoreSiteEditor from 'state/selectors/is-site-using-core-site-editor';
-import getSiteEditorUrl from 'state/selectors/get-site-editor-url';
+} from 'wp-calypso-client/state/my-sites/sidebar/actions';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import isSiteUsingFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-using-full-site-editing';
+import isSiteUsingCoreSiteEditor from 'wp-calypso-client/state/selectors/is-site-using-core-site-editor';
+import getSiteEditorUrl from 'wp-calypso-client/state/selectors/get-site-editor-url';
 import {
 	SIDEBAR_SECTION_DESIGN,
 	SIDEBAR_SECTION_JETPACK,
@@ -82,12 +85,12 @@ import {
 	SIDEBAR_SECTION_SITE,
 	SIDEBAR_SECTION_TOOLS,
 } from './constants';
-import canSiteViewAtomicHosting from 'state/selectors/can-site-view-atomic-hosting';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
-import { getCurrentRoute } from 'state/selectors/get-current-route';
-import { isUnderDomainManagementAll } from 'my-sites/domains/paths';
-import { isUnderEmailManagementAll } from 'my-sites/email/paths';
-import JetpackSidebarMenuItems from 'components/jetpack/sidebar/menu-items/calypso';
+import canSiteViewAtomicHosting from 'wp-calypso-client/state/selectors/can-site-view-atomic-hosting';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
+import { getCurrentRoute } from 'wp-calypso-client/state/selectors/get-current-route';
+import { isUnderDomainManagementAll } from 'wp-calypso-client/my-sites/domains/paths';
+import { isUnderEmailManagementAll } from 'wp-calypso-client/my-sites/email/paths';
+import JetpackSidebarMenuItems from 'wp-calypso-client/components/jetpack/sidebar/menu-items/calypso';
 
 /**
  * Style dependencies

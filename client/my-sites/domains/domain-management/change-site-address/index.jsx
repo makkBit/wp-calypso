@@ -12,12 +12,15 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import SiteAddressChanger from 'blocks/site-address-changer';
-import { getSelectedDomain, isRegisteredDomain } from 'lib/domains';
-import { domainManagementEdit, domainManagementNameServers } from 'my-sites/domains/paths';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import SiteAddressChanger from 'wp-calypso-client/blocks/site-address-changer';
+import { getSelectedDomain, isRegisteredDomain } from 'wp-calypso-client/lib/domains';
+import {
+	domainManagementEdit,
+	domainManagementNameServers,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

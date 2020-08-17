@@ -7,7 +7,7 @@ import { get } from 'lodash';
  * Internal dependencies
  */
 
-import getRawSite from 'state/selectors/get-raw-site';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
 
 /**
  * Returns the migration status of the site

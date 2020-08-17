@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import JetpackProductCard from 'components/jetpack/card/jetpack-product-card';
+import JetpackProductCard from 'wp-calypso-client/components/jetpack/card/jetpack-product-card';
 import {
 	productCard,
 	highlightedProductCard,

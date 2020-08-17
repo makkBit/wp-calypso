@@ -9,12 +9,15 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { READER_DISMISS_SITE, READER_DISMISS_POST } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice, successNotice } from 'state/notices/actions';
+import {
+	READER_DISMISS_SITE,
+	READER_DISMISS_POST,
+} from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export function requestSiteDismiss( action ) {
 	return http(

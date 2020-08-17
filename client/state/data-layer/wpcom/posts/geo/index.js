@@ -6,11 +6,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { POST_GEO_IMAGE_REQUEST } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receivePostGeoImageUrl } from 'state/posts/geo/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { POST_GEO_IMAGE_REQUEST } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receivePostGeoImageUrl } from 'wp-calypso-client/state/posts/geo/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 /**
  * Dispatches returned post revisions

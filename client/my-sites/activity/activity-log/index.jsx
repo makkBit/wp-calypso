@@ -18,39 +18,39 @@ import ActivityLogItem from '../activity-log-item';
 import ActivityLogAggregatedItem from '../activity-log-item/aggregated';
 import ActivityLogSwitch from '../activity-log-switch';
 import ActivityLogTasklist from '../activity-log-tasklist';
-import Banner from 'components/banner';
-import DocumentHead from 'components/data/document-head';
-import EmptyContent from 'components/empty-content';
+import Banner from 'wp-calypso-client/components/banner';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 import ErrorBanner from '../activity-log-banner/error-banner';
 import Filterbar from '../filterbar';
 import UpgradeBanner from '../activity-log-banner/upgrade-banner';
 import IntroBanner from '../activity-log-banner/intro-banner';
-import { isFreePlan } from 'lib/plans';
-import JetpackBackupCredsBanner from 'blocks/jetpack-backup-creds-banner';
-import JetpackColophon from 'components/jetpack-colophon';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import Pagination from 'components/pagination';
+import { isFreePlan } from 'wp-calypso-client/lib/plans';
+import JetpackBackupCredsBanner from 'wp-calypso-client/blocks/jetpack-backup-creds-banner';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import Pagination from 'wp-calypso-client/components/pagination';
 import ProgressBanner from '../activity-log-banner/progress-banner';
 import RewindAlerts from './rewind-alerts';
-import QueryRewindBackups from 'components/data/query-rewind-backups';
-import QueryRewindState from 'components/data/query-rewind-state';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import QuerySiteSettings from 'components/data/query-site-settings'; // For site time offset
-import QueryRewindBackupStatus from 'components/data/query-rewind-backup-status';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
+import QueryRewindBackups from 'wp-calypso-client/components/data/query-rewind-backups';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings'; // For site time offset
+import QueryRewindBackupStatus from 'wp-calypso-client/components/data/query-rewind-backup-status';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import SuccessBanner from '../activity-log-banner/success-banner';
 import RewindUnavailabilityNotice from './rewind-unavailability-notice';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { siteHasBackupProductPurchase } from 'state/purchases/selectors';
-import { getCurrentPlan } from 'state/sites/plans/selectors';
-import { getSiteSlug, getSiteTitle, isJetpackSite } from 'state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { siteHasBackupProductPurchase } from 'wp-calypso-client/state/purchases/selectors';
+import { getCurrentPlan } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSiteSlug, getSiteTitle, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
 import {
 	recordTracksEvent as recordTracksEventAction,
 	withAnalytics,
-} from 'state/analytics/actions';
+} from 'wp-calypso-client/state/analytics/actions';
 import {
 	getRewindRestoreProgress,
 	rewindRequestDismiss,
@@ -58,26 +58,26 @@ import {
 	rewindBackupDismiss,
 	rewindBackup,
 	updateFilter,
-} from 'state/activity-log/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getActivityLogFilter from 'state/selectors/get-activity-log-filter';
-import getBackupProgress from 'state/selectors/get-backup-progress';
-import getRequestedBackup from 'state/selectors/get-requested-backup';
-import getRequestedRewind from 'state/selectors/get-requested-rewind';
-import getRestoreProgress from 'state/selectors/get-restore-progress';
-import getRewindBackups from 'state/selectors/get-rewind-backups';
-import getRewindState from 'state/selectors/get-rewind-state';
-import getSiteGmtOffset from 'state/selectors/get-site-gmt-offset';
-import getSiteTimezoneValue from 'state/selectors/get-site-timezone-value';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import isVipSite from 'state/selectors/is-vip-site';
-import siteSupportsRealtimeBackup from 'state/selectors/site-supports-realtime-backup';
-import { requestActivityLogs } from 'state/data-getters';
-import { emptyFilter } from 'state/activity-log/reducer';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { applySiteOffset } from 'lib/site/timezone';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getPreference } from 'state/preferences/selectors';
+} from 'wp-calypso-client/state/activity-log/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getActivityLogFilter from 'wp-calypso-client/state/selectors/get-activity-log-filter';
+import getBackupProgress from 'wp-calypso-client/state/selectors/get-backup-progress';
+import getRequestedBackup from 'wp-calypso-client/state/selectors/get-requested-backup';
+import getRequestedRewind from 'wp-calypso-client/state/selectors/get-requested-rewind';
+import getRestoreProgress from 'wp-calypso-client/state/selectors/get-restore-progress';
+import getRewindBackups from 'wp-calypso-client/state/selectors/get-rewind-backups';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import getSiteGmtOffset from 'wp-calypso-client/state/selectors/get-site-gmt-offset';
+import getSiteTimezoneValue from 'wp-calypso-client/state/selectors/get-site-timezone-value';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import isVipSite from 'wp-calypso-client/state/selectors/is-vip-site';
+import siteSupportsRealtimeBackup from 'wp-calypso-client/state/selectors/site-supports-realtime-backup';
+import { requestActivityLogs } from 'wp-calypso-client/state/data-getters';
+import { emptyFilter } from 'wp-calypso-client/state/activity-log/reducer';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { applySiteOffset } from 'wp-calypso-client/lib/site/timezone';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
 
 /**
  * Style dependencies

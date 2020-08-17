@@ -8,14 +8,14 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Spinner from 'components/spinner';
-import Gridicon from 'components/gridicon';
+import Spinner from 'wp-calypso-client/components/spinner';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import ListItemImage from './list-item-image';
 import ListItemVideo from './list-item-video';
 import ListItemAudio from './list-item-audio';
 import ListItemDocument from './list-item-document';
-import { getMimePrefix } from 'lib/media/utils';
-import EditorMediaModalGalleryHelp from 'post-editor/media-modal/gallery-help';
+import { getMimePrefix } from 'wp-calypso-client/lib/media/utils';
+import EditorMediaModalGalleryHelp from 'wp-calypso-client/post-editor/media-modal/gallery-help';
 
 /**
  * Style dependencies

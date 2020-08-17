@@ -12,14 +12,14 @@ import {
 	requestMediaItem,
 	successMediaItemRequest,
 	failMediaItemRequest,
-} from 'state/media/actions';
+} from 'wp-calypso-client/state/media/actions';
 import {
 	MEDIA_DELETE,
 	MEDIA_ITEM_REQUEST,
 	MEDIA_ITEM_REQUEST_FAILURE,
 	MEDIA_ITEM_REQUEST_SUCCESS,
 	MEDIA_RECEIVE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'media - actions - sync', () => {
 	describe( 'receiveMedia()', () => {

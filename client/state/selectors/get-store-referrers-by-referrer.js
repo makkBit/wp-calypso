@@ -6,9 +6,9 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSiteStatsNormalizedData } from 'state/stats/lists/selectors';
+import { getSiteStatsNormalizedData } from 'wp-calypso-client/state/stats/lists/selectors';
 
-import 'state/stats/init';
+import 'wp-calypso-client/state/stats/init';
 
 export default function ( state, { siteId, statType, query, selectedReferrer } ) {
 	const rawData = getSiteStatsNormalizedData( state, siteId, statType, query );

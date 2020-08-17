@@ -6,8 +6,8 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { JITM_DISMISS, JITM_FETCH, JITM_SET } from 'state/action-types';
-import 'state/data-layer/wpcom/sites/jitm';
+import { JITM_DISMISS, JITM_FETCH, JITM_SET } from 'wp-calypso-client/state/action-types';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/jitm';
 
 /**
  * Dismisses a jitm

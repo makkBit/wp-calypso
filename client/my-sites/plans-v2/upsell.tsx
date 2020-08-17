@@ -9,7 +9,7 @@ import page from 'page';
  * Internal dependencies
  */
 import { slugToSelectorProduct, durationToString } from './utils';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Type dependencies

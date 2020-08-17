@@ -8,15 +8,15 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
+import { isEnabled } from 'wp-calypso-client/config';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
 import { Button } from '@automattic/components';
 import SiteTypeForm from './form';
-import StepWrapper from 'signup/step-wrapper';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { submitSiteType } from 'state/signup/steps/site-type/actions';
-import { saveSignupStep } from 'state/signup/progress/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { submitSiteType } from 'wp-calypso-client/state/signup/steps/site-type/actions';
+import { saveSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const siteTypeToFlowname = {
 	import: 'import-onboarding',

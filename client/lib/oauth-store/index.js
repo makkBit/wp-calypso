@@ -9,9 +9,9 @@ const debug = debugFactory( 'calypso:auth:store' );
 /**
  * Internal dependencies
  */
-import { createReducerStore } from 'lib/store';
+import { createReducerStore } from 'wp-calypso-client/lib/store';
 import { actions as ActionTypes, errors as errorTypes } from './constants';
-import * as OAuthToken from 'lib/oauth-token';
+import * as OAuthToken from 'wp-calypso-client/lib/oauth-token';
 
 /**
  * Module variables

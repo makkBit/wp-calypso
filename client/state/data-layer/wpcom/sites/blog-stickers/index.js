@@ -8,13 +8,13 @@ import { isArray } from 'lodash';
 /**
  * Internal Dependencies
  */
-import { SITES_BLOG_STICKER_LIST } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
-import { receiveBlogStickers } from 'state/sites/blog-stickers/actions';
+import { SITES_BLOG_STICKER_LIST } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { receiveBlogStickers } from 'wp-calypso-client/state/sites/blog-stickers/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const requestBlogStickerList = ( action ) =>
 	http(

@@ -13,16 +13,16 @@ import { useEvents, useSelect, useDispatch, useFormStatus } from '@automattic/co
 import {
 	LeftColumn,
 	RightColumn,
-} from 'my-sites/checkout/composite-checkout/wpcom/components/ie-fallback';
-import Spinner from 'my-sites/checkout/composite-checkout/wpcom/components/spinner';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/ie-fallback';
+import Spinner from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/components/spinner';
 import ContactFields from './contact-fields';
 import CreditCardNumberField from './credit-card-number-field';
 import CreditCardExpiryField from './credit-card-expiry-field';
 import CreditCardCvvField from './credit-card-cvv-field';
 import { FieldRow, CreditCardFieldsWrapper, CreditCardField } from './form-layout-components';
 import CreditCardLoading from './credit-card-loading';
-import { paymentMethodClassName } from 'lib/cart-values';
-import { useCart } from 'my-sites/checkout/composite-checkout/cart-provider';
+import { paymentMethodClassName } from 'wp-calypso-client/lib/cart-values';
+import { useCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/cart-provider';
 
 export default function CreditCardFields() {
 	const { __ } = useI18n();

@@ -12,14 +12,18 @@ import { translate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import AutoDirection from 'components/auto-direction';
-import FormInputValidation from 'components/forms/form-input-validation';
-import Gravatar from 'components/gravatar';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { writeComment, deleteComment, replyComment } from 'state/comments/actions';
-import { recordAction, recordGaEvent, recordTrackForPost } from 'reader/stats';
-import { isCommentableDiscoverPost } from 'blocks/comments/helper';
-import { ProtectFormGuard } from 'lib/protect-form';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	writeComment,
+	deleteComment,
+	replyComment,
+} from 'wp-calypso-client/state/comments/actions';
+import { recordAction, recordGaEvent, recordTrackForPost } from 'wp-calypso-client/reader/stats';
+import { isCommentableDiscoverPost } from 'wp-calypso-client/blocks/comments/helper';
+import { ProtectFormGuard } from 'wp-calypso-client/lib/protect-form';
 import PostCommentFormTextarea from './form-textarea';
 
 /**

@@ -6,8 +6,12 @@ import {
 	ACTIVE_PROMOTIONS_REQUEST,
 	ACTIVE_PROMOTIONS_REQUEST_SUCCESS,
 	ACTIVE_PROMOTIONS_REQUEST_FAILURE,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation, withStorageKey } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 
 /**

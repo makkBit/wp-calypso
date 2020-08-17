@@ -7,12 +7,12 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 
 /**
  * Type dependencies
  */
-import type { IncompatibleProducts } from 'state/sites/products/conflicts';
+import type { IncompatibleProducts } from 'wp-calypso-client/state/sites/products/conflicts';
 
 interface Props {
 	incompatibleProducts: IncompatibleProducts | null;

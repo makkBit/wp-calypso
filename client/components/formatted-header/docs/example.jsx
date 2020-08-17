@@ -7,7 +7,7 @@ import React, { Fragment, PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import FormattedHeader from 'components/formatted-header';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 
 export default class FormattedHeaderExample extends PureComponent {
 	static displayName = 'FormattedHeaderExample';

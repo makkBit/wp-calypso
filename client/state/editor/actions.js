@@ -6,7 +6,7 @@ import { defaults, filter, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	EDITOR_AUTOSAVE,
 	EDITOR_AUTOSAVE_RESET,
@@ -22,15 +22,19 @@ import {
 	EDITOR_EDIT_RAW_CONTENT,
 	EDITOR_RESET_RAW_CONTENT,
 	EDITOR_INIT_RAW_CONTENT,
-} from 'state/action-types';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { setMediaModalView } from 'state/ui/media-modal/actions';
-import { withAnalytics, bumpStat, recordTracksEvent } from 'state/analytics/actions';
-import { savePreference } from 'state/preferences/actions';
-import { getPreference } from 'state/preferences/selectors';
-import { editPost } from 'state/posts/actions';
+} from 'wp-calypso-client/state/action-types';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { setMediaModalView } from 'wp-calypso-client/state/ui/media-modal/actions';
+import {
+	withAnalytics,
+	bumpStat,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
 
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 /**
  * Constants

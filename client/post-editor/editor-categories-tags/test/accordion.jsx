@@ -13,10 +13,14 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { EditorCategoriesTagsAccordion } from 'post-editor/editor-categories-tags/accordion';
+import { EditorCategoriesTagsAccordion } from 'wp-calypso-client/post-editor/editor-categories-tags/accordion';
 
-jest.mock( 'components/info-popover', () => require( 'components/empty-component' ) );
-jest.mock( 'post-editor/editor-term-selector', () => require( 'components/empty-component' ) );
+jest.mock( 'components/info-popover', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
+jest.mock( 'post-editor/editor-term-selector', () =>
+	require( 'wp-calypso-client/components/empty-component' )
+);
 
 describe( 'EditorCategoriesTagsAccordion', () => {
 	let accordion;

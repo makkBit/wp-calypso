@@ -6,27 +6,27 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { newPost } from 'lib/paths';
-import user from 'lib/user';
+import { newPost } from 'wp-calypso-client/lib/paths';
+import user from 'wp-calypso-client/lib/user';
 import { ipcRenderer as ipc } from 'electron'; // eslint-disable-line import/no-extraneous-dependencies
-import * as oAuthToken from 'lib/oauth-token';
-import userUtilities from 'lib/user/utils';
-import { getStatsPathForTab } from 'lib/route';
-import { getReduxStore } from 'lib/redux-bridge';
-import hasUnseenNotifications from 'state/selectors/has-unseen-notifications';
-import { isEditorIframeLoaded } from 'state/editor/selectors';
-import isNotificationsOpen from 'state/selectors/is-notifications-open';
-import { toggleNotificationsPanel, navigate } from 'state/ui/actions';
+import * as oAuthToken from 'wp-calypso-client/lib/oauth-token';
+import userUtilities from 'wp-calypso-client/lib/user/utils';
+import { getStatsPathForTab } from 'wp-calypso-client/lib/route';
+import { getReduxStore } from 'wp-calypso-client/lib/redux-bridge';
+import hasUnseenNotifications from 'wp-calypso-client/state/selectors/has-unseen-notifications';
+import { isEditorIframeLoaded } from 'wp-calypso-client/state/editor/selectors';
+import isNotificationsOpen from 'wp-calypso-client/state/selectors/is-notifications-open';
+import { toggleNotificationsPanel, navigate } from 'wp-calypso-client/state/ui/actions';
 import {
 	NOTIFY_DESKTOP_CANNOT_USE_EDITOR,
 	NOTIFY_DESKTOP_DID_REQUEST_SITE,
 	NOTIFY_DESKTOP_DID_ACTIVATE_JETPACK_MODULE,
 	NOTIFY_DESKTOP_SEND_TO_PRINTER,
 	NOTIFY_DESKTOP_VIEW_POST_CLICKED,
-} from 'state/desktop/window-events';
-import { canCurrentUserManageSiteOptions } from 'state/sites/selectors';
-import { activateModule } from 'state/jetpack/modules/actions';
-import { requestSite } from 'state/sites/actions';
+} from 'wp-calypso-client/state/desktop/window-events';
+import { canCurrentUserManageSiteOptions } from 'wp-calypso-client/state/sites/selectors';
+import { activateModule } from 'wp-calypso-client/state/jetpack/modules/actions';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 
 /**
  * Module variables

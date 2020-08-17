@@ -15,10 +15,10 @@ import {
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST,
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST_SUCCESS,
 	EMAIL_FORWARDING_RESEND_VERIFICATION_REQUEST_FAILURE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { isSuccessNotice, isErrorNotice, noticeHasText } from '../../test-utils';
 
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'wpcom-api', () => {
 	describe( 'email forwarding resend verification email request', () => {

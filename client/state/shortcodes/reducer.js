@@ -12,15 +12,15 @@ import {
 	withoutPersistence,
 	withSchemaValidation,
 	withStorageKey,
-} from 'state/utils';
+} from 'wp-calypso-client/state/utils';
 import {
 	SHORTCODE_RECEIVE,
 	SHORTCODE_REQUEST,
 	SHORTCODE_REQUEST_FAILURE,
 	SHORTCODE_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { registerActionForward } from 'lib/redux-bridge';
-import { parse } from 'lib/shortcode';
+} from 'wp-calypso-client/state/action-types';
+import { registerActionForward } from 'wp-calypso-client/lib/redux-bridge';
+import { parse } from 'wp-calypso-client/lib/shortcode';
 
 registerActionForward( 'RECEIVE_MEDIA_ITEMS' );
 registerActionForward( 'RECEIVE_MEDIA_ITEM' );

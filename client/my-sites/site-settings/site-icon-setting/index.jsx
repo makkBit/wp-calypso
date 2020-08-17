@@ -10,30 +10,37 @@ import { head, partial, partialRight, isEqual, flow, compact, includes } from 'l
 /**
  * Internal dependencies
  */
-import SiteIcon from 'blocks/site-icon';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
 import { Button } from '@automattic/components';
-import AsyncLoad from 'components/async-load';
-import EditorMediaModalDialog from 'post-editor/media-modal/dialog';
-import accept from 'lib/accept';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import { isSavingSiteSettings } from 'state/site-settings/selectors';
-import { setEditorMediaModalView } from 'state/editor/actions';
-import { resetAllImageEditorState } from 'state/editor/image-editor/actions';
-import { getCustomizerUrl, getSiteAdminUrl, isJetpackSite } from 'state/sites/selectors';
-import { ModalViews } from 'state/ui/media-modal/constants';
-import { AspectRatios } from 'state/editor/image-editor/constants';
-import { getSelectedSiteId, getSelectedSite } from 'state/ui/selectors';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import getMediaLibrarySelectedItems from 'state/selectors/get-media-library-selected-items';
-import InfoPopover from 'components/info-popover';
-import { getImageEditorCrop, getImageEditorTransform } from 'state/editor/image-editor/selectors';
-import getSiteIconId from 'state/selectors/get-site-icon-id';
-import getSiteIconUrl from 'state/selectors/get-site-icon-url';
-import isPrivateSite from 'state/selectors/is-private-site';
-import isSiteSupportingImageEditor from 'state/selectors/is-site-supporting-image-editor';
-import { uploadSiteIcon } from 'state/media/thunks';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import EditorMediaModalDialog from 'wp-calypso-client/post-editor/media-modal/dialog';
+import accept from 'wp-calypso-client/lib/accept';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { isSavingSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
+import { setEditorMediaModalView } from 'wp-calypso-client/state/editor/actions';
+import { resetAllImageEditorState } from 'wp-calypso-client/state/editor/image-editor/actions';
+import {
+	getCustomizerUrl,
+	getSiteAdminUrl,
+	isJetpackSite,
+} from 'wp-calypso-client/state/sites/selectors';
+import { ModalViews } from 'wp-calypso-client/state/ui/media-modal/constants';
+import { AspectRatios } from 'wp-calypso-client/state/editor/image-editor/constants';
+import { getSelectedSiteId, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import getMediaLibrarySelectedItems from 'wp-calypso-client/state/selectors/get-media-library-selected-items';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import {
+	getImageEditorCrop,
+	getImageEditorTransform,
+} from 'wp-calypso-client/state/editor/image-editor/selectors';
+import getSiteIconId from 'wp-calypso-client/state/selectors/get-site-icon-id';
+import getSiteIconUrl from 'wp-calypso-client/state/selectors/get-site-icon-url';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import isSiteSupportingImageEditor from 'wp-calypso-client/state/selectors/is-site-supporting-image-editor';
+import { uploadSiteIcon } from 'wp-calypso-client/state/media/thunks';
 
 /**
  * Style dependencies
@@ -157,7 +164,7 @@ class SiteIconSetting extends Component {
 	};
 
 	preloadModal() {
-		asyncRequire( 'post-editor/media-modal' );
+		asyncRequire( 'wp-calypso-client/post-editor/media-modal' );
 	}
 
 	isParentReady( selectedMedia ) {
@@ -246,7 +253,7 @@ class SiteIconSetting extends Component {
 				) }
 				{ hasToggledModal && (
 					<AsyncLoad
-						require="post-editor/media-modal"
+						require="wp-calypso-client/post-editor/media-modal"
 						placeholder={ <EditorMediaModalDialog isVisible /> }
 						siteId={ siteId }
 						onClose={ this.editSelectedMedia }

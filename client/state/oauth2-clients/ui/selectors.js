@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getOAuth2Client } from 'state/oauth2-clients/selectors';
+import { getOAuth2Client } from 'wp-calypso-client/state/oauth2-clients/selectors';
 
-import 'state/oauth2-clients/init';
+import 'wp-calypso-client/state/oauth2-clients/init';
 
 /**
  * Returns the ID of the current OAuth2 client.

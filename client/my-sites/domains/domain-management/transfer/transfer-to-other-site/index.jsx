@@ -12,23 +12,26 @@ import { localize } from 'i18n-calypso';
  * Internal Dependencies
  */
 import { Card } from '@automattic/components';
-import SiteSelector from 'components/site-selector';
-import { getCurrentUser, currentUserHasFlag } from 'state/current-user/selectors';
-import { DOMAINS_WITH_PLANS_ONLY } from 'state/current-user/constants';
-import getSites from 'state/selectors/get-sites';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import { domainManagementList, domainManagementTransfer } from 'my-sites/domains/paths';
-import { getSelectedDomain } from 'lib/domains';
-import NonOwnerCard from 'my-sites/domains/domain-management/components/domain/non-owner-card';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
+import SiteSelector from 'wp-calypso-client/components/site-selector';
+import { getCurrentUser, currentUserHasFlag } from 'wp-calypso-client/state/current-user/selectors';
+import { DOMAINS_WITH_PLANS_ONLY } from 'wp-calypso-client/state/current-user/constants';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import {
+	domainManagementList,
+	domainManagementTransfer,
+} from 'wp-calypso-client/my-sites/domains/paths';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import NonOwnerCard from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/non-owner-card';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
 import TransferConfirmationDialog from './confirmation-dialog';
-import { successNotice, errorNotice } from 'state/notices/actions';
-import wp from 'lib/wp';
-import { isWpComFreePlan } from 'lib/plans';
-import { requestSites } from 'state/sites/actions';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
+import wp from 'wp-calypso-client/lib/wp';
+import { isWpComFreePlan } from 'wp-calypso-client/lib/plans';
+import { requestSites } from 'wp-calypso-client/state/sites/actions';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 const wpcom = wp.undocumented();
 

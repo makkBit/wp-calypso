@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ReaderPostOptionsMenu from 'blocks/reader-post-options-menu';
+import ReaderPostOptionsMenu from 'wp-calypso-client/blocks/reader-post-options-menu';
 
 export default class ReaderPostOptionsMenuExample extends React.Component {
 	static displayName = 'ReaderPostOptionsMenuExample';

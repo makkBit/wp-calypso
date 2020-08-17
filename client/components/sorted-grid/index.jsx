@@ -9,7 +9,7 @@ import { get, keys, last, map, omit, reduce, slice } from 'lodash';
 /**
  * Internal dependencies
  */
-import InfiniteList from 'components/infinite-list';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
 import Label from './label';
 
 /**

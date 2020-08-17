@@ -10,28 +10,36 @@ import { includes, find, isEmpty, flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import HeaderCake from 'components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import { Card, ProgressBar, Button } from '@automattic/components';
-import UploadDropZone from 'blocks/upload-drop-zone';
-import EmptyContent from 'components/empty-content';
-import ThanksModal from 'my-sites/themes/thanks-modal';
-import AutoLoadingHomepageModal from 'my-sites/themes/auto-loading-homepage-modal';
-import QueryCanonicalTheme from 'components/data/query-canonical-theme';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import UploadDropZone from 'wp-calypso-client/blocks/upload-drop-zone';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import ThanksModal from 'wp-calypso-client/my-sites/themes/thanks-modal';
+import AutoLoadingHomepageModal from 'wp-calypso-client/my-sites/themes/auto-loading-homepage-modal';
+import QueryCanonicalTheme from 'wp-calypso-client/components/data/query-canonical-theme';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 // Necessary for ThanksModal
-import QueryActiveTheme from 'components/data/query-active-theme';
+import QueryActiveTheme from 'wp-calypso-client/components/data/query-active-theme';
 import { localize } from 'i18n-calypso';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import debugFactory from 'debug';
-import { uploadTheme, clearThemeUpload, initiateThemeTransfer } from 'state/themes/actions';
-import { getSelectedSiteId, getSelectedSite, getSelectedSiteSlug } from 'state/ui/selectors';
+import {
+	uploadTheme,
+	clearThemeUpload,
+	initiateThemeTransfer,
+} from 'wp-calypso-client/state/themes/actions';
+import {
+	getSelectedSiteId,
+	getSelectedSite,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
 import {
 	getSiteAdminUrl,
 	isJetpackSite,
 	isJetpackSiteMultiSite,
 	hasJetpackSiteJetpackThemesExtendedFeatures,
-} from 'state/sites/selectors';
+} from 'wp-calypso-client/state/sites/selectors';
 import {
 	isUploadInProgress,
 	isUploadComplete,
@@ -41,18 +49,21 @@ import {
 	getUploadProgressTotal,
 	getUploadProgressLoaded,
 	isInstallInProgress,
-} from 'state/themes/upload-theme/selectors';
-import { getCanonicalTheme } from 'state/themes/selectors';
-import { connectOptions } from 'my-sites/themes/theme-options';
-import EligibilityWarnings from 'blocks/eligibility-warnings';
-import JetpackManageErrorPage from 'my-sites/jetpack-manage-error-page';
-import { getBackPath } from 'state/themes/themes-ui/selectors';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { FEATURE_UNLIMITED_PREMIUM_THEMES } from 'lib/plans/constants';
-import QueryEligibility from 'components/data/query-atat-eligibility';
-import { getEligibility, isEligibleForAutomatedTransfer } from 'state/automated-transfer/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import WpAdminAutoLogin from 'components/wpadmin-auto-login';
+} from 'wp-calypso-client/state/themes/upload-theme/selectors';
+import { getCanonicalTheme } from 'wp-calypso-client/state/themes/selectors';
+import { connectOptions } from 'wp-calypso-client/my-sites/themes/theme-options';
+import EligibilityWarnings from 'wp-calypso-client/blocks/eligibility-warnings';
+import JetpackManageErrorPage from 'wp-calypso-client/my-sites/jetpack-manage-error-page';
+import { getBackPath } from 'wp-calypso-client/state/themes/themes-ui/selectors';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { FEATURE_UNLIMITED_PREMIUM_THEMES } from 'wp-calypso-client/lib/plans/constants';
+import QueryEligibility from 'wp-calypso-client/components/data/query-atat-eligibility';
+import {
+	getEligibility,
+	isEligibleForAutomatedTransfer,
+} from 'wp-calypso-client/state/automated-transfer/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import WpAdminAutoLogin from 'wp-calypso-client/components/wpadmin-auto-login';
 
 /**
  * Style dependencies

@@ -11,8 +11,8 @@ const debug = debugFactory( 'calypso:validate-fieldset' );
 /**
  * Internal dependencies
  */
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInputValidation from 'components/forms/form-input-validation';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 
 /**
  * Style dependencies

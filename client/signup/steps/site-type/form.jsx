@@ -9,10 +9,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Badge from 'components/badge';
+import Badge from 'wp-calypso-client/components/badge';
 import { Card } from '@automattic/components';
-import { getAllSiteTypes } from 'lib/signup/site-type';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getAllSiteTypes } from 'wp-calypso-client/lib/signup/site-type';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

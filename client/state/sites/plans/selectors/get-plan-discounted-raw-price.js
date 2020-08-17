@@ -6,10 +6,10 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { calculateMonthlyPriceForPlan } from 'lib/plans';
+import { calculateMonthlyPriceForPlan } from 'wp-calypso-client/lib/plans';
 
-import { getSitePlan } from 'state/sites/plans/selectors/get-site-plan';
-import { isSitePlanDiscounted } from 'state/sites/plans/selectors/is-site-plan-discounted';
+import { getSitePlan } from 'wp-calypso-client/state/sites/plans/selectors/get-site-plan';
+import { isSitePlanDiscounted } from 'wp-calypso-client/state/sites/plans/selectors/is-site-plan-discounted';
 
 /**
  * Returns a plan price, including any applied discounts

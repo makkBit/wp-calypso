@@ -11,13 +11,13 @@ const debug = debugFactory( 'calypso:me:security:2fa-backup-codes-prompt' );
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormVerificationCodeInput from 'components/forms/form-verification-code-input';
-import Notice from 'components/notice';
-import twoStepAuthorization from 'lib/two-step-authorization';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormVerificationCodeInput from 'wp-calypso-client/components/forms/form-verification-code-input';
+import Notice from 'wp-calypso-client/components/notice';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
 
 /**
  * Style dependencies

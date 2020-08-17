@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { emptyFilter } from 'state/activity-log/reducer';
+import { emptyFilter } from 'wp-calypso-client/state/activity-log/reducer';
 
 export const getActivityLogFilter = ( state, siteId ) => {
 	try {

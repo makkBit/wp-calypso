@@ -7,9 +7,9 @@ import { get } from 'lodash';
 /**
  * Internal Dependencies
  */
-import getSiteOptions from 'state/selectors/get-site-options';
+import getSiteOptions from 'wp-calypso-client/state/selectors/get-site-options';
 
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 
 /**
  * Indicates whether there might be an Automated Transfer process running on the backend for

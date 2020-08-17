@@ -9,18 +9,18 @@ import { isArray } from 'lodash';
 /**
  * Internal dependencies
  */
-import { requestSettingsUpdate } from 'state/mailchimp/settings/actions';
-import QueryMailchimpLists from 'components/data/query-mailchimp-lists';
-import QueryMailchimpSettings from 'components/data/query-mailchimp-settings';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getAllLists } from 'state/mailchimp/lists/selectors';
-import { getListId } from 'state/mailchimp/settings/selectors';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import getJetpackConnectionStatus from 'state/selectors/get-jetpack-connection-status';
-import { localizeUrl } from 'lib/i18n-utils';
+import { requestSettingsUpdate } from 'wp-calypso-client/state/mailchimp/settings/actions';
+import QueryMailchimpLists from 'wp-calypso-client/components/data/query-mailchimp-lists';
+import QueryMailchimpSettings from 'wp-calypso-client/components/data/query-mailchimp-settings';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getAllLists } from 'wp-calypso-client/state/mailchimp/lists/selectors';
+import { getListId } from 'wp-calypso-client/state/mailchimp/settings/selectors';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import getJetpackConnectionStatus from 'wp-calypso-client/state/selectors/get-jetpack-connection-status';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 const MailchimpSettings = ( {
 	siteId,

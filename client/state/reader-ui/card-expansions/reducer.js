@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
-import { READER_EXPAND_CARD, READER_RESET_CARD_EXPANSIONS } from 'state/reader/action-types';
-import { keyToString } from 'reader/post-key';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
+import {
+	READER_EXPAND_CARD,
+	READER_RESET_CARD_EXPANSIONS,
+} from 'wp-calypso-client/state/reader/action-types';
+import { keyToString } from 'wp-calypso-client/reader/post-key';
 
 export default withoutPersistence( ( state = {}, action ) => {
 	switch ( action.type ) {

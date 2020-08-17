@@ -3,14 +3,14 @@
  */
 
 import React from 'react';
-import cssSafeUrl from 'lib/css-safe-url';
+import cssSafeUrl from 'wp-calypso-client/lib/css-safe-url';
 
 /**
  * Internal dependencies
  */
-import FormToggle from 'components/forms/form-toggle/compact';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
 import classNames from 'classnames';
-import SocialLogo from 'components/social-logo';
+import SocialLogo from 'wp-calypso-client/components/social-logo';
 
 const PostShareConnection = ( { connection, isActive, onToggle } ) => {
 	const {

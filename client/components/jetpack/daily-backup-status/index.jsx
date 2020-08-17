@@ -8,25 +8,25 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { applySiteOffset } from 'lib/site/timezone';
-import { backupMainPath } from 'my-sites/backup/paths';
+import { applySiteOffset } from 'wp-calypso-client/lib/site/timezone';
+import { backupMainPath } from 'wp-calypso-client/my-sites/backup/paths';
 import { Card } from '@automattic/components';
 import {
 	isSuccessfulDailyBackup,
 	isSuccessfulRealtimeBackup,
 	INDEX_FORMAT,
-} from 'lib/jetpack/backup-utils';
-import { withLocalizedMoment } from 'components/localized-moment';
-import ActivityCard from 'components/activity-card';
+} from 'wp-calypso-client/lib/jetpack/backup-utils';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import ActivityCard from 'wp-calypso-client/components/activity-card';
 import BackupChanges from './backup-changes';
-import Button from 'components/forms/form-button';
+import Button from 'wp-calypso-client/components/forms/form-button';
 import ActionButtons from './action-buttons';
 
 /**
  * Style dependencies
  */
 import './style.scss';
-import contactSupportUrl from 'lib/jetpack/contact-support-url';
+import contactSupportUrl from 'wp-calypso-client/lib/jetpack/contact-support-url';
 import cloudErrorIcon from './icons/cloud-error.svg';
 import cloudWarningIcon from './icons/cloud-warning.svg';
 import cloudSuccessIcon from './icons/cloud-success.svg';

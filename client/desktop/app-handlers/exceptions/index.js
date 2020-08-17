@@ -6,9 +6,11 @@ const { app, dialog } = require( 'electron' ); // eslint-disable-line import/no-
 /**
  * Internal dependencies
  */
-const crashTracker = require( 'desktop/lib/crash-tracker' );
-const system = require( 'desktop/lib/system' );
-const log = require( 'desktop/lib/logger' )( 'desktop:exceptions', { handleExceptions: true } );
+const crashTracker = require( 'wp-calypso-client/desktop/lib/crash-tracker' );
+const system = require( 'wp-calypso-client/desktop/lib/system' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:exceptions', {
+	handleExceptions: true,
+} );
 
 /**
  * Module variables

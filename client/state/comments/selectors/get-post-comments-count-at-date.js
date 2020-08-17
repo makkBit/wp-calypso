@@ -6,9 +6,9 @@ import { filter, isDate, size } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getStateKey } from 'state/comments/utils';
+import { getStateKey } from 'wp-calypso-client/state/comments/utils';
 
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 /**
  * Get total number of comments in state at a given date and time

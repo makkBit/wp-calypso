@@ -1,10 +1,13 @@
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import { PLAN_BUSINESS, PLAN_ECOMMERCE } from 'lib/plans/constants';
-import { HAPPYCHAT_GROUP_WPCOM, HAPPYCHAT_GROUP_JPOP } from 'state/happychat/constants';
-import { userState } from 'state/selectors/test/fixtures/user-state';
+import { isEnabled } from 'wp-calypso-client/config';
+import { PLAN_BUSINESS, PLAN_ECOMMERCE } from 'wp-calypso-client/lib/plans/constants';
+import {
+	HAPPYCHAT_GROUP_WPCOM,
+	HAPPYCHAT_GROUP_JPOP,
+} from 'wp-calypso-client/state/happychat/constants';
+import { userState } from 'wp-calypso-client/state/selectors/test/fixtures/user-state';
 import getGroups from '../get-groups';
 
 describe( 'selectors', () => {

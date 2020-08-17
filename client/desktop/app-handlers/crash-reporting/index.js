@@ -6,8 +6,8 @@ const { app, crashReporter } = require( 'electron' ); // eslint-disable-line imp
 /**
  * Internal dependencies
  */
-const Config = require( 'desktop/lib/config' );
-const log = require( 'desktop/lib/logger' )( 'desktop:crash-reporting' );
+const Config = require( 'wp-calypso-client/desktop/lib/config' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:crash-reporting' );
 
 module.exports = function () {
 	if ( Config.crash_reporter.electron ) {

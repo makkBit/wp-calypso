@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import FormTextInput from 'components/forms/form-text-input';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
 
 export default class NumberInput extends Component {
 	static propTypes = {

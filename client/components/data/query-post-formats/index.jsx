@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingPostFormats } from 'state/post-formats/selectors';
-import { requestPostFormats } from 'state/post-formats/actions';
+import { isRequestingPostFormats } from 'wp-calypso-client/state/post-formats/selectors';
+import { requestPostFormats } from 'wp-calypso-client/state/post-formats/actions';
 
 class QueryPostFormats extends Component {
 	static propTypes = {

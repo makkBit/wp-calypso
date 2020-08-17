@@ -10,10 +10,10 @@ import { noop, pick } from 'lodash';
 /**
  * Internal dependencies
  */
-import getSiteGmtOffset from 'state/selectors/get-site-gmt-offset';
-import getSiteTimezoneValue from 'state/selectors/get-site-timezone-value';
-import Popover from 'components/popover';
-import PostSchedule from 'components/post-schedule';
+import getSiteGmtOffset from 'wp-calypso-client/state/selectors/get-site-gmt-offset';
+import getSiteTimezoneValue from 'wp-calypso-client/state/selectors/get-site-timezone-value';
+import Popover from 'wp-calypso-client/components/popover';
+import PostSchedule from 'wp-calypso-client/components/post-schedule';
 
 /**
  * Style dependencies

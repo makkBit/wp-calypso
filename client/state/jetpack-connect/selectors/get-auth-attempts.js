@@ -6,10 +6,10 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { AUTH_ATTEMPS_TTL } from 'state/jetpack-connect/constants';
-import { isStale } from 'state/jetpack-connect/utils';
+import { AUTH_ATTEMPS_TTL } from 'wp-calypso-client/state/jetpack-connect/constants';
+import { isStale } from 'wp-calypso-client/state/jetpack-connect/utils';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 export const getAuthAttempts = ( state, slug ) => {
 	const attemptsData = get( state, [ 'jetpackConnect', 'jetpackAuthAttempts', slug ] );

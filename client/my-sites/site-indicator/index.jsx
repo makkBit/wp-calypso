@@ -7,20 +7,24 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Animate from 'components/animate';
+import Animate from 'wp-calypso-client/components/animate';
 import { Button } from '@automattic/components';
-import ExternalLink from 'components/external-link';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
-import QuerySiteConnectionStatus from 'components/data/query-site-connection-status';
-import { getUpdatesBySiteId, isJetpackSite } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getSiteConnectionStatus from 'state/selectors/get-site-connection-status';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import QuerySiteConnectionStatus from 'wp-calypso-client/components/data/query-site-connection-status';
+import { getUpdatesBySiteId, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getSiteConnectionStatus from 'wp-calypso-client/state/selectors/get-site-connection-status';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 
 /**
  * Style dependencies

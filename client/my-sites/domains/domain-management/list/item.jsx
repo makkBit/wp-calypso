@@ -5,7 +5,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { noop } from 'lodash';
 
@@ -13,13 +13,13 @@ import { noop } from 'lodash';
  * Internal dependencies
  */
 import { Button, CompactCard } from '@automattic/components';
-import DomainPrimaryFlag from 'my-sites/domains/domain-management/components/domain/primary-flag';
-import DomainTransferFlag from 'my-sites/domains/domain-management/components/domain/transfer-flag';
-import { type as domainTypes, gdprConsentStatus } from 'lib/domains/constants';
-import Spinner from 'components/spinner';
-import { withLocalizedMoment } from 'components/localized-moment';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import DomainNotice from 'my-sites/domains/domain-management/components/domain-notice';
+import DomainPrimaryFlag from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/primary-flag';
+import DomainTransferFlag from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/transfer-flag';
+import { type as domainTypes, gdprConsentStatus } from 'wp-calypso-client/lib/domains/constants';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import DomainNotice from 'wp-calypso-client/my-sites/domains/domain-management/components/domain-notice';
 
 class ListItem extends React.PureComponent {
 	static propTypes = {

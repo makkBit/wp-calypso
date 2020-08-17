@@ -19,7 +19,11 @@ import {
 	translateWpcomPaymentMethodToCheckoutPaymentMethod,
 	WPCOMPaymentMethodClass,
 } from '../types';
-import { isPlan, isDomainTransferProduct, isDomainProduct } from 'lib/products-values';
+import {
+	isPlan,
+	isDomainTransferProduct,
+	isDomainProduct,
+} from 'wp-calypso-client/lib/products-values';
 
 /**
  * Translate a cart object as returned by the WPCOM cart endpoint to

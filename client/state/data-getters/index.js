@@ -5,15 +5,15 @@ import { omit, sortBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { http as rawHttp } from 'state/http/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { requestHttpData } from 'state/data-layer/http-data';
-import { filterStateToApiQuery } from 'state/activity-log/utils';
-import { noRetry } from 'state/data-layer/wpcom-http/pipeline/retry-on-failure/policies';
+import { http as rawHttp } from 'wp-calypso-client/state/http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { requestHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { filterStateToApiQuery } from 'wp-calypso-client/state/activity-log/utils';
+import { noRetry } from 'wp-calypso-client/state/data-layer/wpcom-http/pipeline/retry-on-failure/policies';
 import fromActivityLogApi, {
 	fromActivityApi,
-} from 'state/data-layer/wpcom/sites/activity/from-api';
-import fromActivityTypeApi from 'state/data-layer/wpcom/sites/activity-types/from-api';
+} from 'wp-calypso-client/state/data-layer/wpcom/sites/activity/from-api';
+import fromActivityTypeApi from 'wp-calypso-client/state/data-layer/wpcom/sites/activity-types/from-api';
 
 /**
  * Fetches content from a URL with a GET request

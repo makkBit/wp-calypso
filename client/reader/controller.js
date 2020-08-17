@@ -8,8 +8,8 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { abtest } from 'lib/abtest';
-import { sectionify } from 'lib/route';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { sectionify } from 'wp-calypso-client/lib/route';
 import {
 	trackPageLoad,
 	trackUpdatesLoaded,
@@ -17,20 +17,20 @@ import {
 	setPageTitle,
 	getStartDate,
 } from './controller-helper';
-import FeedError from 'reader/feed-error';
-import StreamComponent from 'reader/following/main';
-import { getPrettyFeedUrl, getPrettySiteUrl } from 'reader/route';
-import { recordTrack } from 'reader/stats';
-import { preload } from 'sections-helper';
-import { requestFeedDiscovery } from 'state/data-getters';
-import { waitForData } from 'state/data-layer/http-data';
-import AsyncLoad from 'components/async-load';
-import { isFollowingOpen } from 'state/reader-ui/sidebar/selectors';
-import { toggleReaderSidebarFollowing } from 'state/reader-ui/sidebar/actions';
-import { getLastPath } from 'state/reader-ui/selectors';
-import { getSection } from 'state/ui/selectors';
-import { isAutomatticTeamMember } from 'reader/lib/teams';
-import { getReaderTeams } from 'state/reader/teams/selectors';
+import FeedError from 'wp-calypso-client/reader/feed-error';
+import StreamComponent from 'wp-calypso-client/reader/following/main';
+import { getPrettyFeedUrl, getPrettySiteUrl } from 'wp-calypso-client/reader/route';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import { preload } from 'wp-calypso-client/sections-helper';
+import { requestFeedDiscovery } from 'wp-calypso-client/state/data-getters';
+import { waitForData } from 'wp-calypso-client/state/data-layer/http-data';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { isFollowingOpen } from 'wp-calypso-client/state/reader-ui/sidebar/selectors';
+import { toggleReaderSidebarFollowing } from 'wp-calypso-client/state/reader-ui/sidebar/actions';
+import { getLastPath } from 'wp-calypso-client/state/reader-ui/selectors';
+import { getSection } from 'wp-calypso-client/state/ui/selectors';
+import { isAutomatticTeamMember } from 'wp-calypso-client/reader/lib/teams';
+import { getReaderTeams } from 'wp-calypso-client/state/reader/teams/selectors';
 
 const analyticsPageTitle = 'Reader';
 
@@ -123,7 +123,11 @@ const exported = {
 
 	sidebar( context, next ) {
 		context.secondary = (
-			<AsyncLoad require="reader/sidebar" path={ context.path } placeholder={ null } />
+			<AsyncLoad
+				require="wp-calypso-client/reader/sidebar"
+				path={ context.path }
+				placeholder={ null }
+			/>
 		);
 
 		next();
@@ -217,7 +221,7 @@ const exported = {
 
 		context.primary = (
 			<AsyncLoad
-				require="reader/feed-stream"
+				require="wp-calypso-client/reader/feed-stream"
 				key={ 'feed-' + feedId }
 				streamKey={ 'feed:' + feedId }
 				feedId={ +feedId }
@@ -252,7 +256,7 @@ const exported = {
 
 		context.primary = (
 			<AsyncLoad
-				require="reader/site-stream"
+				require="wp-calypso-client/reader/site-stream"
 				key={ 'site-' + blogId }
 				streamKey={ streamKey }
 				siteId={ +blogId }
@@ -287,7 +291,7 @@ const exported = {
 		/* eslint-disable wpcalypso/jsx-classname-namespace */
 		context.primary = (
 			<AsyncLoad
-				require="reader/a8c/main"
+				require="wp-calypso-client/reader/a8c/main"
 				key="read-a8c"
 				className="is-a8c"
 				listName="Automattic"

@@ -9,33 +9,33 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
+import Accordion from 'wp-calypso-client/components/accordion';
 import { Card, Button } from '@automattic/components';
-import CardHeading from 'components/card-heading';
-import MaterialIcon from 'components/material-icon';
-import ClipboardButton from 'components/forms/clipboard-button';
-import Spinner from 'components/spinner';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import ClipboardButton from 'wp-calypso-client/components/forms/clipboard-button';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 import {
 	requestAtomicSftpUsers,
 	createAtomicSftpUser,
 	resetAtomicSftpPassword,
 	updateAtomicSftpUser,
-} from 'state/hosting/actions';
+} from 'wp-calypso-client/state/hosting/actions';
 import {
 	withAnalytics,
 	composeAnalytics,
 	recordTracksEvent,
 	recordGoogleEvent,
 	bumpStat,
-} from 'state/analytics/actions';
-import { getAtomicHostingSftpUsers } from 'state/selectors/get-atomic-hosting-sftp-users';
-import ExternalLink from 'components/external-link';
-import { localizeUrl } from 'lib/i18n-utils';
-import FormTextInput from 'components/forms/form-text-input';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
+} from 'wp-calypso-client/state/analytics/actions';
+import { getAtomicHostingSftpUsers } from 'wp-calypso-client/state/selectors/get-atomic-hosting-sftp-users';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
 
 /**
  * Style dependencies

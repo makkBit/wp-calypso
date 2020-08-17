@@ -6,7 +6,7 @@ import { clone, cloneDeep } from 'lodash';
 /**
  * Internal dependencies
  */
-import { isAdTrackingAllowed } from 'lib/analytics/utils';
+import { isAdTrackingAllowed } from 'wp-calypso-client/lib/analytics/utils';
 
 import { getCurrentUser } from '@automattic/calypso-analytics';
 import { debug, isCriteoEnabled, TRACKING_IDS } from './constants';

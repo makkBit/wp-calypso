@@ -4,16 +4,16 @@
  */
 import React from 'react';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import PostSchedule from 'components/post-schedule';
-import Timezone from 'components/timezone';
+import PostSchedule from 'wp-calypso-client/components/post-schedule';
+import Timezone from 'wp-calypso-client/components/timezone';
 import { Card } from '@automattic/components';
-import EventsTooltip from 'components/date-picker/events-tooltip';
-import { withLocalizedMoment } from 'components/localized-moment';
+import EventsTooltip from 'wp-calypso-client/components/date-picker/events-tooltip';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 // Date Picker Demo
 const PostScheduleExample = localize(

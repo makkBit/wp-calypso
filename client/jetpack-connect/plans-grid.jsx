@@ -10,10 +10,10 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import MainWrapper from './main-wrapper';
-import FormattedHeader from 'components/formatted-header';
-import PlansFeaturesMain from 'my-sites/plans-features-main';
-import PlansSkipButton from 'components/plans/plans-skip-button';
-import { recordTracksEvent } from 'state/analytics/actions';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import PlansFeaturesMain from 'wp-calypso-client/my-sites/plans-features-main';
+import PlansSkipButton from 'wp-calypso-client/components/plans/plans-skip-button';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Constants

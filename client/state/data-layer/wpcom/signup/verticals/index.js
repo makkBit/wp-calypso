@@ -7,15 +7,15 @@ import { translate } from 'i18n-calypso';
  * Internal dependencies
  */
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { convertToCamelCase } from 'state/data-layer/utils';
-import { errorNotice } from 'state/notices/actions';
-import { setVerticals } from 'state/signup/verticals/actions';
-import { SIGNUP_VERTICALS_REQUEST } from 'state/action-types';
-import { getSiteTypeId } from 'state/signup/steps/site-type/selectors';
-import { getCurrentFlowName } from 'state/signup/flow/selectors';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { convertToCamelCase } from 'wp-calypso-client/state/data-layer/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { setVerticals } from 'wp-calypso-client/state/signup/verticals/actions';
+import { SIGNUP_VERTICALS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { getSiteTypeId } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getCurrentFlowName } from 'wp-calypso-client/state/signup/flow/selectors';
 
 // Some flows do not choose a site type before requesting verticals. In this
 // case don't send a site_type param to the API.

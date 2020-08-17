@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -16,8 +16,11 @@ import {
 	recordGoogleEvent,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { removeEmailForward, resendVerificationEmail } from 'state/email-forwarding/actions';
+} from 'wp-calypso-client/state/analytics/actions';
+import {
+	removeEmailForward,
+	resendVerificationEmail,
+} from 'wp-calypso-client/state/email-forwarding/actions';
 
 class EmailForwardingItem extends React.Component {
 	static propTypes = {

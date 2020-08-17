@@ -32,8 +32,8 @@ import {
 	getPostPreviewUrl,
 	getSitePostsByTerm,
 } from '../selectors';
-import PostQueryManager from 'lib/query-manager/post';
-import { userState } from 'state/selectors/test/fixtures/user-state';
+import PostQueryManager from 'wp-calypso-client/lib/query-manager/post';
+import { userState } from 'wp-calypso-client/state/selectors/test/fixtures/user-state';
 
 describe( 'selectors', () => {
 	beforeEach( () => {

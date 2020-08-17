@@ -8,15 +8,15 @@ const path = require( 'path' );
 /**
  * Internal dependencies
  */
-const Config = require( 'desktop/lib/config' );
+const Config = require( 'wp-calypso-client/desktop/lib/config' );
 const { start } = require( './server' );
-const Settings = require( 'desktop/lib/settings' );
-const settingConstants = require( 'desktop/lib/settings/constants' );
-const cookieAuth = require( 'desktop/lib/cookie-auth' );
-const appInstance = require( 'desktop/lib/app-instance' );
-const platform = require( 'desktop/lib/platform' );
-const System = require( 'desktop/lib/system' );
-const log = require( 'desktop/lib/logger' )( 'desktop:runapp' );
+const Settings = require( 'wp-calypso-client/desktop/lib/settings' );
+const settingConstants = require( 'wp-calypso-client/desktop/lib/settings/constants' );
+const cookieAuth = require( 'wp-calypso-client/desktop/lib/cookie-auth' );
+const appInstance = require( 'wp-calypso-client/desktop/lib/app-instance' );
+const platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const System = require( 'wp-calypso-client/desktop/lib/system' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:runapp' );
 
 /**
  * Module variables

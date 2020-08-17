@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import sidebar from './sidebar/reducer';
 
 const schema = {

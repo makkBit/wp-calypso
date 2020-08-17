@@ -6,9 +6,9 @@ const { app, dialog } = require( 'electron' ); // eslint-disable-line import/no-
 /**
  * Internal dependencies
  */
-const settings = require( 'desktop/lib/settings' );
-const assets = require( 'desktop/lib/assets' );
-const log = require( 'desktop/lib/logger' )( 'desktop:failed-to-load' );
+const settings = require( 'wp-calypso-client/desktop/lib/settings' );
+const assets = require( 'wp-calypso-client/desktop/lib/assets' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:failed-to-load' );
 
 /**
  * Module variables

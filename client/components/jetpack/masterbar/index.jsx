@@ -8,15 +8,15 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import { getDocumentHeadTitle } from 'state/document-head/selectors/get-document-head-title';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import { getDocumentHeadTitle } from 'wp-calypso-client/state/document-head/selectors/get-document-head-title';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 import { useSelector } from 'react-redux';
-import Item from 'layout/masterbar/item';
-import JetpackLogo from 'components/jetpack-logo';
-import Masterbar from 'layout/masterbar/masterbar';
-import ProfileDropdown from 'components/jetpack/profile-dropdown';
+import Item from 'wp-calypso-client/layout/masterbar/item';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
+import Masterbar from 'wp-calypso-client/layout/masterbar/masterbar';
+import ProfileDropdown from 'wp-calypso-client/components/jetpack/profile-dropdown';
 import { useBreakpoint } from '@automattic/viewport-react';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
 
 /**
  * Style dependencies

@@ -12,8 +12,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 
-import Badge from 'components/badge';
-import { TERM_ANNUALLY, TERM_BIENNIALLY, TERM_MONTHLY } from 'lib/plans/constants';
+import Badge from 'wp-calypso-client/components/badge';
+import {
+	TERM_ANNUALLY,
+	TERM_BIENNIALLY,
+	TERM_MONTHLY,
+} from 'wp-calypso-client/lib/plans/constants';
 
 const TYPE_NEW_SALE = 'new-sale';
 const TYPE_UPGRADE = 'upgrade';

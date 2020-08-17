@@ -7,11 +7,11 @@ const os = require( 'os' ); // eslint-disable-line import/no-nodejs-modules
 /**
  * Internal dependencies
  */
-const Platform = require( 'desktop/lib/platform' );
-const config = require( 'desktop/lib/config' );
-const SettingsFile = require( 'desktop/lib/settings/settings-file' );
+const Platform = require( 'wp-calypso-client/desktop/lib/platform' );
+const config = require( 'wp-calypso-client/desktop/lib/config' );
+const SettingsFile = require( 'wp-calypso-client/desktop/lib/settings/settings-file' );
 const APPS_DIRECTORY = '/Applications';
-const log = require( 'desktop/lib/logger' )( 'desktop:system' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:system' );
 
 function isPinned() {
 	if ( Platform.isOSX() ) {

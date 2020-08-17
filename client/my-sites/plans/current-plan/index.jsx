@@ -11,35 +11,38 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import AsyncLoad from 'components/async-load';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
 import { Dialog } from '@automattic/components';
-import Main from 'components/main';
-import { getCurrentPlan, isRequestingSitePlans } from 'state/sites/plans/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import DocumentHead from 'components/data/document-head';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import PlansNavigation from 'my-sites/plans/navigation';
+import Main from 'wp-calypso-client/components/main';
+import {
+	getCurrentPlan,
+	isRequestingSitePlans,
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import PlansNavigation from 'wp-calypso-client/my-sites/plans/navigation';
 import PurchasesListing from './purchases-listing';
-import QuerySites from 'components/data/query-sites';
-import QuerySitePlans from 'components/data/query-site-plans';
-import { getPlan } from 'lib/plans';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import DomainWarnings from 'my-sites/domains/components/domain-warnings';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import JetpackChecklist from 'my-sites/plans/current-plan/jetpack-checklist';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import DomainWarnings from 'wp-calypso-client/my-sites/domains/components/domain-warnings';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import JetpackChecklist from 'wp-calypso-client/my-sites/plans/current-plan/jetpack-checklist';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
 import PaidPlanThankYou from './current-plan-thank-you/paid-plan-thank-you';
 import FreePlanThankYou from './current-plan-thank-you/free-plan-thank-you';
 import BackupProductThankYou from './current-plan-thank-you/backup-thank-you';
 import ScanProductThankYou from './current-plan-thank-you/scan-thank-you';
 import AntiSpamProductThankYou from './current-plan-thank-you/anti-spam-thank-you';
 import SearchProductThankYou from './current-plan-thank-you/search-thank-you';
-import { isFreeJetpackPlan, isFreePlan } from 'lib/products-values';
+import { isFreeJetpackPlan, isFreePlan } from 'wp-calypso-client/lib/products-values';
 
 /**
  * Style dependencies
@@ -190,7 +193,7 @@ class CurrentPlan extends Component {
 				</div>
 
 				<AsyncLoad
-					require="blocks/product-purchase-features-list"
+					require="wp-calypso-client/blocks/product-purchase-features-list"
 					placeholder={ null }
 					plan={ currentPlanSlug }
 					isPlaceholder={ isLoading }

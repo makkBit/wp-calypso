@@ -12,11 +12,11 @@ import page from 'page';
  */
 import { recordTracksEvent } from '@automattic/calypso-analytics';
 import { Dialog, Button } from '@automattic/components';
-import Gridicon from 'components/gridicon';
-import FormLabel from 'components/forms/form-label';
-import InlineSupportLink from 'components/inline-support-link';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { closeAccount } from 'state/account/actions';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { closeAccount } from 'wp-calypso-client/state/account/actions';
 
 /**
  * Style dependencies

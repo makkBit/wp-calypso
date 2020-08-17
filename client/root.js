@@ -6,12 +6,12 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import userFactory from 'lib/user';
-import canCurrentUserUseCustomerHome from 'state/sites/selectors/can-current-user-use-customer-home';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
+import config from 'wp-calypso-client/config';
+import userFactory from 'wp-calypso-client/lib/user';
+import canCurrentUserUseCustomerHome from 'wp-calypso-client/state/sites/selectors/can-current-user-use-customer-home';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 
 export default function () {
 	const user = userFactory();

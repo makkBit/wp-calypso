@@ -10,12 +10,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import QuerySitePlans from 'components/data/query-site-plans';
-import FormTextInput from 'components/forms/form-text-input';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import { addQueryArgs } from 'lib/url';
-import isSiteOnPaidPlan from 'state/selectors/is-site-on-paid-plan';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
+import isSiteOnPaidPlan from 'wp-calypso-client/state/selectors/is-site-on-paid-plan';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 class DisconnectSurvey extends PureComponent {
 	state = {

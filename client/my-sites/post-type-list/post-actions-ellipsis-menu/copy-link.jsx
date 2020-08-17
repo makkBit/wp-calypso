@@ -9,11 +9,11 @@ import { localize, translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import PopoverMenuItemClipboard from 'components/popover/menu-item-clipboard';
-import { getPost } from 'state/posts/selectors';
-import { bumpStat, recordTracksEvent } from 'state/analytics/actions';
+import PopoverMenuItemClipboard from 'wp-calypso-client/components/popover/menu-item-clipboard';
+import { getPost } from 'wp-calypso-client/state/posts/selectors';
+import { bumpStat, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import { bumpStatGenerator } from './utils';
-import { infoNotice } from 'state/notices/actions';
+import { infoNotice } from 'wp-calypso-client/state/notices/actions';
 
 function PostActionsEllipsisMenuCopyLink( { onCopyLinkClick, copyLink } ) {
 	return (

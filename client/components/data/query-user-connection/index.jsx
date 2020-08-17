@@ -9,8 +9,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { isRequestingSite } from 'state/sites/selectors';
-import { isUserConnected } from 'state/jetpack-connect/actions';
+import { isRequestingSite } from 'wp-calypso-client/state/sites/selectors';
+import { isUserConnected } from 'wp-calypso-client/state/jetpack-connect/actions';
 
 class QueryUserConnection extends Component {
 	UNSAFE_componentWillMount() {

@@ -7,9 +7,9 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Stream from 'reader/stream';
+import Stream from 'wp-calypso-client/reader/stream';
 import EmptyContent from './empty';
-import DocumentHead from 'components/data/document-head';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 
 const title = translate( 'My Likes' );
 const documentTitle = translate( '%s ‹ Reader', {

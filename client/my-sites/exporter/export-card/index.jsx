@@ -9,18 +9,22 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import SpinnerButton from 'components/spinner-button';
-import FoldableCard from 'components/foldable-card';
-import { Interval, EVERY_SECOND } from 'lib/interval';
+import SpinnerButton from 'wp-calypso-client/components/spinner-button';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import { Interval, EVERY_SECOND } from 'wp-calypso-client/lib/interval';
 import AdvancedSettings from './advanced-settings';
-import { withAnalytics, recordTracksEvent } from 'state/analytics/actions';
+import { withAnalytics, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import {
 	advancedSettingsFetch,
 	exportStatusFetch,
 	setPostType,
 	startExport,
-} from 'state/exporter/actions';
-import { shouldShowProgress, getSelectedPostType, isExporting } from 'state/exporter/selectors';
+} from 'wp-calypso-client/state/exporter/actions';
+import {
+	shouldShowProgress,
+	getSelectedPostType,
+	isExporting,
+} from 'wp-calypso-client/state/exporter/selectors';
 
 class ExportCard extends Component {
 	UNSAFE_componentWillMount() {

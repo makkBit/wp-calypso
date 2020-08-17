@@ -7,7 +7,7 @@ import { useSelector, useStore } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { getSectionName } from 'state/ui/selectors';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
 import { usePerformanceTrackerStop } from '../use-performance-tracker-stop';
 import { stopPerformanceTracking } from '../lib';
 

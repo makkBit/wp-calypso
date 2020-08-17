@@ -15,21 +15,21 @@ const debug = debugFactory( 'calypso:me:reauth-required' );
  * Internal Dependencies
  */
 import { Card, Dialog } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormVerificationCodeInput from 'components/forms/form-verification-code-input';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import Notice from 'components/notice';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormVerificationCodeInput from 'wp-calypso-client/components/forms/form-verification-code-input';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import Notice from 'wp-calypso-client/components/notice';
 /* eslint-disable no-restricted-imports */
-import observe from 'lib/mixins/data-observe';
+import observe from 'wp-calypso-client/lib/mixins/data-observe';
 /* eslint-enable no-restricted-imports */
-import { recordGoogleEvent } from 'state/analytics/actions';
-import SecurityKeyForm from 'me/reauth-required/security-key-form';
-import TwoFactorActions from 'me/reauth-required/two-factor-actions';
-import userUtilities from 'lib/user/utils';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import SecurityKeyForm from 'wp-calypso-client/me/reauth-required/security-key-form';
+import TwoFactorActions from 'wp-calypso-client/me/reauth-required/two-factor-actions';
+import userUtilities from 'wp-calypso-client/lib/user/utils';
 
 /**
  * Style dependencies

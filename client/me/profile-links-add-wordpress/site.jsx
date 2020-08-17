@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Site from 'blocks/site';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import Site from 'wp-calypso-client/blocks/site';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 class ProfileLinksAddWordPressSite extends Component {
 	static propTypes = {

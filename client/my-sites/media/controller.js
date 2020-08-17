@@ -7,8 +7,8 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import MediaComponent from 'my-sites/media/main';
-import { getSiteFragment } from 'lib/route';
+import MediaComponent from 'wp-calypso-client/my-sites/media/main';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 
 export default {
 	media: function ( context, next ) {

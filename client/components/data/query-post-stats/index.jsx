@@ -10,8 +10,8 @@ import { isEqual, isUndefined } from 'lodash';
 /**
  * Internal dependencies
  */
-import { isRequestingPostStats } from 'state/stats/posts/selectors';
-import { requestPostStats } from 'state/stats/posts/actions';
+import { isRequestingPostStats } from 'wp-calypso-client/state/stats/posts/selectors';
+import { requestPostStats } from 'wp-calypso-client/state/stats/posts/actions';
 
 class QueryPostStats extends Component {
 	static defaultProps = {

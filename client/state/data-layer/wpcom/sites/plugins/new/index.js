@@ -8,20 +8,20 @@ import { find, includes, toLower } from 'lodash';
 /**
  * Internal dependencies
  */
-import { PLUGIN_UPLOAD } from 'state/action-types';
+import { PLUGIN_UPLOAD } from 'wp-calypso-client/state/action-types';
 import {
 	completePluginUpload,
 	pluginUploadError,
 	updatePluginUploadProgress,
-} from 'state/plugins/upload/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { errorNotice } from 'state/notices/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSite } from 'state/sites/selectors';
-import Dispatcher from 'dispatcher';
+} from 'wp-calypso-client/state/plugins/upload/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const uploadPlugin = ( action ) => {
 	const { siteId, file } = action;

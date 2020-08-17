@@ -7,11 +7,11 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { setSection as setSectionAction } from 'state/ui/actions';
-import { setLocale } from 'state/ui/language/actions';
-import { isTranslatedIncompletely } from 'lib/i18n-utils/utils';
+import config from 'wp-calypso-client/config';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { setSection as setSectionAction } from 'wp-calypso-client/state/ui/actions';
+import { setLocale } from 'wp-calypso-client/state/ui/language/actions';
+import { isTranslatedIncompletely } from 'wp-calypso-client/lib/i18n-utils/utils';
 
 export function makeLayoutMiddleware( LayoutComponent ) {
 	return ( context, next ) => {

@@ -8,8 +8,8 @@ import React from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
 
 export default class Typography extends React.PureComponent {
 	static displayName = 'Typography';

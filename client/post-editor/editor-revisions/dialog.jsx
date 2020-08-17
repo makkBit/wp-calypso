@@ -11,14 +11,17 @@ import { Dialog } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import { getPostRevisionsSelectedRevision } from 'state/posts/selectors/get-post-revisions-selected-revision';
-import { isPostRevisionsDialogVisible } from 'state/posts/selectors/is-post-revisions-dialog-visible';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { closePostRevisionsDialog, selectPostRevision } from 'state/posts/revisions/actions';
-import EditorRevisions from 'post-editor/editor-revisions';
-import CloseOnEscape from 'components/close-on-escape';
+import { getPostRevisionsSelectedRevision } from 'wp-calypso-client/state/posts/selectors/get-post-revisions-selected-revision';
+import { isPostRevisionsDialogVisible } from 'wp-calypso-client/state/posts/selectors/is-post-revisions-dialog-visible';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import {
+	closePostRevisionsDialog,
+	selectPostRevision,
+} from 'wp-calypso-client/state/posts/revisions/actions';
+import EditorRevisions from 'wp-calypso-client/post-editor/editor-revisions';
+import CloseOnEscape from 'wp-calypso-client/components/close-on-escape';
 
 class PostRevisionsDialog extends PureComponent {
 	static propTypes = {

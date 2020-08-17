@@ -13,8 +13,12 @@ import { format as formatUrl, parse as parseUrl } from 'url';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { shouldShowTax, hasPendingPayment, getEnabledPaymentMethods } from 'lib/cart-values';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import {
+	shouldShowTax,
+	hasPendingPayment,
+	getEnabledPaymentMethods,
+} from 'wp-calypso-client/lib/cart-values';
 import {
 	conciergeSessionItem,
 	domainMapping,
@@ -38,14 +42,14 @@ import {
 	hasOnlyRenewalItems,
 	hasTransferProduct,
 	jetpackProductItem,
-} from 'lib/cart-values/cart-items';
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 import {
 	isJetpackProductSlug,
 	isJetpackScanSlug,
 	isJetpackBackupSlug,
 	isJetpackCloudProductSlug,
 	isJetpackAntiSpamSlug,
-} from 'lib/products-values';
+} from 'wp-calypso-client/lib/products-values';
 import {
 	JETPACK_PRODUCTS_LIST,
 	JETPACK_SEARCH_PRODUCTS,
@@ -53,63 +57,75 @@ import {
 	PRODUCT_JETPACK_SEARCH_MONTHLY,
 	PRODUCT_WPCOM_SEARCH,
 	PRODUCT_WPCOM_SEARCH_MONTHLY,
-} from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values/constants';
 import PendingPaymentBlocker from './pending-payment-blocker';
-import { clearSitePlans } from 'state/sites/plans/actions';
-import { clearPurchases } from 'state/purchases/actions';
+import { clearSitePlans } from 'wp-calypso-client/state/sites/plans/actions';
+import { clearPurchases } from 'wp-calypso-client/state/purchases/actions';
 import DomainDetailsForm from './domain-details-form';
-import { fetchReceiptCompleted } from 'state/receipts/actions';
-import { getExitCheckoutUrl } from 'lib/checkout';
-import { hasDomainDetails } from 'lib/transaction/selectors';
-import notices from 'notices';
-import { managePurchase } from 'me/purchases/paths';
-import SubscriptionLengthPicker from 'blocks/subscription-length-picker';
-import QueryContactDetailsCache from 'components/data/query-contact-details-cache';
-import QueryStoredCards from 'components/data/query-stored-cards';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QueryPlans from 'components/data/query-plans';
+import { fetchReceiptCompleted } from 'wp-calypso-client/state/receipts/actions';
+import { getExitCheckoutUrl } from 'wp-calypso-client/lib/checkout';
+import { hasDomainDetails } from 'wp-calypso-client/lib/transaction/selectors';
+import notices from 'wp-calypso-client/notices';
+import { managePurchase } from 'wp-calypso-client/me/purchases/paths';
+import SubscriptionLengthPicker from 'wp-calypso-client/blocks/subscription-length-picker';
+import QueryContactDetailsCache from 'wp-calypso-client/components/data/query-contact-details-cache';
+import QueryStoredCards from 'wp-calypso-client/components/data/query-stored-cards';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QueryPlans from 'wp-calypso-client/components/data/query-plans';
 import SecurePaymentForm from './secure-payment-form';
 import SecurePaymentFormPlaceholder from './secure-payment-form-placeholder';
-import { AUTO_RENEWAL } from 'lib/url/support';
+import { AUTO_RENEWAL } from 'wp-calypso-client/lib/url/support';
 import {
 	RECEIVED_WPCOM_RESPONSE,
 	SUBMITTING_WPCOM_REQUEST,
-} from 'lib/store-transactions/step-types';
-import { addItem, replaceCartWithItems, replaceItem, applyCoupon } from 'lib/cart/actions';
-import { resetTransaction, setDomainDetails } from 'lib/transaction/actions';
-import getContactDetailsCache from 'state/selectors/get-contact-details-cache';
-import getUpgradePlanSlugFromPath from 'state/selectors/get-upgrade-plan-slug-from-path';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isEligibleForSignupDestination from 'state/selectors/is-eligible-for-signup-destination';
-import { getStoredCards } from 'state/stored-cards/selectors';
-import { isValidFeatureKey } from 'lib/plans/features-list';
-import { getPlan, findPlansKeys } from 'lib/plans';
-import { GROUP_WPCOM } from 'lib/plans/constants';
-import { recordViewCheckout } from 'lib/analytics/ad-tracking';
-import { requestSite } from 'state/sites/actions';
-import { isJetpackSite, isNewSite } from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { getCurrentUserCountryCode } from 'state/current-user/selectors';
-import { getDomainNameFromReceiptOrCart } from 'lib/domains/cart-utils';
-import { fetchSitesAndUser } from 'lib/signup/step-actions/fetch-sites-and-user';
-import { getProductsList, isProductsListFetching } from 'state/products-list/selectors';
-import QueryProducts from 'components/data/query-products-list';
-import { isRequestingSitePlans } from 'state/sites/plans/selectors';
-import { isRequestingPlans } from 'state/plans/selectors';
-import { isApplePayAvailable } from 'lib/web-payment';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import isAtomicSite from 'state/selectors/is-site-automated-transfer';
-import config from 'config';
-import { loadTrackingTool } from 'state/analytics/actions';
+} from 'wp-calypso-client/lib/store-transactions/step-types';
+import {
+	addItem,
+	replaceCartWithItems,
+	replaceItem,
+	applyCoupon,
+} from 'wp-calypso-client/lib/cart/actions';
+import { resetTransaction, setDomainDetails } from 'wp-calypso-client/lib/transaction/actions';
+import getContactDetailsCache from 'wp-calypso-client/state/selectors/get-contact-details-cache';
+import getUpgradePlanSlugFromPath from 'wp-calypso-client/state/selectors/get-upgrade-plan-slug-from-path';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isEligibleForSignupDestination from 'wp-calypso-client/state/selectors/is-eligible-for-signup-destination';
+import { getStoredCards } from 'wp-calypso-client/state/stored-cards/selectors';
+import { isValidFeatureKey } from 'wp-calypso-client/lib/plans/features-list';
+import { getPlan, findPlansKeys } from 'wp-calypso-client/lib/plans';
+import { GROUP_WPCOM } from 'wp-calypso-client/lib/plans/constants';
+import { recordViewCheckout } from 'wp-calypso-client/lib/analytics/ad-tracking';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
+import { isJetpackSite, isNewSite } from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { getCurrentUserCountryCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getDomainNameFromReceiptOrCart } from 'wp-calypso-client/lib/domains/cart-utils';
+import { fetchSitesAndUser } from 'wp-calypso-client/lib/signup/step-actions/fetch-sites-and-user';
+import {
+	getProductsList,
+	isProductsListFetching,
+} from 'wp-calypso-client/state/products-list/selectors';
+import QueryProducts from 'wp-calypso-client/components/data/query-products-list';
+import { isRequestingSitePlans } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isRequestingPlans } from 'wp-calypso-client/state/plans/selectors';
+import { isApplePayAvailable } from 'wp-calypso-client/lib/web-payment';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import config from 'wp-calypso-client/config';
+import { loadTrackingTool } from 'wp-calypso-client/state/analytics/actions';
 import {
 	persistSignupDestination,
 	retrieveSignupDestination,
 	clearSignupDestinationCookie,
-} from 'signup/utils';
-import { isExternal, addQueryArgs } from 'lib/url';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { abtest } from 'lib/abtest';
-import isPrivateSite from 'state/selectors/is-private-site';
+} from 'wp-calypso-client/signup/utils';
+import { isExternal, addQueryArgs } from 'wp-calypso-client/lib/url';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
 
 /**
  * Style dependencies

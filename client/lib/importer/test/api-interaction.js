@@ -9,9 +9,9 @@ import { get, partial } from 'lodash';
  */
 import { fetchState } from '../actions';
 import store from '../store';
-import Dispatcher from 'dispatcher';
-import { IMPORTS_STORE_RESET } from 'state/action-types';
-import { nock, useNock } from 'test-helpers/use-nock';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import { IMPORTS_STORE_RESET } from 'wp-calypso-client/state/action-types';
+import { nock, useNock } from 'wp-calypso-client/test-helpers/use-nock';
 
 const testSiteId = 'en.blog.wordpress.com';
 const fetchTestState = partial( fetchState, testSiteId );

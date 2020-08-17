@@ -11,8 +11,8 @@ import { translate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import pathToSection from 'lib/path-to-section';
-import { ROUTE_SET } from 'state/action-types';
+import pathToSection from 'wp-calypso-client/lib/path-to-section';
+import { ROUTE_SET } from 'wp-calypso-client/state/action-types';
 import {
 	posToCss,
 	getStepPosition,

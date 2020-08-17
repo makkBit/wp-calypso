@@ -16,7 +16,7 @@ import {
 	Next,
 	Quit,
 	Continue,
-} from 'layout/guided-tours/config-elements';
+} from 'wp-calypso-client/layout/guided-tours/config-elements';
 
 export const ActivityLogTour = makeTour(
 	<Tour { ...meta }>

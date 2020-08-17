@@ -18,9 +18,9 @@ import {
 	COMMENTS_RECEIVE,
 	COMMENTS_COUNT_INCREMENT,
 	NOTICE_CREATE,
-} from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { useFakeTimers } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { useFakeTimers } from 'wp-calypso-client/test-helpers/use-sinon';
 
 describe( 'utility functions', () => {
 	useFakeTimers();

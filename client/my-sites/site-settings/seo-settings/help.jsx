@@ -10,13 +10,13 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import SupportInfo from 'components/support-info';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { FEATURE_ADVANCED_SEO } from 'lib/plans/constants';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { FEATURE_ADVANCED_SEO } from 'wp-calypso-client/lib/plans/constants';
 
 const SeoSettingsHelpCard = ( {
 	disabled,

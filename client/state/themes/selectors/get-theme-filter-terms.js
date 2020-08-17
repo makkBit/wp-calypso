@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getThemeFilters } from 'state/themes/selectors/get-theme-filters';
+import { getThemeFilters } from 'wp-calypso-client/state/themes/selectors/get-theme-filters';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns the list of available terms for a given theme filter.

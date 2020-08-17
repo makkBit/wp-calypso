@@ -13,17 +13,17 @@ import { WindowScroller } from '@automattic/react-virtualized';
 /**
  * Internal dependencies
  */
-import VirtualList from 'components/virtual-list';
+import VirtualList from 'wp-calypso-client/components/virtual-list';
 import ListItem from './list-item';
 import { CompactCard } from '@automattic/components';
-import QueryTerms from 'components/data/query-terms';
-import QuerySiteSettings from 'components/data/query-site-settings';
+import QueryTerms from 'wp-calypso-client/components/data/query-terms';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
 import {
 	isRequestingTermsForQueryIgnoringPage,
 	getTermsLastPageForQuery,
 	getTermsForQueryIgnoringPage,
-} from 'state/terms/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/terms/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Constants

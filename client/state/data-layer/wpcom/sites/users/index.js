@@ -7,12 +7,12 @@ import { get, isUndefined, map, noop, omit, omitBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import { POST_REVISIONS_AUTHORS_REQUEST } from 'state/action-types';
-import { dispatchRequest, getHeaders } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receivePostRevisionAuthors } from 'state/posts/revisions/authors/actions';
+import { POST_REVISIONS_AUTHORS_REQUEST } from 'wp-calypso-client/state/action-types';
+import { dispatchRequest, getHeaders } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receivePostRevisionAuthors } from 'wp-calypso-client/state/posts/revisions/authors/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const DEFAULT_PER_PAGE = 10;
 

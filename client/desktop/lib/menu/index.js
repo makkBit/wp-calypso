@@ -7,8 +7,8 @@ const { Menu } = require( 'electron' ); // eslint-disable-line import/no-extrane
  * Internal dependencies
  */
 const template = require( './main-menu' );
-const menuSetter = require( 'desktop/lib/menu-setter' );
-const log = require( 'desktop/lib/logger' )( 'desktop:menu' );
+const menuSetter = require( 'wp-calypso-client/desktop/lib/menu-setter' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:menu' );
 
 /**
  * Module variables

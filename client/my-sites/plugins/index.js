@@ -6,8 +6,8 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { navigation, siteSelection, sites } from 'my-sites/controller';
-import config from 'config';
+import { navigation, siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
+import config from 'wp-calypso-client/config';
 import {
 	browsePlugins,
 	browsePluginsOrPlugin,
@@ -19,8 +19,8 @@ import {
 	setupPlugins,
 	upload,
 } from './controller';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { makeLayout, render as clientRender } from 'controller';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default function () {
 	if ( config.isEnabled( 'manage/plugins/setup' ) ) {

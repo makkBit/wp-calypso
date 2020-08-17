@@ -12,15 +12,18 @@ import page from 'page';
  * Internal dependencies
  */
 import CartAd from './cart-ad';
-import { abtest } from 'lib/abtest';
-import { premiumPlan, getAllCartItems } from 'lib/cart-values/cart-items';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { addItem } from 'lib/cart/actions';
-import { PLAN_PREMIUM, FEATURE_UNLIMITED_PREMIUM_THEMES } from 'lib/plans/constants';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { premiumPlan, getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { addItem } from 'wp-calypso-client/lib/cart/actions';
+import {
+	PLAN_PREMIUM,
+	FEATURE_UNLIMITED_PREMIUM_THEMES,
+} from 'wp-calypso-client/lib/plans/constants';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const eventName = 'cart_theme_to_plan_upsell';
 

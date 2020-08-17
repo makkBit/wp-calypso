@@ -6,7 +6,7 @@ import { findIndex } from 'lodash';
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	WOOCOMMERCE_COUPON_DELETED,
 	WOOCOMMERCE_COUPON_UPDATED,

@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import { currentFlowName } from '../reducer';
-import { SIGNUP_CURRENT_FLOW_NAME_SET } from 'state/action-types';
+import { SIGNUP_CURRENT_FLOW_NAME_SET } from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	test( 'should update the current flow', () => {

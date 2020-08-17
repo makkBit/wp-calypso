@@ -22,37 +22,37 @@ import { Button, Card } from '@wordpress/components';
  */
 import AuthFormHeader from './auth-form-header';
 import HelpButton from './help-button';
-import LocaleSuggestions from 'components/locale-suggestions';
-import LoggedOutFormLinkItem from 'components/logged-out-form/link-item';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
+import LoggedOutFormLinkItem from 'wp-calypso-client/components/logged-out-form/link-item';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
 import MainWrapper from './main-wrapper';
-import SignupForm from 'blocks/signup-form';
-import WpcomLoginForm from 'signup/wpcom-login-form';
-import { addQueryArgs } from 'lib/route';
+import SignupForm from 'wp-calypso-client/blocks/signup-form';
+import WpcomLoginForm from 'wp-calypso-client/signup/wpcom-login-form';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
 import { authQueryPropTypes } from './utils';
 import {
 	errorNotice as errorNoticeAction,
 	warningNotice as warningNoticeAction,
-} from 'state/notices/actions';
-import { isEnabled } from 'config';
-import { login } from 'lib/paths';
-import { recordTracksEvent as recordTracksEventAction } from 'state/analytics/actions';
-import { sendEmailLogin as sendEmailLoginAction } from 'state/auth/actions';
+} from 'wp-calypso-client/state/notices/actions';
+import { isEnabled } from 'wp-calypso-client/config';
+import { login } from 'wp-calypso-client/lib/paths';
+import { recordTracksEvent as recordTracksEventAction } from 'wp-calypso-client/state/analytics/actions';
+import { sendEmailLogin as sendEmailLoginAction } from 'wp-calypso-client/state/auth/actions';
 import {
 	createAccount as createAccountAction,
 	createSocialAccount as createSocialAccountAction,
-} from 'state/jetpack-connect/actions';
-import LoginBlock from 'blocks/login';
-import Gridicon from 'components/gridicon';
-import { decodeEntities } from 'lib/formatting';
+} from 'wp-calypso-client/state/jetpack-connect/actions';
+import LoginBlock from 'wp-calypso-client/blocks/login';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 import {
 	getRequestError,
 	getLastCheckedUsernameOrEmail,
 	getAuthAccountType,
 	getRedirectToOriginal,
-} from 'state/login/selectors';
-import { resetAuthAccountType as resetAuthAccountTypeAction } from 'state/login/actions';
-import FormattedHeader from 'components/formatted-header';
+} from 'wp-calypso-client/state/login/selectors';
+import { resetAuthAccountType as resetAuthAccountTypeAction } from 'wp-calypso-client/state/login/actions';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import wooDnaConfig from './woo-dna-config';
 
 const debug = debugFactory( 'calypso:jetpack-connect:authorize-form' );

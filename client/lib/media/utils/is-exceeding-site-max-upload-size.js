@@ -6,8 +6,8 @@ import { includes, startsWith, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import versionCompare from 'lib/version-compare';
-import { getMimeType } from 'lib/media/utils/get-mime-type';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { getMimeType } from 'wp-calypso-client/lib/media/utils/get-mime-type';
 
 /**
  * Returns true if the specified item exceeds the maximum upload size for

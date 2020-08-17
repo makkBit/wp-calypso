@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import Notice from 'components/notice';
-import SectionHeader from 'components/section-header';
-import Security2faBackupCodesList from 'me/security-2fa-backup-codes-list';
-import Security2faBackupCodesPrompt from 'me/security-2fa-backup-codes-prompt';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import Notice from 'wp-calypso-client/components/notice';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import Security2faBackupCodesList from 'wp-calypso-client/me/security-2fa-backup-codes-list';
+import Security2faBackupCodesPrompt from 'wp-calypso-client/me/security-2fa-backup-codes-prompt';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

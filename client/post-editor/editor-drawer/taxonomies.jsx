@@ -10,15 +10,15 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { decodeEntities } from 'lib/formatting';
-import QueryTaxonomies from 'components/data/query-taxonomies';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPostTypeTaxonomies } from 'state/post-types/taxonomies/selectors';
-import Accordion from 'components/accordion';
-import TermTokenField from 'post-editor/term-token-field';
-import TermSelector from 'post-editor/editor-term-selector';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import QueryTaxonomies from 'wp-calypso-client/components/data/query-taxonomies';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPostTypeTaxonomies } from 'wp-calypso-client/state/post-types/taxonomies/selectors';
+import Accordion from 'wp-calypso-client/components/accordion';
+import TermTokenField from 'wp-calypso-client/post-editor/term-token-field';
+import TermSelector from 'wp-calypso-client/post-editor/editor-term-selector';
 
 function isSkippedTaxonomy( postType, taxonomy ) {
 	if ( includes( [ 'post_format', 'mentions', 'xposts' ], taxonomy ) ) {

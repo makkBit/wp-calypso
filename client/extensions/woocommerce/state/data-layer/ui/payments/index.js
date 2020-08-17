@@ -15,7 +15,7 @@ import {
 	actionListStepFailure,
 	actionListClear,
 } from 'woocommerce/state/action-list/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	areSettingsGeneralLoaded,
 	getPaymentCurrencySettings,

@@ -9,42 +9,42 @@ import { noop, includes } from 'lodash';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
-import formState from 'lib/form-state';
-import { setSiteTitle } from 'state/signup/steps/site-title/actions';
-import { setDesignType } from 'state/signup/steps/design-type/actions';
-import { getSiteTitle } from 'state/signup/steps/site-title/selectors';
-import { setSiteGoals } from 'state/signup/steps/site-goals/actions';
-import { getSiteGoals } from 'state/signup/steps/site-goals/selectors';
-import { setUserExperience } from 'state/signup/steps/user-experience/actions';
-import { getUserExperience } from 'state/signup/steps/user-experience/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getThemeForSiteGoals, getDesignTypeForSiteGoals } from 'signup/utils';
-import { setSurvey } from 'state/signup/steps/survey/actions';
-import { getSurveyVertical } from 'state/signup/steps/survey/selectors';
-import { isValidLandingPageVertical } from 'lib/signup/verticals';
-import { DESIGN_TYPE_STORE } from 'signup/constants';
-import { isUserLoggedIn } from 'state/current-user/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import formState from 'wp-calypso-client/lib/form-state';
+import { setSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/actions';
+import { setDesignType } from 'wp-calypso-client/state/signup/steps/design-type/actions';
+import { getSiteTitle } from 'wp-calypso-client/state/signup/steps/site-title/selectors';
+import { setSiteGoals } from 'wp-calypso-client/state/signup/steps/site-goals/actions';
+import { getSiteGoals } from 'wp-calypso-client/state/signup/steps/site-goals/selectors';
+import { setUserExperience } from 'wp-calypso-client/state/signup/steps/user-experience/actions';
+import { getUserExperience } from 'wp-calypso-client/state/signup/steps/user-experience/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getThemeForSiteGoals, getDesignTypeForSiteGoals } from 'wp-calypso-client/signup/utils';
+import { setSurvey } from 'wp-calypso-client/state/signup/steps/survey/actions';
+import { getSurveyVertical } from 'wp-calypso-client/state/signup/steps/survey/selectors';
+import { isValidLandingPageVertical } from 'wp-calypso-client/lib/signup/verticals';
+import { DESIGN_TYPE_STORE } from 'wp-calypso-client/signup/constants';
+import { isUserLoggedIn } from 'wp-calypso-client/state/current-user/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
 import {
 	getSiteVerticalId,
 	getSiteVerticalParentId,
-} from 'state/signup/steps/site-vertical/selectors';
-import { setSiteVertical } from 'state/signup/steps/site-vertical/actions';
-import hasInitializedSites from 'state/selectors/has-initialized-sites';
-import { saveSignupStep, submitSignupStep } from 'state/signup/progress/actions';
+} from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { setSiteVertical } from 'wp-calypso-client/state/signup/steps/site-vertical/actions';
+import hasInitializedSites from 'wp-calypso-client/state/selectors/has-initialized-sites';
+import { saveSignupStep, submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 //Form components
 import { Card, Button, ScreenReaderText } from '@automattic/components';
-import FormTextInput from 'components/forms/form-text-input';
-import InfoPopover from 'components/info-popover';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInputCheckbox from 'components/forms/form-checkbox';
-import SegmentedControl from 'components/segmented-control';
-import SiteVerticalsSuggestionSearch from 'components/site-verticals-suggestion-search';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInputCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import SegmentedControl from 'wp-calypso-client/components/segmented-control';
+import SiteVerticalsSuggestionSearch from 'wp-calypso-client/components/site-verticals-suggestion-search';
 
 /**
  * Style dependencies

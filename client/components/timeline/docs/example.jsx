@@ -8,8 +8,8 @@ import { noop } from 'lodash-es';
 /**
  * Internal dependencies
  */
-import Timeline from 'components/timeline';
-import TimelineEvent from 'components/timeline/timeline-event.jsx';
+import Timeline from 'wp-calypso-client/components/timeline';
+import TimelineEvent from 'wp-calypso-client/components/timeline/timeline-event.jsx';
 
 class TimelineExample extends PureComponent {
 	static displayName = 'TimelineExample';

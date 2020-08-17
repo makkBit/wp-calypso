@@ -11,9 +11,9 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import QuerySiteStats from 'components/data/query-site-stats';
-import { isJetpackSite, getSiteOption } from 'state/sites/selectors';
-import { getSiteStatsNormalizedData } from 'state/stats/lists/selectors';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import { isJetpackSite, getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { getSiteStatsNormalizedData } from 'wp-calypso-client/state/stats/lists/selectors';
 
 const StatsSparkline = ( { isJetpack, siteUrl, className, siteId, highestViews } ) => {
 	const translate = useTranslate();

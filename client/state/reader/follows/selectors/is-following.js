@@ -6,10 +6,10 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import { prepareComparableUrl } from 'state/reader/follows/utils';
-import getReaderAliasedFollowFeedUrl from 'state/reader/follows/selectors/get-reader-aliased-follow-feed-url';
+import { prepareComparableUrl } from 'wp-calypso-client/state/reader/follows/utils';
+import getReaderAliasedFollowFeedUrl from 'wp-calypso-client/state/reader/follows/selectors/get-reader-aliased-follow-feed-url';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 export default function isFollowing( state, { feedUrl, feedId, blogId } ) {
 	let follow;

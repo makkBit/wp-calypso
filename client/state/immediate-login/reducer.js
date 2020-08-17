@@ -2,8 +2,8 @@
  * Internal dependencies
  */
 
-import { withoutPersistence } from 'state/utils';
-import { IMMEDIATE_LOGIN_SAVE_INFO } from 'state/action-types';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
+import { IMMEDIATE_LOGIN_SAVE_INFO } from 'wp-calypso-client/state/action-types';
 
 const initialState = {
 	attempt: false,

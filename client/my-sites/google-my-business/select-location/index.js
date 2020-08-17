@@ -3,7 +3,7 @@
  */
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import page from 'page';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
@@ -12,26 +12,26 @@ import React, { Component } from 'react';
  * Internal dependencies
  */
 import { Button, Card, CompactCard } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import getGoogleMyBusinessLocations from 'state/selectors/get-google-my-business-locations';
-import GoogleMyBusinessLocation from 'my-sites/google-my-business/location';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import getGoogleMyBusinessLocations from 'wp-calypso-client/state/selectors/get-google-my-business-locations';
+import GoogleMyBusinessLocation from 'wp-calypso-client/my-sites/google-my-business/location';
 import GoogleMyBusinessSelectLocationButton from './button';
-import HeaderCake from 'components/header-cake';
-import KeyringConnectButton from 'blocks/keyring-connect-button';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryKeyringConnections from 'components/data/query-keyring-connections';
-import QuerySiteKeyrings from 'components/data/query-site-keyrings';
-import QueryKeyringServices from 'components/data/query-keyring-services';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import KeyringConnectButton from 'wp-calypso-client/blocks/keyring-connect-button';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryKeyringConnections from 'wp-calypso-client/components/data/query-keyring-connections';
+import QuerySiteKeyrings from 'wp-calypso-client/components/data/query-site-keyrings';
+import QueryKeyringServices from 'wp-calypso-client/components/data/query-keyring-services';
 import {
 	connectGoogleMyBusinessLocation,
 	connectGoogleMyBusinessAccount,
-} from 'state/google-my-business/actions';
-import { enhanceWithLocationCounts } from 'my-sites/google-my-business/utils';
-import { enhanceWithSiteType, recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import { requestKeyringConnections } from 'state/sharing/keyring/actions';
-import { withEnhancers } from 'state/utils';
+} from 'wp-calypso-client/state/google-my-business/actions';
+import { enhanceWithLocationCounts } from 'wp-calypso-client/my-sites/google-my-business/utils';
+import { enhanceWithSiteType, recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteSlug, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { requestKeyringConnections } from 'wp-calypso-client/state/sharing/keyring/actions';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 
 /**
  * Style dependencies

@@ -12,27 +12,35 @@ import { Button, Card, CompactCard, ProgressBar } from '@automattic/components';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
-import Gridicon from 'components/gridicon';
-import Main from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import Spinner from 'components/spinner';
-import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'lib/plans/constants';
-import { planHasFeature } from 'lib/plans';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Main from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import Spinner from 'wp-calypso-client/components/spinner';
+import { FEATURE_UPLOAD_THEMES_PLUGINS } from 'wp-calypso-client/lib/plans/constants';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
 import StepConfirmMigration from './step-confirm-migration';
 import StepImportOrMigrate from './step-import-or-migrate';
 import StepSourceSelect from './step-source-select';
 import StepUpgrade from './step-upgrade';
-import { Interval, EVERY_TEN_SECONDS } from 'lib/interval';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import { getSite, getSiteAdminUrl, isJetpackSite } from 'state/sites/selectors';
-import { receiveSite, updateSiteMigrationMeta, requestSite } from 'state/sites/actions';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { urlToSlug } from 'lib/url';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import wpcom from 'lib/wp';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { Interval, EVERY_TEN_SECONDS } from 'wp-calypso-client/lib/interval';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import { getSite, getSiteAdminUrl, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import {
+	receiveSite,
+	updateSiteMigrationMeta,
+	requestSite,
+} from 'wp-calypso-client/state/sites/actions';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { urlToSlug } from 'wp-calypso-client/lib/url';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

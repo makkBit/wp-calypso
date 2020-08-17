@@ -10,7 +10,7 @@ import { get } from 'lodash';
 
 import { POST_STATUSES } from '../constants';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Returns true if post counts request is in progress, or false otherwise.

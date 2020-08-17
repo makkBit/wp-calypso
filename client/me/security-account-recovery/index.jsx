@@ -10,19 +10,19 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import config from 'config';
-import DocumentHead from 'components/data/document-head';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import QueryAccountRecoverySettings from 'components/data/query-account-recovery-settings';
-import ReauthRequired from 'me/reauth-required';
+import config from 'wp-calypso-client/config';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import QueryAccountRecoverySettings from 'wp-calypso-client/components/data/query-account-recovery-settings';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
 import RecoveryEmail from './recovery-email';
 import RecoveryEmailValidationNotice from './recovery-email-validation-notice';
 import RecoveryPhone from './recovery-phone';
 import RecoveryPhoneValidationNotice from './recovery-phone-validation-notice';
-import SecuritySectionNav from 'me/security-section-nav';
-import twoStepAuthorization from 'lib/two-step-authorization';
+import SecuritySectionNav from 'wp-calypso-client/me/security-section-nav';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
 import {
 	updateAccountRecoveryEmail,
 	updateAccountRecoveryPhone,
@@ -31,7 +31,7 @@ import {
 	resendAccountRecoveryEmailValidation,
 	resendAccountRecoveryPhoneValidation,
 	validateAccountRecoveryPhone,
-} from 'state/account-recovery/settings/actions';
+} from 'wp-calypso-client/state/account-recovery/settings/actions';
 import {
 	getAccountRecoveryEmail,
 	getAccountRecoveryPhone,
@@ -44,9 +44,9 @@ import {
 	hasSentAccountRecoveryPhoneValidation,
 	shouldPromptAccountRecoveryEmailValidationNotice,
 	shouldPromptAccountRecoveryPhoneValidationNotice,
-} from 'state/account-recovery/settings/selectors';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+} from 'wp-calypso-client/state/account-recovery/settings/selectors';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /**
  * Style dependencies

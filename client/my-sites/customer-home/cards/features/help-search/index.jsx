@@ -10,22 +10,22 @@ import { get, isUndefined, omitBy } from 'lodash';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import Gridicon from 'components/gridicon';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getSearchQuery from 'state/inline-help/selectors/get-search-query';
-import { hideInlineHelp, showInlineHelp } from 'state/inline-help/actions';
-import { openSupportArticleDialog } from 'state/inline-support-article/actions';
-import HelpSearchCard from 'blocks/inline-help/inline-help-search-card';
-import HelpSearchResults from 'blocks/inline-help/inline-help-search-results';
-import getInlineHelpCurrentlySelectedResult from 'state/inline-help/selectors/get-inline-help-currently-selected-result';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getSearchQuery from 'wp-calypso-client/state/inline-help/selectors/get-search-query';
+import { hideInlineHelp, showInlineHelp } from 'wp-calypso-client/state/inline-help/actions';
+import { openSupportArticleDialog } from 'wp-calypso-client/state/inline-support-article/actions';
+import HelpSearchCard from 'wp-calypso-client/blocks/inline-help/inline-help-search-card';
+import HelpSearchResults from 'wp-calypso-client/blocks/inline-help/inline-help-search-results';
+import getInlineHelpCurrentlySelectedResult from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-currently-selected-result';
 import {
 	RESULT_POST_ID,
 	RESULT_ARTICLE,
 	RESULT_LINK,
 	RESULT_TOUR,
 	RESULT_TYPE,
-} from 'blocks/inline-help/constants';
+} from 'wp-calypso-client/blocks/inline-help/constants';
 
 /**
  * Style dependencies

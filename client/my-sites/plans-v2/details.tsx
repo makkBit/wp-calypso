@@ -21,16 +21,16 @@ import {
 	OPTIONS_JETPACK_SECURITY,
 	OPTIONS_JETPACK_SECURITY_MONTHLY,
 } from './constants';
-import FormattedHeader from 'components/formatted-header';
-import HeaderCake from 'components/header-cake';
-import Main from 'components/main';
-import JetpackBundleCard from 'components/jetpack/card/jetpack-bundle-card';
-import JetpackProductCard from 'components/jetpack/card/jetpack-product-card';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getAvailableProductsList } from 'state/products-list/selectors/get-available-products-list';
-import { isProductsListFetching } from 'state/products-list/selectors/is-products-list-fetching';
-import { getProductCost } from 'state/products-list/selectors/get-product-cost';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import Main from 'wp-calypso-client/components/main';
+import JetpackBundleCard from 'wp-calypso-client/components/jetpack/card/jetpack-bundle-card';
+import JetpackProductCard from 'wp-calypso-client/components/jetpack/card/jetpack-product-card';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getAvailableProductsList } from 'wp-calypso-client/state/products-list/selectors/get-available-products-list';
+import { isProductsListFetching } from 'wp-calypso-client/state/products-list/selectors/is-products-list-fetching';
+import { getProductCost } from 'wp-calypso-client/state/products-list/selectors/get-product-cost';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Type dependencies

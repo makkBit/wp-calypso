@@ -13,12 +13,12 @@ import { noop } from 'lodash';
  */
 import LogItem from '../log-item';
 import ThreatDescription from '../threat-description';
-import ThreatItemHeader from 'components/jetpack/threat-item-header';
-import ThreatItemSubheader from 'components/jetpack/threat-item-subheader';
-import { Threat } from 'components/jetpack/threat-item/types';
-import { getThreatFix } from 'components/jetpack/threat-item/utils';
-import useTrackCallback from 'lib/jetpack/use-track-callback';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import ThreatItemHeader from 'wp-calypso-client/components/jetpack/threat-item-header';
+import ThreatItemSubheader from 'wp-calypso-client/components/jetpack/threat-item-subheader';
+import { Threat } from 'wp-calypso-client/components/jetpack/threat-item/types';
+import { getThreatFix } from 'wp-calypso-client/components/jetpack/threat-item/utils';
+import useTrackCallback from 'wp-calypso-client/lib/jetpack/use-track-callback';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

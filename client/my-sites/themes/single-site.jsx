@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import SingleSiteThemeShowcaseWpcom from './single-site-wpcom';
 import SingleSiteThemeShowcaseJetpack from './single-site-jetpack';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { isThemeActive } from 'state/themes/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { isThemeActive } from 'wp-calypso-client/state/themes/selectors';
 
 const SingleSiteThemeShowcaseWithOptions = ( props ) => {
 	const { isJetpack, siteId, translate } = props;

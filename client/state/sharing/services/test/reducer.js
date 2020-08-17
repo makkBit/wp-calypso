@@ -15,8 +15,8 @@ import {
 	KEYRING_SERVICES_REQUEST_SUCCESS,
 	DESERIALIZE,
 	SERIALIZE,
-} from 'state/action-types';
-import { useSandbox } from 'test-helpers/use-sinon';
+} from 'wp-calypso-client/state/action-types';
+import { useSandbox } from 'wp-calypso-client/test-helpers/use-sinon';
 
 const originalKeyringServices = {
 	facebook: {

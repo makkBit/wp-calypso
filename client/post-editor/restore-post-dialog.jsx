@@ -11,10 +11,10 @@ import { noop } from 'lodash';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
 
 class EditorRestorePostDialog extends Component {
 	static propTypes = {

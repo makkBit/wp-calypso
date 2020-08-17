@@ -14,8 +14,8 @@ import { areProductsLoading, getAllProducts } from 'woocommerce/state/sites/prod
 import { fetchProducts } from 'woocommerce/state/sites/products/actions';
 import { getLink } from 'woocommerce/lib/nav-utils';
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
-import NoResults from 'my-sites/no-results';
-import Search from 'components/search';
+import NoResults from 'wp-calypso-client/my-sites/no-results';
+import Search from 'wp-calypso-client/components/search';
 import ProductSearchRow from './row';
 import {
 	addProductId,

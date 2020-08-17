@@ -10,16 +10,16 @@ import _debug from 'debug';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getTerms } from 'state/terms/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import { getPostTypeTaxonomy } from 'state/post-types/taxonomies/selectors';
-import { editPost } from 'state/posts/actions';
-import TokenField from 'components/token-field';
-import { decodeEntities } from 'lib/formatting';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import QueryTerms from 'components/data/query-terms';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getTerms } from 'wp-calypso-client/state/terms/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getPostTypeTaxonomy } from 'wp-calypso-client/state/post-types/taxonomies/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
+import TokenField from 'wp-calypso-client/components/token-field';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import QueryTerms from 'wp-calypso-client/components/data/query-terms';
 
 const debug = _debug( 'calypso:post-editor:editor-terms' );
 const DEFAULT_NON_HIERARCHICAL_QUERY = {

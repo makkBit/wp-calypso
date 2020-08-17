@@ -18,7 +18,7 @@ import '@testing-library/jest-dom/extend-expect';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { responseCartWithRenewal, storeData } from './lib/fixtures';
 import defaultTheme from '@automattic/composite-checkout/src/theme';
 import SecondaryCartPromotions from '../secondary-cart-promotions';

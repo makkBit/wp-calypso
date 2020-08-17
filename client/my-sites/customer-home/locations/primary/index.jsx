@@ -6,18 +6,18 @@ import React, { useEffect } from 'react';
 /**
  * Internal dependencies
  */
-import ConnectAccounts from 'my-sites/customer-home/cards/tasks/connect-accounts';
-import Webinars from 'my-sites/customer-home/cards/tasks/webinars';
-import FindDomain from 'my-sites/customer-home/cards/tasks/find-domain';
-import SiteSetupList from 'my-sites/customer-home/cards/tasks/site-setup-list';
-import DeprecateEditor from 'my-sites/customer-home/cards/tasks/deprecate-editor';
-import GoMobile from 'my-sites/customer-home/cards/tasks/go-mobile';
-import EarnFeatures from 'my-sites/customer-home/cards/tasks/earn-features';
-import GrowthSummit from 'my-sites/customer-home/cards/tasks/growth-summit';
-import CelebrateSiteCreation from 'my-sites/customer-home/cards/notices/celebrate-site-creation';
-import CelebrateSiteLaunch from 'my-sites/customer-home/cards/notices/celebrate-site-launch';
-import CelebrateSiteMigration from 'my-sites/customer-home/cards/notices/celebrate-site-migration';
-import CelebrateSiteSetupComplete from 'my-sites/customer-home/cards/notices/celebrate-site-setup-complete';
+import ConnectAccounts from 'wp-calypso-client/my-sites/customer-home/cards/tasks/connect-accounts';
+import Webinars from 'wp-calypso-client/my-sites/customer-home/cards/tasks/webinars';
+import FindDomain from 'wp-calypso-client/my-sites/customer-home/cards/tasks/find-domain';
+import SiteSetupList from 'wp-calypso-client/my-sites/customer-home/cards/tasks/site-setup-list';
+import DeprecateEditor from 'wp-calypso-client/my-sites/customer-home/cards/tasks/deprecate-editor';
+import GoMobile from 'wp-calypso-client/my-sites/customer-home/cards/tasks/go-mobile';
+import EarnFeatures from 'wp-calypso-client/my-sites/customer-home/cards/tasks/earn-features';
+import GrowthSummit from 'wp-calypso-client/my-sites/customer-home/cards/tasks/growth-summit';
+import CelebrateSiteCreation from 'wp-calypso-client/my-sites/customer-home/cards/notices/celebrate-site-creation';
+import CelebrateSiteLaunch from 'wp-calypso-client/my-sites/customer-home/cards/notices/celebrate-site-launch';
+import CelebrateSiteMigration from 'wp-calypso-client/my-sites/customer-home/cards/notices/celebrate-site-migration';
+import CelebrateSiteSetupComplete from 'wp-calypso-client/my-sites/customer-home/cards/notices/celebrate-site-setup-complete';
 import {
 	NOTICE_CELEBRATE_SITE_CREATION,
 	NOTICE_CELEBRATE_SITE_LAUNCH,
@@ -32,9 +32,13 @@ import {
 	TASK_WEBINARS,
 	TASK_EARN_FEATURES,
 	TASK_GROWTH_SUMMIT,
-} from 'my-sites/customer-home/cards/constants';
-import { withPerformanceTrackerStop } from 'lib/performance-tracking';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
+} from 'wp-calypso-client/my-sites/customer-home/cards/constants';
+import { withPerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 import { connect } from 'react-redux';
 
 const cardComponents = {

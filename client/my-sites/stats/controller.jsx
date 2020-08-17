@@ -11,14 +11,14 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import { getSiteFragment, getStatsDefaultSitePage } from 'lib/route';
-import { bumpStat } from 'lib/analytics/mc';
-import { recordPlaceholdersTiming } from 'lib/perfmon';
-import { getSite, getSiteOption } from 'state/sites/selectors';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { setNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import FollowList from 'lib/follow-list';
+import { getSiteFragment, getStatsDefaultSitePage } from 'wp-calypso-client/lib/route';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import { recordPlaceholdersTiming } from 'wp-calypso-client/lib/perfmon';
+import { getSite, getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import { setNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import FollowList from 'wp-calypso-client/lib/follow-list';
 import StatsInsights from './stats-insights';
 import StatsOverview from './overview';
 import StatsSite from './site';
@@ -26,7 +26,7 @@ import StatsSummary from './summary';
 import StatsPostDetail from './stats-post-detail';
 import StatsCommentFollows from './comment-follows';
 import WordAds from './wordads';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 function rangeOfPeriod( period, date ) {
 	const periodRange = {

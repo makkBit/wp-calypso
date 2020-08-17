@@ -11,9 +11,9 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { activateRewind } from 'state/activity-log/actions';
-import isRewindActivating from 'state/selectors/is-rewind-activating';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
+import { activateRewind } from 'wp-calypso-client/state/activity-log/actions';
+import isRewindActivating from 'wp-calypso-client/state/selectors/is-rewind-activating';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

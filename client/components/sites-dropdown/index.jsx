@@ -7,16 +7,16 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { noop, get } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Site from 'blocks/site';
-import SitePlaceholder from 'blocks/site/placeholder';
-import SiteSelector from 'components/site-selector';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import { getCurrentUser } from 'state/current-user/selectors';
+import Site from 'wp-calypso-client/blocks/site';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
+import SiteSelector from 'wp-calypso-client/components/site-selector';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 /**
  * Style dependencies

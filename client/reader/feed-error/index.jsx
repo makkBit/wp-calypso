@@ -8,10 +8,10 @@ import i18n, { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ReaderMain from 'reader/components/reader-main';
-import MobileBackToSidebar from 'components/mobile-back-to-sidebar';
-import EmptyContent from 'components/empty-content';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
+import MobileBackToSidebar from 'wp-calypso-client/components/mobile-back-to-sidebar';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 
 class FeedError extends React.Component {
 	static defaultProps = {

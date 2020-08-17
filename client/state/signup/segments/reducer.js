@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { withoutPersistence } from 'state/utils';
-import { SIGNUP_SEGMENTS_SET } from 'state/action-types';
+import { withoutPersistence } from 'wp-calypso-client/state/utils';
+import { SIGNUP_SEGMENTS_SET } from 'wp-calypso-client/state/action-types';
 
 export default withoutPersistence( ( state = null, action ) => {
 	switch ( action.type ) {

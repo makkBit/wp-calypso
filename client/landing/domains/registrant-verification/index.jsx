@@ -11,8 +11,8 @@ import { get, join } from 'lodash';
  */
 import DomainsLandingHeader from '../header';
 import DomainsLandingContentCard from '../content-card';
-import { CALYPSO_CONTACT } from 'lib/url/support';
-import wp from 'lib/wp';
+import { CALYPSO_CONTACT } from 'wp-calypso-client/lib/url/support';
+import wp from 'wp-calypso-client/lib/wp';
 import { getMaintenanceMessageFromError } from '../utils';
 
 const wpcom = wp.undocumented();

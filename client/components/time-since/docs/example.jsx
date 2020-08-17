@@ -8,7 +8,7 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import TimeSince from 'components/time-since';
+import TimeSince from 'wp-calypso-client/components/time-since';
 
 const TimeSinceExample = () => {
 	return (

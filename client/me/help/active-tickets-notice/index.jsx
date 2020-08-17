@@ -8,8 +8,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import Notice from 'wp-calypso-client/components/notice';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 
 /**
  * Style dependencies

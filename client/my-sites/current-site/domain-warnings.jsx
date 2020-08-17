@@ -9,14 +9,14 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import DomainWarnings from 'my-sites/domains/components/domain-warnings';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
-import isSiteEligibleForFullSiteEditing from 'state/selectors/is-site-eligible-for-full-site-editing';
+import DomainWarnings from 'wp-calypso-client/my-sites/domains/components/domain-warnings';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
+import isSiteEligibleForFullSiteEditing from 'wp-calypso-client/state/selectors/is-site-eligible-for-full-site-editing';
 
 const allowedRules = [
 	'unverifiedDomainsCanManage',

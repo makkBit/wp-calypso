@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import {
 	PUBLICIZE_CONNECTION_CREATE,
 	PUBLICIZE_CONNECTION_CREATE_FAILURE,
@@ -21,9 +21,9 @@ import {
 	PUBLICIZE_SHARE_SUCCESS,
 	PUBLICIZE_SHARE_FAILURE,
 	PUBLICIZE_SHARE_DISMISS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/sharing/init';
+import 'wp-calypso-client/state/sharing/init';
 
 export function dismissShareConfirmation( siteId, postId ) {
 	return {

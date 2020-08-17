@@ -7,7 +7,7 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { localizeUrl } from 'lib/i18n-utils';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export default function LostPassword() {
 	const translate = useTranslate();

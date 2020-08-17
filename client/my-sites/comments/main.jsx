@@ -9,18 +9,18 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import getSiteId from 'state/selectors/get-site-id';
-import Main from 'components/main';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import DocumentHead from 'components/data/document-head';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import Main from 'wp-calypso-client/components/main';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
 import CommentList from './comment-list';
 import CommentTree from './comment-tree';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { preventWidows } from 'lib/formatting';
-import { isEnabled } from 'config';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import { isEnabled } from 'wp-calypso-client/config';
 import { NEWEST_FIRST } from './constants';
 
 /**

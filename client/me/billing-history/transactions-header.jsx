@@ -11,13 +11,13 @@ import { find, isEqual } from 'lodash';
 /**
  * Internal dependencies
  */
-import SelectDropdown from 'components/select-dropdown';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { setApp, setDate } from 'state/billing-transactions/ui/actions';
-import getBillingTransactionAppFilterValues from 'state/selectors/get-billing-transaction-app-filter-values';
-import getBillingTransactionDateFilterValues from 'state/selectors/get-billing-transaction-date-filter-values';
-import getBillingTransactionFilters from 'state/selectors/get-billing-transaction-filters';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { setApp, setDate } from 'wp-calypso-client/state/billing-transactions/ui/actions';
+import getBillingTransactionAppFilterValues from 'wp-calypso-client/state/selectors/get-billing-transaction-app-filter-values';
+import getBillingTransactionDateFilterValues from 'wp-calypso-client/state/selectors/get-billing-transaction-date-filter-values';
+import getBillingTransactionFilters from 'wp-calypso-client/state/selectors/get-billing-transaction-filters';
 
 class TransactionsHeader extends React.Component {
 	state = {

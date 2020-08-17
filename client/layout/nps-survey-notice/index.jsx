@@ -9,30 +9,30 @@ import { get } from 'lodash';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import QuerySites from 'components/data/query-sites';
-import NpsSurvey from 'blocks/nps-survey';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import NpsSurvey from 'wp-calypso-client/blocks/nps-survey';
 import {
 	setNpsSurveyDialogShowing,
 	setupNpsSurveyDevTrigger,
-} from 'state/nps-survey/notice/actions';
-import { isNpsSurveyDialogShowing } from 'state/nps-survey/notice/selectors';
+} from 'wp-calypso-client/state/nps-survey/notice/actions';
+import { isNpsSurveyDialogShowing } from 'wp-calypso-client/state/nps-survey/notice/selectors';
 import {
 	submitNpsSurveyWithNoScore,
 	setupNpsSurveyEligibility,
 	markNpsSurveyShownThisSession,
-} from 'state/nps-survey/actions';
+} from 'wp-calypso-client/state/nps-survey/actions';
 import {
 	getNpsSurveyScore,
 	hasAnsweredNpsSurvey,
 	hasAnsweredNpsSurveyWithNoScore,
 	isSectionAndSessionEligibleForNpsSurvey,
 	wasNpsSurveyShownThisSession,
-} from 'state/nps-survey/selectors';
-import { isSupportSession } from 'state/support/selectors';
-import getSites from 'state/selectors/get-sites';
-import { isBusinessPlan } from 'lib/plans';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { bumpStat } from 'lib/analytics/mc';
+} from 'wp-calypso-client/state/nps-survey/selectors';
+import { isSupportSession } from 'wp-calypso-client/state/support/selectors';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
+import { isBusinessPlan } from 'wp-calypso-client/lib/plans';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
 
 /**
  * Style dependencies

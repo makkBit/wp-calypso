@@ -7,11 +7,11 @@ import {
 	SITES_BLOG_STICKER_REMOVE,
 	SITES_BLOG_STICKER_LIST,
 	SITES_BLOG_STICKER_LIST_RECEIVE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/blog-stickers';
-import 'state/data-layer/wpcom/sites/blog-stickers/add';
-import 'state/data-layer/wpcom/sites/blog-stickers/remove';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/blog-stickers';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/blog-stickers/add';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/blog-stickers/remove';
 
 export function addBlogSticker( blogId, stickerName ) {
 	return {

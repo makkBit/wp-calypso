@@ -3,15 +3,15 @@
  */
 import React from 'react';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { intersection } from 'lodash';
 import PropTypes from 'prop-types';
 
 /**
  * Internal dependencies
  */
-import PaymentLogo, { POSSIBLE_TYPES } from 'components/payment-logo';
-import { getEnabledPaymentMethods } from 'lib/cart-values';
+import PaymentLogo, { POSSIBLE_TYPES } from 'wp-calypso-client/components/payment-logo';
+import { getEnabledPaymentMethods } from 'wp-calypso-client/lib/cart-values';
 
 /**
  * Style dependencies

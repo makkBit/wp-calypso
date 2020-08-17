@@ -6,12 +6,15 @@ import { get, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { SITE_CHECKLIST_REQUEST, SITE_CHECKLIST_TASK_UPDATE } from 'state/action-types';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receiveSiteChecklist } from 'state/checklist/actions';
+import {
+	SITE_CHECKLIST_REQUEST,
+	SITE_CHECKLIST_TASK_UPDATE,
+} from 'wp-calypso-client/state/action-types';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { receiveSiteChecklist } from 'wp-calypso-client/state/checklist/actions';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 export const CHECKLIST_KNOWN_TASKS = {
 	START_SITE_SETUP: 'start_site_setup',

@@ -11,8 +11,8 @@ import page from 'page';
  * Internal dependencies
  */
 import { Dialog } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import { getSiteFragment } from 'lib/route';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 
 class EditorTrashedDialog extends React.Component {
 	static displayName = 'EditorTrashedDialog';

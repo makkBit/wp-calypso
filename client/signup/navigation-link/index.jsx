@@ -6,19 +6,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize, getLocaleSlug } from 'i18n-calypso';
 import { get, findLast, findIndex } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import classnames from 'classnames';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import { getStepUrl } from 'signup/utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { submitSignupStep } from 'state/signup/progress/actions';
-import { getSignupProgress } from 'state/signup/progress/selectors';
+import { getStepUrl } from 'wp-calypso-client/signup/utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
+import { getSignupProgress } from 'wp-calypso-client/state/signup/progress/selectors';
 import { getFilteredSteps } from '../utils';
-import { getABTestVariation } from 'lib/abtest';
+import { getABTestVariation } from 'wp-calypso-client/lib/abtest';
 
 /**
  * Style dependencies

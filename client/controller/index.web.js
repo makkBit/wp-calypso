@@ -8,18 +8,21 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { translate } from 'i18n-calypso';
-import Layout from 'layout';
-import LayoutLoggedOut from 'layout/logged-out';
-import EmptyContent from 'components/empty-content';
-import CalypsoI18nProvider from 'components/calypso-i18n-provider';
-import { MomentProvider } from 'components/localized-moment/context';
-import { login } from 'lib/paths';
+import Layout from 'wp-calypso-client/layout';
+import LayoutLoggedOut from 'wp-calypso-client/layout/logged-out';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import CalypsoI18nProvider from 'wp-calypso-client/components/calypso-i18n-provider';
+import { MomentProvider } from 'wp-calypso-client/components/localized-moment/context';
+import { login } from 'wp-calypso-client/lib/paths';
 import { makeLayoutMiddleware } from './shared.js';
-import { isUserLoggedIn } from 'state/current-user/selectors';
-import { getImmediateLoginEmail, getImmediateLoginLocale } from 'state/immediate-login/selectors';
-import { getSiteFragment } from 'lib/route';
+import { isUserLoggedIn } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getImmediateLoginEmail,
+	getImmediateLoginLocale,
+} from 'wp-calypso-client/state/immediate-login/selectors';
+import { getSiteFragment } from 'wp-calypso-client/lib/route';
 import { hydrate } from './web-util.js';
 
 /**

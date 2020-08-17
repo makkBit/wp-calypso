@@ -7,8 +7,8 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import { useLocalizedMoment } from 'components/localized-moment';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /*
  * Constants

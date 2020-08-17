@@ -10,15 +10,18 @@ import { flowRight as compose, get, identity, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getHttpData, requestHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { getPreference, isFetchingPreferences } from 'state/preferences/selectors';
-import { savePreference } from 'state/preferences/actions';
-import getCurrentUserRegisterDate from 'state/selectors/get-current-user-register-date';
-import Banner from 'components/banner';
-import config from 'config';
+import { getHttpData, requestHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	getPreference,
+	isFetchingPreferences,
+} from 'wp-calypso-client/state/preferences/selectors';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import getCurrentUserRegisterDate from 'wp-calypso-client/state/selectors/get-current-user-register-date';
+import Banner from 'wp-calypso-client/components/banner';
+import config from 'wp-calypso-client/config';
 import PrivacyPolicyDialog from './privacy-policy-dialog';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 const AUTOMATTIC_ENTITY = 'automattic';
 const PRIVACY_POLICY_PREFERENCE = 'privacy_policy';

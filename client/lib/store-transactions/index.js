@@ -9,8 +9,8 @@ import inherits from 'inherits';
 /**
  * Internal dependencies
  */
-import paymentGatewayLoader from 'lib/payment-gateway-loader';
-import { validatePaymentDetails } from 'lib/checkout';
+import paymentGatewayLoader from 'wp-calypso-client/lib/payment-gateway-loader';
+import { validatePaymentDetails } from 'wp-calypso-client/lib/checkout';
 import {
 	INPUT_VALIDATION,
 	RECEIVED_PAYMENT_KEY_RESPONSE,
@@ -21,16 +21,16 @@ import {
 	SUBMITTING_PAYMENT_KEY_REQUEST,
 	SUBMITTING_WPCOM_REQUEST,
 } from './step-types';
-import wp from 'lib/wp';
+import wp from 'wp-calypso-client/lib/wp';
 import {
 	isEbanxCreditCardProcessingEnabledForCountry,
 	translatedEbanxError,
-} from 'lib/checkout/processor-specific';
+} from 'wp-calypso-client/lib/checkout/processor-specific';
 import {
 	createStripePaymentMethod,
 	confirmStripePaymentIntent,
 	StripeValidationError,
-} from 'lib/stripe';
+} from 'wp-calypso-client/lib/stripe';
 
 const wpcom = wp.undocumented();
 

@@ -20,7 +20,7 @@ import reducer, {
 	completedActivationRequests,
 	recommendedThemes,
 } from '../reducer';
-import ThemeQueryManager from 'lib/query-manager/theme';
+import ThemeQueryManager from 'wp-calypso-client/lib/query-manager/theme';
 import {
 	THEME_REQUEST,
 	THEME_REQUEST_SUCCESS,
@@ -41,8 +41,8 @@ import {
 	RECOMMENDED_THEMES_FETCH,
 	RECOMMENDED_THEMES_SUCCESS,
 	RECOMMENDED_THEMES_FAIL,
-} from 'state/themes/action-types';
-import { SERIALIZE, DESERIALIZE } from 'state/action-types';
+} from 'wp-calypso-client/state/themes/action-types';
+import { SERIALIZE, DESERIALIZE } from 'wp-calypso-client/state/action-types';
 
 const twentysixteen = {
 	id: 'twentysixteen',

@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/site-settings/init';
+import 'wp-calypso-client/state/site-settings/init';
 
 /**
  * Returns true if we are requesting settings for the specified site ID, false otherwise.

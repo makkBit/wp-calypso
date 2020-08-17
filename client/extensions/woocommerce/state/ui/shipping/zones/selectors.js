@@ -8,8 +8,8 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import {
 	getAPIShippingZones,
 	areShippingZonesLoaded,

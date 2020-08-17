@@ -12,14 +12,14 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import PluginIcon from 'my-sites/plugins/plugin-icon/plugin-icon';
-import PluginActivateToggle from 'my-sites/plugins/plugin-activate-toggle';
-import PluginAutoupdateToggle from 'my-sites/plugins/plugin-autoupdate-toggle';
-import Count from 'components/count';
-import Notice from 'components/notice';
-import { withLocalizedMoment } from 'components/localized-moment';
-import PluginNotices from 'lib/plugins/notices';
-import { errorNotice } from 'state/notices/actions';
+import PluginIcon from 'wp-calypso-client/my-sites/plugins/plugin-icon/plugin-icon';
+import PluginActivateToggle from 'wp-calypso-client/my-sites/plugins/plugin-activate-toggle';
+import PluginAutoupdateToggle from 'wp-calypso-client/my-sites/plugins/plugin-autoupdate-toggle';
+import Count from 'wp-calypso-client/components/count';
+import Notice from 'wp-calypso-client/components/notice';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import PluginNotices from 'wp-calypso-client/lib/plugins/notices';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 
 /**
  * Style dependencies

@@ -7,9 +7,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import getRawSite from 'state/selectors/get-raw-site';
-import getMediaUrl from 'state/selectors/get-media-url';
-import getSiteIconId from 'state/selectors/get-site-icon-id';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
+import getMediaUrl from 'wp-calypso-client/state/selectors/get-media-url';
+import getSiteIconId from 'wp-calypso-client/state/selectors/get-site-icon-id';
 
 /**
  * Returns a URL to the site's current site icon, or null if no icon exists or

@@ -7,8 +7,8 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { isLineItemADomain } from 'my-sites/checkout/composite-checkout/wpcom/hooks/has-domains';
-import { isGSuiteProductSlug } from 'lib/gsuite';
+import { isLineItemADomain } from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom/hooks/has-domains';
+import { isGSuiteProductSlug } from 'wp-calypso-client/lib/gsuite';
 import {
 	prepareDomainContactValidationRequest,
 	prepareGSuiteContactValidationRequest,
@@ -16,8 +16,8 @@ import {
 	getSignupValidationErrorResponse,
 	translateCheckoutPaymentMethodToWpcomPaymentMethod,
 	areRequiredFieldsNotEmpty,
-} from 'my-sites/checkout/composite-checkout/wpcom';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/wpcom';
+import wp from 'wp-calypso-client/lib/wp';
 
 const wpcom = wp.undocumented();
 

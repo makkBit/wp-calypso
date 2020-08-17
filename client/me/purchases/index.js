@@ -1,20 +1,20 @@
 /**
  * External dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import page from 'page';
 
 /**
  * Internal Dependencies
  */
-import * as billingController from 'me/billing-history/controller';
-import * as pendingController from 'me/pending-payments/controller';
-import * as membershipsController from 'me/memberships/controller';
+import * as billingController from 'wp-calypso-client/me/billing-history/controller';
+import * as pendingController from 'wp-calypso-client/me/pending-payments/controller';
+import * as membershipsController from 'wp-calypso-client/me/memberships/controller';
 import * as controller from './controller';
 import * as paths from './paths';
-import { makeLayout, render as clientRender } from 'controller';
-import { sidebar } from 'me/controller';
-import { siteSelection } from 'my-sites/controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { sidebar } from 'wp-calypso-client/me/controller';
+import { siteSelection } from 'wp-calypso-client/my-sites/controller';
 
 export default ( router ) => {
 	if ( config.isEnabled( 'manage/payment-methods' ) ) {

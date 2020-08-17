@@ -9,7 +9,7 @@ import moment from 'moment';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import LineChart from 'components/line-chart';
+import LineChart from 'wp-calypso-client/components/line-chart';
 
 const NUM_DATA_SERIES = 3;
 

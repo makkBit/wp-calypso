@@ -1,22 +1,22 @@
 /**
  * External dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import page from 'page';
 
 /**
  * Internal dependencies
  */
-import { setSection } from 'state/ui/actions';
-import { activateNextLayoutFocus } from 'state/ui/layout-focus/actions';
-import { bumpStat } from 'state/analytics/actions';
-import * as LoadingError from 'layout/error';
+import { setSection } from 'wp-calypso-client/state/ui/actions';
+import { activateNextLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/actions';
+import { bumpStat } from 'wp-calypso-client/state/analytics/actions';
+import * as LoadingError from 'wp-calypso-client/layout/error';
 import * as controller from './controller/index.web';
 import { pathToRegExp } from './utils';
 import { receiveSections, load } from './sections-helper';
 import isSectionEnabled from './sections-filter';
-import { addReducerToStore } from 'state/add-reducer';
-import { performanceTrackerStart } from 'lib/performance-tracking';
+import { addReducerToStore } from 'wp-calypso-client/state/add-reducer';
+import { performanceTrackerStart } from 'wp-calypso-client/lib/performance-tracking';
 
 import sections from './sections';
 receiveSections( sections );

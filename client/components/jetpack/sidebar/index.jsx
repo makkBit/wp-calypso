@@ -11,16 +11,16 @@ import React, { Component } from 'react';
 /**
  * Internal dependencies
  */
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import CurrentSite from 'my-sites/current-site';
-import getSiteAdminUrl from 'state/sites/selectors/get-site-admin-url';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import CurrentSite from 'wp-calypso-client/my-sites/current-site';
+import getSiteAdminUrl from 'wp-calypso-client/state/sites/selectors/get-site-admin-url';
 import JetpackCloudSidebarMenuItems from './menu-items/jetpack-cloud';
-import Sidebar from 'layout/sidebar';
-import SidebarFooter from 'layout/sidebar/footer';
-import SidebarItem from 'layout/sidebar/item';
-import SidebarMenu from 'layout/sidebar/menu';
-import SidebarRegion from 'layout/sidebar/region';
+import Sidebar from 'wp-calypso-client/layout/sidebar';
+import SidebarFooter from 'wp-calypso-client/layout/sidebar/footer';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
+import SidebarMenu from 'wp-calypso-client/layout/sidebar/menu';
+import SidebarRegion from 'wp-calypso-client/layout/sidebar/region';
 
 /**
  * Style dependencies
@@ -29,7 +29,7 @@ import './style.scss';
 // We import these styles from here because this is the only section that gets always
 // loaded when a user visits Jetpack Cloud. We might have to find a better place for
 // this in the future.
-import 'landing/jetpack-cloud/style.scss';
+import 'wp-calypso-client/landing/jetpack-cloud/style.scss';
 
 class JetpackCloudSidebar extends Component {
 	static propTypes = {

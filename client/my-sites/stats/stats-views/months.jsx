@@ -10,9 +10,9 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { formatNumberMetric } from 'lib/format-number-compact';
-import Popover from 'components/popover';
-import { withLocalizedMoment } from 'components/localized-moment';
+import { formatNumberMetric } from 'wp-calypso-client/lib/format-number-compact';
+import Popover from 'wp-calypso-client/components/popover';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class Month extends PureComponent {
 	static propTypes = {

@@ -2,8 +2,11 @@
  * Internal dependencies
  */
 
-import { WPORG_PLUGIN_DATA_RECEIVE, FETCH_WPORG_PLUGIN_DATA } from 'state/action-types';
-import { combineReducers } from 'state/utils';
+import {
+	WPORG_PLUGIN_DATA_RECEIVE,
+	FETCH_WPORG_PLUGIN_DATA,
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers } from 'wp-calypso-client/state/utils';
 
 function updatePluginState( state = {}, pluginSlug, attributes ) {
 	return Object.assign( {}, state, {

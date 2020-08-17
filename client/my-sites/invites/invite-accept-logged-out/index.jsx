@@ -12,17 +12,17 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import SignupForm from 'blocks/signup-form';
-import InviteFormHeader from 'my-sites/invites/invite-form-header';
-import { login } from 'lib/paths';
-import { createAccount, acceptInvite } from 'lib/invites/actions';
-import WpcomLoginForm from 'signup/wpcom-login-form';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
-import LoggedOutFormLinkItem from 'components/logged-out-form/link-item';
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { errorNotice } from 'state/notices/actions';
+import SignupForm from 'wp-calypso-client/blocks/signup-form';
+import InviteFormHeader from 'wp-calypso-client/my-sites/invites/invite-form-header';
+import { login } from 'wp-calypso-client/lib/paths';
+import { createAccount, acceptInvite } from 'wp-calypso-client/lib/invites/actions';
+import WpcomLoginForm from 'wp-calypso-client/signup/wpcom-login-form';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
+import LoggedOutFormLinkItem from 'wp-calypso-client/components/logged-out-form/link-item';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
 import { Card } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
 
 /**
  * Module variables

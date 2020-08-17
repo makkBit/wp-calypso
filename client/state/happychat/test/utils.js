@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 import { getHappychatAuth } from '../utils';
-import config from 'config';
-import * as wpcom from 'lib/wp';
-import * as selectedSite from 'state/help/selectors';
+import config from 'wp-calypso-client/config';
+import * as wpcom from 'wp-calypso-client/lib/wp';
+import * as selectedSite from 'wp-calypso-client/state/help/selectors';
 
 describe( 'auth promise', () => {
 	const state = {

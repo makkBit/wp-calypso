@@ -6,11 +6,16 @@ import { difference, get, has, includes, pick, values, isFunction } from 'lodash
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import { isFreeJetpackPlan } from 'lib/products-values/is-free-jetpack-plan';
-import { isJetpackPlan } from 'lib/products-values/is-jetpack-plan';
-import { isMonthly } from 'lib/products-values/is-monthly';
-import { format as formatUrl, getUrlParts, getUrlFromParts, determineUrlType } from 'lib/url';
+import { isEnabled } from 'wp-calypso-client/config';
+import { isFreeJetpackPlan } from 'wp-calypso-client/lib/products-values/is-free-jetpack-plan';
+import { isJetpackPlan } from 'wp-calypso-client/lib/products-values/is-jetpack-plan';
+import { isMonthly } from 'wp-calypso-client/lib/products-values/is-monthly';
+import {
+	format as formatUrl,
+	getUrlParts,
+	getUrlFromParts,
+	determineUrlType,
+} from 'wp-calypso-client/lib/url';
 import {
 	PLAN_FREE,
 	PLAN_PERSONAL,

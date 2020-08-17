@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, keyedReducer, withStorageKey } from 'state/utils';
+import { combineReducers, keyedReducer, withStorageKey } from 'wp-calypso-client/state/utils';
 import {
 	HOSTING_PHP_VERSION_SET,
 	HOSTING_SFTP_USER_UPDATE,
 	HOSTING_SFTP_USERS_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 export const sftpUsers = ( state = {}, { type, users } ) => {
 	if ( type === HOSTING_SFTP_USERS_SET ) {

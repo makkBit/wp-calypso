@@ -6,8 +6,8 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { requestMediaItem } from 'state/media/actions';
-import { dispatchFluxFetchMediaItem } from 'state/media/utils/flux-adapter';
+import { requestMediaItem } from 'wp-calypso-client/state/media/actions';
+import { dispatchFluxFetchMediaItem } from 'wp-calypso-client/state/media/utils/flux-adapter';
 
 const debug = debugFactory( 'calypso:media' );
 

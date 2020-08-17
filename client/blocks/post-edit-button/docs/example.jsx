@@ -8,7 +8,7 @@ import React from 'react';
  * Internal dependencies
  */
 import { Card } from '@automattic/components';
-import PostEditButton from 'blocks/post-edit-button';
+import PostEditButton from 'wp-calypso-client/blocks/post-edit-button';
 
 export default class PostEditButtonExample extends React.PureComponent {
 	static displayName = 'PostEditButtonExample';

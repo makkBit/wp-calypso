@@ -7,13 +7,13 @@ import { translate } from 'i18n-calypso';
  * Internal dependencies
  */
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { convertToCamelCase } from 'state/data-layer/utils';
-import { errorNotice } from 'state/notices/actions';
-import { setSegments } from 'state/signup/segments/actions';
-import { SIGNUP_SEGMENTS_REQUEST } from 'state/action-types';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { convertToCamelCase } from 'wp-calypso-client/state/data-layer/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { setSegments } from 'wp-calypso-client/state/signup/segments/actions';
+import { SIGNUP_SEGMENTS_REQUEST } from 'wp-calypso-client/state/action-types';
 
 export const requestSegments = ( action ) =>
 	http(

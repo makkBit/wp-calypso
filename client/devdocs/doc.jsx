@@ -10,8 +10,8 @@ import React from 'react';
  */
 import DocService from './service';
 import Error from './error';
-import DocumentHead from 'components/data/document-head';
-import highlight from 'lib/highlight';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import highlight from 'wp-calypso-client/lib/highlight';
 
 export default class extends React.Component {
 	static displayName = 'SingleDocument';

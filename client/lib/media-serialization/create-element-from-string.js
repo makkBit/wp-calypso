@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { domForHtml } from 'lib/post-normalizer/utils';
+import { domForHtml } from 'wp-calypso-client/lib/post-normalizer/utils';
 
 /**
  * Given a string, attempts to generate the equivalent HTMLElement

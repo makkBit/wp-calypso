@@ -8,12 +8,16 @@ import { find, defer } from 'lodash';
 /**
  * Internal dependencies
  */
-import { gaRecordEvent } from 'lib/analytics/ga';
-import CreditCard from 'components/credit-card';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import CreditCard from 'wp-calypso-client/components/credit-card';
 import NewCardForm from './new-card-form';
-import { newCardPayment, newStripeCardPayment, storedCardPayment } from 'lib/transaction/payments';
-import { setPayment } from 'lib/transaction/actions';
-import { withStripeProps } from 'lib/stripe';
+import {
+	newCardPayment,
+	newStripeCardPayment,
+	storedCardPayment,
+} from 'wp-calypso-client/lib/transaction/payments';
+import { setPayment } from 'wp-calypso-client/lib/transaction/actions';
+import { withStripeProps } from 'wp-calypso-client/lib/stripe';
 
 class CreditCardSelector extends React.Component {
 	constructor( props ) {

@@ -11,11 +11,11 @@ import morgan from 'morgan';
 /**
  * Internal dependencies
  */
-import analytics from 'server/lib/analytics';
-import config from 'server/config';
-import api from 'server/api';
-import pages from 'server/pages';
-import pwa from 'server/pwa';
+import analytics from 'wp-calypso-client/server/lib/analytics';
+import config from 'wp-calypso-client/server/config';
+import api from 'wp-calypso-client/server/api';
+import pages from 'wp-calypso-client/server/pages';
+import pwa from 'wp-calypso-client/server/pwa';
 
 /**
  * Returns the server HTTP request handler "app".
@@ -32,7 +32,7 @@ export default function setup() {
 	app.use( userAgent.express() );
 
 	if ( 'development' === process.env.NODE_ENV ) {
-		require( 'server/bundler' )( app );
+		require( 'wp-calypso-client/server/bundler' )( app );
 
 		// setup logger
 		app.use( morgan( 'dev' ) );
@@ -95,7 +95,7 @@ export default function setup() {
 	} );
 
 	if ( config.isEnabled( 'devdocs' ) ) {
-		app.use( require( 'server/devdocs' ).default() );
+		app.use( require( 'wp-calypso-client/server/devdocs' ).default() );
 	}
 
 	if ( config.isEnabled( 'desktop' ) ) {

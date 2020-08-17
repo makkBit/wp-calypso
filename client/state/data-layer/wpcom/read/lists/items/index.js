@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
-import { READER_LIST_ITEMS_REQUEST } from 'state/reader/action-types';
-import { receiveReaderListItems } from 'state/reader/lists/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { READER_LIST_ITEMS_REQUEST } from 'wp-calypso-client/state/reader/action-types';
+import { receiveReaderListItems } from 'wp-calypso-client/state/reader/lists/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 registerHandlers( 'state/data-layer/wpcom/read/lists/items/index.js', {
 	[ READER_LIST_ITEMS_REQUEST ]: [

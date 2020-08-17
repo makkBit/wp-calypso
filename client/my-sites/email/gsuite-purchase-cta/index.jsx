@@ -11,19 +11,19 @@ import { useTranslate } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, CompactCard } from '@automattic/components';
-import config from 'config';
-import { emailManagementNewGSuiteAccount } from 'my-sites/email/paths';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getProductBySlug } from 'state/products-list/selectors';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
-import { GSUITE_BASIC_SLUG } from 'lib/gsuite/constants';
-import GSuiteFeatures from 'components/gsuite/gsuite-features';
-import GSuiteLearnMore from 'components/gsuite/gsuite-learn-more';
-import GSuitePrice from 'components/gsuite/gsuite-price';
-import { recordTracksEvent } from 'state/analytics/actions';
-import QueryProductsList from 'components/data/query-products-list';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import config from 'wp-calypso-client/config';
+import { emailManagementNewGSuiteAccount } from 'wp-calypso-client/my-sites/email/paths';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getProductBySlug } from 'wp-calypso-client/state/products-list/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { GSUITE_BASIC_SLUG } from 'wp-calypso-client/lib/gsuite/constants';
+import GSuiteFeatures from 'wp-calypso-client/components/gsuite/gsuite-features';
+import GSuiteLearnMore from 'wp-calypso-client/components/gsuite/gsuite-learn-more';
+import GSuitePrice from 'wp-calypso-client/components/gsuite/gsuite-price';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

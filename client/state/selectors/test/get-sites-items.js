@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getSitesItems from 'state/selectors/get-sites-items';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
 
 describe( 'getSitesItems()', () => {
 	test( 'should return site items if sites exist', () => {

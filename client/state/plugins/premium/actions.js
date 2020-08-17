@@ -2,14 +2,14 @@
  * External dependencies
  */
 
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 import { get, keys } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import Dispatcher from 'dispatcher';
-import versionCompare from 'lib/version-compare';
+import Dispatcher from 'wp-calypso-client/dispatcher';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
 import {
 	PLUGIN_SETUP_INSTRUCTIONS_FETCH,
 	PLUGIN_SETUP_INSTRUCTIONS_RECEIVE,
@@ -18,7 +18,7 @@ import {
 	PLUGIN_SETUP_CONFIGURE,
 	PLUGIN_SETUP_FINISH,
 	PLUGIN_SETUP_ERROR,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 /**
  *  Local variables;

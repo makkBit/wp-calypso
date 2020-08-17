@@ -8,15 +8,15 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import ExternalLink from 'components/external-link';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormRadio from 'components/forms/form-radio';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormRadio from 'wp-calypso-client/components/forms/form-radio';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
 import { defaultTimeFormats } from './default-formats';
 import { phpToMomentDatetimeFormat } from './utils';
-import { localizeUrl } from 'lib/i18n-utils';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
 
 export const TimeFormatOption = ( {
 	disabled,

@@ -10,21 +10,21 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { isExpiring } from 'lib/purchases';
-import { disableAutoRenew, enableAutoRenew } from 'lib/purchases/actions';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { isFetchingUserPurchases } from 'state/purchases/selectors';
-import { fetchUserPurchases } from 'state/purchases/actions';
-import { recordTracksEvent } from 'state/analytics/actions';
-import isSiteAtomic from 'state/selectors/is-site-automated-transfer';
-import { createNotice } from 'state/notices/actions';
+import { isExpiring } from 'wp-calypso-client/lib/purchases';
+import { disableAutoRenew, enableAutoRenew } from 'wp-calypso-client/lib/purchases/actions';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { isFetchingUserPurchases } from 'wp-calypso-client/state/purchases/selectors';
+import { fetchUserPurchases } from 'wp-calypso-client/state/purchases/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import isSiteAtomic from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { createNotice } from 'wp-calypso-client/state/notices/actions';
 import AutoRenewDisablingDialog from './auto-renew-disabling-dialog';
 import AutoRenewPaymentMethodDialog from './auto-renew-payment-method-dialog';
-import FormToggle from 'components/forms/form-toggle';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
 import { isExpired, isOneTimePurchase, isRechargeable } from '../../../../lib/purchases';
 import { getEditCardDetailsPath } from '../../utils';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 class AutoRenewToggle extends Component {
 	static propTypes = {

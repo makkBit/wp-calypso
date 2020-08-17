@@ -10,16 +10,16 @@ import { bindActionCreators } from 'redux';
 /**
  * Internal dependencies
  */
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import QueryPreferences from 'components/data/query-preferences';
-import { isFetchingPreferences } from 'state/preferences/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isConfirmationSidebarEnabled } from 'state/editor/selectors';
-import { saveConfirmationSidebarPreference } from 'state/editor/actions';
-import { shouldLoadGutenberg } from 'state/selectors/should-load-gutenberg';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import QueryPreferences from 'wp-calypso-client/components/data/query-preferences';
+import { isFetchingPreferences } from 'wp-calypso-client/state/preferences/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isConfirmationSidebarEnabled } from 'wp-calypso-client/state/editor/selectors';
+import { saveConfirmationSidebarPreference } from 'wp-calypso-client/state/editor/actions';
+import { shouldLoadGutenberg } from 'wp-calypso-client/state/selectors/should-load-gutenberg';
 
 class PublishConfirmation extends Component {
 	constructor( props ) {

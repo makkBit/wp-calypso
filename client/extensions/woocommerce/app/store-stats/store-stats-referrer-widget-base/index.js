@@ -13,11 +13,11 @@ import classnames from 'classnames';
 import Table from 'woocommerce/components/table';
 import TableRow from 'woocommerce/components/table/table-row';
 import { Card } from '@automattic/components';
-import ErrorPanel from 'my-sites/stats/stats-error';
+import ErrorPanel from 'wp-calypso-client/my-sites/stats/stats-error';
 import { getWidgetPath } from 'woocommerce/app/store-stats/utils';
-import Pagination from 'components/pagination';
-import { withLocalizedMoment } from 'components/localized-moment';
-import getStoreReferrersByDate from 'state/selectors/get-store-referrers-by-date';
+import Pagination from 'wp-calypso-client/components/pagination';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import getStoreReferrersByDate from 'wp-calypso-client/state/selectors/get-store-referrers-by-date';
 
 class StoreStatsReferrerWidgetBase extends Component {
 	static propTypes = {

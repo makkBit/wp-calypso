@@ -7,8 +7,8 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import CardHeading from 'components/card-heading';
-import FoldableCard from 'components/foldable-card';
+import CardHeading from 'wp-calypso-client/components/card-heading';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
 
 import './style.scss';
 

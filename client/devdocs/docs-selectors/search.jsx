@@ -10,9 +10,9 @@ import { stringify } from 'qs';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import SearchCard from 'components/search-card';
-import { addQueryArgs } from 'lib/url';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import SearchCard from 'wp-calypso-client/components/search-card';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 import DocsSelectorsResult from './result';
 
 export default class DocsSelectorsSearch extends Component {

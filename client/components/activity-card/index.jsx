@@ -10,24 +10,24 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { backupDownloadPath, backupRestorePath } from 'my-sites/backup/paths';
+import { backupDownloadPath, backupRestorePath } from 'wp-calypso-client/my-sites/backup/paths';
 import { Card } from '@automattic/components';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { isSuccessfulRealtimeBackup } from 'lib/jetpack/backup-utils';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { settingsPath } from 'lib/jetpack/paths';
-import { withApplySiteOffset } from 'components/site-offset';
-import { withLocalizedMoment } from 'components/localized-moment';
-import ActivityActor from 'components/activity-card/activity-actor';
-import ActivityDescription from 'components/activity-card/activity-description';
-import ActivityMedia from 'components/activity-card/activity-media';
-import Button from 'components/forms/form-button';
-import ExternalLink from 'components/external-link';
-import getAllowRestore from 'state/selectors/get-allow-restore';
-import getDoesRewindNeedCredentials from 'state/selectors/get-does-rewind-need-credentials';
-import Gridicon from 'components/gridicon';
-import PopoverMenu from 'components/popover/menu';
-import QueryRewindState from 'components/data/query-rewind-state';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import { isSuccessfulRealtimeBackup } from 'wp-calypso-client/lib/jetpack/backup-utils';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { settingsPath } from 'wp-calypso-client/lib/jetpack/paths';
+import { withApplySiteOffset } from 'wp-calypso-client/components/site-offset';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import ActivityActor from 'wp-calypso-client/components/activity-card/activity-actor';
+import ActivityDescription from 'wp-calypso-client/components/activity-card/activity-description';
+import ActivityMedia from 'wp-calypso-client/components/activity-card/activity-media';
+import Button from 'wp-calypso-client/components/forms/form-button';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import getAllowRestore from 'wp-calypso-client/state/selectors/get-allow-restore';
+import getDoesRewindNeedCredentials from 'wp-calypso-client/state/selectors/get-does-rewind-need-credentials';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PopoverMenu from 'wp-calypso-client/components/popover/menu';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
 import StreamsMediaPreview from './activity-card-streams-media-preview';
 
 /**
@@ -35,7 +35,7 @@ import StreamsMediaPreview from './activity-card-streams-media-preview';
  */
 import './style.scss';
 import downloadIcon from './download-icon.svg';
-import missingCredentialsIcon from 'components/jetpack/daily-backup-status/missing-credentials.svg';
+import missingCredentialsIcon from 'wp-calypso-client/components/jetpack/daily-backup-status/missing-credentials.svg';
 
 class ActivityCard extends Component {
 	static propTypes = {

@@ -9,7 +9,7 @@ import { stringify } from 'qs';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 import {
 	deleteOrderError,
 	deleteOrderSuccess,
@@ -20,9 +20,9 @@ import {
 	updateOrder,
 	updateOrders,
 } from 'woocommerce/state/sites/orders/actions';
-import { errorNotice, successNotice } from 'state/notices/actions';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 import { fetchCounts } from 'woocommerce/state/sites/data/counts/actions';
-import { navigate } from 'state/ui/actions';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
 import request from 'woocommerce/state/sites/http-request';
 import {
 	WOOCOMMERCE_ORDER_DELETE,

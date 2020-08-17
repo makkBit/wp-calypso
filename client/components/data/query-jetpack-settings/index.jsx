@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import isRequestingJetpackSettings from 'state/selectors/is-requesting-jetpack-settings';
-import { requestJetpackSettings } from 'state/jetpack/settings/actions';
+import isRequestingJetpackSettings from 'wp-calypso-client/state/selectors/is-requesting-jetpack-settings';
+import { requestJetpackSettings } from 'wp-calypso-client/state/jetpack/settings/actions';
 
 class QueryJetpackSettings extends Component {
 	static propTypes = {

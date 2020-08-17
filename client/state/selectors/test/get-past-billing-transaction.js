@@ -6,7 +6,7 @@ import { clone } from 'lodash';
 /**
  * Internal dependencies
  */
-import getPastBillingTransaction from 'state/selectors/get-past-billing-transaction';
+import getPastBillingTransaction from 'wp-calypso-client/state/selectors/get-past-billing-transaction';
 
 describe( 'getPastBillingTransaction()', () => {
 	const state = {

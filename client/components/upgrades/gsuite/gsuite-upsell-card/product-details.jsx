@@ -9,11 +9,11 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getProductBySlug } from 'state/products-list/selectors';
-import GSuitePrice from 'components/gsuite/gsuite-price';
-import GSuiteCompactFeatures from 'components/gsuite/gsuite-features/compact';
-import { GSUITE_SLUG_PROP_TYPES } from 'lib/gsuite/constants';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getProductBySlug } from 'wp-calypso-client/state/products-list/selectors';
+import GSuitePrice from 'wp-calypso-client/components/gsuite/gsuite-price';
+import GSuiteCompactFeatures from 'wp-calypso-client/components/gsuite/gsuite-features/compact';
+import { GSUITE_SLUG_PROP_TYPES } from 'wp-calypso-client/lib/gsuite/constants';
 
 function GSuiteUpsellProductDetails( { currencyCode, domain, product, productSlug } ) {
 	const translate = useTranslate();

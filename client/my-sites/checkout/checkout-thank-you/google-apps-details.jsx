@@ -7,12 +7,12 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { CONTACT, GOOGLE_APPS_LEARNING_CENTER } from 'lib/url/support';
-import PurchaseDetail from 'components/purchase-detail';
+import { CONTACT, GOOGLE_APPS_LEARNING_CENTER } from 'wp-calypso-client/lib/url/support';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
 import { useSelector } from 'react-redux';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import { isGoogleApps } from 'lib/products-values';
-import { isGSuiteExtraLicenseProductSlug } from 'lib/gsuite';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import { isGoogleApps } from 'wp-calypso-client/lib/products-values';
+import { isGSuiteExtraLicenseProductSlug } from 'wp-calypso-client/lib/gsuite';
 
 const GoogleAppsDetails = ( { purchases } ) => {
 	const email = useSelector( getCurrentUserEmail );

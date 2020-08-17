@@ -6,9 +6,9 @@ import { get, merge } from 'lodash';
 /**
  * Internal dependencies
  */
-import getGoogleMyBusinessLocations from 'state/selectors/get-google-my-business-locations';
-import getGoogleMyBusinessStatsNudgeDismissCount from 'state/selectors/get-google-my-business-stats-nudge-dismiss-count';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import getGoogleMyBusinessLocations from 'wp-calypso-client/state/selectors/get-google-my-business-locations';
+import getGoogleMyBusinessStatsNudgeDismissCount from 'wp-calypso-client/state/selectors/get-google-my-business-stats-nudge-dismiss-count';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Enhances any Redux action that denotes the recording of an analytics event with an additional property which

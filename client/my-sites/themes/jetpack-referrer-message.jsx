@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import CurrentTheme from 'my-sites/themes/current-theme';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import EmptyContent from 'components/empty-content';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { getSiteAdminUrl } from 'state/sites/selectors';
+import Main from 'wp-calypso-client/components/main';
+import CurrentTheme from 'wp-calypso-client/my-sites/themes/current-theme';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { getSiteAdminUrl } from 'wp-calypso-client/state/sites/selectors';
 
 const JetpackReferrerMessage = ( {
 	siteId,

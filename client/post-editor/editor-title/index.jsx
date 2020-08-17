@@ -12,16 +12,16 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import * as PostUtils from 'state/posts/utils';
-import EditorPermalink from 'post-editor/editor-permalink';
-import TrackInputChanges from 'components/track-input-changes';
-import TextareaAutosize from 'components/textarea-autosize';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import areSitePermalinksEditable from 'state/selectors/are-site-permalinks-editable';
-import { isEditorNewPost, getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import { editPost } from 'state/posts/actions';
+import * as PostUtils from 'wp-calypso-client/state/posts/utils';
+import EditorPermalink from 'wp-calypso-client/post-editor/editor-permalink';
+import TrackInputChanges from 'wp-calypso-client/components/track-input-changes';
+import TextareaAutosize from 'wp-calypso-client/components/textarea-autosize';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import areSitePermalinksEditable from 'wp-calypso-client/state/selectors/are-site-permalinks-editable';
+import { isEditorNewPost, getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { editPost } from 'wp-calypso-client/state/posts/actions';
 
 /**
  * Style dependencies

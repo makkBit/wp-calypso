@@ -6,8 +6,8 @@ import {
 	SECTION_SET,
 	PREVIEW_IS_SHOWING,
 	NOTIFICATIONS_PANEL_TOGGLE,
-} from 'state/action-types';
-import { combineReducers, withoutPersistence } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 import actionLog from './action-log/reducer';
 import checkout from './checkout/reducer';
 import editorDeprecationDialog from './editor-deprecation-dialog/reducer';

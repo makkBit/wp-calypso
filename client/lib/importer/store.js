@@ -24,13 +24,13 @@ import {
 	IMPORTS_UPLOAD_COMPLETED,
 	IMPORTS_UPLOAD_SET_PROGRESS,
 	IMPORTS_UPLOAD_START,
-} from 'state/action-types';
-import { appStates } from 'state/imports/constants';
-import { createReducerStore } from 'lib/store';
+} from 'wp-calypso-client/state/action-types';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
+import { createReducerStore } from 'wp-calypso-client/lib/store';
 
 // This library unfortunately relies on global Redux state directly.
 // Because of this, we need to ensure that the relevant portion of state is initialized.
-import 'state/imports/init';
+import 'wp-calypso-client/state/imports/init';
 
 /**
  * Module variables

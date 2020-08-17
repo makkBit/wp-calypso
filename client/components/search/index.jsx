@@ -11,10 +11,10 @@ import i18n from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
-import Spinner from 'components/spinner';
-import TranslatableString from 'components/translatable/proptype';
-import { gaRecordEvent } from 'lib/analytics/ga';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import Spinner from 'wp-calypso-client/components/spinner';
+import TranslatableString from 'wp-calypso-client/components/translatable/proptype';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
 
 /**
  * Style dependencies

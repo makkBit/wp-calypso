@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { receiveSections } from 'sections-helper';
-import sections from 'sections';
+import { receiveSections } from 'wp-calypso-client/sections-helper';
+import sections from 'wp-calypso-client/sections';
 import pathToSection from '..';
 
 describe( 'pathToSection', () => {

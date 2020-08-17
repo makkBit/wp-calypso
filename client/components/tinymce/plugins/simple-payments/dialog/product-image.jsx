@@ -12,9 +12,9 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { url as mediaUrl } from 'lib/media/utils';
-import QueryMedia from 'components/data/query-media';
-import getMediaItem from 'state/selectors/get-media-item';
+import { url as mediaUrl } from 'wp-calypso-client/lib/media/utils';
+import QueryMedia from 'wp-calypso-client/components/data/query-media';
+import getMediaItem from 'wp-calypso-client/state/selectors/get-media-item';
 
 const ProductImage = ( { siteId, imageId, image } ) => {
 	if ( ! siteId || ! imageId ) {

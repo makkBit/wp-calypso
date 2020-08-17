@@ -10,8 +10,8 @@ import {
 	GalleryColumnedTypes,
 	GalleryDefaultAttrs,
 	GallerySizeableTypes,
-} from 'lib/media/constants';
-import { stringify } from 'lib/shortcode';
+} from 'wp-calypso-client/lib/media/constants';
+import { stringify } from 'wp-calypso-client/lib/shortcode';
 
 /**
  * Given an array of media items, returns a gallery shortcode using an

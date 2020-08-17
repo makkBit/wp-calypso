@@ -8,9 +8,9 @@ import portscanner from 'portscanner';
 /**
  * Internal dependencies
  */
-import Config from 'desktop/lib/config';
-import logFactory from 'desktop/lib/logger';
-import boot from 'server/boot';
+import Config from 'wp-calypso-client/desktop/lib/config';
+import logFactory from 'wp-calypso-client/desktop/lib/logger';
+import boot from 'wp-calypso-client/server/boot';
 
 const log = logFactory( 'desktop:server' );
 

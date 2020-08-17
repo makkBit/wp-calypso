@@ -10,54 +10,61 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Card, Button } from '@automattic/components';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import MetaTitleEditor from 'components/seo/meta-title-editor';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import notices from 'notices';
-import { protectForm } from 'lib/protect-form';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import CountedTextarea from 'components/forms/counted-textarea';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { getSeoTitleFormatsForSite, isJetpackSite, isRequestingSite } from 'state/sites/selectors';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import MetaTitleEditor from 'wp-calypso-client/components/seo/meta-title-editor';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import notices from 'wp-calypso-client/notices';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import CountedTextarea from 'wp-calypso-client/components/forms/counted-textarea';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import {
+	getSeoTitleFormatsForSite,
+	isJetpackSite,
+	isRequestingSite,
+} from 'wp-calypso-client/state/sites/selectors';
 import {
 	isSiteSettingsSaveSuccessful,
 	getSiteSettingsSaveError,
-} from 'state/site-settings/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import getCurrentRouteParameterized from 'state/selectors/get-current-route-parameterized';
-import isHiddenSite from 'state/selectors/is-hidden-site';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import isPrivateSite from 'state/selectors/is-private-site';
-import isSiteComingSoon from 'state/selectors/is-site-coming-soon';
-import { toApi as seoTitleToApi } from 'components/seo/meta-title-editor/mappings';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { requestSite } from 'state/sites/actions';
+} from 'wp-calypso-client/state/site-settings/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getCurrentRouteParameterized from 'wp-calypso-client/state/selectors/get-current-route-parameterized';
+import isHiddenSite from 'wp-calypso-client/state/selectors/is-hidden-site';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import isPrivateSite from 'wp-calypso-client/state/selectors/is-private-site';
+import isSiteComingSoon from 'wp-calypso-client/state/selectors/is-site-coming-soon';
+import { toApi as seoTitleToApi } from 'wp-calypso-client/components/seo/meta-title-editor/mappings';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 import {
 	isBusiness,
 	isEnterprise,
 	isJetpackBusiness,
 	isJetpackPremium,
 	isEcommerce,
-} from 'lib/products-values';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { getPlugins } from 'state/plugins/installed/selectors';
+} from 'wp-calypso-client/lib/products-values';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getPlugins } from 'wp-calypso-client/state/plugins/installed/selectors';
 import {
 	FEATURE_ADVANCED_SEO,
 	FEATURE_SEO_PREVIEW_TOOLS,
 	TYPE_BUSINESS,
 	TYPE_PREMIUM,
 	TERM_ANNUALLY,
-} from 'lib/plans/constants';
-import { findFirstSimilarPlanKey } from 'lib/plans';
-import QueryJetpackModules from 'components/data/query-jetpack-modules';
-import QueryJetpackPlugins from 'components/data/query-jetpack-plugins';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import { requestSiteSettings, saveSiteSettings } from 'state/site-settings/actions';
-import WebPreview from 'components/web-preview';
-import { getFirstConflictingPlugin } from 'lib/seo';
+} from 'wp-calypso-client/lib/plans/constants';
+import { findFirstSimilarPlanKey } from 'wp-calypso-client/lib/plans';
+import QueryJetpackModules from 'wp-calypso-client/components/data/query-jetpack-modules';
+import QueryJetpackPlugins from 'wp-calypso-client/components/data/query-jetpack-plugins';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import {
+	requestSiteSettings,
+	saveSiteSettings,
+} from 'wp-calypso-client/state/site-settings/actions';
+import WebPreview from 'wp-calypso-client/components/web-preview';
+import { getFirstConflictingPlugin } from 'wp-calypso-client/lib/seo';
 
 /**
  * Style dependencies
@@ -67,7 +74,7 @@ import './style.scss';
 /**
  * Image dependencies
  */
-import pageTitleImage from 'assets/images/illustrations/seo-page-title.svg';
+import pageTitleImage from 'wp-calypso-client/assets/images/illustrations/seo-page-title.svg';
 
 // Basic matching for HTML tags
 // Not perfect but meets the needs of this component well

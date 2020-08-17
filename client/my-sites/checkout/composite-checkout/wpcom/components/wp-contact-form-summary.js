@@ -9,8 +9,8 @@ import { useSelect } from '@automattic/composite-checkout';
  * Internal dependencies
  */
 import { SummaryLine, SummaryDetails } from './summary-details';
-import { useCart } from 'my-sites/checkout/composite-checkout/cart-provider';
-import { hasOnlyRenewalItems } from 'lib/cart-values/cart-items';
+import { useCart } from 'wp-calypso-client/my-sites/checkout/composite-checkout/cart-provider';
+import { hasOnlyRenewalItems } from 'wp-calypso-client/lib/cart-values/cart-items';
 
 export default function WPContactFormSummary( {
 	areThereDomainProductsInCart,

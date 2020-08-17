@@ -11,32 +11,39 @@ import { filter, flow, get, isEmpty, memoize, once } from 'lodash';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import DocumentHead from 'components/data/document-head';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import ImporterStore, { getState as getImporterState } from 'lib/importer/store';
-import { Interval, EVERY_FIVE_SECONDS } from 'lib/interval';
-import WordPressImporter from 'my-sites/importer/importer-wordpress';
-import MediumImporter from 'my-sites/importer/importer-medium';
-import BloggerImporter from 'my-sites/importer/importer-blogger';
-import WixImporter from 'my-sites/importer/importer-wix';
-import GoDaddyGoCentralImporter from 'my-sites/importer/importer-godaddy-gocentral';
-import SquarespaceImporter from 'my-sites/importer/importer-squarespace';
-import { fetchState, startImport } from 'lib/importer/actions';
-import { getImporters, getImporterByKey } from 'lib/importer/importer-config';
-import { appStates } from 'state/imports/constants';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import ImporterStore, { getState as getImporterState } from 'wp-calypso-client/lib/importer/store';
+import { Interval, EVERY_FIVE_SECONDS } from 'wp-calypso-client/lib/interval';
+import WordPressImporter from 'wp-calypso-client/my-sites/importer/importer-wordpress';
+import MediumImporter from 'wp-calypso-client/my-sites/importer/importer-medium';
+import BloggerImporter from 'wp-calypso-client/my-sites/importer/importer-blogger';
+import WixImporter from 'wp-calypso-client/my-sites/importer/importer-wix';
+import GoDaddyGoCentralImporter from 'wp-calypso-client/my-sites/importer/importer-godaddy-gocentral';
+import SquarespaceImporter from 'wp-calypso-client/my-sites/importer/importer-squarespace';
+import { fetchState, startImport } from 'wp-calypso-client/lib/importer/actions';
+import { getImporters, getImporterByKey } from 'wp-calypso-client/lib/importer/importer-config';
+import { appStates } from 'wp-calypso-client/state/imports/constants';
 
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import { getSelectedSite, getSelectedSiteSlug, getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteTitle } from 'state/sites/selectors';
-import { getSelectedImportEngine, getImporterSiteUrl } from 'state/importer-nux/temp-selectors';
-import Main from 'components/main';
-import JetpackImporter from 'my-sites/importer/jetpack-importer';
-import canCurrentUser from 'state/selectors/can-current-user';
-import EmptyContent from 'components/empty-content';
-import memoizeLast from 'lib/memoize-last';
-import { recordTracksEvent } from 'state/analytics/actions';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import {
+	getSelectedSite,
+	getSelectedSiteSlug,
+	getSelectedSiteId,
+} from 'wp-calypso-client/state/ui/selectors';
+import { getSiteTitle } from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSelectedImportEngine,
+	getImporterSiteUrl,
+} from 'wp-calypso-client/state/importer-nux/temp-selectors';
+import Main from 'wp-calypso-client/components/main';
+import JetpackImporter from 'wp-calypso-client/my-sites/importer/jetpack-importer';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import memoizeLast from 'wp-calypso-client/lib/memoize-last';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

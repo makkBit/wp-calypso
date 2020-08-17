@@ -6,8 +6,12 @@ import {
 	PLANS_REQUEST,
 	PLANS_REQUEST_SUCCESS,
 	PLANS_REQUEST_FAILURE,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation, withStorageKey } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withStorageKey,
+} from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 
 /**

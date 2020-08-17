@@ -9,16 +9,20 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import QueryPostCounts from 'components/data/query-post-counts';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import QueryPostCounts from 'wp-calypso-client/components/data/query-post-counts';
 import { Button } from '@automattic/components';
-import Count from 'components/count';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getMyPostCount } from 'state/posts/counts/selectors';
+import Count from 'wp-calypso-client/components/count';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getMyPostCount } from 'wp-calypso-client/state/posts/counts/selectors';
 
 const MasterbarDraftsPopover = ( props ) => (
-	<AsyncLoad { ...props } require="layout/masterbar/drafts-popover" placeholder={ null } />
+	<AsyncLoad
+		{ ...props }
+		require="wp-calypso-client/layout/masterbar/drafts-popover"
+		placeholder={ null }
+	/>
 );
 
 class MasterbarDrafts extends Component {
@@ -38,7 +42,7 @@ class MasterbarDrafts extends Component {
 			return;
 		}
 
-		asyncRequire( 'layout/masterbar/drafts-popover' );
+		asyncRequire( 'wp-calypso-client/layout/masterbar/drafts-popover' );
 		this.preloaded = true;
 	};
 

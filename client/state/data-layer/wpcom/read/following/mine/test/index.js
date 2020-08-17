@@ -18,10 +18,14 @@ import {
 	updateSeenOnFollow,
 } from '../';
 import { subscriptionsFromApi } from '../utils';
-import { NOTICE_CREATE } from 'state/action-types';
-import { READER_FOLLOWS_SYNC_START } from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { receiveFollows, follow, syncComplete } from 'state/reader/follows/actions';
+import { NOTICE_CREATE } from 'wp-calypso-client/state/action-types';
+import { READER_FOLLOWS_SYNC_START } from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import {
+	receiveFollows,
+	follow,
+	syncComplete,
+} from 'wp-calypso-client/state/reader/follows/actions';
 
 const successfulApiResponse = freeze( {
 	number: 2,

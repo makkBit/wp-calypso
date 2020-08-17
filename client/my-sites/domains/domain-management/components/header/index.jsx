@@ -8,12 +8,12 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import DocumentHead from 'components/data/document-head';
-import FormattedHeader from 'components/formatted-header';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import { useTranslate } from 'i18n-calypso';
-import getCurrentRoute from 'state/selectors/get-current-route';
-import { isUnderDomainManagementAll } from 'my-sites/domains/paths';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
+import { isUnderDomainManagementAll } from 'wp-calypso-client/my-sites/domains/paths';
 
 /**
  * Style dependencies

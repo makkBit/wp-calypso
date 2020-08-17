@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getThemeFilterStringFromTerm } from 'state/themes/selectors';
+import { getThemeFilterStringFromTerm } from 'wp-calypso-client/state/themes/selectors';
 import { state } from './fixtures/theme-filters';
 
 describe( 'getThemeFilterStringFromTerm', () => {

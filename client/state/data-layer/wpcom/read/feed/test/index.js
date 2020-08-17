@@ -15,15 +15,18 @@ import {
 	receiveReadFeedSuccess,
 	receiveReadFeedError,
 } from '../';
-import { NOTICE_CREATE } from 'state/action-types';
+import { NOTICE_CREATE } from 'wp-calypso-client/state/action-types';
 import {
 	READER_FEED_REQUEST_SUCCESS,
 	READER_FEED_REQUEST_FAILURE,
-} from 'state/reader/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { requestFeed } from 'state/reader/feeds/actions';
-import { requestFeedSearch, receiveFeedSearch } from 'state/reader/feed-searches/actions';
-import queryKey from 'state/reader/feed-searches/query-key';
+} from 'wp-calypso-client/state/reader/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { requestFeed } from 'wp-calypso-client/state/reader/feeds/actions';
+import {
+	requestFeedSearch,
+	receiveFeedSearch,
+} from 'wp-calypso-client/state/reader/feed-searches/actions';
+import queryKey from 'wp-calypso-client/state/reader/feed-searches/query-key';
 
 const feeds = freeze( [ { blog_ID: 123, subscribe_URL: 'http://example.com' } ] );
 

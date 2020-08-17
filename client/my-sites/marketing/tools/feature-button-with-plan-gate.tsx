@@ -9,16 +9,16 @@ import { useTranslate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { addQueryArgs } from 'lib/url';
+import { addQueryArgs } from 'wp-calypso-client/lib/url';
 import { Button } from '@automattic/components';
-import { getPlan } from 'lib/plans';
-import { hasFeature } from 'state/sites/plans/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { hasFeature } from 'wp-calypso-client/state/sites/plans/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Types
  */
-import * as T from 'types';
+import * as T from 'wp-calypso-client/types';
 
 interface ConnectedProps {
 	hasPlanFeature: boolean;

@@ -10,11 +10,11 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import getNetworkSites from 'state/selectors/get-network-sites';
-import isConnectedSecondaryNetworkSite from 'state/selectors/is-connected-secondary-network-site';
-import PluginSite from 'my-sites/plugins/plugin-site/plugin-site';
-import PluginsStore from 'lib/plugins/store';
-import SectionHeader from 'components/section-header';
+import getNetworkSites from 'wp-calypso-client/state/selectors/get-network-sites';
+import isConnectedSecondaryNetworkSite from 'wp-calypso-client/state/selectors/is-connected-secondary-network-site';
+import PluginSite from 'wp-calypso-client/my-sites/plugins/plugin-site/plugin-site';
+import PluginsStore from 'wp-calypso-client/lib/plugins/store';
+import SectionHeader from 'wp-calypso-client/components/section-header';
 
 /**
  * Style dependencies

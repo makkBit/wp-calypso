@@ -12,17 +12,17 @@ import AddCreditCard from './add-credit-card';
 import CancelPurchase from './cancel-purchase';
 import ConfirmCancelDomain from './confirm-cancel-domain';
 import EditCardDetails from './payment/edit-card-details';
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import ManagePurchase from './manage-purchase';
-import NoSitesMessage from 'components/empty-content/no-sites-message';
+import NoSitesMessage from 'wp-calypso-client/components/empty-content/no-sites-message';
 import PurchasesHeader from './purchases-list/header';
 import PurchasesList from './purchases-list';
-import { concatTitle } from 'lib/react-helpers';
-import { setDocumentHeadTitle } from 'state/document-head/actions';
+import { concatTitle } from 'wp-calypso-client/lib/react-helpers';
+import { setDocumentHeadTitle } from 'wp-calypso-client/state/document-head/actions';
 import titles from './titles';
-import { makeLayout, render as clientRender } from 'controller';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { getCurrentUserSiteCount } from 'state/current-user/selectors';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { getCurrentUserSiteCount } from 'wp-calypso-client/state/current-user/selectors';
 
 // FIXME: Auto-converted from the Flux setTitle action. Please use <DocumentHead> instead.
 function setTitle( context, ...title ) {

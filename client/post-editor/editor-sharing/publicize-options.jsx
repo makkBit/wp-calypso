@@ -7,29 +7,29 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { includes, map } from 'lodash';
 import classNames from 'classnames';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PopupMonitor from '@automattic/popup-monitor';
 
 /**
  * Internal dependencies
  */
-import QueryPostTypes from 'components/data/query-post-types';
+import QueryPostTypes from 'wp-calypso-client/components/data/query-post-types';
 import PublicizeMessage from './publicize-message';
 import PublicizeServices from './publicize-services';
-import { publicizeConnections } from 'lib/paths';
-import PostMetadata from 'lib/post-metadata';
+import { publicizeConnections } from 'wp-calypso-client/lib/paths';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
 import { Button } from '@automattic/components';
-import { recordEditorStat, recordEditorEvent } from 'state/posts/stats';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost, getEditedPostValue } from 'state/posts/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getSiteUserConnections } from 'state/sharing/publicize/selectors';
-import { fetchConnections as requestConnections } from 'state/sharing/publicize/actions';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isPublicizeEnabled from 'state/selectors/is-publicize-enabled';
-import { updatePostMetadata } from 'state/posts/actions';
+import { recordEditorStat, recordEditorEvent } from 'wp-calypso-client/state/posts/stats';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost, getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getSiteUserConnections } from 'wp-calypso-client/state/sharing/publicize/selectors';
+import { fetchConnections as requestConnections } from 'wp-calypso-client/state/sharing/publicize/actions';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isPublicizeEnabled from 'wp-calypso-client/state/selectors/is-publicize-enabled';
+import { updatePostMetadata } from 'wp-calypso-client/state/posts/actions';
 
 /**
  * Style dependencies

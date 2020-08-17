@@ -4,7 +4,7 @@
 import {
 	getEligibleEmailForwardingDomain,
 	getEmailForwardingSupportedDomains,
-} from 'lib/domains/email-forwarding';
+} from 'wp-calypso-client/lib/domains/email-forwarding';
 
 jest.mock( 'lib/user/', () => {
 	return () => {

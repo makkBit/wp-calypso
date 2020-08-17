@@ -10,8 +10,8 @@ import { shuffle } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /*
 	These topics are taken from the most popular for each segment.

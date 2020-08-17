@@ -5,13 +5,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import HappychatButton from 'components/happychat/button';
-import { recordTracksEvent } from 'state/analytics/actions';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 export class PaymentChatButton extends Component {
 	chatButtonClicked = () => {

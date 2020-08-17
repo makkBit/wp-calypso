@@ -9,20 +9,20 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import JetpackCredentials from 'my-sites/site-settings/jetpack-credentials';
-import JetpackDevModeNotice from 'my-sites/site-settings/jetpack-dev-mode-notice';
-import JetpackManageErrorPage from 'my-sites/jetpack-manage-error-page';
-import Main from 'components/main';
-import QueryRewindState from 'components/data/query-rewind-state';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import SiteSettingsNavigation from 'my-sites/site-settings/navigation';
-import { siteHasScanProductPurchase } from 'state/purchases/selectors';
-import isRewindActive from 'state/selectors/is-rewind-active';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import JetpackCredentials from 'wp-calypso-client/my-sites/site-settings/jetpack-credentials';
+import JetpackDevModeNotice from 'wp-calypso-client/my-sites/site-settings/jetpack-dev-mode-notice';
+import JetpackManageErrorPage from 'wp-calypso-client/my-sites/jetpack-manage-error-page';
+import Main from 'wp-calypso-client/components/main';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import SiteSettingsNavigation from 'wp-calypso-client/my-sites/site-settings/navigation';
+import { siteHasScanProductPurchase } from 'wp-calypso-client/state/purchases/selectors';
+import isRewindActive from 'wp-calypso-client/state/selectors/is-rewind-active';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const SiteSettingsJetpack = ( { site, siteId, siteIsJetpack, showCredentials, translate } ) => {
 	//todo: this check makes sense in Jetpack section?

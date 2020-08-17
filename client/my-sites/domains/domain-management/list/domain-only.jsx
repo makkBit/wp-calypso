@@ -11,14 +11,14 @@ import React from 'react';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import EmptyContent from 'components/empty-content';
-import { hasGSuiteWithUs } from 'lib/gsuite';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import { domainManagementEdit } from 'my-sites/domains/paths';
-import { emailManagement } from 'my-sites/email/paths';
-import getPrimaryDomainBySiteId from 'state/selectors/get-primary-domain-by-site-id';
-import { getSiteSlug } from 'state/sites/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { hasGSuiteWithUs } from 'wp-calypso-client/lib/gsuite';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import { domainManagementEdit } from 'wp-calypso-client/my-sites/domains/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
+import getPrimaryDomainBySiteId from 'wp-calypso-client/state/selectors/get-primary-domain-by-site-id';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

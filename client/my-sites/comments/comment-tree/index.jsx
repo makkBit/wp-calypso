@@ -13,16 +13,23 @@ import CSSTransition from 'react-transition-group/CSSTransition';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
-import Comment from 'my-sites/comments/comment';
-import CommentListHeader from 'my-sites/comments/comment-list/comment-list-header';
-import CommentNavigation from 'my-sites/comments/comment-navigation';
-import EmptyContent from 'components/empty-content';
-import Pagination from 'components/pagination';
-import QuerySiteCommentsTree from 'components/data/query-site-comments-tree';
-import QuerySiteSettings from 'components/data/query-site-settings';
-import { getSiteCommentsTree, isCommentsTreeInitialized } from 'state/comments/selectors';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
+import { isEnabled } from 'wp-calypso-client/config';
+import Comment from 'wp-calypso-client/my-sites/comments/comment';
+import CommentListHeader from 'wp-calypso-client/my-sites/comments/comment-list/comment-list-header';
+import CommentNavigation from 'wp-calypso-client/my-sites/comments/comment-navigation';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import Pagination from 'wp-calypso-client/components/pagination';
+import QuerySiteCommentsTree from 'wp-calypso-client/components/data/query-site-comments-tree';
+import QuerySiteSettings from 'wp-calypso-client/components/data/query-site-settings';
+import {
+	getSiteCommentsTree,
+	isCommentsTreeInitialized,
+} from 'wp-calypso-client/state/comments/selectors';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 import { COMMENTS_PER_PAGE } from '../constants';
 
 const CommentTransition = ( props ) => (

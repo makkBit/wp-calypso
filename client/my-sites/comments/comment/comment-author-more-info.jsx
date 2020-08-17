@@ -5,32 +5,32 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get } from 'lodash';
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import Emojify from 'components/emojify';
-import ExternalLink from 'components/external-link';
-import Popover from 'components/popover';
-import { decodeEntities } from 'lib/formatting';
-import { urlToDomainAndPath } from 'lib/url';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { getSiteComment } from 'state/comments/selectors';
-import getSiteSetting from 'state/selectors/get-site-setting';
-import isAuthorsEmailBlocked from 'state/selectors/is-authors-email-blocked';
+import Emojify from 'wp-calypso-client/components/emojify';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import Popover from 'wp-calypso-client/components/popover';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { urlToDomainAndPath } from 'wp-calypso-client/lib/url';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import getSiteSetting from 'wp-calypso-client/state/selectors/get-site-setting';
+import isAuthorsEmailBlocked from 'wp-calypso-client/state/selectors/is-authors-email-blocked';
 import {
 	bumpStat,
 	composeAnalytics,
 	recordTracksEvent,
 	withAnalytics,
-} from 'state/analytics/actions';
-import { getCurrentUserEmail } from 'state/current-user/selectors';
-import { successNotice } from 'state/notices/actions';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+} from 'wp-calypso-client/state/analytics/actions';
+import { getCurrentUserEmail } from 'wp-calypso-client/state/current-user/selectors';
+import { successNotice } from 'wp-calypso-client/state/notices/actions';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 export class CommentAuthorMoreInfo extends Component {
 	static propTypes = {

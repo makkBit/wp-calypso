@@ -8,10 +8,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
-import { gaRecordEvent } from 'lib/analytics/ga';
-import Gridicon from 'components/gridicon';
-import PluginsActions from 'lib/plugins/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
+import { gaRecordEvent } from 'wp-calypso-client/lib/analytics/ga';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
 
 /**
  * Style dependencies

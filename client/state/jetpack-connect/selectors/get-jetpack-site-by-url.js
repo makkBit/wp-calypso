@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { getSiteByUrl } from 'state/sites/selectors';
+import { getSiteByUrl } from 'wp-calypso-client/state/sites/selectors';
 
-import 'state/jetpack-connect/init';
+import 'wp-calypso-client/state/jetpack-connect/init';
 
 export const getJetpackSiteByUrl = ( state, url ) => {
 	const site = getSiteByUrl( state, url );

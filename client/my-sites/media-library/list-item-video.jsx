@@ -10,8 +10,8 @@ import photon from 'photon';
  * Internal dependencies
  */
 import ListItemFileDetails from './list-item-file-details';
-import Gridicon from 'components/gridicon';
-import { MEDIA_IMAGE_THUMBNAIL } from 'lib/media/constants';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import { MEDIA_IMAGE_THUMBNAIL } from 'wp-calypso-client/lib/media/constants';
 
 /**
  * Style dependencies

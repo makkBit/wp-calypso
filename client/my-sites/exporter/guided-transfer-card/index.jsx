@@ -5,23 +5,23 @@
 import React, { Component } from 'react';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import QuerySiteGuidedTransfer from 'components/data/query-site-guided-transfer';
-import Button from 'components/forms/form-button';
+import QuerySiteGuidedTransfer from 'wp-calypso-client/components/data/query-site-guided-transfer';
+import Button from 'wp-calypso-client/components/forms/form-button';
 import {
 	isGuidedTransferAvailableForAllSites,
 	isRequestingGuidedTransferStatus,
-} from 'state/sites/guided-transfer/selectors';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getProductDisplayCost } from 'state/products-list/selectors';
-import InfoPopover from 'components/info-popover';
-import { GUIDED_TRANSFER } from 'lib/url/support';
+} from 'wp-calypso-client/state/sites/guided-transfer/selectors';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getProductDisplayCost } from 'wp-calypso-client/state/products-list/selectors';
+import InfoPopover from 'wp-calypso-client/components/info-popover';
+import { GUIDED_TRANSFER } from 'wp-calypso-client/lib/url/support';
 
 /**
  * Style dependencies

@@ -13,19 +13,23 @@ import { Button, Modal } from '@wordpress/components';
 /**
  * Internal dependencies
  */
-import isEditorDeprecationDialogShowing from 'state/selectors/is-editor-deprecation-dialog-showing';
-import { hideEditorDeprecationDialog } from 'state/ui/editor-deprecation-dialog/actions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { setSelectedEditor } from 'state/selected-editor/actions';
+import isEditorDeprecationDialogShowing from 'wp-calypso-client/state/selectors/is-editor-deprecation-dialog-showing';
+import { hideEditorDeprecationDialog } from 'wp-calypso-client/state/ui/editor-deprecation-dialog/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { setSelectedEditor } from 'wp-calypso-client/state/selected-editor/actions';
 import { localize } from 'i18n-calypso';
-import { composeAnalytics, recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import InlineSupportLink from 'components/inline-support-link';
-import { localizeUrl } from 'lib/i18n-utils';
-import FormattedDate from 'components/formatted-date';
-import { withLocalizedMoment } from 'components/localized-moment';
+import {
+	composeAnalytics,
+	recordTracksEvent,
+	withAnalytics,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import InlineSupportLink from 'wp-calypso-client/components/inline-support-link';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import FormattedDate from 'wp-calypso-client/components/formatted-date';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

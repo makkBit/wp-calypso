@@ -9,7 +9,7 @@ import React, { FunctionComponent } from 'react';
  */
 import JetpackProductCard, {
 	Props as JetpackProductCardProps,
-} from 'components/jetpack/card/jetpack-product-card';
+} from 'wp-calypso-client/components/jetpack/card/jetpack-product-card';
 
 /**
  * Style dependencies

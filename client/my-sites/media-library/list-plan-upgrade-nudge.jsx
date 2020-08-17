@@ -10,8 +10,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { FEATURE_VIDEO_UPLOADS, FEATURE_AUDIO_UPLOADS } from 'lib/plans/constants';
-import UpsellNudge from 'blocks/upsell-nudge';
+import {
+	FEATURE_VIDEO_UPLOADS,
+	FEATURE_AUDIO_UPLOADS,
+} from 'wp-calypso-client/lib/plans/constants';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
 import ListPlanPromo from './list-plan-promo';
 
 function getTitle( filter, translate ) {

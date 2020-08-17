@@ -14,10 +14,10 @@ import { find, debounce } from 'lodash';
 import CompactTinyMCE from 'woocommerce/components/compact-tinymce';
 import formattedVariationName from 'woocommerce/lib/formatted-variation-name';
 import FormClickToEditInput from 'woocommerce/components/form-click-to-edit-input';
-import FormFieldSet from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormToggle from 'components/forms/form-toggle';
+import FormFieldSet from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
 import getKeyboardHandler from 'woocommerce/lib/get-keyboard-handler';
 
 class ProductFormVariationsModal extends React.Component {

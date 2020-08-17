@@ -8,11 +8,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormTextInput from 'components/forms/form-text-input';
-import { addUserProfileLinks } from 'state/profile-links/actions';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { addUserProfileLinks } from 'wp-calypso-client/state/profile-links/actions';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

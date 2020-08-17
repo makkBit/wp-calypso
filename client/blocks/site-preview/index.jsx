@@ -9,13 +9,17 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import { closePreview } from 'state/ui/preview/actions';
-import { getPreviewSite, getPreviewSiteId, getPreviewUrl } from 'state/ui/preview/selectors';
-import { getSiteOption, getSiteSlug } from 'state/sites/selectors';
-import { getCurrentLayoutFocus } from 'state/ui/layout-focus/selectors';
-import { addQueryArgs } from 'lib/route';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import WebPreview from 'components/web-preview';
+import { closePreview } from 'wp-calypso-client/state/ui/preview/actions';
+import {
+	getPreviewSite,
+	getPreviewSiteId,
+	getPreviewUrl,
+} from 'wp-calypso-client/state/ui/preview/selectors';
+import { getSiteOption, getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentLayoutFocus } from 'wp-calypso-client/state/ui/layout-focus/selectors';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import WebPreview from 'wp-calypso-client/components/web-preview';
 
 const debug = debugFactory( 'calypso:site-preview' );
 

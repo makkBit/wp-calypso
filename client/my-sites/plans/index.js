@@ -14,10 +14,10 @@ import {
 	redirectToPlansIfNotJetpack,
 } from './controller';
 import { currentPlan } from './current-plan/controller';
-import { makeLayout, render as clientRender } from 'controller';
-import { navigation, siteSelection, sites } from 'my-sites/controller';
-import { shouldShowOfferResetFlow } from 'lib/abtest/getters';
-import plansV2 from 'my-sites/plans-v2';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import { navigation, siteSelection, sites } from 'wp-calypso-client/my-sites/controller';
+import { shouldShowOfferResetFlow } from 'wp-calypso-client/lib/abtest/getters';
+import plansV2 from 'wp-calypso-client/my-sites/plans-v2';
 
 const trackedPage = ( url, ...rest ) => {
 	page( url, ...rest, makeLayout, clientRender );

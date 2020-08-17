@@ -10,26 +10,26 @@ import { flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import { protectForm } from 'lib/protect-form';
-import formBase from 'me/form-base';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import formBase from 'wp-calypso-client/me/form-base';
 import { Card } from '@automattic/components';
-import Navigation from 'me/notification-settings/navigation';
-import FormCheckbox from 'components/forms/form-checkbox';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormLegend from 'components/forms/form-legend';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormButton from 'components/forms/form-button';
-import FormSelect from 'components/forms/form-select';
-import FormSectionHeading from 'components/forms/form-section-heading';
-import ReauthRequired from 'me/reauth-required';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import observe from 'lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
-import Main from 'components/main';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import Navigation from 'wp-calypso-client/me/notification-settings/navigation';
+import FormCheckbox from 'wp-calypso-client/components/forms/form-checkbox';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormLegend from 'wp-calypso-client/components/forms/form-legend';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormSectionHeading from 'wp-calypso-client/components/forms/form-section-heading';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import observe from 'wp-calypso-client/lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
+import Main from 'wp-calypso-client/components/main';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /* eslint-disable react/prefer-es6-class */
 const NotificationSubscriptions = createReactClass( {

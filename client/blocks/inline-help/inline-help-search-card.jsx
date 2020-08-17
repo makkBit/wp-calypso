@@ -11,11 +11,11 @@ import debugFactory from 'debug';
 /**
  * Internal Dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import SearchCard from 'components/search-card';
-import getInlineHelpCurrentlySelectedLink from 'state/inline-help/selectors/get-inline-help-currently-selected-link';
-import isRequestingInlineHelpSearchResultsForQuery from 'state/inline-help/selectors/is-requesting-inline-help-search-results-for-query';
-import { setInlineHelpSearchQuery } from 'state/inline-help/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import SearchCard from 'wp-calypso-client/components/search-card';
+import getInlineHelpCurrentlySelectedLink from 'wp-calypso-client/state/inline-help/selectors/get-inline-help-currently-selected-link';
+import isRequestingInlineHelpSearchResultsForQuery from 'wp-calypso-client/state/inline-help/selectors/is-requesting-inline-help-search-results-for-query';
+import { setInlineHelpSearchQuery } from 'wp-calypso-client/state/inline-help/actions';
 
 /**
  * Module variables

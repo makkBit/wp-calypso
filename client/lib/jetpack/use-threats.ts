@@ -7,10 +7,14 @@ import { useDispatch, useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'state/analytics/actions';
-import { fixAllThreats, fixThreat, ignoreThreat } from 'state/jetpack-scan/threats/actions';
-import { FixableThreat, Threat } from 'components/jetpack/threat-item/types';
-import getSiteScanUpdatingThreats from 'state/selectors/get-site-scan-updating-threats';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import {
+	fixAllThreats,
+	fixThreat,
+	ignoreThreat,
+} from 'wp-calypso-client/state/jetpack-scan/threats/actions';
+import { FixableThreat, Threat } from 'wp-calypso-client/components/jetpack/threat-item/types';
+import getSiteScanUpdatingThreats from 'wp-calypso-client/state/selectors/get-site-scan-updating-threats';
 
 export const useThreats = ( siteId: number ) => {
 	const [ selectedThreat, setSelectedThreat ] = React.useState< Threat >();

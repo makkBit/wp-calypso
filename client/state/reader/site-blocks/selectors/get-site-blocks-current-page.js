@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 export const getSiteBlocksCurrentPage = ( state ) => {
 	const page = get( state, [ 'reader', 'siteBlocks', 'currentPage' ], 1 );

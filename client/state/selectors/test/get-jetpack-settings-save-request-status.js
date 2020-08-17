@@ -6,10 +6,10 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getJetpackSettingsSaveRequestStatus from 'state/selectors/get-jetpack-settings-save-request-status';
-import { getRequestKey } from 'state/data-layer/wpcom-http/utils';
+import getJetpackSettingsSaveRequestStatus from 'wp-calypso-client/state/selectors/get-jetpack-settings-save-request-status';
+import { getRequestKey } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
 import { settings as SETTINGS_FIXTURE } from './fixtures/jetpack-settings';
-import { saveJetpackSettings } from 'state/jetpack/settings/actions';
+import { saveJetpackSettings } from 'wp-calypso-client/state/jetpack/settings/actions';
 
 describe( 'getJetpackSettingsSaveRequestStatus()', () => {
 	const siteId = 12345678;

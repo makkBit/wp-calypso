@@ -9,13 +9,13 @@ import { useDispatch, useSelector } from 'react-redux';
  * Internal dependencies
  */
 import { useTranslate } from 'i18n-calypso';
-import { settingsPath } from 'lib/jetpack/paths';
-import { backupDownloadPath, backupRestorePath } from 'my-sites/backup/paths';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import getDoesRewindNeedCredentials from 'state/selectors/get-does-rewind-need-credentials';
-import Button from 'components/forms/form-button';
-import ExternalLink from 'components/external-link';
+import { settingsPath } from 'wp-calypso-client/lib/jetpack/paths';
+import { backupDownloadPath, backupRestorePath } from 'wp-calypso-client/my-sites/backup/paths';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import getDoesRewindNeedCredentials from 'wp-calypso-client/state/selectors/get-does-rewind-need-credentials';
+import Button from 'wp-calypso-client/components/forms/form-button';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 /**
  * Style dependencies

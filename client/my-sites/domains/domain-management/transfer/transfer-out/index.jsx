@@ -12,19 +12,19 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import NonOwnerCard from 'my-sites/domains/domain-management/components/domain/non-owner-card';
-import { domainManagementTransfer } from 'my-sites/domains/paths';
-import { getSelectedDomain, getTopLevelOfTld } from 'lib/domains';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import NonOwnerCard from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/non-owner-card';
+import { domainManagementTransfer } from 'wp-calypso-client/my-sites/domains/paths';
+import { getSelectedDomain, getTopLevelOfTld } from 'wp-calypso-client/lib/domains';
 import IcannVerification from './icann-verification.jsx';
 import Locked from './locked.jsx';
 import Unlocked from './unlocked.jsx';
 import SelectIpsTag from './select-ips-tag.jsx';
 import TransferProhibited from './transfer-prohibited.jsx';
 import TransferLock from './transfer-lock.jsx';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 /**
  * Style dependencies
  */

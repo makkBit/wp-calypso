@@ -1,9 +1,12 @@
 /**
  * Internal Dependencies
  */
-import { handleFetchExperiments, experimentUpdate } from 'state/data-layer/wpcom/experiments';
-import { EXPERIMENT_ASSIGN, EXPERIMENT_FETCH } from 'state/action-types';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import {
+	handleFetchExperiments,
+	experimentUpdate,
+} from 'wp-calypso-client/state/data-layer/wpcom/experiments';
+import { EXPERIMENT_ASSIGN, EXPERIMENT_FETCH } from 'wp-calypso-client/state/action-types';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'wpcom-api', () => {
 	describe( 'experiments', () => {

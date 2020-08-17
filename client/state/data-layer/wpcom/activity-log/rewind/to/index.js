@@ -6,17 +6,17 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { errorNotice } from 'state/notices/actions';
-import { getRewindRestoreProgress } from 'state/activity-log/actions';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { requestRewindState } from 'state/rewind/state/actions';
-import { REWIND_RESTORE, REWIND_CLONE } from 'state/action-types';
-import { SchemaError } from 'lib/make-json-schema-parser';
+import config from 'wp-calypso-client/config';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { errorNotice } from 'wp-calypso-client/state/notices/actions';
+import { getRewindRestoreProgress } from 'wp-calypso-client/state/activity-log/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import { requestRewindState } from 'wp-calypso-client/state/rewind/state/actions';
+import { REWIND_RESTORE, REWIND_CLONE } from 'wp-calypso-client/state/action-types';
+import { SchemaError } from 'wp-calypso-client/lib/make-json-schema-parser';
 
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 
 const fromApi = ( data ) => {
 	const restoreId = parseInt( data.restore_id, 10 );

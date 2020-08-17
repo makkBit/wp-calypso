@@ -6,18 +6,18 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { map, partial } from 'lodash';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal Dependencies
  */
-import { RelatedPostCard } from 'blocks/reader-related-card';
-import { recordAction, recordTrackForPost } from 'reader/stats';
+import { RelatedPostCard } from 'wp-calypso-client/blocks/reader-related-card';
+import { recordAction, recordTrackForPost } from 'wp-calypso-client/reader/stats';
 import { Button } from '@automattic/components';
-import { dismissPost } from 'state/reader/site-dismissals/actions';
-import { keyForPost } from 'reader/post-key';
-import QueryReaderPost from 'components/data/query-reader-post';
-import { getPostsByKeys } from 'state/reader/posts/selectors';
+import { dismissPost } from 'wp-calypso-client/state/reader/site-dismissals/actions';
+import { keyForPost } from 'wp-calypso-client/reader/post-key';
+import QueryReaderPost from 'wp-calypso-client/components/data/query-reader-post';
+import { getPostsByKeys } from 'wp-calypso-client/state/reader/posts/selectors';
 
 function dismissPostAnalytics( uiIndex, storeId, post ) {
 	recordTrackForPost( 'calypso_reader_recommended_post_dismissed', post, {

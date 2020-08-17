@@ -11,19 +11,19 @@ import { connect } from 'react-redux';
  * Internal Dependencies
  */
 import { Card } from '@automattic/components';
-import { getStreamUrl } from 'reader/route';
-import ReaderAvatar from 'blocks/reader-avatar';
-import ReaderSiteStreamLink from 'blocks/reader-site-stream-link';
+import { getStreamUrl } from 'wp-calypso-client/reader/route';
+import ReaderAvatar from 'wp-calypso-client/blocks/reader-avatar';
+import ReaderSiteStreamLink from 'wp-calypso-client/blocks/reader-site-stream-link';
 import ReaderCombinedCardPost from './post';
-import { keysAreEqual, keyForPost } from 'reader/post-key';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import { recordTrack } from 'reader/stats';
-import { getSiteName } from 'reader/get-helpers';
-import FollowButton from 'reader/follow-button';
-import { getPostsByKeys } from 'state/reader/posts/selectors';
-import ReaderPostOptionsMenu from 'blocks/reader-post-options-menu';
-import PostBlocked from 'blocks/reader-post-card/blocked';
+import { keysAreEqual, keyForPost } from 'wp-calypso-client/reader/post-key';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import { recordTrack } from 'wp-calypso-client/reader/stats';
+import { getSiteName } from 'wp-calypso-client/reader/get-helpers';
+import FollowButton from 'wp-calypso-client/reader/follow-button';
+import { getPostsByKeys } from 'wp-calypso-client/state/reader/posts/selectors';
+import ReaderPostOptionsMenu from 'wp-calypso-client/blocks/reader-post-options-menu';
+import PostBlocked from 'wp-calypso-client/blocks/reader-post-card/blocked';
 
 /**
  * Style dependencies

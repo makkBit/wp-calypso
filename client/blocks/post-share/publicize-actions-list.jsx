@@ -5,29 +5,29 @@ import PropTypes from 'prop-types';
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import getPostSharePublishedActions from 'state/selectors/get-post-share-published-actions';
+import getPostSharePublishedActions from 'wp-calypso-client/state/selectors/get-post-share-published-actions';
 
-import getPostShareScheduledActions from 'state/selectors/get-post-share-scheduled-actions';
-import QuerySharePostActions from 'components/data/query-share-post-actions/index.jsx';
-import SocialLogo from 'components/social-logo';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
+import getPostShareScheduledActions from 'wp-calypso-client/state/selectors/get-post-share-scheduled-actions';
+import QuerySharePostActions from 'wp-calypso-client/components/data/query-share-post-actions/index.jsx';
+import SocialLogo from 'wp-calypso-client/components/social-logo';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
 import { SCHEDULED, PUBLISHED } from './constants';
-import SectionNav from 'components/section-nav';
-import NavTabs from 'components/section-nav/tabs';
-import NavItem from 'components/section-nav/item';
-import { isEnabled } from 'config';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import { isEnabled } from 'wp-calypso-client/config';
 import { Dialog } from '@automattic/components';
-import { deletePostShareAction } from 'state/sharing/publicize/publicize-actions/actions';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { deletePostShareAction } from 'wp-calypso-client/state/sharing/publicize/publicize-actions/actions';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import SharingPreviewModal from './sharing-preview-modal';
-import Notice from 'components/notice';
-import { withLocalizedMoment } from 'components/localized-moment';
+import Notice from 'wp-calypso-client/components/notice';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class PublicizeActionsList extends PureComponent {
 	static propTypes = {

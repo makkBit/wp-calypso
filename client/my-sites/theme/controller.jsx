@@ -12,10 +12,10 @@ import { startsWith } from 'lodash';
  */
 import ThemeSheetComponent from './main';
 import ThemeNotFoundError from './theme-not-found-error';
-import LayoutLoggedOut from 'layout/logged-out';
-import { requestTheme, setBackPath } from 'state/themes/actions';
-import { getTheme, getThemeRequestErrors } from 'state/themes/selectors';
-import config from 'config';
+import LayoutLoggedOut from 'wp-calypso-client/layout/logged-out';
+import { requestTheme, setBackPath } from 'wp-calypso-client/state/themes/actions';
+import { getTheme, getThemeRequestErrors } from 'wp-calypso-client/state/themes/selectors';
+import config from 'wp-calypso-client/config';
 
 const debug = debugFactory( 'calypso:themes' );
 

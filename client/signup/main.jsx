@@ -26,44 +26,52 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import * as oauthToken from 'lib/oauth-token';
-import { isDomainRegistration, isDomainTransfer, isDomainMapping } from 'lib/products-values';
-import SignupFlowController from 'lib/signup/flow-controller';
-import { disableCart } from 'lib/cart/actions';
+import config from 'wp-calypso-client/config';
+import * as oauthToken from 'wp-calypso-client/lib/oauth-token';
+import {
+	isDomainRegistration,
+	isDomainTransfer,
+	isDomainMapping,
+} from 'wp-calypso-client/lib/products-values';
+import SignupFlowController from 'wp-calypso-client/lib/signup/flow-controller';
+import { disableCart } from 'wp-calypso-client/lib/cart/actions';
 import {
 	recordSignupStart,
 	recordSignupComplete,
 	recordSignupStep,
 	recordSignupInvalidStep,
-} from 'lib/analytics/signup';
-import DocumentHead from 'components/data/document-head';
-import LocaleSuggestions from 'components/locale-suggestions';
-import SignupProcessingScreen from 'signup/processing-screen';
-import SignupHeader from 'signup/signup-header';
-import QuerySiteDomains from 'components/data/query-site-domains';
-import { loadTrackingTool } from 'state/analytics/actions';
-import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'state/current-user/constants';
+} from 'wp-calypso-client/lib/analytics/signup';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import LocaleSuggestions from 'wp-calypso-client/components/locale-suggestions';
+import SignupProcessingScreen from 'wp-calypso-client/signup/processing-screen';
+import SignupHeader from 'wp-calypso-client/signup/signup-header';
+import QuerySiteDomains from 'wp-calypso-client/components/data/query-site-domains';
+import { loadTrackingTool } from 'wp-calypso-client/state/analytics/actions';
+import { NON_PRIMARY_DOMAINS_TO_FREE_USERS } from 'wp-calypso-client/state/current-user/constants';
 import {
 	isUserLoggedIn,
 	getCurrentUser,
 	currentUserHasFlag,
 	getCurrentUserSiteCount,
-} from 'state/current-user/selectors';
-import isUserRegistrationDaysWithinRange from 'state/selectors/is-user-registration-days-within-range';
-import { getSignupDependencyStore } from 'state/signup/dependency-store/selectors';
-import { getSignupProgress } from 'state/signup/progress/selectors';
-import { submitSignupStep, removeStep, addStep } from 'state/signup/progress/actions';
-import { setSurvey } from 'state/signup/steps/survey/actions';
-import { submitSiteType } from 'state/signup/steps/site-type/actions';
-import { submitSiteVertical } from 'state/signup/steps/site-vertical/actions';
-import getSiteId from 'state/selectors/get-site-id';
-import { isCurrentPlanPaid, getSitePlanSlug } from 'state/sites/selectors';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import { isSitePreviewVisible } from 'state/signup/preview/selectors';
-import { showSitePreview, hideSitePreview } from 'state/signup/preview/actions';
+} from 'wp-calypso-client/state/current-user/selectors';
+import isUserRegistrationDaysWithinRange from 'wp-calypso-client/state/selectors/is-user-registration-days-within-range';
+import { getSignupDependencyStore } from 'wp-calypso-client/state/signup/dependency-store/selectors';
+import { getSignupProgress } from 'wp-calypso-client/state/signup/progress/selectors';
+import {
+	submitSignupStep,
+	removeStep,
+	addStep,
+} from 'wp-calypso-client/state/signup/progress/actions';
+import { setSurvey } from 'wp-calypso-client/state/signup/steps/survey/actions';
+import { submitSiteType } from 'wp-calypso-client/state/signup/steps/site-type/actions';
+import { submitSiteVertical } from 'wp-calypso-client/state/signup/steps/site-vertical/actions';
+import getSiteId from 'wp-calypso-client/state/selectors/get-site-id';
+import { isCurrentPlanPaid, getSitePlanSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import { isSitePreviewVisible } from 'wp-calypso-client/state/signup/preview/selectors';
+import { showSitePreview, hideSitePreview } from 'wp-calypso-client/state/signup/preview/actions';
 import steps from './config/steps';
 import flows from './config/flows';
 import { getStepComponent } from './config/step-components';
@@ -77,11 +85,11 @@ import {
 } from './utils';
 import WpcomLoginForm from './wpcom-login-form';
 import SiteMockups from './site-mockup';
-import P2SignupProcessingScreen from 'signup/p2-processing-screen';
-import ReskinnedProcessingScreen from 'signup/reskinned-processing-screen';
-import user from 'lib/user';
-import getCurrentLocaleSlug from 'state/selectors/get-current-locale-slug';
-import { abtest } from 'lib/abtest';
+import P2SignupProcessingScreen from 'wp-calypso-client/signup/p2-processing-screen';
+import ReskinnedProcessingScreen from 'wp-calypso-client/signup/reskinned-processing-screen';
+import user from 'wp-calypso-client/lib/user';
+import getCurrentLocaleSlug from 'wp-calypso-client/state/selectors/get-current-locale-slug';
+import { abtest } from 'wp-calypso-client/lib/abtest';
 
 /**
  * Style dependencies

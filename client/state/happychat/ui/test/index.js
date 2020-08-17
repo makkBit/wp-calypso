@@ -13,7 +13,7 @@ import {
 	HAPPYCHAT_FOCUS,
 	HAPPYCHAT_IO_SEND_MESSAGE_MESSAGE,
 	HAPPYCHAT_SET_CURRENT_MESSAGE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import { lostFocusAt, currentMessage } from '../reducer';
 jest.mock( 'lib/warn', () => () => {} );
 

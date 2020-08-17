@@ -11,9 +11,9 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import SiteVerticalsSuggestionSearch from 'components/site-verticals-suggestion-search';
-import { setSiteVertical } from 'state/signup/steps/site-vertical/actions';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import SiteVerticalsSuggestionSearch from 'wp-calypso-client/components/site-verticals-suggestion-search';
+import { setSiteVertical } from 'wp-calypso-client/state/signup/steps/site-vertical/actions';
 import {
 	getSiteVerticalName,
 	getSiteVerticalSlug,
@@ -21,11 +21,11 @@ import {
 	getSiteVerticalId,
 	getSiteVerticalParentId,
 	getSiteVerticalSuggestedTheme,
-} from 'state/signup/steps/site-vertical/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getSiteType } from 'state/signup/steps/site-type/selectors';
-import { getVerticals } from 'state/signup/verticals/selectors';
-import { getSiteTypePropertyValue } from 'lib/signup/site-type';
+} from 'wp-calypso-client/state/signup/steps/site-vertical/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getSiteType } from 'wp-calypso-client/state/signup/steps/site-type/selectors';
+import { getVerticals } from 'wp-calypso-client/state/signup/verticals/selectors';
+import { getSiteTypePropertyValue } from 'wp-calypso-client/lib/signup/site-type';
 
 /**
  * Style dependencies

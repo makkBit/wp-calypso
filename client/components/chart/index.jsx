@@ -10,10 +10,10 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import { hasTouch } from 'lib/touch-detect';
-import { useWindowResizeCallback } from 'lib/track-element-size';
-import Tooltip from 'components/tooltip';
-import Notice from 'components/notice';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
+import { useWindowResizeCallback } from 'wp-calypso-client/lib/track-element-size';
+import Tooltip from 'wp-calypso-client/components/tooltip';
+import Notice from 'wp-calypso-client/components/notice';
 import BarContainer from './bar-container';
 
 /**

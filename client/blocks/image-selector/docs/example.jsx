@@ -8,8 +8,8 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import ImageSelector from 'blocks/image-selector';
-import { getCurrentUser } from 'state/current-user/selectors';
+import ImageSelector from 'wp-calypso-client/blocks/image-selector';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
 
 class ImageSelectorExample extends Component {
 	constructor( props ) {

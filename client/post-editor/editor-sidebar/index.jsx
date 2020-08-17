@@ -7,11 +7,11 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import EditorDrawer from 'post-editor/editor-drawer';
+import EditorDrawer from 'wp-calypso-client/post-editor/editor-drawer';
 import EditorSidebarHeader from './header';
-import SidebarFooter from 'layout/sidebar/footer';
-import EditorDeletePost from 'post-editor/editor-delete-post';
-import EditorGutenbergOptInSidebar from 'post-editor/editor-gutenberg-opt-in-sidebar';
+import SidebarFooter from 'wp-calypso-client/layout/sidebar/footer';
+import EditorDeletePost from 'wp-calypso-client/post-editor/editor-delete-post';
+import EditorGutenbergOptInSidebar from 'wp-calypso-client/post-editor/editor-gutenberg-opt-in-sidebar';
 
 /**
  * Style dependencies

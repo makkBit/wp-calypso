@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestCommentCounts } from 'state/comments/actions';
+import { requestCommentCounts } from 'wp-calypso-client/state/comments/actions';
 
 export class QuerySiteCommentCounts extends PureComponent {
 	static propTypes = {

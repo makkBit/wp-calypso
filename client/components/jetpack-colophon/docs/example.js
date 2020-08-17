@@ -6,7 +6,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import JetpackColophon from 'components/jetpack-colophon';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
 
 export default function JetpackColophonExample() {
 	return (

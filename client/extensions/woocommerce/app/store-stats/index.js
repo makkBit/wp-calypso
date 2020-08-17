@@ -9,18 +9,18 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import StatsNavigation from 'blocks/stats-navigation';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import Main from 'wp-calypso-client/components/main';
+import StatsNavigation from 'wp-calypso-client/blocks/stats-navigation';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 import Chart from './store-stats-orders-chart';
-import StatsPeriodNavigation from 'my-sites/stats/stats-period-navigation';
-import DatePicker from 'my-sites/stats/stats-date-picker';
+import StatsPeriodNavigation from 'wp-calypso-client/my-sites/stats/stats-period-navigation';
+import DatePicker from 'wp-calypso-client/my-sites/stats/stats-date-picker';
 import Module from './store-stats-module';
 import List from './store-stats-list';
 import WidgetList from './store-stats-widget-list';
-import SectionHeader from 'components/section-header';
-import JetpackColophon from 'components/jetpack-colophon';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
 import {
 	sparkWidgets,
 	topProducts,
@@ -29,10 +29,10 @@ import {
 	noDataMsg,
 } from 'woocommerce/app/store-stats/constants';
 import { getEndPeriod, getQueries, getWidgetPath } from './utils';
-import QuerySiteStats from 'components/data/query-site-stats';
-import config from 'config';
+import QuerySiteStats from 'wp-calypso-client/components/data/query-site-stats';
+import config from 'wp-calypso-client/config';
 import StoreStatsReferrerWidget from './store-stats-referrer-widget';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import titlecase from 'to-title-case';
 
 class StoreStats extends Component {

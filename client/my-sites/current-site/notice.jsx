@@ -7,40 +7,46 @@ import url from 'url';
 import moment from 'moment';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import config, { isEnabled } from 'config';
+import config, { isEnabled } from 'wp-calypso-client/config';
 import { get, reject, transform } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import getActiveDiscount from 'state/selectors/get-active-discount';
-import { domainManagementList } from 'my-sites/domains/paths';
-import { hasDomainCredit, isCurrentUserCurrentPlanOwner } from 'state/sites/plans/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import isDomainOnlySite from 'state/selectors/is-domain-only-site';
-import isEligibleForFreeToPaidUpsell from 'state/selectors/is-eligible-for-free-to-paid-upsell';
-import { recordTracksEvent } from 'state/analytics/actions';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QueryActivePromotions from 'components/data/query-active-promotions';
-import { getDomainsBySiteId } from 'state/sites/domains/selectors';
-import { getProductsList } from 'state/products-list/selectors';
-import QueryProductsList from 'components/data/query-products-list';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getUnformattedDomainPrice, getUnformattedDomainSalePrice } from 'lib/domains';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import getActiveDiscount from 'wp-calypso-client/state/selectors/get-active-discount';
+import { domainManagementList } from 'wp-calypso-client/my-sites/domains/paths';
+import {
+	hasDomainCredit,
+	isCurrentUserCurrentPlanOwner,
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import isDomainOnlySite from 'wp-calypso-client/state/selectors/is-domain-only-site';
+import isEligibleForFreeToPaidUpsell from 'wp-calypso-client/state/selectors/is-eligible-for-free-to-paid-upsell';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QueryActivePromotions from 'wp-calypso-client/components/data/query-active-promotions';
+import { getDomainsBySiteId } from 'wp-calypso-client/state/sites/domains/selectors';
+import { getProductsList } from 'wp-calypso-client/state/products-list/selectors';
+import QueryProductsList from 'wp-calypso-client/components/data/query-products-list';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import {
+	getUnformattedDomainPrice,
+	getUnformattedDomainSalePrice,
+} from 'wp-calypso-client/lib/domains';
 import formatCurrency from '@automattic/format-currency/src';
-import { getPreference } from 'state/preferences/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { savePreference } from 'state/preferences/actions';
-import isSiteMigrationInProgress from 'state/selectors/is-site-migration-in-progress';
-import isSiteMigrationActiveRoute from 'state/selectors/is-site-migration-active-route';
-import { getSectionName } from 'state/ui/selectors';
-import { getTopJITM } from 'state/jitm/selectors';
-import AsyncLoad from 'components/async-load';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { preventWidows } from 'lib/formatting';
-import isSiteWPForTeams from 'state/selectors/is-site-wpforteams';
+import { getPreference } from 'wp-calypso-client/state/preferences/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { savePreference } from 'wp-calypso-client/state/preferences/actions';
+import isSiteMigrationInProgress from 'wp-calypso-client/state/selectors/is-site-migration-in-progress';
+import isSiteMigrationActiveRoute from 'wp-calypso-client/state/selectors/is-site-migration-active-route';
+import { getSectionName } from 'wp-calypso-client/state/ui/selectors';
+import { getTopJITM } from 'wp-calypso-client/state/jitm/selectors';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import { preventWidows } from 'wp-calypso-client/lib/formatting';
+import isSiteWPForTeams from 'wp-calypso-client/state/selectors/is-site-wpforteams';
 
 const DOMAIN_UPSELL_NUDGE_DISMISS_KEY = 'domain_upsell_nudge_dismiss';
 
@@ -270,7 +276,7 @@ export class SiteNotice extends React.Component {
 				{ siteRedirectNotice }
 				{ showJitms && (
 					<AsyncLoad
-						require="blocks/jitm"
+						require="wp-calypso-client/blocks/jitm"
 						messagePath={ messagePath }
 						template="sidebar-banner"
 						placeholder={ null }

@@ -8,11 +8,11 @@ import {
 	MAILCHIMP_SETTINGS_UPDATE_SUCCESS,
 	MAILCHIMP_SETTINGS_UPDATE_FAILURE,
 	NOTICE_CREATE,
-} from 'state/action-types';
-import wpcom from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
 
-import 'state/data-layer/wpcom/sites/mailchimp';
-import 'state/mailchimp/init';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/mailchimp';
+import 'wp-calypso-client/state/mailchimp/init';
 
 export const requestSettings = ( siteId ) => ( {
 	siteId,

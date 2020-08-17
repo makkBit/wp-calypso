@@ -1,7 +1,11 @@
 /**
  * Internal dependencies
  */
-import { combineReducers, withSchemaValidation, withoutPersistence } from 'state/utils';
+import {
+	combineReducers,
+	withSchemaValidation,
+	withoutPersistence,
+} from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 import {
 	ZONINATOR_REQUEST_ERROR,

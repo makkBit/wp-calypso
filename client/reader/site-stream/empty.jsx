@@ -7,9 +7,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { recordAction as statRecordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import { isDiscoverEnabled } from 'reader/discover/helper';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import {
+	recordAction as statRecordAction,
+	recordGaEvent,
+	recordTrack,
+} from 'wp-calypso-client/reader/stats';
+import { isDiscoverEnabled } from 'wp-calypso-client/reader/discover/helper';
 
 const SiteEmptyContent = ( { translate } ) => {
 	const recordAction = () => {

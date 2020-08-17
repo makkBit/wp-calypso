@@ -9,20 +9,25 @@ import { compact, find, get, identity, overSome } from 'lodash';
 /**
  * Internal dependencies
  */
-import SeoPreviewUpgradeNudge from 'components/seo/preview-upgrade-nudge';
-import ReaderPreview from 'components/seo/reader-preview';
+import SeoPreviewUpgradeNudge from 'wp-calypso-client/components/seo/preview-upgrade-nudge';
+import ReaderPreview from 'wp-calypso-client/components/seo/reader-preview';
 import { FacebookPreview, TwitterPreview, SearchPreview } from '@automattic/social-previews';
-import VerticalMenu from 'components/vertical-menu';
-import PostMetadata from 'lib/post-metadata';
-import { formatExcerpt } from 'lib/post-normalizer/rule-create-better-excerpt';
-import { isBusiness, isEnterprise, isJetpackPremium, isEcommerce } from 'lib/products-values';
-import { parseHtml } from 'lib/formatting';
-import { SocialItem } from 'components/vertical-menu/items';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getSitePost } from 'state/posts/selectors';
-import { getSeoTitle } from 'state/sites/selectors';
-import { getSectionName, getSelectedSite } from 'state/ui/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
+import VerticalMenu from 'wp-calypso-client/components/vertical-menu';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
+import { formatExcerpt } from 'wp-calypso-client/lib/post-normalizer/rule-create-better-excerpt';
+import {
+	isBusiness,
+	isEnterprise,
+	isJetpackPremium,
+	isEcommerce,
+} from 'wp-calypso-client/lib/products-values';
+import { parseHtml } from 'wp-calypso-client/lib/formatting';
+import { SocialItem } from 'wp-calypso-client/components/vertical-menu/items';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { getSeoTitle } from 'wp-calypso-client/state/sites/selectors';
+import { getSectionName, getSelectedSite } from 'wp-calypso-client/state/ui/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

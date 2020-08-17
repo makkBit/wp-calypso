@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 
 const EmptyContentExample = ( props ) => {
 	return props.exampleCode;

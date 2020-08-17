@@ -11,18 +11,18 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import { GSUITE_BASIC_SLUG } from 'lib/gsuite/constants';
-import GSuiteUpsellCard from 'components/upgrades/gsuite/gsuite-upsell-card';
-import Main from 'components/main';
-import QuerySites from 'components/data/query-sites';
-import { getSiteSlug, getSiteTitle } from 'state/sites/selectors';
-import { getReceiptById } from 'state/receipts/selectors';
-import isEligibleForDotcomChecklist from 'state/selectors/is-eligible-for-dotcom-checklist';
-import { addItems, removeItem } from 'lib/cart/actions';
-import { getAllCartItems } from 'lib/cart-values/cart-items';
-import { isDotComPlan } from 'lib/products-values';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { GSUITE_BASIC_SLUG } from 'wp-calypso-client/lib/gsuite/constants';
+import GSuiteUpsellCard from 'wp-calypso-client/components/upgrades/gsuite/gsuite-upsell-card';
+import Main from 'wp-calypso-client/components/main';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import { getSiteSlug, getSiteTitle } from 'wp-calypso-client/state/sites/selectors';
+import { getReceiptById } from 'wp-calypso-client/state/receipts/selectors';
+import isEligibleForDotcomChecklist from 'wp-calypso-client/state/selectors/is-eligible-for-dotcom-checklist';
+import { addItems, removeItem } from 'wp-calypso-client/lib/cart/actions';
+import { getAllCartItems } from 'wp-calypso-client/lib/cart-values/cart-items';
+import { isDotComPlan } from 'wp-calypso-client/lib/products-values';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 /**
  * Style dependencies

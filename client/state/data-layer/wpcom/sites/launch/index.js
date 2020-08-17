@@ -6,15 +6,15 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { SITE_LAUNCH } from 'state/action-types';
-import { receiveSite } from 'state/sites/actions';
-import { updateSiteSettings } from 'state/site-settings/actions';
-import { errorNotice, infoNotice, successNotice } from 'state/notices/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { requestSiteChecklist } from 'state/checklist/actions';
-import { requestEligibility } from 'state/automated-transfer/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { SITE_LAUNCH } from 'wp-calypso-client/state/action-types';
+import { receiveSite } from 'wp-calypso-client/state/sites/actions';
+import { updateSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { errorNotice, infoNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { requestSiteChecklist } from 'wp-calypso-client/state/checklist/actions';
+import { requestEligibility } from 'wp-calypso-client/state/automated-transfer/actions';
 
 const handleLaunchSiteRequest = dispatchRequest( {
 	fetch: ( action ) => [

@@ -3,7 +3,7 @@
  */
 
 import { domainConnectAuthorize, notFoundError } from './controller';
-import { makeLayout, render as clientRender } from 'controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 
 export default ( router ) => {
 	router(

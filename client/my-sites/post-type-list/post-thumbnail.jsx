@@ -10,12 +10,12 @@ import { get, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import resizeImageUrl from 'lib/resize-image-url';
-import safeImageUrl from 'lib/safe-image-url';
-import { getNormalizedPost } from 'state/posts/selectors';
-import { getEditorPath } from 'state/editor/selectors';
-import { canCurrentUserEditPost } from 'state/posts/selectors/can-current-user-edit-post';
-import { isMultiSelectEnabled } from 'state/ui/post-type-list/selectors';
+import resizeImageUrl from 'wp-calypso-client/lib/resize-image-url';
+import safeImageUrl from 'wp-calypso-client/lib/safe-image-url';
+import { getNormalizedPost } from 'wp-calypso-client/state/posts/selectors';
+import { getEditorPath } from 'wp-calypso-client/state/editor/selectors';
+import { canCurrentUserEditPost } from 'wp-calypso-client/state/posts/selectors/can-current-user-edit-post';
+import { isMultiSelectEnabled } from 'wp-calypso-client/state/ui/post-type-list/selectors';
 
 function PostTypeListPostThumbnail( { onClick, thumbnail, postLink } ) {
 	const classes = classnames( 'post-type-list__post-thumbnail-wrapper', {

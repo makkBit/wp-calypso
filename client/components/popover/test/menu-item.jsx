@@ -7,8 +7,8 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import PopoverMenuItem from 'components/popover/menu-item';
-import ExternalLink from 'components/external-link';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import ExternalLink from 'wp-calypso-client/components/external-link';
 
 describe( 'PopoverMenuItem', () => {
 	test( 'should be a button by default', () => {

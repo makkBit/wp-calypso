@@ -1,7 +1,7 @@
 /**
  * Internal Dependencies
  */
-import Dispatcher from 'dispatcher';
+import Dispatcher from 'wp-calypso-client/dispatcher';
 
 let reduxStore = null;
 

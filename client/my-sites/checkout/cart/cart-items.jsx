@@ -9,7 +9,10 @@ import React from 'react';
  * Internal dependencies
  */
 import CartItem from './cart-item';
-import { getAllCartItems, getAllCartItemsSorted } from 'lib/cart-values/cart-items';
+import {
+	getAllCartItems,
+	getAllCartItemsSorted,
+} from 'wp-calypso-client/lib/cart-values/cart-items';
 import { localize } from 'i18n-calypso';
 
 const COLLAPSED_ITEMS_COUNT = 2;

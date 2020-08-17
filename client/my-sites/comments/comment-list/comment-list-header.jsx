@@ -9,18 +9,26 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import HeaderCake from 'components/header-cake';
-import QueryPosts from 'components/data/query-posts';
-import StickyPanel from 'components/sticky-panel';
-import { convertDateToUserLocation } from 'components/post-schedule/utils';
-import { decodeEntities, stripHTML } from 'lib/formatting';
-import { gmtOffset, timezone } from 'lib/site/utils';
-import { bumpStat, composeAnalytics, recordTracksEvent } from 'state/analytics/actions';
-import { getSiteComments } from 'state/comments/selectors';
-import hasNavigated from 'state/selectors/has-navigated';
-import { getSitePost } from 'state/posts/selectors';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
+import { convertDateToUserLocation } from 'wp-calypso-client/components/post-schedule/utils';
+import { decodeEntities, stripHTML } from 'wp-calypso-client/lib/formatting';
+import { gmtOffset, timezone } from 'wp-calypso-client/lib/site/utils';
+import {
+	bumpStat,
+	composeAnalytics,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
+import { getSiteComments } from 'wp-calypso-client/state/comments/selectors';
+import hasNavigated from 'wp-calypso-client/state/selectors/has-navigated';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
 
 function goBack() {
 	window.history.back();

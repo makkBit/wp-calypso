@@ -11,11 +11,14 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import { bumpStat } from 'lib/analytics/mc';
-import { getAllowedFileTypesForSite, isSiteAllowedFileTypesToBeTrusted } from 'lib/media/utils';
-import { VideoPressFileTypes } from 'lib/media/constants';
-import { clearMediaItemErrors } from 'state/media/actions';
-import { addMedia } from 'state/media/thunks';
+import { bumpStat } from 'wp-calypso-client/lib/analytics/mc';
+import {
+	getAllowedFileTypesForSite,
+	isSiteAllowedFileTypesToBeTrusted,
+} from 'wp-calypso-client/lib/media/utils';
+import { VideoPressFileTypes } from 'wp-calypso-client/lib/media/constants';
+import { clearMediaItemErrors } from 'wp-calypso-client/state/media/actions';
+import { addMedia } from 'wp-calypso-client/state/media/thunks';
 
 /**
  * Style dependencies

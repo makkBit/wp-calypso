@@ -8,7 +8,7 @@ import { expect } from 'chai';
  */
 import { fetchLocations } from 'woocommerce/state/sites/data/locations/actions';
 import { fetch } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'handlers', () => {
 	describe( '#fetch', () => {

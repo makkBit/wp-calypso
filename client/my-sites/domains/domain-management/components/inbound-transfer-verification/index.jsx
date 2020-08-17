@@ -10,9 +10,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmailVerificationCard from 'my-sites/domains/domain-management/components/email-verification';
-import { resendInboundTransferEmail } from 'lib/domains';
-import { INCOMING_DOMAIN_TRANSFER_STATUSES_IN_PROGRESS } from 'lib/url/support';
+import EmailVerificationCard from 'wp-calypso-client/my-sites/domains/domain-management/components/email-verification';
+import { resendInboundTransferEmail } from 'wp-calypso-client/lib/domains';
+import { INCOMING_DOMAIN_TRANSFER_STATUSES_IN_PROGRESS } from 'wp-calypso-client/lib/url/support';
 import { Card } from '@automattic/components';
 
 /**

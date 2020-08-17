@@ -8,8 +8,8 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import LocationSearch from 'blocks/location-search';
-import { createNotice } from 'state/notices/actions';
+import LocationSearch from 'wp-calypso-client/blocks/location-search';
+import { createNotice } from 'wp-calypso-client/state/notices/actions';
 
 class LocationSearchExample extends Component {
 	static propTypes = {

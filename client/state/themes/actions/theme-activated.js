@@ -1,13 +1,17 @@
 /**
  * Internal dependencies
  */
-import { THEME_ACTIVATE_SUCCESS } from 'state/themes/action-types';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { requestSitePosts } from 'state/posts/actions';
-import { getActiveTheme, getLastThemeQuery, prependThemeFilterKeys } from 'state/themes/selectors';
-import { getThemeIdFromStylesheet } from 'state/themes/utils';
+import { THEME_ACTIVATE_SUCCESS } from 'wp-calypso-client/state/themes/action-types';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import { requestSitePosts } from 'wp-calypso-client/state/posts/actions';
+import {
+	getActiveTheme,
+	getLastThemeQuery,
+	prependThemeFilterKeys,
+} from 'wp-calypso-client/state/themes/selectors';
+import { getThemeIdFromStylesheet } from 'wp-calypso-client/state/themes/utils';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns an action thunk to be used in signalling that a theme has been activated

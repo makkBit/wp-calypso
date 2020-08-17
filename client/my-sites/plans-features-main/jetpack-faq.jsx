@@ -8,11 +8,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import FAQ from 'components/faq';
-import FAQItem from 'components/faq/faq-item';
-import HappychatButton from 'components/happychat/button';
-import isHappychatAvailable from 'state/happychat/selectors/is-happychat-available';
-import { isEnabled } from 'config';
+import FAQ from 'wp-calypso-client/components/faq';
+import FAQItem from 'wp-calypso-client/components/faq/faq-item';
+import HappychatButton from 'wp-calypso-client/components/happychat/button';
+import isHappychatAvailable from 'wp-calypso-client/state/happychat/selectors/is-happychat-available';
+import { isEnabled } from 'wp-calypso-client/config';
 
 const JetpackFAQ = ( { isChatAvailable, translate } ) => {
 	const helpLink =

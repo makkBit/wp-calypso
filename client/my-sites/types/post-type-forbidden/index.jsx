@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
 
 /**
  * Image dependencies
  */
-import whoopsImage from 'assets/images/illustrations/whoops.svg';
+import whoopsImage from 'wp-calypso-client/assets/images/illustrations/whoops.svg';
 
 function PostTypeForbidden( { translate } ) {
 	return (

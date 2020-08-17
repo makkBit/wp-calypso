@@ -10,23 +10,23 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import EmailForwardingPlaceholder from './email-forwarding-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
 import EmailForwardingList from './email-forwarding-list';
 import EmailForwardingAddNew from './email-forwarding-add-new';
 import EmailForwardingDetails from './email-forwarding-details';
 import EmailForwardingCustomMxList from './email-forwarding-custom-mx-list';
 import EmailForwardingGSuiteDetails from './email-forwarding-gsuite-details';
 import EmailForwardingGSuiteDetailsAnotherProvider from './email-forwarding-gsuite-details-another-provider';
-import { emailManagement } from 'my-sites/email/paths';
+import { emailManagement } from 'wp-calypso-client/my-sites/email/paths';
 import { CompactCard as Card } from '@automattic/components';
-import getEmailForwardingLimit from 'state/selectors/get-email-forwarding-limit';
-import getEmailForwardingType from 'state/selectors/get-email-forwarding-type';
-import { getEmailForwards } from 'state/selectors/get-email-forwards';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryEmailForwards from 'components/data/query-email-forwards';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import getEmailForwardingLimit from 'wp-calypso-client/state/selectors/get-email-forwarding-limit';
+import getEmailForwardingType from 'wp-calypso-client/state/selectors/get-email-forwarding-type';
+import { getEmailForwards } from 'wp-calypso-client/state/selectors/get-email-forwards';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import QueryEmailForwards from 'wp-calypso-client/components/data/query-email-forwards';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 /**
  * Style dependencies

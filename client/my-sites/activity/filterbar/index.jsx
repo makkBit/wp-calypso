@@ -3,7 +3,7 @@
  */
 import { isWithinBreakpoint } from '@automattic/viewport';
 import React, { Component } from 'react';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
 import page from 'page';
@@ -11,13 +11,13 @@ import page from 'page';
 /**
  * Internal dependencies
  */
-import BackButton from 'components/back-button';
+import BackButton from 'wp-calypso-client/components/back-button';
 import { Button } from '@automattic/components';
 import DateRangeSelector from './date-range-selector';
 import ActionTypeSelector from './action-type-selector';
-import { updateFilter } from 'state/activity-log/actions';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import getPreviousRoute from 'state/selectors/get-previous-route';
+import { updateFilter } from 'wp-calypso-client/state/activity-log/actions';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import getPreviousRoute from 'wp-calypso-client/state/selectors/get-previous-route';
 
 /**
  * Style dependencies

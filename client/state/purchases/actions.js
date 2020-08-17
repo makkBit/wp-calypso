@@ -16,11 +16,11 @@ import {
 	PURCHASES_USER_FETCH_FAILED,
 	PURCHASE_REMOVE_COMPLETED,
 	PURCHASE_REMOVE_FAILED,
-} from 'state/action-types';
-import { requestHappychatEligibility } from 'state/happychat/user/actions';
-import wp from 'lib/wp';
+} from 'wp-calypso-client/state/action-types';
+import { requestHappychatEligibility } from 'wp-calypso-client/state/happychat/user/actions';
+import wp from 'wp-calypso-client/lib/wp';
 
-import 'state/purchases/init';
+import 'wp-calypso-client/state/purchases/init';
 
 const wpcom = wp.undocumented();
 

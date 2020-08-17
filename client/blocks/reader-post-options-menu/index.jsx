@@ -8,30 +8,33 @@ import page from 'page';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import { blockSite } from 'state/reader/site-blocks/actions';
-import * as PostUtils from 'state/posts/utils';
-import FollowButton from 'reader/follow-button';
-import * as DiscoverHelper from 'reader/discover/helper';
-import * as stats from 'reader/stats';
-import { getFeed } from 'state/reader/feeds/selectors';
-import { getSite } from 'state/reader/sites/selectors';
-import QueryReaderFeed from 'components/data/query-reader-feed';
-import QueryReaderSite from 'components/data/query-reader-site';
-import QueryReaderTeams from 'components/data/query-reader-teams';
-import { isAutomatticTeamMember } from 'reader/lib/teams';
-import { getReaderTeams } from 'state/reader/teams/selectors';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import { blockSite } from 'wp-calypso-client/state/reader/site-blocks/actions';
+import * as PostUtils from 'wp-calypso-client/state/posts/utils';
+import FollowButton from 'wp-calypso-client/reader/follow-button';
+import * as DiscoverHelper from 'wp-calypso-client/reader/discover/helper';
+import * as stats from 'wp-calypso-client/reader/stats';
+import { getFeed } from 'wp-calypso-client/state/reader/feeds/selectors';
+import { getSite } from 'wp-calypso-client/state/reader/sites/selectors';
+import QueryReaderFeed from 'wp-calypso-client/components/data/query-reader-feed';
+import QueryReaderSite from 'wp-calypso-client/components/data/query-reader-site';
+import QueryReaderTeams from 'wp-calypso-client/components/data/query-reader-teams';
+import { isAutomatticTeamMember } from 'wp-calypso-client/reader/lib/teams';
+import { getReaderTeams } from 'wp-calypso-client/state/reader/teams/selectors';
 import ReaderPostOptionsMenuBlogStickers from './blog-stickers';
-import ConversationFollowButton from 'blocks/conversation-follow-button';
-import { shouldShowConversationFollowButton } from 'blocks/conversation-follow-button/helper';
-import { READER_POST_OPTIONS_MENU } from 'reader/follow-sources';
-import { requestMarkAsSeen, requestMarkAsUnseen } from 'state/reader/seen-posts/actions';
+import ConversationFollowButton from 'wp-calypso-client/blocks/conversation-follow-button';
+import { shouldShowConversationFollowButton } from 'wp-calypso-client/blocks/conversation-follow-button/helper';
+import { READER_POST_OPTIONS_MENU } from 'wp-calypso-client/reader/follow-sources';
+import {
+	requestMarkAsSeen,
+	requestMarkAsUnseen,
+} from 'wp-calypso-client/state/reader/seen-posts/actions';
 
 /**
  * Style dependencies

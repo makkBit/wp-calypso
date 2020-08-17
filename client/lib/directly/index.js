@@ -9,13 +9,13 @@
 /**
  * External dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
 import { loadScript } from '@automattic/load-script';
-import wpcom from 'lib/wp';
+import wpcom from 'wp-calypso-client/lib/wp';
 
 /**
  * Style dependencies

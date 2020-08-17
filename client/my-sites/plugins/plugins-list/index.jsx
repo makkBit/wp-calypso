@@ -14,18 +14,18 @@ import { find, get, includes, isEmpty, isEqual, negate, range, reduce, sortBy } 
 /**
  * Internal dependencies
  */
-import acceptDialog from 'lib/accept';
-import { warningNotice } from 'state/notices/actions';
-import PluginItem from 'my-sites/plugins/plugin-item/plugin-item';
-import PluginsActions from 'lib/plugins/actions';
-import PluginsListHeader from 'my-sites/plugins/plugin-list-header';
-import PluginsLog from 'lib/plugins/log-store';
-import PluginNotices from 'lib/plugins/notices';
+import acceptDialog from 'wp-calypso-client/lib/accept';
+import { warningNotice } from 'wp-calypso-client/state/notices/actions';
+import PluginItem from 'wp-calypso-client/my-sites/plugins/plugin-item/plugin-item';
+import PluginsActions from 'wp-calypso-client/lib/plugins/actions';
+import PluginsListHeader from 'wp-calypso-client/my-sites/plugins/plugin-list-header';
+import PluginsLog from 'wp-calypso-client/lib/plugins/log-store';
+import PluginNotices from 'wp-calypso-client/lib/plugins/notices';
 import { Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import { getSelectedSite, getSelectedSiteSlug } from 'state/ui/selectors';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { getSelectedSite, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

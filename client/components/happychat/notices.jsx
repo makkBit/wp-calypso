@@ -18,7 +18,7 @@ import {
 	HAPPYCHAT_CONNECTION_STATUS_RECONNECTING,
 	HAPPYCHAT_CONNECTION_STATUS_UNAUTHORIZED,
 	HAPPYCHAT_CONNECTION_STATUS_UNINITIALIZED,
-} from 'state/happychat/constants';
+} from 'wp-calypso-client/state/happychat/constants';
 
 /**
  * Style dependencies

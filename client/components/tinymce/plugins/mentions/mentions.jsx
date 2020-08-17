@@ -11,11 +11,11 @@ import tinymce from 'tinymce/tinymce';
 /**
  * Internal dependencies
  */
-import SuggestionList from 'blocks/user-mentions/suggestion-list';
+import SuggestionList from 'wp-calypso-client/blocks/user-mentions/suggestion-list';
 import EditorMention from './editor-mention';
-import QueryUsersSuggestions from 'components/data/query-users-suggestions';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getUserSuggestions } from 'state/users/suggestions/selectors';
+import QueryUsersSuggestions from 'wp-calypso-client/components/data/query-users-suggestions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getUserSuggestions } from 'wp-calypso-client/state/users/suggestions/selectors';
 
 /**
  * Module variables

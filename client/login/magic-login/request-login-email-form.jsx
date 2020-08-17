@@ -10,25 +10,25 @@ import { defer, get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { hideMagicLoginRequestNotice } from 'state/login/magic-login/actions';
-import getMagicLoginCurrentView from 'state/selectors/get-magic-login-current-view';
-import getMagicLoginRequestedEmailSuccessfully from 'state/selectors/get-magic-login-requested-email-successfully';
-import getMagicLoginRequestEmailError from 'state/selectors/get-magic-login-request-email-error';
-import isFetchingMagicLoginEmail from 'state/selectors/is-fetching-magic-login-email';
-import { getRedirectToOriginal } from 'state/login/selectors';
-import { CHECK_YOUR_EMAIL_PAGE } from 'state/login/magic-login/constants';
-import getCurrentQueryArguments from 'state/selectors/get-current-query-arguments';
-import getInitialQueryArguments from 'state/selectors/get-initial-query-arguments';
-import { recordTracksEventWithClientId as recordTracksEvent } from 'state/analytics/actions';
+import { hideMagicLoginRequestNotice } from 'wp-calypso-client/state/login/magic-login/actions';
+import getMagicLoginCurrentView from 'wp-calypso-client/state/selectors/get-magic-login-current-view';
+import getMagicLoginRequestedEmailSuccessfully from 'wp-calypso-client/state/selectors/get-magic-login-requested-email-successfully';
+import getMagicLoginRequestEmailError from 'wp-calypso-client/state/selectors/get-magic-login-request-email-error';
+import isFetchingMagicLoginEmail from 'wp-calypso-client/state/selectors/is-fetching-magic-login-email';
+import { getRedirectToOriginal } from 'wp-calypso-client/state/login/selectors';
+import { CHECK_YOUR_EMAIL_PAGE } from 'wp-calypso-client/state/login/magic-login/constants';
+import getCurrentQueryArguments from 'wp-calypso-client/state/selectors/get-current-query-arguments';
+import getInitialQueryArguments from 'wp-calypso-client/state/selectors/get-initial-query-arguments';
+import { recordTracksEventWithClientId as recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 import EmailedLoginLinkSuccessfully from './emailed-login-link-successfully';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormTextInput from 'components/forms/form-text-input';
-import LoggedOutForm from 'components/logged-out-form';
-import Notice from 'components/notice';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import LoggedOutForm from 'wp-calypso-client/components/logged-out-form';
+import Notice from 'wp-calypso-client/components/notice';
 import { localize } from 'i18n-calypso';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { sendEmailLogin } from 'state/auth/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { sendEmailLogin } from 'wp-calypso-client/state/auth/actions';
 
 class RequestLoginEmailForm extends React.Component {
 	static propTypes = {

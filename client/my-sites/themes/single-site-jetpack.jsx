@@ -9,32 +9,42 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import CurrentTheme from 'my-sites/themes/current-theme';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
-import ThanksModal from 'my-sites/themes/thanks-modal';
-import AutoLoadingHomepageModal from 'my-sites/themes/auto-loading-homepage-modal';
-import config from 'config';
-import { isPartnerPurchase } from 'lib/purchases';
+import Main from 'wp-calypso-client/components/main';
+import CurrentTheme from 'wp-calypso-client/my-sites/themes/current-theme';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import ThanksModal from 'wp-calypso-client/my-sites/themes/thanks-modal';
+import AutoLoadingHomepageModal from 'wp-calypso-client/my-sites/themes/auto-loading-homepage-modal';
+import config from 'wp-calypso-client/config';
+import { isPartnerPurchase } from 'wp-calypso-client/lib/purchases';
 import JetpackReferrerMessage from './jetpack-referrer-message';
 import JetpackUpgradeMessage from './jetpack-upgrade-message';
 import { connectOptions } from './theme-options';
-import UpsellNudge from 'blocks/upsell-nudge';
-import { FEATURE_UNLIMITED_PREMIUM_THEMES, PLAN_JETPACK_BUSINESS } from 'lib/plans/constants';
-import QuerySitePlans from 'components/data/query-site-plans';
-import QuerySitePurchases from 'components/data/query-site-purchases';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import {
+	FEATURE_UNLIMITED_PREMIUM_THEMES,
+	PLAN_JETPACK_BUSINESS,
+} from 'wp-calypso-client/lib/plans/constants';
+import QuerySitePlans from 'wp-calypso-client/components/data/query-site-plans';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
 import ThemeShowcase from './theme-showcase';
 import ThemesSelection from './themes-selection';
 import { addTracking } from './helpers';
-import { getCurrentPlan, hasFeature, isRequestingSitePlans } from 'state/sites/plans/selectors';
-import { getByPurchaseId } from 'state/purchases/selectors';
-import { getLastThemeQuery, getThemesFoundForQuery } from 'state/themes/selectors';
+import {
+	getCurrentPlan,
+	hasFeature,
+	isRequestingSitePlans,
+} from 'wp-calypso-client/state/sites/plans/selectors';
+import { getByPurchaseId } from 'wp-calypso-client/state/purchases/selectors';
+import {
+	getLastThemeQuery,
+	getThemesFoundForQuery,
+} from 'wp-calypso-client/state/themes/selectors';
 import {
 	hasJetpackSiteJetpackThemes,
 	hasJetpackSiteJetpackThemesExtendedFeatures,
 	isJetpackSiteMultiSite,
-} from 'state/sites/selectors';
+} from 'wp-calypso-client/state/sites/selectors';
 
 const ConnectedThemesSelection = connectOptions( ( props ) => {
 	return (

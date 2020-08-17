@@ -7,8 +7,8 @@ import { useDispatch, useSelector } from 'react-redux';
 /**
  * Internal dependencies
  */
-import isRequestingJetpackScanHistory from 'state/selectors/is-requesting-jetpack-scan-history';
-import { requestJetpackScanHistory } from 'state/jetpack-scan/history/actions';
+import isRequestingJetpackScanHistory from 'wp-calypso-client/state/selectors/is-requesting-jetpack-scan-history';
+import { requestJetpackScanHistory } from 'wp-calypso-client/state/jetpack-scan/history/actions';
 
 interface Props {
 	siteId: number;

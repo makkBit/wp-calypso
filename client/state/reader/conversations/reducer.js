@@ -11,9 +11,9 @@ import {
 	READER_CONVERSATION_MUTE,
 	READER_CONVERSATION_UPDATE_FOLLOW_STATUS,
 	READER_POSTS_RECEIVE,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 import { CONVERSATION_FOLLOW_STATUS } from './follow-status';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 import { key } from './utils';
 

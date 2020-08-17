@@ -10,14 +10,14 @@ import { has, isEmpty } from 'lodash';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
-import QueryPostFormats from 'components/data/query-post-formats';
+import Accordion from 'wp-calypso-client/components/accordion';
+import QueryPostFormats from 'wp-calypso-client/components/data/query-post-formats';
 import EditorPostFormats from './';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getPostFormats } from 'state/post-formats/selectors';
-import getSiteDefaultPostFormat from 'state/selectors/get-site-default-post-format';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPostValue } from 'state/posts/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getPostFormats } from 'wp-calypso-client/state/post-formats/selectors';
+import getSiteDefaultPostFormat from 'wp-calypso-client/state/selectors/get-site-default-post-format';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPostValue } from 'wp-calypso-client/state/posts/selectors';
 
 class EditorPostFormatsAccordion extends Component {
 	static propTypes = {

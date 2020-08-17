@@ -13,31 +13,35 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import Main from 'components/main';
-import EmptyContent from 'components/empty-content';
-import StatsNavigation from 'blocks/stats-navigation';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import Main from 'wp-calypso-client/components/main';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import StatsNavigation from 'wp-calypso-client/blocks/stats-navigation';
 import StatsPeriodNavigation from '../stats-period-navigation';
 import DatePicker from '../stats-date-picker';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import FormattedHeader from 'components/formatted-header';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
 import WordAdsChartTabs from '../wordads-chart-tabs';
 import titlecase from 'to-title-case';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import JetpackColophon from 'components/jetpack-colophon';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
 import WordAdsEarnings from './earnings';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import { canCurrentUserUseAds } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import PrivacyPolicyBanner from 'blocks/privacy-policy-banner';
-import StickyPanel from 'components/sticky-panel';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import { canCurrentUserUseAds } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import PrivacyPolicyBanner from 'wp-calypso-client/blocks/privacy-policy-banner';
+import StickyPanel from 'wp-calypso-client/components/sticky-panel';
 
 /**
  * Style dependencies
  */
 import './style.scss';
-import 'my-sites/earn/ads/style.scss';
+import 'wp-calypso-client/my-sites/earn/ads/style.scss';
 
 function updateQueryString( query = {} ) {
 	return {

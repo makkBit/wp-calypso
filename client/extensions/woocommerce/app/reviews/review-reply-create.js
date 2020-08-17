@@ -14,9 +14,9 @@ import PropTypes from 'prop-types';
  * Internal dependencies
  */
 import { createReviewReply } from 'woocommerce/state/sites/review-replies/actions';
-import { getCurrentUser } from 'state/current-user/selectors';
-import Gravatar from 'components/gravatar';
-import { successNotice } from 'state/notices/actions';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import Gravatar from 'wp-calypso-client/components/gravatar';
+import { successNotice } from 'wp-calypso-client/state/notices/actions';
 
 // Matches comments reply box heights
 const TEXTAREA_HEIGHT_COLLAPSED = 47; // 1 line

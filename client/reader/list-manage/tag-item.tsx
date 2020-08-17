@@ -6,9 +6,9 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { Button } from '@automattic/components';
-import SitePlaceholder from 'blocks/site/placeholder';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
 import { Item, Tag } from './types';
 
 /* eslint-disable wpcalypso/jsx-classname-namespace */

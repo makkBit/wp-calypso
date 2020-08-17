@@ -2,7 +2,7 @@
  * External dependencies
  */
 import debugModule from 'debug';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { flowRight, get, map } from 'lodash';
@@ -11,31 +11,31 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { addQueryArgs } from 'lib/route';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { addQueryArgs } from 'wp-calypso-client/lib/route';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import { Button, Card, CompactCard, Dialog } from '@automattic/components';
-import config from 'config';
-import EmailVerificationGate from 'components/email-verification/email-verification-gate';
-import EmptyContent from 'components/empty-content';
-import FormattedHeader from 'components/formatted-header';
-import Gravatar from 'components/gravatar';
+import config from 'wp-calypso-client/config';
+import EmailVerificationGate from 'wp-calypso-client/components/email-verification/email-verification-gate';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import Gravatar from 'wp-calypso-client/components/gravatar';
 import HelpButton from './help-button';
 import JetpackConnectHappychatButton from './happychat-button';
-import LoggedOutFormFooter from 'components/logged-out-form/footer';
-import LoggedOutFormLinkItem from 'components/logged-out-form/link-item';
-import LoggedOutFormLinks from 'components/logged-out-form/links';
-import Main from 'components/main';
+import LoggedOutFormFooter from 'wp-calypso-client/components/logged-out-form/footer';
+import LoggedOutFormLinkItem from 'wp-calypso-client/components/logged-out-form/link-item';
+import LoggedOutFormLinks from 'wp-calypso-client/components/logged-out-form/links';
+import Main from 'wp-calypso-client/components/main';
 import MainWrapper from './main-wrapper';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import Site from 'blocks/site';
-import SitePlaceholder from 'blocks/site/placeholder';
-import { decodeEntities } from 'lib/formatting';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { getSSO } from 'state/jetpack-connect/selectors';
-import { login } from 'lib/paths';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import Site from 'wp-calypso-client/blocks/site';
+import SitePlaceholder from 'wp-calypso-client/blocks/site/placeholder';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { getSSO } from 'wp-calypso-client/state/jetpack-connect/selectors';
+import { login } from 'wp-calypso-client/lib/paths';
 import { persistSsoApproved } from './persistence-utils';
-import { validateSSONonce, authorizeSSO } from 'state/jetpack-connect/actions';
+import { validateSSONonce, authorizeSSO } from 'wp-calypso-client/state/jetpack-connect/actions';
 
 /*
  * Module variables

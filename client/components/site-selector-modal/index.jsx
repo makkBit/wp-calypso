@@ -13,9 +13,9 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Dialog, Button } from '@automattic/components';
-import SitesDropdown from 'components/sites-dropdown';
-import getPrimarySiteId from 'state/selectors/get-primary-site-id';
-import getVisibleSites from 'state/selectors/get-visible-sites';
+import SitesDropdown from 'wp-calypso-client/components/sites-dropdown';
+import getPrimarySiteId from 'wp-calypso-client/state/selectors/get-primary-site-id';
+import getVisibleSites from 'wp-calypso-client/state/selectors/get-visible-sites';
 
 /**
  * Style dependencies

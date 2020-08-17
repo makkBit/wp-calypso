@@ -10,8 +10,8 @@ import { localize } from 'i18n-calypso';
  */
 import { Card } from '@automattic/components';
 import PrimaryHeader from './primary-header';
-import { recordTracksEvent } from 'state/analytics/actions';
-import ExternalLinkWithTracking from 'components/external-link/with-tracking';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import ExternalLinkWithTracking from 'wp-calypso-client/components/external-link/with-tracking';
 
 class NoAvailableTimes extends Component {
 	componentDidMount() {

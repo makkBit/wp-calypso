@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import Search from 'components/search';
-import urlSearch from 'lib/url-search';
+import Search from 'wp-calypso-client/components/search';
+import urlSearch from 'wp-calypso-client/lib/url-search';
 
 export const PeopleSearch = ( { doSearch, search } ) => (
 	<Search

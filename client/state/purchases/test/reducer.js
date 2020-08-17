@@ -12,7 +12,7 @@ import {
 	PURCHASES_USER_FETCH,
 	PURCHASES_SITE_FETCH_COMPLETED,
 	PURCHASES_USER_FETCH_COMPLETED,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	const userId = '1337';

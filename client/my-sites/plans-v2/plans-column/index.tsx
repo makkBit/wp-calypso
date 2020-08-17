@@ -25,28 +25,31 @@ import {
 	OPTIONS_JETPACK_SECURITY_MONTHLY,
 } from '../constants';
 import RenewalNotice from '../plan-renewal-notice';
-import { useLocalizedMoment } from 'components/localized-moment';
+import { useLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import {
 	PLAN_JETPACK_FREE,
 	PLAN_JETPACK_SECURITY_DAILY,
 	PLAN_JETPACK_SECURITY_DAILY_MONTHLY,
-} from 'lib/plans/constants';
-import { isCloseToExpiration } from 'lib/purchases';
-import { getPurchaseByProductSlug } from 'lib/purchases/utils';
-import { getProductCost, isProductsListFetching } from 'state/products-list/selectors';
-import { getCurrentUserCurrencyCode } from 'state/current-user/selectors';
-import { getSitePurchases } from 'state/purchases/selectors';
-import getSitePlan from 'state/sites/selectors/get-site-plan';
-import JetpackBundleCard from 'components/jetpack/card/jetpack-bundle-card';
-import JetpackPlanCard from 'components/jetpack/card/jetpack-plan-card';
-import FormattedHeader from 'components/formatted-header';
-import JetpackProductCardUpgradeNudge from 'components/jetpack/card/jetpack-product-card/upgrade-nudge';
+} from 'wp-calypso-client/lib/plans/constants';
+import { isCloseToExpiration } from 'wp-calypso-client/lib/purchases';
+import { getPurchaseByProductSlug } from 'wp-calypso-client/lib/purchases/utils';
+import {
+	getProductCost,
+	isProductsListFetching,
+} from 'wp-calypso-client/state/products-list/selectors';
+import { getCurrentUserCurrencyCode } from 'wp-calypso-client/state/current-user/selectors';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
+import getSitePlan from 'wp-calypso-client/state/sites/selectors/get-site-plan';
+import JetpackBundleCard from 'wp-calypso-client/components/jetpack/card/jetpack-bundle-card';
+import JetpackPlanCard from 'wp-calypso-client/components/jetpack/card/jetpack-plan-card';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import JetpackProductCardUpgradeNudge from 'wp-calypso-client/components/jetpack/card/jetpack-product-card/upgrade-nudge';
 
 /**
  * Type dependencies
  */
 import type { Duration, PurchaseCallback, ProductType, SelectorProduct } from '../types';
-import type { Purchase } from 'lib/purchases/types';
+import type { Purchase } from 'wp-calypso-client/lib/purchases/types';
 
 interface PlanColumnType {
 	duration: Duration;

@@ -2,7 +2,7 @@
  * Internal dependencies
  */
 import { showGutenbergOptInDialog, hideGutenbergOptInDialog } from '../actions';
-import { GUTENBERG_OPT_IN_DIALOG_IS_SHOWING } from 'state/action-types';
+import { GUTENBERG_OPT_IN_DIALOG_IS_SHOWING } from 'wp-calypso-client/state/action-types';
 
 describe( 'actions', () => {
 	describe( 'showGutenbergOptInDialog()', () => {

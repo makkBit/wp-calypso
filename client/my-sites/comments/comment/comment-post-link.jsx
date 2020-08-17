@@ -4,18 +4,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import CommentLink from 'my-sites/comments/comment/comment-link';
-import QueryPosts from 'components/data/query-posts';
-import { decodeEntities, stripHTML } from 'lib/formatting';
-import { getSiteComment } from 'state/comments/selectors';
-import { getSitePost } from 'state/posts/selectors';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
+import CommentLink from 'wp-calypso-client/my-sites/comments/comment/comment-link';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import { decodeEntities, stripHTML } from 'wp-calypso-client/lib/formatting';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { getSitePost } from 'wp-calypso-client/state/posts/selectors';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 const CommentPostLink = ( {
 	commentId,

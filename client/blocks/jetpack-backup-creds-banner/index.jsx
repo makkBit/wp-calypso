@@ -9,13 +9,13 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { settingsPath } from 'lib/jetpack/paths';
-import Banner from 'components/banner';
-import getRewindState from 'state/selectors/get-rewind-state';
-import QueryRewindState from 'components/data/query-rewind-state';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSlug, isJetpackSite } from 'state/sites/selectors';
-import jetpackDisconnected from 'assets/images/jetpack/disconnected.svg';
+import { settingsPath } from 'wp-calypso-client/lib/jetpack/paths';
+import Banner from 'wp-calypso-client/components/banner';
+import getRewindState from 'wp-calypso-client/state/selectors/get-rewind-state';
+import QueryRewindState from 'wp-calypso-client/components/data/query-rewind-state';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSlug, isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import jetpackDisconnected from 'wp-calypso-client/assets/images/jetpack/disconnected.svg';
 
 /**
  * Style dependencies

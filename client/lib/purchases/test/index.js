@@ -3,7 +3,7 @@
  */
 import moment from 'moment';
 import page from 'page';
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 
 /**
  * Internal dependencies

@@ -7,13 +7,13 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { initializeAnalytics } from 'lib/analytics/init';
-import getSuperProps from 'lib/analytics/super-props';
-import { bindState as bindWpLocaleState } from 'lib/wp/localization';
-import { getUrlParts } from 'lib/url';
-import { setCurrentUser } from 'state/current-user/actions';
-import { setRoute as setRouteAction } from 'state/route/actions';
+import config from 'wp-calypso-client/config';
+import { initializeAnalytics } from 'wp-calypso-client/lib/analytics/init';
+import getSuperProps from 'wp-calypso-client/lib/analytics/super-props';
+import { bindState as bindWpLocaleState } from 'wp-calypso-client/lib/wp/localization';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
+import { setCurrentUser } from 'wp-calypso-client/state/current-user/actions';
+import { setRoute as setRouteAction } from 'wp-calypso-client/state/route/actions';
 
 const debug = debugFactory( 'calypso' );
 

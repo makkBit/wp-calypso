@@ -2,7 +2,7 @@
  * External dependencies
  */
 import React from 'react';
-import GridIcon from 'components/gridicon';
+import GridIcon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Style dependencies

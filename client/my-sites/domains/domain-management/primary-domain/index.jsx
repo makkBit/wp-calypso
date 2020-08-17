@@ -12,17 +12,21 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import { Button, CompactCard as Card } from '@automattic/components';
-import Header from 'my-sites/domains/domain-management/components/header';
-import FormFooter from 'my-sites/domains/domain-management/components/form-footer';
-import Notice from 'components/notice';
-import { domainManagementEdit } from 'my-sites/domains/paths';
-import { setPrimaryDomain } from 'state/sites/domains/actions';
-import { getSelectedDomain } from 'lib/domains';
-import SectionHeader from 'components/section-header';
-import { SETTING_PRIMARY_DOMAIN } from 'lib/url/support';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import FormFooter from 'wp-calypso-client/my-sites/domains/domain-management/components/form-footer';
+import Notice from 'wp-calypso-client/components/notice';
+import { domainManagementEdit } from 'wp-calypso-client/my-sites/domains/paths';
+import { setPrimaryDomain } from 'wp-calypso-client/state/sites/domains/actions';
+import { getSelectedDomain } from 'wp-calypso-client/lib/domains';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import { SETTING_PRIMARY_DOMAIN } from 'wp-calypso-client/lib/url/support';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

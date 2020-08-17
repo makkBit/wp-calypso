@@ -6,8 +6,8 @@ import React, { PureComponent } from 'react';
 /**
  * Internal dependencies
  */
-import Tile from 'components/tile-grid/tile';
-import TileGrid from 'components/tile-grid';
+import Tile from 'wp-calypso-client/components/tile-grid/tile';
+import TileGrid from 'wp-calypso-client/components/tile-grid';
 
 /**
  * Main

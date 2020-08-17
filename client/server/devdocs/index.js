@@ -14,8 +14,8 @@ import 'prismjs/components/prism-scss';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import searchIndex from 'server/devdocs/search-index';
+import config from 'wp-calypso-client/config';
+import searchIndex from 'wp-calypso-client/server/devdocs/search-index';
 import { primeSelectorsCache, selectorsRouter } from './selectors';
 
 const docsIndex = lunr.Index.load( searchIndex.index );

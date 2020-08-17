@@ -10,21 +10,21 @@ import { identity } from 'lodash';
 /**
  * Internal dependencies
  */
-import StepWrapper from 'signup/step-wrapper';
-import ValidationFieldset from 'signup/validation-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import LoggedOutForm from 'components/logged-out-form';
-import LoggedOutFormFooter from 'components/logged-out-form/footer';
+import StepWrapper from 'wp-calypso-client/signup/step-wrapper';
+import ValidationFieldset from 'wp-calypso-client/signup/validation-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import LoggedOutForm from 'wp-calypso-client/components/logged-out-form';
+import LoggedOutFormFooter from 'wp-calypso-client/components/logged-out-form/footer';
 import { Button } from '@automattic/components';
 import {
 	createPasswordlessUser,
 	verifyPasswordlessUser,
-} from 'lib/signup/step-actions/passwordless';
-import Notice from 'components/notice';
-import FormStateStore from 'lib/form-state';
-import createFormStore from 'lib/form-state/store';
-import { submitSignupStep } from 'state/signup/progress/actions';
+} from 'wp-calypso-client/lib/signup/step-actions/passwordless';
+import Notice from 'wp-calypso-client/components/notice';
+import FormStateStore from 'wp-calypso-client/lib/form-state';
+import createFormStore from 'wp-calypso-client/lib/form-state/store';
+import { submitSignupStep } from 'wp-calypso-client/state/signup/progress/actions';
 
 const { getFieldValue } = FormStateStore;
 

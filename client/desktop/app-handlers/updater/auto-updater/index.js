@@ -7,12 +7,16 @@ const { autoUpdater } = require( 'electron-updater' );
 /**
  * Internal dependencies
  */
-const AppQuit = require( 'desktop/lib/app-quit' );
-const Config = require( 'desktop/lib/config' );
-const debugTools = require( 'desktop/lib/debug-tools' );
-const { bumpStat, sanitizeVersion, getPlatform } = require( 'desktop/lib/desktop-analytics' );
-const Updater = require( 'desktop/lib/updater' );
-const log = require( 'desktop/lib/logger' )( 'desktop:updater:auto' );
+const AppQuit = require( 'wp-calypso-client/desktop/lib/app-quit' );
+const Config = require( 'wp-calypso-client/desktop/lib/config' );
+const debugTools = require( 'wp-calypso-client/desktop/lib/debug-tools' );
+const {
+	bumpStat,
+	sanitizeVersion,
+	getPlatform,
+} = require( 'wp-calypso-client/desktop/lib/desktop-analytics' );
+const Updater = require( 'wp-calypso-client/desktop/lib/updater' );
+const log = require( 'wp-calypso-client/desktop/lib/logger' )( 'desktop:updater:auto' );
 
 const statsPlatform = getPlatform( process.platform );
 const sanitizedVersion = sanitizeVersion( app.getVersion() );

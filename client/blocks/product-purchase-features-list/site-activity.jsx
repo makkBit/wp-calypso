@@ -8,13 +8,13 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import PurchaseDetail from 'components/purchase-detail';
-import { getSelectedSiteSlug } from 'state/ui/selectors';
+import PurchaseDetail from 'wp-calypso-client/components/purchase-detail';
+import { getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Image dependencies
  */
-import siteActivity from 'assets/images/illustrations/site-activity.svg';
+import siteActivity from 'wp-calypso-client/assets/images/illustrations/site-activity.svg';
 
 const SiteActivity = ( { siteSlug, translate } ) => (
 	<div className="product-purchase-features-list__item">

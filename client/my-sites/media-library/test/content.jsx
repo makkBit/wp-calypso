@@ -12,8 +12,8 @@ import { noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import { MediaLibraryContent } from 'my-sites/media-library/content';
-import { ValidationErrors } from 'lib/media/constants';
+import { MediaLibraryContent } from 'wp-calypso-client/my-sites/media-library/content';
+import { ValidationErrors } from 'wp-calypso-client/lib/media/constants';
 
 const googleConnection = {
 	service: 'google_photos',

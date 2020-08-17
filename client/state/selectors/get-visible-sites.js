@@ -2,9 +2,9 @@
  * Internal dependencies
  */
 
-import { getSite } from 'state/sites/selectors';
-import getSitesItems from 'state/selectors/get-sites-items';
-import createSelector from 'lib/create-selector';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import getSitesItems from 'wp-calypso-client/state/selectors/get-sites-items';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 /**
  * Get all visible sites

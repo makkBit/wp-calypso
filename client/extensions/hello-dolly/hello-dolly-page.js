@@ -10,11 +10,11 @@ import { connect } from 'react-redux';
 /**
  * Internal Dependencies
  */
-import Main from 'components/main';
+import Main from 'wp-calypso-client/components/main';
 import { Button, Card } from '@automattic/components';
-import SectionHeader from 'components/section-header';
-import FAQ from 'components/faq';
-import FAQItem from 'components/faq/faq-item';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import FAQ from 'wp-calypso-client/components/faq';
+import FAQItem from 'wp-calypso-client/components/faq/faq-item';
 import getLyric from './state/selectors';
 import { nextLyric } from './state/actions';
 

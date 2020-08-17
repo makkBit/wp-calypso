@@ -11,11 +11,11 @@ import {
 	NOTICE_CREATE,
 	MEMBERSHIPS_PRODUCT_DELETE,
 	MEMBERSHIPS_PRODUCT_DELETE_FAILURE,
-} from 'state/action-types';
-import wpcom from 'lib/wp';
-import { membershipProductFromApi } from 'state/data-layer/wpcom/sites/memberships';
+} from 'wp-calypso-client/state/action-types';
+import wpcom from 'wp-calypso-client/lib/wp';
+import { membershipProductFromApi } from 'wp-calypso-client/state/data-layer/wpcom/sites/memberships';
 
-import 'state/memberships/init';
+import 'wp-calypso-client/state/memberships/init';
 
 export const requestProducts = ( siteId ) => ( {
 	siteId,

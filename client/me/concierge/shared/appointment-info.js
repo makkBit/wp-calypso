@@ -11,14 +11,14 @@ import 'moment-timezone';
  */
 import Confirmation from './confirmation';
 import { CompactCard } from '@automattic/components';
-import Site from 'blocks/site';
-import FormattedHeader from 'components/formatted-header';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import FormButton from 'components/forms/form-button';
-import { withLocalizedMoment } from 'components/localized-moment';
+import Site from 'wp-calypso-client/blocks/site';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 class AppointmentInfo extends Component {
 	static propTypes = {

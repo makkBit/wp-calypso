@@ -12,14 +12,14 @@ import page from 'page';
  * Internal dependencies
  */
 import { Card, Button } from '@automattic/components';
-import Notice from 'components/notice';
-import DomainMainPlaceholder from 'my-sites/domains/domain-management/components/domain/main-placeholder';
-import Header from 'my-sites/domains/domain-management/components/header';
-import Main from 'components/main';
-import { domainManagementContactsPrivacy } from 'my-sites/domains/paths';
-import { getSelectedDomain, requestGdprConsentManagementLink } from 'lib/domains';
-import SectionHeader from 'components/section-header';
-import getCurrentRoute from 'state/selectors/get-current-route';
+import Notice from 'wp-calypso-client/components/notice';
+import DomainMainPlaceholder from 'wp-calypso-client/my-sites/domains/domain-management/components/domain/main-placeholder';
+import Header from 'wp-calypso-client/my-sites/domains/domain-management/components/header';
+import Main from 'wp-calypso-client/components/main';
+import { domainManagementContactsPrivacy } from 'wp-calypso-client/my-sites/domains/paths';
+import { getSelectedDomain, requestGdprConsentManagementLink } from 'wp-calypso-client/lib/domains';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import getCurrentRoute from 'wp-calypso-client/state/selectors/get-current-route';
 
 class ManageConsent extends React.Component {
 	static propTypes = {

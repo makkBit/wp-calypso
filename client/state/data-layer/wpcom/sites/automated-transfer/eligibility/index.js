@@ -6,14 +6,14 @@ import { get, identity, isEmpty, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { AUTOMATED_TRANSFER_ELIGIBILITY_REQUEST } from 'state/action-types';
-import { updateEligibility } from 'state/automated-transfer/actions';
-import { eligibilityHolds } from 'state/automated-transfer/constants';
-import { recordTracksEvent, withAnalytics } from 'state/analytics/actions';
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import isUnlaunchedSite from 'state/selectors/is-unlaunched-site';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { AUTOMATED_TRANSFER_ELIGIBILITY_REQUEST } from 'wp-calypso-client/state/action-types';
+import { updateEligibility } from 'wp-calypso-client/state/automated-transfer/actions';
+import { eligibilityHolds } from 'wp-calypso-client/state/automated-transfer/constants';
+import { recordTracksEvent, withAnalytics } from 'wp-calypso-client/state/analytics/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import isUnlaunchedSite from 'wp-calypso-client/state/selectors/is-unlaunched-site';
 
 /**
  * Maps the constants used in the WordPress.com API with

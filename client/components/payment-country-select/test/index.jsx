@@ -7,12 +7,12 @@
  */
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import emitter from 'lib/mixins/emitter';
+import emitter from 'wp-calypso-client/lib/mixins/emitter';
 
 /**
  * Internal dependencies
  */
-import CountrySelect from 'my-sites/domains/components/form/country-select';
+import CountrySelect from 'wp-calypso-client/my-sites/domains/components/form/country-select';
 import { PaymentCountrySelect } from '../';
 
 // Gets rid of warnings such as 'UnhandledPromiseRejectionWarning: Error: No available storage method found.'

@@ -12,24 +12,24 @@ import { connect } from 'react-redux';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import DocumentHead from 'components/data/document-head';
-import ExternalLink from 'components/external-link';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormToggle from 'components/forms/form-toggle';
-import Main from 'components/main';
-import observe from 'lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
-import { protectForm } from 'lib/protect-form';
-import { localizeUrl } from 'lib/i18n-utils';
-import twoStepAuthorization from 'lib/two-step-authorization';
-import ReauthRequired from 'me/reauth-required';
-import SectionHeader from 'components/section-header';
-import formBase from 'me/form-base';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import { requestHttpData, getHttpData } from 'state/data-layer/http-data';
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { successNotice, errorNotice } from 'state/notices/actions';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import ExternalLink from 'wp-calypso-client/components/external-link';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle';
+import Main from 'wp-calypso-client/components/main';
+import observe from 'wp-calypso-client/lib/mixins/data-observe'; //eslint-disable-line no-restricted-imports
+import { protectForm } from 'wp-calypso-client/lib/protect-form';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import twoStepAuthorization from 'wp-calypso-client/lib/two-step-authorization';
+import ReauthRequired from 'wp-calypso-client/me/reauth-required';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import formBase from 'wp-calypso-client/me/form-base';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import { requestHttpData, getHttpData } from 'wp-calypso-client/state/data-layer/http-data';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { successNotice, errorNotice } from 'wp-calypso-client/state/notices/actions';
 
 /**
  * Style dependencies

@@ -11,14 +11,14 @@ import { localize } from 'i18n-calypso';
  */
 import withServerCredentialsForm from '../with-server-credentials-form';
 import { Button } from '@automattic/components';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSelect from 'components/forms/form-select';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormPasswordInput from 'components/forms/form-password-input';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextArea from 'components/forms/form-textarea';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormPasswordInput from 'wp-calypso-client/components/forms/form-password-input';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextArea from 'wp-calypso-client/components/forms/form-textarea';
 
 /**
  * Style dependencies

@@ -11,27 +11,27 @@ import { localize } from 'i18n-calypso';
  */
 import { CompactCard } from '@automattic/components';
 import ConciergeBanner from '../concierge-banner';
-import EmptyContent from 'components/empty-content';
-import isBusinessPlanUser from 'state/selectors/is-business-plan-user';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import isBusinessPlanUser from 'wp-calypso-client/state/selectors/is-business-plan-user';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import PurchasesHeader from './header';
 import PurchasesSite from '../purchases-site';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import { getPurchasesBySite } from 'lib/purchases';
-import getSites from 'state/selectors/get-sites';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import { getPurchasesBySite } from 'wp-calypso-client/lib/purchases';
+import getSites from 'wp-calypso-client/state/selectors/get-sites';
 import {
 	getUserPurchases,
 	hasLoadedUserPurchasesFromServer,
 	isFetchingUserPurchases,
-} from 'state/purchases/selectors';
-import { recordTracksEvent } from 'state/analytics/actions';
-import getConciergeNextAppointment from 'state/selectors/get-concierge-next-appointment';
-import getHasAvailableConciergeSessions from 'state/selectors/get-concierge-has-available-sessions.js';
-import getConciergeScheduleId from 'state/selectors/get-concierge-schedule-id.js';
-import QueryConciergeInitial from 'components/data/query-concierge-initial';
+} from 'wp-calypso-client/state/purchases/selectors';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import getConciergeNextAppointment from 'wp-calypso-client/state/selectors/get-concierge-next-appointment';
+import getHasAvailableConciergeSessions from 'wp-calypso-client/state/selectors/get-concierge-has-available-sessions.js';
+import getConciergeScheduleId from 'wp-calypso-client/state/selectors/get-concierge-schedule-id.js';
+import QueryConciergeInitial from 'wp-calypso-client/components/data/query-concierge-initial';
 import {
 	CONCIERGE_HAS_UPCOMING_APPOINTMENT,
 	CONCIERGE_HAS_AVAILABLE_INCLUDED_SESSION,
@@ -39,8 +39,8 @@ import {
 	CONCIERGE_SUGGEST_PURCHASE_CONCIERGE,
 	CONCIERGE_WPCOM_BUSINESS_ID,
 	CONCIERGE_WPCOM_SESSION_PRODUCT_ID,
-} from 'me/concierge/constants';
-import NoSitesMessage from 'components/empty-content/no-sites-message';
+} from 'wp-calypso-client/me/concierge/constants';
+import NoSitesMessage from 'wp-calypso-client/components/empty-content/no-sites-message';
 
 class PurchasesList extends Component {
 	isDataLoading() {

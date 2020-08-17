@@ -6,12 +6,12 @@ import { start, stop } from '@automattic/browser-data-collector';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { startPerformanceTracking, stopPerformanceTracking } from '../lib';
-import { abtest } from 'lib/abtest';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { isJetpackSite, isSingleUserSite } from 'state/sites/selectors';
-import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
+import { abtest } from 'wp-calypso-client/lib/abtest';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { isJetpackSite, isSingleUserSite } from 'wp-calypso-client/state/sites/selectors';
+import isSiteWpcomAtomic from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
 
 jest.mock( 'config', () => ( {
 	isEnabled: jest.fn(),

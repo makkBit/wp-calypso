@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/editor/init';
+import 'wp-calypso-client/state/editor/init';
 
 /**
  * Returns an object representing the image editor transform

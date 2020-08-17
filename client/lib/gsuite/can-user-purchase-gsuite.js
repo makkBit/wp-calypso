@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import userFactory from 'lib/user';
+import userFactory from 'wp-calypso-client/lib/user';
 
 /**
  * Determines whether G Suite can be purchased by the user based on their country.

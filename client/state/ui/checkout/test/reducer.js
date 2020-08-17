@@ -6,7 +6,7 @@ import {
 	DESERIALIZE,
 	SECTION_SET,
 	SERIALIZE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 import reducer, { isShowingCartOnMobile, upgradeIntent } from '../reducer';
 
 describe( 'reducer', () => {

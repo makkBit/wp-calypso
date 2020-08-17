@@ -9,26 +9,26 @@ import { connect } from 'react-redux';
 import classNames from 'classnames';
 import { localize } from 'i18n-calypso';
 import { get, isUndefined } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import Count from 'components/count';
+import Count from 'wp-calypso-client/components/count';
 import { Dialog } from '@automattic/components';
-import EllipsisMenu from 'components/ellipsis-menu';
-import PopoverMenuItem from 'components/popover/menu-item';
-import PopoverMenuSeparator from 'components/popover/menu-separator';
-import Tooltip from 'components/tooltip';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSiteSettings } from 'state/site-settings/selectors';
-import { getSite } from 'state/sites/selectors';
-import { decodeEntities } from 'lib/formatting';
-import { deleteTerm } from 'state/terms/actions';
-import { saveSiteSettings } from 'state/site-settings/actions';
-import { recordGoogleEvent, bumpStat } from 'state/analytics/actions';
-import PodcastIndicator from 'components/podcast-indicator';
-import getPodcastingCategoryId from 'state/selectors/get-podcasting-category-id';
+import EllipsisMenu from 'wp-calypso-client/components/ellipsis-menu';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import PopoverMenuSeparator from 'wp-calypso-client/components/popover/menu-separator';
+import Tooltip from 'wp-calypso-client/components/tooltip';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSiteSettings } from 'wp-calypso-client/state/site-settings/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { deleteTerm } from 'wp-calypso-client/state/terms/actions';
+import { saveSiteSettings } from 'wp-calypso-client/state/site-settings/actions';
+import { recordGoogleEvent, bumpStat } from 'wp-calypso-client/state/analytics/actions';
+import PodcastIndicator from 'wp-calypso-client/components/podcast-indicator';
+import getPodcastingCategoryId from 'wp-calypso-client/state/selectors/get-podcasting-category-id';
 
 class TaxonomyManagerListItem extends Component {
 	static propTypes = {

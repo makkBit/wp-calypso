@@ -10,19 +10,19 @@ import 'moment-timezone';
 /**
  * Internal dependencies
  */
-import HappinessEngineersTray from 'components/happiness-engineers-tray';
-import CardHeading from 'components/card-heading';
+import HappinessEngineersTray from 'wp-calypso-client/components/happiness-engineers-tray';
+import CardHeading from 'wp-calypso-client/components/card-heading';
 import {
 	withAnalytics,
 	composeAnalytics,
 	recordTracksEvent,
 	bumpStat,
-} from 'state/analytics/actions';
-import { navigate } from 'state/ui/actions';
-import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import QueryConciergeInitial from 'components/data/query-concierge-initial';
-import getConciergeNextAppointment from 'state/selectors/get-concierge-next-appointment';
-import { withLocalizedMoment } from 'components/localized-moment';
+} from 'wp-calypso-client/state/analytics/actions';
+import { navigate } from 'wp-calypso-client/state/ui/actions';
+import { getSelectedSiteId, getSelectedSiteSlug } from 'wp-calypso-client/state/ui/selectors';
+import QueryConciergeInitial from 'wp-calypso-client/components/data/query-concierge-initial';
+import getConciergeNextAppointment from 'wp-calypso-client/state/selectors/get-concierge-next-appointment';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 
 /**
  * Style dependencies

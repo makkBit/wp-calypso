@@ -11,12 +11,12 @@ import { some, times } from 'lodash';
 /**
  * Internal dependencies
  */
-import AsyncLoad from 'components/async-load';
-import { getSite, isRequestingSite } from 'state/sites/selectors';
-import { isJetpackPlan } from 'lib/products-values';
-import { JETPACK_PLANS } from 'lib/plans/constants';
-import { JETPACK_PRODUCTS_LIST } from 'lib/products-values/constants';
-import QuerySites from 'components/data/query-sites';
+import AsyncLoad from 'wp-calypso-client/components/async-load';
+import { getSite, isRequestingSite } from 'wp-calypso-client/state/sites/selectors';
+import { isJetpackPlan } from 'wp-calypso-client/lib/products-values';
+import { JETPACK_PLANS } from 'wp-calypso-client/lib/plans/constants';
+import { JETPACK_PRODUCTS_LIST } from 'wp-calypso-client/lib/products-values/constants';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
 import PurchaseItem from '../purchase-item';
 import PurchaseSiteHeader from './header';
 import PurchaseReconnectNotice from './reconnect-notice';
@@ -68,7 +68,7 @@ const PurchasesSite = ( {
 			{ items }
 
 			<AsyncLoad
-				require="blocks/product-plan-overlap-notices"
+				require="wp-calypso-client/blocks/product-plan-overlap-notices"
 				placeholder={ null }
 				plans={ JETPACK_PLANS }
 				products={ JETPACK_PRODUCTS_LIST }

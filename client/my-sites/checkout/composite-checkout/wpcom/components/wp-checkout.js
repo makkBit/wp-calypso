@@ -27,7 +27,7 @@ import debugFactory from 'debug';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 import { areDomainsInLineItems, isLineItemADomain } from '../hooks/has-domains';
 import useCouponFieldState from '../hooks/use-coupon-field-state';
 import WPCheckoutOrderReview from './wp-checkout-order-review';
@@ -36,8 +36,8 @@ import WPContactForm from './wp-contact-form';
 import WPContactFormSummary from './wp-contact-form-summary';
 import { isCompleteAndValid } from '../types';
 import { WPOrderReviewTotal, WPOrderReviewSection, LineItemUI } from './wp-order-review-line-items';
-import MaterialIcon from 'components/material-icon';
-import Gridicon from 'components/gridicon';
+import MaterialIcon from 'wp-calypso-client/components/material-icon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import SecondaryCartPromotions from './secondary-cart-promotions';
 import {
 	handleContactValidationResult,
@@ -45,11 +45,11 @@ import {
 	getDomainValidationResult,
 	getSignupEmailValidationResult,
 	getGSuiteValidationResult,
-} from 'my-sites/checkout/composite-checkout/contact-validation';
-import { isGSuiteProductSlug } from 'lib/gsuite';
-import { needsDomainDetails } from 'my-sites/checkout/composite-checkout/payment-method-helpers';
-import { login } from 'lib/paths';
-import config from 'config';
+} from 'wp-calypso-client/my-sites/checkout/composite-checkout/contact-validation';
+import { isGSuiteProductSlug } from 'wp-calypso-client/lib/gsuite';
+import { needsDomainDetails } from 'wp-calypso-client/my-sites/checkout/composite-checkout/payment-method-helpers';
+import { login } from 'wp-calypso-client/lib/paths';
+import config from 'wp-calypso-client/config';
 
 const debug = debugFactory( 'calypso:composite-checkout:wp-checkout' );
 

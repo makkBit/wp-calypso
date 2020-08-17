@@ -8,18 +8,18 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import Main from 'components/main';
-import isJetpackCloud from 'lib/jetpack/is-jetpack-cloud';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import isAtomicSite from 'state/selectors/is-site-wpcom-atomic';
-import { getSiteProducts, getSitePlan } from 'state/sites/selectors';
-import { getPlan } from 'lib/plans';
+import Main from 'wp-calypso-client/components/main';
+import isJetpackCloud from 'wp-calypso-client/lib/jetpack/is-jetpack-cloud';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import isAtomicSite from 'wp-calypso-client/state/selectors/is-site-wpcom-atomic';
+import { getSiteProducts, getSitePlan } from 'wp-calypso-client/state/sites/selectors';
+import { getPlan } from 'wp-calypso-client/lib/plans';
 
 /**
  * Type dependencies
  */
-import type { SiteProduct } from 'state/sites/selectors/get-site-products';
-import type { SitePlan } from 'state/sites/selectors/get-site-plan';
+import type { SiteProduct } from 'wp-calypso-client/state/sites/selectors/get-site-products';
+import type { SitePlan } from 'wp-calypso-client/state/sites/selectors/get-site-plan';
 
 type QueryComponentProps = {
 	siteId: number | null;

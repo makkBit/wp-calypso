@@ -1,10 +1,10 @@
 /**
  * Internal dependencies
  */
-import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import { shouldLoadGutenberg } from 'state/selectors/should-load-gutenberg';
-import { getSiteSlug } from 'state/sites/selectors';
-import { getEditorPath } from 'state/editor/selectors';
+import getGutenbergEditorUrl from 'wp-calypso-client/state/selectors/get-gutenberg-editor-url';
+import { shouldLoadGutenberg } from 'wp-calypso-client/state/selectors/should-load-gutenberg';
+import { getSiteSlug } from 'wp-calypso-client/state/sites/selectors';
+import { getEditorPath } from 'wp-calypso-client/state/editor/selectors';
 
 export const getEditorUrl = ( state, siteId, postId = null, postType = 'post' ) => {
 	if ( shouldLoadGutenberg( state, siteId ) ) {

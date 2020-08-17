@@ -8,7 +8,7 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import * as utils from 'state/posts/utils';
+import * as utils from 'wp-calypso-client/state/posts/utils';
 
 class EditorConfirmationSidebarHeader extends PureComponent {
 	static propTypes = {

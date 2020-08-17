@@ -8,7 +8,7 @@ import { expect } from 'chai';
  */
 import { fetchRefunds, sendRefund } from 'woocommerce/state/sites/orders/refunds/actions';
 import { create, fetch } from '../';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 describe( 'handlers', () => {
 	describe( '#create', () => {

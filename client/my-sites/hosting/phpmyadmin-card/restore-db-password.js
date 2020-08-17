@@ -9,15 +9,15 @@ import { localize } from 'i18n-calypso';
  */
 import { Dialog } from '@automattic/components';
 import { connect } from 'react-redux';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { restoreDatabasePassword } from 'state/hosting/actions';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { restoreDatabasePassword } from 'wp-calypso-client/state/hosting/actions';
 import {
 	withAnalytics,
 	composeAnalytics,
 	recordTracksEvent,
 	recordGoogleEvent,
 	bumpStat,
-} from 'state/analytics/actions';
+} from 'wp-calypso-client/state/analytics/actions';
 
 const RestorePasswordDialog = ( {
 	isVisible,

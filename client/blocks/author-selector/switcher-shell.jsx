@@ -5,19 +5,19 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import PropTypes from 'prop-types';
 import { localize } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import debugModule from 'debug';
 
 /**
  * Internal dependencies
  */
-import Popover from 'components/popover';
-import PopoverMenuItem from 'components/popover/menu-item';
-import UserItem from 'components/user';
-import InfiniteList from 'components/infinite-list';
-import { fetchUsers } from 'lib/users/actions';
-import Search from 'components/search';
-import { hasTouch } from 'lib/touch-detect';
+import Popover from 'wp-calypso-client/components/popover';
+import PopoverMenuItem from 'wp-calypso-client/components/popover/menu-item';
+import UserItem from 'wp-calypso-client/components/user';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
+import { fetchUsers } from 'wp-calypso-client/lib/users/actions';
+import Search from 'wp-calypso-client/components/search';
+import { hasTouch } from 'wp-calypso-client/lib/touch-detect';
 
 /**
  * Module variables

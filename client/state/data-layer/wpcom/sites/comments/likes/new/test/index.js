@@ -2,9 +2,13 @@
  * External dependencies
  */
 import { likeComment, updateCommentLikes, handleLikeFailure } from '../';
-import { COMMENTS_LIKE, COMMENTS_UNLIKE, NOTICE_CREATE } from 'state/action-types';
-import { bypassDataLayer } from 'state/data-layer/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import {
+	COMMENTS_LIKE,
+	COMMENTS_UNLIKE,
+	NOTICE_CREATE,
+} from 'wp-calypso-client/state/action-types';
+import { bypassDataLayer } from 'wp-calypso-client/state/data-layer/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 
 const SITE_ID = 91750058;
 const POST_ID = 287;

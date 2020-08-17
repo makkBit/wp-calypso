@@ -1,9 +1,12 @@
 /**
  * Internal dependencies
  */
-import { PAYMENT_COUNTRY_CODE_SET, PAYMENT_POSTAL_CODE_SET } from 'state/action-types';
+import {
+	PAYMENT_COUNTRY_CODE_SET,
+	PAYMENT_POSTAL_CODE_SET,
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/payment/init';
+import 'wp-calypso-client/state/payment/init';
 
 /**
  * Returns an action object used to set the payment country.

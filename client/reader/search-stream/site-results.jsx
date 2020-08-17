@@ -12,17 +12,17 @@ import { connect } from 'react-redux';
 import {
 	getReaderFeedsForQuery,
 	getReaderFeedsCountForQuery,
-} from 'state/reader/feed-searches/selectors';
-import QueryReaderFeedsSearch from 'components/data/query-reader-feeds-search';
-import ReaderInfiniteStream from 'reader/components/reader-infinite-stream';
+} from 'wp-calypso-client/state/reader/feed-searches/selectors';
+import QueryReaderFeedsSearch from 'wp-calypso-client/components/data/query-reader-feeds-search';
+import ReaderInfiniteStream from 'wp-calypso-client/reader/components/reader-infinite-stream';
 import {
 	requestFeedSearch,
 	SORT_BY_RELEVANCE,
 	SORT_BY_LAST_UPDATED,
-} from 'state/reader/feed-searches/actions';
-import { SEARCH_RESULTS_SITES } from 'reader/follow-sources';
-import { siteRowRenderer } from 'reader/components/reader-infinite-stream/row-renderers';
-import withDimensions from 'lib/with-dimensions';
+} from 'wp-calypso-client/state/reader/feed-searches/actions';
+import { SEARCH_RESULTS_SITES } from 'wp-calypso-client/reader/follow-sources';
+import { siteRowRenderer } from 'wp-calypso-client/reader/components/reader-infinite-stream/row-renderers';
+import withDimensions from 'wp-calypso-client/lib/with-dimensions';
 
 class SiteResults extends React.Component {
 	static propTypes = {

@@ -13,26 +13,29 @@ import classNames from 'classnames';
 /**
  * Internal dependencies
  */
-import CloseOnEscape from 'components/close-on-escape';
-import Notice from 'components/notice';
+import CloseOnEscape from 'wp-calypso-client/components/close-on-escape';
+import Notice from 'wp-calypso-client/components/notice';
 import ImageEditorCanvas from './image-editor-canvas';
 import ImageEditorToolbar from './image-editor-toolbar';
 import ImageEditorButtons from './image-editor-buttons';
-import { getMimeType, url } from 'lib/media/utils';
+import { getMimeType, url } from 'wp-calypso-client/lib/media/utils';
 import {
 	resetImageEditorState,
 	resetAllImageEditorState,
 	setImageEditorFileInfo,
 	setImageEditorDefaultAspectRatio,
-} from 'state/editor/image-editor/actions';
+} from 'wp-calypso-client/state/editor/image-editor/actions';
 import {
 	getImageEditorFileInfo,
 	isImageEditorImageLoaded,
-} from 'state/editor/image-editor/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
-import QuerySites from 'components/data/query-sites';
-import { AspectRatios, AspectRatiosValues } from 'state/editor/image-editor/constants';
+} from 'wp-calypso-client/state/editor/image-editor/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import QuerySites from 'wp-calypso-client/components/data/query-sites';
+import {
+	AspectRatios,
+	AspectRatiosValues,
+} from 'wp-calypso-client/state/editor/image-editor/constants';
 import { getDefaultAspectRatio } from './utils';
 
 /**

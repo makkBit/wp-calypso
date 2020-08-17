@@ -8,16 +8,19 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
-import { newPost } from 'lib/paths';
-import Popover from 'components/popover';
-import Count from 'components/count';
-import { getPostsForQueryIgnoringPage, isRequestingPostsForQuery } from 'state/posts/selectors';
-import Draft from 'my-sites/draft';
-import QueryPosts from 'components/data/query-posts';
+import createSelector from 'wp-calypso-client/lib/create-selector';
+import { newPost } from 'wp-calypso-client/lib/paths';
+import Popover from 'wp-calypso-client/components/popover';
+import Count from 'wp-calypso-client/components/count';
+import {
+	getPostsForQueryIgnoringPage,
+	isRequestingPostsForQuery,
+} from 'wp-calypso-client/state/posts/selectors';
+import Draft from 'wp-calypso-client/my-sites/draft';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
 import { Button } from '@automattic/components';
-import { getSite } from 'state/sites/selectors';
-import { getCurrentUserId } from 'state/current-user/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
 
 class MasterbarDraftsPopover extends Component {
 	render() {

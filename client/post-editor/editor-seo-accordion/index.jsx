@@ -10,18 +10,18 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import Accordion from 'components/accordion';
+import Accordion from 'wp-calypso-client/components/accordion';
 import { Button } from '@automattic/components';
-import AccordionSection from 'components/accordion/section';
-import CountedTextarea from 'components/forms/counted-textarea';
-import WebPreview from 'components/web-preview';
-import EditorDrawerLabel from 'post-editor/editor-drawer/label';
-import { isJetpackSite } from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { updatePostMetadata } from 'state/posts/actions';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import PostMetadata from 'lib/post-metadata';
+import AccordionSection from 'wp-calypso-client/components/accordion/section';
+import CountedTextarea from 'wp-calypso-client/components/forms/counted-textarea';
+import WebPreview from 'wp-calypso-client/components/web-preview';
+import EditorDrawerLabel from 'wp-calypso-client/post-editor/editor-drawer/label';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { updatePostMetadata } from 'wp-calypso-client/state/posts/actions';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
 
 /**
  * Style dependencies

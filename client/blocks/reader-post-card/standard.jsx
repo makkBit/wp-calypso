@@ -8,9 +8,9 @@ import { get, partial } from 'lodash';
 /**
  * Internal Dependencies
  */
-import AutoDirection from 'components/auto-direction';
-import Emojify from 'components/emojify';
-import ReaderExcerpt from 'blocks/reader-excerpt';
+import AutoDirection from 'wp-calypso-client/components/auto-direction';
+import Emojify from 'wp-calypso-client/components/emojify';
+import ReaderExcerpt from 'wp-calypso-client/blocks/reader-excerpt';
 import FeaturedAsset from './featured-asset';
 
 const StandardPost = ( { post, children, isDiscover, expandCard, postKey, isExpanded, site } ) => {

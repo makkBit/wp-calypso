@@ -8,12 +8,12 @@ import { translate } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { sidebar } from 'me/controller';
+import config from 'wp-calypso-client/config';
+import { sidebar } from 'wp-calypso-client/me/controller';
 import Happychat from './main';
-import { setDocumentHeadTitle } from 'state/document-head/actions';
-import { makeLayout, render as clientRender } from 'controller';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import { setDocumentHeadTitle } from 'wp-calypso-client/state/document-head/actions';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 
 const renderChat = ( context, next ) => {
 	context.store.dispatch( setDocumentHeadTitle( translate( 'Chat', { textOnly: true } ) ) );

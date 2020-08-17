@@ -18,7 +18,7 @@ describe( 'Viewers Store', () => {
 	let Dispatcher, ViewersStore;
 
 	beforeEach( () => {
-		Dispatcher = require( 'dispatcher' );
+		Dispatcher = require( 'wp-calypso-client/dispatcher' );
 		ViewersStore = require( '../store' );
 	} );
 

@@ -10,13 +10,13 @@ import classNames from 'classnames';
  * Internal dependencies
  */
 import './style.scss';
-import Site from 'blocks/site';
-import Gridicon from 'components/gridicon';
-import FormTextInput from 'components/forms/form-text-input';
-import FormLabel from 'components/forms/form-label';
-import Badge from 'components/badge';
-import { getUrlParts } from 'lib/url';
-import Spinner from 'components/spinner';
+import Site from 'wp-calypso-client/blocks/site';
+import Gridicon from 'wp-calypso-client/components/gridicon';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import Badge from 'wp-calypso-client/components/badge';
+import { getUrlParts } from 'wp-calypso-client/lib/url';
+import Spinner from 'wp-calypso-client/components/spinner';
 
 class SitesBlock extends Component {
 	state = {};

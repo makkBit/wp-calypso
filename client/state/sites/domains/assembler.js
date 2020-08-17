@@ -6,7 +6,7 @@ import {
 	getDomainType,
 	getGdprConsentStatus,
 	getTransferStatus,
-} from 'lib/domains/utils';
+} from 'wp-calypso-client/lib/domains/utils';
 import { camelCase, mapKeys } from 'lodash';
 
 function assembleGoogleAppsSubscription( googleAppsSubscription ) {

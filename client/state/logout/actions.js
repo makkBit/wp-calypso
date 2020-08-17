@@ -6,9 +6,9 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getCurrentUser } from 'state/current-user/selectors';
-import { postLoginRequest, getErrorFromHTTPError } from 'state/login/utils';
+import config from 'wp-calypso-client/config';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import { postLoginRequest, getErrorFromHTTPError } from 'wp-calypso-client/state/login/utils';
 
 /**
  * Logs the current user out.

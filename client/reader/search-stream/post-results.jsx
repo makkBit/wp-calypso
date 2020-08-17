@@ -9,12 +9,12 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import Stream from 'reader/stream';
+import Stream from 'wp-calypso-client/reader/stream';
 import EmptyContent from './empty';
-import HeaderBack from 'reader/header-back';
-import { RelatedPostCard } from 'blocks/reader-related-card';
-import { SEARCH_RESULTS } from 'reader/follow-sources';
-import PostPlaceholder from 'reader/stream/post-placeholder';
+import HeaderBack from 'wp-calypso-client/reader/header-back';
+import { RelatedPostCard } from 'wp-calypso-client/blocks/reader-related-card';
+import { SEARCH_RESULTS } from 'wp-calypso-client/reader/follow-sources';
+import PostPlaceholder from 'wp-calypso-client/reader/stream/post-placeholder';
 
 class PostResults extends Component {
 	static propTypes = {

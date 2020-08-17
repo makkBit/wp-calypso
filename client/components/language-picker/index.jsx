@@ -12,9 +12,9 @@ import { find, isString, noop } from 'lodash';
 /**
  * Internal dependencies
  */
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import LanguagePickerModal from './modal';
-import { requestGeoLocation } from 'state/data-getters';
+import { requestGeoLocation } from 'wp-calypso-client/state/data-getters';
 import { getLanguageCodeLabels } from './utils';
 
 /**

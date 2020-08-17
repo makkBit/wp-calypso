@@ -1,18 +1,18 @@
 /**
  * Internal dependencies
  */
-import { isJetpackSite } from 'state/sites/selectors';
-import { activateTheme } from 'state/themes/actions/activate-theme';
-import { installAndActivateTheme } from 'state/themes/actions/install-and-activate-theme';
-import { showAutoLoadingHomepageWarning } from 'state/themes/actions/show-auto-loading-homepage-warning';
-import { suffixThemeIdForInstall } from 'state/themes/actions/suffix-theme-id-for-install';
+import { isJetpackSite } from 'wp-calypso-client/state/sites/selectors';
+import { activateTheme } from 'wp-calypso-client/state/themes/actions/activate-theme';
+import { installAndActivateTheme } from 'wp-calypso-client/state/themes/actions/install-and-activate-theme';
+import { showAutoLoadingHomepageWarning } from 'wp-calypso-client/state/themes/actions/show-auto-loading-homepage-warning';
+import { suffixThemeIdForInstall } from 'wp-calypso-client/state/themes/actions/suffix-theme-id-for-install';
 import {
 	getTheme,
 	hasAutoLoadingHomepageModalAccepted,
 	themeHasAutoLoadingHomepage,
-} from 'state/themes/selectors';
+} from 'wp-calypso-client/state/themes/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Triggers a network request to activate a specific theme on a given site.

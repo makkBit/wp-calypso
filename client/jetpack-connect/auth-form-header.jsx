@@ -10,16 +10,16 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import config from 'config';
-import FormattedHeader from 'components/formatted-header';
-import safeImageUrl from 'lib/safe-image-url';
-import Site from 'blocks/site';
-import versionCompare from 'lib/version-compare';
+import config from 'wp-calypso-client/config';
+import FormattedHeader from 'wp-calypso-client/components/formatted-header';
+import safeImageUrl from 'wp-calypso-client/lib/safe-image-url';
+import Site from 'wp-calypso-client/blocks/site';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
 import { authQueryPropTypes } from './utils';
-import { decodeEntities } from 'lib/formatting';
-import { getAuthorizationData } from 'state/jetpack-connect/selectors';
-import { getCurrentUser } from 'state/current-user/selectors';
-import getPartnerSlugFromQuery from 'state/selectors/get-partner-slug-from-query';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import { getAuthorizationData } from 'wp-calypso-client/state/jetpack-connect/selectors';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import getPartnerSlugFromQuery from 'wp-calypso-client/state/selectors/get-partner-slug-from-query';
 
 export class AuthFormHeader extends Component {
 	static propTypes = {

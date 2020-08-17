@@ -6,7 +6,7 @@ import chai from 'chai';
 /**
  * Internal dependencies
  */
-import { canUpdateFiles, isMainNetworkSite } from 'lib/site/utils';
+import { canUpdateFiles, isMainNetworkSite } from 'wp-calypso-client/lib/site/utils';
 
 const assert = chai.assert;
 

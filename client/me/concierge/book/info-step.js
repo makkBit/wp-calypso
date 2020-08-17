@@ -4,35 +4,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import { includes } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
+import Notice from 'wp-calypso-client/components/notice';
 import { CompactCard } from '@automattic/components';
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import FormTextarea from 'components/forms/form-textarea';
-import FormTextInput from 'components/forms/form-text-input';
-import FormPhoneInput from 'components/forms/form-phone-input';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import FormTextarea from 'wp-calypso-client/components/forms/form-textarea';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import FormPhoneInput from 'wp-calypso-client/components/forms/form-phone-input';
 import IsRebrandCitiesSite from './is-rebrand-cities-site';
-import Timezone from 'components/timezone';
-import Site from 'blocks/site';
+import Timezone from 'wp-calypso-client/components/timezone';
+import Site from 'wp-calypso-client/blocks/site';
 import { localize } from 'i18n-calypso';
-import { updateConciergeSignupForm } from 'state/concierge/actions';
-import getConciergeSignupForm from 'state/selectors/get-concierge-signup-form';
-import getUserSettings from 'state/selectors/get-user-settings';
-import { getCurrentUserLocale } from 'state/current-user/selectors';
+import { updateConciergeSignupForm } from 'wp-calypso-client/state/concierge/actions';
+import getConciergeSignupForm from 'wp-calypso-client/state/selectors/get-concierge-signup-form';
+import getUserSettings from 'wp-calypso-client/state/selectors/get-user-settings';
+import { getCurrentUserLocale } from 'wp-calypso-client/state/current-user/selectors';
 import PrimaryHeader from '../shared/primary-header';
-import { recordTracksEvent } from 'state/analytics/actions';
-import { getLanguage } from 'lib/i18n-utils';
-import getCountries from 'state/selectors/get-countries';
-import QuerySmsCountries from 'components/data/query-countries/sms';
-import FormInputValidation from 'components/forms/form-input-validation';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
+import { getLanguage } from 'wp-calypso-client/lib/i18n-utils';
+import getCountries from 'wp-calypso-client/state/selectors/get-countries';
+import QuerySmsCountries from 'wp-calypso-client/components/data/query-countries/sms';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
 
 class InfoStep extends Component {
 	static propTypes = {

@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import 'state/comments/init';
+import 'wp-calypso-client/state/comments/init';
 
 export function getCommentErrors( state ) {
 	return state.comments.errors;

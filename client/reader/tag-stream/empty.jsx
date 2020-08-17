@@ -8,10 +8,10 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import EmptyContent from 'components/empty-content';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
-import { isDiscoverEnabled } from 'reader/discover/helper';
-import { withPerformanceTrackerStop } from 'lib/performance-tracking';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
+import { isDiscoverEnabled } from 'wp-calypso-client/reader/discover/helper';
+import { withPerformanceTrackerStop } from 'wp-calypso-client/lib/performance-tracking';
 
 class TagEmptyContent extends React.Component {
 	static propTypes = {

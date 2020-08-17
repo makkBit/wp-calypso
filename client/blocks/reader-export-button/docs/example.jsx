@@ -7,7 +7,7 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import ReaderExportButtonBlock from 'blocks/reader-export-button';
+import ReaderExportButtonBlock from 'wp-calypso-client/blocks/reader-export-button';
 
 const ReaderExportButton = () => (
 	<div className="design-assets__group">

@@ -6,7 +6,7 @@ import { reject } from 'lodash';
 /**
  * Internal dependencies
  */
-import { combineReducers, withoutPersistence } from 'state/utils';
+import { combineReducers, withoutPersistence } from 'wp-calypso-client/state/utils';
 import {
 	USER_PROFILE_LINKS_ADD_DUPLICATE,
 	USER_PROFILE_LINKS_ADD_FAILURE,
@@ -16,7 +16,7 @@ import {
 	USER_PROFILE_LINKS_DELETE_SUCCESS,
 	USER_PROFILE_LINKS_RECEIVE,
 	USER_PROFILE_LINKS_RESET_ERRORS,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 export const items = withoutPersistence( ( state = null, action ) => {
 	switch ( action.type ) {

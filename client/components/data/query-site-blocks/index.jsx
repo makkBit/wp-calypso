@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import { requestSiteBlocks } from 'state/reader/site-blocks/actions';
+import { requestSiteBlocks } from 'wp-calypso-client/state/reader/site-blocks/actions';
 
 class QuerySiteBlocks extends Component {
 	static propTypes = {

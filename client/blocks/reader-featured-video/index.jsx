@@ -12,15 +12,15 @@ import classnames from 'classnames';
 /**
  * Internal Dependencies
  */
-import EmbedHelper from 'reader/embed-helper';
-import ReaderFeaturedImage from 'blocks/reader-featured-image';
-import { getThumbnailForIframe } from 'state/reader/thumbnails/selectors';
-import QueryReaderThumbnail from 'components/data/query-reader-thumbnails';
+import EmbedHelper from 'wp-calypso-client/reader/embed-helper';
+import ReaderFeaturedImage from 'wp-calypso-client/blocks/reader-featured-image';
+import { getThumbnailForIframe } from 'wp-calypso-client/state/reader/thumbnails/selectors';
+import QueryReaderThumbnail from 'wp-calypso-client/components/data/query-reader-thumbnails';
 
 /**
  * Image dependencies
  */
-import playIconImage from 'assets/images/reader/play-icon.png';
+import playIconImage from 'wp-calypso-client/assets/images/reader/play-icon.png';
 
 /**
  * Style dependencies

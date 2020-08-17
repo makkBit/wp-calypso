@@ -13,7 +13,7 @@ import {
 	requestFeedSearch,
 	SORT_BY_LAST_UPDATED,
 	SORT_BY_RELEVANCE,
-} from 'state/reader/feed-searches/actions';
+} from 'wp-calypso-client/state/reader/feed-searches/actions';
 
 class QueryFeedSearch extends Component {
 	static propTypes = {

@@ -12,19 +12,19 @@ import { debounce, get, isEqual, isUndefined } from 'lodash';
 /**
  * Internal dependencies
  */
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 import { Card } from '@automattic/components';
-import CommentActions from 'my-sites/comments/comment/comment-actions';
-import CommentContent from 'my-sites/comments/comment/comment-content';
-import CommentEdit from 'my-sites/comments/comment/comment-edit';
-import CommentHeader from 'my-sites/comments/comment/comment-header';
-import CommentReply from 'my-sites/comments/comment/comment-reply';
-import CommentRepliesList from 'my-sites/comments/comment-replies-list';
-import QueryComment from 'components/data/query-comment';
-import scrollTo from 'lib/scroll-to';
-import { getMinimumComment } from 'my-sites/comments/comment/utils';
-import { getSiteComment } from 'state/comments/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import CommentActions from 'wp-calypso-client/my-sites/comments/comment/comment-actions';
+import CommentContent from 'wp-calypso-client/my-sites/comments/comment/comment-content';
+import CommentEdit from 'wp-calypso-client/my-sites/comments/comment/comment-edit';
+import CommentHeader from 'wp-calypso-client/my-sites/comments/comment/comment-header';
+import CommentReply from 'wp-calypso-client/my-sites/comments/comment/comment-reply';
+import CommentRepliesList from 'wp-calypso-client/my-sites/comments/comment-replies-list';
+import QueryComment from 'wp-calypso-client/components/data/query-comment';
+import scrollTo from 'wp-calypso-client/lib/scroll-to';
+import { getMinimumComment } from 'wp-calypso-client/my-sites/comments/comment/utils';
+import { getSiteComment } from 'wp-calypso-client/state/comments/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * Style dependencies

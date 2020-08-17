@@ -1,8 +1,8 @@
 /**
  * Internal dependencies
  */
-import { getPlan } from 'lib/plans';
-import { getSitePlan } from 'state/sites/selectors';
+import { getPlan } from 'wp-calypso-client/lib/plans';
+import { getSitePlan } from 'wp-calypso-client/state/sites/selectors';
 
 /**
  * Returns term of the active plan for given siteId, e.g. value

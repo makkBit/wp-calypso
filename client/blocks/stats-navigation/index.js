@@ -8,17 +8,17 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import SectionNav from 'components/section-nav';
-import NavItem from 'components/section-nav/item';
-import NavTabs from 'components/section-nav/tabs';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import NavItem from 'wp-calypso-client/components/section-nav/item';
+import NavTabs from 'wp-calypso-client/components/section-nav/tabs';
 import Intervals from './intervals';
-import FollowersCount from 'blocks/followers-count';
-import isGoogleMyBusinessLocationConnectedSelector from 'state/selectors/is-google-my-business-location-connected';
-import isSiteStore from 'state/selectors/is-site-store';
-import { getSiteOption } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import FollowersCount from 'wp-calypso-client/blocks/followers-count';
+import isGoogleMyBusinessLocationConnectedSelector from 'wp-calypso-client/state/selectors/is-google-my-business-location-connected';
+import isSiteStore from 'wp-calypso-client/state/selectors/is-site-store';
+import { getSiteOption } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 import { navItems, intervals as intervalConstants } from './constants';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 
 /**
  * Style dependencies

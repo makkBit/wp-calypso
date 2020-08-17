@@ -6,9 +6,9 @@ import { some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getSitePurchases } from 'state/purchases/selectors';
+import { getSitePurchases } from 'wp-calypso-client/state/purchases/selectors';
 
-import 'state/themes/init';
+import 'wp-calypso-client/state/themes/init';
 
 /**
  * Returns whether the theme has been purchased for the given site.

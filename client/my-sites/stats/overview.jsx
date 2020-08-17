@@ -10,19 +10,19 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import DocumentHead from 'components/data/document-head';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
 import SiteOverview from './stats-site-overview';
 import SiteOverviewPlaceholder from './stats-overview-placeholder';
 import DatePicker from './stats-date-picker';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import StatsNavigation from 'blocks/stats-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import StatsNavigation from 'wp-calypso-client/blocks/stats-navigation';
 import titlecase from 'to-title-case';
-import Main from 'components/main';
-import JetpackColophon from 'components/jetpack-colophon';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getCurrentUser } from 'state/current-user/selectors';
-import getVisibleSites from 'state/selectors/get-visible-sites';
+import Main from 'wp-calypso-client/components/main';
+import JetpackColophon from 'wp-calypso-client/components/jetpack-colophon';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getCurrentUser } from 'wp-calypso-client/state/current-user/selectors';
+import getVisibleSites from 'wp-calypso-client/state/selectors/get-visible-sites';
 
 class StatsOverview extends Component {
 	static propTypes = {

@@ -6,11 +6,11 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import config from 'config';
-import { getHappychatAuth } from 'state/happychat/utils';
-import isHappychatConnectionUninitialized from 'state/happychat/selectors/is-happychat-connection-uninitialized';
-import { initConnection } from 'state/happychat/connection/actions';
-import { HappychatConnection } from 'components/happychat/connection';
+import config from 'wp-calypso-client/config';
+import { getHappychatAuth } from 'wp-calypso-client/state/happychat/utils';
+import isHappychatConnectionUninitialized from 'wp-calypso-client/state/happychat/selectors/is-happychat-connection-uninitialized';
+import { initConnection } from 'wp-calypso-client/state/happychat/connection/actions';
+import { HappychatConnection } from 'wp-calypso-client/components/happychat/connection';
 
 export default connect(
 	( state ) => ( {

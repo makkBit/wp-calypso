@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { URL as URLString, Scheme } from 'types';
+import { URL as URLString, Scheme } from 'wp-calypso-client/types';
 
 const schemeRegex = /^\w+:\/\//;
 

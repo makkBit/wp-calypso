@@ -10,12 +10,12 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import SectionNav from 'components/section-nav';
-import SectionNavTabs from 'components/section-nav/tabs';
-import SectionNavTabItem from 'components/section-nav/item';
-import Search from 'components/search';
-import TrackComponentView from 'lib/analytics/track-component-view';
-import PlanStorage from 'blocks/plan-storage';
+import SectionNav from 'wp-calypso-client/components/section-nav';
+import SectionNavTabs from 'wp-calypso-client/components/section-nav/tabs';
+import SectionNavTabItem from 'wp-calypso-client/components/section-nav/item';
+import Search from 'wp-calypso-client/components/search';
+import TrackComponentView from 'wp-calypso-client/lib/analytics/track-component-view';
+import PlanStorage from 'wp-calypso-client/blocks/plan-storage';
 import DataSource from './data-source';
 
 // These source supply very large images, and there are instances such as

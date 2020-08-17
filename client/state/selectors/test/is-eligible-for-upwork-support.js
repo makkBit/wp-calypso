@@ -6,10 +6,15 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import { PLAN_BUSINESS, PLAN_ECOMMERCE, PLAN_FREE, PLAN_PREMIUM } from 'lib/plans/constants';
+import {
+	PLAN_BUSINESS,
+	PLAN_ECOMMERCE,
+	PLAN_FREE,
+	PLAN_PREMIUM,
+} from 'wp-calypso-client/lib/plans/constants';
 import isEligibleForUpworkSupport, {
 	UPWORK_LOCALES,
-} from 'state/selectors/is-eligible-for-upwork-support';
+} from 'wp-calypso-client/state/selectors/is-eligible-for-upwork-support';
 
 describe( 'isEligibleForUpworkSupport()', () => {
 	test( 'returns false for `en` users and all sites have a free plan', () => {

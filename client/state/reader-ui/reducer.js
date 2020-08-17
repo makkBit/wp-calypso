@@ -1,12 +1,12 @@
 /**
  * Internal dependencies
  */
-import { READER_VIEW_STREAM } from 'state/reader/action-types';
+import { READER_VIEW_STREAM } from 'wp-calypso-client/state/reader/action-types';
 import sidebar from './sidebar/reducer';
-import { combineReducers, withStorageKey } from 'state/utils';
+import { combineReducers, withStorageKey } from 'wp-calypso-client/state/utils';
 import cardExpansions from './card-expansions/reducer';
 import hasUnseenPosts from './seen-posts/reducer';
-import { DESERIALIZE, SERIALIZE } from 'state/action-types';
+import { DESERIALIZE, SERIALIZE } from 'wp-calypso-client/state/action-types';
 
 /**
  * Keep the last reader stream path selected by the user, for the purpose of autoselecting it

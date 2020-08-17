@@ -1,7 +1,7 @@
 /**
  * Internal dependencies
  */
-import { getSiteBlocksCurrentPage } from 'state/reader/site-blocks/selectors';
+import { getSiteBlocksCurrentPage } from 'wp-calypso-client/state/reader/site-blocks/selectors';
 
 describe( 'getSiteBlocksCurrentPage()', () => {
 	test( 'should return the current page', () => {

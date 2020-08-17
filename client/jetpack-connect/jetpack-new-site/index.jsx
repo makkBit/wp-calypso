@@ -11,15 +11,15 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import { Button, Card } from '@automattic/components';
-import config from 'config';
-import DocumentHead from 'components/data/document-head';
-import JetpackLogo from 'components/jetpack-logo';
-import BackButton from 'components/back-button';
+import config from 'wp-calypso-client/config';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import JetpackLogo from 'wp-calypso-client/components/jetpack-logo';
+import BackButton from 'wp-calypso-client/components/back-button';
 import SiteUrlInput from '../site-url-input';
-import WordPressLogo from 'components/wordpress-logo';
+import WordPressLogo from 'wp-calypso-client/components/wordpress-logo';
 import { cleanUrl } from '../utils';
 import { persistSession } from '../persistence-utils';
-import { recordTracksEvent } from 'state/analytics/actions';
+import { recordTracksEvent } from 'wp-calypso-client/state/analytics/actions';
 
 /**
  * Style dependencies

@@ -10,8 +10,8 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal Dependencies
  */
-import { fillGap } from 'state/reader/streams/actions';
-import { recordAction, recordGaEvent, recordTrack } from 'reader/stats';
+import { fillGap } from 'wp-calypso-client/state/reader/streams/actions';
+import { recordAction, recordGaEvent, recordTrack } from 'wp-calypso-client/reader/stats';
 
 /**
  * Style dependencies

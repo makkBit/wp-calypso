@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getUser } from 'state/users/selectors';
+import { getUser } from 'wp-calypso-client/state/users/selectors';
 
 /**
  * Returns the current user ID

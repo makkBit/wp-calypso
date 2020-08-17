@@ -10,9 +10,9 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { getPost } from 'state/posts/selectors';
-import { getSite, getSiteTitle } from 'state/sites/selectors';
-import SiteIcon from 'blocks/site-icon';
+import { getPost } from 'wp-calypso-client/state/posts/selectors';
+import { getSite, getSiteTitle } from 'wp-calypso-client/state/sites/selectors';
+import SiteIcon from 'wp-calypso-client/blocks/site-icon';
 
 /**
  * Style dependencies

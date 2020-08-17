@@ -12,27 +12,35 @@ import { flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import Emojify from 'components/emojify';
+import Emojify from 'wp-calypso-client/components/emojify';
 import PostSummary from '../stats-post-summary';
 import PostMonths from '../stats-detail-months';
 import PostWeeks from '../stats-detail-weeks';
 import StatsPlaceholder from '../stats-module/placeholder';
-import HeaderCake from 'components/header-cake';
-import { decodeEntities } from 'lib/formatting';
-import Main from 'components/main';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
+import Main from 'wp-calypso-client/components/main';
 import titlecase from 'to-title-case';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
 import PostLikes from '../stats-post-likes';
-import QueryPosts from 'components/data/query-posts';
-import QueryPostStats from 'components/data/query-post-stats';
-import EmptyContent from 'components/empty-content';
-import { getPostStat, isRequestingPostStats } from 'state/stats/posts/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import QueryPostStats from 'wp-calypso-client/components/data/query-post-stats';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { getPostStat, isRequestingPostStats } from 'wp-calypso-client/state/stats/posts/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 import { Button } from '@automattic/components';
-import { getSiteSlug, isJetpackSite, isSitePreviewable } from 'state/sites/selectors';
-import { getSitePost, isRequestingSitePost, getPostPreviewUrl } from 'state/posts/selectors';
-import hasNavigated from 'state/selectors/has-navigated';
-import WebPreview from 'components/web-preview';
+import {
+	getSiteSlug,
+	isJetpackSite,
+	isSitePreviewable,
+} from 'wp-calypso-client/state/sites/selectors';
+import {
+	getSitePost,
+	isRequestingSitePost,
+	getPostPreviewUrl,
+} from 'wp-calypso-client/state/posts/selectors';
+import hasNavigated from 'wp-calypso-client/state/selectors/has-navigated';
+import WebPreview from 'wp-calypso-client/components/web-preview';
 
 class StatsPostDetail extends Component {
 	static propTypes = {

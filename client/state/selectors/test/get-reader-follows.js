@@ -7,7 +7,7 @@ import deepFreeze from 'deep-freeze';
 /**
  * Internal dependencies
  */
-import { getReaderFollows } from 'state/reader/follows/selectors';
+import { getReaderFollows } from 'wp-calypso-client/state/reader/follows/selectors';
 import { userState } from './fixtures/user-state';
 
 describe( 'getReaderFollows()', () => {

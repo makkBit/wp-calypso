@@ -9,12 +9,12 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import ReaderMain from 'reader/components/reader-main';
-import MobileBackToSidebar from 'components/mobile-back-to-sidebar';
-import EmptyContent from 'components/empty-content';
-import { recordTrack as recordReaderTrack } from 'reader/stats';
-import { bumpStat, recordGoogleEvent } from 'state/analytics/actions';
-import { unblockSite } from 'state/reader/site-blocks/actions';
+import ReaderMain from 'wp-calypso-client/reader/components/reader-main';
+import MobileBackToSidebar from 'wp-calypso-client/components/mobile-back-to-sidebar';
+import EmptyContent from 'wp-calypso-client/components/empty-content';
+import { recordTrack as recordReaderTrack } from 'wp-calypso-client/reader/stats';
+import { bumpStat, recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { unblockSite } from 'wp-calypso-client/state/reader/site-blocks/actions';
 
 class SiteBlocked extends React.Component {
 	static propTypes = {

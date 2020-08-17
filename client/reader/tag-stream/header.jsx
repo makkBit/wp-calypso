@@ -7,17 +7,17 @@ import classnames from 'classnames';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
 import { sample } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import FollowButton from 'blocks/follow-button/button';
-import QueryReaderTagImages from 'components/data/query-reader-tag-images';
-import { getTagImages } from 'state/reader/tags/images/selectors';
-import resizeImageUrl from 'lib/resize-image-url';
-import cssSafeUrl from 'lib/css-safe-url';
-import { decodeEntities } from 'lib/formatting';
+import FollowButton from 'wp-calypso-client/blocks/follow-button/button';
+import QueryReaderTagImages from 'wp-calypso-client/components/data/query-reader-tag-images';
+import { getTagImages } from 'wp-calypso-client/state/reader/tags/images/selectors';
+import resizeImageUrl from 'wp-calypso-client/lib/resize-image-url';
+import cssSafeUrl from 'wp-calypso-client/lib/css-safe-url';
+import { decodeEntities } from 'wp-calypso-client/lib/formatting';
 
 const TAG_HEADER_WIDTH = 800;
 const TAG_HEADER_HEIGHT = 140;

@@ -6,7 +6,7 @@ import { get } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/site-settings/init';
+import 'wp-calypso-client/state/site-settings/init';
 
 /**
  * Returns the site's UTC offset as a number.

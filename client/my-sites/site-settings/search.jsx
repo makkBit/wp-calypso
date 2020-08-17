@@ -12,30 +12,40 @@ import { overSome } from 'lodash';
  * Internal dependencies
  */
 import { CompactCard } from '@automattic/components';
-import UpsellNudge from 'blocks/upsell-nudge';
-import QuerySitePurchases from 'components/data/query-site-purchases';
-import SettingsSectionHeader from 'my-sites/site-settings/settings-section-header';
-import JetpackModuleToggle from 'my-sites/site-settings/jetpack-module-toggle';
-import CompactFormToggle from 'components/forms/form-toggle/compact';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import SupportInfo from 'components/support-info';
-import QueryJetpackConnection from 'components/data/query-jetpack-connection';
-import { getSelectedSite, getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import isActivatingJetpackModule from 'state/selectors/is-activating-jetpack-module';
-import isDeactivatingJetpackModule from 'state/selectors/is-deactivating-jetpack-module';
-import { getSitePurchases, isFetchingSitePurchases } from 'state/purchases/selectors';
-import isJetpackModuleActive from 'state/selectors/is-jetpack-module-active';
-import { isJetpackSite, getCustomizerUrl } from 'state/sites/selectors';
+import UpsellNudge from 'wp-calypso-client/blocks/upsell-nudge';
+import QuerySitePurchases from 'wp-calypso-client/components/data/query-site-purchases';
+import SettingsSectionHeader from 'wp-calypso-client/my-sites/site-settings/settings-section-header';
+import JetpackModuleToggle from 'wp-calypso-client/my-sites/site-settings/jetpack-module-toggle';
+import CompactFormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import SupportInfo from 'wp-calypso-client/components/support-info';
+import QueryJetpackConnection from 'wp-calypso-client/components/data/query-jetpack-connection';
+import {
+	getSelectedSite,
+	getSelectedSiteId,
+	getSelectedSiteSlug,
+} from 'wp-calypso-client/state/ui/selectors';
+import isActivatingJetpackModule from 'wp-calypso-client/state/selectors/is-activating-jetpack-module';
+import isDeactivatingJetpackModule from 'wp-calypso-client/state/selectors/is-deactivating-jetpack-module';
+import {
+	getSitePurchases,
+	isFetchingSitePurchases,
+} from 'wp-calypso-client/state/purchases/selectors';
+import isJetpackModuleActive from 'wp-calypso-client/state/selectors/is-jetpack-module-active';
+import { isJetpackSite, getCustomizerUrl } from 'wp-calypso-client/state/sites/selectors';
 import {
 	isBusiness,
 	isEnterprise,
 	isVipPlan,
 	isJetpackBusiness,
 	isEcommerce,
-} from 'lib/products-values';
-import { FEATURE_SEARCH, PLAN_BUSINESS } from 'lib/plans/constants';
-import { PRODUCT_JETPACK_SEARCH, isJetpackSearch } from 'lib/products-values/constants';
+} from 'wp-calypso-client/lib/products-values';
+import { FEATURE_SEARCH, PLAN_BUSINESS } from 'wp-calypso-client/lib/plans/constants';
+import {
+	PRODUCT_JETPACK_SEARCH,
+	isJetpackSearch,
+} from 'wp-calypso-client/lib/products-values/constants';
 
 class Search extends Component {
 	static defaultProps = {

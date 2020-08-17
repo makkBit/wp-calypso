@@ -4,11 +4,11 @@
 import {
 	STATS_RECENT_POST_VIEWS_REQUEST,
 	STATS_RECENT_POST_VIEWS_RECEIVE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
-import 'state/data-layer/wpcom/sites/stats/views/posts';
+import 'wp-calypso-client/state/data-layer/wpcom/sites/stats/views/posts';
 
-import 'state/stats/init';
+import 'wp-calypso-client/state/stats/init';
 
 /**
  * Returns an action thunk which, when invoked, triggers a network request to

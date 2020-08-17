@@ -1,9 +1,9 @@
 /**
  * Internal Dependencies
  */
-import { getSelectedSiteId } from 'state/ui/selectors';
-import getRawSite from 'state/selectors/get-raw-site';
-import canCurrentUser from 'state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import getRawSite from 'wp-calypso-client/state/selectors/get-raw-site';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 
 /**
  * Returns true if hosting section should be viewable

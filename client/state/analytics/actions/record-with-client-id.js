@@ -6,9 +6,9 @@ import { set } from 'lodash';
 /**
  * Internal dependencies
  */
-import { ANALYTICS_EVENT_RECORD } from 'state/action-types';
-import { getCurrentOAuth2ClientId } from 'state/oauth2-clients/ui/selectors';
-import { withEnhancers } from 'state/utils';
+import { ANALYTICS_EVENT_RECORD } from 'wp-calypso-client/state/action-types';
+import { getCurrentOAuth2ClientId } from 'wp-calypso-client/state/oauth2-clients/ui/selectors';
+import { withEnhancers } from 'wp-calypso-client/state/utils';
 import { recordTracksEvent, recordPageView } from './record';
 
 const enhanceWithClientId = ( action, getState ) => {

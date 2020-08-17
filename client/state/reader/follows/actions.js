@@ -22,20 +22,20 @@ import {
 	READER_UPDATE_NEW_POST_EMAIL_SUBSCRIPTION,
 	READER_SUBSCRIBE_TO_NEW_POST_NOTIFICATIONS,
 	READER_UNSUBSCRIBE_TO_NEW_POST_NOTIFICATIONS,
-} from 'state/reader/action-types';
+} from 'wp-calypso-client/state/reader/action-types';
 
-import 'state/data-layer/wpcom/read/following/mine';
-import 'state/data-layer/wpcom/read/following/mine/delete';
-import 'state/data-layer/wpcom/read/following/mine/new';
-import 'state/data-layer/wpcom/read/site/comment-email-subscriptions/delete';
-import 'state/data-layer/wpcom/read/site/comment-email-subscriptions/new';
-import 'state/data-layer/wpcom/read/site/post-email-subscriptions/delete';
-import 'state/data-layer/wpcom/read/site/post-email-subscriptions/new';
-import 'state/data-layer/wpcom/read/site/post-email-subscriptions/update';
-import 'state/data-layer/wpcom/read/sites/notification-subscriptions/delete';
-import 'state/data-layer/wpcom/read/sites/notification-subscriptions/new';
+import 'wp-calypso-client/state/data-layer/wpcom/read/following/mine';
+import 'wp-calypso-client/state/data-layer/wpcom/read/following/mine/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/read/following/mine/new';
+import 'wp-calypso-client/state/data-layer/wpcom/read/site/comment-email-subscriptions/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/read/site/comment-email-subscriptions/new';
+import 'wp-calypso-client/state/data-layer/wpcom/read/site/post-email-subscriptions/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/read/site/post-email-subscriptions/new';
+import 'wp-calypso-client/state/data-layer/wpcom/read/site/post-email-subscriptions/update';
+import 'wp-calypso-client/state/data-layer/wpcom/read/sites/notification-subscriptions/delete';
+import 'wp-calypso-client/state/data-layer/wpcom/read/sites/notification-subscriptions/new';
 
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /**
  * Module variables

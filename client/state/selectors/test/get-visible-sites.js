@@ -6,7 +6,7 @@ import { expect } from 'chai';
 /**
  * Internal dependencies
  */
-import getVisibleSites from 'state/selectors/get-visible-sites';
+import getVisibleSites from 'wp-calypso-client/state/selectors/get-visible-sites';
 import { userState } from './fixtures/user-state';
 
 describe( 'getVisibleSites()', () => {

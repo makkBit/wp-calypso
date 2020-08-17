@@ -1,16 +1,16 @@
 /**
  * Internal dependencies
  */
-import { registerHandlers } from 'state/data-layer/handler-registry';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { http } from 'state/data-layer/wpcom-http/actions';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
 import {
 	JETPACK_SCAN_HISTORY_UPDATE,
 	JETPACK_SCAN_HISTORY_REQUEST,
 	JETPACK_SCAN_HISTORY_REQUEST_SUCCESS,
 	JETPACK_SCAN_HISTORY_REQUEST_FAILURE,
-} from 'state/action-types';
-import { formatScanThreat } from 'state/data-layer/wpcom/sites/scan';
+} from 'wp-calypso-client/state/action-types';
+import { formatScanThreat } from 'wp-calypso-client/state/data-layer/wpcom/sites/scan';
 
 const formatScanHistoryRawResponse = ( { threats, ...rest } ) => ( {
 	...rest,

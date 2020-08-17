@@ -5,7 +5,7 @@ import { addValidationSchemas, requestValidationSchemas } from '../actions';
 import {
 	DOMAIN_MANAGEMENT_VALIDATION_SCHEMAS_REQUEST,
 	DOMAIN_MANAGEMENT_VALIDATION_SCHEMAS_ADD,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'Domain Validation Schemas Actions', () => {
 	test( '#requestValidationSchemas()', () => {

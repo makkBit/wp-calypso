@@ -10,8 +10,8 @@ import { localize } from 'i18n-calypso';
  * Internal dependencies
  */
 import PostCommentsList from './post-comment-list';
-import { Interval, EVERY_MINUTE } from 'lib/interval';
-import { requestPostComments } from 'state/comments/actions';
+import { Interval, EVERY_MINUTE } from 'wp-calypso-client/lib/interval';
+import { requestPostComments } from 'wp-calypso-client/state/comments/actions';
 
 class PostComments extends React.Component {
 	static propTypes = {

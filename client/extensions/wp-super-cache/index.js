@@ -8,10 +8,10 @@ import { compact, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import { navigation, sites, siteSelection } from 'my-sites/controller';
+import { navigation, sites, siteSelection } from 'wp-calypso-client/my-sites/controller';
 import { settings } from './app/controller';
 import { Tabs } from './app/constants';
-import { makeLayout, render as clientRender } from 'controller';
+import { makeLayout, render as clientRender } from 'wp-calypso-client/controller';
 import reducer from './state/reducer';
 
 /**

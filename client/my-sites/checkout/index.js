@@ -14,11 +14,15 @@ import {
 	upsellNudge,
 	redirectToSupportSession,
 } from './controller';
-import SiftScience from 'lib/siftscience';
-import { makeLayout, redirectLoggedOut, render as clientRender } from 'controller';
-import { noSite, siteSelection } from 'my-sites/controller';
-import config from 'config';
-import userFactory from 'lib/user';
+import SiftScience from 'wp-calypso-client/lib/siftscience';
+import {
+	makeLayout,
+	redirectLoggedOut,
+	render as clientRender,
+} from 'wp-calypso-client/controller';
+import { noSite, siteSelection } from 'wp-calypso-client/my-sites/controller';
+import config from 'wp-calypso-client/config';
+import userFactory from 'wp-calypso-client/lib/user';
 
 export default function () {
 	SiftScience.recordUser();

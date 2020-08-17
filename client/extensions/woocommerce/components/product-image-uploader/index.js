@@ -7,19 +7,19 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { connect } from 'react-redux';
 import { head, noop, trim, uniqueId } from 'lodash';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { localize } from 'i18n-calypso';
 
 /**
  * Internal dependencies
  */
 import { getSelectedSiteWithFallback } from 'woocommerce/state/sites/selectors';
-import { errorNotice as errorNoticeAction } from 'state/notices/actions';
-import DropZone from 'components/drop-zone';
-import FilePicker from 'components/file-picker';
-import getMediaErrors from 'state/selectors/get-media-errors';
-import { filterItemsByMimePrefix } from 'lib/media/utils';
-import { addWoocommerceProductImage } from 'state/media/thunks';
+import { errorNotice as errorNoticeAction } from 'wp-calypso-client/state/notices/actions';
+import DropZone from 'wp-calypso-client/components/drop-zone';
+import FilePicker from 'wp-calypso-client/components/file-picker';
+import getMediaErrors from 'wp-calypso-client/state/selectors/get-media-errors';
+import { filterItemsByMimePrefix } from 'wp-calypso-client/lib/media/utils';
+import { addWoocommerceProductImage } from 'wp-calypso-client/state/media/thunks';
 
 class ProductImageUploader extends Component {
 	static propTypes = {

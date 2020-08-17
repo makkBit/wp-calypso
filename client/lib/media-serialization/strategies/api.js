@@ -7,7 +7,7 @@ import { assign } from 'lodash';
 /**
  * Internal dependencies
  */
-import { getMimePrefix } from 'lib/media/utils';
+import { getMimePrefix } from 'wp-calypso-client/lib/media/utils';
 import { MediaTypes } from '../constants';
 
 /**

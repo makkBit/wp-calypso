@@ -17,7 +17,7 @@ import {
 	getFlowName,
 	getFilteredSteps,
 } from '../utils';
-import flows from 'signup/config/flows';
+import flows from 'wp-calypso-client/signup/config/flows';
 
 jest.mock( 'lib/abtest', () => ( {
 	abtest: () => '',

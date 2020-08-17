@@ -6,7 +6,7 @@ import { find } from 'lodash';
 /**
  * Internal dependencies
  */
-import 'state/reader/init';
+import 'wp-calypso-client/state/reader/init';
 
 /*
  * Find the first follow for a given feed ID

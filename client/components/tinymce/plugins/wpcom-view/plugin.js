@@ -21,8 +21,8 @@ import i18n from 'i18n-calypso';
  * Internal dependencies
  */
 import views from './views';
-import { renderWithReduxStore } from 'lib/react-helpers';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import { renderWithReduxStore } from 'wp-calypso-client/lib/react-helpers';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 /**
  * WordPress View plugin.

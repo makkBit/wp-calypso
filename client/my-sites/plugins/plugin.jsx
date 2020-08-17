@@ -6,37 +6,37 @@ import createReactClass from 'create-react-class';
 import { localize } from 'i18n-calypso';
 import { connect } from 'react-redux';
 import { includes, uniq } from 'lodash';
-import { isEnabled } from 'config';
+import { isEnabled } from 'wp-calypso-client/config';
 
 /**
  * Internal dependencies
  */
-import PluginSiteList from 'my-sites/plugins/plugin-site-list';
-import HeaderCake from 'components/header-cake';
+import PluginSiteList from 'wp-calypso-client/my-sites/plugins/plugin-site-list';
+import HeaderCake from 'wp-calypso-client/components/header-cake';
 import { Card } from '@automattic/components';
-import PluginMeta from 'my-sites/plugins/plugin-meta';
-import PluginsStore from 'lib/plugins/store';
-import PluginsLog from 'lib/plugins/log-store';
-import { getPlugin, isFetched, isFetching } from 'state/plugins/wporg/selectors';
-import { fetchPluginData as wporgFetchPluginData } from 'state/plugins/wporg/actions';
-import PluginNotices from 'lib/plugins/notices';
-import MainComponent from 'components/main';
-import SidebarNavigation from 'my-sites/sidebar-navigation';
-import JetpackManageErrorPage from 'my-sites/jetpack-manage-error-page';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import PluginSections from 'my-sites/plugins/plugin-sections';
-import PluginSectionsCustom from 'my-sites/plugins/plugin-sections/custom';
-import DocumentHead from 'components/data/document-head';
-import { getSelectedSite, getSelectedSiteId } from 'state/ui/selectors';
-import { recordGoogleEvent } from 'state/analytics/actions';
-import { isJetpackSite, isRequestingSites } from 'state/sites/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import canCurrentUserManagePlugins from 'state/selectors/can-current-user-manage-plugins';
-import getSelectedOrAllSitesWithPlugins from 'state/selectors/get-selected-or-all-sites-with-plugins';
-import isSiteAutomatedTransfer from 'state/selectors/is-site-automated-transfer';
+import PluginMeta from 'wp-calypso-client/my-sites/plugins/plugin-meta';
+import PluginsStore from 'wp-calypso-client/lib/plugins/store';
+import PluginsLog from 'wp-calypso-client/lib/plugins/log-store';
+import { getPlugin, isFetched, isFetching } from 'wp-calypso-client/state/plugins/wporg/selectors';
+import { fetchPluginData as wporgFetchPluginData } from 'wp-calypso-client/state/plugins/wporg/actions';
+import PluginNotices from 'wp-calypso-client/lib/plugins/notices';
+import MainComponent from 'wp-calypso-client/components/main';
+import SidebarNavigation from 'wp-calypso-client/my-sites/sidebar-navigation';
+import JetpackManageErrorPage from 'wp-calypso-client/my-sites/jetpack-manage-error-page';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import PluginSections from 'wp-calypso-client/my-sites/plugins/plugin-sections';
+import PluginSectionsCustom from 'wp-calypso-client/my-sites/plugins/plugin-sections/custom';
+import DocumentHead from 'wp-calypso-client/components/data/document-head';
+import { getSelectedSite, getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
+import { isJetpackSite, isRequestingSites } from 'wp-calypso-client/state/sites/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import canCurrentUserManagePlugins from 'wp-calypso-client/state/selectors/can-current-user-manage-plugins';
+import getSelectedOrAllSitesWithPlugins from 'wp-calypso-client/state/selectors/get-selected-or-all-sites-with-plugins';
+import isSiteAutomatedTransfer from 'wp-calypso-client/state/selectors/is-site-automated-transfer';
 import NoPermissionsError from './no-permissions-error';
-import getToursHistory from 'state/guided-tours/selectors/get-tours-history';
-import hasNavigated from 'state/selectors/has-navigated';
+import getToursHistory from 'wp-calypso-client/state/guided-tours/selectors/get-tours-history';
+import hasNavigated from 'wp-calypso-client/state/selectors/has-navigated';
 
 /* eslint-disable react/prefer-es6-class */
 

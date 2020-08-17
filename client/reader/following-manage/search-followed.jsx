@@ -9,7 +9,7 @@ import { noop } from 'lodash';
 /**
  * Internal Dependencies
  */
-import SearchCard from 'components/search-card';
+import SearchCard from 'wp-calypso-client/components/search-card';
 
 class FollowingManageSearchFollowed extends Component {
 	static propTypes = {

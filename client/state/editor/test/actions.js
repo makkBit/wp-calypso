@@ -8,8 +8,8 @@ import { forEach } from 'lodash';
  * Internal dependencies
  */
 import { MODAL_VIEW_STAT_MAPPING, setEditorMediaModalView } from '../actions';
-import { ANALYTICS_STAT_BUMP } from 'state/action-types';
-import { setMediaModalView } from 'state/ui/media-modal/actions';
+import { ANALYTICS_STAT_BUMP } from 'wp-calypso-client/state/action-types';
+import { setMediaModalView } from 'wp-calypso-client/state/ui/media-modal/actions';
 
 describe( 'actions', () => {
 	describe( 'setEditorMediaModalView()', () => {

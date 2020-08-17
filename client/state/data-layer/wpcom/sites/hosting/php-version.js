@@ -1,17 +1,21 @@
 /**
  * Internal dependencies
  */
-import { http } from 'state/data-layer/wpcom-http/actions';
-import { dispatchRequest } from 'state/data-layer/wpcom-http/utils';
-import { registerHandlers } from 'state/data-layer/handler-registry';
+import { http } from 'wp-calypso-client/state/data-layer/wpcom-http/actions';
+import { dispatchRequest } from 'wp-calypso-client/state/data-layer/wpcom-http/utils';
+import { registerHandlers } from 'wp-calypso-client/state/data-layer/handler-registry';
 import {
 	HOSTING_PHP_VERSION_REQUEST,
 	HOSTING_PHP_VERSION_SET_REQUEST,
 	HOSTING_PHP_VERSION_SET,
-} from 'state/action-types';
-import { errorNotice, successNotice } from 'state/notices/actions';
+} from 'wp-calypso-client/state/action-types';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
 import { translate } from 'i18n-calypso';
-import { composeAnalytics, recordGoogleEvent, recordTracksEvent } from 'state/analytics/actions';
+import {
+	composeAnalytics,
+	recordGoogleEvent,
+	recordTracksEvent,
+} from 'wp-calypso-client/state/analytics/actions';
 
 const updateNoticeId = 'hosting-php-version';
 

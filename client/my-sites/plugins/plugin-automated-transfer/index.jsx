@@ -11,18 +11,18 @@ import wrapWithClickOutside from 'react-click-outside';
 /**
  * Internal dependencies
  */
-import { transferStates } from 'state/automated-transfer/constants';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getSite } from 'state/sites/selectors';
+import { transferStates } from 'wp-calypso-client/state/automated-transfer/constants';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getSite } from 'wp-calypso-client/state/sites/selectors';
 import {
 	getAutomatedTransferStatus,
 	isAutomatedTransferActive,
 	isAutomatedTransferFailed,
-} from 'state/automated-transfer/selectors';
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import WpAdminAutoLogin from 'components/wpadmin-auto-login';
-import { requestSite } from 'state/sites/actions';
+} from 'wp-calypso-client/state/automated-transfer/selectors';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import WpAdminAutoLogin from 'wp-calypso-client/components/wpadmin-auto-login';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 
 /**
  * Style dependencies

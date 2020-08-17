@@ -7,9 +7,9 @@ import moment from 'moment';
 /**
  * Internal dependencies
  */
-import humanDate from 'lib/human-date';
-import { Interval, EVERY_TEN_SECONDS } from 'lib/interval';
-import smartSetState from 'lib/react-smart-set-state';
+import humanDate from 'wp-calypso-client/lib/human-date';
+import { Interval, EVERY_TEN_SECONDS } from 'wp-calypso-client/lib/interval';
+import smartSetState from 'wp-calypso-client/lib/react-smart-set-state';
 
 export default class TimeSince extends PureComponent {
 	smartSetState = smartSetState;

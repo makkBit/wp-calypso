@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 /**
  * Internal dependencies
  */
-import Gravatar from 'components/gravatar';
+import Gravatar from 'wp-calypso-client/components/gravatar';
 
 /**
  * Style dependencies

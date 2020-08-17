@@ -1,9 +1,9 @@
 /**
  * Internal dependencies
  */
-import { assertValidProduct } from 'lib/products-values/utils/assert-valid-product';
-import { formatProduct } from 'lib/products-values/format-product';
-import { domainProductSlugs } from 'lib/domains/constants';
+import { assertValidProduct } from 'wp-calypso-client/lib/products-values/utils/assert-valid-product';
+import { formatProduct } from 'wp-calypso-client/lib/products-values/format-product';
+import { domainProductSlugs } from 'wp-calypso-client/lib/domains/constants';
 
 export function isDomainTransfer( product ) {
 	product = formatProduct( product );

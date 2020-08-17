@@ -5,8 +5,8 @@ import {
 	MY_SITES_SIDEBAR_SECTION_TOGGLE,
 	MY_SITES_SIDEBAR_SECTION_EXPAND,
 	MY_SITES_SIDEBAR_SECTION_COLLAPSE,
-} from 'state/action-types';
-import { combineReducers, keyedReducer, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, keyedReducer, withSchemaValidation } from 'wp-calypso-client/state/utils';
 
 const schema = {
 	type: 'boolean',

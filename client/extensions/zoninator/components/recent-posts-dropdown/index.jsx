@@ -11,10 +11,10 @@ import { find, flowRight, map } from 'lodash';
 /**
  * Internal dependencies
  */
-import QueryPosts from 'components/data/query-posts';
-import SelectDropdown from 'components/select-dropdown';
-import { getPostsForQuery } from 'state/posts/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
+import QueryPosts from 'wp-calypso-client/components/data/query-posts';
+import SelectDropdown from 'wp-calypso-client/components/select-dropdown';
+import { getPostsForQuery } from 'wp-calypso-client/state/posts/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
 
 const recentPostsQuery = {
 	status: 'publish,future',

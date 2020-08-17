@@ -7,10 +7,10 @@ import React from 'react';
 /**
  * Internal dependencies
  */
-import Sidebar from 'layout/sidebar';
-import SidebarHeading from 'layout/sidebar/heading';
-import SidebarMenu from 'layout/sidebar/menu';
-import SidebarItem from 'layout/sidebar/item';
+import Sidebar from 'wp-calypso-client/layout/sidebar';
+import SidebarHeading from 'wp-calypso-client/layout/sidebar/heading';
+import SidebarMenu from 'wp-calypso-client/layout/sidebar/menu';
+import SidebarItem from 'wp-calypso-client/layout/sidebar/item';
 
 export default class DevdocsSidebar extends React.PureComponent {
 	static displayName = 'DevdocsSidebar';

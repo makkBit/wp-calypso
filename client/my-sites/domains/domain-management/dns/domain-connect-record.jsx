@@ -9,11 +9,11 @@ import { localize } from 'i18n-calypso';
 /**
  * Internal dependencies
  */
-import { errorNotice, removeNotice, successNotice } from 'state/notices/actions';
-import { addDns, deleteDns } from 'state/domains/dns/actions';
-import Toggle from 'components/forms/form-toggle';
-import { domainConnect } from 'lib/domains/constants';
-import { getNormalizedData } from 'state/domains/dns/utils';
+import { errorNotice, removeNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { addDns, deleteDns } from 'wp-calypso-client/state/domains/dns/actions';
+import Toggle from 'wp-calypso-client/components/forms/form-toggle';
+import { domainConnect } from 'wp-calypso-client/lib/domains/constants';
+import { getNormalizedData } from 'wp-calypso-client/state/domains/dns/utils';
 import DnsRecordsList from '../dns-records/list';
 import DnsRecordsListItem from '../dns-records/item';
 

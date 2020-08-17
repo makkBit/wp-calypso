@@ -9,14 +9,14 @@ import { connect } from 'react-redux';
 /**
  * Internal dependencies
  */
-import FormButton from 'components/forms/form-button';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormFooter from 'my-sites/domains/domain-management/components/form-footer';
-import FormInputValidation from 'components/forms/form-input-validation';
-import FormLabel from 'components/forms/form-label';
-import FormTextInput from 'components/forms/form-text-input';
-import { errorNotice, successNotice } from 'state/notices/actions';
-import { applyDnsTemplate } from 'state/domains/dns/actions';
+import FormButton from 'wp-calypso-client/components/forms/form-button';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormFooter from 'wp-calypso-client/my-sites/domains/domain-management/components/form-footer';
+import FormInputValidation from 'wp-calypso-client/components/forms/form-input-validation';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormTextInput from 'wp-calypso-client/components/forms/form-text-input';
+import { errorNotice, successNotice } from 'wp-calypso-client/state/notices/actions';
+import { applyDnsTemplate } from 'wp-calypso-client/state/domains/dns/actions';
 
 class EmailProvider extends Component {
 	state = {

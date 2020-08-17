@@ -24,7 +24,7 @@ import {
 	JETPACK_SETTINGS_SAVE_SUCCESS,
 	SERIALIZE,
 	DESERIALIZE,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'reducer', () => {
 	describe( 'items', () => {

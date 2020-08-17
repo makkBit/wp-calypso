@@ -8,25 +8,25 @@
 /**
  * External dependencies
  */
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { isEmpty } from 'lodash';
 import { localize } from 'i18n-calypso';
-import config from 'config';
+import config from 'wp-calypso-client/config';
 import 'moment-timezone'; // monkey patches the existing moment.js
 
 /**
  * Internal dependencies
  */
 import { Button } from '@automattic/components';
-import FoldableCard from 'components/foldable-card';
-import FormFieldset from 'components/forms/form-fieldset';
-import FormLabel from 'components/forms/form-label';
-import FormSelect from 'components/forms/form-select';
-import FormSettingExplanation from 'components/forms/form-setting-explanation';
-import { withLocalizedMoment } from 'components/localized-moment';
-import { getLanguage } from 'lib/i18n-utils';
+import FoldableCard from 'wp-calypso-client/components/foldable-card';
+import FormFieldset from 'wp-calypso-client/components/forms/form-fieldset';
+import FormLabel from 'wp-calypso-client/components/forms/form-label';
+import FormSelect from 'wp-calypso-client/components/forms/form-select';
+import FormSettingExplanation from 'wp-calypso-client/components/forms/form-setting-explanation';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
+import { getLanguage } from 'wp-calypso-client/lib/i18n-utils';
 
 const defaultLanguage = getLanguage( config( 'i18n_default_locale_slug' ) ).name;
 

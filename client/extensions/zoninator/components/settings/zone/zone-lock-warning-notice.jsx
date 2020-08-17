@@ -10,9 +10,9 @@ import { flowRight } from 'lodash';
 /**
  * Internal dependencies
  */
-import Notice from 'components/notice';
-import NoticeAction from 'components/notice/notice-action';
-import { withLocalizedMoment } from 'components/localized-moment';
+import Notice from 'wp-calypso-client/components/notice';
+import NoticeAction from 'wp-calypso-client/components/notice/notice-action';
+import { withLocalizedMoment } from 'wp-calypso-client/components/localized-moment';
 import { requestFeed } from '../../../state/feeds/actions';
 import { requestLock, resetLock } from '../../../state/locks/actions';
 import { requestZones } from '../../../state/zones/actions';

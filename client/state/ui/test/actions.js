@@ -20,7 +20,7 @@ import {
 	PREVIEW_IS_SHOWING,
 	SECTION_SET,
 	SELECTED_SITE_SET,
-} from 'state/action-types';
+} from 'wp-calypso-client/state/action-types';
 
 describe( 'actions', () => {
 	describe( 'setAllSitesSelected()', () => {

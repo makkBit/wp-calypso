@@ -6,20 +6,20 @@ import { localize } from 'i18n-calypso';
 import React from 'react';
 import classnames from 'classnames';
 import { connect } from 'react-redux';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 import { get, isNull } from 'lodash';
 
 /**
  * Internal dependencies
  */
-import accept from 'lib/accept';
+import accept from 'wp-calypso-client/lib/accept';
 import { Button } from '@automattic/components';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { getEditorPostId } from 'state/editor/selectors';
-import { getEditedPost } from 'state/posts/selectors';
-import { trashPost } from 'state/posts/actions';
-import { getCurrentUserId } from 'state/current-user/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { getEditorPostId } from 'wp-calypso-client/state/editor/selectors';
+import { getEditedPost } from 'wp-calypso-client/state/posts/selectors';
+import { trashPost } from 'wp-calypso-client/state/posts/actions';
+import { getCurrentUserId } from 'wp-calypso-client/state/current-user/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
 
 /**
  * Style dependencies

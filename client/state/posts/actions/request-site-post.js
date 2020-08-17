@@ -1,11 +1,15 @@
 /**
  * Internal dependencies
  */
-import wpcom from 'lib/wp';
-import { POST_REQUEST_FAILURE, POST_REQUEST_SUCCESS, POST_REQUEST } from 'state/action-types';
-import { receivePost } from 'state/posts/actions/receive-post';
+import wpcom from 'wp-calypso-client/lib/wp';
+import {
+	POST_REQUEST_FAILURE,
+	POST_REQUEST_SUCCESS,
+	POST_REQUEST,
+} from 'wp-calypso-client/state/action-types';
+import { receivePost } from 'wp-calypso-client/state/posts/actions/receive-post';
 
-import 'state/posts/init';
+import 'wp-calypso-client/state/posts/init';
 
 /**
  * Triggers a network request to fetch a specific post from a site.

@@ -7,7 +7,7 @@ import { values } from 'lodash';
 /**
  * Internal dependencies
  */
-import createSelector from 'lib/create-selector';
+import createSelector from 'wp-calypso-client/lib/create-selector';
 
 /**
  * Returns array value of notice item state

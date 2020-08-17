@@ -10,23 +10,29 @@ import { some } from 'lodash';
 /**
  * Internal dependencies
  */
-import { recordTracksEvent } from 'lib/analytics/tracks';
+import { recordTracksEvent } from 'wp-calypso-client/lib/analytics/tracks';
 import { Button, CompactCard } from '@automattic/components';
-import HappinessEngineers from 'me/help/help-happiness-engineers';
+import HappinessEngineers from 'wp-calypso-client/me/help/help-happiness-engineers';
 import HelpResult from './help-results/item';
 import HelpSearch from './help-search';
 import HelpTeaserButton from './help-teaser-button';
 import HelpUnverifiedWarning from './help-unverified-warning';
-import Main from 'components/main';
-import MeSidebarNavigation from 'me/sidebar-navigation';
-import PageViewTracker from 'lib/analytics/page-view-tracker';
-import QueryUserPurchases from 'components/data/query-user-purchases';
-import SectionHeader from 'components/section-header';
-import { getCurrentUserId, isCurrentUserEmailVerified } from 'state/current-user/selectors';
-import { localizeUrl } from 'lib/i18n-utils';
-import { getUserPurchases, isFetchingUserPurchases } from 'state/purchases/selectors';
-import { planHasFeature } from 'lib/plans';
-import { FEATURE_BUSINESS_ONBOARDING } from 'lib/plans/constants';
+import Main from 'wp-calypso-client/components/main';
+import MeSidebarNavigation from 'wp-calypso-client/me/sidebar-navigation';
+import PageViewTracker from 'wp-calypso-client/lib/analytics/page-view-tracker';
+import QueryUserPurchases from 'wp-calypso-client/components/data/query-user-purchases';
+import SectionHeader from 'wp-calypso-client/components/section-header';
+import {
+	getCurrentUserId,
+	isCurrentUserEmailVerified,
+} from 'wp-calypso-client/state/current-user/selectors';
+import { localizeUrl } from 'wp-calypso-client/lib/i18n-utils';
+import {
+	getUserPurchases,
+	isFetchingUserPurchases,
+} from 'wp-calypso-client/state/purchases/selectors';
+import { planHasFeature } from 'wp-calypso-client/lib/plans';
+import { FEATURE_BUSINESS_ONBOARDING } from 'wp-calypso-client/lib/plans/constants';
 
 /**
  * Style dependencies

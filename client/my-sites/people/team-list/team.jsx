@@ -15,13 +15,13 @@ import { connect } from 'react-redux';
  */
 import { Card } from '@automattic/components';
 import classNames from 'classnames';
-import PeopleListItem from 'my-sites/people/people-list-item';
-import { fetchUsers } from 'lib/users/actions';
-import InfiniteList from 'components/infinite-list';
-import NoResults from 'my-sites/no-results';
-import PeopleListSectionHeader from 'my-sites/people/people-list-section-header';
-import ListEnd from 'components/list-end';
-import { recordGoogleEvent } from 'state/analytics/actions';
+import PeopleListItem from 'wp-calypso-client/my-sites/people/people-list-item';
+import { fetchUsers } from 'wp-calypso-client/lib/users/actions';
+import InfiniteList from 'wp-calypso-client/components/infinite-list';
+import NoResults from 'wp-calypso-client/my-sites/no-results';
+import PeopleListSectionHeader from 'wp-calypso-client/my-sites/people/people-list-section-header';
+import ListEnd from 'wp-calypso-client/components/list-end';
+import { recordGoogleEvent } from 'wp-calypso-client/state/analytics/actions';
 
 const debug = debugFactory( 'calypso:my-sites:people:team-list' );
 

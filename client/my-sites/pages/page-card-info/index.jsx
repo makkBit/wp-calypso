@@ -4,18 +4,18 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { useTranslate } from 'i18n-calypso';
-import Gridicon from 'components/gridicon';
+import Gridicon from 'wp-calypso-client/components/gridicon';
 
 /**
  * Internal dependencies
  */
-import { isFrontPage, isPostsPage } from 'state/pages/selectors';
-import PostRelativeTimeStatus from 'my-sites/post-relative-time-status';
-import canCurrentUser from 'state/selectors/can-current-user';
-import getEditorUrl from 'state/selectors/get-editor-url';
-import PostMetadata from 'lib/post-metadata';
-import { getTheme } from 'state/themes/selectors';
-import QueryTheme from 'components/data/query-theme';
+import { isFrontPage, isPostsPage } from 'wp-calypso-client/state/pages/selectors';
+import PostRelativeTimeStatus from 'wp-calypso-client/my-sites/post-relative-time-status';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import getEditorUrl from 'wp-calypso-client/state/selectors/get-editor-url';
+import PostMetadata from 'wp-calypso-client/lib/post-metadata';
+import { getTheme } from 'wp-calypso-client/state/themes/selectors';
+import QueryTheme from 'wp-calypso-client/components/data/query-theme';
 
 /**
  * Style dependencies

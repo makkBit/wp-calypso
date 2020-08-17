@@ -6,9 +6,9 @@ import page from 'page';
 /**
  * Internal Dependencies
  */
-import XPostHelper, { isXPost } from 'reader/xpost-helper';
-import { reduxGetState } from 'lib/redux-bridge';
-import { getPostByKey } from 'state/reader/posts/selectors';
+import XPostHelper, { isXPost } from 'wp-calypso-client/reader/xpost-helper';
+import { reduxGetState } from 'wp-calypso-client/lib/redux-bridge';
+import { getPostByKey } from 'wp-calypso-client/state/reader/posts/selectors';
 
 export function isSpecialClick( event ) {
 	return event.button > 0 || event.metaKey || event.controlKey || event.shiftKey || event.altKey;

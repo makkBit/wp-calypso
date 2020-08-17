@@ -8,9 +8,9 @@ import { Field } from 'redux-form';
 /**
  * Internal dependencies
  */
-import FormToggle from 'components/forms/form-toggle/compact';
+import FormToggle from 'wp-calypso-client/components/forms/form-toggle/compact';
 
-import 'state/form/init';
+import 'wp-calypso-client/state/form/init';
 
 const ToggleRenderer = ( { input, meta, text, type, ...otherProps } ) => (
 	<FormToggle { ...input } { ...otherProps }>

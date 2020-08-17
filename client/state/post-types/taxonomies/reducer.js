@@ -12,8 +12,8 @@ import {
 	POST_TYPES_TAXONOMIES_REQUEST,
 	POST_TYPES_TAXONOMIES_REQUEST_FAILURE,
 	POST_TYPES_TAXONOMIES_REQUEST_SUCCESS,
-} from 'state/action-types';
-import { combineReducers, withSchemaValidation } from 'state/utils';
+} from 'wp-calypso-client/state/action-types';
+import { combineReducers, withSchemaValidation } from 'wp-calypso-client/state/utils';
 import { itemsSchema } from './schema';
 
 /**

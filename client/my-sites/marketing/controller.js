@@ -9,24 +9,27 @@ import { translate } from 'i18n-calypso';
  * Internal Dependencies
  */
 import MarketingTools from './tools';
-import notices from 'notices';
+import notices from 'wp-calypso-client/notices';
 import Sharing from './main';
 import SharingButtons from './buttons/buttons';
 import SharingConnections from './connections/connections';
 import Traffic from './traffic/';
-import { requestSite } from 'state/sites/actions';
+import { requestSite } from 'wp-calypso-client/state/sites/actions';
 import {
 	getSiteSlug,
 	isJetpackSite,
 	isJetpackModuleActive,
 	getSiteOption,
-} from 'state/sites/selectors';
-import { getSelectedSiteId } from 'state/ui/selectors';
-import { fetchPreferences } from 'state/preferences/actions';
-import { getPreference, hasReceivedRemotePreferences } from 'state/preferences/selectors';
-import canCurrentUser from 'state/selectors/can-current-user';
-import versionCompare from 'lib/version-compare';
-import { setExpandedService } from 'state/sharing/actions';
+} from 'wp-calypso-client/state/sites/selectors';
+import { getSelectedSiteId } from 'wp-calypso-client/state/ui/selectors';
+import { fetchPreferences } from 'wp-calypso-client/state/preferences/actions';
+import {
+	getPreference,
+	hasReceivedRemotePreferences,
+} from 'wp-calypso-client/state/preferences/selectors';
+import canCurrentUser from 'wp-calypso-client/state/selectors/can-current-user';
+import versionCompare from 'wp-calypso-client/lib/version-compare';
+import { setExpandedService } from 'wp-calypso-client/state/sharing/actions';
 
 export const redirectConnections = ( context ) => {
 	const serviceParam = context.params.service ? `?service=${ context.params.service }` : '';
