@@ -265,7 +265,6 @@ class DomainSearchResults extends React.Component {
 					selectedSite={ this.props.selectedSite }
 					pendingCheckSuggestion={ this.props.pendingCheckSuggestion }
 					unavailableDomains={ this.props.unavailableDomains }
-					isEligibleVariantForDomainTest={ this.props.isEligibleVariantForDomainTest }
 					selectedFreePlanInSwapFlow={ this.props.selectedFreePlanInSwapFlow }
 					selectedPaidPlanInSwapFlow={ this.props.selectedPaidPlanInSwapFlow }
 				/>
@@ -292,7 +291,6 @@ class DomainSearchResults extends React.Component {
 						onButtonClick={ this.props.onClickResult }
 						pendingCheckSuggestion={ this.props.pendingCheckSuggestion }
 						unavailableDomains={ this.props.unavailableDomains }
-						isEligibleVariantForDomainTest={ this.props.isEligibleVariantForDomainTest }
 						selectedFreePlanInSwapFlow={ this.props.selectedFreePlanInSwapFlow }
 						selectedPaidPlanInSwapFlow={ this.props.selectedPaidPlanInSwapFlow }
 						buttonStyles={ { primary: isReskinnedAndNotOnMobile } }

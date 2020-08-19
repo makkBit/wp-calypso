@@ -45,7 +45,7 @@ class DomainSuggestion extends React.Component {
 			price,
 			priceRule,
 			salePrice,
-			isEligibleVariantForDomainTest,
+			isSignupStep,
 			isFeatured,
 		} = this.props;
 		const classes = classNames(
@@ -60,7 +60,7 @@ class DomainSuggestion extends React.Component {
 		);
 
 		const contentClassName = classNames( 'domain-suggestion__content', {
-			'domain-suggestion__content-domain-copy-test': isEligibleVariantForDomainTest && ! isFeatured,
+			'domain-suggestion__content-domain-copy-test': isSignupStep && ! isFeatured,
 		} );
 
 		/* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -80,7 +80,7 @@ class DomainSuggestion extends React.Component {
 							price={ price }
 							salePrice={ salePrice }
 							rule={ priceRule }
-							isEligibleVariantForDomainTest={ isEligibleVariantForDomainTest }
+							isSignupStep={ isSignupStep }
 							selectedPaidPlanInSwapFlow={ this.props.selectedPaidPlanInSwapFlow }
 						/>
 					) }
