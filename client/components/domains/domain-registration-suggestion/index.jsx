@@ -242,7 +242,6 @@ class DomainRegistrationSuggestion extends React.Component {
 		} );
 		const infoPopoverSize = isFeatured ? 22 : 18;
 
-		//VERIFIED_WORKING
 		const titleWrapperClassName = classNames( 'domain-registration-suggestion__title-wrapper', {
 			'domain-registration-suggestion__title-domain-copy-test':
 				this.props.isSignupStep && ! this.props.isFeatured,
@@ -300,7 +299,6 @@ class DomainRegistrationSuggestion extends React.Component {
 
 		let title, progressBarProps;
 		if ( isRecommended ) {
-			//VERIFIED_WORKING
 			title = this.props.isSignupStep
 				? translate( 'Our Recommendation' )
 				: translate( 'Best Match' );
@@ -320,7 +318,6 @@ class DomainRegistrationSuggestion extends React.Component {
 		}
 
 		if ( title ) {
-			//VERIFIED_WORKING
 			if ( this.props.isSignupStep ) {
 				const badgeClassName = classNames( '', {
 					success: isRecommended,
@@ -344,7 +341,6 @@ class DomainRegistrationSuggestion extends React.Component {
 	}
 
 	renderMatchReason() {
-		//TODO: TEST_PENDING
 		if ( this.props.isSignupStep ) {
 			return null;
 		}
@@ -415,7 +411,6 @@ const mapStateToProps = ( state, props ) => {
 	const productsList = getProductsList( state );
 	const currentUserCurrencyCode = getCurrentUserCurrencyCode( state );
 
-	//TODO: TEST_PENDING
 	const stripZeros = props.isSignupStep ? true : false;
 
 	return {
