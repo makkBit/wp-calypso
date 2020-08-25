@@ -1417,7 +1417,6 @@ export default connect(
 			currentUser: getCurrentUser( state ),
 			defaultSuggestions: getDomainsSuggestions( state, queryObject ),
 			defaultSuggestionsError: getDomainsSuggestionsError( state, queryObject ),
-			showSkipButton: true,
 		};
 	},
 	{
