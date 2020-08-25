@@ -311,3 +311,14 @@ function load_wpcom_block_editor_sidebar() {
 	}
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\load_wpcom_block_editor_sidebar' );
+
+/**
+ * Load Coming Soon
+ */
+function load_wpcom_coming_soon() {
+	if ( defined( 'WPCOM_EDITING_TOOLKIT_ENABLE_COMING_SOON' ) && WPCOM_EDITING_TOOLKIT_ENABLE_COMING_SOON ) {
+		require_once __DIR__ . '/wpcom_coming-soon/wpcom_coming-soon.php';
+	}
+}
+add_action( 'plugins_loaded', __NAMESPACE__ . '\load_wpcom_coming_soon' );
+
