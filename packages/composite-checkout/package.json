@@ -47,7 +47,7 @@
 	},
 	"peerDependencies": {
 		"@wordpress/data": "^4.22",
-		"react": "^16.8"
+		"react": "^16.13"
 	},
 	"private": true
 }
