@@ -33,6 +33,7 @@
 	},
 	"dependencies": {
 		"@wordpress/api-fetch": "^3.18.0",
+		"@wordpress/components": "^10.0.5",
 		"@wordpress/data-controls": "^1.16.3",
 		"@wordpress/url": "^2.17.0",
 		"fast-json-stable-stringify": "^2.1.0",
@@ -44,6 +45,7 @@
 		"wpcom-proxy-request": "^6.0.0"
 	},
 	"peerDependencies": {
+		"react": "^16.13.1",
 		"@wordpress/data": "^4"
 	}
 }

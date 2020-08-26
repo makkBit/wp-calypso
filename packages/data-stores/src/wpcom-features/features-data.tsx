@@ -1,35 +1,17 @@
 /**
  * External dependencies
  */
-import React, { ReactElement } from 'react';
-import { Plans } from '@automattic/data-stores';
+import React from 'react';
+import * as Plans from '../plans';
 import { SVG, Path } from '@wordpress/components';
 import { translate } from 'i18n-calypso';
-
+import type { FeatureId, Feature } from './types';
 /**
  * Internal dependencies
  */
 const { PLAN_PERSONAL, PLAN_PREMIUM, PLAN_BUSINESS } = Plans;
 
-export type FeatureId =
-	| 'domain'
-	| 'store'
-	| 'seo'
-	| 'plugins'
-	| 'ad-free'
-	| 'image-storage'
-	| 'video-storage'
-	| 'support';
-
-export interface Feature {
-	id: FeatureId;
-	name: string;
-	description: string;
-	minSupportedPlan: Plans.PlanSlug;
-	icon: ReactElement;
-}
-
-export const FEATURE_LIST: Record< FeatureId, Feature > = {
+export const featuresList: Record< FeatureId, Feature > = {
 	domain: {
 		id: 'domain',
 		name: translate( 'Custom domains' ) as string,

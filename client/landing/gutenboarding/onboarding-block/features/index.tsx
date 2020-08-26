@@ -19,8 +19,7 @@ import classnames from 'classnames';
 /**
  * Internal dependencies
  */
-import { STORE_KEY as ONBOARD_STORE } from '../../stores/onboard';
-import { FEATURE_LIST, FeatureId } from './data';
+import { STORE_KEY as WPCOM_FEATURES_STORE } from '../../stores/wpcom-features';
 import useStepNavigation from '../../hooks/use-step-navigation';
 
 /**
@@ -32,12 +31,16 @@ const FeaturesStep: React.FunctionComponent = () => {
 	const { __ } = useI18n();
 	const { goBack, goNext } = useStepNavigation();
 
-	const selectedFeatures = useSelect( ( select ) => select( ONBOARD_STORE ).getSelectedFeatures() );
-	const { addFeature, removeFeature } = useDispatch( ONBOARD_STORE );
+	const allFeatures = useSelect( ( select ) => select( WPCOM_FEATURES_STORE ).getAllFeatures() );
+
+	const selectedFeatures = useSelect( ( select ) =>
+		select( WPCOM_FEATURES_STORE ).getSelectedFeatures()
+	);
+	const { addFeature, removeFeature } = useDispatch( WPCOM_FEATURES_STORE );
 
 	const hasSelectedFeatures = selectedFeatures.length > 0;
 
-	const toggleFeature = ( featureId: FeatureId ) => {
+	const toggleFeature = ( featureId: typeof selectedFeatures[ 0 ] ) => {
 		if ( selectedFeatures.includes( featureId ) ) {
 			removeFeature( featureId );
 		} else {
@@ -67,7 +70,7 @@ const FeaturesStep: React.FunctionComponent = () => {
 			</div>
 			<div className="features__body">
 				<div className="features__items">
-					{ Object.entries( FEATURE_LIST ).map( ( [ id, feature ] ) => (
+					{ Object.entries( allFeatures ).map( ( [ id, feature ] ) => (
 						<Button
 							className={ classnames( 'features__item', {
 								'is-selected': selectedFeatures.includes( feature.id ),

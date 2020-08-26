@@ -15,7 +15,6 @@ import { SITE_STORE } from '../site';
 import { PLANS_STORE } from '../plans';
 import type { State } from '.';
 import type { FontPair } from '../../constants';
-import type { FeatureId } from '../../onboarding-block/features/data';
 import { isEnabled } from 'config';
 
 type CreateSiteParams = Site.CreateSiteParams;
@@ -24,11 +23,6 @@ type Template = VerticalsTemplates.Template;
 type Language = {
 	value: number;
 };
-
-export const addFeature = ( featureId: FeatureId ) => ( {
-	type: 'ADD_FEATURE' as const,
-	featureId,
-} );
 
 export function* createSite(
 	username: string,
@@ -84,11 +78,6 @@ export function* createSite(
 
 export const enableExperimental = () => ( {
 	type: 'SET_ENABLE_EXPERIMENTAL' as const,
-} );
-
-export const removeFeature = ( featureId: FeatureId ) => ( {
-	type: 'REMOVE_FEATURE' as const,
-	featureId,
 } );
 
 export const resetFonts = () => ( {
@@ -190,9 +179,7 @@ export function* updatePlan( planSlug: Plans.PlanSlug ) {
 }
 
 export type OnboardAction = ReturnType<
-	| typeof addFeature
 	| typeof enableExperimental
-	| typeof removeFeature
 	| typeof resetFonts
 	| typeof resetOnboardStore
 	| typeof resetSiteVertical
