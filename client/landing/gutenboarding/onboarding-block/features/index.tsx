@@ -5,8 +5,9 @@ import * as React from 'react';
 import { useDispatch, useSelect } from '@wordpress/data';
 import { useI18n } from '@automattic/react-i18n';
 import { Button } from '@wordpress/components';
-import { Icon } from '@wordpress/icons';
+
 import {
+	FeatureIcon,
 	Title,
 	SubTitle,
 	ActionButtons,
@@ -80,7 +81,7 @@ const FeaturesStep: React.FunctionComponent = () => {
 							isTertiary
 						>
 							<div className="features__item-image">
-								<Icon icon={ feature.icon } />
+								<FeatureIcon featureId={ feature.id } />
 							</div>
 							<div className="features__item-heading">
 								<div className="features__item-name">{ feature.name }</div>

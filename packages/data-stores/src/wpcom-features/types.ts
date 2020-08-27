@@ -18,5 +18,4 @@ export interface Feature {
 	name: string;
 	description: string;
 	minSupportedPlan: PlanSlug;
-	icon: React.ReactElement;
 }
