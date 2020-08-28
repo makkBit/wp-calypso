@@ -313,18 +313,20 @@ function getNotesList() {
 function ready() {
 	const notes = getAllNotes( store.getState() );
 
-	const timestamps = notes
-		.map( property( 'timestamp' ) )
-		.map( ( timestamp ) => Date.parse( timestamp ) / 1000 );
+	let newNotes = notes.filter(
+		( note ) => Date.parse( note.timestamp ) / 1000 > this.lastSeenTime
+	);
 
-	let newNoteCount = timestamps.filter( ( time ) => time > this.lastSeenTime ).length;
+	let newNoteCount = newNotes.length;
 
 	if ( ! this.firstRender && this.lastSeenTime === 0 ) {
 		newNoteCount = 0;
+		newNotes = [];
 	}
 
 	const latestType = get( notes.slice( -1 )[ 0 ], 'type', null );
 	store.dispatch( { type: 'APP_RENDER_NOTES', newNoteCount, latestType } );
+	store.dispatch( { type: 'NOTIFY_DESKTOP_NEW_NOTES', newNotes } );
 
 	this.hasNewNoteData = false;
 	this.firstRender = false;

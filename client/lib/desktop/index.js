@@ -23,6 +23,7 @@ import {
 	NOTIFY_DESKTOP_DID_ACTIVATE_JETPACK_MODULE,
 	NOTIFY_DESKTOP_SEND_TO_PRINTER,
 	NOTIFY_DESKTOP_NOTIFICATIONS_UNSEEN_COUNT_SET,
+	NOTIFY_DESKTOP_NEW_NOTIFICATIONS,
 	NOTIFY_DESKTOP_VIEW_POST_CLICKED,
 } from 'state/desktop/window-events';
 import { canCurrentUserManageSiteOptions } from 'state/sites/selectors';
@@ -67,6 +68,11 @@ const Desktop = {
 		window.addEventListener(
 			NOTIFY_DESKTOP_NOTIFICATIONS_UNSEEN_COUNT_SET,
 			this.onUnseenCountUpdated.bind( this )
+		);
+
+		window.addEventListener(
+			NOTIFY_DESKTOP_NEW_NOTIFICATIONS,
+			this.onNewNotification.bind( this )
 		);
 
 		window.addEventListener( NOTIFY_DESKTOP_SEND_TO_PRINTER, this.onSendToPrinter.bind( this ) );
@@ -132,6 +138,12 @@ const Desktop = {
 		debug( 'Toggle notifications' );
 
 		this.toggleNotificationsPanel();
+	},
+
+	onNewNotification: function ( event ) {
+		const { notifications } = event.detail;
+		debug( `Received ${ notifications.length }notification(s)` );
+		ipc.send( `received-notifications`, notifications );
 	},
 
 	onCloseNotificationsPanel: function () {

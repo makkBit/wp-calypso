@@ -1,7 +1,7 @@
 /**
  * External Dependencies
  */
-const { ipcMain: ipc } = require( 'electron' ); // eslint-disable-line import/no-extraneous-dependencies
+const { ipcMain: ipc, Notification } = require( 'electron' ); // eslint-disable-line import/no-extraneous-dependencies
 
 /**
  * Internal dependencies
@@ -32,7 +32,32 @@ module.exports = function () {
 		updateNotificationBadge( count );
 	} );
 
-	ipc.on( 'preferences-changed-notification-badge', function ( event, arg ) {
+	ipc.on( 'preferences-changed-notification-badge', function ( _, arg ) {
 		updateNotificationBadge( arg );
+	} );
+
+	ipc.on( 'received-notifications', function ( _, notifications ) {
+		log.info( `Received ${ notifications.length } new notifications: `, notifications );
+
+		// TODO: Add "notifications" to Preferences, check if enabled
+		// Compare to SummaryInList component in apps/notifications/src/panel
+		if ( Notification.isSupported() ) {
+			for ( let i = 0; i < notifications.length; i++ ) {
+				// https://www.electronjs.org/docs/api/notification
+				// TODO: icon,
+				// TODO: inspect JSON notification output
+				// TODO: how to mark as read? Keeps repeatedly displaying the same notification.
+				// Note: don't mark as read until notification is clicked. In the meantime, find a way to update
+				const note = notifications[ i ];
+				const body = note.subject.length > 1 ? note.subject[ 1 ].text : '';
+				const notification = new Notification( {
+					title: note.subject[ 0 ],
+					body: body,
+					silent: true,
+					hasReply: false,
+				} );
+				notification.show();
+			}
+		}
 	} );
 };
