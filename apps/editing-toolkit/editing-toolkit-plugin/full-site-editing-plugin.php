@@ -321,4 +321,3 @@ function load_wpcom_coming_soon() {
 	require_once __DIR__ . '/wpcom-coming-soon/class-wpcom-coming-soon.php';
 }
 add_action( 'plugins_loaded', __NAMESPACE__ . '\load_wpcom_coming_soon' );
-
