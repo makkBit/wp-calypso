@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import page from 'page';
-import { get, has, isInteger, noop } from 'lodash';
+import { noop } from 'lodash';
 
 /**
  * Internal dependencies
@@ -12,9 +12,9 @@ import { shouldLoadGutenberg } from 'state/selectors/should-load-gutenberg';
 import { shouldRedirectGutenberg } from 'state/selectors/should-redirect-gutenberg';
 import { EDITOR_START, POST_EDIT } from 'state/action-types';
 import { getSelectedSiteId, getSelectedSiteSlug } from 'state/ui/selectors';
-import CalypsoifyIframe from './calypsoify-iframe';
+import WithoutIframe from './without-iframe';
 import getGutenbergEditorUrl from 'state/selectors/get-gutenberg-editor-url';
-import { addQueryArgs } from 'lib/route';
+import { addQueryArgs, getSiteFragment, sectionify } from 'lib/route';
 import { getSelectedEditor } from 'state/selectors/get-selected-editor';
 import { requestSelectedEditor } from 'state/selected-editor/actions';
 import {
@@ -26,18 +26,19 @@ import {
 } from 'state/sites/selectors';
 import isSiteWpcomAtomic from 'state/selectors/is-site-wpcom-atomic';
 import { isEnabled } from 'config';
-import { Placeholder } from './placeholder';
 import { makeLayout, render } from 'controller';
+import { Placeholder } from '../editor/placeholder';
 import isSiteUsingCoreSiteEditor from 'state/selectors/is-site-using-core-site-editor';
 import getSiteEditorUrl from 'state/selectors/get-site-editor-url';
 import { REASON_BLOCK_EDITOR_JETPACK_REQUIRES_SSO } from 'state/desktop/window-events';
 import { notifyDesktopCannotOpenEditor } from 'state/desktop/actions';
+import NavigationComponent from 'my-sites/navigation';
 
 function determinePostType( context ) {
-	if ( context.path.startsWith( '/block-editor/post/' ) ) {
+	if ( context.path.startsWith( '/without-iframe/block-editor/post/' ) ) {
 		return 'post';
 	}
-	if ( context.path.startsWith( '/block-editor/page/' ) ) {
+	if ( context.path.startsWith( '/without-iframe/block-editor/page/' ) ) {
 		return 'page';
 	}
 
@@ -186,26 +187,31 @@ export const redirect = async ( context, next ) => {
 	return page.redirect( `/post/${ getSelectedSiteSlug( state ) }` );
 };
 
-function getPressThisData( query ) {
-	const { text, url, title, image, embed } = query;
-	return url ? { text, url, title, image, embed } : null;
+function createNavigation( context ) {
+	const siteFragment = getSiteFragment( context.pathname );
+	let basePath = context.pathname;
+
+	if ( siteFragment ) {
+		basePath = sectionify( context.pathname );
+	}
+
+	return (
+		<NavigationComponent
+			path={ context.path }
+			allSitesPath={ basePath }
+			siteBasePath={ basePath }
+		/>
+	);
 }
 
-export const post = ( context, next ) => {
+export const gutenbergWithoutIframe = ( context, next ) => {
 	// See post-editor/controller.js for reference.
 
 	const postId = getPostID( context );
 	const postType = determinePostType( context );
-	const jetpackCopy = parseInt( get( context, 'query.jetpack-copy', null ) );
-
-	// Check if this value is an integer.
-	const duplicatePostId = isInteger( jetpackCopy ) ? jetpackCopy : null;
 
 	const state = context.store.getState();
 	const siteId = getSelectedSiteId( state );
-	const pressThis = getPressThisData( context.query );
-	const fseParentPageId = parseInt( context.query.fse_parent_post, 10 ) || null;
-	const parentPostId = parseInt( context.query.parent_post, 10 ) || null;
 
 	// Set postId on state.editor.postId, so components like editor revisions can read from it.
 	context.store.dispatch( { type: EDITOR_START, siteId, postId } );
@@ -213,34 +219,9 @@ export const post = ( context, next ) => {
 	// Set post type on state.posts.[ id ].type, so components like document head can read from it.
 	context.store.dispatch( { type: POST_EDIT, post: { type: postType }, siteId, postId } );
 
+	context.secondary = createNavigation( context );
 	context.primary = (
-		<CalypsoifyIframe
-			key={ postId }
-			postId={ postId }
-			postType={ postType }
-			duplicatePostId={ duplicatePostId }
-			pressThis={ pressThis }
-			fseParentPageId={ fseParentPageId }
-			parentPostId={ parentPostId }
-			creatingNewHomepage={ postType === 'page' && has( context, 'query.new-homepage' ) }
-			stripeConnectSuccess={ context.query.stripe_connect_success ?? null }
-		/>
-	);
-
-	return next();
-};
-
-export const siteEditor = ( context, next ) => {
-	const state = context.store.getState();
-	const siteId = getSelectedSiteId( state );
-
-	context.primary = (
-		<CalypsoifyIframe
-			// This key is added as a precaution due to it's oberserved necessity in the above post editor.
-			// It will force the component to remount completely when the Id changes.
-			key={ siteId }
-			editorType={ 'site' }
-		/>
+		<WithoutIframe key={ postId } siteId={ siteId } postId={ postId } postType={ postType } />
 	);
 
 	return next();

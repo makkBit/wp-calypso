@@ -7,10 +7,9 @@ import page from 'page';
  * Internal dependencies
  */
 import { siteSelection, sites } from 'my-sites/controller';
-import { authenticate, post, redirect, siteEditor, gutenbergWithoutIframe } from './controller';
+import { authenticate, post, redirect, siteEditor } from './controller';
 import config from 'config';
 import { makeLayout, render as clientRender } from 'controller';
-import { performanceTrackerStart } from 'lib/performance-tracking/performance-tracker-start';
 
 export default function () {
 	page( '/block-editor', '/block-editor/post' );
@@ -37,17 +36,6 @@ export default function () {
 	);
 	page( '/block-editor/post/:site?', siteSelection, redirect, makeLayout, clientRender );
 
-	page(
-		'/without-iframe/block-editor/post/:site/:post?',
-		siteSelection,
-		redirect,
-		authenticate,
-		performanceTrackerStart( 'without-iframe' ),
-		gutenbergWithoutIframe,
-		makeLayout,
-		clientRender
-	);
-
 	page( '/block-editor/page', siteSelection, sites, makeLayout, clientRender );
 	page(
 		'/block-editor/page/:site/:post?',
@@ -55,16 +43,6 @@ export default function () {
 		redirect,
 		authenticate,
 		post,
-		makeLayout,
-		clientRender
-	);
-
-	page(
-		'/without-iframe/block-editor/page/:site/:post?',
-		siteSelection,
-		redirect,
-		authenticate,
-		gutenbergWithoutIframe,
 		makeLayout,
 		clientRender
 	);
