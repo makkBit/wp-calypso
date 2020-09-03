@@ -38,13 +38,13 @@ import NavigationComponent from 'my-sites/navigation';
 function determinePostType( context ) {
 	if (
 		context.path.startsWith( '/block-editor/post/' ) ||
-		context.path.startsWith( '/block-editor/without-iframe/post/' )
+		context.path.startsWith( '/without-iframe/block-editor/post/' )
 	) {
 		return 'post';
 	}
 	if (
 		context.path.startsWith( '/block-editor/page/' ) ||
-		context.path.startsWith( '/block-editor/without-iframe/page/' )
+		context.path.startsWith( '/without-iframe/block-editor/page/' )
 	) {
 		return 'page';
 	}

@@ -38,7 +38,7 @@ export default function () {
 	page( '/block-editor/post/:site?', siteSelection, redirect, makeLayout, clientRender );
 
 	page(
-		'/block-editor/without-iframe/post/:site/:post?',
+		'/without-iframe/block-editor/post/:site/:post?',
 		siteSelection,
 		redirect,
 		authenticate,
@@ -60,7 +60,7 @@ export default function () {
 	);
 
 	page(
-		'/block-editor/without-iframe/page/:site/:post?',
+		'/without-iframe/block-editor/page/:site/:post?',
 		siteSelection,
 		redirect,
 		authenticate,

@@ -6,6 +6,7 @@ import { getSelectedEditor } from 'state/selectors/get-selected-editor';
 import { getSiteAdminUrl, getSiteSlug } from 'state/sites/selectors';
 import { getEditorPath } from 'state/editor/selectors';
 import { addQueryArgs } from 'lib/route';
+import { abtest } from 'lib/abtest';
 
 export const getGutenbergEditorUrl = ( state, siteId, postId = null, postType = 'post' ) => {
 	if ( shouldRedirectGutenberg( state, siteId ) ) {
@@ -23,16 +24,19 @@ export const getGutenbergEditorUrl = ( state, siteId, postId = null, postType = 
 		return url;
 	}
 
+	const prefix =
+		abtest( 'gutenbergInCalypso' ) === 'on' ? '/without-iframe/block-editor' : '/block-editor';
+
 	if ( postId ) {
-		return `/block-editor/without-iframe${ getEditorPath( state, siteId, postId, postType ) }`;
+		return `${ prefix }${ getEditorPath( state, siteId, postId, postType ) }`;
 	}
 
 	const siteSlug = getSiteSlug( state, siteId );
 
 	if ( 'post' === postType || 'page' === postType ) {
-		return `/block-editor/without-iframe/${ postType }/${ siteSlug }`;
+		return `${ prefix }/${ postType }/${ siteSlug }`;
 	}
-	return `/block-editor/without-iframe/edit/${ postType }/${ siteSlug }`;
+	return `${ prefix }/edit/${ postType }/${ siteSlug }`;
 };
 
 export default getGutenbergEditorUrl;
